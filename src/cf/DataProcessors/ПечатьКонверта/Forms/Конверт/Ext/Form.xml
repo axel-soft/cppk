@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="Документ" id="118">
+			<DataPath>Документ</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<Hiperlink>true</Hiperlink>
+			<ContextMenu name="ДокументКонтекстноеМеню" id="119"/>
+			<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="120"/>
+		</LabelField>
+		<UsualGroup name="ГруппаСписокИВарианты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список и варианты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список и варианты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСписокИВариантыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<CommandBar name="ГруппаТипАдресаИВыделение" id="79">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа тип адреса и выделение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа тип адреса и выделение</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаТипАдресаИВыделениеРасширеннаяПодсказка" id="80"/>
+					<ChildItems>
+						<ButtonGroup name="ГруппаКоманд" id="81">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команд</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>Compact</Representation>
+							<ExtendedTooltip name="ГруппаКомандРасширеннаяПодсказка" id="82"/>
+							<ChildItems>
+								<Button name="ВыделитьВсе" id="77">
+									<Type>CommandBarButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.ВыделитьВсе</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.CheckAll</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выделить все</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ВыделитьВсеРасширеннаяПодсказка" id="78"/>
+								</Button>
+								<Button name="СнятьВыделение" id="75">
+									<Type>CommandBarButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.СнятьВыделение</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Снять выделение</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СнятьВыделениеРасширеннаяПодсказка" id="76"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+					</ChildItems>
+				</CommandBar>
+				<UsualGroup name="ГруппаСписокДокументов" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список документов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список документов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСписокДокументовРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Table name="ТаблицаДокументов" id="45">
+							<Representation>List</Representation>
+							<Width>70</Width>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ТаблицаДокументов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаДокументовКонтекстноеМеню" id="46"/>
+							<AutoCommandBar name="ТаблицаДокументовКоманднаяПанель" id="47">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаДокументовРасширеннаяПодсказка" id="48"/>
+							<SearchStringAddition name="ТаблицаДокументовСтрокаПоиска" id="49">
+								<AdditionSource>
+									<Item>ТаблицаДокументов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаДокументовСтрокаПоискаКонтекстноеМеню" id="50"/>
+								<ExtendedTooltip name="ТаблицаДокументовСтрокаПоискаРасширеннаяПодсказка" id="51"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаДокументовСостояниеПросмотра" id="52">
+								<AdditionSource>
+									<Item>ТаблицаДокументов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаДокументовСостояниеПросмотраКонтекстноеМеню" id="53"/>
+								<ExtendedTooltip name="ТаблицаДокументовСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаДокументовУправлениеПоиском" id="55">
+								<AdditionSource>
+									<Item>ТаблицаДокументов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаДокументовУправлениеПоискомКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="ТаблицаДокументовУправлениеПоискомРасширеннаяПодсказка" id="57"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТаблицаДокументовВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СписокДокумент" id="58">
+									<DataPath>ТаблицаДокументов.Документ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>60</Width>
+									<ContextMenu name="СписокДокументКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="СписокДокументРасширеннаяПодсказка" id="60"/>
+								</LabelField>
+								<CheckBoxField name="СписокПечатать" id="66">
+									<DataPath>ТаблицаДокументов.Печатать</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Печатать</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СписокПечататьКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="СписокПечататьРасширеннаяПодсказка" id="68"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПолучатель" id="116">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа получатель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа получатель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПолучательРасширеннаяПодсказка" id="117"/>
+			<ChildItems>
+				<InputField name="ВидАдресаКонтрагента" id="113">
+					<DataPath>ВидАдресаКонтрагента</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес получателя письма</v8:content>
+						</v8:item>
+					</ToolTip>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChooseType>false</ChooseType>
+					<TextEdit>false</TextEdit>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес получателя письма</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ВидАдресаКонтрагентаКонтекстноеМеню" id="114"/>
+					<ExtendedTooltip name="ВидАдресаКонтрагентаРасширеннаяПодсказка" id="115"/>
+				</InputField>
+				<CheckBoxField name="ПечатьПоДлине" id="124">
+					<DataPath>ПечатьПоДлине</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПечатьПоДлинеКонтекстноеМеню" id="125"/>
+					<ExtendedTooltip name="ПечатьПоДлинеРасширеннаяПодсказка" id="126"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПечатьНаОдномЛисте" id="121">
+					<DataPath>ПечатьНаОдномЛисте</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПечатьНаОдномЛистеКонтекстноеМеню" id="122"/>
+					<ExtendedTooltip name="ПечатьНаОдномЛистеРасширеннаяПодсказка" id="123"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКомандыИТипы" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды и типы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды и типы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыИТипыРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаФорматы" id="86">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа форматы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа форматы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаФорматыРасширеннаяПодсказка" id="87"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВыборФормата" id="69">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выбор формата</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВыборФорматаРасширеннаяПодсказка" id="70"/>
+							<ChildItems>
+								<PictureDecoration name="КонвертС4Выбран" id="98">
+									<Visible>false</Visible>
+									<Width>16</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Конверт с4 выбран</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.КонвертС4Выбран</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КонвертС4ВыбранКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="КонвертС4ВыбранРасширеннаяПодсказка" id="100"/>
+								</PictureDecoration>
+								<PictureDecoration name="КонвертС4" id="83">
+									<Width>16</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Конверт с4</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.КонвертС4</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КонвертС4КонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="КонвертС4РасширеннаяПодсказка" id="85"/>
+									<Events>
+										<Event name="Click">КонвертС4Нажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<PictureDecoration name="КонвертС5" id="88">
+									<Width>16</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Конверт с5</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.КонвертС5</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КонвертС5КонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="КонвертС5РасширеннаяПодсказка" id="90"/>
+									<Events>
+										<Event name="Click">КонвертС5Нажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<PictureDecoration name="КонвертС5Выбран" id="101">
+									<Visible>false</Visible>
+									<Width>16</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Конверт с5 выбран</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.КонвертС5Выбран</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КонвертС5ВыбранКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="КонвертС5ВыбранРасширеннаяПодсказка" id="103"/>
+								</PictureDecoration>
+								<PictureDecoration name="КонвертE65Выбран" id="104">
+									<Visible>false</Visible>
+									<Width>16</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Конверт e65 выбран</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.КонвертЕ65Выбран</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КонвертE65ВыбранКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="КонвертE65ВыбранРасширеннаяПодсказка" id="106"/>
+								</PictureDecoration>
+								<PictureDecoration name="КонвертE65" id="93">
+									<Width>16</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Конверт e65</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.КонвертЕ65</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КонвертE65КонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="КонвертE65РасширеннаяПодсказка" id="95"/>
+									<Events>
+										<Event name="Click">КонвертЕ65Нажатие</Event>
+									</Events>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКоманды" id="96">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="97"/>
+					<ChildItems>
+						<Button name="Печать" id="41">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.ПечатьКонверта</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.Print</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ПечатьРасширеннаяПодсказка" id="42"/>
+						</Button>
+						<Button name="Закрыть" id="43">
+							<Type>UsualButton</Type>
+							<CommandName>Form.StandardCommand.Close</CommandName>
+							<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="44"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПечатьКонверта</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ФорматКонверта" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формат конверта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ФорматыКонвертов</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФорматКонверта</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТаблицаДокументов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Документ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДокументыПредприятия</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Печатать" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печатать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ФорматыПочтовыхКонвертов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форматы почтовых конвертов</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВидАдресаКонтрагента" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес получателя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыКонтактнойИнформации</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВидАдресаКонтрагента</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="КартинкиЦифрИндекса" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Картинки цифр индекса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="Документ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДокументыПредприятия</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПечатьНаОдномЛисте" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать на одном листе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПечатьНаОдномЛисте</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПечатьПоДлине" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать по длине</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПечатьПоДлине</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПоискТолькоПоФизЛицу" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск только по физ лицу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПечатьКонверта" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать конверта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечатьКонверта</Action>
+		</Command>
+		<Command name="ВыделитьВсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыделитьВсе</Action>
+		</Command>
+		<Command name="СнятьВыделение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять выделение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять выделение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьВыделение</Action>
+		</Command>
+	</Commands>
+</Form>

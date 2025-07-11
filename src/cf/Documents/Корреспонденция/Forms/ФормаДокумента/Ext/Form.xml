@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Основание" id="16">
+			<DataPath>Объект.Основание</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ОснованиеКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОснованиеРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ВидКорреспонденции" id="1">
+			<DataPath>Объект.ВидКорреспонденции</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ВидКорреспонденцииКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВидКорреспонденцииРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ВидКорреспонденцииПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаНомерКонтрагента" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер контрагента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерКонтрагентаРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<InputField name="НомерКонтрагента" id="36">
+					<DataPath>Объект.НомерКонтрагента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исходящий №</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<Width>20</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НомерКонтрагентаКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="НомерКонтрагентаРасширеннаяПодсказка" id="38"/>
+				</InputField>
+				<InputField name="ДатаКонтрагента" id="39">
+					<DataPath>Объект.ДатаКонтрагента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<Width>10</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ДатаКонтрагентаКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ДатаКонтрагентаРасширеннаяПодсказка" id="41"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СпособПолучения" id="42">
+			<DataPath>Объект.СпособПолучения</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получен</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Left</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="СпособПолученияКонтекстноеМеню" id="43"/>
+			<ExtendedTooltip name="СпособПолученияРасширеннаяПодсказка" id="44"/>
+		</InputField>
+		<InputField name="СпособОтправки" id="56">
+			<DataPath>СпособОтправки</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ChoiceParameters>
+				<app:item name="Отбор.ПометкаУдаления">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:boolean">false</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="СпособОтправкиКонтекстноеМеню" id="57"/>
+			<ExtendedTooltip name="СпособОтправкиРасширеннаяПодсказка" id="58"/>
+		</InputField>
+		<UsualGroup name="ГруппаОтправленДата" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отправлен дата</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отразить отправку можно только после регистрации документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтправленДатаExtendedTooltip" id="49"/>
+			<ChildItems>
+				<CheckBoxField name="Отправлен" id="50">
+					<DataPath>Отправлен</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправлен</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтправленКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ОтправленРасширеннаяПодсказка" id="52"/>
+				</CheckBoxField>
+				<InputField name="ДатаОтправки" id="53">
+					<DataPath>ДатаОтправки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата отправки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ="dd.MM.yyyy ЧЧ:мм"</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ДатаОтправкиКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ДатаОтправкиРасширеннаяПодсказка" id="55"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ГотовоКВыгрузкеССТУ" id="65">
+			<DataPath>Объект.ГотовоКВыгрузкеССТУ</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ГотовоКВыгрузкеССТУКонтекстноеМеню" id="66"/>
+			<ExtendedTooltip name="ГотовоКВыгрузкеССТУРасширеннаяПодсказка" id="67"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Корреспонденция</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="СпособОтправки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СпособыДоставки</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Отправлен" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправлен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДатаОтправки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата отправки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

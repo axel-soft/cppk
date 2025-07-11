@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ОбластьПримененияШаблоновТекстов" id="4">
+			<DataPath>Объект.ОбластьПримененияШаблоновТекстов</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОбластьПримененияШаблоновТекстовКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОбластьПримененияШаблоновТекстовРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="РезультатТекстом" id="7">
+			<DataPath>Объект.РезультатТекстом</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РезультатТекстомКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РезультатТекстомРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ТерминБудущегоДействия" id="16">
+			<DataPath>Объект.ТерминБудущегоДействия</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТерминБудущегоДействияКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ТерминБудущегоДействияРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ТерминДействия" id="25">
+			<DataPath>Объект.ТерминДействия</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТерминДействияКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ТерминДействияРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ТерминСоисполнители" id="34">
+			<DataPath>Объект.ТерминСоисполнители</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТерминСоисполнителиКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ТерминСоисполнителиРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="ШаблонЗаголовка" id="43">
+			<DataPath>Объект.ШаблонЗаголовка</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ШаблонЗаголовкаКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="ШаблонЗаголовкаРасширеннаяПодсказка" id="45"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВидыДействийЗадач</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

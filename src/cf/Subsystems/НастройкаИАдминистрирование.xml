@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Subsystem uuid="70c4ec49-8547-46b1-a27e-a7ca1e7ca633">
+		<Properties>
+			<Name>НастройкаИАдминистрирование</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Администрирование, настройка, сервисные функции</v8:content>
+				</v8:item>
+			</Explanation>
+			<Picture>
+				<xr:Ref>CommonPicture.РазделАдминистрирование16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АдминистрированиеСистемы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЖурналРегистрации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.РегламентныеИФоновыеЗадания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АктивныеПользователи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НастройкиПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УправлениеПолнотекстовымПоиском</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПолнотекстовыйПоискВДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Пользователи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТомаХраненияФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДинамикаФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НаборыДополнительныхРеквизитовИСведений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.БлокировкаРаботыПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтруктураПредприятия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Корзина48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.БлокировкаСоединений48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КонсольЗаданий48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.УправлениеПолнотекстовымПоиском48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Пользователь32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЖурналРегистрации48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.УправлениеНастройкамиФорм48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.РазместитьФайлыНачальногоОбраза</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СведенияОПользователе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.НастройкиСинхронизацииДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.КонтрагентыПоГруппеДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НазначенияСертификатовЭП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ШаблоныДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ШаблоныБизнесПроцессов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Организации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АвтоматическоеИзвлечениеТекстов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АвтоматическоеРаспознаваниеИзображений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РабочиеГруппы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОчисткаУстаревшихВерсийФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Обозреватель</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПоискИУдалениеДублей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ГрупповоеИзменениеРеквизитов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗагрузкаДанныхИзФайла</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.МониторПортала1СИТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаДанныеПредприятия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаДелопроизводство</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаИнтернетПоддержка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаОбменДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаОбщие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаОповещенияОПроблемах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаЛегкаяПочта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаПраваДоступа48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаПроектыИТрудозатраты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаПроцессыИЗадачи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НастройкаПрограммы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УдалениеПомеченныхОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиВерсионированияОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПерсональныеНастройки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаЭП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаУведомления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОтчетыИОбработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВсеОтчетыНастройкаИАдминистрирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.РезультатыОбновленияПрограммыДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СменитьПароль</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Расширения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.НастройкиРегистрацииСобытийДоступаКПерсональнымДанным</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗащитаПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ГруппыИПолномочия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УведомленияПрограммы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.НастройкиДоступаПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.НеограниченныеПрава</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПанельАдминистрированияБСП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОбработкиАдминистрирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОтчетыАдминистрирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОценкаПроизводительности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НастройкиДоступностиПоСостоянию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВремяВыполненияКлючевыхОпераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкаПовторенияБизнесПроцессов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.ОбменБухгалтерияПредприятияДокументооборот20</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.ОбменУправлениеПредприятиемДокументооборот20</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.ОбменУправлениеПроизводственнымПредприятиемДокументооборот20</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.ОбменУправлениеТорговлейДокументооборот20</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.ОбменУправлениеХолдингомДокументооборот20</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОБППередЗаписью</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОБППередЗаписьюРегистра</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОБППередУдалением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОУПП13ПередЗаписью</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОУПП13ПередЗаписьюРегистра</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОУПП13ПередУдалением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОУППередЗаписью</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОУППередЗаписьюРегистра</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОУППередУдалением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОУТПередЗаписью</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОУТПередЗаписьюРегистра</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОУТПередУдалением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОУХПередЗаписью</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбменДаннымиДОУХПередУдалением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПротоколРаботыОбщая</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаВстроеннаяПочта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаОтсутствия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаШтрихкодирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ДополнительныеОтчетыИОбработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УдалитьОбластиДелегированияПрав</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.РассылкиОтчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.АнализЖурналаРегистрации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗамерыПроизводительности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Метрики</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПротоколРаботы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.УниверсальныйОтчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОценкаПроизводительности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УправлениеРасчетомПрав</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиДоступностиДляВидовДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Штрихкоды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ИсточникиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПрофилиКлючевыхОпераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ФайлыНаРаспознавании</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СотрудникиДляКонтроляСамочувствия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПерейтиВОблачныйСервис</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ЗагрузитьДанныеИзСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПереносДанныхПриложения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АдминистрированиеОбсуждений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Алгоритмы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АвтоподстановкиДляОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АвтоподстановкиДляПроцессов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ШрифтСкрипта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ИспользованиеСкриптов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВсеСкрипты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ИзменениеСписковДоступаОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СотрудникиВКонтейнерах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПротоколРаботыССервисомРаспознавания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ОчередьЗаданийДокументооборота</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыполнениеЗаданийНаКлиенте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПротоколАктуализацииДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаРабочийСтол</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ГрупповыеПоказатели</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.РабочиеСтолы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БлокиНавигации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Виджеты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КомандыВиджетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПоказателиВиджетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КопированиеНастроекОбработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПанельАдминистрированияБесшовнойИнтеграции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.МиграцияДанныхИзВнешнихСистемМонитор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.СинхронизацияДанныхЧерезУниверсальныйФормат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОчередьОбновленияКэширующихДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СотрудникиИПодразделения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ШаблоныДвухфакторнойАутентификации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьДвухфакторнуюАутентификацию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьДвухфакторнуюАутентификацию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СтруктураТаблицБД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОбновлениеЗадачПриПереходеНаНовуюВерсию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ТаймлистДанныеРаботыСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ТаймлистОшибкиРаботыССервисом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ТаймлистФайлыВОбработке</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>АдминистрированиеМЭДО</Subsystem>
+			<Subsystem>Алгоритмы</Subsystem>
+			<Subsystem>БизнесСобытия</Subsystem>
+			<Subsystem>Задачи</Subsystem>
+			<Subsystem>КОД</Subsystem>
+			<Subsystem>Метрики</Subsystem>
+			<Subsystem>МиграцияДанныхИзВнешнихСистем</Subsystem>
+			<Subsystem>МобильныйДокументооборот</Subsystem>
+			<Subsystem>ОтметкиВремени</Subsystem>
+			<Subsystem>ОчередьЗаданий</Subsystem>
+			<Subsystem>Почта</Subsystem>
+			<Subsystem>Распознавание</Subsystem>
+			<Subsystem>Таймлист</Subsystem>
+			<Subsystem>УдалениеУстаревшихДанных</Subsystem>
+			<Subsystem>УправлениеДоступом</Subsystem>
+			<Subsystem>ЧатБот</Subsystem>
+			<Subsystem>ЭДО</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

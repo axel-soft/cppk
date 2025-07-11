@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Возврат на доработку</v8:content>
+		</v8:item>
+	</Title>
+	<Width>70</Width>
+	<Height>25</Height>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаВернутьНаДоработку" id="7">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ВернутьНаДоработку</CommandName>
+				<ExtendedTooltip name="ФормаВернутьНаДоработкуРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="ФормаОтмена" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="10"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="Задача" id="71">
+			<DataPath>Задача</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Hiperlink>true</Hiperlink>
+			<ContextMenu name="ЗадачаКонтекстноеМеню" id="72"/>
+			<ExtendedTooltip name="ЗадачаРасширеннаяПодсказка" id="73"/>
+		</LabelField>
+		<UsualGroup name="ГруппаУчастники" id="177">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа участники</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУчастникиРасширеннаяПодсказка" id="178"/>
+			<ChildItems>
+				<Table name="Участники" id="14">
+					<CommandBarLocation>Top</CommandBarLocation>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
+					<FooterHeight>0</FooterHeight>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Участники</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="УчастникиКонтекстноеМеню" id="15">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="УчастникиКонтекстноеМенюДобавить" id="146">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Участники.StandardCommand.Add</CommandName>
+								<ExtendedTooltip name="УчастникиКонтекстноеМенюДобавитьРасширеннаяПодсказка" id="147"/>
+							</Button>
+							<Button name="УчастникиКонтекстноеМенюИзменить" id="156">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Участники.StandardCommand.Change</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Открыть задачу</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="УчастникиКонтекстноеМенюИзменитьРасширеннаяПодсказка" id="157"/>
+							</Button>
+							<Button name="УчастникиКонтекстноеМенюУдалить" id="148">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Участники.StandardCommand.Delete</CommandName>
+								<ExtendedTooltip name="УчастникиКонтекстноеМенюУдалитьРасширеннаяПодсказка" id="149"/>
+							</Button>
+							<ButtonGroup name="УчастникиКонтекстноеМенюГруппаВернутьНаДоработку" id="167">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Участники контекстное меню группа вернуть на доработку</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="УчастникиКонтекстноеМенюГруппаВернутьНаДоработкуРасширеннаяПодсказка" id="168"/>
+								<ChildItems>
+									<Button name="УчастникиКонтекстноеМенюВернутьНаДоработку" id="175">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВернутьНаДоработкуУчастнику</CommandName>
+										<ExtendedTooltip name="УчастникиКонтекстноеМенюВернутьНаДоработкуРасширеннаяПодсказка" id="176"/>
+									</Button>
+									<Button name="УчастникиКонтекстноеМенюОсобаяПричинаВозврата" id="173">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОсобаяПричинаВозврата</CommandName>
+										<ExtendedTooltip name="УчастникиКонтекстноеМенюОсобаяПричинаВозвратаРасширеннаяПодсказка" id="174"/>
+									</Button>
+									<Button name="УчастникиКонтекстноеМенюОтветственный" id="18">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Ответственный</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Ответственный</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="УчастникиКонтекстноеМенюОтветственныйРасширеннаяПодсказка" id="19"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="УчастникиКонтекстноеМенюГруппаВсем" id="154">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Участники контекстное меню группа всем</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="УчастникиКонтекстноеМенюГруппаВсемРасширеннаяПодсказка" id="155"/>
+								<ChildItems>
+									<Button name="УчастникиКонтекстноеМенюВернутьВсем" id="150">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВернутьВсем</CommandName>
+										<ExtendedTooltip name="УчастникиКонтекстноеМенюВернутьВсемРасширеннаяПодсказка" id="151"/>
+									</Button>
+									<Button name="УчастникиКонтекстноеМенюНикомуНеВозвращать" id="152">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.НикомуНеВозвращать</CommandName>
+										<ExtendedTooltip name="УчастникиКонтекстноеМенюНикомуНеВозвращатьРасширеннаяПодсказка" id="153"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</ContextMenu>
+					<AutoCommandBar name="УчастникиКоманднаяПанель" id="20">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="УчастникиРасширеннаяПодсказка" id="23"/>
+					<SearchStringAddition name="УчастникиСтрокаПоиска" id="24">
+						<AdditionSource>
+							<Item>Участники</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УчастникиСтрокаПоискаКонтекстноеМеню" id="25"/>
+						<ExtendedTooltip name="УчастникиСтрокаПоискаРасширеннаяПодсказка" id="26"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="УчастникиСостояниеПросмотра" id="27">
+						<AdditionSource>
+							<Item>Участники</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УчастникиСостояниеПросмотраКонтекстноеМеню" id="28"/>
+						<ExtendedTooltip name="УчастникиСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="УчастникиУправлениеПоиском" id="30">
+						<AdditionSource>
+							<Item>Участники</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="УчастникиУправлениеПоискомКонтекстноеМеню" id="31"/>
+						<ExtendedTooltip name="УчастникиУправлениеПоискомРасширеннаяПодсказка" id="32"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">УчастникиВыбор</Event>
+						<Event name="BeforeAddRow">УчастникиПередНачаломДобавления</Event>
+						<Event name="BeforeDeleteRow">УчастникиПередУдалением</Event>
+						<Event name="OnActivateRow">УчастникиПриАктивизацииСтроки</Event>
+						<Event name="BeforeRowChange">УчастникиПередНачаломИзменения</Event>
+						<Event name="OnStartEdit">УчастникиПриНачалеРедактирования</Event>
+						<Event name="OnChange">УчастникиПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<PictureField name="УчастникиВернутьНаДоработку" id="160">
+							<DataPath>Участники.ИндексКартинкиВернутьНаДоработку</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вернуть на доработку</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.ВернутьНаДоработку</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</HeaderPicture>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.КоллекцияВернутьНаДоработку</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="УчастникиВернутьНаДоработкуКонтекстноеМеню" id="161"/>
+							<ExtendedTooltip name="УчастникиВернутьНаДоработкуРасширеннаяПодсказка" id="162"/>
+						</PictureField>
+						<PictureField name="УчастникиЕстьОсобаяПричинаВозврата" id="74">
+							<DataPath>Участники.ЕстьОсобаяПричинаВозврата</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Особая причина возврата</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+							<HeaderPicture>
+								<xr:Ref>StdPicture.Document</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ValuesPicture>
+								<xr:Ref>StdPicture.Document</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="УчастникиЕстьОсобаяПричинаВозвратаКонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="УчастникиЕстьОсобаяПричинаВозвратаРасширеннаяПодсказка" id="76"/>
+						</PictureField>
+						<ColumnGroup name="УчастникиГруппаУчастник" id="36">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Участник</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Участники группа участник</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="УчастникиГруппаУчастникРасширеннаяПодсказка" id="37"/>
+							<ChildItems>
+								<PictureField name="УчастникиЕстьПриложения" id="53">
+									<DataPath>Участники.ЕстьПриложения</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>1</Width>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.Скрепка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="УчастникиЕстьПриложенияКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="УчастникиЕстьПриложенияРасширеннаяПодсказка" id="55"/>
+								</PictureField>
+								<InputField name="УчастникиУчастник" id="59">
+									<DataPath>Участники.Участник</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>1</Width>
+									<ChoiceButtonRepresentation>ShowInDropListAndInInputField</ChoiceButtonRepresentation>
+									<OpenButton>true</OpenButton>
+									<CreateButton>false</CreateButton>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="УчастникиУчастникКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="УчастникиУчастникРасширеннаяПодсказка" id="61"/>
+									<Events>
+										<Event name="AutoComplete">УчастникиУчастникАвтоПодбор</Event>
+										<Event name="StartChoice">УчастникиУчастникНачалоВыбора</Event>
+										<Event name="TextEditEnd">УчастникиУчастникОкончаниеВводаТекста</Event>
+										<Event name="ChoiceProcessing">УчастникиУчастникОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="УчастникиПредставлениеУчастника" id="62">
+									<DataPath>Участники.ПредставлениеУчастника</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>1</Width>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="УчастникиПредставлениеУчастникаКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="УчастникиПредставлениеУчастникаРасширеннаяПодсказка" id="64"/>
+								</InputField>
+								<InputField name="УчастникиРезультат" id="65">
+									<DataPath>Участники.Результат</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>1</Width>
+									<ContextMenu name="УчастникиРезультатКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="УчастникиРезультатРасширеннаяПодсказка" id="67"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</Table>
+				<LabelDecoration name="ОтступУчастники" id="179">
+					<Width>1</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОтступУчастникиКонтекстноеМеню" id="180"/>
+					<ExtendedTooltip name="ОтступУчастникиРасширеннаяПодсказка" id="181"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ИнформационнаяНадписьПроверяющий" id="11">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>1</Height>
+			<TextColor>style:ИнформационнаяНадпись</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При возврате на доработку вы будете назначены проверяющим задачи.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИнформационнаяНадписьПроверяющийКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ИнформационнаяНадписьПроверяющийРасширеннаяПодсказка" id="13"/>
+		</LabelDecoration>
+		<InputField name="Срок" id="182">
+			<DataPath>Срок</DataPath>
+			<ContextMenu name="СрокКонтекстноеМеню" id="183"/>
+			<ExtendedTooltip name="СрокРасширеннаяПодсказка" id="184"/>
+			<Events>
+				<Event name="OnChange">СрокПриИзменении</Event>
+				<Event name="ChoiceProcessing">СрокОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="ОбщаяПричинаВозврата" id="4">
+			<DataPath>ОбщаяПричинаВозврата</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<Width>1</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>3</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<MaxHeight>3</MaxHeight>
+			<VerticalStretch>false</VerticalStretch>
+			<MultiLine>true</MultiLine>
+			<ChoiceButton>true</ChoiceButton>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая причина возврата</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="ОбщаяПричинаВозвратаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОбщаяПричинаВозвратаРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="StartChoice">ПричинаВозвратаНачалоВыбора</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОбщаяПричинаВозврата" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая причина возврата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Участники" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участники</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВернутьНаДоработку" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вернуть на доработку</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидУчастника" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид участника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыУчастниковЗадач</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВнешнийИдентификатор" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внешний идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДействиеУчастника" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действие участника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ДействиеЗадачи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЕстьПриложения" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть приложения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПорядокДляСортировки" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядок для сортировки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеУчастника" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление участника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Результат" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Состояние" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СостоянияУчастниковЗадач</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Участник" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Участник</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.УчастникЗадач</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ОсобаяПричинаВозврата" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Особая причина возврата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЕстьОсобаяПричинаВозврата" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть особая причина возврата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Добавлен" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавлен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Удален" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удален</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинкиВернутьНаДоработку" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки вернуть на доработку</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Задача" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задача</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.Задача</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтоматическиНачатоРедактированиеУчастников" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматически начато редактирование участников</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзменилсяВидУчастника" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменился вид участника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидУчастникаИсполнитель" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид участника исполнитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыУчастниковЗадач</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидУчастникаОтветственный" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид участника ответственный</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыУчастниковЗадач</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидУчастникаПроверяющий" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид участника проверяющий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыУчастниковЗадач</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСпискаВыбранныхУчастников" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заголовок списка выбранных участников</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокФормыВыбораИсполнителей" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заголовок формы выбора исполнителей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокВыбораИсполнителя" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список выбора исполнителя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="СписокВыбораОтветственного" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список выбора исполнителя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="СписокВыбораПроверяющего" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список выбора исполнителя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ЭтоМобильныйКлиент" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это мобильный клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Автор" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это мобильный клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.УчастникЗадач</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="Объект" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentObject.Задача</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Срок" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СрокВышестоящейЗадачи" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок вышестоящей задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьДатуИВремяВСрокахЗадач" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать дату и время в сроках задач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>УчастникиПредставлениеУчастника</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Участники.Удален</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="true" kind="StyleItem"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>УчастникиУчастник</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Участники.Участник</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ВернутьНаДоработку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуть на доработку</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВернутьНаДоработку</Action>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Отмена</Action>
+		</Command>
+		<Command name="Ответственный" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОтветственныйИсполнитель</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>Ответственный</Action>
+			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ВернутьВсем" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуть всем</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВернутьВсем</Action>
+		</Command>
+		<Command name="НикомуНеВозвращать" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Никому не возвращать</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НикомуНеВозвращать</Action>
+		</Command>
+		<Command name="ОсобаяПричинаВозврата" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Особая причина возврата</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Document</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОсобаяПричинаВозврата</Action>
+		</Command>
+		<Command name="ВернутьНаДоработкуУчастнику" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуть на доработку</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.ВернутьНаДоработку</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВернутьНаДоработкуУчастнику</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ЗадачаИлиДействие">
+			<Type>
+				<v8:Type>cfg:DocumentRef.Задача</v8:Type>
+				<v8:Type>cfg:DocumentRef.ДействиеЗадачи</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ОбщаяПричинаВозврата">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

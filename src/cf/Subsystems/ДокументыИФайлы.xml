@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Subsystem uuid="b3ea2636-5ba3-4c1f-8dbd-b6874a5783a8">
+		<Properties>
+			<Name>ДокументыИФайлы</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы и файлы</v8:content>
+				</v8:item>
+			</Explanation>
+			<Picture>
+				<xr:Ref>CommonPicture.РазделДокументыИФайлы16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ДелаХраненияДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СрокХраненияПредпросмотраФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.ДокументыВДелеТоме</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОтчетыДокументыИФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПоказыватьДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗагрузкаЭлектроннойПочты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПапкиДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыЭкземпляров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыНумерации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьМоиДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ХешиАвтозаполненияФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ИсторияПереписки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АвтозаполнениеШаблоновФайловСерверПовтИспВызов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ТочкаНДПС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ИсторияПереписки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИсторияСроковДействияДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПечатьКонверта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.ДокументыПоВопросуДеятельности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПропускиРегистрационныхНомеров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьСвязиОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСТематикамиДокументовВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДокументооборотПоОрганизациям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборДокументаДляСвязи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗаявленияНеОтправленныеВОбработку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СпискиРассылкиПоКонтрагентам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДелопроизводствоСерверПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СведенияОФайлахДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПолнотекстовыйПоискВДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПоискПоРеквизитам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЖурналПередачиДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Нумерация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЖурналПередачи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСРезолюциями</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ИндексыСПАРКРиски</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ДанныеОзнакомленияПодПодпись</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаДелВАрхив</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДокументыВДелах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВсеОтчеты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДокументыПредприятия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВходящиеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗагрузкаФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СправкаОбОбъемеДокументооборота</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.КатегорииДел</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Контрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВопросыДеятельности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ШаблоныДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.НеотработанныеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИсторияСостоянийДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Файлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ФИОФизическихЛиц</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПроверкаЗагруженныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПредпросмотрФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ДанныеБизнесПроцессов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ДокументыПредприятия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОбменСКонтрагентами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МоиДокументыСобытия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ИсходящиеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МоиДокументыКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СводкаПоВидамДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Файлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КоллекцияСостоянияДелИДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСВизамиСогласования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СоздатьЗаписьЖурналаПередачи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УничтожениеДел</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВопросыДеятельности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыгрузкаВсехФайловДокументаНаДиск</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.ДелаТомаПоНоменклатуреДел</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.ПерсональныеДанные</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СоздатьПроцесс</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВсеОтчетыДокументыИФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПоискПоШтрихкоду</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОбращенияГраждан</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КатегорииОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗаявленияСНарушениемСрокаРегистрации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиНумерации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЗаявкиНаОплатуКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОбработкиДокументыИФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Договоры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КатегорииДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтруктураСвязейДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПотоковоеСканирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КатегорииДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВизыСогласования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСоСпискамиДокументовКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СоздатьПисьмо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КонтрольНаличияОригиналов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВариантыСнятияСКонтроля</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АвтозаполнениеШаблоновФайловВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Инструкции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПереадресациюВоВходящихДокументах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.НапечататьВсеФайлыДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбзорСпискаДокументовПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоДелам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.МоиДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ШаблоныДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.СогласияНаОбработкуПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСКорреспонденциейКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбзорДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбзорДокументаПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСДокументами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбзорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбзорКонтрагентаПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АвтоподстановкиДляОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбзорСпискаДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СтатьиДвиженияДенежныхСредствДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбзорСпискаДокументовКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.НумерацияКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСРезолюциямиКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтатистикаРаботНадДокументами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.МоиПроцессы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ДанныеДокументовПредприятия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПереадресациюВоВходящихДокументах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ШаблоныДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СогласияНаОбработкуПерсональныхДанныхДействующие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСПодписямиДокументовВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СогласияНаОбработкуПерсональныхДанныхИстекающие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПапкиДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НоменклатураДел</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АвтозаполнениеШаблоновФайловВызовСервераПовтИспВызов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ШаблонНаименованияДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.НеподписанныеДокументыПредприятия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СобытияМониторингаСПАРКРиски</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РегламентированныйОтчетПоРезультатамРассмотренияОбращений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗаявкиНаОплату</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДелопроизводствоПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДелопроизводствоСобытия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОбязательстваПоАвансовымОтчетам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.НумерацияПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВариантыФормДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьМестаХранения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьМестаХранения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьМоиДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСПодписямиДокументовКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОтправитьИПолучитьЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ИнтерфейсДокументовЭДОДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЗаявкиНаОплатуВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ВерсииСогласованныхФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПредпросмотрФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ГотовитьПредставленияФайловДляПредпросмотраНаКлиенте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.МаксимальноеЧислоСтраницДляПредпросмотра</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОтменяемыеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОтложеннаяУстановкаСвязей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользуетсяПередачаДелХранения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПапкиДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Резолюции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Корреспонденция</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСКорреспонденциейВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияДелХраненияДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АвтозаполнениеШаблоновФайловВызовСервераПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АвтозаполнениеШаблоновФайловКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АвтозаполнениеШаблоновФайловКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АвтозаполнениеШаблоновФайловСерверПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДелопроизводствоКлиентПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСоСпискамиДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДелопроизводствоКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЗаявкиНаОплатуСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МоиДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСРезолюциямиКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Нумерация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.НумерацияКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСВизамиСогласованияКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСКорреспонденцией</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСКорреспонденциейКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСПодписямиДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСПодписямиДокументовКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗеленаяГалочкаНДПС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСТематикамиДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСШаблонамиДокументовКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСШаблонамиДокументовКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШаблоныДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ТекущиеДелаМЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КоличествоЗарегистрированныхЗаявленийНаВозврат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КоличествоПросроченныхЗаявленийНаВозврат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗаявленияВРаботеУКассировПК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктОбУничтоженииПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСТематикамиДокументовПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЖурналМашиночитаемыхДоверенностей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ФизическиеЛица</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ОтсрочкаУдаленияДанныхУничтоженныхДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КрасныйКрестикНДПС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ФИО</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>РегламентированныйУчетОбращений</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

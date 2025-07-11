@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTitle>false</AutoTitle>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОткрытьВерсию" id="62">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ОткрытьВерсию</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьВерсиюРасширеннаяПодсказка" id="63"/>
+			</Button>
+			<Button name="ФормаОткрытьКарточку" id="64">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ОткрытьКарточку</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьКарточкуРасширеннаяПодсказка" id="65"/>
+			</Button>
+			<Button name="ФормаСравнить" id="66">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Сравнить</CommandName>
+				<ExtendedTooltip name="ФормаСравнитьРасширеннаяПодсказка" id="67"/>
+			</Button>
+			<Popup name="ГруппаКомандыЭП" id="145">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Электронная подпись</v8:content>
+					</v8:item>
+				</Title>
+				<Picture>
+					<xr:Ref>CommonPicture.ПодписанЭП</xr:Ref>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<Representation>PictureAndText</Representation>
+				<ExtendedTooltip name="ГруппаКомандыЭПРасширеннаяПодсказка" id="146"/>
+				<ChildItems>
+					<Button name="ФормаОткрытьПодпись" id="147">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьПодпись</CommandName>
+						<ExtendedTooltip name="ФормаОткрытьПодписьРасширеннаяПодсказка" id="148"/>
+					</Button>
+					<Button name="ФормаПроверитьПодпись" id="149">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПроверитьПодпись</CommandName>
+						<ExtendedTooltip name="ФормаПроверитьПодписьРасширеннаяПодсказка" id="150"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Popup name="ГруппаВыгрузить" id="131">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выгрузить</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа выгрузить</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ГруппаВыгрузитьРасширеннаяПодсказка" id="132"/>
+				<ChildItems>
+					<Button name="ФормаВыгрузитьXML" id="133">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ВыгрузитьXML</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>XML-Схема данных ЭП</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаВыгрузитьXMLРасширеннаяПодсказка" id="134"/>
+					</Button>
+					<Button name="ФормаВыгрузитьБинарникЭП" id="135">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ВыгрузитьБинарникЭП</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Файл ЭП</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаВыгрузитьБинарникЭПРасширеннаяПодсказка" id="136"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ДеревоВерсий" id="68">
+			<Representation>Tree</Representation>
+			<ReadOnly>true</ReadOnly>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ДеревоВерсий</DataPath>
+			<ContextMenu name="ДеревоВерсийКонтекстноеМеню" id="69"/>
+			<AutoCommandBar name="ДеревоВерсийКоманднаяПанель" id="70">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДеревоВерсийРасширеннаяПодсказка" id="71"/>
+			<SearchStringAddition name="ДеревоВерсийСтрокаПоиска" id="72">
+				<AdditionSource>
+					<Item>ДеревоВерсий</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоВерсийСтрокаПоискаКонтекстноеМеню" id="73"/>
+				<ExtendedTooltip name="ДеревоВерсийСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоВерсийСостояниеПросмотра" id="75">
+				<AdditionSource>
+					<Item>ДеревоВерсий</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоВерсийСостояниеПросмотраКонтекстноеМеню" id="76"/>
+				<ExtendedTooltip name="ДеревоВерсийСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоВерсийУправлениеПоиском" id="78">
+				<AdditionSource>
+					<Item>ДеревоВерсий</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоВерсийУправлениеПоискомКонтекстноеМеню" id="79"/>
+				<ExtendedTooltip name="ДеревоВерсийУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ДеревоВерсийВыбор</Event>
+				<Event name="BeforeRowChange">ДеревоВерсийПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<ColumnGroup name="КартинкаИНаименование" id="81">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка и наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="КартинкаИНаименованиеРасширеннаяПодсказка" id="82"/>
+					<ChildItems>
+						<PictureField name="ДеревоВерсийИндексКартинки" id="125">
+							<DataPath>ДеревоВерсий.ИндексКартинки</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.КоллекцияПиктограммФайлов</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ДеревоВерсийИндексКартинкиКонтекстноеМеню" id="126"/>
+							<ExtendedTooltip name="ДеревоВерсийИндексКартинкиРасширеннаяПодсказка" id="127"/>
+						</PictureField>
+						<InputField name="ДеревоВерсийПредставление" id="128">
+							<DataPath>ДеревоВерсий.Представление</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Файл</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>7</Width>
+							<ContextMenu name="ДеревоВерсийПредставлениеКонтекстноеМеню" id="129"/>
+							<ExtendedTooltip name="ДеревоВерсийПредставлениеРасширеннаяПодсказка" id="130"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ДеревоВерсийАвтор" id="86">
+					<DataPath>ДеревоВерсий.Автор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоВерсийАвторКонтекстноеМеню" id="87"/>
+					<ExtendedTooltip name="ДеревоВерсийАвторРасширеннаяПодсказка" id="88"/>
+				</InputField>
+				<ColumnGroup name="СтатусИКартинкаЯвляетсяОригиналом" id="140">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус и картинка является оригиналом</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус и картинка является оригиналом</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="СтатусИКартинкаЯвляетсяОригиналомРасширеннаяПодсказка" id="141"/>
+					<ChildItems>
+						<PictureField name="ДеревоВерсийИндексКартинкиЯвляетсяОригиналом" id="137">
+							<DataPath>ДеревоВерсий.ИндексКартинкиЯвляетсяОригиналом</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.Оригинал</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ДеревоВерсийИндексКартинкиЯвляетсяОригиналомКонтекстноеМеню" id="138"/>
+							<ExtendedTooltip name="ДеревоВерсийИндексКартинкиЯвляетсяОригиналомРасширеннаяПодсказка" id="139"/>
+						</PictureField>
+						<InputField name="ДеревоВерсийСтатусОзнакомления" id="89">
+							<DataPath>ДеревоВерсий.СтатусОзнакомления</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус ознакомления с версией файла</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоВерсийСтатусОзнакомленияКонтекстноеМеню" id="90"/>
+							<ExtendedTooltip name="ДеревоВерсийСтатусОзнакомленияРасширеннаяПодсказка" id="91"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ДеревоВерсийДатаСоздания" id="92">
+					<DataPath>ДеревоВерсий.ДатаСоздания</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоВерсийДатаСозданияКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="ДеревоВерсийДатаСозданияРасширеннаяПодсказка" id="94"/>
+				</InputField>
+				<InputField name="ДеревоВерсийРазмер" id="95">
+					<DataPath>ДеревоВерсий.Размер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоВерсийРазмерКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="ДеревоВерсийРазмерРасширеннаяПодсказка" id="97"/>
+				</InputField>
+				<InputField name="ДеревоВерсийНомерВерсии" id="98">
+					<DataPath>ДеревоВерсий.НомерВерсии</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоВерсийНомерВерсииКонтекстноеМеню" id="99"/>
+					<ExtendedTooltip name="ДеревоВерсийНомерВерсииРасширеннаяПодсказка" id="100"/>
+				</InputField>
+				<InputField name="ДеревоВерсийСсылка" id="101">
+					<DataPath>ДеревоВерсий.Ссылка</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоВерсийСсылкаКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="ДеревоВерсийСсылкаРасширеннаяПодсказка" id="103"/>
+				</InputField>
+				<CheckBoxField name="ДеревоВерсийЭтоТекущая" id="107">
+					<DataPath>ДеревоВерсий.ЭтоТекущая</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоВерсийЭтоТекущаяКонтекстноеМеню" id="108"/>
+					<ExtendedTooltip name="ДеревоВерсийЭтоТекущаяРасширеннаяПодсказка" id="109"/>
+				</CheckBoxField>
+				<InputField name="ДеревоВерсийРодительскаяВерсия" id="110">
+					<DataPath>ДеревоВерсий.РодительскаяВерсия</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоВерсийРодительскаяВерсияКонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="ДеревоВерсийРодительскаяВерсияРасширеннаяПодсказка" id="112"/>
+				</InputField>
+				<InputField name="ДеревоВерсийРасширение" id="113">
+					<DataPath>ДеревоВерсий.Расширение</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоВерсийРасширениеКонтекстноеМеню" id="114"/>
+					<ExtendedTooltip name="ДеревоВерсийРасширениеРасширеннаяПодсказка" id="115"/>
+				</InputField>
+				<CheckBoxField name="ДеревоВерсийЯвляетсяОригиналом" id="142">
+					<DataPath>ДеревоВерсий.ЯвляетсяОригиналом</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоВерсийЯвляетсяОригиналомКонтекстноеМеню" id="143"/>
+					<ExtendedTooltip name="ДеревоВерсийЯвляетсяОригиналомРасширеннаяПодсказка" id="144"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ДанныеОзнакомленияПодПодпись</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДеревоВерсий" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево версий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Автор" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусОзнакомления" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус ознакомления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаСоздания" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата создания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Размер" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Размер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерВерсии" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер версии</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Файлы</v8:Type>
+						<v8:Type>cfg:CatalogRef.ВерсииФайлов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>0</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоТекущая" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это текущая</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="РодительскаяВерсия" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Родительская версия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВерсииФайлов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Расширение" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расширение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоРодитель" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это родитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Представление" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФайлБылПриОзнакомлении" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файл был при ознакомлении</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПометкаУдаления" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинкиЯвляетсяОригиналом" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки является оригиналом</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>0</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЯвляетсяОригиналом" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Является оригиналом</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДанныеЭП" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные ЭП</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьКарточку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть карточку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть карточку версии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьКарточкуВерсии</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Сравнить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать отличия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать отличия двух версий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сравнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВерсию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть версию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть версию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОткрытьВыбранныйФайл</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьВерсию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыгрузитьXML" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить XML</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить XML</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьXML</Action>
+		</Command>
+		<Command name="ВыгрузитьБинарникЭП" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить бинарник ЭП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить бинарник ЭП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьБинарникЭП</Action>
+		</Command>
+		<Command name="ОткрытьПодпись" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть подпись</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьПодпись</Action>
+		</Command>
+		<Command name="ПроверитьПодпись" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подпись</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроверитьПодпись</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>CommonCommand.ПротоколРаботы</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

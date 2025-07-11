@@ -1,0 +1,989 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Создание документов 1С:Документооборот по входящим ЭДО</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОтправитьПолучитьЭДО" id="113">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтправитьПолучитьЭДО</CommandName>
+				<ExtendedTooltip name="ФормаОтправитьПолучитьЭДОРасширеннаяПодсказка" id="114"/>
+			</Button>
+			<Button name="ФормаСоздатьАвтоматически" id="115">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СоздатьАвтоматически</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСоздатьАвтоматическиРасширеннаяПодсказка" id="116"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтборы" id="117">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отборы</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтборыРасширеннаяПодсказка" id="118"/>
+			<ChildItems>
+				<InputField name="ПериодОтбор" id="128">
+					<DataPath>ПериодОтбор</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ПериодОтборКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="ПериодОтборРасширеннаяПодсказка" id="130"/>
+					<Events>
+						<Event name="OnChange">ПериодОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОрганизацияОтбор" id="119">
+					<DataPath>ОрганизацияОтбор</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ОрганизацияОтборКонтекстноеМеню" id="120"/>
+					<ExtendedTooltip name="ОрганизацияОтборРасширеннаяПодсказка" id="121"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КонтрагентОтбор" id="122">
+					<DataPath>КонтрагентОтбор</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="КонтрагентОтборКонтекстноеМеню" id="123"/>
+					<ExtendedTooltip name="КонтрагентОтборРасширеннаяПодсказка" id="124"/>
+					<Events>
+						<Event name="OnChange">КонтрагентОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВидДокументаОтбор" id="125">
+					<DataPath>ВидДокументаОтбор</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документа ЭДО</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ВидДокументаОтборКонтекстноеМеню" id="126"/>
+					<ExtendedTooltip name="ВидДокументаОтборРасширеннаяПодсказка" id="127"/>
+					<Events>
+						<Event name="OnChange">ВидДокументаОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОсновное" id="32">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновноеРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<Table name="СписокДокументовКОтражению" id="1">
+					<Representation>List</Representation>
+					<DefaultItem>true</DefaultItem>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<SelectionMode>SingleRow</SelectionMode>
+					<DataPath>СписокДокументовКОтражению</DataPath>
+					<RowPictureDataPath>СписокДокументовКОтражению.ИндексКартинки</RowPictureDataPath>
+					<RowsPicture>
+						<xr:Ref>CommonPicture.КоллекцияОчередьЗаданий</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</RowsPicture>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="СписокДокументовКОтражениюКонтекстноеМеню" id="3"/>
+					<AutoCommandBar name="СписокДокументовКОтражениюКоманднаяПанель" id="2"/>
+					<ExtendedTooltip name="СписокДокументовКОтражениюРасширеннаяПодсказка" id="4"/>
+					<SearchStringAddition name="СписокДокументовКОтражениюСтрокаПоиска" id="5">
+						<AdditionSource>
+							<Item>СписокДокументовКОтражению</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДокументовКОтражениюСтрокаПоискаКонтекстноеМеню" id="6"/>
+						<ExtendedTooltip name="СписокДокументовКОтражениюСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокДокументовКОтражениюСостояниеПросмотра" id="11">
+						<AdditionSource>
+							<Item>СписокДокументовКОтражению</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДокументовКОтражениюСостояниеПросмотраКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="СписокДокументовКОтражениюСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокДокументовКОтражениюУправлениеПоиском" id="8">
+						<AdditionSource>
+							<Item>СписокДокументовКОтражению</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДокументовКОтражениюУправлениеПоискомКонтекстноеМеню" id="9"/>
+						<ExtendedTooltip name="СписокДокументовКОтражениюУправлениеПоискомРасширеннаяПодсказка" id="10"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">СписокДокументовКОтражениюПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="СписокДокументовКОтражениюОрганизация" id="17">
+							<DataPath>СписокДокументовКОтражению.Организация</DataPath>
+							<ContextMenu name="СписокДокументовКОтражениюОрганизацияКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="СписокДокументовКОтражениюОрганизацияРасширеннаяПодсказка" id="19"/>
+						</InputField>
+						<InputField name="СписокДокументовКОтражениюКонтрагент" id="20">
+							<DataPath>СписокДокументовКОтражению.Контрагент</DataPath>
+							<ContextMenu name="СписокДокументовКОтражениюКонтрагентКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="СписокДокументовКОтражениюКонтрагентРасширеннаяПодсказка" id="22"/>
+						</InputField>
+						<InputField name="СписокДокументовКОтражениюВидДокумента" id="23">
+							<DataPath>СписокДокументовКОтражению.ВидДокумента</DataPath>
+							<ContextMenu name="СписокДокументовКОтражениюВидДокументаКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="СписокДокументовКОтражениюВидДокументаРасширеннаяПодсказка" id="25"/>
+						</InputField>
+						<InputField name="СписокДокументовКОтражениюДата" id="26">
+							<DataPath>СписокДокументовКОтражению.Дата</DataPath>
+							<ContextMenu name="СписокДокументовКОтражениюДатаКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="СписокДокументовКОтражениюДатаРасширеннаяПодсказка" id="28"/>
+						</InputField>
+						<InputField name="СписокДокументовКОтражениюНомер" id="29">
+							<DataPath>СписокДокументовКОтражению.Номер</DataPath>
+							<ContextMenu name="СписокДокументовКОтражениюНомерКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="СписокДокументовКОтражениюНомерРасширеннаяПодсказка" id="31"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="ГруппаВыбранногоДокумента" id="80">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбранного документа</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВыбранногоДокументаРасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<Pages name="СтраницыПредставленияВыбранного" id="90">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы представления выбранного</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="СтраницыПредставленияВыбранногоРасширеннаяПодсказка" id="91"/>
+							<ChildItems>
+								<Page name="СтраницаДанныеВыбранного" id="92">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница данные выбранного</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаДанныеВыбранногоРасширеннаяПодсказка" id="93"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаДанныеПоВыбранномуДокументу" id="34">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа данные по выбранному документу</v8:content>
+												</v8:item>
+											</Title>
+											<Width>30</Width>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДанныеПоВыбранномуДокументуРасширеннаяПодсказка" id="35"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаОжиданиеАвтосоздания" id="151">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа ожидание автосоздания</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Group>AlwaysHorizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<BackColor>style:ЦветФонаВнимание</BackColor>
+													<ExtendedTooltip name="ГруппаОжиданиеАвтосозданияРасширеннаяПодсказка" id="152"/>
+													<ChildItems>
+														<PictureDecoration name="КартинкаОжиданияАвтосоздания" id="153">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Картинка ожидания автосоздания</v8:content>
+																</v8:item>
+															</Title>
+															<Picture>
+																<xr:Ref>CommonPicture.СостоянияДействийВОчереди</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="КартинкаОжиданияАвтосозданияКонтекстноеМеню" id="154"/>
+															<ExtendedTooltip name="КартинкаОжиданияАвтосозданияРасширеннаяПодсказка" id="155"/>
+														</PictureDecoration>
+														<LabelDecoration name="НадписьОжиданиеАвтосоздания" id="156">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Документ ожидает создания в автоматическом режиме согласно настройкам получения ЭДО.
+
+Рекомендуется дождаться обработки регламентным заданием, либо выполнить автосоздание командой "Еще" =&gt; "Выполнить автоматическое создание"</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="НадписьОжиданиеАвтосозданияКонтекстноеМеню" id="157"/>
+															<ExtendedTooltip name="НадписьОжиданиеАвтосозданияРасширеннаяПодсказка" id="158"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаОрганизацияВыбранного" id="136">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа организация выбранного</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаОрганизацияВыбранногоРасширеннаяПодсказка" id="137"/>
+													<ChildItems>
+														<LabelDecoration name="ЗаголовокОрганизацияВыбранного" id="140">
+															<Width>9</Width>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Организация:</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ЗаголовокОрганизацияВыбранногоКонтекстноеМеню" id="141"/>
+															<ExtendedTooltip name="ЗаголовокОрганизацияВыбранногоРасширеннаяПодсказка" id="142"/>
+														</LabelDecoration>
+														<LabelDecoration name="НадписьОрганизацияВыбранного" id="39">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;Организация&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<ContextMenu name="НадписьОрганизацияВыбранногоКонтекстноеМеню" id="40"/>
+															<ExtendedTooltip name="НадписьОрганизацияВыбранногоРасширеннаяПодсказка" id="41"/>
+															<Events>
+																<Event name="Click">НадписьОрганизацияВыбранногоНажатие</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаКонтрагентВыбранного" id="138">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа контрагент выбранного</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаКонтрагентВыбранногоРасширеннаяПодсказка" id="139"/>
+													<ChildItems>
+														<LabelDecoration name="ЗаголовокКонтрагентВыбранного" id="143">
+															<Width>9</Width>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Контрагент:</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ЗаголовокКонтрагентВыбранногоКонтекстноеМеню" id="144"/>
+															<ExtendedTooltip name="ЗаголовокКонтрагентВыбранногоРасширеннаяПодсказка" id="145"/>
+														</LabelDecoration>
+														<LabelDecoration name="НадписьКонтрагентВыбранного" id="42">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;Контрагент&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<ContextMenu name="НадписьКонтрагентВыбранногоКонтекстноеМеню" id="43"/>
+															<ExtendedTooltip name="НадписьКонтрагентВыбранногоРасширеннаяПодсказка" id="44"/>
+															<Events>
+																<Event name="Click">НадписьКонтрагентВыбранногоНажатие</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<LabelDecoration name="НадписьВидОтветнаяПодпись" id="56">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;Вид документа&gt;, &lt;Требуется ответная подпись&gt;</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьВидОтветнаяПодписьКонтекстноеМеню" id="57"/>
+													<ExtendedTooltip name="НадписьВидОтветнаяПодписьРасширеннаяПодсказка" id="58"/>
+												</LabelDecoration>
+												<UsualGroup name="ГруппаФайл" id="51">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа файл</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаФайлРасширеннаяПодсказка" id="52"/>
+													<ChildItems>
+														<PictureField name="КартинкаФайла" id="48">
+															<DataPath>КартинкаФайла</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<Width>2</Width>
+															<Height>1</Height>
+															<HorizontalStretch>false</HorizontalStretch>
+															<VerticalStretch>false</VerticalStretch>
+															<ValuesPicture>
+																<xr:Ref>CommonPicture.КоллекцияПиктограммФайлов</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</ValuesPicture>
+															<ContextMenu name="КартинкаФайлаКонтекстноеМеню" id="49"/>
+															<ExtendedTooltip name="КартинкаФайлаРасширеннаяПодсказка" id="50"/>
+														</PictureField>
+														<LabelDecoration name="НадписьФайлЭДО" id="53">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;Файл ЭДО&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<ContextMenu name="НадписьФайлЭДОКонтекстноеМеню" id="54"/>
+															<ExtendedTooltip name="НадписьФайлЭДОРасширеннаяПодсказка" id="55"/>
+															<Events>
+																<Event name="Click">НадписьФайлЭДОНажатие</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаДокументыПакета" id="59">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа документы пакета</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаДокументыПакетаРасширеннаяПодсказка" id="60"/>
+													<ChildItems>
+														<LabelDecoration name="ДругиеДокументыПакетаЗаголовок" id="61">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>В одном пакете с:</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДругиеДокументыПакетаЗаголовокКонтекстноеМеню" id="62"/>
+															<ExtendedTooltip name="ДругиеДокументыПакетаЗаголовокРасширеннаяПодсказка" id="63"/>
+														</LabelDecoration>
+														<UsualGroup name="ГруппаДокументыПакетаГоризонтальная" id="64">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа документы пакета горизонтальная</v8:content>
+																</v8:item>
+															</Title>
+															<Group>AlwaysHorizontal</Group>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаДокументыПакетаГоризонтальнаяРасширеннаяПодсказка" id="65"/>
+															<ChildItems>
+																<LabelDecoration name="ДекорацияОтступПакета" id="66">
+																	<Width>4</Width>
+																	<Height>1</Height>
+																	<ContextMenu name="ДекорацияОтступПакетаКонтекстноеМеню" id="67"/>
+																	<ExtendedTooltip name="ДекорацияОтступПакетаРасширеннаяПодсказка" id="68"/>
+																</LabelDecoration>
+																<UsualGroup name="ГруппаДокументыПакетаСписок" id="69">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа документы пакета список</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаДокументыПакетаСписокРасширеннаяПодсказка" id="70"/>
+																	<ChildItems>
+																		<LabelDecoration name="НадписьДокументПакета1" id="71">
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>&lt;Документ 1&gt;</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Hyperlink>true</Hyperlink>
+																			<ContextMenu name="НадписьДокументПакета1КонтекстноеМеню" id="72"/>
+																			<ExtendedTooltip name="НадписьДокументПакета1РасширеннаяПодсказка" id="73"/>
+																			<Events>
+																				<Event name="Click">НадписьДокументПакета1Нажатие</Event>
+																			</Events>
+																		</LabelDecoration>
+																		<LabelDecoration name="НадписьДокументПакета2" id="74">
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>&lt;Документ 2&gt;</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Hyperlink>true</Hyperlink>
+																			<ContextMenu name="НадписьДокументПакета2КонтекстноеМеню" id="75"/>
+																			<ExtendedTooltip name="НадписьДокументПакета2РасширеннаяПодсказка" id="76"/>
+																			<Events>
+																				<Event name="Click">НадписьДокументПакета2Нажатие</Event>
+																			</Events>
+																		</LabelDecoration>
+																		<LabelDecoration name="НадписьДокументПакетаОстальное" id="77">
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>и еще N документов ...</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Hyperlink>true</Hyperlink>
+																			<ContextMenu name="НадписьДокументПакетаОстальноеКонтекстноеМеню" id="78"/>
+																			<ExtendedTooltip name="НадписьДокументПакетаОстальноеРасширеннаяПодсказка" id="79"/>
+																			<Events>
+																				<Event name="Click">НадписьДокументПакетаОстальноеНажатие</Event>
+																			</Events>
+																		</LabelDecoration>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаОшибкаАвтосоздания" id="131">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа ошибка автосоздания</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаОшибкаАвтосозданияРасширеннаяПодсказка" id="132"/>
+													<ChildItems>
+														<LabelDecoration name="НадписьОшибкаАвтосоздания" id="133">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>При попытке автоматического создания документа произошла ошибка:
+
+&lt;Описание ошибки&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<BackColor>style:ОшибкаПолнотекстовыйПоискФон</BackColor>
+															<ContextMenu name="НадписьОшибкаАвтосозданияКонтекстноеМеню" id="134"/>
+															<ExtendedTooltip name="НадписьОшибкаАвтосозданияРасширеннаяПодсказка" id="135"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаДействияПоДокументу" id="84">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Vertical</Group>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДействияПоДокументуРасширеннаяПодсказка" id="85"/>
+											<ChildItems>
+												<Button name="СоздатьДокумент" id="86">
+													<Type>UsualButton</Type>
+													<HorizontalStretch>true</HorizontalStretch>
+													<CommandName>Form.Command.СоздатьДокумент</CommandName>
+													<ExtendedTooltip name="СоздатьДокументРасширеннаяПодсказка" id="87"/>
+												</Button>
+												<Button name="НеСоздаватьДокумент" id="88">
+													<Type>UsualButton</Type>
+													<HorizontalStretch>true</HorizontalStretch>
+													<CommandName>Form.Command.НеСоздаватьДокумент</CommandName>
+													<ExtendedTooltip name="НеСоздаватьДокументРасширеннаяПодсказка" id="89"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаОжидание" id="94">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница ожидание</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаОжиданиеРасширеннаяПодсказка" id="95"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаОжиданиеКартинкаИНадпись" id="96">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка и надпись</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОжиданиеКартинкаИНадписьРасширеннаяПодсказка" id="97"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаДлительнаяОперация" id="98">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Длительная операция</v8:content>
+														</v8:item>
+													</Title>
+													<Picture>
+														<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаДлительнаяОперацияКонтекстноеМеню" id="99"/>
+													<ExtendedTooltip name="КартинкаДлительнаяОперацияРасширеннаяПодсказка" id="100"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьДлительнаяОперация" id="101">
+													<Width>30</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Пожалуйста, подождите...</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="НадписьДлительнаяОперацияКонтекстноеМеню" id="102"/>
+													<ExtendedTooltip name="НадписьДлительнаяОперацияРасширеннаяПодсказка" id="103"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаОшибка" id="104">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница ошибка</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаОшибкаРасширеннаяПодсказка" id="105"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьОшибкаПолученияДанных" id="108">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;Описание ошибки получения данных выбранного документа&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<BackColor>style:ОшибкаПолнотекстовыйПоискФон</BackColor>
+											<ContextMenu name="НадписьОшибкаПолученияДанныхКонтекстноеМеню" id="109"/>
+											<ExtendedTooltip name="НадписьОшибкаПолученияДанныхРасширеннаяПодсказка" id="110"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаПустогоВыбора" id="146">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница пустого выбора</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаПустогоВыбораРасширеннаяПодсказка" id="147"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьПустогоВыбора" id="148">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выберите входящий документ ЭДО для получения информации и действий по документу.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьПустогоВыбораКонтекстноеМеню" id="149"/>
+											<ExtendedTooltip name="НадписьПустогоВыбораРасширеннаяПодсказка" id="150"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокДокументовКОтражению" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список документов к отражению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокДокументовКОтражению.ДокументЭДО</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументыЭДОКСозданиюВДО.ДокументЭДО,
+	ЭлектронныйДокументВходящийЭДО.Организация,
+	ЭлектронныйДокументВходящийЭДО.Контрагент,
+	ЭлектронныйДокументВходящийЭДО.ВидДокумента,
+	ЭлектронныйДокументВходящийЭДО.ДатаДокумента КАК Дата,
+	ЭлектронныйДокументВходящийЭДО.НомерДокумента КАК Номер,
+	ВЫБОР
+		КОГДА ДокументыЭДОКСозданиюВДО.АвтоматическоеСоздание
+			ТОГДА 0
+		КОГДА НЕ ОшибкиЭДОКИсправлению.ПредметОшибки ЕСТЬ NULL
+			ТОГДА 2
+		ИНАЧЕ -1
+	КОНЕЦ КАК ИндексКартинки
+ИЗ
+	РегистрСведений.ДокументыЭДОКСозданиюВДО КАК ДокументыЭДОКСозданиюВДО
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ЭлектронныйДокументВходящийЭДО КАК ЭлектронныйДокументВходящийЭДО
+		ПО ДокументыЭДОКСозданиюВДО.ДокументЭДО = ЭлектронныйДокументВходящийЭДО.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОшибкиЭДОКИсправлению КАК ОшибкиЭДОКИсправлению
+		ПО ДокументыЭДОКСозданиюВДО.ДокументЭДО = ОшибкиЭДОКИсправлению.ПредметОшибки</QueryText>
+				<MainTable>Document.ЭлектронныйДокументВходящийЭДО</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:userSettingID>041af20f-df34-47ce-bc31-134949f9a055</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:userSettingID>562a4629-0179-48bd-8b6d-ba460f162de5</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:userSettingID>bacf8e37-71e8-4458-9ace-cb70d03ef264</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsUserSettingID>e948c39c-f2f6-4ae2-96e4-27fdbd77617d</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВыбранныйДокумент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранный документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЭлектронныйДокументВходящийЭДО</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацияВыбранного" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация выбранного</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрагентВыбранного" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент выбранного</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидДокументаВыбранного" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документа выбранного</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыДокументовЭДО</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбранныйТребуетОтветнуюПодпись" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранный требует ответную подпись</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлВыбранногоДокумента" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл выбранного документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СообщениеЭДОПрисоединенныеФайлы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДругиеДокументыПакета" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Другие документы пакета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:DocumentRef.ЭлектронныйДокументВходящийЭДО</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="КартинкаФайла" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Картинка файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолучениеДанныхВыбранного" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получение данных выбранного</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПредставлениеДокумента" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацияОтбор" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация отбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрагентОтбор" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент отбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидДокументаОтбор" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документа отбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыДокументовЭДО</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодОтбор" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период отбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОписаниеОшибкиАвтосоздания" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание ошибки автосоздания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбранныйОжидаетАвтосоздания" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранный ожидает автосоздания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьДокумент" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документ</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Post</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьДокумент</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="НеСоздаватьДокумент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не требуется создание документа</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Close</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НеСоздаватьДокумент</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОтправитьПолучитьЭДО" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить и получить ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтправитьПолучитьЭДО</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СоздатьАвтоматически" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить автоматическое создание</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыполнитьРегламентноеЗаданиеВручную</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьАвтоматически</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

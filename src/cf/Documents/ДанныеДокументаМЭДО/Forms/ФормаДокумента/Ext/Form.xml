@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="130">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.PostAndClose</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Записать и закрыть</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="131"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="132">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="133"/>
+			</Button>
+			<Button name="ОтправитьПоМЭДО" id="80">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтправитьПоМЭДО</CommandName>
+				<ExtendedTooltip name="ОтправитьПоМЭДОРасширеннаяПодсказка" id="81"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПометкаУдаления" id="134">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пометка удаления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пометка удаления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ОбъектПомеченНаУдаление</BackColor>
+			<ExtendedTooltip name="ГруппаПометкаУдаленияРасширеннаяПодсказка" id="135"/>
+			<ChildItems>
+				<PictureDecoration name="ПометкаУдаленияКартинка" id="136">
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>1</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<SkipOnInput>false</SkipOnInput>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.ИнформацияБЭД</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ПометкаУдаленияКартинкаКонтекстноеМеню" id="137"/>
+					<ExtendedTooltip name="ПометкаУдаленияКартинкаРасширеннаяПодсказка" id="138"/>
+				</PictureDecoration>
+				<LabelDecoration name="ПометкаУдаленияНадпись" id="139">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект "Данные документа МЭДО" помечен на удаление</v8:content>
+						</v8:item>
+					</Title>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<ContextMenu name="ПометкаУдаленияНадписьКонтекстноеМеню" id="140"/>
+					<ExtendedTooltip name="ПометкаУдаленияНадписьРасширеннаяПодсказка" id="141"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВерх" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа верх</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВерхРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<InputField name="Дата" id="5">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>12</Width>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="7"/>
+				</InputField>
+				<InputField name="ДатаРегистрации" id="77">
+					<DataPath>Объект.ДатаРегистрации</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рег. от</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаРегистрацииКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ДатаРегистрацииРасширеннаяПодсказка" id="79"/>
+				</InputField>
+				<LabelField name="Направление" id="34">
+					<DataPath>Объект.Направление</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Направление</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>9</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>9</MaxWidth>
+					<ContextMenu name="НаправлениеКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="НаправлениеРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<CheckBoxField name="ГотовКОтправке" id="48">
+					<DataPath>Объект.ГотовКОтправке</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ГотовКОтправкеКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ГотовКОтправкеРасширеннаяПодсказка" id="50"/>
+					<Events>
+						<Event name="OnChange">ГотовКОтправкеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="Отправлен" id="43">
+					<DataPath>Объект.Отправлен</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтправленКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ОтправленРасширеннаяПодсказка" id="45"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПредыдущаяОтправка" id="142">
+					<DataPath>Объект.ПредыдущаяОтправка</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПредыдущаяОтправкаКонтекстноеМеню" id="143"/>
+					<ExtendedTooltip name="ПредыдущаяОтправкаРасширеннаяПодсказка" id="144"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВ3Колонки" id="116">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа В 3 колонки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВ3КолонкиРасширеннаяПодсказка" id="117"/>
+			<ChildItems>
+				<UsualGroup name="ЛеваяКолонка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Левая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЛеваяКолонкаРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="Организация" id="69">
+							<DataPath>Объект.Организация</DataPath>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="71"/>
+						</InputField>
+						<InputField name="Документ" id="17">
+							<DataPath>Объект.Документ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДокументКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="19"/>
+						</InputField>
+						<InputField name="ГрифДоступа" id="55">
+							<DataPath>Объект.ГрифДоступа</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ГрифДоступаКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ГрифДоступаРасширеннаяПодсказка" id="57"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="СредняяКолонка" id="118">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Средняя колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СредняяКолонкаРасширеннаяПодсказка" id="119"/>
+					<ChildItems>
+						<InputField name="ВидДокумента" id="11">
+							<DataPath>Объект.ВидДокумента</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВидДокументаКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="13"/>
+						</InputField>
+						<InputField name="МестоСоставления" id="31">
+							<DataPath>Объект.МестоСоставления</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Место составления по классификатору МЭДО</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МестоСоставленияКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="МестоСоставленияРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<InputField name="ГлавныйФайл" id="14">
+							<DataPath>Объект.ГлавныйФайл</DataPath>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>true</DropListButton>
+							<ChoiceButton>false</ChoiceButton>
+							<ClearButton>true</ClearButton>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<ContextMenu name="ГлавныйФайлКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ГлавныйФайлРасширеннаяПодсказка" id="16"/>
+							<Events>
+								<Event name="AutoComplete">ГлавныйФайлАвтоПодбор</Event>
+								<Event name="StartChoice">ГлавныйФайлНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПраваяКолонка" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="24"/>
+					<ChildItems>
+						<InputField name="Ответственный" id="40">
+							<DataPath>Объект.Ответственный</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="42"/>
+						</InputField>
+						<InputField name="Комментарий" id="62">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>3</MaxHeight>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="64"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТехническиеДанные" id="120">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Технические данные</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ExtendedTooltip name="ГруппаТехническиеДанныеРасширеннаяПодсказка" id="121"/>
+			<ChildItems>
+				<Table name="Пакеты" id="86">
+					<Representation>List</Representation>
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<MaxHeight>4</MaxHeight>
+					<DataPath>Объект.Пакеты</DataPath>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Если у получателей разные версии формата МЭДО, то сообщение делится на несколько.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПакетыКонтекстноеМеню" id="88"/>
+					<AutoCommandBar name="ПакетыКоманднаяПанель" id="87">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПакетыРасширеннаяПодсказка" id="89"/>
+					<SearchStringAddition name="ПакетыСтрокаПоиска" id="90">
+						<AdditionSource>
+							<Item>Пакеты</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПакетыСтрокаПоискаКонтекстноеМеню" id="91"/>
+						<ExtendedTooltip name="ПакетыСтрокаПоискаРасширеннаяПодсказка" id="92"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПакетыСостояниеПросмотра" id="96">
+						<AdditionSource>
+							<Item>Пакеты</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПакетыСостояниеПросмотраКонтекстноеМеню" id="97"/>
+						<ExtendedTooltip name="ПакетыСостояниеПросмотраРасширеннаяПодсказка" id="98"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПакетыУправлениеПоиском" id="93">
+						<AdditionSource>
+							<Item>Пакеты</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПакетыУправлениеПоискомКонтекстноеМеню" id="94"/>
+						<ExtendedTooltip name="ПакетыУправлениеПоискомРасширеннаяПодсказка" id="95"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ПакетыНомерСтроки" id="99">
+							<DataPath>Объект.Пакеты.LineNumber</DataPath>
+							<Width>1</Width>
+							<ContextMenu name="ПакетыНомерСтрокиКонтекстноеМеню" id="100"/>
+							<ExtendedTooltip name="ПакетыНомерСтрокиРасширеннаяПодсказка" id="101"/>
+						</InputField>
+						<InputField name="ПакетыИдентификаторСообщения" id="105">
+							<DataPath>Объект.Пакеты.ИдентификаторСообщения</DataPath>
+							<Width>26</Width>
+							<ContextMenu name="ПакетыИдентификаторСообщенияКонтекстноеМеню" id="106"/>
+							<ExtendedTooltip name="ПакетыИдентификаторСообщенияРасширеннаяПодсказка" id="107"/>
+						</InputField>
+						<InputField name="ПакетыВерсияМЭДО" id="102">
+							<DataPath>Объект.Пакеты.ВерсияМЭДО</DataPath>
+							<Width>6</Width>
+							<ContextMenu name="ПакетыВерсияМЭДОКонтекстноеМеню" id="103"/>
+							<ExtendedTooltip name="ПакетыВерсияМЭДОРасширеннаяПодсказка" id="104"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="ГруппаТехническиеДанныеЕсли1Строка" id="122">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Технические данные, если 1 строка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТехническиеДанныеЕсли1СтрокаРасширеннаяПодсказка" id="123"/>
+					<ChildItems>
+						<InputField name="ИдентификаторДокумента" id="20">
+							<DataPath>Объект.ИдентификаторДокумента</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ИдентификаторДокументаКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ИдентификаторДокументаРасширеннаяПодсказка" id="22"/>
+						</InputField>
+						<InputField name="ИдентификаторСообщения" id="127">
+							<DataPath>Объект.Пакеты[0].ИдентификаторСообщения</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификатор сообщения по документу. Для исходящего совпадает с внутренним идентификатором в этой информационной базе</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ИдентификаторСообщенияКонтекстноеМеню" id="128"/>
+							<ExtendedTooltip name="ИдентификаторСообщенияРасширеннаяПодсказка" id="129"/>
+						</InputField>
+						<InputField name="ВерсияМЭДО" id="124">
+							<DataPath>Объект.Пакеты[0].ВерсияМЭДО</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сообщение с документом получено/отправлено в формате этой версии</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>4</Width>
+							<ContextMenu name="ВерсияМЭДОКонтекстноеМеню" id="125"/>
+							<ExtendedTooltip name="ВерсияМЭДОРасширеннаяПодсказка" id="126"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ДанныеДокументаМЭДО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОтправитьПоМЭДО" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить по МЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтправитьПоМЭДО</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ЭтоПрограммноеСоздание">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Документ">
+			<Type>
+				<v8:TypeSet>cfg:AnyIBRef</v8:TypeSet>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

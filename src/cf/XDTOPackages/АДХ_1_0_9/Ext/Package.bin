@@ -1,0 +1,460 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://v8.1c.ru/doc8/LTA/1.0.9">
+	<valueType name="CounterpartyType" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">ЮрЛицо</enumeration>
+		<enumeration xsi:type="xs:string">ФизЛицо</enumeration>
+		<enumeration xsi:type="xs:string">ИндивидуальныйПредприниматель</enumeration>
+		<enumeration xsi:type="xs:string">ЮрЛицоНеРезидент</enumeration>
+	</valueType>
+	<valueType name="StoragePeriodCategory" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">ВременноеДо10</enumeration>
+		<enumeration xsi:type="xs:string">ВременноеСвыше10</enumeration>
+		<enumeration xsi:type="xs:string">Постоянное</enumeration>
+	</valueType>
+	<valueType name="Type" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">String</enumeration>
+		<enumeration xsi:type="xs:string">Numeric</enumeration>
+		<enumeration xsi:type="xs:string">Boolean</enumeration>
+		<enumeration xsi:type="xs:string">Date</enumeration>
+		<enumeration xsi:type="xs:string">Document</enumeration>
+		<enumeration xsi:type="xs:string">DocumentType</enumeration>
+		<enumeration xsi:type="xs:string">Organization</enumeration>
+		<enumeration xsi:type="xs:string">Department</enumeration>
+		<enumeration xsi:type="xs:string">Title</enumeration>
+		<enumeration xsi:type="xs:string">SecurityLevel</enumeration>
+		<enumeration xsi:type="xs:string">Counterparty</enumeration>
+		<enumeration xsi:type="xs:string">Individual</enumeration>
+		<enumeration xsi:type="xs:string">Employee</enumeration>
+		<enumeration xsi:type="xs:string">Project</enumeration>
+		<enumeration xsi:type="xs:string">Currency</enumeration>
+		<enumeration xsi:type="xs:string">CaseFilesListSection</enumeration>
+		<enumeration xsi:type="xs:string">CaseFilesCatalog</enumeration>
+		<enumeration xsi:type="xs:string">Dossier</enumeration>
+	</valueType>
+	<valueType name="LoadingReportOperation" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Upload</enumeration>
+		<enumeration xsi:type="xs:string">Verification</enumeration>
+	</valueType>
+	<valueType name="LinkDirection" base="xs:string" variety="Atomic">
+		<enumeration>Прямая</enumeration>
+		<enumeration>Обратная</enumeration>
+	</valueType>
+	<valueType name="SignatureType" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Qualified</enumeration>
+		<enumeration xsi:type="xs:string">Simple</enumeration>
+		<enumeration xsi:type="xs:string">Paper</enumeration>
+	</valueType>
+	<valueType name="WarrantType" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">ON_DOVBB</enumeration>
+		<enumeration xsi:type="xs:string">EMCHD</enumeration>
+	</valueType>
+	<valueType name="DocumentStatus" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">НаОперативномКонтуре</enumeration>
+		<enumeration xsi:type="xs:string">НаАрхивномКонтуре</enumeration>
+		<enumeration xsi:type="xs:string">Уничтожен</enumeration>
+	</valueType>
+	<valueType name="EDIDirection" base="xs:string" variety="Atomic">
+		<enumeration>Входящий</enumeration>
+		<enumeration>Интеркампани</enumeration>
+		<enumeration>Исходящий</enumeration>
+		<enumeration>Внутренний</enumeration>
+	</valueType>
+	<valueType name="EDIStatus" base="xs:string" variety="Atomic">
+		<enumeration>НеПолучен</enumeration>
+		<enumeration>НеСформирован</enumeration>
+		<enumeration>Отправлен</enumeration>
+		<enumeration>ПодготовленКОтправке</enumeration>
+		<enumeration>Подписан</enumeration>
+		<enumeration>Подтвержден</enumeration>
+		<enumeration>Получен</enumeration>
+		<enumeration>Сформирован</enumeration>
+		<enumeration>Утвержден</enumeration>
+		<enumeration>ЧастичноПодписан</enumeration>
+	</valueType>
+	<valueType name="EDIFileType" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Информация отправителя</enumeration>
+		<enumeration xsi:type="xs:string">Информация получателя</enumeration>
+		<enumeration xsi:type="xs:string">Подтверждение даты получения информации получателя</enumeration>
+		<enumeration xsi:type="xs:string">Извещение о получении подтверждения даты получения информации получателя</enumeration>
+		<enumeration xsi:type="xs:string">Извещение о получении</enumeration>
+		<enumeration xsi:type="xs:string">Подтверждение даты получения извещения о получении информации отправителя</enumeration>
+		<enumeration xsi:type="xs:string">Извещение о получении подтверждения даты получения извещения о получении информации отправителя</enumeration>
+		<enumeration xsi:type="xs:string">Ошибка</enumeration>
+		<enumeration xsi:type="xs:string">Подтверждение даты отправки</enumeration>
+		<enumeration xsi:type="xs:string">Извещение о получении подтверждения даты отправки</enumeration>
+		<enumeration xsi:type="xs:string">Подтверждение даты получения</enumeration>
+		<enumeration xsi:type="xs:string">Извещение о получении подтверждения даты получения</enumeration>
+		<enumeration xsi:type="xs:string">Предложение об аннулировании</enumeration>
+		<enumeration xsi:type="xs:string">Отказ от предложения об аннулировании</enumeration>
+		<enumeration xsi:type="xs:string">Уведомление об уточнении</enumeration>
+		<enumeration xsi:type="xs:string">Извещение о получении уведомления об уточнении</enumeration>
+		<enumeration xsi:type="xs:string">Приложение к УПД поставщика для ЕИС</enumeration>
+		<enumeration xsi:type="xs:string">Приложение к УКД поставщика для ЕИС</enumeration>
+		<enumeration xsi:type="xs:string">Уведомление о принятии к учету</enumeration>
+		<enumeration xsi:type="xs:string">Вложение ЕИС</enumeration>
+		<enumeration xsi:type="xs:string">Контракт ЕИС</enumeration>
+		<enumeration xsi:type="xs:string">Ошибка ЕИС</enumeration>
+		<enumeration xsi:type="xs:string">Квитанция ЕИС</enumeration>
+		<enumeration xsi:type="xs:string">Подтверждение даты отправки извещения о получении</enumeration>
+		<enumeration xsi:type="xs:string">Подтверждение даты отправки информации получателя</enumeration>
+		<enumeration xsi:type="xs:string">Подтверждение даты отправки уведомления об уточнении</enumeration>
+		<enumeration xsi:type="xs:string">Подтверждение даты получения уведомления об уточнении</enumeration>
+		<enumeration>Приложение к УПД покупателя для ЕИС</enumeration>
+		<enumeration>Приложение к УКД покупателя для ЕИС</enumeration>
+		<enumeration>Информация грузоотправителя</enumeration>
+		<enumeration>Информация перевозчика при погрузке</enumeration>
+		<enumeration>Информация грузополучателя</enumeration>
+		<enumeration>Информация перевозчика о выдаче груза</enumeration>
+		<enumeration>Первичный учетный документ (информация перевозчика)</enumeration>
+		<enumeration>Первичный учетный документ (информация грузоотправителя)</enumeration>
+		<enumeration>Информация о переадресовке</enumeration>
+		<enumeration>Информация о замене водителя и (или) транспортного средства</enumeration>
+		<enumeration>Отклонение перевозчиком</enumeration>
+		<enumeration>Отклонение перевозчиком (при выгрузке)</enumeration>
+		<enumeration>Отклонено грузоотправителем</enumeration>
+		<enumeration>Извещение о получении титула грузоотправителя</enumeration>
+		<enumeration>Извещение о получении титула приемки</enumeration>
+		<enumeration>Извещение о получении титула первичного учетного документа</enumeration>
+		<enumeration>Информация грузополучателя (возврат)</enumeration>
+		<enumeration>Информация перевозчика о выдаче груза (возврат)</enumeration>
+		<enumeration>Информация о переадресовке (возврат)</enumeration>
+		<enumeration>Информация о замене водителя и (или) транспортного средства (возврат)</enumeration>
+		<enumeration>Информация фрахтователя</enumeration>
+		<enumeration>Информация фрахтовщика</enumeration>
+		<enumeration>Информация фрахтователя (по факту подачи ТС)</enumeration>
+		<enumeration>Информация фрахтовщика (по факту возврата ТС)</enumeration>
+		<enumeration>Извещение о получении титула грузоотправителя</enumeration>
+		<enumeration>Отклонено фрахтовщиком</enumeration>
+		<enumeration>Информация перевозчика (передача порожнего контейнера)</enumeration>
+		<enumeration>Информация перевозчика (получение груженого контейнера)</enumeration>
+		<enumeration>Информация перевозчика (передача груженого контейнера)</enumeration>
+		<enumeration>Информация перевозчика (получение порожнего контейнера)</enumeration>
+		<enumeration>Информация перевозчика (подача на погрузку порожнего контейнера)</enumeration>
+		<enumeration>Информация грузоотправителя (получение порожнего контейнера)</enumeration>
+		<enumeration>Информация грузоотправителя (передача груженого контейнера)</enumeration>
+		<enumeration>Информация грузополучателя (получение груженого контейнера)</enumeration>
+		<enumeration>Информация грузополучателя (передача порожнего контейнера)</enumeration>
+	</valueType>
+	<objectType name="MessageObject"/>
+	<objectType name="Message">
+		<property name="ID" type="xs:string"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="SourceID" type="xs:string"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Object" type="d3p1:MessageObject" upperBound="-1"/>
+	</objectType>
+	<objectType name="DocumentContainer">
+		<property name="ID" type="xs:string"/>
+		<property name="Number" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="ElectronicDocument" type="xs:boolean"/>
+		<property name="DocumentTypeID" type="xs:string"/>
+		<property name="DocumentTypeName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="OrganizationID" type="xs:string"/>
+		<property name="OrganizationName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DepartmentID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DepartmentName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SecurityLevelID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SecurityLevelName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Header" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SheetsNumber" type="xs:int" lowerBound="0" nillable="true"/>
+		<property name="AdditionsNumber" type="xs:int" lowerBound="0" nillable="true"/>
+		<property name="AdditionsSheetsNumber" type="xs:int" lowerBound="0" nillable="true"/>
+		<property name="EDIProperties" lowerBound="0" upperBound="1" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Direction" type="d5p1:EDIDirection"/>
+				<property name="Number" type="xs:string"/>
+				<property name="Date" type="xs:dateTime"/>
+			</typeDef>
+		</property>
+		<property name="OtherProperties" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ID" type="xs:string"/>
+				<property name="Name" type="xs:string"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Type" type="d5p1:Type"/>
+				<property name="Value" type="xs:string" nillable="true"/>
+			</typeDef>
+		</property>
+		<property name="AdditionalTables" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="TableName" type="xs:string"/>
+				<property name="RowNumber" type="xs:int"/>
+				<property name="ColumnName" type="xs:string"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Type" type="d5p1:Type"/>
+				<property name="Value" type="xs:string" nillable="true"/>
+			</typeDef>
+		</property>
+		<property name="Files" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="FileName" type="xs:string"/>
+				<property name="VisualizationFileName" type="xs:string" nillable="true"/>
+				<property name="HashSum" type="xs:string"/>
+				<property name="Size" type="xs:int" lowerBound="0" nillable="true"/>
+				<property name="Modified" type="xs:dateTime" lowerBound="0" nillable="true"/>
+				<property name="Signatures" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Type" type="d7p1:SignatureType"/>
+						<property name="Signer" type="xs:string"/>
+						<property name="SignerTitle" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="Date" type="xs:dateTime"/>
+						<property name="FileName" type="xs:string"/>
+						<property name="WarrantNumber" type="xs:string" lowerBound="0" nillable="true"/>
+						<property name="IsValid" type="xs:boolean" lowerBound="0" nillable="true"/>
+						<property name="SESHashSum" type="xs:string" lowerBound="0" nillable="true"/>
+					</typeDef>
+				</property>
+				<property name="RoleID" type="xs:string" lowerBound="0" nillable="true"/>
+				<property name="RoleName" type="xs:string" lowerBound="0" nillable="true"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="EDIFileType" type="d5p1:EDIFileType" lowerBound="0" nillable="true"/>
+				<property name="EDIStatuses" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="Date" type="xs:dateTime"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Value" type="d7p1:EDIStatus"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="PersonalDataSubjects" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="PersonID" type="xs:string"/>
+				<property name="Name" type="xs:string" lowerBound="0" nillable="true"/>
+				<property name="BirthDate" type="xs:date" lowerBound="0" nillable="true"/>
+			</typeDef>
+		</property>
+		<property name="Visas" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ReviewerID" type="xs:string"/>
+				<property name="Date" type="xs:dateTime"/>
+				<property name="Result" type="xs:string"/>
+				<property name="Comment" type="xs:string" nillable="true"/>
+			</typeDef>
+		</property>
+		<property name="Resolutions" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ReviewerID" type="xs:string"/>
+				<property name="Date" type="xs:dateTime"/>
+				<property name="Text" type="xs:string"/>
+			</typeDef>
+		</property>
+		<property name="Links" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="TypeName" type="xs:string"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Direction" type="d5p1:LinkDirection"/>
+				<property name="LinkedDocumentID" type="xs:string"/>
+				<property name="LinkedString" type="xs:string"/>
+				<property name="Comment" type="xs:string"/>
+			</typeDef>
+		</property>
+		<property name="Barcodes" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="IsMain" type="xs:boolean"/>
+				<property name="Code" type="xs:string"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="DocumentPackage">
+		<property name="ID" type="xs:string"/>
+		<property name="SourceID" type="xs:string"/>
+		<property name="Number" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="OrganizationID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DepartmentID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SecurityLevelID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SenderID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DateSent" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="Documents" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ID" type="xs:string"/>
+				<property name="ContainerFileName" type="xs:string"/>
+			</typeDef>
+		</property>
+		<property name="Comment" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="HandOverList" base="d2p1:MessageObject">
+		<property name="ID" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="DateSent" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="Number" type="xs:string"/>
+		<property name="SourceID" type="xs:string"/>
+		<property name="OrganizationID" type="xs:string"/>
+		<property name="DepartmentID" type="xs:string"/>
+		<property name="SecurityLevelID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ElectronicDocuments" type="xs:boolean"/>
+		<property name="SenderID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Comment" type="xs:string"/>
+		<property name="StorageUnits" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="DossierID" type="xs:string"/>
+				<property name="CaseFilesCatalogID" type="xs:string"/>
+				<property name="PackageFileName" type="xs:string"/>
+				<property name="DossierNumber" type="xs:int"/>
+				<property name="DossierPartNumber" type="xs:int"/>
+				<property name="DossierHeader" type="xs:string"/>
+				<property name="DossierNote" type="xs:string" lowerBound="0" nillable="true"/>
+				<property name="DossierDateFrom" type="xs:dateTime" lowerBound="0" nillable="true"/>
+				<property name="DossierDateTo" type="xs:dateTime" lowerBound="0" nillable="true"/>
+				<property name="DocumentsList" type="xs:string"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="CaseVolumeDocumentsList">
+		<property name="DossierID" type="xs:string"/>
+		<property name="Documents" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="InventoryNumber" type="xs:int"/>
+				<property name="ID" type="xs:string"/>
+				<property name="SourceID" type="xs:string" lowerBound="0" nillable="true"/>
+				<property name="Date" type="xs:dateTime"/>
+				<property name="Number" type="xs:string"/>
+				<property name="Header" type="xs:string"/>
+				<property name="SizeMb" type="xs:float"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="LoadingReport">
+		<property name="ObjectFileName" type="xs:string"/>
+		<property name="Success" type="xs:boolean"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Operation" type="d3p1:LoadingReportOperation"/>
+		<property name="ResultText" type="xs:string"/>
+		<property name="AccepterID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="AccepterName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="AcceptanceDate" type="xs:dateTime" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="DossiersDestruction">
+		<property name="ID" type="xs:string"/>
+		<property name="Number" type="xs:string"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="OrganizationID" type="xs:string"/>
+		<property name="DepartmentID" type="xs:string"/>
+		<property name="SecurityLevelID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ElectronicDocuments" type="xs:boolean"/>
+		<property name="Basis" type="xs:string"/>
+		<property name="Comment" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="StorageUnits" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="DossierID" type="xs:string"/>
+				<property name="DocumentsList" type="xs:string"/>
+			</typeDef>
+		</property>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="DocumentType" base="d2p1:MessageObject">
+		<property name="ID" type="xs:string"/>
+		<property name="ParentID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Name" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Organization" base="d2p1:MessageObject">
+		<property name="ID" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Name" type="xs:string"/>
+		<property name="FullDescr" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="TIN" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="PPC" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Department" base="d2p1:MessageObject">
+		<property name="ID" type="xs:string"/>
+		<property name="ParentID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Name" type="xs:string"/>
+		<property name="ManagerID" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Title" base="d2p1:MessageObject">
+		<property name="ID" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Name" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Individual" base="d2p1:MessageObject">
+		<property name="ID" type="xs:string"/>
+		<property name="FolderID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="IsFolder" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Name" type="xs:string"/>
+		<property name="BirthDate" type="xs:date" lowerBound="0" nillable="true"/>
+		<property name="TIN" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="NIN" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Employee" base="d2p1:MessageObject">
+		<property name="ID" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="IndividualID" type="xs:string"/>
+		<property name="TitleID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DepartmentID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="EffectiveDate" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="ExpirationDate" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="IsMain" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="SecurityLevel" base="d2p1:MessageObject">
+		<property name="ID" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Name" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Counterparty" base="d2p1:MessageObject">
+		<property name="ID" type="xs:string"/>
+		<property name="FolderID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="IsFolder" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Name" type="xs:string"/>
+		<property name="FullDescr" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="TIN" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="PPC" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Type" type="d2p1:CounterpartyType" lowerBound="0" nillable="true"/>
+		<property name="IndividualID" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Project" base="d2p1:MessageObject">
+		<property name="ID" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Name" type="xs:string"/>
+		<property name="SecurityLevelID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ManagerID" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="Warrant" base="d2p1:MessageObject">
+		<property name="Type" type="d2p1:WarrantType"/>
+		<property name="Number" type="xs:string"/>
+		<property name="IsInRegister" type="xs:boolean"/>
+		<property name="EntrusterTIN" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="WarrantFileName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SignatureFileName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Comment" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="CaseFilesListSection" base="d2p1:MessageObject">
+		<property name="ID" type="xs:string"/>
+		<property name="ParentID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Name" type="xs:string"/>
+		<property name="Year" type="xs:int"/>
+		<property name="Index" type="xs:string"/>
+		<property name="OrganizationID" type="xs:string"/>
+		<property name="DepartmentID" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/LTA/1.0.9" name="CaseFilesCatalog" base="d2p1:MessageObject">
+		<property name="ID" type="xs:string"/>
+		<property name="DeletionMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Name" type="xs:string"/>
+		<property name="Index" type="xs:string"/>
+		<property name="Header" type="xs:string"/>
+		<property name="Year" type="xs:int" lowerBound="0" nillable="true"/>
+		<property name="ForElectronicDocuments" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="ListSectionID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="OrganizationID" type="xs:string"/>
+		<property name="DepartmentID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SecurityLevelID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="StoragePeriodCategory" type="d2p1:StoragePeriodCategory"/>
+		<property name="StoragePeriod" type="xs:string"/>
+		<property name="OperationalStoragePeriod" type="xs:int" lowerBound="0" nillable="true"/>
+		<property name="ArticleNumber" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Personnel" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="EVCMark" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Note" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DocumentTypes" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ID" type="xs:string"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="File">
+		<property name="Code" type="xs:string"/>
+		<property name="Name" type="xs:string"/>
+		<property name="Extension" type="xs:string"/>
+		<property name="BinaryData" type="xs:base64Binary" lowerBound="0" nillable="true"/>
+	</objectType>
+</package>

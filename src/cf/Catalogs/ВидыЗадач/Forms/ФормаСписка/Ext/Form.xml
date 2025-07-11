@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>User settings group</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Наименование" id="16">
+					<DataPath>Список.Наименование</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ 
+       ВидыЗадач.Ссылка, 
+       ВидыЗадач.ПометкаУдаления, 
+       ВидыЗадач.Наименование, 
+       ВидыЗадач.ВидДействияИсполнителя, 
+       ВидыЗадач.ВидДействияПроверяющего, 
+       ВидыЗадач.ВидУчастникаИсполнитель, 
+       ВидыЗадач.ВидУчастникаОтветственный, 
+       ВидыЗадач.ВидУчастникаПроверяющий, 
+       ВидыЗадач.ДоступенДляВыбора, 
+       ВидыЗадач.ЗаголовокКомандыПодобратьИсполнителей, 
+       ВидыЗадач.ЗаголовокКомандыПодобратьИсполнителейЯзык1, 
+       ВидыЗадач.ЗаголовокКомандыПодобратьИсполнителейЯзык2, 
+       ВидыЗадач.ЗаголовокСпискаВыбранныхУчастников, 
+       ВидыЗадач.ЗаголовокСпискаВыбранныхУчастниковЯзык1, 
+       ВидыЗадач.ЗаголовокСпискаВыбранныхУчастниковЯзык2, 
+       ВидыЗадач.ЗаголовокФормыВыбораИсполнителей, 
+       ВидыЗадач.ЗаголовокФормыВыбораИсполнителейЯзык1, 
+       ВидыЗадач.ЗаголовокФормыВыбораИсполнителейЯзык2, 
+       ВидыЗадач.ЗакрыватьПодзадачи, 
+       ВидыЗадач.НаборСостояний, 
+       ВидыЗадач.РезультатЗадачиИсполнено, 
+       ВидыЗадач.РезультатИсполнителяВыполнена, 
+       ВидыЗадач.РезультатПроверяющегоВозвращеноНаДоработку, 
+       ВидыЗадач.РезультатПроверяющегоПроверено, 
+       ВидыЗадач.СостояниеЗадачиВРаботе, 
+       ВидыЗадач.СостояниеЗадачиЗакрыта, 
+       ВидыЗадач.СостояниеЗадачиНаПроверке, 
+       ВидыЗадач.СостояниеЗадачиНовая, 
+       ВидыЗадач.СостояниеЗадачиОтложена, 
+       ВидыЗадач.СостояниеЗадачиОтменена, 
+       ВидыЗадач.СостояниеЗадачиЧерновик, 
+       ВидыЗадач.СостояниеУчастниковВозвращеноНаДоработку, 
+       ВидыЗадач.СостояниеУчастниковВРаботе, 
+       ВидыЗадач.СостояниеУчастниковВыполнена, 
+       ВидыЗадач.СостояниеУчастниковНаПроверке, 
+       ВидыЗадач.СостояниеУчастниковНовая, 
+       ВидыЗадач.СостояниеУчастниковОжидаетПроверки, 
+       ВидыЗадач.СостояниеУчастниковОтменена, 
+       ВидыЗадач.СостояниеУчастниковПроверено, 
+       ВидыЗадач.ТерминНаправилНаИсполнениеЖенский, 
+       ВидыЗадач.ТерминНаправилНаИсполнениеЖенскийЯзык1, 
+       ВидыЗадач.ТерминНаправилНаИсполнениеЖенскийЯзык2, 
+       ВидыЗадач.ТерминНаправилНаИсполнениеМужской, 
+       ВидыЗадач.ТерминНаправилНаИсполнениеМужскойЯзык1, 
+       ВидыЗадач.ТерминНаправилНаИсполнениеМужскойЯзык2, 
+       ВидыЗадач.ТерминНаправитьНаИсполнение, 
+       ВидыЗадач.ТерминНаправитьНаИсполнениеЯзык1, 
+       ВидыЗадач.ТерминНаправитьНаИсполнениеЯзык2, 
+       ВидыЗадач.ТерминНаправленаНаИсполнение, 
+       ВидыЗадач.ТерминНаправленаНаИсполнениеЯзык1, 
+       ВидыЗадач.ТерминНаправленаНаИсполнениеЯзык2, 
+       ВидыЗадач.ТерминНеНаправленаНаИсполнение, 
+       ВидыЗадач.ТерминНеНаправленаНаИсполнениеЯзык1, 
+       ВидыЗадач.ТерминНеНаправленаНаИсполнениеЯзык2, 
+       ВидыЗадач.ШаблонЗаголовка, 
+       ВидыЗадач.ШаблонЗаголовкаЯзык1, 
+       ВидыЗадач.ШаблонЗаголовкаЯзык2, 
+       ВидыЗадач.НаименованиеЯзык1, 
+       ВидыЗадач.НаименованиеЯзык2, 
+       ВидыЗадач.ВидыДействий.*, 
+       ВидыЗадач.Предопределенный, 
+       ВидыЗадач.ИмяПредопределенныхДанных
+ ИЗ 
+       Справочник.ВидыЗадач
+ КАК 
+       ВидыЗадач</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезультатЗадачиИсполненоОтрицательно</dcssch:dataPath>
+					<dcssch:field>РезультатЗадачиИсполненоОтрицательно</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезультатЗадачиИсполненоСЗамечаниями</dcssch:dataPath>
+					<dcssch:field>РезультатЗадачиИсполненоСЗамечаниями</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезультатИсполнителяВыполненаОтрицательно</dcssch:dataPath>
+					<dcssch:field>РезультатИсполнителяВыполненаОтрицательно</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезультатИсполнителяВыполненаСЗамечаниями</dcssch:dataPath>
+					<dcssch:field>РезультатИсполнителяВыполненаСЗамечаниями</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеЗадачиЗакрытаОтрицательно</dcssch:dataPath>
+					<dcssch:field>СостояниеЗадачиЗакрытаОтрицательно</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеЗадачиЗакрытаСЗамечаниями</dcssch:dataPath>
+					<dcssch:field>СостояниеЗадачиЗакрытаСЗамечаниями</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеУчастниковВыполненаОтрицательно</dcssch:dataPath>
+					<dcssch:field>СостояниеУчастниковВыполненаОтрицательно</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеУчастниковВыполненаСЗамечаниями</dcssch:dataPath>
+					<dcssch:field>СостояниеУчастниковВыполненаСЗамечаниями</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеУчастниковОжидаетПроверкиОтрицательно</dcssch:dataPath>
+					<dcssch:field>СостояниеУчастниковОжидаетПроверкиОтрицательно</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеУчастниковОжидаетПроверкиСЗамечаниями</dcssch:dataPath>
+					<dcssch:field>СостояниеУчастниковОжидаетПроверкиСЗамечаниями</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldNestedDataSet">
+					<dcssch:dataPath>ВидыДействий</dcssch:dataPath>
+					<dcssch:field>ВидыДействий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидДействияИсполнителя</dcssch:dataPath>
+					<dcssch:field>ВидДействияИсполнителя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидДействияПроверяющего</dcssch:dataPath>
+					<dcssch:field>ВидДействияПроверяющего</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидУчастникаИсполнитель</dcssch:dataPath>
+					<dcssch:field>ВидУчастникаИсполнитель</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидУчастникаОтветственный</dcssch:dataPath>
+					<dcssch:field>ВидУчастникаОтветственный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидУчастникаПроверяющий</dcssch:dataPath>
+					<dcssch:field>ВидУчастникаПроверяющий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДоступенДляВыбора</dcssch:dataPath>
+					<dcssch:field>ДоступенДляВыбора</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаголовокКомандыПодобратьИсполнителей</dcssch:dataPath>
+					<dcssch:field>ЗаголовокКомандыПодобратьИсполнителей</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаголовокКомандыПодобратьИсполнителейЯзык1</dcssch:dataPath>
+					<dcssch:field>ЗаголовокКомандыПодобратьИсполнителейЯзык1</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаголовокКомандыПодобратьИсполнителейЯзык2</dcssch:dataPath>
+					<dcssch:field>ЗаголовокКомандыПодобратьИсполнителейЯзык2</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаголовокСпискаВыбранныхУчастников</dcssch:dataPath>
+					<dcssch:field>ЗаголовокСпискаВыбранныхУчастников</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаголовокСпискаВыбранныхУчастниковЯзык1</dcssch:dataPath>
+					<dcssch:field>ЗаголовокСпискаВыбранныхУчастниковЯзык1</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаголовокСпискаВыбранныхУчастниковЯзык2</dcssch:dataPath>
+					<dcssch:field>ЗаголовокСпискаВыбранныхУчастниковЯзык2</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаголовокФормыВыбораИсполнителей</dcssch:dataPath>
+					<dcssch:field>ЗаголовокФормыВыбораИсполнителей</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаголовокФормыВыбораИсполнителейЯзык1</dcssch:dataPath>
+					<dcssch:field>ЗаголовокФормыВыбораИсполнителейЯзык1</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаголовокФормыВыбораИсполнителейЯзык2</dcssch:dataPath>
+					<dcssch:field>ЗаголовокФормыВыбораИсполнителейЯзык2</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗакрыватьПодзадачи</dcssch:dataPath>
+					<dcssch:field>ЗакрыватьПодзадачи</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаборСостояний</dcssch:dataPath>
+					<dcssch:field>НаборСостояний</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезультатЗадачиИсполнено</dcssch:dataPath>
+					<dcssch:field>РезультатЗадачиИсполнено</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезультатИсполнителяВыполнена</dcssch:dataPath>
+					<dcssch:field>РезультатИсполнителяВыполнена</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезультатПроверяющегоВозвращеноНаДоработку</dcssch:dataPath>
+					<dcssch:field>РезультатПроверяющегоВозвращеноНаДоработку</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезультатПроверяющегоПроверено</dcssch:dataPath>
+					<dcssch:field>РезультатПроверяющегоПроверено</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеЗадачиВРаботе</dcssch:dataPath>
+					<dcssch:field>СостояниеЗадачиВРаботе</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеЗадачиЗакрыта</dcssch:dataPath>
+					<dcssch:field>СостояниеЗадачиЗакрыта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеЗадачиНаПроверке</dcssch:dataPath>
+					<dcssch:field>СостояниеЗадачиНаПроверке</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеЗадачиНовая</dcssch:dataPath>
+					<dcssch:field>СостояниеЗадачиНовая</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеЗадачиОтложена</dcssch:dataPath>
+					<dcssch:field>СостояниеЗадачиОтложена</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеЗадачиОтменена</dcssch:dataPath>
+					<dcssch:field>СостояниеЗадачиОтменена</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеЗадачиЧерновик</dcssch:dataPath>
+					<dcssch:field>СостояниеЗадачиЧерновик</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеУчастниковВозвращеноНаДоработку</dcssch:dataPath>
+					<dcssch:field>СостояниеУчастниковВозвращеноНаДоработку</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеУчастниковВРаботе</dcssch:dataPath>
+					<dcssch:field>СостояниеУчастниковВРаботе</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеУчастниковВыполнена</dcssch:dataPath>
+					<dcssch:field>СостояниеУчастниковВыполнена</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеУчастниковНаПроверке</dcssch:dataPath>
+					<dcssch:field>СостояниеУчастниковНаПроверке</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеУчастниковНовая</dcssch:dataPath>
+					<dcssch:field>СостояниеУчастниковНовая</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеУчастниковОжидаетПроверки</dcssch:dataPath>
+					<dcssch:field>СостояниеУчастниковОжидаетПроверки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеУчастниковОтменена</dcssch:dataPath>
+					<dcssch:field>СостояниеУчастниковОтменена</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеУчастниковПроверено</dcssch:dataPath>
+					<dcssch:field>СостояниеУчастниковПроверено</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНаправилНаИсполнениеЖенский</dcssch:dataPath>
+					<dcssch:field>ТерминНаправилНаИсполнениеЖенский</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНаправилНаИсполнениеЖенскийЯзык1</dcssch:dataPath>
+					<dcssch:field>ТерминНаправилНаИсполнениеЖенскийЯзык1</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНаправилНаИсполнениеЖенскийЯзык2</dcssch:dataPath>
+					<dcssch:field>ТерминНаправилНаИсполнениеЖенскийЯзык2</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНаправилНаИсполнениеМужской</dcssch:dataPath>
+					<dcssch:field>ТерминНаправилНаИсполнениеМужской</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНаправилНаИсполнениеМужскойЯзык1</dcssch:dataPath>
+					<dcssch:field>ТерминНаправилНаИсполнениеМужскойЯзык1</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНаправилНаИсполнениеМужскойЯзык2</dcssch:dataPath>
+					<dcssch:field>ТерминНаправилНаИсполнениеМужскойЯзык2</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНаправитьНаИсполнение</dcssch:dataPath>
+					<dcssch:field>ТерминНаправитьНаИсполнение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНаправитьНаИсполнениеЯзык1</dcssch:dataPath>
+					<dcssch:field>ТерминНаправитьНаИсполнениеЯзык1</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНаправитьНаИсполнениеЯзык2</dcssch:dataPath>
+					<dcssch:field>ТерминНаправитьНаИсполнениеЯзык2</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНаправленаНаИсполнение</dcssch:dataPath>
+					<dcssch:field>ТерминНаправленаНаИсполнение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНаправленаНаИсполнениеЯзык1</dcssch:dataPath>
+					<dcssch:field>ТерминНаправленаНаИсполнениеЯзык1</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНаправленаНаИсполнениеЯзык2</dcssch:dataPath>
+					<dcssch:field>ТерминНаправленаНаИсполнениеЯзык2</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНеНаправленаНаИсполнение</dcssch:dataPath>
+					<dcssch:field>ТерминНеНаправленаНаИсполнение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНеНаправленаНаИсполнениеЯзык1</dcssch:dataPath>
+					<dcssch:field>ТерминНеНаправленаНаИсполнениеЯзык1</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТерминНеНаправленаНаИсполнениеЯзык2</dcssch:dataPath>
+					<dcssch:field>ТерминНеНаправленаНаИсполнениеЯзык2</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ШаблонЗаголовка</dcssch:dataPath>
+					<dcssch:field>ШаблонЗаголовка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ШаблонЗаголовкаЯзык1</dcssch:dataPath>
+					<dcssch:field>ШаблонЗаголовкаЯзык1</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ШаблонЗаголовкаЯзык2</dcssch:dataPath>
+					<dcssch:field>ШаблонЗаголовкаЯзык2</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеЯзык1</dcssch:dataPath>
+					<dcssch:field>НаименованиеЯзык1</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеЯзык2</dcssch:dataPath>
+					<dcssch:field>НаименованиеЯзык2</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидыДействий.Ссылка</dcssch:dataPath>
+					<dcssch:field>ВидыДействий.Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидыДействий.НомерСтроки</dcssch:dataPath>
+					<dcssch:field>ВидыДействий.НомерСтроки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидыДействий.ВидДействия</dcssch:dataPath>
+					<dcssch:field>ВидыДействий.ВидДействия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<MainTable>Catalog.ВидыЗадач</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

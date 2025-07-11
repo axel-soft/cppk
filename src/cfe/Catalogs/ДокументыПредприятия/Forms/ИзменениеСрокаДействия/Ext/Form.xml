@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Width>50</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаПрименить" id="20">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаПрименитьExtendedTooltip" id="47"/>
+			</Button>
+			<Button name="ФормаОтмена" id="30">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаОтменаExtendedTooltip" id="48"/>
+			</Button>
+			<Button name="Закрыть" id="63">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="64"/>
+			</Button>
+			<Button name="Справка" id="29">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="СправкаExtendedTooltip" id="49"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer" callType="After">ЦППК_ПриСозданииНаСервереПосле</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Документ" id="42">
+			<ReadOnly>true</ReadOnly>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ДокументКонтекстноеМеню" id="43"/>
+			<ExtendedTooltip name="ДокументExtendedTooltip" id="50"/>
+		</InputField>
+		<UsualGroup name="ГруппаСрокДействия" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа срок действия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа срок действия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСрокДействияExtendedTooltip" id="51"/>
+			<ChildItems>
+				<InputField name="ДатаНачалаДействия" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действует с</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаНачалаДействияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ДатаНачалаДействияExtendedTooltip" id="52"/>
+				</InputField>
+				<InputField name="ДатаОкончанияДействия" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаОкончанияДействияКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаОкончанияДействияExtendedTooltip" id="53"/>
+				</InputField>
+				<CheckBoxField name="Бессрочный" id="8">
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="БессрочныйКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="БессрочныйExtendedTooltip" id="54"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ПорядокПродления" id="10">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ПорядокПродленияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПорядокПродленияExtendedTooltip" id="55"/>
+		</InputField>
+		<UsualGroup name="ГруппаИстория" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата окончания действия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата окончания действия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИсторияExtendedTooltip" id="56"/>
+			<ChildItems>
+				<LabelField name="Пользователь" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменил</v8:content>
+						</v8:item>
+					</Title>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="ПользовательКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ПользовательExtendedTooltip" id="60"/>
+				</LabelField>
+				<LabelDecoration name="ГруппаИсторияОтступ" id="45">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ГруппаИсторияОтступКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ГруппаИсторияОтступExtendedTooltip" id="57"/>
+				</LabelDecoration>
+				<LabelDecoration name="История" id="32">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>История</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<ContextMenu name="ИсторияКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ИсторияExtendedTooltip" id="58"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОснование" id="38">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОснованиеExtendedTooltip" id="59"/>
+			<ChildItems>
+				<InputField name="Комментарий" id="16">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="КомментарийExtendedTooltip" id="61"/>
+				</InputField>
+				<InputField name="ДокументИсточникИзменения" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок действия изменен документом</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Top</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ, который изменяет срок действия текущего документа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ДокументИсточникИзмененияКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ДокументИсточникИзмененияExtendedTooltip" id="62"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДатаНачалаДействия</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДокументЗарегистрирован</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДатаНачалаДействия</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДатаОкончанияДействия</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДокументЗарегистрирован</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Бессрочный</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДатаОкончанияДействия</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПорядокПродления</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДокументЗарегистрирован</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Бессрочный</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПорядокПродления</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<BaseForm version="2.18">
+		<Width>50</Width>
+		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+		<CommandBarLocation>Bottom</CommandBarLocation>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+			<ChildItems>
+				<Button name="ФормаПрименить" id="20">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаПрименитьExtendedTooltip" id="47"/>
+				</Button>
+				<Button name="ФормаОтмена" id="30">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаОтменаExtendedTooltip" id="48"/>
+				</Button>
+				<Button name="Закрыть" id="63">
+					<Type>CommandBarButton</Type>
+					<Visible>false</Visible>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="64"/>
+				</Button>
+				<Button name="Справка" id="29">
+					<Type>CommandBarButton</Type>
+					<Representation>Picture</Representation>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="СправкаExtendedTooltip" id="49"/>
+				</Button>
+			</ChildItems>
+		</AutoCommandBar>
+		<ChildItems>
+			<InputField name="Документ" id="42">
+				<ReadOnly>true</ReadOnly>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<ContextMenu name="ДокументКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="ДокументExtendedTooltip" id="50"/>
+			</InputField>
+			<UsualGroup name="ГруппаСрокДействия" id="41">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа срок действия</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа срок действия</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаСрокДействияExtendedTooltip" id="51"/>
+				<ChildItems>
+					<InputField name="ДатаНачалаДействия" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Действует с</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ДатаНачалаДействияКонтекстноеМеню" id="2"/>
+						<ExtendedTooltip name="ДатаНачалаДействияExtendedTooltip" id="52"/>
+					</InputField>
+					<InputField name="ДатаОкончанияДействия" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>по</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ДатаОкончанияДействияКонтекстноеМеню" id="4"/>
+						<ExtendedTooltip name="ДатаОкончанияДействияExtendedTooltip" id="53"/>
+					</InputField>
+					<CheckBoxField name="Бессрочный" id="8">
+						<TitleLocation>Right</TitleLocation>
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="БессрочныйКонтекстноеМеню" id="9"/>
+						<ExtendedTooltip name="БессрочныйExtendedTooltip" id="54"/>
+					</CheckBoxField>
+				</ChildItems>
+			</UsualGroup>
+			<InputField name="ПорядокПродления" id="10">
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<ContextMenu name="ПорядокПродленияКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="ПорядокПродленияExtendedTooltip" id="55"/>
+			</InputField>
+			<UsualGroup name="ГруппаИстория" id="44">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа дата окончания действия</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа дата окончания действия</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаИсторияExtendedTooltip" id="56"/>
+				<ChildItems>
+					<LabelField name="Пользователь" id="39">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Изменил</v8:content>
+							</v8:item>
+						</Title>
+						<Hiperlink>true</Hiperlink>
+						<ContextMenu name="ПользовательКонтекстноеМеню" id="40"/>
+						<ExtendedTooltip name="ПользовательExtendedTooltip" id="60"/>
+					</LabelField>
+					<LabelDecoration name="ГруппаИсторияОтступ" id="45">
+						<HorizontalStretch>true</HorizontalStretch>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content> </v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ГруппаИсторияОтступКонтекстноеМеню" id="46"/>
+						<ExtendedTooltip name="ГруппаИсторияОтступExtendedTooltip" id="57"/>
+					</LabelDecoration>
+					<LabelDecoration name="История" id="32">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>История</v8:content>
+							</v8:item>
+						</Title>
+						<Hyperlink>true</Hyperlink>
+						<HorizontalAlign>Right</HorizontalAlign>
+						<ContextMenu name="ИсторияКонтекстноеМеню" id="33"/>
+						<ExtendedTooltip name="ИсторияExtendedTooltip" id="58"/>
+					</LabelDecoration>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаОснование" id="38">
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа основание</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаОснованиеExtendedTooltip" id="59"/>
+				<ChildItems>
+					<InputField name="Комментарий" id="16">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MultiLine>true</MultiLine>
+						<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
+						<ExtendedTooltip name="КомментарийExtendedTooltip" id="61"/>
+					</InputField>
+					<InputField name="ДокументИсточникИзменения" id="36">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Срок действия изменен документом</v8:content>
+							</v8:item>
+						</Title>
+						<TitleLocation>Top</TitleLocation>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Документ, который изменяет срок действия текущего документа</v8:content>
+							</v8:item>
+						</ToolTip>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+						<ContextMenu name="ДокументИсточникИзмененияКонтекстноеМеню" id="37"/>
+						<ExtendedTooltip name="ДокументИсточникИзмененияExtendedTooltip" id="62"/>
+					</InputField>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes>
+			<ConditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ДатаНачалаДействия</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДокументЗарегистрирован</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДатаНачалаДействия</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ДатаОкончанияДействия</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДокументЗарегистрирован</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Бессрочный</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДатаОкончанияДействия</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПорядокПродления</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДокументЗарегистрирован</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Бессрочный</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПорядокПродления</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</ConditionalAppearance>
+		</Attributes>
+	</BaseForm>
+</Form>

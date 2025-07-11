@@ -1,0 +1,1338 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.18">
+	<setForNewObjects>false</setForNewObjects>
+	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Источники.Attribute.ИсточникРазвернутый</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Источники</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.ИдентификаторЭтапа</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Участники</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Участники.Attribute.СрокДни</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ТекстыВерсийФайлов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Версия.Владелец.ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПереносыСроковВыполненияПроцессовИЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Этапы.Attribute.Идентификатор</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Этапы.Attribute.РангПо</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Участники.Attribute.Описание</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ПолныеРоли</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Источники.Attribute.Источник</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Этапы.Attribute.СрокДни</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Участники.Attribute.Условие</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Участники.Attribute.Защищенный</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Этапы.Attribute.РангС</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.НастройкаДействия</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Участники.Attribute.ВариантУстановкиСрока</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Приглашение</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.ФормируетВизы</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РолиИсполнителей</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДоступностьШаблоновПроцессов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДоступностьШаблоновПроцессов.StandardAttribute.Active</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДоступностьШаблоновПроцессов.StandardAttribute.LineNumber</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДоступностьШаблоновПроцессов.StandardAttribute.Recorder</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДоступностьШаблоновПроцессов.StandardAttribute.Period</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.НаименованиеЗадачи</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Участники.Attribute.ИзНастройки</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Регистрация</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.Описание</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Task.ЗадачаИсполнителя</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Участники.Attribute.СрокЧасы</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.СрокДействия</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДоступностьШаблоновПроцессов.Resource.АвтоматическийЗапуск</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.ИзНастройки</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.Комментарий</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.Attribute.МоментРазыменованияУчастников</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Источники.Attribute.ПутьКДанным</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.ДатаСоздания</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.Срок</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.Важность</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ТекстыФайлов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Файл.ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ Файл.ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.Attribute.Предмет</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.Защищенный</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.Attribute.Создал</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ТаймлистФайлыВОбработке</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Этапы.Attribute.СрокМинуты</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.МоментРазыменованияУчастников</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ИтерацииЗадачДействий</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.СрокМинуты</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Этапы</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ТаймлистДанныеРаботыСервиса</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.Описание</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.StandardAttribute.PredefinedDataName</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.StandardAttribute.Predefined</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.StandardAttribute.Ref</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.StandardAttribute.IsFolder</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.StandardAttribute.Owner</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.StandardAttribute.Parent</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.StandardAttribute.Description</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.StandardAttribute.Code</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.СогласованиеВРежимеЗамечаний</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ИсторияЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияИсполнения</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.Участник</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Участники.Attribute.Идентификатор</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Этапы.Attribute.СрокОбщий</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Этапы.Attribute.СрокЧасы</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РеестрЗадачПоИсполнителям</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.ПодписыватьУЭП</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Подписание</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.ВидДействия</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.Attribute.ПомещеноВИсторию</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.Attribute.Комментарий</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.СрокДни</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Configuration.ДокументооборотКОРП</name>
+		<right>
+			<name>MainWindowModeNormal</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeEmbeddedWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeFullscreenWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeKiosk</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>AnalyticsSystemClient</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.ВариантУстановкиСрока</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Участники.Attribute.Срок</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.Предмет</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Этапы.Attribute.Срок</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Этапы.Attribute.ВариантУстановкиСрока</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияПодписания</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.ФункцияУчастника</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ОбработкиОбъектов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.Attribute.Описание</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.Условие</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.Attribute.НастройкаДействия</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.РешениеВопросовВыполненияЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияУтверждения</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.StandardAttribute.PredefinedDataName</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.StandardAttribute.Predefined</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.StandardAttribute.Ref</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.StandardAttribute.IsFolder</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.StandardAttribute.Owner</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.StandardAttribute.Parent</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.StandardAttribute.Description</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.StandardAttribute.Code</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Источники.Attribute.Идентификатор</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Источники.Attribute.Источник</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Участники.Attribute.СрокМинуты</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.Attribute.ДатаСоздания</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.ПомещеноВИсторию</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияРегистрации</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РеестрЗадачПоАвторам</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Источники.Attribute.ИсточникРазвернутый</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.СрокЧасы</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Источники.Attribute.ПутьКДанным</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.КомплексныйПроцесс</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.ПорядокВыполненияУчастниками</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.СрокОбщий</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Участники.Attribute.ИсточникДанных</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.Attribute.Автор</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Участники.Attribute.Идентификатор</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.Attribute.Важность</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Файлы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Этапы.Attribute.ПорядокВыполненияУчастниками</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ВерсииФайлов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Владелец.ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ Владелец.ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.Создал</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Источники.Attribute.Идентификатор</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Subsystem.СтандартныеПодсистемыДокументооборота.Subsystem.БизнесПроцессыИЗадачи</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Источники</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДоступностьШаблоновПроцессов.Resource.РучнойЗапуск</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.Attribute.ВидДействия</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.TabularSection.Этапы.Attribute.НаименованиеЭтапа</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования.Attribute.Автор</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления.TabularSection.Участники.Attribute.Участник</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДоступностьШаблоновПроцессов.Dimension.Шаблон</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<restrictionTemplate>
+		<name>ПоДескрипторуОбъекта</name>
+		<condition>// Параметр(1) - отбор по полям Изменение, Добавление:
+//	по умолчанию нет условий, проверяется право чтения
+//  "Изменение" - условие Изменение = ИСТИНА
+//	"ИзменениеИлиДобавление" - условие (Изменение = ИСТИНА ИЛИ Добавление = ИСТИНА)
+//
+// Параметр(2) - имя поля, указывающее на объект, чьи права будут проанализированы
+//	по умолчанию "Ссылка"
+// 
+// Параметр(3) - дополнительные условия:
+//  "БезРуководителейИДелегатов" - не включать руководителей и делегатов в права
+//  "БезРуководителей" - не включать руководителей в права
+//  "БезДелегатов" - не включать делегатов в права
+// 
+// Параметр(4) - оставлять пустым (зарезервирован, не используется)
+// 
+// Примеры использования шаблона:
+//	#ПоДескрипторуОбъекта("", "")
+//	#ПоДескрипторуОбъекта("Изменение", "")
+//	#ПоДескрипторуОбъекта("", "Документ")
+//	#ПоДескрипторуОбъекта("ИзменениеИлиДобавление", "Мероприятие")
+//	#ПоДескрипторуОбъекта("ИзменениеИлиДобавление", "Мероприятие", "БезРуководителейИДелегатов")
+
+#Если &amp;ДокументооборотИспользоватьОграниченияПравДоступа #Тогда
+	
+	ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДескрипторыДляОбъектов КАК ДескрипторыДляОбъектов
+	#Если "#Параметр(2)" = "" #Тогда
+		ПО ТекущаяТаблица.Ссылка = ДескрипторыДляОбъектов.Объект
+	#Иначе
+		ПО ТекущаяТаблица.#Параметр(2) = ДескрипторыДляОбъектов.Объект
+	#КонецЕсли
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПраваПоДескрипторамДоступаОбъектов КАК ПраваПоДескрипторамДоступаОбъектов
+	ПО ДескрипторыДляОбъектов.Дескриптор = ПраваПоДескрипторамДоступаОбъектов.Дескриптор
+	
+	ГДЕ ПраваПоДескрипторамДоступаОбъектов.Сотрудник В (&amp;СотрудникиПользователя)
+	
+	#Если "#Параметр(1)" = "Изменение" #Тогда
+		И ПраваПоДескрипторамДоступаОбъектов.Изменение
+	#ИначеЕсли "#Параметр(1)" = "ИзменениеИлиДобавление" #Тогда
+		И (ПраваПоДескрипторамДоступаОбъектов.Изменение
+			ИЛИ ПраваПоДескрипторамДоступаОбъектов.Добавление)
+	#КонецЕсли
+	
+	#Если "#Параметр(3)" = "БезРуководителейИДелегатов" #Тогда
+		И ПраваПоДескрипторамДоступаОбъектов.ОбъектОснование = НЕОПРЕДЕЛЕНО
+	#КонецЕсли
+	
+#КонецЕсли
+
+#Если "#Параметр(4)" = "" #Тогда
+#КонецЕсли
+</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>ПоДескрипторуРегистра</name>
+		<condition>// Параметр(1) - отбор по полям Изменение, Добавление:
+//	по умолчанию нет условий, проверяется право чтения
+//  "Изменение" - условие Изменение = ИСТИНА
+//	"ИзменениеИлиДобавление" - условие (Изменение = ИСТИНА ИЛИ Добавление = ИСТИНА)
+//
+// Параметр(2) - имя поля - объекта доступа №1
+// Параметр(3) - имя поля - объекта доступа №2
+// Параметр(4) - имя поля - объекта доступа №3
+//
+// Параметр(5) - дополнительные условия:
+//  "БезРуководителейИДелегатов" - не включать руководителей и делегатов в права
+//  "БезРуководителей" - не включать руководителей в права
+//  "БезДелегатов" - не включать делегатов в права
+// 
+// Параметр(6) - оставлять пустым (зарезервирован, не используется)
+// 
+// Примеры использования шаблона:
+//	#ПоДескрипторуРегистра("Изменение", "Сотрудник", "", "", "")
+//	#ПоДескрипторуРегистра("", "Сотрудник", "Подразделение", "Организация", "")
+//	#ПоДескрипторуРегистра("", "Сотрудник", "Подразделение", "Организация", "БезРуководителейИДелегатов")
+
+#Если &amp;ДокументооборотИспользоватьОграниченияПравДоступа #Тогда
+
+	
+	ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ДескрипторыДоступаРегистров КАК ДескрипторыДоступаРегистров
+	ПО ДескрипторыДоступаРегистров.Регистр = #ИмяТекущейТаблицы
+	И ТекущаяТаблица.#Параметр(2) = ДескрипторыДоступаРегистров.ОбъектДоступа1
+	#Если "#Параметр(3)" &lt;&gt; "" #Тогда
+		И ТекущаяТаблица.#Параметр(3) = ДескрипторыДоступаРегистров.ОбъектДоступа2
+	#КонецЕсли
+	#Если "#Параметр(4)" &lt;&gt; "" #Тогда
+		И ТекущаяТаблица.#Параметр(4) = ДескрипторыДоступаРегистров.ОбъектДоступа3
+	#КонецЕсли
+
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПраваПоДескрипторамДоступаРегистров КАК ПраваПоДескрипторамДоступаРегистров
+	ПО ДескрипторыДоступаРегистров.Ссылка = ПраваПоДескрипторамДоступаРегистров.Дескриптор
+	
+	ГДЕ ПраваПоДескрипторамДоступаРегистров.Сотрудник В (&amp;СотрудникиПользователя)
+	
+	#Если "#Параметр(1)" = "Изменение" #Тогда
+		И ПраваПоДескрипторамДоступаРегистров.Изменение = ИСТИНА
+	#ИначеЕсли "#Параметр(1)" = "ИзменениеИлиДобавление" #Тогда
+		И (ПраваПоДескрипторамДоступаРегистров.Изменение = ИСТИНА ИЛИ ПраваПоДескрипторамДоступаРегистров.Добавление = ИСТИНА)
+	#КонецЕсли
+	
+	#Если "#Параметр(5)" = "БезРуководителейИДелегатов" #Тогда
+		И ПраваПоДескрипторамДоступаРегистров.ОбъектОснование = НЕОПРЕДЕЛЕНО
+	#КонецЕсли
+	
+#КонецЕсли
+
+#Если "#Параметр(6)" = "" #Тогда
+#КонецЕсли
+</condition>
+	</restrictionTemplate>
+</Rights>

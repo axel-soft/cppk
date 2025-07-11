@@ -1,0 +1,1488 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Height>28</Height>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ДекорацияПояснение" id="451">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списки документов и файлов, которым автоматически была назначена категория в соответствии с данным правилом.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияПояснениеКонтекстноеМеню" id="452"/>
+			<ExtendedTooltip name="ДекорацияПояснениеExtendedTooltip" id="453"/>
+		</LabelDecoration>
+		<Pages name="СтраницыСписков" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы списков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы списков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыСписковExtendedTooltip" id="454"/>
+			<ChildItems>
+				<Page name="СтраницаДокументыПредприятия" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаДокументыПредприятияРасширеннаяПодсказка" id="455"/>
+					<ChildItems>
+						<Table name="СписокДокументыПредприятия" id="6">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Height>8</Height>
+							<MaxHeight>8</MaxHeight>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СписокДокументыПредприятия</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RefreshRequest>PullFromTop</RefreshRequest>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокДокументыПредприятияКонтекстноеМеню" id="7"/>
+							<AutoCommandBar name="СписокДокументыПредприятияКоманднаяПанель" id="8"/>
+							<ExtendedTooltip name="СписокДокументыПредприятияРасширеннаяПодсказка" id="456"/>
+							<SearchStringAddition name="СписокДокументыПредприятияСтрокаПоиска" id="519">
+								<AdditionSource>
+									<Item>СписокДокументыПредприятия</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДокументыПредприятияСтрокаПоискаКонтекстноеМеню" id="520"/>
+								<ExtendedTooltip name="СписокДокументыПредприятияСтрокаПоискаРасширеннаяПодсказка" id="521"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокДокументыПредприятияСостояниеПросмотра" id="522">
+								<AdditionSource>
+									<Item>СписокДокументыПредприятия</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДокументыПредприятияСостояниеПросмотраКонтекстноеМеню" id="523"/>
+								<ExtendedTooltip name="СписокДокументыПредприятияСостояниеПросмотраРасширеннаяПодсказка" id="524"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокДокументыПредприятияУправлениеПоиском" id="525">
+								<AdditionSource>
+									<Item>СписокДокументыПредприятия</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДокументыПредприятияУправлениеПоискомКонтекстноеМеню" id="526"/>
+								<ExtendedTooltip name="СписокДокументыПредприятияУправлениеПоискомРасширеннаяПодсказка" id="527"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СписокДокументыПредприятияВыбор</Event>
+								<Event name="RefreshRequestProcessing">СписокДокументыПредприятияОбработкаЗапросаОбновления</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="СписокДокументыПредприятияГруппаКолонкиМК" id="596">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список документы предприятия группа колонки МК</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список документы предприятия группа колонки МК</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="СписокДокументыПредприятияГруппаКолонкиМКРасширеннаяПодсказка" id="597"/>
+									<ChildItems>
+										<ColumnGroup name="СписокДокументыПредприятияГруппаКартинкиМК" id="606">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Список документы предприятия группа картинки МК</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Список документы предприятия группа картинки МК</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СписокДокументыПредприятияГруппаКартинкиМКРасширеннаяПодсказка" id="607"/>
+										</ColumnGroup>
+										<ColumnGroup name="СписокДокументыПредприятияГруппаЗаголовокПодготовилМК" id="594">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Список документы предприятия группа заголовок подготовил МК</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Список документы предприятия группа заголовок подготовил МК</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СписокДокументыПредприятияГруппаЗаголовокПодготовилМКРасширеннаяПодсказка" id="595"/>
+										</ColumnGroup>
+										<ColumnGroup name="СписокДокументыПредприятияГруппаРегНомерДатаМК" id="598">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Список документы предприятия группа рег номер дата МК</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Список документы предприятия группа рег номер дата МК</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СписокДокументыПредприятияГруппаРегНомерДатаМКРасширеннаяПодсказка" id="599"/>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="СписокДокументыПредприятияГруппаФайлыЗадачи" id="558">
+									<ExtendedTooltip name="СписокДокументыПредприятияГруппаФайлыЗадачиРасширеннаяПодсказка" id="559"/>
+									<ChildItems>
+										<PictureField name="СписокДокументыПредприятияФайлы" id="340">
+											<DataPath>СписокДокументыПредприятия.Файлы</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Файлы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.СкрепкаСерая</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.КоллекцияСкрепка</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="СписокДокументыПредприятияФайлыКонтекстноеМеню" id="341"/>
+											<ExtendedTooltip name="СписокДокументыПредприятияФайлыРасширеннаяПодсказка" id="457"/>
+										</PictureField>
+										<PictureField name="СписокДокументыПредприятияЗадачи" id="342">
+											<DataPath>СписокДокументыПредприятия.Задачи</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Задачи</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.ВзаимодействиеСотрудниковСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.КоллекцияВзаимодействияСотрудников</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="СписокДокументыПредприятияЗадачиКонтекстноеМеню" id="343"/>
+											<ExtendedTooltip name="СписокДокументыПредприятияЗадачиРасширеннаяПодсказка" id="458"/>
+										</PictureField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="СписокДокументыПредприятияГруппаЭПКатегории" id="560">
+									<ExtendedTooltip name="СписокДокументыПредприятияГруппаЭПКатегорииРасширеннаяПодсказка" id="561"/>
+									<ChildItems>
+										<PictureField name="СписокДокументыПредприятияПодписанЭП" id="344">
+											<DataPath>СписокДокументыПредприятия.СтатусПроверкиЭП</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подписан ЭП</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.ПодписанЭПСерая</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СтатусПроверкиЭПДляСписка</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="СписокДокументыПредприятияПодписанЭПКонтекстноеМеню" id="345"/>
+											<ExtendedTooltip name="СписокДокументыПредприятияПодписанЭПРасширеннаяПодсказка" id="459"/>
+										</PictureField>
+										<PictureField name="СписокДокументыПредприятияЕстьКатегорииДанных" id="555">
+											<DataPath>СписокДокументыПредприятия.ЕстьКатегорииДанных</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.Категории</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.Категории</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="СписокДокументыПредприятияЕстьКатегорииДанныхКонтекстноеМеню" id="556"/>
+											<ExtendedTooltip name="СписокДокументыПредприятияЕстьКатегорииДанныхРасширеннаяПодсказка" id="557"/>
+										</PictureField>
+									</ChildItems>
+								</ColumnGroup>
+								<PictureField name="ИндексСостоянияДела" id="608">
+									<DataPath>СписокДокументыПредприятия.ИндексСостоянияДела</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние дела, в котором хранится документ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.СостояниеДелаХраненияДокументов</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<Width>2</Width>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.СостоянияДелХраненияДокументов</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="ИндексСостоянияДелаКонтекстноеМеню" id="609"/>
+									<ExtendedTooltip name="ИндексСостоянияДелаРасширеннаяПодсказка" id="610"/>
+								</PictureField>
+								<LabelField name="СписокДокументыПредприятияЗаголовок" id="346">
+									<DataPath>СписокДокументыПредприятия.Заголовок</DataPath>
+									<Width>25</Width>
+									<ContextMenu name="СписокДокументыПредприятияЗаголовокКонтекстноеМеню" id="347"/>
+									<ExtendedTooltip name="СписокДокументыПредприятияЗаголовокРасширеннаяПодсказка" id="460"/>
+								</LabelField>
+								<LabelField name="СписокДокументыПредприятияРегистрационныйНомерИДата" id="591">
+									<DataPath>СписокДокументыПредприятия.РегистрационныйНомерИДата</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Рег. № и дата</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Регистрационный номер и дата регистрации документа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>15</Width>
+									<ContextMenu name="СписокДокументыПредприятияРегистрационныйНомерИДатаКонтекстноеМеню" id="592"/>
+									<ExtendedTooltip name="СписокДокументыПредприятияРегистрационныйНомерИДатаРасширеннаяПодсказка" id="593"/>
+								</LabelField>
+								<LabelField name="СписокДокументыПредприятияПапка" id="348">
+									<DataPath>СписокДокументыПредприятия.Папка</DataPath>
+									<ContextMenu name="СписокДокументыПредприятияПапкаКонтекстноеМеню" id="349"/>
+									<ExtendedTooltip name="СписокДокументыПредприятияПапкаРасширеннаяПодсказка" id="461"/>
+								</LabelField>
+								<ColumnGroup name="СписокДокументыПредприятияГруппаРегистрационныйНомерИДата" id="562">
+									<ExtendedTooltip name="СписокДокументыПредприятияГруппаРегистрационныйНомерИДатаРасширеннаяПодсказка" id="563"/>
+									<ChildItems>
+										<LabelField name="СписокДокументыПредприятияРегистрационныйНомер" id="350">
+											<DataPath>СписокДокументыПредприятия.РегистрационныйНомер</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Рег. номер</v8:content>
+												</v8:item>
+											</Title>
+											<Width>18</Width>
+											<ContextMenu name="СписокДокументыПредприятияРегистрационныйНомерКонтекстноеМеню" id="351"/>
+											<ExtendedTooltip name="СписокДокументыПредприятияРегистрационныйНомерРасширеннаяПодсказка" id="462"/>
+										</LabelField>
+										<LabelField name="СписокДокументыПредприятияДатаРегистрации" id="352">
+											<DataPath>СписокДокументыПредприятия.ДатаРегистрации</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="СписокДокументыПредприятияДатаРегистрацииКонтекстноеМеню" id="353"/>
+											<ExtendedTooltip name="СписокДокументыПредприятияДатаРегистрацииРасширеннаяПодсказка" id="463"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="СписокДокументыПредприятияГруппаПодготовилУтвердил" id="564">
+									<ExtendedTooltip name="СписокДокументыПредприятияГруппаПодготовилУтвердилРасширеннаяПодсказка" id="565"/>
+									<ChildItems>
+										<LabelField name="СписокДокументыПредприятияПодготовил" id="356">
+											<DataPath>СписокДокументыПредприятия.Подготовил</DataPath>
+											<ContextMenu name="СписокДокументыПредприятияПодготовилКонтекстноеМеню" id="357"/>
+											<ExtendedTooltip name="СписокДокументыПредприятияПодготовилРасширеннаяПодсказка" id="465"/>
+										</LabelField>
+										<LabelField name="СписокДокументыПредприятияУтвердил" id="354">
+											<DataPath>СписокДокументыПредприятия.Утвердил</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подписан (утвержден)</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокДокументыПредприятияУтвердилКонтекстноеМеню" id="355"/>
+											<ExtendedTooltip name="СписокДокументыПредприятияУтвердилРасширеннаяПодсказка" id="464"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<LabelField name="СписокДокументыПредприятияВнутреннийНомер" id="358">
+									<DataPath>СписокДокументыПредприятия.ВнутреннийНомер</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СписокДокументыПредприятияВнутреннийНомерКонтекстноеМеню" id="359"/>
+									<ExtendedTooltip name="СписокДокументыПредприятияВнутреннийНомерРасширеннаяПодсказка" id="466"/>
+								</LabelField>
+								<LabelField name="СписокДокументыПредприятияДатаСоздания" id="360">
+									<DataPath>СписокДокументыПредприятия.ДатаСортировки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата регистрации или создания документа, если не зарегистрирован</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>9</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy ЧЧ:мм'</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СписокДокументыПредприятияДатаСозданияКонтекстноеМеню" id="361"/>
+									<ExtendedTooltip name="СписокДокументыПредприятияДатаСозданияРасширеннаяПодсказка" id="467"/>
+								</LabelField>
+								<LabelField name="СписокДокументыПредприятияВидДокумента" id="362">
+									<DataPath>СписокДокументыПредприятия.ВидДокумента</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СписокДокументыПредприятияВидДокументаКонтекстноеМеню" id="363"/>
+									<ExtendedTooltip name="СписокДокументыПредприятияВидДокументаРасширеннаяПодсказка" id="468"/>
+								</LabelField>
+								<LabelField name="СписокДокументыПредприятияОрганизация" id="364">
+									<DataPath>СписокДокументыПредприятия.Организация</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СписокДокументыПредприятияОрганизацияКонтекстноеМеню" id="365"/>
+									<ExtendedTooltip name="СписокДокументыПредприятияОрганизацияРасширеннаяПодсказка" id="469"/>
+								</LabelField>
+								<LabelField name="СписокДокументыПредприятияПодразделение" id="366">
+									<DataPath>СписокДокументыПредприятия.Подразделение</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СписокДокументыПредприятияПодразделениеКонтекстноеМеню" id="367"/>
+									<ExtendedTooltip name="СписокДокументыПредприятияПодразделениеРасширеннаяПодсказка" id="470"/>
+								</LabelField>
+								<LabelField name="СписокДокументыПредприятияНоменклатураДел" id="368">
+									<DataPath>СписокДокументыПредприятия.НоменклатураДел</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СписокДокументыПредприятияНоменклатураДелКонтекстноеМеню" id="369"/>
+									<ExtendedTooltip name="СписокДокументыПредприятияНоменклатураДелРасширеннаяПодсказка" id="471"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаФайлы" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файлы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файлы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаФайлыExtendedTooltip" id="502"/>
+					<ChildItems>
+						<Table name="СписокФайлы" id="281">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Height>8</Height>
+							<MaxHeight>8</MaxHeight>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СписокФайлы</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RefreshRequest>PullFromTop</RefreshRequest>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокФайлыКонтекстноеМеню" id="282"/>
+							<AutoCommandBar name="СписокФайлыКоманднаяПанель" id="283"/>
+							<ExtendedTooltip name="СписокФайлыExtendedTooltip" id="503"/>
+							<SearchStringAddition name="СписокФайлыСтрокаПоиска" id="546">
+								<AdditionSource>
+									<Item>СписокФайлы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокФайлыСтрокаПоискаКонтекстноеМеню" id="547"/>
+								<ExtendedTooltip name="СписокФайлыСтрокаПоискаРасширеннаяПодсказка" id="548"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокФайлыСостояниеПросмотра" id="549">
+								<AdditionSource>
+									<Item>СписокФайлы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокФайлыСостояниеПросмотраКонтекстноеМеню" id="550"/>
+								<ExtendedTooltip name="СписокФайлыСостояниеПросмотраРасширеннаяПодсказка" id="551"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокФайлыУправлениеПоиском" id="552">
+								<AdditionSource>
+									<Item>СписокФайлы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокФайлыУправлениеПоискомКонтекстноеМеню" id="553"/>
+								<ExtendedTooltip name="СписокФайлыУправлениеПоискомРасширеннаяПодсказка" id="554"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="RefreshRequestProcessing">СписокФайлыОбработкаЗапросаОбновления</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="СписокФайлыГруппаКолонкиМК" id="600">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список файлы группа колонки МК</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список файлы группа колонки МК</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="СписокФайлыГруппаКолонкиМКРасширеннаяПодсказка" id="601"/>
+									<ChildItems>
+										<ColumnGroup name="СписокФайлыГруппаКартинкаНаименованияМК" id="604">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Список файлы группа картинка наименования МК</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Список файлы группа картинка наименования МК</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СписокФайлыГруппаКартинкаНаименованияМКРасширеннаяПодсказка" id="605"/>
+										</ColumnGroup>
+										<ColumnGroup name="СписокФайлыГруппаНаименованиеАвторМК" id="602">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Список файлы группа наименование автор МК</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Список файлы группа наименование автор МК</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СписокФайлыГруппаНаименованиеАвторМКРасширеннаяПодсказка" id="603"/>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<PictureField name="СписокФайлыПодписанЭП" id="422">
+									<DataPath>СписокФайлы.СтатусПроверкиЭП</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подписан ЭП</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.ПодписанЗашифрованЗаголовок</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<Width>2</Width>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.ПодписанЗашифрованСостоянияДО</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</ValuesPicture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="СписокФайлыПодписанЭПКонтекстноеМеню" id="423"/>
+									<ExtendedTooltip name="СписокФайлыПодписанЭПРасширеннаяПодсказка" id="504"/>
+								</PictureField>
+								<PictureField name="СписокФайлыЕстьКатегорииДанных" id="588">
+									<DataPath>СписокФайлы.ЕстьКатегорииДанных</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.Категории</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<Width>2</Width>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.Категории</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</ValuesPicture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="СписокФайлыЕстьКатегорииДанныхКонтекстноеМеню" id="589"/>
+									<ExtendedTooltip name="СписокФайлыЕстьКатегорииДанныхРасширеннаяПодсказка" id="590"/>
+								</PictureField>
+								<ColumnGroup name="СписокФайлыНаименованиеИКартинка" id="426">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список файлы наименование и картинка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список файлы наименование и картинка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="СписокФайлыНаименованиеИКартинкаExtendedTooltip" id="506"/>
+									<ChildItems>
+										<PictureField name="СписокФайлыИндексКартинки" id="427">
+											<DataPath>СписокФайлы.ИндексКартинки</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.КоллекцияПиктограммФайлов</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="СписокФайлыИндексКартинкиКонтекстноеМеню" id="428"/>
+											<ExtendedTooltip name="СписокФайлыИндексКартинкиExtendedTooltip" id="507"/>
+										</PictureField>
+										<LabelField name="СписокФайлыНаименование" id="429">
+											<DataPath>СписокФайлы.Description</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Наименование</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокФайлыНаименованиеКонтекстноеМеню" id="430"/>
+											<ExtendedTooltip name="СписокФайлыНаименованиеExtendedTooltip" id="508"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<LabelField name="СписокФайлыВладелецФайла" id="431">
+									<DataPath>СписокФайлы.ВладелецФайла</DataPath>
+									<ContextMenu name="СписокФайлыВладелецФайлаКонтекстноеМеню" id="432"/>
+									<ExtendedTooltip name="СписокФайлыВладелецФайлаExtendedTooltip" id="509"/>
+								</LabelField>
+								<LabelField name="СписокФайлыОписание" id="433">
+									<DataPath>СписокФайлы.Описание</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Описание</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокФайлыОписаниеКонтекстноеМеню" id="434"/>
+									<ExtendedTooltip name="СписокФайлыОписаниеExtendedTooltip" id="510"/>
+								</LabelField>
+								<LabelField name="СписокФайлыРедактирует" id="435">
+									<DataPath>СписокФайлы.Редактирует</DataPath>
+									<ContextMenu name="СписокФайлыРедактируетКонтекстноеМеню" id="436"/>
+									<ExtendedTooltip name="СписокФайлыРедактируетExtendedTooltip" id="511"/>
+								</LabelField>
+								<LabelField name="СписокФайлыТекущаяВерсияНомерВерсии" id="437">
+									<DataPath>СписокФайлы.ТекущаяВерсияНомерВерсии</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Версия</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокФайлыТекущаяВерсияНомерВерсииКонтекстноеМеню" id="438"/>
+									<ExtendedTooltip name="СписокФайлыТекущаяВерсияНомерВерсииExtendedTooltip" id="512"/>
+								</LabelField>
+								<LabelField name="СписокФайлыТекущаяВерсияДатаСоздания" id="439">
+									<DataPath>СписокФайлы.ТекущаяВерсияДатаСоздания</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокФайлыТекущаяВерсияДатаСозданияКонтекстноеМеню" id="440"/>
+									<ExtendedTooltip name="СписокФайлыТекущаяВерсияДатаСозданияExtendedTooltip" id="513"/>
+								</LabelField>
+								<LabelField name="СписокФайлыТекущаяВерсияАвтор" id="441">
+									<DataPath>СписокФайлы.ТекущаяВерсияАвтор</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отредактировал</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокФайлыТекущаяВерсияАвторКонтекстноеМеню" id="442"/>
+									<ExtendedTooltip name="СписокФайлыТекущаяВерсияАвторExtendedTooltip" id="514"/>
+								</LabelField>
+								<LabelField name="СписокФайлыТекущаяВерсияРазмер" id="443">
+									<DataPath>СписокФайлы.ТекущаяВерсияРазмер</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Размер</v8:content>
+										</v8:item>
+									</Title>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=10; ЧН=0</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СписокФайлыТекущаяВерсияРазмерКонтекстноеМеню" id="444"/>
+									<ExtendedTooltip name="СписокФайлыТекущаяВерсияРазмерExtendedTooltip" id="515"/>
+								</LabelField>
+								<LabelField name="СписокФайлыАвтор" id="445">
+									<DataPath>СписокФайлы.Автор</DataPath>
+									<ContextMenu name="СписокФайлыАвторКонтекстноеМеню" id="446"/>
+									<ExtendedTooltip name="СписокФайлыАвторExtendedTooltip" id="516"/>
+								</LabelField>
+								<CheckBoxField name="СписокФайлыХранитьВерсии" id="447">
+									<DataPath>СписокФайлы.ХранитьВерсии</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СписокФайлыХранитьВерсииКонтекстноеМеню" id="448"/>
+									<ExtendedTooltip name="СписокФайлыХранитьВерсииExtendedTooltip" id="517"/>
+								</CheckBoxField>
+								<LabelField name="СписокФайлыРасширение" id="449">
+									<DataPath>СписокФайлы.Расширение</DataPath>
+									<ContextMenu name="СписокФайлыРасширениеКонтекстноеМеню" id="450"/>
+									<ExtendedTooltip name="СписокФайлыРасширениеExtendedTooltip" id="518"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПроекты" id="611">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проекты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница проекты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПроектыРасширеннаяПодсказка" id="612"/>
+					<ChildItems>
+						<Table name="СписокПроекты" id="735">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокПроекты</DataPath>
+							<RowPictureDataPath>СписокПроекты.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокПроектыКонтекстноеМеню" id="736"/>
+							<AutoCommandBar name="СписокПроектыКоманднаяПанель" id="737"/>
+							<ExtendedTooltip name="СписокПроектыРасширеннаяПодсказка" id="738"/>
+							<SearchStringAddition name="СписокПроектыСтрокаПоиска" id="739">
+								<AdditionSource>
+									<Item>СписокПроекты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПроектыСтрокаПоискаКонтекстноеМеню" id="740"/>
+								<ExtendedTooltip name="СписокПроектыСтрокаПоискаРасширеннаяПодсказка" id="741"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокПроектыСостояниеПросмотра" id="742">
+								<AdditionSource>
+									<Item>СписокПроекты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПроектыСостояниеПросмотраКонтекстноеМеню" id="743"/>
+								<ExtendedTooltip name="СписокПроектыСостояниеПросмотраРасширеннаяПодсказка" id="744"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокПроектыУправлениеПоиском" id="745">
+								<AdditionSource>
+									<Item>СписокПроекты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПроектыУправлениеПоискомКонтекстноеМеню" id="746"/>
+								<ExtendedTooltip name="СписокПроектыУправлениеПоискомРасширеннаяПодсказка" id="747"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокПроектыНаименование" id="748">
+									<DataPath>СписокПроекты.Наименование</DataPath>
+									<ContextMenu name="СписокПроектыНаименованиеКонтекстноеМеню" id="749"/>
+									<ExtendedTooltip name="СписокПроектыНаименованиеРасширеннаяПодсказка" id="750"/>
+								</LabelField>
+								<LabelField name="СписокПроектыВидПроекта" id="760">
+									<DataPath>СписокПроекты.ВидПроекта</DataPath>
+									<ContextMenu name="СписокПроектыВидПроектаКонтекстноеМеню" id="761"/>
+									<ExtendedTooltip name="СписокПроектыВидПроектаРасширеннаяПодсказка" id="762"/>
+								</LabelField>
+								<LabelField name="СписокПроектыКомментарий" id="784">
+									<DataPath>СписокПроекты.Комментарий</DataPath>
+									<ContextMenu name="СписокПроектыКомментарийКонтекстноеМеню" id="785"/>
+									<ExtendedTooltip name="СписокПроектыКомментарийРасширеннаяПодсказка" id="786"/>
+								</LabelField>
+								<LabelField name="СписокПроектыОписание" id="787">
+									<DataPath>СписокПроекты.Описание</DataPath>
+									<ContextMenu name="СписокПроектыОписаниеКонтекстноеМеню" id="788"/>
+									<ExtendedTooltip name="СписокПроектыОписаниеРасширеннаяПодсказка" id="789"/>
+								</LabelField>
+								<LabelField name="СписокПроектыРуководитель" id="805">
+									<DataPath>СписокПроекты.Руководитель</DataPath>
+									<ContextMenu name="СписокПроектыРуководительКонтекстноеМеню" id="806"/>
+									<ExtendedTooltip name="СписокПроектыРуководительРасширеннаяПодсказка" id="807"/>
+								</LabelField>
+								<LabelField name="СписокПроектыСостояние" id="808">
+									<DataPath>СписокПроекты.Состояние</DataPath>
+									<ContextMenu name="СписокПроектыСостояниеКонтекстноеМеню" id="809"/>
+									<ExtendedTooltip name="СписокПроектыСостояниеРасширеннаяПодсказка" id="810"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПроектныеЗадачи" id="613">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проектные задачи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница проектные задачи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПроектныеЗадачиРасширеннаяПодсказка" id="614"/>
+					<ChildItems>
+						<Table name="СписокПроектныеЗадачи" id="841">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокПроектныеЗадачи</DataPath>
+							<RowPictureDataPath>СписокПроектныеЗадачи.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокПроектныеЗадачиКонтекстноеМеню" id="842"/>
+							<AutoCommandBar name="СписокПроектныеЗадачиКоманднаяПанель" id="843"/>
+							<ExtendedTooltip name="СписокПроектныеЗадачиРасширеннаяПодсказка" id="844"/>
+							<SearchStringAddition name="СписокПроектныеЗадачиСтрокаПоиска" id="845">
+								<AdditionSource>
+									<Item>СписокПроектныеЗадачи</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПроектныеЗадачиСтрокаПоискаКонтекстноеМеню" id="846"/>
+								<ExtendedTooltip name="СписокПроектныеЗадачиСтрокаПоискаРасширеннаяПодсказка" id="847"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокПроектныеЗадачиСостояниеПросмотра" id="848">
+								<AdditionSource>
+									<Item>СписокПроектныеЗадачи</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПроектныеЗадачиСостояниеПросмотраКонтекстноеМеню" id="849"/>
+								<ExtendedTooltip name="СписокПроектныеЗадачиСостояниеПросмотраРасширеннаяПодсказка" id="850"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокПроектныеЗадачиУправлениеПоиском" id="851">
+								<AdditionSource>
+									<Item>СписокПроектныеЗадачи</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПроектныеЗадачиУправлениеПоискомКонтекстноеМеню" id="852"/>
+								<ExtendedTooltip name="СписокПроектныеЗадачиУправлениеПоискомРасширеннаяПодсказка" id="853"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокПроектныеЗадачиНаименование" id="854">
+									<DataPath>СписокПроектныеЗадачи.Наименование</DataPath>
+									<ContextMenu name="СписокПроектныеЗадачиНаименованиеКонтекстноеМеню" id="855"/>
+									<ExtendedTooltip name="СписокПроектныеЗадачиНаименованиеРасширеннаяПодсказка" id="856"/>
+								</LabelField>
+								<LabelField name="СписокПроектныеЗадачиВажность" id="863">
+									<DataPath>СписокПроектныеЗадачи.Важность</DataPath>
+									<ContextMenu name="СписокПроектныеЗадачиВажностьКонтекстноеМеню" id="864"/>
+									<ExtendedTooltip name="СписокПроектныеЗадачиВажностьРасширеннаяПодсказка" id="865"/>
+								</LabelField>
+								<LabelField name="СписокПроектныеЗадачиИдентификаторЗадачи" id="878">
+									<DataPath>СписокПроектныеЗадачи.ИдентификаторЗадачи</DataPath>
+									<ContextMenu name="СписокПроектныеЗадачиИдентификаторЗадачиКонтекстноеМеню" id="879"/>
+									<ExtendedTooltip name="СписокПроектныеЗадачиИдентификаторЗадачиРасширеннаяПодсказка" id="880"/>
+								</LabelField>
+								<LabelField name="СписокПроектныеЗадачиОписание" id="890">
+									<DataPath>СписокПроектныеЗадачи.Описание</DataPath>
+									<ContextMenu name="СписокПроектныеЗадачиОписаниеКонтекстноеМеню" id="891"/>
+									<ExtendedTooltip name="СписокПроектныеЗадачиОписаниеРасширеннаяПодсказка" id="892"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаМероприятия" id="615">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мероприятия</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница мероприятия</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаМероприятияРасширеннаяПодсказка" id="616"/>
+					<ChildItems>
+						<Table name="СписокМероприятия" id="617">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокМероприятия</DataPath>
+							<RowPictureDataPath>СписокМероприятия.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокМероприятияКонтекстноеМеню" id="618"/>
+							<AutoCommandBar name="СписокМероприятияКоманднаяПанель" id="619"/>
+							<ExtendedTooltip name="СписокМероприятияРасширеннаяПодсказка" id="620"/>
+							<SearchStringAddition name="СписокМероприятияСтрокаПоиска" id="621">
+								<AdditionSource>
+									<Item>СписокМероприятия</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокМероприятияСтрокаПоискаКонтекстноеМеню" id="622"/>
+								<ExtendedTooltip name="СписокМероприятияСтрокаПоискаРасширеннаяПодсказка" id="623"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокМероприятияСостояниеПросмотра" id="624">
+								<AdditionSource>
+									<Item>СписокМероприятия</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокМероприятияСостояниеПросмотраКонтекстноеМеню" id="625"/>
+								<ExtendedTooltip name="СписокМероприятияСостояниеПросмотраРасширеннаяПодсказка" id="626"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокМероприятияУправлениеПоиском" id="627">
+								<AdditionSource>
+									<Item>СписокМероприятия</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокМероприятияУправлениеПоискомКонтекстноеМеню" id="628"/>
+								<ExtendedTooltip name="СписокМероприятияУправлениеПоискомРасширеннаяПодсказка" id="629"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокМероприятияНаименование" id="630">
+									<DataPath>СписокМероприятия.Наименование</DataPath>
+									<ContextMenu name="СписокМероприятияНаименованиеКонтекстноеМеню" id="631"/>
+									<ExtendedTooltip name="СписокМероприятияНаименованиеРасширеннаяПодсказка" id="632"/>
+								</LabelField>
+								<LabelField name="СписокМероприятияВидМероприятия" id="639">
+									<DataPath>СписокМероприятия.ВидМероприятия</DataPath>
+									<ContextMenu name="СписокМероприятияВидМероприятияКонтекстноеМеню" id="640"/>
+									<ExtendedTooltip name="СписокМероприятияВидМероприятияРасширеннаяПодсказка" id="641"/>
+								</LabelField>
+								<LabelField name="СписокМероприятияДатаНачала" id="648">
+									<DataPath>СписокМероприятия.ДатаНачала</DataPath>
+									<ContextMenu name="СписокМероприятияДатаНачалаКонтекстноеМеню" id="649"/>
+									<ExtendedTooltip name="СписокМероприятияДатаНачалаРасширеннаяПодсказка" id="650"/>
+								</LabelField>
+								<LabelField name="СписокМероприятияДатаОкончания" id="654">
+									<DataPath>СписокМероприятия.ДатаОкончания</DataPath>
+									<ContextMenu name="СписокМероприятияДатаОкончанияКонтекстноеМеню" id="655"/>
+									<ExtendedTooltip name="СписокМероприятияДатаОкончанияРасширеннаяПодсказка" id="656"/>
+								</LabelField>
+								<LabelField name="СписокМероприятияКомментарий" id="663">
+									<DataPath>СписокМероприятия.Комментарий</DataPath>
+									<ContextMenu name="СписокМероприятияКомментарийКонтекстноеМеню" id="664"/>
+									<ExtendedTooltip name="СписокМероприятияКомментарийРасширеннаяПодсказка" id="665"/>
+								</LabelField>
+								<LabelField name="СписокМероприятияМестоПроведения" id="675">
+									<DataPath>СписокМероприятия.МестоПроведения</DataPath>
+									<ContextMenu name="СписокМероприятияМестоПроведенияКонтекстноеМеню" id="676"/>
+									<ExtendedTooltip name="СписокМероприятияМестоПроведенияРасширеннаяПодсказка" id="677"/>
+								</LabelField>
+								<LabelField name="СписокМероприятияОписание" id="678">
+									<DataPath>СписокМероприятия.Описание</DataPath>
+									<ContextMenu name="СписокМероприятияОписаниеКонтекстноеМеню" id="679"/>
+									<ExtendedTooltip name="СписокМероприятияОписаниеРасширеннаяПодсказка" id="680"/>
+								</LabelField>
+								<LabelField name="СписокМероприятияОрганизатор" id="681">
+									<DataPath>СписокМероприятия.Организатор</DataPath>
+									<ContextMenu name="СписокМероприятияОрганизаторКонтекстноеМеню" id="682"/>
+									<ExtendedTooltip name="СписокМероприятияОрганизаторРасширеннаяПодсказка" id="683"/>
+								</LabelField>
+								<LabelField name="СписокМероприятияПомещение" id="705">
+									<DataPath>СписокМероприятия.Помещение</DataPath>
+									<ContextMenu name="СписокМероприятияПомещениеКонтекстноеМеню" id="706"/>
+									<ExtendedTooltip name="СписокМероприятияПомещениеРасширеннаяПодсказка" id="707"/>
+								</LabelField>
+								<LabelField name="СписокМероприятияПредседатель" id="711">
+									<DataPath>СписокМероприятия.Председатель</DataPath>
+									<ContextMenu name="СписокМероприятияПредседательКонтекстноеМеню" id="712"/>
+									<ExtendedTooltip name="СписокМероприятияПредседательРасширеннаяПодсказка" id="713"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокДокументыПредприятия" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список документы предприятия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокДокументыПредприятия.DeletionMark</Field>
+				<Field>СписокДокументыПредприятия.Ref</Field>
+				<Field>СписокДокументыПредприятия.ДатаСортировки</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументыПредприятия.Ссылка,
+	ДокументыПредприятия.ПометкаУдаления,
+	ДокументыПредприятия.РегистрационныйНомер,
+	ДокументыПредприятия.ДатаРегистрации,
+	ДокументыПредприятия.ВидДокумента,
+	ДокументыПредприятия.Наименование,
+	ДокументыПредприятия.Папка,
+	ДокументыПредприятия.Подготовил,
+	ДокументыПредприятия.Подразделение,
+	ДокументыПредприятия.ПодписанУтвержден КАК Утвердил,
+	ДокументыПредприятия.Дело,
+	ДокументыПредприятия.СрокИсполнения,
+	ДокументыПредприятия.Зарегистрировал,
+	ДокументыПредприятия.ЧисловойНомер,
+	ДокументыПредприятия.Заголовок,
+	ДокументыПредприятия.Код КАК ВнутреннийНомер,
+	ДокументыПредприятия.ДатаСоздания,
+	ДокументыПредприятия.Контрагент,
+	ДокументыПредприятия.КонтактноеЛицо,
+	ДокументыПредприятия.Организация,
+	ДокументыПредприятия.НеДействует,
+	ДокументыПредприятия.НоменклатураДел,
+	ДанныеДокументовПредприятия.ЕстьФайлы КАК Файлы,
+	ДанныеДокументовПредприятия.ЕстьЗадачи КАК Задачи,
+	ДанныеДокументовПредприятия.ЕстьКатегории КАК ЕстьКатегорииДанных,
+	ДокументыПредприятия.ПодписанЭП,
+	ВЫБОР
+		КОГДА ДанныеДокументовПредприятия.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписиНет)
+			ТОГДА 0
+		КОГДА ДанныеДокументовПредприятия.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНеПроверена)
+			ТОГДА 1
+		КОГДА ДанныеДокументовПредприятия.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьДействительна)
+			ТОГДА 2
+		КОГДА ДанныеДокументовПредприятия.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНедействительна)
+			ТОГДА 3
+		ИНАЧЕ ВЫБОР
+				КОГДА ДанныеДокументовПредприятия.ПодписанЭП
+					ТОГДА 1
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК СтатусПроверкиЭП,
+	ДанныеДокументовПредприятия.СодержитОригинал,
+	ДанныеДокументовПредприятия.РегистрационныйНомерИДата,
+	ДанныеДокументовПредприятия.ДатаСортировки,
+	ВЫБОР
+		КОГДА ДанныеДокументовПредприятия.СостояниеДелаХранения = ЗНАЧЕНИЕ(Перечисление.СостоянияДелХраненияДокументов.ПереданоВАрхив)
+			ТОГДА 1
+		КОГДА ДанныеДокументовПредприятия.СостояниеДелаХранения = ЗНАЧЕНИЕ(Перечисление.СостоянияДелХраненияДокументов.Уничтожено)
+			ТОГДА 2
+		ИНАЧЕ 0
+	КОНЕЦ КАК ИндексСостоянияДела
+ИЗ
+	Справочник.ДокументыПредприятия КАК ДокументыПредприятия
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КатегорииОбъектов КАК КатегорииОбъектов
+		ПО (КатегорииОбъектов.ОбъектДанных = ДокументыПредприятия.Ссылка)
+		И (КатегорииОбъектов.Автор = &amp;Правило)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДанныеДокументовПредприятия КАК ДанныеДокументовПредприятия
+		ПО ДокументыПредприятия.Ссылка = ДанныеДокументовПредприятия.Документ</QueryText>
+				<MainTable>Catalog.ДокументыПредприятия</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаСортировки</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокФайлы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокФайлы.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Файлы.Код,
+	Файлы.Редактирует,
+	Файлы.ДатаСоздания,
+	Файлы.ТекущаяВерсияНомерВерсии,
+	Файлы.ТекущаяВерсияРазмер / 1024 КАК ТекущаяВерсияРазмер,
+	Файлы.Автор,
+	Файлы.ТекущаяВерсияДатаСоздания,
+	ВЫБОР
+		КОГДА Файлы.ПометкаУдаления = ИСТИНА
+			ТОГДА Файлы.ИндексКартинки + 1
+		ИНАЧЕ Файлы.ИндексКартинки
+	КОНЕЦ КАК ИндексКартинки,
+	Файлы.Наименование,
+	ПОДСТРОКА(Файлы.Описание, 0, 140) КАК Описание,
+	Файлы.Ссылка,
+	Файлы.ТекущаяВерсияАвтор,
+	Файлы.ПометкаУдаления,
+	Файлы.ХранитьВерсии,
+	Файлы.ВладелецФайла,
+	ВЫБОР
+		КОГДА Файлы.Редактирует В (&amp;ПользовательИЕгоСотрудники)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК РедактируетТекущийПользователь,
+	Файлы.ТекущаяВерсияРасширение КАК Расширение,
+	ВЫБОР
+		КОГДА Файлы.Зашифрован
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписиНет)
+						ТОГДА 0
+					КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНеПроверена)
+						ТОГДА 2
+					КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьДействительна)
+						ТОГДА 4
+					КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНедействительна)
+						ТОГДА 6
+					ИНАЧЕ ВЫБОР
+							КОГДА Файлы.ПодписанЭП
+								ТОГДА 2
+							ИНАЧЕ 0
+						КОНЕЦ
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписиНет)
+					ТОГДА -1
+				КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНеПроверена)
+					ТОГДА 1
+				КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьДействительна)
+					ТОГДА 3
+				КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНедействительна)
+					ТОГДА 5
+				ИНАЧЕ ВЫБОР
+						КОГДА Файлы.ПодписанЭП
+							ТОГДА 1
+						ИНАЧЕ -1
+					КОНЕЦ
+			КОНЕЦ
+	КОНЕЦ КАК СтатусПроверкиЭП,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьКатегории ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ЕстьКатегории
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьКатегорииДанных,
+	Файлы.ПодписанЭП,
+	Файлы.Зашифрован
+ИЗ
+	Справочник.Файлы КАК Файлы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КатегорииОбъектов КАК КатегорииОбъектов
+		ПО (КатегорииОбъектов.ОбъектДанных = Файлы.Ссылка)
+			И (КатегорииОбъектов.Автор = &amp;Правило)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ПапкиФайлов КАК СправочникПапкиФайлов
+		ПО Файлы.ВладелецФайла = СправочникПапкиФайлов.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КешИнформацииОбОбъектах КАК КешИнформацииОбОбъектах
+		ПО Файлы.Ссылка = КешИнформацииОбОбъектах.Объект</QueryText>
+				<MainTable>Catalog.Файлы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокМероприятия" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список мероприятия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокМероприятия.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникМероприятия.Ссылка КАК Ссылка,
+	СправочникМероприятия.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникМероприятия.Код КАК Код,
+	СправочникМероприятия.Наименование КАК Наименование,
+	СправочникМероприятия.Важность КАК Важность,
+	СправочникМероприятия.ВидМероприятия КАК ВидМероприятия,
+	СправочникМероприятия.ГрифДоступа КАК ГрифДоступа,
+	СправочникМероприятия.ДатаИзменения КАК ДатаИзменения,
+	СправочникМероприятия.ДатаНачала КАК ДатаНачала,
+	СправочникМероприятия.ДатаНачалаФакт КАК ДатаНачалаФакт,
+	СправочникМероприятия.ДатаОкончания КАК ДатаОкончания,
+	СправочникМероприятия.ДатаОкончанияФакт КАК ДатаОкончанияФакт,
+	СправочникМероприятия.ДатаСоздания КАК ДатаСоздания,
+	СправочникМероприятия.Комментарий КАК Комментарий,
+	СправочникМероприятия.Куратор КАК Куратор,
+	СправочникМероприятия.МатериалПрограмма КАК МатериалПрограмма,
+	СправочникМероприятия.МатериалПротокол КАК МатериалПротокол,
+	СправочникМероприятия.МестоПроведения КАК МестоПроведения,
+	СправочникМероприятия.Описание КАК Описание,
+	СправочникМероприятия.Организатор КАК Организатор,
+	СправочникМероприятия.ОрганизаторКонтактноеЛицо КАК ОрганизаторКонтактноеЛицо,
+	СправочникМероприятия.Организация КАК Организация,
+	СправочникМероприятия.Папка КАК Папка,
+	СправочникМероприятия.ПериодСтрокой КАК ПериодСтрокой,
+	СправочникМероприятия.Подготовил КАК Подготовил,
+	СправочникМероприятия.ПодписанЭП КАК ПодписанЭП,
+	СправочникМероприятия.Подразделение КАК Подразделение,
+	СправочникМероприятия.Помещение КАК Помещение,
+	СправочникМероприятия.Предмет КАК Предмет,
+	СправочникМероприятия.Председатель КАК Председатель,
+	СправочникМероприятия.ПредыдущееМероприятие КАК ПредыдущееМероприятие,
+	СправочникМероприятия.Проект КАК Проект,
+	СправочникМероприятия.Секретарь КАК Секретарь,
+	СправочникМероприятия.Серия КАК Серия,
+	СправочникМероприятия.ТипПрограммы КАК ТипПрограммы,
+	СправочникМероприятия.ТипПротокола КАК ТипПротокола,
+	СправочникМероприятия.ИсточникДанных КАК ИсточникДанных,
+	СправочникМероприятия.Предопределенный КАК Предопределенный,
+	СправочникМероприятия.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
+ИЗ
+	Справочник.Мероприятия КАК СправочникМероприятия
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КатегорииОбъектов КАК КатегорииОбъектов
+		ПО (КатегорииОбъектов.ОбъектДанных = СправочникМероприятия.Ссылка)
+			И (КатегорииОбъектов.Автор = &amp;Правило)</QueryText>
+				<MainTable>Catalog.Мероприятия</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокПроектныеЗадачи" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список проектные задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокПроектныеЗадачи.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникПроектныеЗадачи.Ссылка КАК Ссылка,
+	СправочникПроектныеЗадачи.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникПроектныеЗадачи.Владелец КАК Владелец,
+	СправочникПроектныеЗадачи.Родитель КАК Родитель,
+	СправочникПроектныеЗадачи.Код КАК Код,
+	СправочникПроектныеЗадачи.Наименование КАК Наименование,
+	СправочникПроектныеЗадачи.Важность КАК Важность,
+	СправочникПроектныеЗадачи.Веха КАК Веха,
+	СправочникПроектныеЗадачи.ГрафикРаботы КАК ГрафикРаботы,
+	СправочникПроектныеЗадачи.ДатаОграничения КАК ДатаОграничения,
+	СправочникПроектныеЗадачи.ЕдиницаТрудозатратФакт КАК ЕдиницаТрудозатратФакт,
+	СправочникПроектныеЗадачи.ИдентификаторЗадачи КАК ИдентификаторЗадачи,
+	СправочникПроектныеЗадачи.ИсполнителямРазрешеноИзменятьПредмет КАК ИсполнителямРазрешеноИзменятьПредмет,
+	СправочникПроектныеЗадачи.КодСДР КАК КодСДР,
+	СправочникПроектныеЗадачи.НомерЗадачиВУровне КАК НомерЗадачиВУровне,
+	СправочникПроектныеЗадачи.Описание КАК Описание,
+	СправочникПроектныеЗадачи.Предмет КАК Предмет,
+	СправочникПроектныеЗадачи.СуммарнаяЗадача КАК СуммарнаяЗадача,
+	СправочникПроектныеЗадачи.ТекущийПланЕдиницаТрудозатрат КАК ТекущийПланЕдиницаТрудозатрат,
+	СправочникПроектныеЗадачи.ТекущийПланТрудозатраты КАК ТекущийПланТрудозатраты,
+	СправочникПроектныеЗадачи.ТипОграничения КАК ТипОграничения,
+	СправочникПроектныеЗадачи.ИсточникДанных КАК ИсточникДанных,
+	СправочникПроектныеЗадачи.Предопределенный КАК Предопределенный,
+	СправочникПроектныеЗадачи.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
+ИЗ
+	Справочник.ПроектныеЗадачи КАК СправочникПроектныеЗадачи
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КатегорииОбъектов КАК КатегорииОбъектов
+		ПО (КатегорииОбъектов.ОбъектДанных = СправочникПроектныеЗадачи.Ссылка)
+			И (КатегорииОбъектов.Автор = &amp;Правило)</QueryText>
+				<MainTable>Catalog.ПроектныеЗадачи</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокПроекты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список проекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокПроекты.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникПроекты.Ссылка КАК Ссылка,
+	СправочникПроекты.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникПроекты.Родитель КАК Родитель,
+	СправочникПроекты.ЭтоГруппа КАК ЭтоГруппа,
+	СправочникПроекты.Код КАК Код,
+	СправочникПроекты.Наименование КАК Наименование,
+	СправочникПроекты.АвтоматическиОтправлятьПроектныеЗадачиНаИсполнение КАК АвтоматическиОтправлятьПроектныеЗадачиНаИсполнение,
+	СправочникПроекты.АвтоматическиРассчитыватьПланПроекта КАК АвтоматическиРассчитыватьПланПроекта,
+	СправочникПроекты.ВидПроекта КАК ВидПроекта,
+	СправочникПроекты.ГрафикРаботы КАК ГрафикРаботы,
+	СправочникПроекты.ГрифДоступа КАК ГрифДоступа,
+	СправочникПроекты.ДатаПоследнейЗагрузкиИзВнешнегоФайла КАК ДатаПоследнейЗагрузкиИзВнешнегоФайла,
+	СправочникПроекты.ЕдиницаДлительностиЗадач КАК ЕдиницаДлительностиЗадач,
+	СправочникПроекты.ЕдиницаТрудозатратЗадач КАК ЕдиницаТрудозатратЗадач,
+	СправочникПроекты.ЗагруженИзMSProject КАК ЗагруженИзMSProject,
+	СправочникПроекты.Заказчик КАК Заказчик,
+	СправочникПроекты.Комментарий КАК Комментарий,
+	СправочникПроекты.Описание КАК Описание,
+	СправочникПроекты.Организация КАК Организация,
+	СправочникПроекты.Папка КАК Папка,
+	СправочникПроекты.Подразделение КАК Подразделение,
+	СправочникПроекты.ПраваНаДокументыВсемУчастникам КАК ПраваНаДокументыВсемУчастникам,
+	СправочникПроекты.РедактируетсяВСтороннейСистеме КАК РедактируетсяВСтороннейСистеме,
+	СправочникПроекты.Руководитель КАК Руководитель,
+	СправочникПроекты.Состояние КАК Состояние,
+	СправочникПроекты.СписыватьЗатратыНаПроект КАК СписыватьЗатратыНаПроект,
+	СправочникПроекты.СпособПланирования КАК СпособПланирования,
+	СправочникПроекты.СсылкаНаВнешнийФайл КАК СсылкаНаВнешнийФайл,
+	СправочникПроекты.ТекущийПланНачало КАК ТекущийПланНачало,
+	СправочникПроекты.ТекущийПланОкончание КАК ТекущийПланОкончание,
+	СправочникПроекты.ТекущийПланТрудозатраты КАК ТекущийПланТрудозатраты,
+	СправочникПроекты.УдалитьЗапретитьАвтоматическоеДобавлениеУчастниковРабочейГруппы КАК УдалитьЗапретитьАвтоматическоеДобавлениеУчастниковРабочейГруппы,
+	СправочникПроекты.ИсточникДанных КАК ИсточникДанных,
+	СправочникПроекты.НаименованиеЯзык1 КАК НаименованиеЯзык1,
+	СправочникПроекты.НаименованиеЯзык2 КАК НаименованиеЯзык2,
+	СправочникПроекты.Предопределенный КАК Предопределенный,
+	СправочникПроекты.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
+ИЗ
+	Справочник.Проекты КАК СправочникПроекты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КатегорииОбъектов КАК КатегорииОбъектов
+		ПО (КатегорииОбъектов.ОбъектДанных = СправочникПроекты.Ссылка)
+			И (КатегорииОбъектов.Автор = &amp;Правило)</QueryText>
+				<MainTable>Catalog.Проекты</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="ПравилоАвтокатегоризации">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПравилаАвтоматическойКатегоризацииДанных</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

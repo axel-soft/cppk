@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Контрагент" id="1">
+			<DataPath>Запись.Контрагент</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>50</MaxWidth>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="АдресМЭДО" id="23">
+			<DataPath>Запись.АдресМЭДО</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение заполняется по справочнику
+абонентов МЭДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>50</MaxWidth>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="АдресМЭДОКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="АдресМЭДОРасширеннаяПодсказка" id="25"/>
+		</InputField>
+		<InputField name="ИдентификаторМЭДО" id="29">
+			<DataPath>ИдентификаторМЭДО</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение заполняется по справочнику
+абонентов МЭДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>50</MaxWidth>
+			<Mask>NNNNNNNN-NNNN-NNNN-NNNN-NNNNNNNNNNNN</Mask>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>00000000-0000-0000-0000-000000000000</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="ИдентификаторМЭДОКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ИдентификаторМЭДОРасширеннаяПодсказка" id="31"/>
+			<Events>
+				<Event name="OnChange">ИдентификаторМЭДОПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаВерсия" id="35">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВерсияРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<InputField name="ВерсияФорматаМЭДО" id="26">
+					<DataPath>Запись.ВерсияФорматаМЭДО</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>25</MaxWidth>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ВерсияФорматаМЭДОКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ВерсияФорматаМЭДОРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<CheckBoxField name="АктуализироватьВерсию" id="32">
+					<DataPath>Запись.АктуализироватьВерсию</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АктуализироватьВерсиюКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="АктуализироватьВерсиюРасширеннаяПодсказка" id="34"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НастройкиКонтрагентовМЭДО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИдентификаторМЭДО" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор МЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИдентификаторМенялся" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор менялся</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

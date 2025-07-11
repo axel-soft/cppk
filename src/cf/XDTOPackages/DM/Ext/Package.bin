@@ -1,0 +1,2360 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.1c.ru/dm" elementFormQualified="true" attributeFormQualified="false">
+	<valueType name="DMActionExecutionResult" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">NotApproved</enumeration>
+		<enumeration xsi:type="xs:string">Approved</enumeration>
+		<enumeration xsi:type="xs:string">ApprovedWithReservations</enumeration>
+		<enumeration xsi:type="xs:string">Confirmed</enumeration>
+		<enumeration xsi:type="xs:string">NotConfirmed</enumeration>
+		<enumeration xsi:type="xs:string">Registered</enumeration>
+		<enumeration xsi:type="xs:string">NotRegistered</enumeration>
+		<enumeration xsi:type="xs:string">Examined</enumeration>
+		<enumeration xsi:type="xs:string">RefusalOfExamination</enumeration>
+		<enumeration xsi:type="xs:string">Completed</enumeration>
+		<enumeration xsi:type="xs:string">NotSigned</enumeration>
+		<enumeration xsi:type="xs:string">Signed</enumeration>
+		<enumeration xsi:type="xs:string">ReturnForRevision</enumeration>
+		<enumeration xsi:type="xs:string">StopMonitoring</enumeration>
+		<enumeration xsi:type="xs:string">Performed</enumeration>
+		<enumeration xsi:type="xs:string">RefusalOfPerformance</enumeration>
+		<enumeration xsi:type="xs:string">Reviewed</enumeration>
+		<enumeration xsi:type="xs:string">RefusalOfReview</enumeration>
+	</valueType>
+	<valueType name="DMActionExecutionState" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">InTheExecutionQueue</enumeration>
+		<enumeration xsi:type="xs:string">Performing</enumeration>
+		<enumeration xsi:type="xs:string">ReadyingForExecution</enumeration>
+		<enumeration xsi:type="xs:string">ReadyingForCompletion</enumeration>
+		<enumeration xsi:type="xs:string">Completed</enumeration>
+		<enumeration xsi:type="xs:string">ProcessingResult</enumeration>
+		<enumeration xsi:type="xs:string">OnPause</enumeration>
+		<enumeration xsi:type="xs:string">DelayedStart</enumeration>
+		<enumeration xsi:type="xs:string">Skipped</enumeration>
+	</valueType>
+	<valueType name="DMActionParticipantFunction" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">ConfirmingPerson</enumeration>
+		<enumeration xsi:type="xs:string">ConfirmationResultProcessor</enumeration>
+		<enumeration xsi:type="xs:string">Signer</enumeration>
+		<enumeration xsi:type="xs:string">EnsuringSigning</enumeration>
+		<enumeration xsi:type="xs:string">SigningResultProcessor</enumeration>
+		<enumeration xsi:type="xs:string">ApprovingPerson</enumeration>
+		<enumeration xsi:type="xs:string">EnsuringApproval</enumeration>
+		<enumeration xsi:type="xs:string">ApprovalResultProcessor</enumeration>
+		<enumeration xsi:type="xs:string">PreparingResultProcessor</enumeration>
+		<enumeration xsi:type="xs:string">PreparingCompletion</enumeration>
+		<enumeration xsi:type="xs:string">Examinated</enumeration>
+		<enumeration xsi:type="xs:string">ExaminationInitializer</enumeration>
+		<enumeration xsi:type="xs:string">Registrar</enumeration>
+		<enumeration xsi:type="xs:string">RegistrationResultProcessor</enumeration>
+		<enumeration xsi:type="xs:string">Performer</enumeration>
+		<enumeration xsi:type="xs:string">ProcessingResolution</enumeration>
+		<enumeration xsi:type="xs:string">ReviewingPerson</enumeration>
+		<enumeration xsi:type="xs:string">PerformanceResultProcessor</enumeration>
+		<enumeration xsi:type="xs:string">AutoDetection</enumeration>
+	</valueType>
+	<valueType name="DMActionSubjectSigningMethod" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">OnPaper</enumeration>
+		<enumeration xsi:type="xs:string">BasicDS</enumeration>
+		<enumeration xsi:type="xs:string">EnhancedDS</enumeration>
+	</valueType>
+	<valueType name="DMAddressBookType" base="xs:string" variety="Atomic">
+		<enumeration>UsersList</enumeration>
+		<enumeration>UsersInFolders</enumeration>
+		<enumeration>UsersInSubdivisions</enumeration>
+		<enumeration>PersonalRecipients</enumeration>
+		<enumeration>Correspondents</enumeration>
+	</valueType>
+	<valueType name="DMApplicationTreeRowType" base="xs:string" variety="Atomic">
+		<enumeration>AdditionalAttributes</enumeration>
+		<enumeration>Application</enumeration>
+		<enumeration>CoExecutors</enumeration>
+		<enumeration>DocumentEDI</enumeration>
+		<enumeration>File</enumeration>
+		<enumeration>FileRole</enumeration>
+		<enumeration>HistoryOfPerform</enumeration>
+		<enumeration>Instruction</enumeration>
+		<enumeration>Processing</enumeration>
+		<enumeration>Subtasks</enumeration>
+		<enumeration>Task</enumeration>
+	</valueType>
+	<valueType name="DMCategoriesOfCases" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">TemporaryUpTo10years</enumeration>
+		<enumeration xsi:type="xs:string">TemporaryOver10years</enumeration>
+		<enumeration xsi:type="xs:string">Permanent</enumeration>
+	</valueType>
+	<valueType name="DMCommunicationRulesContextFieldName" base="xs:string" variety="Atomic">
+		<enumeration>ActionParticipant</enumeration>
+		<enumeration>NewTaskPerformer</enumeration>
+	</valueType>
+	<valueType name="DMComparisonOperator" base="xs:string" variety="Atomic">
+		<enumeration>=</enumeration>
+		<enumeration>&lt;&gt;</enumeration>
+		<enumeration>&gt;</enumeration>
+		<enumeration>&gt;=</enumeration>
+		<enumeration>&lt;</enumeration>
+		<enumeration>&lt;=</enumeration>
+		<enumeration>LIKE</enumeration>
+		<enumeration>IN</enumeration>
+		<enumeration>IN HIERARCHY</enumeration>
+	</valueType>
+	<valueType name="DMContactInformationType" base="xs:string" variety="Atomic">
+		<enumeration>Address</enumeration>
+		<enumeration>Phone</enumeration>
+		<enumeration>EmailAddress</enumeration>
+		<enumeration>Skype</enumeration>
+		<enumeration>WebPage</enumeration>
+		<enumeration>Fax</enumeration>
+		<enumeration>Other</enumeration>
+	</valueType>
+	<valueType name="DMDaysOfTheWeek" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Monday</enumeration>
+		<enumeration xsi:type="xs:string">Tuesday</enumeration>
+		<enumeration xsi:type="xs:string">Wednesday</enumeration>
+		<enumeration xsi:type="xs:string">Thursday</enumeration>
+		<enumeration xsi:type="xs:string">Friday</enumeration>
+		<enumeration xsi:type="xs:string">Saturday</enumeration>
+		<enumeration xsi:type="xs:string">Sunday</enumeration>
+	</valueType>
+	<valueType name="DMDocumentFormOption" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Paper</enumeration>
+		<enumeration xsi:type="xs:string">Electronic</enumeration>
+		<enumeration xsi:type="xs:string">PaperOrElectronic</enumeration>
+	</valueType>
+	<valueType name="DMDocumentStatus" base="xs:string" variety="Atomic">
+		<enumeration>Registered</enumeration>
+		<enumeration>Performed</enumeration>
+		<enumeration>UnderDevelopment</enumeration>
+		<enumeration>AwaitingPerformance</enumeration>
+		<enumeration>OnExamination</enumeration>
+		<enumeration>InPreparation</enumeration>
+		<enumeration>AwaitsSigning</enumeration>
+		<enumeration>AwaitingReviewal</enumeration>
+		<enumeration>AwaitingRegistration</enumeration>
+		<enumeration>AwaitingApproval</enumeration>
+		<enumeration>AwaitingConfirmation</enumeration>
+		<enumeration>NotRegistered</enumeration>
+		<enumeration>NotApproved</enumeration>
+		<enumeration>NotConfirmed</enumeration>
+		<enumeration>ExaminationCompleted</enumeration>
+		<enumeration>Rejected</enumeration>
+		<enumeration>Signed</enumeration>
+		<enumeration>Project</enumeration>
+		<enumeration>Considered</enumeration>
+		<enumeration>Approved</enumeration>
+		<enumeration>Confirmed</enumeration>
+	</valueType>
+	<valueType name="DMDueDateSpecificationOption" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">RelativeDate</enumeration>
+		<enumeration xsi:type="xs:string">ExactDate</enumeration>
+	</valueType>
+	<valueType name="DMElectronicDocumentType" base="xs:string" variety="Atomic">
+		<enumeration>ActOfNetting</enumeration>
+		<enumeration>AcceptanceCertificate</enumeration>
+		<enumeration>ActOfTransferringRights</enumeration>
+		<enumeration>ActOfDiscrepancy</enumeration>
+		<enumeration>ReconciliationAct</enumeration>
+		<enumeration>ActOfReviewOfMutualAccounts</enumeration>
+		<enumeration>Statement</enumeration>
+		<enumeration>Internal</enumeration>
+		<enumeration>ReturningOfGoods</enumeration>
+		<enumeration>LetterOfGguarantee</enumeration>
+		<enumeration>Contract</enumeration>
+		<enumeration>ContractualDocument</enumeration>
+		<enumeration>AcceptanceDocumentUISUCD</enumeration>
+		<enumeration>AcceptanceDocumentUISUTD</enumeration>
+		<enumeration>AdditionalAgreement</enumeration>
+		<enumeration>OrderOfGoods</enumeration>
+		<enumeration>CommercialOfferRequest</enumeration>
+		<enumeration>ErrorNotificationUIS</enumeration>
+		<enumeration>ReceiptNotification</enumeration>
+		<enumeration>CatalogOfGoods</enumeration>
+		<enumeration>TicketUIS</enumeration>
+		<enumeration>CommercialOffer</enumeration>
+		<enumeration>ContractUIS</enumeration>
+		<enumeration>AdjustmentOfInformationOnPurchaseByCommissionAgent</enumeration>
+		<enumeration>AdjustmentOfInformationOnSalesByCommissionAgent</enumeration>
+		<enumeration>CorrectionInvoice</enumeration>
+		<enumeration>KS11</enumeration>
+		<enumeration>KS2</enumeration>
+		<enumeration>KS3</enumeration>
+		<enumeration>MachineReadablePowerOfAttorney</enumeration>
+		<enumeration>ResponseToOrder</enumeration>
+		<enumeration>Report</enumeration>
+		<enumeration>ReportOnSalesOfCommissionGoods</enumeration>
+		<enumeration>ReportOnWriteoffOfCommissionGoods</enumeration>
+		<enumeration>TransferOfGoodsBetweenCompanies</enumeration>
+		<enumeration>PaymentOrder</enumeration>
+		<enumeration>EDIOperatorConfirmation</enumeration>
+		<enumeration>PriceList</enumeration>
+		<enumeration>ProposalForRevocation</enumeration>
+		<enumeration>ApplicationDocument</enumeration>
+		<enumeration>AnnexUIS</enumeration>
+		<enumeration>AnnexToAct</enumeration>
+		<enumeration>Other</enumeration>
+		<enumeration>ResultOfReviewActOfAcceptanceUISUCD</enumeration>
+		<enumeration>ResultOfReviewActOfAcceptanceUISUTD</enumeration>
+		<enumeration>DetailsOfOrganization</enumeration>
+		<enumeration>InformationOnPurchaseByCommissionAgent</enumeration>
+		<enumeration>InformationOnSalesByCommissionAgent</enumeration>
+		<enumeration>PriceChangeAgreement</enumeration>
+		<enumeration>EDIAgreement</enumeration>
+		<enumeration>Specification</enumeration>
+		<enumeration>InvoiceForPayment</enumeration>
+		<enumeration>Invioce</enumeration>
+		<enumeration>ConsignmentNote</enumeration>
+		<enumeration>Notification</enumeration>
+		<enumeration>NotificationOfClarification</enumeration>
+		<enumeration>NotificationOfAcceptanceForAccounting</enumeration>
+		<enumeration>UCD</enumeration>
+		<enumeration>UTD</enumeration>
+		<enumeration>EPO</enumeration>
+		<enumeration>ECS</enumeration>
+		<enumeration>EOA</enumeration>
+		<enumeration>AcceptanceCertificateOfConstructionWorksAndServices</enumeration>
+		<enumeration>EBL</enumeration>
+		<enumeration>ETT</enumeration>
+		<enumeration>ECA</enumeration>
+		<enumeration>NotUsedServiceActCustomer</enumeration>
+		<enumeration>NotUsedServiceAct</enumeration>
+		<enumeration>NotUsedBankStatement</enumeration>
+		<enumeration>NotUsedAdditionalData</enumeration>
+		<enumeration>NotUsedStatementRequest</enumeration>
+		<enumeration>NotUsedRequestProbe</enumeration>
+		<enumeration>NotUsedEDRevocationRequest</enumeration>
+		<enumeration>NotUsedNightStatementRequest</enumeration>
+		<enumeration>NotUsedEDStatusRequest</enumeration>
+		<enumeration>NotUsedEDStatusNotification</enumeration>
+		<enumeration>NotUsedReceipt</enumeration>
+		<enumeration>NotUsedError</enumeration>
+		<enumeration>NotUsedPaymentOrder</enumeration>
+		<enumeration>NotUsedPaymentClaim</enumeration>
+		<enumeration>NotUsedArbitraryDocument</enumeration>
+		<enumeration>NotUsedPriceChangeAgreementRecipient</enumeration>
+		<enumeration>NotUsedTRADE12</enumeration>
+		<enumeration>NotUsedCommodityInvoiceCustomer</enumeration>
+		<enumeration>NotUsedUCDCustomerInformation</enumeration>
+		<enumeration>NotUsedUCDSellerInformation</enumeration>
+		<enumeration>NotUsedUTDCustomerInformation</enumeration>
+		<enumeration>NotUsedUTDSellerInformation</enumeration>
+		<enumeration>Document</enumeration>
+	</valueType>
+	<valueType name="DMExecutionMark" base="xs:string" variety="Atomic">
+		<enumeration>NotExecuted</enumeration>
+		<enumeration>Stopped</enumeration>
+		<enumeration>Interrupted</enumeration>
+		<enumeration>ReadyToStart</enumeration>
+		<enumeration>StartCanceled</enumeration>
+		<enumeration>ExecutedNeutral</enumeration>
+		<enumeration>ExecutedNegative</enumeration>
+		<enumeration>ExecutedAlmostPositive</enumeration>
+		<enumeration>ExecutedPositive</enumeration>
+		<enumeration>ReadyToExecute</enumeration>
+		<enumeration>ExecutionCanceled</enumeration>
+	</valueType>
+	<valueType name="DMExpressionOnBuiltInLanguageType" base="xs:string">
+		<enumeration>Attribute</enumeration>
+		<enumeration>TabularSection</enumeration>
+		<enumeration>TabularSectionAttribute</enumeration>
+	</valueType>
+	<valueType name="DMIncomingEMailAnswerType" base="xs:string" variety="Atomic">
+		<enumeration>Reply</enumeration>
+		<enumeration>Forwarding</enumeration>
+		<enumeration>Transfer</enumeration>
+	</valueType>
+	<valueType name="DMInteractiveActionWithTask" base="xs:string" variety="Atomic">
+		<enumeration>AskAQuestion</enumeration>
+		<enumeration>BackToTheTask</enumeration>
+		<enumeration xsi:type="xs:string">ChangeProcessParameters</enumeration>
+		<enumeration xsi:type="xs:string">SelectTaskPerformer</enumeration>
+	</valueType>
+	<valueType name="DMInvitationStatus" base="xs:string" variety="Atomic">
+		<enumeration>Sent</enumeration>
+		<enumeration>Received</enumeration>
+		<enumeration>NotAccepted</enumeration>
+	</valueType>
+	<valueType name="DMIssueType" base="xs:string" variety="Atomic">
+		<enumeration>Postponement</enumeration>
+		<enumeration>Other</enumeration>
+	</valueType>
+	<valueType name="DMKindsOfDays" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Working</enumeration>
+		<enumeration xsi:type="xs:string">Holiday</enumeration>
+		<enumeration xsi:type="xs:string">Sick</enumeration>
+		<enumeration xsi:type="xs:string">Vacation</enumeration>
+		<enumeration xsi:type="xs:string">Absence</enumeration>
+	</valueType>
+	<valueType name="DMLegalPrivatePerson" base="xs:string" variety="Atomic">
+		<enumeration>LglPerson</enumeration>
+		<enumeration>Individ</enumeration>
+		<enumeration>IndividualEntrepreneur</enumeration>
+		<enumeration>LglPersonNonResident</enumeration>
+	</valueType>
+	<valueType name="DMMeetingMinutesItemStatus" base="xs:string" variety="Atomic">
+		<enumeration>Performed</enumeration>
+		<enumeration>AwaitingPerformance</enumeration>
+		<enumeration>ExecutionIsNecessary</enumeration>
+		<enumeration>ExecutionIsNotNecessary</enumeration>
+	</valueType>
+	<valueType name="DMMeetingStatus" base="xs:string" variety="Atomic">
+		<enumeration>MaterialsHasBeenRequested</enumeration>
+		<enumeration>MaterialsHasBeenSentForReview</enumeration>
+		<enumeration>MaterialsHasBeenReceived</enumeration>
+		<enumeration>InvitationsHaveBeenDeclined</enumeration>
+		<enumeration>InvitationsHaveBeenSent</enumeration>
+		<enumeration>InvitationsHaveBeenAccepted</enumeration>
+		<enumeration>ProtocolPrepare</enumeration>
+		<enumeration>MinutesHaveBeenPerformed</enumeration>
+		<enumeration>MinutesAreBeingPerformed</enumeration>
+		<enumeration>MinutesAreBeingApproved</enumeration>
+		<enumeration>MinutesAreBeingConfirmed</enumeration>
+		<enumeration>MinutesNotApproved</enumeration>
+		<enumeration>MinutesNotConfirmed</enumeration>
+		<enumeration>MinutesHaveBeenPrepared</enumeration>
+		<enumeration>MinutesHaveBeenApproved</enumeration>
+		<enumeration>MinutesHaveBeenConfirmed</enumeration>
+		<enumeration>ExaminedMaterials</enumeration>
+		<enumeration>EventInStageOfPreparation</enumeration>
+		<enumeration>EventCanceled</enumeration>
+		<enumeration>EventConducted</enumeration>
+		<enumeration>AgendaIsBeingConformed</enumeration>
+		<enumeration>ProgramNotApproved</enumeration>
+		<enumeration>AgendaHasBeenConformed</enumeration>
+		<enumeration>AgendaIsBeingApproved</enumeration>
+		<enumeration>AgendaHasBeenApproved</enumeration>
+		<enumeration>ProgramNotConfirmed</enumeration>
+	</valueType>
+	<valueType name="DMMomentOfDereferencingActionParticipants" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">WhenFillingOutProcessing</enumeration>
+		<enumeration xsi:type="xs:string">WhenStartingProcessing</enumeration>
+		<enumeration xsi:type="xs:string">BeforeStartingAction</enumeration>
+	</valueType>
+	<valueType name="DMObjectFlag" base="xs:string" variety="Atomic">
+		<enumeration>Purple</enumeration>
+		<enumeration>Orange</enumeration>
+		<enumeration>Green</enumeration>
+		<enumeration>Yellow</enumeration>
+		<enumeration>Blue</enumeration>
+		<enumeration>Red</enumeration>
+	</valueType>
+	<valueType name="DMObjectImportanceOption" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">HighImportance</enumeration>
+		<enumeration xsi:type="xs:string">NormalImportance</enumeration>
+		<enumeration xsi:type="xs:string">LowImportance</enumeration>
+	</valueType>
+	<valueType name="DMObjectProcessingState" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Executing</enumeration>
+		<enumeration xsi:type="xs:string">Completed</enumeration>
+		<enumeration xsi:type="xs:string">Stopped</enumeration>
+		<enumeration xsi:type="xs:string">Terminated</enumeration>
+	</valueType>
+	<valueType name="DMOptionOfAvailabilityOfActionChanges" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Forbidden</enumeration>
+		<enumeration xsi:type="xs:string">Allowed</enumeration>
+		<enumeration xsi:type="xs:string">Auto</enumeration>
+		<enumeration xsi:type="xs:string">AllowedToAdd</enumeration>
+	</valueType>
+	<valueType name="DMOrderOfExecutionActionStage" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">AllAtOnce</enumeration>
+		<enumeration xsi:type="xs:string">OneByOne</enumeration>
+	</valueType>
+	<valueType name="DMPaymentRequestParties" base="xs:string" variety="Atomic">
+		<enumeration>Payer</enumeration>
+		<enumeration>Recipient</enumeration>
+	</valueType>
+	<valueType name="DMPrintCommand" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">ApprovalSheet</enumeration>
+		<enumeration xsi:type="xs:string">ApprovalSheetWithHistory</enumeration>
+		<enumeration xsi:type="xs:string">ExaminationSheet</enumeration>
+		<enumeration xsi:type="xs:string">ProtocolOfDisagreements</enumeration>
+	</valueType>
+	<valueType name="DMPrivatePersonGender" base="xs:string" variety="Atomic">
+		<enumeration>Male</enumeration>
+		<enumeration>Female</enumeration>
+	</valueType>
+	<valueType name="DMProlongationProcedure" base="xs:string" variety="Atomic">
+		<enumeration>NotProlonged</enumeration>
+		<enumeration>Renewable</enumeration>
+		<enumeration>AutomaticallyForAMonth</enumeration>
+		<enumeration>AutomaticallyForAQuarter</enumeration>
+		<enumeration>AutomaticallyOnHalfYear</enumeration>
+		<enumeration>AutomaticallyForAYear</enumeration>
+		<enumeration>AutomaticallyForIndefinitePeriod</enumeration>
+	</valueType>
+	<valueType name="DMSignatureOption" base="xs:string" variety="Atomic">
+		<enumeration>WeAndCounterparties</enumeration>
+		<enumeration>NotNecessary</enumeration>
+		<enumeration>OnlyCounterparties</enumeration>
+		<enumeration>OnlyWe</enumeration>
+	</valueType>
+	<valueType name="DMSortingOperator" base="xs:string" variety="Atomic">
+		<enumeration>ASC</enumeration>
+		<enumeration>DESC</enumeration>
+	</valueType>
+	<valueType name="DMSpreadsheetDocumentFileType" base="xs:string" variety="Atomic">
+		<enumeration>PDF_A_1</enumeration>
+		<enumeration>PDF</enumeration>
+		<enumeration>DOCX</enumeration>
+		<enumeration>XLSX</enumeration>
+		<enumeration>XLS</enumeration>
+		<enumeration>HTML</enumeration>
+		<enumeration>MXL</enumeration>
+	</valueType>
+	<valueType name="DMSubjectRole" base="xs:string" variety="Atomic">
+		<enumeration>Main</enumeration>
+		<enumeration>Supplementary</enumeration>
+		<enumeration>FilledIn</enumeration>
+	</valueType>
+	<valueType name="DMTaskButtonFont" base="xs:string" variety="Atomic">
+		<enumeration>Normal</enumeration>
+		<enumeration>Small</enumeration>
+	</valueType>
+	<valueType name="DMTaskButtonTextColor" base="xs:string" variety="Atomic">
+		<enumeration>Positive</enumeration>
+		<enumeration>Negative</enumeration>
+		<enumeration>Neutral</enumeration>
+	</valueType>
+	<valueType name="DMTaskPriority" base="xs:string" variety="Atomic">
+		<enumeration>High</enumeration>
+		<enumeration>Normal</enumeration>
+		<enumeration>Low</enumeration>
+	</valueType>
+	<valueType name="DMTaskResultType" base="xs:string" variety="Atomic">
+		<enumeration>Neutral</enumeration>
+		<enumeration>Negative</enumeration>
+		<enumeration>Positive</enumeration>
+		<enumeration>PositiveWithComments</enumeration>
+	</valueType>
+	<valueType name="DMTaskRoutingOption" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">AllAtOnce</enumeration>
+		<enumeration xsi:type="xs:string">OneByOne</enumeration>
+		<enumeration xsi:type="xs:string">Mixed</enumeration>
+	</valueType>
+	<valueType name="DMTaskStatus" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">InWork</enumeration>
+		<enumeration xsi:type="xs:string">Closed</enumeration>
+		<enumeration xsi:type="xs:string">Registered</enumeration>
+		<enumeration xsi:type="xs:string">Performed</enumeration>
+		<enumeration xsi:type="xs:string">AwaitingPerformance</enumeration>
+		<enumeration xsi:type="xs:string">AwaitingResolutionProcessing</enumeration>
+		<enumeration xsi:type="xs:string">AwaitingResultProcessing</enumeration>
+		<enumeration xsi:type="xs:string">OnExamination</enumeration>
+		<enumeration xsi:type="xs:string">OnExaminationWithResult</enumeration>
+		<enumeration xsi:type="xs:string">AwaitsSigning</enumeration>
+		<enumeration xsi:type="xs:string">InChecking</enumeration>
+		<enumeration xsi:type="xs:string">AwaitingReviewal</enumeration>
+		<enumeration xsi:type="xs:string">AwaitingRegistration</enumeration>
+		<enumeration xsi:type="xs:string">AwaitingApproval</enumeration>
+		<enumeration xsi:type="xs:string">AwaitingConfirmation</enumeration>
+		<enumeration xsi:type="xs:string">NotRegistered</enumeration>
+		<enumeration xsi:type="xs:string">NotSigned</enumeration>
+		<enumeration xsi:type="xs:string">NotApproved</enumeration>
+		<enumeration xsi:type="xs:string">NotConfirmed</enumeration>
+		<enumeration xsi:type="xs:string">New</enumeration>
+		<enumeration xsi:type="xs:string">AwaitingCompletion</enumeration>
+		<enumeration xsi:type="xs:string">AwaitingVerification</enumeration>
+		<enumeration xsi:type="xs:string">ExaminedWith</enumeration>
+		<enumeration xsi:type="xs:string">Rejected</enumeration>
+		<enumeration xsi:type="xs:string">Postponed</enumeration>
+		<enumeration xsi:type="xs:string">Rolledback</enumeration>
+		<enumeration xsi:type="xs:string">Signed</enumeration>
+		<enumeration xsi:type="xs:string">Received</enumeration>
+		<enumeration xsi:type="xs:string">Considered</enumeration>
+		<enumeration xsi:type="xs:string">Approved</enumeration>
+		<enumeration xsi:type="xs:string">ApprovedWithReservations</enumeration>
+		<enumeration xsi:type="xs:string">Confirmed</enumeration>
+		<enumeration xsi:type="xs:string">Draft</enumeration>
+	</valueType>
+	<valueType name="DMTaskStatusFilter" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">All</enumeration>
+		<enumeration xsi:type="xs:string">OnTime</enumeration>
+		<enumeration xsi:type="xs:string">Expiring</enumeration>
+		<enumeration xsi:type="xs:string">NotCompleted</enumeration>
+		<enumeration xsi:type="xs:string">NotStarted</enumeration>
+		<enumeration xsi:type="xs:string">Updates</enumeration>
+		<enumeration xsi:type="xs:string">Overdue</enumeration>
+	</valueType>
+	<valueType name="DMTimeInputMethod" base="xs:string" variety="Atomic">
+		<enumeration>Duration</enumeration>
+		<enumeration>StartTime</enumeration>
+	</valueType>
+	<valueType name="DMTimeTrackingPolicy" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">DoNotTrack</enumeration>
+		<enumeration xsi:type="xs:string">UseDailyReports</enumeration>
+		<enumeration xsi:type="xs:string">UseWeeklyReports</enumeration>
+		<enumeration xsi:type="xs:string">UseDailyAndWeeklyReports</enumeration>
+	</valueType>
+	<valueType name="DMTypesOfAppealsOfCitizens" base="xs:string" variety="Atomic">
+		<enumeration>Personal</enumeration>
+		<enumeration>Cooperative</enumeration>
+		<enumeration>Anonymous</enumeration>
+	</valueType>
+	<valueType name="DMVATRate" base="xs:string" variety="Atomic">
+		<enumeration>VAT20</enumeration>
+		<enumeration>VAT18</enumeration>
+		<enumeration>VAT10</enumeration>
+		<enumeration>VAT0</enumeration>
+		<enumeration>WithoutVAT</enumeration>
+	</valueType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAcceptTasksRequest" base="d2p1:DMRequest">
+		<property name="tasks" type="d2p1:DMTaskAction" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAcceptTasksResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAccessLevel" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAction" base="d2p1:DMObject">
+		<property name="actionPerformedWithNewParticipants" type="xs:boolean" lowerBound="0"/>
+		<property name="actionSettings" type="d2p1:DMActionSettings" lowerBound="0"/>
+		<property name="actionType" type="d2p1:DMActionType" lowerBound="0"/>
+		<property name="allStatesAndResultsRows" type="d2p1:DMAllActionStatesAndResultsRows" lowerBound="0"/>
+		<property name="author" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="changeAllowed" type="xs:boolean" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="delayedExecutionDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="description" type="xs:string" lowerBound="0"/>
+		<property name="dialogueMode" type="xs:boolean" lowerBound="0"/>
+		<property name="form" type="d2p1:DMActionForm" lowerBound="0"/>
+		<property name="importance" type="d2p1:DMObjectImportanceOption" lowerBound="0"/>
+		<property name="participantsDereferenceMoment" type="d2p1:DMMomentOfDereferencingActionParticipants" lowerBound="0"/>
+		<property name="permissionRows" type="d2p1:DMActionPermissionRows" lowerBound="0"/>
+		<property name="state" type="d2p1:DMActionExecutionState" lowerBound="0"/>
+		<property name="target" type="d2p1:DMObject" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionApproval" base="d2p1:DMAction">
+		<property name="approvalInTheRemarksMode" type="xs:boolean" lowerBound="0"/>
+		<property name="makeEndorsementsOfApproval" type="xs:boolean" lowerBound="0"/>
+		<property name="orderOfExecutionByParticipants" type="d2p1:DMOrderOfExecutionActionStage" lowerBound="0"/>
+		<property name="participantRows" type="d2p1:DMActionApprovalParticipantRows" lowerBound="0"/>
+		<property name="resultProcessorID" type="xs:string" lowerBound="0"/>
+		<property name="signWithDS" type="xs:boolean" lowerBound="0"/>
+		<property name="stageApprovalID" type="xs:string" lowerBound="0"/>
+		<property name="stageRows" type="d2p1:DMActionStageRows" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionApprovalParticipantRow" base="d2p1:DMActionParticipantRow">
+		<property name="dueDateTotal" type="xs:boolean" lowerBound="0"/>
+		<property name="participantFunction" type="d2p1:DMActionParticipantFunction" lowerBound="0"/>
+		<property name="stageID" type="xs:string" lowerBound="0"/>
+		<property name="taskDescription" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMActionApprovalParticipantRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMActionApprovalParticipantRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionConfirmation" base="d2p1:DMAction">
+		<property name="participantRows" type="d2p1:DMActionConfirmationParticipantRows" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionConfirmationParticipantRow" base="d2p1:DMActionParticipantRow">
+		<property name="dueDateTotal" type="xs:boolean" lowerBound="0"/>
+		<property name="participantFunction" type="d2p1:DMActionParticipantFunction" lowerBound="0"/>
+		<property name="taskDescription" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMActionConfirmationParticipantRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMActionConfirmationParticipantRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionExamination" base="d2p1:DMAction">
+		<property name="examinationResultRows" type="d2p1:DMExaminationResultRows" lowerBound="0"/>
+		<property name="maximumNumberOfParticipantsToShow" type="xs:integer" lowerBound="0"/>
+		<property name="numberOfParticipants" type="xs:integer" lowerBound="0"/>
+		<property name="participantRows" type="d2p1:DMActionExaminationParticipantRows" lowerBound="0"/>
+		<property name="signWithDS" type="xs:boolean" lowerBound="0"/>
+		<property name="useExaminationsWithEnhancedDS" type="xs:boolean" lowerBound="0"/>
+		<property name="waitForCompletion" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionExaminationParticipantRow" base="d2p1:DMActionParticipantRow">
+		<property name="dataSource" type="d2p1:DMDataSource" lowerBound="0"/>
+		<property name="dataSourceIsActive" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMActionExaminationParticipantRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMActionExaminationParticipantRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMActionForm">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="authorInputField" type="d3p1:DMInputField" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonCancel" type="d3p1:DMButton" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonClearDelay" type="d3p1:DMButton" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonContinue" type="d3p1:DMButton" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonDone" type="d3p1:DMButton" lowerBound="0"/>
+		<property name="delayedExecutionPictureVisibility" type="xs:boolean" lowerBound="0"/>
+		<property name="delayedExecutionStartDescription" type="xs:string" lowerBound="0"/>
+		<property name="delayedExecutionStartDays" type="xs:integer" lowerBound="0"/>
+		<property name="delayedExecutionStartHours" type="xs:integer" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="delayedExecutionStartLabelField" type="d3p1:DMLabelField" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="groupDelayedExecutionDescription" type="d3p1:DMFormGroup" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="groupNotEditable" type="d3p1:DMFormGroup" lowerBound="0"/>
+		<property name="onlyAddParticipantsIsAvailable" type="xs:boolean" lowerBound="0"/>
+		<property name="protectedParticipantsCanBeChanged" type="xs:boolean" lowerBound="0"/>
+		<property name="readOnly" type="xs:boolean" lowerBound="0"/>
+		<property name="startDateDescription" type="xs:string" lowerBound="0"/>
+		<property name="title" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionParticipant" base="d2p1:DMObject">
+		<property name="autoSubstitutionForObjects" type="d2p1:DMAutoSubstitutionForObjects" lowerBound="0"/>
+		<property name="containerProjects" type="d2p1:DMContainerProjects" lowerBound="0"/>
+		<property name="containerSubdivisions" type="d2p1:DMContainerSubdivisions" lowerBound="0"/>
+		<property name="taskParticipant" type="d2p1:DMTaskParticipant" lowerBound="0"/>
+		<property name="user" type="d2p1:DMUser" lowerBound="0"/>
+		<property name="userGroup" type="d2p1:DMUserGroup" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMActionParticipantRow">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="condition" type="d3p1:DMVerificationAlgorithm" lowerBound="0"/>
+		<property name="description" type="xs:string" lowerBound="0"/>
+		<property name="dueDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="dueDateDays" type="xs:integer" lowerBound="0"/>
+		<property name="dueDateHours" type="xs:integer" lowerBound="0"/>
+		<property name="dueDateMinutes" type="xs:integer" lowerBound="0"/>
+		<property name="dueDatePresentation" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="dueDateSpecificationVariant" type="d3p1:DMDueDateSpecificationOption" lowerBound="0"/>
+		<property name="fromSettings" type="xs:boolean" lowerBound="0"/>
+		<property name="id" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="participant" type="d3p1:DMActionParticipant" lowerBound="0"/>
+		<property name="presentation" type="xs:string" lowerBound="0"/>
+		<property name="protected" type="xs:boolean" lowerBound="0"/>
+		<property name="protectedInSettings" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionPerformance" base="d2p1:DMAction">
+		<property name="byPoints" type="xs:boolean" lowerBound="0"/>
+		<property name="controller" type="d2p1:DMActionParticipant" lowerBound="0"/>
+		<property name="participantRows" type="d2p1:DMActionPerformanceParticipantRows" lowerBound="0"/>
+		<property name="pointRows" type="d2p1:DMActionPerformancePointRows" lowerBound="0"/>
+		<property name="signResolutionsWithDS" type="xs:boolean" lowerBound="0"/>
+		<property name="targetDueDate" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionPerformanceParticipantRow" base="d2p1:DMActionParticipantRow">
+		<property name="dueDateTotal" type="xs:boolean" lowerBound="0"/>
+		<property name="higherLevelParticipant" type="xs:string" lowerBound="0"/>
+		<property name="participantFunction" type="d2p1:DMActionParticipantFunction" lowerBound="0"/>
+		<property name="pointID" type="xs:string" lowerBound="0"/>
+		<property name="resolutionDraft" type="xs:string" lowerBound="0"/>
+		<property name="resolutionExist" type="xs:boolean" lowerBound="0"/>
+		<property name="resolutionPresentation" type="xs:string" lowerBound="0"/>
+		<property name="responsible" type="xs:boolean" lowerBound="0"/>
+		<property name="taskDescription" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMActionPerformanceParticipantRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMActionPerformanceParticipantRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMActionPerformancePointRow">
+		<property name="description" type="xs:string" lowerBound="0"/>
+		<property name="dueDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="dueDatePresentation" type="xs:string" lowerBound="0"/>
+		<property name="id" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="controller" type="d3p1:DMActionParticipant" lowerBound="0"/>
+		<property name="number" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="author" type="d3p1:DMActionParticipant" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMActionPerformancePointRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMActionPerformancePointRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMActionPermissionRow">
+		<property name="stageID" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="permission" type="d3p1:DMOptionOfAvailabilityOfActionChanges" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMActionPermissionRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMActionPermissionRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionRegistration" base="d2p1:DMAction">
+		<property name="participantRows" type="d2p1:DMActionRegistrationParticipantRows" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionRegistrationParticipantRow" base="d2p1:DMActionParticipantRow">
+		<property name="dueDateTotal" type="xs:boolean" lowerBound="0"/>
+		<property name="participantFunction" type="d2p1:DMActionParticipantFunction" lowerBound="0"/>
+		<property name="taskDescription" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMActionRegistrationParticipantRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMActionRegistrationParticipantRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMActionRow">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="actionsRows" type="d3p1:DMActionRows" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="additionalFields" type="d3p1:DMActionRowAdditionalFields" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="dueDateExceeded" type="xs:boolean" lowerBound="0"/>
+		<property name="dueDatePresentation" type="xs:string" lowerBound="0"/>
+		<property name="employeesPresentation" type="xs:string" lowerBound="0"/>
+		<property name="haveReportFiles" type="xs:boolean" lowerBound="0"/>
+		<property name="imageIndex" type="xs:integer" lowerBound="0"/>
+		<property name="monitoringState" type="xs:integer" lowerBound="0"/>
+		<property name="presentation" type="xs:string" lowerBound="0"/>
+		<property name="statePresentation" type="xs:string" lowerBound="0"/>
+		<property name="statusDate" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMActionRowAdditionalFields">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="action" type="d3p1:DMAction" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="actionType" type="d3p1:DMActionType" lowerBound="0"/>
+		<property name="cleanPresentation" type="xs:string" lowerBound="0"/>
+		<property name="deletionMark" type="xs:boolean" lowerBound="0"/>
+		<property name="failedToDereference" type="xs:boolean" lowerBound="0"/>
+		<property name="id" type="xs:string" lowerBound="0"/>
+		<property name="itIsAction" type="xs:boolean" lowerBound="0"/>
+		<property name="itIsParticipant" type="xs:boolean" lowerBound="0"/>
+		<property name="itIsSubtask" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="result" type="d3p1:DMActionExecutionResult" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="state" type="d3p1:DMActionExecutionState" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="taskAction" type="d3p1:DMTaskAction" lowerBound="0"/>
+		<property name="unavailable" type="xs:boolean" lowerBound="0"/>
+		<property name="unavailableGroup" type="xs:boolean" lowerBound="0"/>
+		<property name="willBeDeleted" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMActionRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMActionRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionSettings" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionSigning" base="d2p1:DMAction">
+		<property name="orderOfExecutionByParticipants" type="d2p1:DMOrderOfExecutionActionStage" lowerBound="0"/>
+		<property name="participantRows" type="d2p1:DMActionSigningParticipantRows" lowerBound="0"/>
+		<property name="resultProcessorID" type="xs:string" lowerBound="0"/>
+		<property name="signingMethod" type="d2p1:DMActionSubjectSigningMethod" lowerBound="0"/>
+		<property name="stageRows" type="d2p1:DMActionStageRows" lowerBound="0"/>
+		<property name="stageSigningID" type="xs:string" lowerBound="0"/>
+		<property name="targetForm" type="d2p1:DMDocumentFormOption" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionSigningParticipantRow" base="d2p1:DMActionParticipantRow">
+		<property name="dueDateTotal" type="xs:boolean" lowerBound="0"/>
+		<property name="higherLevelParticipant" type="xs:string" lowerBound="0"/>
+		<property name="organization" type="d2p1:DMOrganization" lowerBound="0"/>
+		<property name="participantFunction" type="d2p1:DMActionParticipantFunction" lowerBound="0"/>
+		<property name="stageID" type="xs:string" lowerBound="0"/>
+		<property name="taskDescription" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMActionSigningParticipantRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMActionSigningParticipantRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMActionStageRow">
+		<property name="dueDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="dueDateDays" type="xs:integer" lowerBound="0"/>
+		<property name="dueDateHours" type="xs:integer" lowerBound="0"/>
+		<property name="dueDateMinutes" type="xs:integer" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="dueDateSpecificationVariant" type="d3p1:DMDueDateSpecificationOption" lowerBound="0"/>
+		<property name="dueDateTotal" type="xs:boolean" lowerBound="0"/>
+		<property name="id" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="orderOfExecutionByParticipants" type="d3p1:DMOrderOfExecutionActionStage" lowerBound="0"/>
+		<property name="rankFrom" type="xs:integer" lowerBound="0"/>
+		<property name="rankTo" type="xs:integer" lowerBound="0"/>
+		<property name="stageDescription" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMActionStageRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMActionStageRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActionType" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMActivityMatter" base="d2p1:DMObject"/>
+	<objectType name="DMActualTaskPerformer">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="addressee" type="d3p1:DMEmployee" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="actualPerformer" type="d3p1:DMEmployee" lowerBound="0"/>
+		<property name="performerPresentation" type="xs:string" lowerBound="0"/>
+		<property name="isDeputy" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMActualWork">
+		<property name="addDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="begin" type="xs:time" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="employee" type="d3p1:DMEmployee" lowerBound="0"/>
+		<property name="end" type="xs:time" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="externalSource" type="d3p1:ExternalObject" lowerBound="0"/>
+		<property name="description" type="xs:string" lowerBound="0"/>
+		<property name="duration" type="xs:int" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="project" type="d3p1:DMProject" lowerBound="0"/>
+		<property name="projectsEnabled" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="projectTask" type="d3p1:DMProjectTask" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="source" type="d3p1:DMObject" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="sourceValueTypes" type="d3p1:DMType" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="timeInputMethod" type="d3p1:DMTimeInputMethod" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="workType" type="d3p1:DMWorkType" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAddDocumentRelationRequest" base="d2p1:DMRequest">
+		<property name="relation" type="d2p1:DMDocumentRelation"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAddDocumentRelationResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAddFileRequest" base="d2p1:DMRequest">
+		<property name="file" type="d2p1:DMFile"/>
+		<property name="owner" type="d2p1:DMObject"/>
+		<property name="tryToUpdate" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAddFileResponse" base="d2p1:DMResponse">
+		<property name="file" type="d2p1:DMObject"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAddLinkedFileRequest" base="d2p1:DMRequest">
+		<property name="file" type="d2p1:DMFile"/>
+		<property name="rootFolderId" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAddLinkedFileResponse" base="d2p1:DMResponse">
+		<property name="file" type="d2p1:DMObject"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAddObjectLinkRequest" base="d2p1:DMRequest">
+		<property name="ownerObject" type="d2p1:ExternalObject"/>
+		<property name="linkedObject" type="d2p1:DMObjectID"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAddObjectLinkResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAdditionalProperty" base="d2p1:DMObject">
+		<property name="propertySimpleValue" type="xs:anyType" lowerBound="0" nillable="true"/>
+		<property name="propertyObjectValue" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="propertyValueTypes" type="d2p1:DMType" lowerBound="0" upperBound="-1"/>
+		<property name="mandatory" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMAddressBookItem">
+		<property name="isFolder" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="object" type="d3p1:DMObject"/>
+		<property name="addresses" type="xs:string" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="items" type="d3p1:DMAddressBookItem" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMAllActionStatesAndResultsRow">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="action" type="d3p1:DMAction" lowerBound="0"/>
+		<property name="date" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="function" type="d3p1:DMActionParticipantFunction" lowerBound="0"/>
+		<property name="participantID" type="xs:string" lowerBound="0"/>
+		<property name="pointID" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="result" type="d3p1:DMActionExecutionResult" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="state" type="d3p1:DMActionExecutionState" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMAllActionStatesAndResultsRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMAllActionStatesAndResultsRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMApplicationNotification" base="d2p1:DMObject">
+		<property name="user" type="d2p1:DMUser" lowerBound="0"/>
+		<property name="date" type="xs:dateTime" lowerBound="0"/>
+		<property name="description" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMApplicationRow">
+		<property name="allowDeletion" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="application" type="d3p1:DMObject" lowerBound="0"/>
+		<property name="applicationPresentation" type="xs:string"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="applicationRole" type="d3p1:DMSubjectRole" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="applicationRows" type="d3p1:DMApplicationRows" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="file" type="d3p1:DMFile" lowerBound="0"/>
+		<property name="htmlView" type="xs:string" lowerBound="0"/>
+		<property name="imageIndex" type="xs:integer" lowerBound="0"/>
+		<property name="mandatoryFilling" type="xs:boolean" lowerBound="0"/>
+		<property name="requiredRole" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rowType" type="d3p1:DMApplicationTreeRowType" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMApplicationRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMApplicationRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMApprovalStateRecord">
+		<property name="id" type="xs:string"/>
+		<property name="type" type="xs:string"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="status" type="d3p1:DMDocumentStatus" lowerBound="0"/>
+		<property name="name" type="xs:string" lowerBound="0"/>
+		<property name="date" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAutoFillRequest" base="d2p1:DMRequest">
+		<property name="file" type="d2p1:DMFile"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAutoFillResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMAutoSubstitutionForObjects" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMBank" base="d2p1:DMObject">
+		<property name="BIC" type="xs:string" lowerBound="0"/>
+		<property name="country" type="d2p1:DMCountry" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMBankAccount" base="d2p1:DMObject">
+		<property name="number" type="xs:string" lowerBound="0"/>
+		<property name="owner" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="bank" type="d2p1:DMBank" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMBarcode">
+		<property name="internal" type="xs:boolean"/>
+		<property name="barcodeData" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMBatchRequest" base="d2p1:DMRequest">
+		<property name="requests" type="d2p1:DMRequest" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMBatchResponse" base="d2p1:DMResponse">
+		<property name="responses" type="xs:anyType" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMBusinessProcessExecutorRole" base="d2p1:DMObject">
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="withoutAddressingObjects" type="xs:boolean" lowerBound="0"/>
+		<property name="withAddressingObjects" type="xs:boolean" lowerBound="0"/>
+		<property name="mainAddressingObjectType" type="d2p1:DMType" lowerBound="0" upperBound="-1"/>
+		<property name="secondaryAddressingObjectType" type="d2p1:DMType" lowerBound="0" upperBound="-1"/>
+		<property name="mainAddressingObjectName" type="xs:string" lowerBound="0"/>
+		<property name="secondaryAddressingObjectName" type="xs:string" lowerBound="0"/>
+		<property name="isNotAvailableAccordingCommunicationRules" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMButton">
+		<property name="defaultButton" type="xs:boolean" lowerBound="0"/>
+		<property name="enabled" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="font" type="d3p1:DMTaskButtonFont" lowerBound="0"/>
+		<property name="hint" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="textColor" type="d3p1:DMTaskButtonTextColor" lowerBound="0"/>
+		<property name="title" type="xs:string" lowerBound="0"/>
+		<property name="titleHeight" type="xs:integer" lowerBound="0"/>
+		<property name="visible" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCaseFilesCatalog" base="d2p1:DMObject">
+		<property name="year" type="xs:int" lowerBound="0"/>
+		<property name="longDescription" type="xs:string" lowerBound="0"/>
+		<property name="index" type="xs:string" lowerBound="0"/>
+		<property name="section" type="d2p1:DMCaseFilesListSections" lowerBound="0"/>
+		<property name="company" type="d2p1:DMOrganization" lowerBound="0"/>
+		<property name="retentionPeriod" type="xs:anySimpleType" lowerBound="0"/>
+		<property name="articleNumbers" type="xs:string" lowerBound="0"/>
+		<property name="caseCategory" type="d2p1:DMCategoriesOfCases" lowerBound="0"/>
+		<property name="expertsCommissionMark" type="xs:boolean" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="documentTypesFilledIn" type="xs:boolean" lowerBound="0"/>
+		<property name="correspondentsFilledIn" type="xs:boolean" lowerBound="0"/>
+		<property name="activityTypesFilledIn" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCaseFilesDossiers" base="d2p1:DMObject">
+		<property name="startDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="endDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="caseClosed" type="xs:boolean" lowerBound="0"/>
+		<property name="numberOfSheets" type="xs:int" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="caseFilesCatalog" type="d2p1:DMCaseFilesCatalog" lowerBound="0"/>
+		<property name="dossierNumber" type="xs:int" lowerBound="0"/>
+		<property name="company" type="d2p1:DMOrganization" lowerBound="0"/>
+		<property name="department" type="d2p1:DMSubdivision" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCaseFilesListSections" base="d2p1:DMObject">
+		<property name="year" type="xs:int" lowerBound="0"/>
+		<property name="index" type="xs:string" lowerBound="0"/>
+		<property name="company" type="d2p1:DMOrganization" lowerBound="0"/>
+		<property name="department" type="d2p1:DMSubdivision" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMCaseFilesListSectionsTreeElement">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="caseFilesListSection" type="d3p1:DMCaseFilesListSections"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="caseFilesListSectionsTree" type="d3p1:DMCaseFilesListSectionsTreeElement" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCashFlowItem" base="d2p1:DMObject">
+		<property name="description" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMCashFlowRow">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="item" type="d3p1:DMCashFlowItem"/>
+		<property name="total" type="xs:decimal"/>
+		<property name="VAT" type="xs:decimal"/>
+	</objectType>
+	<objectType name="DMCashFlowRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMCashFlowRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMChangeFilesRoleRequest" base="d2p1:DMRequest">
+		<property name="files" type="d2p1:DMFile" upperBound="-1"/>
+		<property name="newRole" type="d2p1:DMFileRole"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMChangeFilesRoleResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCheckExpressionOnBuiltInLanguageRequest" base="d2p1:DMRequest">
+		<property name="objectType" type="d2p1:DMType"/>
+		<property name="tabularSectionName" type="xs:string" lowerBound="0"/>
+		<property name="expressionOnBuiltInLanguage" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCheckValidityOfActionParticipantsRequest" base="d2p1:DMRequest">
+		<property name="action" type="d2p1:DMAction"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCheckValidityOfActionParticipantsResponse" base="d2p1:DMResponse">
+		<property name="result" type="xs:string"/>
+	</objectType>
+	<objectType name="DMChronometrationSettings">
+		<property name="beginDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="endDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="chronometrationOn" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="timeInputMethod" type="d3p1:DMTimeInputMethod" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="workType" type="d3p1:DMWorkType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="objectID" type="d3p1:DMObjectID" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMClearFeedbackMarkInObjectLinksRequest" base="d2p1:DMRequest"/>
+	<objectType name="DMCommunicationRulesContextItem">
+		<property name="name" type="xs:string"/>
+		<property name="simpleValue" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="objectValue" type="d3p1:DMObjectID" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCompleteRole" base="d2p1:DMObject">
+		<property name="role" type="d2p1:DMBusinessProcessExecutorRole" lowerBound="0"/>
+		<property name="mainAddressingObject" type="d2p1:DMMainAddressingObject" lowerBound="0"/>
+		<property name="secondaryAddressingObject" type="d2p1:DMSecondaryAddressingObject" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMContactInformation">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="items" type="d3p1:DMContactInformationItem" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMContactInformationItem">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="type" type="d3p1:DMContactInformationType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="kind" type="d3p1:DMContactInformationKind" lowerBound="0"/>
+		<property name="description" type="xs:string" lowerBound="0"/>
+		<property name="fieldValues" type="xs:string" lowerBound="0"/>
+		<property name="country" type="xs:string" lowerBound="0"/>
+		<property name="territory" type="xs:string" lowerBound="0"/>
+		<property name="city" type="xs:string" lowerBound="0"/>
+		<property name="email" type="xs:string" lowerBound="0"/>
+		<property name="serverDomainName" type="xs:string" lowerBound="0"/>
+		<property name="phoneNumber" type="xs:string" lowerBound="0"/>
+		<property name="localPhoneNumber" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMContactInformationKind" base="d2p1:DMObject">
+		<property name="type" type="d2p1:DMContactInformationType" lowerBound="0"/>
+		<property name="mandatory" type="xs:boolean" lowerBound="0"/>
+		<property name="parent" type="d2p1:DMContactInformationKind" lowerBound="0"/>
+		<property name="predefinedName" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMContactPerson" base="d2p1:DMObject">
+		<property name="correspondent" type="d2p1:DMCorrespondent" lowerBound="0"/>
+		<property name="position" type="xs:string" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="privatePerson" type="d2p1:DMPrivatePerson" lowerBound="0"/>
+		<property name="contactInformation" type="d2p1:DMContactInformation" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMContainerProjects" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMContainerSubdivisions" base="d2p1:DMObject"/>
+	<objectType name="DMCorrespondenceFollower">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="object" type="d3p1:DMObject"/>
+		<property name="creationDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="date" type="xs:dateTime" lowerBound="0"/>
+		<property name="regNumber" type="xs:string" lowerBound="0"/>
+		<property name="recipients" type="xs:string" lowerBound="0"/>
+		<property name="sent" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="followers" type="d3p1:DMCorrespondenceFollower" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCorrespondent" base="d2p1:DMObject">
+		<property name="legalPrivatePerson" type="d2p1:DMLegalPrivatePerson" lowerBound="0"/>
+		<property name="inn" type="xs:string" lowerBound="0"/>
+		<property name="kpp" type="xs:string" lowerBound="0"/>
+		<property name="okpo" type="xs:string" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="fullName" type="xs:string" lowerBound="0"/>
+		<property name="privatePerson" type="d2p1:DMPrivatePerson" lowerBound="0"/>
+		<property name="responsible" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="additionalProperties" type="d2p1:DMAdditionalProperty" lowerBound="0" upperBound="-1"/>
+		<property name="contactInformation" type="d2p1:DMContactInformation" lowerBound="0"/>
+		<property name="deletionMark" type="xs:boolean" lowerBound="0"/>
+		<property name="files" type="d2p1:DMFile" lowerBound="0" upperBound="-1"/>
+		<property name="registrationNumber" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMCorrespondentRow">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="correspondent" type="d3p1:DMCorrespondent" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="contact" type="d3p1:DMContactPerson" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="signedFromTheCorrespondent" type="d3p1:DMContactPerson" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMCorrespondentRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMCorrespondentRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCountry" base="d2p1:DMObject">
+		<property name="code" type="xs:string" lowerBound="0"/>
+		<property name="codeAlpha2" type="xs:string" lowerBound="0"/>
+		<property name="codeAlpha3" type="xs:string" lowerBound="0"/>
+		<property name="EAEUMember" type="xs:boolean" lowerBound="0"/>
+		<property name="longDescription" type="xs:string" lowerBound="0"/>
+		<property name="internationalDescription" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCreateFromIncomingDataRequest" base="d2p1:DMRequest">
+		<property name="objects" type="d2p1:DMIncomingDataRequestStructure" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCreateFromIncomingDataResponse" base="d2p1:DMResponse">
+		<property name="objects" type="d2p1:DMObjectChangeResponseStructure" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCreateRequest" base="d2p1:DMRequest">
+		<property name="object" type="xs:anyType"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCreateResponse" base="d2p1:DMResponse">
+		<property name="object" type="xs:anyType"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMCurrency" base="d2p1:DMObject">
+		<property name="code" type="xs:string" lowerBound="0"/>
+		<property name="fullName" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDailyReport" base="d2p1:DMObject">
+		<property name="author" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="date" type="xs:dateTime" lowerBound="0"/>
+		<property name="dayBegin" type="xs:dateTime" lowerBound="0"/>
+		<property name="dayEnd" type="xs:dateTime" lowerBound="0"/>
+		<property name="duration" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="workingDuration" type="xs:string" lowerBound="0"/>
+		<property name="durationIncorrect" type="xs:boolean" lowerBound="0"/>
+		<property name="number" type="xs:string" lowerBound="0"/>
+		<property name="employee" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="works" type="d2p1:DMActualWork" lowerBound="0" upperBound="-1"/>
+		<property name="timeInputMethod" type="d2p1:DMTimeInputMethod" lowerBound="0"/>
+		<property name="mainWorkType" type="d2p1:DMWorkType" lowerBound="0"/>
+		<property name="mainProject" type="d2p1:DMProject" lowerBound="0"/>
+		<property name="projectsEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="additionalProperties" type="d2p1:DMAdditionalProperty" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMDataAttribute">
+		<property name="name" type="xs:string"/>
+		<property name="value" lowerBound="0"/>
+		<property name="error" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDataExchangeNode" base="d2p1:DMObject">
+		<property name="databaseName" type="xs:string" lowerBound="0"/>
+		<property name="isCentral" type="xs:boolean" lowerBound="0"/>
+		<property name="users" type="d2p1:DMUser" lowerBound="0" upperBound="-1"/>
+		<property name="subdivisions" type="d2p1:DMSubdivision" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMDataForSelectingTheActualTaskPerformer">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="addressees" type="d3p1:DMActualTaskPerformer" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="actualPerformers" type="d3p1:DMActualTaskPerformer" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDataLoadingRule" base="d2p1:DMObject">
+		<property name="documentType" type="d2p1:DMDocumentType" lowerBound="0"/>
+		<property name="objectName" type="xs:string"/>
+		<property name="objectType" type="xs:string"/>
+	</objectType>
+	<objectType name="DMDataTabularSection">
+		<property name="name" type="xs:string"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMDataTabularSectionRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMDataTabularSectionRow">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="attributes" type="d3p1:DMDataAttribute" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDataSource" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDeleteRequest" base="d2p1:DMRequest">
+		<property name="objectIds" type="d2p1:DMObjectID" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDeleteResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDeliveryMethod" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDocument" base="d2p1:DMObject">
+		<property name="accessLevel" type="d2p1:DMAccessLevel" lowerBound="0"/>
+		<property name="accessLevelEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="activityMatter" type="d2p1:DMActivityMatter" lowerBound="0"/>
+		<property name="activityMatterEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="additionalProperties" type="d2p1:DMAdditionalProperty" lowerBound="0" upperBound="-1"/>
+		<property name="addressee" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="author" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="beginDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="caseFileDossier" type="d2p1:DMCaseFilesDossiers" lowerBound="0"/>
+		<property name="caseFilesCatalog" type="d2p1:DMCaseFilesCatalog" lowerBound="0"/>
+		<property name="cashFlowRows" type="d2p1:DMCashFlowRows" lowerBound="0"/>
+		<property name="checkRelations" type="xs:boolean" lowerBound="0"/>
+		<property name="chronometrationSettings" type="d2p1:DMChronometrationSettings" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="contactPerson" type="d2p1:DMContactPerson" lowerBound="0"/>
+		<property name="containsScannedOriginals" type="xs:boolean" lowerBound="0"/>
+		<property name="contentAvailable" type="xs:boolean" lowerBound="0"/>
+		<property name="correspondent" type="d2p1:DMCorrespondent" lowerBound="0"/>
+		<property name="correspondentRows" type="d2p1:DMCorrespondentRows" lowerBound="0"/>
+		<property name="currency" type="d2p1:DMCurrency" lowerBound="0"/>
+		<property name="deletionMark" type="xs:boolean" lowerBound="0"/>
+		<property name="deliveryMethod" type="d2p1:DMDeliveryMethod" lowerBound="0"/>
+		<property name="documentTopic" type="d2p1:DMDocumentTopic" lowerBound="0"/>
+		<property name="documentType" type="d2p1:DMDocumentType" lowerBound="0"/>
+		<property name="enabledProperties" type="xs:string" lowerBound="0" upperBound="-1"/>
+		<property name="endDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="externalDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="externalNumber" type="xs:string" lowerBound="0"/>
+		<property name="files" type="d2p1:DMFile" lowerBound="0" upperBound="-1"/>
+		<property name="folder" type="d2p1:DMDocumentFolder" lowerBound="0"/>
+		<property name="foldersEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="keyPropertiesValue" type="xs:base64Binary" lowerBound="0"/>
+		<property name="limitPropertiesAvailability" type="xs:boolean" lowerBound="0"/>
+		<property name="numberOfAnnexes" type="xs:decimal" lowerBound="0"/>
+		<property name="numberOfCopies" type="xs:decimal" lowerBound="0"/>
+		<property name="numberOfSheets" type="xs:decimal" lowerBound="0"/>
+		<property name="openEnded" type="xs:boolean" lowerBound="0"/>
+		<property name="organization" type="d2p1:DMOrganization" lowerBound="0"/>
+		<property name="organizationEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="partyRows" type="d2p1:DMPartyRows" lowerBound="0"/>
+		<property name="performanceDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="processingState" type="d2p1:DMObjectProcessingState" lowerBound="0"/>
+		<property name="productRows" type="d2p1:DMProductRows" lowerBound="0"/>
+		<property name="prolongationProcedure" type="d2p1:DMProlongationProcedure" lowerBound="0"/>
+		<property name="project" type="d2p1:DMProject" lowerBound="0"/>
+		<property name="projectsEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="regDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="registrationAvailable" type="xs:boolean" lowerBound="0"/>
+		<property name="regNumber" type="xs:string" lowerBound="0"/>
+		<property name="relations" type="d2p1:DMDocumentRelation" lowerBound="0" upperBound="-1"/>
+		<property name="resolutions" type="d2p1:DMResolution" lowerBound="0" upperBound="-1"/>
+		<property name="responsible" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="sendDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="sent" type="xs:boolean" lowerBound="0"/>
+		<property name="sheetsInAnnexes" type="xs:decimal" lowerBound="0"/>
+		<property name="signatures" type="d2p1:DMSignature" lowerBound="0" upperBound="-1"/>
+		<property name="signerFromTheCorrespondent" type="d2p1:DMContactPerson" lowerBound="0"/>
+		<property name="statusExamination" type="d2p1:DMDocumentStatus" lowerBound="0"/>
+		<property name="statusApproval" type="d2p1:DMDocumentStatus" lowerBound="0"/>
+		<property name="statusByActionTypeRows" type="d2p1:DMStatusByActionTypeRows" lowerBound="0"/>
+		<property name="statusConfirmation" type="d2p1:DMDocumentStatus" lowerBound="0"/>
+		<property name="statusEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="statusPerformance" type="d2p1:DMDocumentStatus" lowerBound="0"/>
+		<property name="statusRegistration" type="d2p1:DMDocumentStatus" lowerBound="0"/>
+		<property name="statusSigning" type="d2p1:DMDocumentStatus" lowerBound="0"/>
+		<property name="subdivision" type="d2p1:DMSubdivision" lowerBound="0"/>
+		<property name="sum" type="xs:decimal" lowerBound="0"/>
+		<property name="summary" type="xs:string" lowerBound="0"/>
+		<property name="template" type="d2p1:DMDocumentTemplate" lowerBound="0"/>
+		<property name="title" type="xs:string" lowerBound="0"/>
+		<property name="titleBlockedByTemplate" type="xs:boolean" lowerBound="0"/>
+		<property name="typeOfAppeal" type="d2p1:DMTypesOfAppealsOfCitizens" lowerBound="0"/>
+		<property name="updateSignatures" type="xs:boolean" lowerBound="0"/>
+		<property name="useCaseFiles" type="xs:boolean" lowerBound="0"/>
+		<property name="VAT" type="xs:decimal" lowerBound="0"/>
+		<property name="visas" type="d2p1:DMVisa" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDocumentFolder" base="d2p1:DMObject">
+		<property name="description" type="xs:string" lowerBound="0"/>
+		<property name="responsible" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="creationDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="parent" type="d2p1:DMDocumentFolder" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDocumentRegistrationRequest" base="d2p1:DMRequest">
+		<property name="document" type="d2p1:DMDocument"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDocumentRegistrationResponse" base="d2p1:DMResponse">
+		<property name="document" type="d2p1:DMDocument"/>
+	</objectType>
+	<objectType name="DMDocumentRelation">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="document" type="d3p1:DMDocument"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="relationType" type="d3p1:DMRelationType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="relatedDocument" type="d3p1:DMDocument"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDocumentTemplate" base="d2p1:DMObject">
+		<property name="accessLevel" type="d2p1:DMAccessLevel" lowerBound="0"/>
+		<property name="activityMatter" type="d2p1:DMActivityMatter" lowerBound="0"/>
+		<property name="additionalProperties" type="d2p1:DMAdditionalProperty" lowerBound="0" upperBound="-1"/>
+		<property name="addressee" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="blockDerivedDocuments" type="xs:boolean" lowerBound="0"/>
+		<property name="caseFilesCatalog" type="d2p1:DMCaseFilesCatalog" lowerBound="0"/>
+		<property name="cashFlowItem" type="d2p1:DMCashFlowItem" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="contactPerson" type="d2p1:DMContactPerson" lowerBound="0"/>
+		<property name="correspondent" type="d2p1:DMCorrespondent" lowerBound="0"/>
+		<property name="deliveryMethod" type="d2p1:DMDeliveryMethod" lowerBound="0"/>
+		<property name="documentType" type="d2p1:DMDocumentType" lowerBound="0"/>
+		<property name="folder" type="d2p1:DMDocumentFolder" lowerBound="0"/>
+		<property name="organization" type="d2p1:DMOrganization" lowerBound="0"/>
+		<property name="performanceTerm" type="xs:integer" lowerBound="0"/>
+		<property name="project" type="d2p1:DMProject" lowerBound="0"/>
+		<property name="responsible" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="subdivision" type="d2p1:DMSubdivision" lowerBound="0"/>
+		<property name="summary" type="xs:string" lowerBound="0"/>
+		<property name="title" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDocumentTopic" base="d2p1:DMObject">
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="createdBy" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="creationDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="documentType" type="d2p1:DMDocumentType" lowerBound="0"/>
+		<property name="notValid" type="xs:boolean" lowerBound="0"/>
+		<property name="notValidDate" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMDocumentType" base="d2p1:DMObject">
+		<property name="accountingForCaseFilesEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="actionTypes" type="d2p1:DMActionType" lowerBound="0" upperBound="-1"/>
+		<property name="addresseeEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="automaticNumeration" type="xs:boolean" lowerBound="0"/>
+		<property name="cashFlowDetailsEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="correspondentEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="durationEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="externalNumberEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="isAPaymentRequest" type="xs:boolean" lowerBound="0"/>
+		<property name="isIncoming" type="xs:boolean" lowerBound="0"/>
+		<property name="isOutgoing" type="xs:boolean" lowerBound="0"/>
+		<property name="organizationEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="partiesEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="performanceDateEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="productRowsEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="signatureOption" type="d2p1:DMSignatureOption" lowerBound="0"/>
+		<property name="sumEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="templateRequired" type="xs:boolean" lowerBound="0"/>
+		<property name="roles" type="d2p1:DMFileRole" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMDynamicListSortingCondition">
+		<property name="column" type="xs:string"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="sortingOperator" type="d3p1:DMSortingOperator" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMElectronicDocumentKind" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMEMailAnswerType" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMEMailImportance" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMEmployee" base="d2p1:DMObject">
+		<property name="beginDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="endDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="isActual" type="xs:boolean" lowerBound="0"/>
+		<property name="mainEmployee" type="xs:boolean" lowerBound="0"/>
+		<property name="manager" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="position" type="d2p1:DMPosition" lowerBound="0"/>
+		<property name="privatePerson" type="d2p1:DMPrivatePerson" lowerBound="0"/>
+		<property name="subdivision" type="d2p1:DMSubdivision" lowerBound="0"/>
+		<property name="user" type="d2p1:DMUser" lowerBound="0"/>
+		<property name="isNotAvailableAccordingCommunicationRules" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMError" base="d2p1:DMResponse">
+		<property name="description" type="xs:string"/>
+		<property name="subject" type="xs:string"/>
+	</objectType>
+	<objectType name="DMExaminationResultRow">
+		<property name="id" type="xs:string"/>
+		<property name="numberOfExaminedParticipants" type="xs:integer" lowerBound="0"/>
+		<property name="numberOfParticipantsToBeExamined" type="xs:integer" lowerBound="0"/>
+		<property name="finalCompletionDate" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMExaminationResultRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMExaminationResultRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMExecuteTaskActionRequest" base="d2p1:DMRequest">
+		<property name="actionResultString" type="xs:string"/>
+		<property name="dataVersion" type="xs:string"/>
+		<property name="interactiveActionResult" type="d2p1:DMInteractiveActionContext" lowerBound="0" upperBound="-1"/>
+		<property name="resultOfTaskAction" type="d2p1:DMResultOfTaskAction"/>
+		<property name="taskAction" type="d2p1:DMTaskAction"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMExecuteTaskActionResponse" base="d2p1:DMResponse">
+		<property name="requiredInteractiveAction" type="d2p1:DMInteractiveActionContext" lowerBound="0"/>
+		<property name="interactiveActionResultCache" type="d2p1:DMInteractiveActionContext" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMExpressionRow">
+		<property name="id" type="xs:string"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="type" type="d3p1:DMExpressionOnBuiltInLanguageType"/>
+		<property name="tabularSectionName" type="xs:string" lowerBound="0"/>
+		<property name="expressionOnBuiltInLanguage" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMFile" base="d2p1:DMObject">
+		<property name="activeVersion" type="d2p1:DMFileVersion" lowerBound="0"/>
+		<property name="additionalProperties" type="d2p1:DMAdditionalProperty" lowerBound="0" upperBound="-1"/>
+		<property name="author" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="binaryData" type="xs:base64Binary" lowerBound="0"/>
+		<property name="code" type="xs:string" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="creationDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="deletionMark" type="xs:boolean" lowerBound="0"/>
+		<property name="description" type="xs:string" lowerBound="0"/>
+		<property name="editing" type="xs:boolean" lowerBound="0"/>
+		<property name="editingUser" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="encrypted" type="xs:boolean" lowerBound="0"/>
+		<property name="extension" type="xs:string" lowerBound="0"/>
+		<property name="htmlView" type="xs:string" lowerBound="0"/>
+		<property name="htmlViewTruncated" type="xs:boolean" lowerBound="0"/>
+		<property name="interactionStatus" type="xs:integer" lowerBound="0"/>
+		<property name="interactionStatusDescription" type="xs:string" lowerBound="0"/>
+		<property name="lockDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="modificatedBy" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="modificationDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="modificationDateUniversal" type="xs:dateTime" lowerBound="0"/>
+		<property name="owner" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="project" type="d2p1:DMProject" lowerBound="0"/>
+		<property name="role" type="d2p1:DMFileRole" lowerBound="0"/>
+		<property name="scannedOriginal" type="xs:boolean" lowerBound="0"/>
+		<property name="scannedOriginalEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="scannedOriginalReadOnly" type="xs:boolean" lowerBound="0"/>
+		<property name="signatures" type="d2p1:DMSignature" lowerBound="0" upperBound="-1"/>
+		<property name="signatureStatus" type="xs:integer" lowerBound="0"/>
+		<property name="signatureStatusDescription" type="xs:string" lowerBound="0"/>
+		<property name="signed" type="xs:boolean" lowerBound="0"/>
+		<property name="size" type="xs:integer" lowerBound="0"/>
+		<property name="storeVersions" type="xs:boolean" lowerBound="0"/>
+		<property name="tasksDescription" type="xs:string" lowerBound="0"/>
+		<property name="template" type="d2p1:DMFile" lowerBound="0"/>
+		<property name="text" type="xs:string" lowerBound="0"/>
+		<property name="updateSignatures" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMFileEditingInfo">
+		<property name="saved" type="xs:boolean"/>
+		<property name="saveDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="readOnly" type="xs:boolean" lowerBound="0"/>
+		<property name="folder" type="xs:string" lowerBound="0"/>
+		<property name="inOwnersFolder" type="xs:boolean" lowerBound="0"/>
+		<property name="fullPath" type="xs:string" lowerBound="0"/>
+		<property name="size" type="xs:integer" lowerBound="0"/>
+		<property name="modificationDateUniversal" type="xs:dateTime" lowerBound="0"/>
+		<property name="maxFolderSize" type="xs:integer" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMFileFolder" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMFileRole" base="d2p1:DMObject">
+		<property name="required" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMFileVersion" base="d2p1:DMObject">
+		<property name="author" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="binaryData" type="xs:base64Binary" lowerBound="0"/>
+		<property name="creationDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="encrypted" type="xs:boolean" lowerBound="0"/>
+		<property name="extension" type="xs:string" lowerBound="0"/>
+		<property name="modificationDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="modificationDateUniversal" type="xs:dateTime" lowerBound="0"/>
+		<property name="signatures" type="d2p1:DMSignature" lowerBound="0" upperBound="-1"/>
+		<property name="signed" type="xs:boolean" lowerBound="0"/>
+		<property name="size" type="xs:integer" lowerBound="0"/>
+		<property name="text" type="xs:string" lowerBound="0"/>
+		<property name="owner" type="d2p1:DMFile" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="deletionMark" type="xs:boolean" lowerBound="0"/>
+		<property name="number" type="xs:integer" lowerBound="0"/>
+		<property name="updateSignatures" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMFillProcessingRequest" base="d2p1:DMRequest">
+		<property name="object" type="d2p1:DMObjectID"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMFillProcessingResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMFindByBarcodeRequest" base="d2p1:DMRequest">
+		<property name="barcodeData" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMFindByBarcodeResponse" base="d2p1:DMResponse">
+		<property name="objects" type="d2p1:DMObjectID" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMFormGroup">
+		<property name="enabled" type="xs:boolean" lowerBound="0"/>
+		<property name="title" type="xs:string" lowerBound="0"/>
+		<property name="visible" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMForumMessage" base="d2p1:DMObject">
+		<property name="author" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="thread" type="d2p1:DMForumThread" lowerBound="0"/>
+		<property name="creationDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="modificationDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="number" type="xs:integer" lowerBound="0"/>
+		<property name="text" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMForumThread" base="d2p1:DMObject">
+		<property name="author" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="creationDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="document" type="d2p1:DMObject" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetAddressBookRequest" base="d2p1:DMRequest">
+		<property name="addressBookType" type="d2p1:DMAddressBookType"/>
+		<property name="parentID" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetAddressBookResponse" base="d2p1:DMResponse">
+		<property name="items" type="d2p1:DMAddressBookItem" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetCaseFilesCatalogRequest" base="d2p1:DMRequest">
+		<property name="year" type="xs:int" lowerBound="0"/>
+		<property name="company" type="d2p1:DMOrganization" lowerBound="0"/>
+		<property name="department" type="d2p1:DMSubdivision" lowerBound="0"/>
+		<property name="documentType" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="correspondent" type="d2p1:DMCorrespondent" lowerBound="0"/>
+		<property name="activityMatter" type="d2p1:DMActivityMatter" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetCaseFilesCatalogResponse" base="d2p1:DMResponse">
+		<property name="caseFilesCatalogs" type="d2p1:DMCaseFilesCatalog" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetCaseFilesDossiersRequest" base="d2p1:DMRequest">
+		<property name="company" type="d2p1:DMOrganization" lowerBound="0"/>
+		<property name="department" type="d2p1:DMSubdivision" lowerBound="0"/>
+		<property name="regDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="caseFilesCatalog" type="d2p1:DMCaseFilesCatalog" lowerBound="0"/>
+		<property name="documentType" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="correspondent" type="d2p1:DMCorrespondent" lowerBound="0"/>
+		<property name="activityMatter" type="d2p1:DMActivityMatter" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetCaseFilesDossiersResponse" base="d2p1:DMResponse">
+		<property name="caseFilesDossiers" type="d2p1:DMCaseFilesDossiers" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetCaseFilesListSectionsTreeRequest" base="d2p1:DMRequest">
+		<property name="year" type="xs:int" lowerBound="0"/>
+		<property name="company" type="d2p1:DMOrganization" lowerBound="0"/>
+		<property name="department" type="d2p1:DMSubdivision" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetCaseFilesListSectionsTreeResponse" base="d2p1:DMResponse">
+		<property name="caseFilesListSectionsTree" type="d2p1:DMCaseFilesListSectionsTreeElement" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetChangesResponse" base="d2p1:DMResponse">
+		<property name="objects" type="d2p1:DMObject" lowerBound="0" upperBound="-1"/>
+		<property name="records" type="xs:anyType" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetChronometrationSettingsRequest" base="d2p1:DMRequest">
+		<property name="objects" type="xs:anyType" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetChronometrationSettingsResponse" base="d2p1:DMResponse">
+		<property name="settings" type="d2p1:DMChronometrationSettings" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetCorrespondenceTreeQuery" base="d2p1:DMQuery">
+		<property name="externalTarget" type="d2p1:ExternalObject" lowerBound="0" upperBound="-1"/>
+		<property name="target" type="d2p1:DMObject" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetCorrespondenceTreeRequest" base="d2p1:DMRequest">
+		<property name="query" type="d2p1:DMGetCorrespondenceTreeQuery"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetCorrespondenceTreeResponse" base="d2p1:DMResponse">
+		<property name="followers" type="d2p1:DMCorrespondenceFollower" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetCurrentObjectProcessingRequest" base="d2p1:DMRequest">
+		<property name="target" type="d2p1:DMObjectID"/>
+		<property name="columnSet" type="xs:string" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetCurrentObjectProcessingResponse" base="d2p1:DMResponse">
+		<property name="objectProcessing" type="d2p1:DMObjectProcessing" lowerBound="0"/>
+		<property name="endDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="interrupted" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="terminationReason" type="xs:string" lowerBound="0"/>
+		<property name="processingIsSetByRules" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetCurrentUserRequest" base="d2p1:DMRequest"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetCurrentUserResponse" base="d2p1:DMResponse">
+		<property name="user" type="d2p1:DMUser"/>
+		<property name="employees" type="d2p1:DMEmployee" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetDataLoadingRulesRequest" base="d2p1:DMRequest">
+		<property name="externalObjectType" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetDataLoadingRulesResponse" base="d2p1:DMResponse">
+		<property name="dataLoadingRules" type="d2p1:DMDataLoadingRule" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetDefaultValuesByDocumentTypeRequest" base="d2p1:DMRequest">
+		<property name="documentTypeId" type="d2p1:DMObjectID"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetDefaultValuesByDocumentTypeResponse" base="d2p1:DMResponse">
+		<property name="object" type="d2p1:DMObject"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetDocumentListByOwnerRequest" base="d2p1:DMRequest">
+		<property name="owners" type="d2p1:DMObject" upperBound="-1"/>
+		<property name="columnSet" type="xs:string" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetDocumentListByOwnerResponse" base="d2p1:DMResponse">
+		<property name="documents" type="d2p1:DMDocument" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetDocumentListRequest" base="d2p1:DMRequest">
+		<property name="externalObjects" type="d2p1:ExternalObject" upperBound="-1"/>
+		<property name="columnSet" type="xs:string" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetDocumentListResponse" base="d2p1:DMResponse">
+		<property name="documents" type="d2p1:DMObject" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetDueDateByDueDatePresentationRequest" base="d2p1:DMRequest">
+		<property name="dueDatePresentation" type="xs:string"/>
+		<property name="participant" type="d2p1:DMTaskParticipant" lowerBound="0"/>
+		<property name="oldDueDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="oldDueDateDays" type="xs:integer" lowerBound="0"/>
+		<property name="oldDueDateHours" type="xs:integer" lowerBound="0"/>
+		<property name="oldDueDateMinutes" type="xs:integer" lowerBound="0"/>
+		<property name="oldDueDateSpecificationVariant" type="d2p1:DMDueDateSpecificationOption" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetDueDateByDueDatePresentationResponse" base="d2p1:DMResponse">
+		<property name="result" type="xs:boolean"/>
+		<property name="warningMessageText" type="xs:string" lowerBound="0"/>
+		<property name="dueDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="dueDateDays" type="xs:integer" lowerBound="0"/>
+		<property name="dueDateHours" type="xs:integer" lowerBound="0"/>
+		<property name="dueDateMinutes" type="xs:integer" lowerBound="0"/>
+		<property name="dueDateSpecificationVariant" type="d2p1:DMDueDateSpecificationOption" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetDynamicListRequest" base="d2p1:DMRequest">
+		<property name="type" type="xs:string"/>
+		<property name="page" type="xs:integer"/>
+		<property name="numberOfObjectsPerPage" type="xs:integer"/>
+		<property name="conditions" type="d2p1:DMObjectListCondition" lowerBound="0" upperBound="-1"/>
+		<property name="columnSet" type="xs:string" lowerBound="0" upperBound="-1"/>
+		<property name="orderBy" type="d2p1:DMDynamicListSortingCondition" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetDynamicListResponse" base="d2p1:DMResponse">
+		<property name="objects" type="xs:anyType" lowerBound="0" upperBound="-1"/>
+		<property name="pageCount" type="xs:integer"/>
+		<property name="descriptionOfTotals" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetExpressionListRequest" base="d2p1:DMRequest">
+		<property name="objects" type="d2p1:DMObjectID" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetExpressionListResponse" base="d2p1:DMResponse">
+		<property name="objectsExpressionRows" type="d2p1:DMObjectExpressionRow" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetFileEditingInfoRequest" base="d2p1:DMRequest">
+		<property name="objectId" type="d2p1:DMObjectID"/>
+		<property name="clientIdentifier" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetFileEditingInfoResponse" base="d2p1:DMResponse">
+		<property name="objectId" type="d2p1:DMObjectID"/>
+		<property name="info" type="d2p1:DMFileEditingInfo"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetFileListByOwnerRequest" base="d2p1:DMRequest">
+		<property name="owners" type="d2p1:DMObject" upperBound="-1"/>
+		<property name="columnSet" type="xs:string" lowerBound="0" upperBound="-1"/>
+		<property name="ignoreDeletionMark" type="xs:boolean" lowerBound="0"/>
+		<property name="htmlView" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetFileListByOwnerResponse" base="d2p1:DMResponse">
+		<property name="files" type="d2p1:DMFile" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetFileListRequest" base="d2p1:DMRequest">
+		<property name="externalObjects" type="d2p1:ExternalObject" lowerBound="0" upperBound="-1"/>
+		<property name="columnSet" type="xs:string" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetFileListResponse" base="d2p1:DMResponse">
+		<property name="files" type="d2p1:DMFile" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetIncomingEMailAnswerRequest" base="d2p1:DMGetNewObjectRequest">
+		<property name="targetID" type="d2p1:DMObjectID"/>
+		<property name="answerType" type="d2p1:DMIncomingEMailAnswerType"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetIncomingEMailAnswerResponse" base="d2p1:DMGetNewObjectResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetLinkedObjectsRequest" base="d2p1:DMRequest"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetLinkedObjectsResponse" base="d2p1:DMResponse">
+		<property name="objects" type="d2p1:DMObject" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetNewEMailRequest" base="d2p1:DMGetNewObjectRequest">
+		<property name="targetID" type="d2p1:DMObjectID" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetNewEMailResponse" base="d2p1:DMGetNewObjectResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetNewObjectRequest" base="d2p1:DMRequest">
+		<property name="type" type="xs:string"/>
+		<property name="documentType" type="d2p1:DMObjectID" lowerBound="0"/>
+		<property name="columnSet" type="xs:string" lowerBound="0" upperBound="-1"/>
+		<property name="dataSource" type="d2p1:DMObject" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetNewObjectResponse" base="d2p1:DMResponse">
+		<property name="object" type="d2p1:DMObject"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetObjectAdditionalPropertiesRequest" base="d2p1:DMRequest">
+		<property name="object" type="d2p1:DMObject"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetObjectAdditionalPropertiesResponse" base="d2p1:DMResponse">
+		<property name="additionalProperties" type="d2p1:DMAdditionalProperty" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetObjectLinksWithoutFeedbackMarkRequest" base="d2p1:DMRequest"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetObjectLinksWithoutFeedbackMarkResponse" base="d2p1:DMResponse">
+		<property name="links" type="d2p1:DMLink" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetObjectListRequest" base="d2p1:DMRequest">
+		<property name="type" type="xs:string"/>
+		<property name="query" type="d2p1:DMObjectListQuery" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetObjectListResponse" base="d2p1:DMResponse">
+		<property name="items" type="d2p1:DMObjectListItem" lowerBound="0" upperBound="-1"/>
+		<property name="tooManyObjects" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetObjectMetadataRequest" base="d2p1:DMRequest">
+		<property name="objectType" type="d2p1:DMType"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetObjectMetadataResponse" base="d2p1:DMResponse">
+		<property name="attributes" type="d2p1:DMMetadataAttribute" upperBound="-1"/>
+		<property name="tabularSections" type="d2p1:DMMetadataTabularSection" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetObjectsHTMLPresentationsRequest" base="d2p1:DMRequest">
+		<property name="objects" type="d2p1:DMObject" upperBound="-1"/>
+		<property name="ignoreMaxSize" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetObjectsHTMLPresentationsResponse" base="d2p1:DMResponse">
+		<property name="ObjectsHTMLPresentations" type="d2p1:DMObjectHTMLPresentation" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetOutgoingEMailForwardRequest" base="d2p1:DMGetNewObjectRequest">
+		<property name="targetID" type="d2p1:DMObjectID"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetOutgoingEMailForwardResponse" base="d2p1:DMGetNewObjectResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetPredefinedObjectRequest" base="d2p1:DMRequest">
+		<property name="type" type="xs:string"/>
+		<property name="predefinedObjectName" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetPredefinedObjectResponse" base="d2p1:DMResponse">
+		<property name="result" type="d2p1:DMObject"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetPrintedFormListRequest" base="d2p1:DMRequest">
+		<property name="objects" type="d2p1:DMObjectID" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetPrintedFormListResponse" base="d2p1:DMResponse">
+		<property name="objectsPrintedForms" type="d2p1:DMObjectPrintedForms" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetPrintedFormRequest" base="d2p1:DMRequest">
+		<property name="objects" type="d2p1:DMObjectID" upperBound="-1"/>
+		<property name="printCommand" type="d2p1:DMPrintCommand"/>
+		<property name="printedFormFileType" type="d2p1:DMSpreadsheetDocumentFileType"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetPrintedFormResponse" base="d2p1:DMResponse">
+		<property name="printedForm" type="xs:base64Binary"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetRecipientsListByNameRequest" base="d2p1:DMRequest">
+		<property name="query" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetRecipientsListByNameResponse" base="d2p1:DMResponse">
+		<property name="items" type="xs:string" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetRequiredTabularSectionListRequest" base="d2p1:DMRequest">
+		<property name="allObjectsTabularSections" type="d2p1:DMObjectTabularSections" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetRequiredTabularSectionListResponse" base="d2p1:DMResponse">
+		<property name="requiredObjectsTabularSections" type="d2p1:DMObjectTabularSections" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetSettingsRequest" base="d2p1:DMRequest"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetSettingsResponse" base="d2p1:DMResponse">
+		<property name="accountForScannedOriginals" type="xs:boolean" lowerBound="0"/>
+		<property name="addActualWorkUponTaskExecution" type="xs:boolean" lowerBound="0"/>
+		<property name="allowToChangeEndDate" type="xs:boolean" lowerBound="0"/>
+		<property name="htmlViewMessageHead" type="xs:string" lowerBound="0"/>
+		<property name="needExtractText" type="xs:boolean" lowerBound="0"/>
+		<property name="scannedOriginalExtensionsList" type="xs:string" lowerBound="0"/>
+		<property name="showLockedFilesOnExit" type="xs:boolean" lowerBound="0"/>
+		<property name="showPdfBy1C" type="xs:boolean" lowerBound="0"/>
+		<property name="taskPerformers" type="d2p1:DMTaskParticipant" lowerBound="0" upperBound="-1"/>
+		<property name="tasksAvailable" type="xs:boolean" lowerBound="0"/>
+		<property name="useAutoFill" type="xs:boolean" lowerBound="0"/>
+		<property name="useBothDateAndTimeInTasksDueDates" type="xs:boolean" lowerBound="0"/>
+		<property name="useDigitalSignatures" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetSubFoldersRequest" base="d2p1:DMRequest">
+		<property name="folder" type="d2p1:DMObjectID"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetSubFoldersResponse" base="d2p1:DMResponse">
+		<property name="folders" type="d2p1:DMObject" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetTemplateHintRequest" base="d2p1:DMRequest">
+		<property name="template" type="d2p1:DMObjectID"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetTemplateHintResponse" base="d2p1:DMResponse">
+		<property name="hintHTML" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetThisNodeRequest" base="d2p1:DMRequest"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetThisNodeResponse" base="d2p1:DMResponse">
+		<property name="node" type="d2p1:DMDataExchangeNode"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetTimeTrackingPolicyRequest" base="d2p1:DMRequest"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetTimeTrackingPolicyResponse" base="d2p1:DMResponse">
+		<property name="timeTrackingPolicy" type="d2p1:DMTimeTrackingPolicy"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetUserNodesRequest" base="d2p1:DMRequest">
+		<property name="user" type="d2p1:DMUser"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetUserNodesResponse" base="d2p1:DMResponse">
+		<property name="nodes" type="d2p1:DMDataExchangeNode" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMGetVersionRequest" base="d2p1:DMRequest"/>
+	<objectType name="DMGetVersionResponse">
+		<property name="versionNumber" type="xs:string"/>
+	</objectType>
+	<objectType name="DMIncomingData">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="attributes" type="d3p1:DMDataAttribute" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="tabularSections" type="d3p1:DMDataTabularSection" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMIncomingDataRequestStructure">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="incomingData" type="d3p1:DMIncomingData"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="dataLoadingRule" type="d3p1:DMObjectID"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="updatingObject" type="d3p1:DMObjectID" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="externalObject" type="d3p1:ExternalObjectID" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="files" type="d3p1:DMFile" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMIncomingElectronicDocument" base="d2p1:DMObject">
+		<property name="attachedFileBinaryData" type="xs:base64Binary" lowerBound="0"/>
+		<property name="attachedFilePresentation" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMIncomingEMail" base="d2p1:DMObject">
+		<property name="creationDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="subject" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="body" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="importance" type="d2p1:DMEMailImportance" lowerBound="0"/>
+		<property name="recipients" type="xs:string" lowerBound="0"/>
+		<property name="courtesyCopyRecipients" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="files" type="d2p1:DMFile" lowerBound="0" upperBound="-1"/>
+		<property name="senderAddress" type="xs:string" lowerBound="0"/>
+		<property name="target" type="d2p1:DMObject" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMInfoBaseUser" base="d2p1:DMObject">
+		<property name="OSUserName" type="xs:string" lowerBound="0"/>
+		<property name="email" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMInputField">
+		<property name="enabled" type="xs:boolean" lowerBound="0"/>
+		<property name="inputHint" type="xs:string" lowerBound="0"/>
+		<property name="readOnly" type="xs:boolean" lowerBound="0"/>
+		<property name="visible" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMInteractiveActionContext">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="interactiveAction" type="d3p1:DMInteractiveActionWithTask"/>
+		<property name="context" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMLabelField">
+		<property name="enabled" type="xs:boolean" lowerBound="0"/>
+		<property name="hint" type="xs:string" lowerBound="0"/>
+		<property name="titleHeight" type="xs:integer" lowerBound="0"/>
+		<property name="titleLocation" type="xs:string" lowerBound="0"/>
+		<property name="width" type="xs:integer" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMLink">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="ownerObject" type="d3p1:ExternalObjectID"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="linkedObject" type="d3p1:DMObjectID"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMLockFileRequest" base="d2p1:DMRequest">
+		<property name="objectId" type="d2p1:DMObjectID"/>
+		<property name="columnSet" type="xs:string" lowerBound="0" upperBound="-1"/>
+		<property name="lockDate" type="xs:dateTime"/>
+		<property name="clientIdentifier" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMLockFileResponse" base="d2p1:DMResponse">
+		<property name="object" type="d2p1:DMObject" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMMainAddressingObject" base="d2p1:DMObject"/>
+	<objectType name="DMMainApplication">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="correspondent" type="d3p1:DMCorrespondent" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="document" type="d3p1:DMDocument" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="meeting" type="d3p1:DMMeeting" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMMeasurementUnit" base="d2p1:DMObject">
+		<property name="fullName" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMMeeting" base="d2p1:DMObject">
+		<property name="accessLevel" type="d2p1:DMAccessLevel" lowerBound="0"/>
+		<property name="accessLevelEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="additionalProperties" type="d2p1:DMAdditionalProperty" lowerBound="0" upperBound="-1"/>
+		<property name="agenda" type="d2p1:DMMeetingAgendaItem" lowerBound="0" upperBound="-1"/>
+		<property name="attendees" type="d2p1:DMMeetingAttendee" lowerBound="0" upperBound="-1"/>
+		<property name="calledBy" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="chairPerson" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="chairPersonMainAddressingObject" type="d2p1:DMMainAddressingObject" lowerBound="0"/>
+		<property name="chairPersonSecondaryAddressingObject" type="d2p1:DMSecondaryAddressingObject" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="description" type="xs:string" lowerBound="0"/>
+		<property name="endDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="files" type="d2p1:DMFile" lowerBound="0" upperBound="-1"/>
+		<property name="folder" type="d2p1:DMMeetingFolder" lowerBound="0"/>
+		<property name="foldersEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="organization" type="d2p1:DMOrganization" lowerBound="0"/>
+		<property name="secretary" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="secretaryMainAddressingObject" type="d2p1:DMMainAddressingObject" lowerBound="0"/>
+		<property name="secretarySecondaryAddressingObject" type="d2p1:DMSecondaryAddressingObject" lowerBound="0"/>
+		<property name="signatures" type="d2p1:DMSignature" lowerBound="0" upperBound="-1"/>
+		<property name="startDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="statuses" type="d2p1:DMMeetingStatus" lowerBound="0" upperBound="-1"/>
+		<property name="type" type="d2p1:DMMeetingType" lowerBound="0"/>
+		<property name="place" type="xs:string" lowerBound="0"/>
+		<property name="processingState" type="d2p1:DMObjectProcessingState" lowerBound="0"/>
+		<property name="project" type="d2p1:DMProject" lowerBound="0"/>
+		<property name="updateSignatures" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMMeetingActionItem">
+		<property name="action" type="xs:string" lowerBound="0"/>
+		<property name="description" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="employee" type="d3p1:DMEmployee" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="role" type="d3p1:DMBusinessProcessExecutorRole" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="mainAddressingItem" type="d3p1:DMMainAddressingObject" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="secondaryAddressingItem" type="d3p1:DMSecondaryAddressingObject" lowerBound="0"/>
+		<property name="dueDate" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMMeetingAgendaItem">
+		<property name="number" type="xs:integer"/>
+		<property name="description" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="employee" type="d3p1:DMEmployee" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="role" type="d3p1:DMBusinessProcessExecutorRole" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="mainAddressingItem" type="d3p1:DMMainAddressingObject" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="secondaryAddressingItem" type="d3p1:DMSecondaryAddressingObject" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="decisionIsNecessary" type="xs:boolean" lowerBound="0"/>
+		<property name="estimatedDuration" type="xs:integer" lowerBound="0"/>
+		<property name="duration" type="xs:integer" lowerBound="0"/>
+		<property name="startDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="endDate" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMMeetingAttendee">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="employee" type="d3p1:DMEmployee" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="role" type="d3p1:DMBusinessProcessExecutorRole" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="mainAddressingObject" type="d3p1:DMMainAddressingObject" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="secondaryAddressingObject" type="d3p1:DMSecondaryAddressingObject" lowerBound="0"/>
+		<property name="obligatory" type="xs:boolean"/>
+		<property name="absent" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="invitationStatus" type="d3p1:DMInvitationStatus" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMMeetingFolder" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMMeetingMinutesItem" base="d2p1:DMObject">
+		<property name="meeting" type="d2p1:DMMeeting" lowerBound="0"/>
+		<property name="agendaItemNumber" type="xs:integer" lowerBound="0"/>
+		<property name="proposed" type="xs:string" lowerBound="0"/>
+		<property name="discussed" type="xs:string" lowerBound="0"/>
+		<property name="decided" type="xs:string" lowerBound="0"/>
+		<property name="actions" type="d2p1:DMMeetingActionItem" lowerBound="0" upperBound="-1"/>
+		<property name="performance" type="d2p1:DMActionPerformance" lowerBound="0"/>
+		<property name="dueDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="responsible" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="responsibleMainAddressingObject" type="d2p1:DMMainAddressingObject" lowerBound="0"/>
+		<property name="responsibleSecondaryAddressingObject" type="d2p1:DMSecondaryAddressingObject" lowerBound="0"/>
+		<property name="controller" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="controllerMainAddressingObject" type="d2p1:DMMainAddressingObject" lowerBound="0"/>
+		<property name="controllerSecondaryAddressingObject" type="d2p1:DMSecondaryAddressingObject" lowerBound="0"/>
+		<property name="verifier" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="verifierMainAddressingObject" type="d2p1:DMMainAddressingObject" lowerBound="0"/>
+		<property name="verifierSecondaryAddressingObject" type="d2p1:DMSecondaryAddressingObject" lowerBound="0"/>
+		<property name="routingType" type="d2p1:DMTaskRoutingOption" lowerBound="0"/>
+		<property name="status" type="d2p1:DMMeetingMinutesItemStatus" lowerBound="0"/>
+		<property name="author" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="minutesItemNumber" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMMeetingType" base="d2p1:DMObject">
+		<property name="withMinutes" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMMetadataAttribute">
+		<property name="name" type="xs:string"/>
+		<property name="synonym" type="xs:string"/>
+	</objectType>
+	<objectType name="DMMetadataTabularSection">
+		<property name="name" type="xs:string"/>
+		<property name="synonym" type="xs:string"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="attributes" type="d3p1:DMMetadataAttribute" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMMessage" abstract="true">
+		<property name="dataBaseID" type="xs:string" lowerBound="0"/>
+		<property name="dmilVersionNumber" type="xs:string" lowerBound="0"/>
+		<property name="messageID" type="xs:string" lowerBound="0"/>
+		<property name="initialMessageID" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMMoveEMailRequest" base="d2p1:DMRequest">
+		<property name="emails" type="d2p1:DMObjectID" lowerBound="0" upperBound="-1"/>
+		<property name="folder" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMOK" base="d2p1:DMResponse"/>
+	<objectType name="DMObject">
+		<property name="name" type="xs:string" nillable="true"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="objectID" type="d3p1:DMObjectID"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="externalObject" type="d3p1:ExternalObject" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="externalObjects" type="d3p1:ExternalObject" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="expressionResultsForAttributes" type="d3p1:DMDataAttribute" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="expressionResultsForTabularSections" type="d3p1:DMDataTabularSection" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMObjectBarcodes">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="objectId" type="d3p1:DMObjectID"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="barcodes" type="d3p1:DMBarcode" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMObjectChangeResponseStructure">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="key" type="d3p1:DMObjectID"/>
+		<property name="success" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="object" type="d3p1:DMObject" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="error" type="d3p1:DMError" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMObjectExpressionRow">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="object" type="d3p1:DMObjectID"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="expressionRows" type="d3p1:DMExpressionRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMObjectHTMLPresentation" base="d2p1:DMObject">
+		<property name="htmlView" type="xs:string"/>
+		<property name="truncated" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMObjectID">
+		<property name="id" type="xs:string"/>
+		<property name="presentation" type="xs:string" lowerBound="0"/>
+		<property name="type" type="xs:string"/>
+		<property name="navigationRef" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMObjectListColumnConformity">
+		<property name="xdtoPropertyName" type="xs:string"/>
+		<property name="dmPropertyName" type="xs:string"/>
+	</objectType>
+	<objectType name="DMObjectListCondition">
+		<property name="property" type="xs:string"/>
+		<property name="value" type="xs:anyType" lowerBound="0"/>
+		<property name="valueList" type="xs:anyType" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="comparisonOperator" type="d3p1:DMComparisonOperator" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMObjectListItem">
+		<property name="canHaveChildren" type="xs:boolean"/>
+		<property name="isFolder" type="xs:boolean"/>
+		<property name="object" type="xs:anyType"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="parentID" type="d3p1:DMObjectID" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMObjectListQuery" base="d2p1:DMQuery">
+		<property name="conditions" type="d2p1:DMObjectListCondition" lowerBound="0" upperBound="-1"/>
+		<property name="limit" type="xs:integer" lowerBound="0"/>
+		<property name="columnSet" type="xs:string" lowerBound="0" upperBound="-1"/>
+		<property name="columnConformity" type="d2p1:DMObjectListColumnConformity" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMObjectPrintedForms">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="object" type="d3p1:DMObjectID"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="spreadsheetDocumentFileType" type="d3p1:DMSpreadsheetDocumentFileType"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="printedForms" type="d3p1:DMPrintedForm" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMObjectProcessing" base="d2p1:DMObject">
+		<property name="actionsRows" type="d2p1:DMActionRows" lowerBound="0"/>
+		<property name="began" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="completedNegativelyWithComments" type="xs:boolean" lowerBound="0"/>
+		<property name="creationDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="haveApprovalActions" type="xs:boolean" lowerBound="0"/>
+		<property name="haveExaminationActions" type="xs:boolean" lowerBound="0"/>
+		<property name="haveRightsToStopProcessing" type="xs:boolean" lowerBound="0"/>
+		<property name="placedInHistory" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="postedInHistory" type="xs:boolean" lowerBound="0"/>
+		<property name="presentation" type="xs:string" lowerBound="0"/>
+		<property name="startDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="state" type="d2p1:DMObjectProcessingState" lowerBound="0"/>
+		<property name="stateAllowsRestartProcessing" type="xs:boolean" lowerBound="0"/>
+		<property name="stateAllowsStartAndTerminateProcessing" type="xs:boolean" lowerBound="0"/>
+		<property name="stateAllowsStopAndContinueProcessing" type="xs:boolean" lowerBound="0"/>
+		<property name="stateChangeDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="target" type="d2p1:DMObject"/>
+		<property name="useVisas" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMObjectPropertyValue" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMObjectPropertyValueHierarchy" base="d2p1:DMObject"/>
+	<objectType name="DMObjectTabularSections">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="object" type="d3p1:DMObjectID"/>
+		<property name="tabularSections" type="xs:string" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMOrganization" base="d2p1:DMObject">
+		<property name="legalPrivatePerson" type="d2p1:DMLegalPrivatePerson" lowerBound="0"/>
+		<property name="inn" type="xs:string" lowerBound="0"/>
+		<property name="kpp" type="xs:string" lowerBound="0"/>
+		<property name="okpo" type="xs:string" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="fullName" type="xs:string" lowerBound="0"/>
+		<property name="prefix" type="xs:string" lowerBound="0"/>
+		<property name="VATpayer" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMOutgoingElectronicDocument" base="d2p1:DMObject">
+		<property name="attachedFileBinaryData" type="xs:base64Binary" lowerBound="0"/>
+		<property name="attachedFilePresentation" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMOutgoingEMail" base="d2p1:DMObject">
+		<property name="creationDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="subject" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="body" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="importance" type="xs:anyType" lowerBound="0"/>
+		<property name="recipients" type="xs:string" lowerBound="0"/>
+		<property name="courtesyCopyRecipients" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="blindCourtesyCopyRecipients" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="files" type="d2p1:DMFile" lowerBound="0" upperBound="-1"/>
+		<property name="readyToBeSent" type="xs:dateTime" lowerBound="0"/>
+		<property name="senderAddress" type="xs:string" lowerBound="0"/>
+		<property name="sent" type="xs:boolean" lowerBound="0"/>
+		<property name="target" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="answerType" type="d2p1:DMEMailAnswerType" lowerBound="0"/>
+		<property name="baseObject" type="d2p1:DMObject" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMParty" base="d2p1:DMObject">
+		<property name="correspondent" type="d2p1:DMCorrespondent" lowerBound="0"/>
+		<property name="employee" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="organization" type="d2p1:DMOrganization" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMPartyName" base="d2p1:DMObject">
+		<property name="predefinedName" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMPartyRow">
+		<property name="signatureDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="contact" type="d3p1:DMPartyRowContact" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="description" type="d3p1:DMPartyName" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="paymentRequestParty" type="d3p1:DMPaymentRequestParties" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="signedBy" type="d3p1:DMPartyRowContact" lowerBound="0"/>
+		<property name="signed" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="party" type="d3p1:DMParty" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="setBy" type="d3p1:DMEmployee" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMPartyRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMPartyRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMPartyRowContact" base="d2p1:DMObject">
+		<property name="contactName" type="xs:string" lowerBound="0"/>
+		<property name="employee" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="contactPerson" type="d2p1:DMContactPerson" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMPersonalRecipient" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMPersonalRecipientGroup" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMPosition" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMPostponementDurationRequest" base="d2p1:DMRequest">
+		<property name="employee" type="d2p1:DMEmployee"/>
+		<property name="oldDueDate" type="xs:dateTime"/>
+		<property name="newDueDate" type="xs:dateTime"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMPostponementDurationResponse" base="d2p1:DMResponse">
+		<property name="postponementDuration" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMPremises" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMPremisesReservation" base="d2p1:DMObject">
+		<property name="author" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="startDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="endDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="premises" type="d2p1:DMPremises" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMPrintedForm">
+		<property name="additionalParameters" type="xs:string" lowerBound="0"/>
+		<property name="commandName" type="xs:string"/>
+		<property name="printManager" type="xs:string"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="role" type="d3p1:DMFileRole" lowerBound="0"/>
+		<property name="update" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMPrivatePerson" base="d2p1:DMObject">
+		<property name="birthDay" type="xs:date" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+		<property name="contactInformation" type="d2p1:DMContactInformation" lowerBound="0"/>
+		<property name="gender" type="d2p1:DMPrivatePersonGender" lowerBound="0"/>
+		<property name="inn" type="xs:string" lowerBound="0"/>
+		<property name="retirementInsuranceNumber" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMProduct" base="d2p1:DMObject">
+		<property name="isFolder" type="xs:boolean" lowerBound="0"/>
+		<property name="parent" type="d2p1:DMProduct" lowerBound="0"/>
+		<property name="code" type="xs:string" lowerBound="0"/>
+		<property name="price" type="xs:decimal" lowerBound="0"/>
+		<property name="measurementUnit" type="d2p1:DMMeasurementUnit" lowerBound="0"/>
+		<property name="VATRate" type="d2p1:DMVATRate" lowerBound="0"/>
+		<property name="VATRateUniversal" type="d2p1:DMVATRateUniversal" lowerBound="0"/>
+		<property name="article" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMProductRow">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="product" type="d3p1:DMProduct" lowerBound="0"/>
+		<property name="quantity" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="measurementUnit" type="d3p1:DMMeasurementUnit" lowerBound="0"/>
+		<property name="price" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="VATRate" type="d3p1:DMVATRate" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="VATRateUniversal" type="d3p1:DMVATRateUniversal" lowerBound="0"/>
+		<property name="VAT" type="xs:decimal" lowerBound="0"/>
+		<property name="total" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMProductRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMProductRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMProject" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMProjectTask" base="d2p1:DMObject">
+		<property name="project" type="d2p1:DMProject" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMProjectType" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMPutChangesRequest" base="d2p1:DMResponse">
+		<property name="objects" type="d2p1:DMObject" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMPutChangesResponse" base="d2p1:DMResponse"/>
+	<objectType name="DMQuery" abstract="true"/>
+	<objectType name="DMQuesion">
+		<property name="text" type="xs:string"/>
+		<property name="title" type="xs:string" lowerBound="0"/>
+		<property name="buttons" type="xs:string" upperBound="-1"/>
+		<property name="defaultButton" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRedirectTasksRequest" base="d2p1:DMRequest">
+		<property name="tasks" type="d2p1:DMTaskAction" upperBound="-1"/>
+		<property name="performer" type="d2p1:DMTaskParticipant"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRedirectTasksResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRelationType" base="d2p1:DMObject">
+		<property name="predefinedName" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRemoveDocumentRelationRequest" base="d2p1:DMRequest">
+		<property name="relation" type="d2p1:DMDocumentRelation"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRemoveDocumentRelationResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRemoveObjectLinkRequest" base="d2p1:DMRequest">
+		<property name="ownerObject" type="d2p1:ExternalObject"/>
+		<property name="linkedObject" type="d2p1:DMObjectID"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRemoveObjectLinkResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRequest" base="d2p1:DMMessage" abstract="true"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMReservation" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMResolution" base="d2p1:DMObject">
+		<property name="reviewer" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="addedBy" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="date" type="xs:dateTime" lowerBound="0"/>
+		<property name="signed" type="xs:boolean" lowerBound="0"/>
+		<property name="signatureChecked" type="xs:boolean" lowerBound="0"/>
+		<property name="signatureValid" type="xs:boolean" lowerBound="0"/>
+		<property name="text" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMResponse" base="d2p1:DMMessage" abstract="true"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRestartProcessingRequest" base="d2p1:DMRequest">
+		<property name="object" type="d2p1:DMObjectID"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRestartProcessingResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMResultOfTaskAction" base="d2p1:DMObject">
+		<property name="commandHeader" type="xs:string" lowerBound="0"/>
+		<property name="groupExecutionIsAvailable" type="xs:boolean" lowerBound="0"/>
+		<property name="taskResultType" type="d2p1:DMTaskResultType" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRetrieveBarcodesRequest" base="d2p1:DMRequest">
+		<property name="objectId" type="d2p1:DMObjectID"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRetrieveBarcodesResponse" base="d2p1:DMResponse">
+		<property name="objectBarcodes" type="d2p1:DMObjectBarcodes"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRetrieveRequest" base="d2p1:DMRequest">
+		<property name="objectIds" type="d2p1:DMObjectID" lowerBound="0" upperBound="-1"/>
+		<property name="links" type="d2p1:DMLink" lowerBound="0" upperBound="-1"/>
+		<property name="objectsExpressionRows" type="d2p1:DMObjectExpressionRow" lowerBound="0" upperBound="-1"/>
+		<property name="columnSet" type="xs:string" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRetrieveResponse" base="d2p1:DMResponse">
+		<property name="objects" type="d2p1:DMObject" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRevokeTaskAcceptanceRequest" base="d2p1:DMRequest">
+		<property name="tasks" type="d2p1:DMTaskAction" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMRevokeTaskAcceptanceResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMSecondaryAddressingObject" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMSetChronometrationSettingsRequest" base="d2p1:DMRequest">
+		<property name="objects" type="xs:anyType" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMSetChronometrationSettingsResponse" base="d2p1:DMResponse">
+		<property name="settings" type="d2p1:DMChronometrationSettings" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMSetFlagRequest" base="d2p1:DMRequest">
+		<property name="tasks" type="d2p1:DMTaskAction" upperBound="-1"/>
+		<property name="flag" type="d2p1:DMObjectFlag" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMSetFlagResponse" base="d2p1:DMResponse"/>
+	<objectType name="DMSignature">
+		<property name="author" type="xs:string"/>
+		<property name="certificate" type="xs:base64Binary" nillable="true"/>
+		<property name="comment" type="xs:string"/>
+		<property name="date" type="xs:dateTime"/>
+		<property name="signature" type="xs:base64Binary"/>
+		<property name="signatureFileName" type="xs:string"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="signer" type="d3p1:DMUser" lowerBound="0"/>
+		<property name="thumbprint" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMStartProcessingRequest" base="d2p1:DMRequest">
+		<property name="object" type="d2p1:DMObjectID"/>
+		<property name="link" type="d2p1:DMLink" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMStartProcessingResponse" base="d2p1:DMResponse"/>
+	<objectType name="DMStatusByActionTypeRow">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="actionType" type="d3p1:DMActionType"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="status" type="d3p1:DMDocumentStatus" lowerBound="0"/>
+		<property name="statusPresentation" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMStatusByActionTypeRows">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="rows" type="d3p1:DMStatusByActionTypeRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMStopContinueProcessingRequest" base="d2p1:DMRequest">
+		<property name="object" type="d2p1:DMObjectID"/>
+		<property name="objectProcessingState" type="d2p1:DMObjectProcessingState"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMStopContinueProcessingResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMSubdivision" base="d2p1:DMObject">
+		<property name="head" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="isNotAvailableAccordingCommunicationRules" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMSynchronizeObjectLinksRequest" base="d2p1:DMRequest">
+		<property name="links" type="d2p1:DMLink" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMSynchronizeObjectLinksResponse" base="d2p1:DMResponse">
+		<property name="brokenLinks" type="d2p1:DMLink" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMTaskAction" base="d2p1:DMObject">
+		<property name="actionArea" type="d2p1:DMTaskActionArea" lowerBound="0"/>
+		<property name="actionState" type="xs:integer" lowerBound="0"/>
+		<property name="applicationRows" type="d2p1:DMApplicationRows" lowerBound="0"/>
+		<property name="author" type="d2p1:DMTaskParticipant" lowerBound="0"/>
+		<property name="authorPresentation" type="xs:string" lowerBound="0"/>
+		<property name="date" type="xs:dateTime" lowerBound="0"/>
+		<property name="descriptionOfReceivedUpdates" type="xs:string" lowerBound="0"/>
+		<property name="existSubstitutes" type="xs:boolean" lowerBound="0"/>
+		<property name="existSubtasks" type="xs:boolean" lowerBound="0"/>
+		<property name="flag" type="d2p1:DMObjectFlag" lowerBound="0"/>
+		<property name="htmlView" type="xs:string" lowerBound="0"/>
+		<property name="isOverdue" type="xs:boolean" lowerBound="0"/>
+		<property name="laboriousnessFrom" type="xs:double" lowerBound="0"/>
+		<property name="laboriousnessUpTo" type="xs:double" lowerBound="0"/>
+		<property name="mainApplication" type="d2p1:DMMainApplication" lowerBound="0"/>
+		<property name="monitoringState" type="xs:integer" lowerBound="0"/>
+		<property name="new" type="xs:boolean" lowerBound="0"/>
+		<property name="performer" type="d2p1:DMTaskParticipant" lowerBound="0"/>
+		<property name="performerPresentation" type="xs:string" lowerBound="0"/>
+		<property name="priority" type="d2p1:DMTaskPriority" lowerBound="0"/>
+		<property name="term" type="xs:dateTime" lowerBound="0"/>
+		<property name="title" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMTaskActionArea">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="actionResultInputField" type="d3p1:DMInputField"/>
+		<property name="actionResultString" type="xs:string"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonAcceptTask" type="d3p1:DMButton"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonAddParticipants" type="d3p1:DMButton"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonExecuteOption1" type="d3p1:DMButton"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonExecuteOption2" type="d3p1:DMButton"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonExecuteOption3" type="d3p1:DMButton"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonExecuteByTemplateOption1" type="d3p1:DMButton"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonExecuteByTemplateOption2" type="d3p1:DMButton"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonExecuteByTemplateOption3" type="d3p1:DMButton"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonExecuteConnectedTaskAction1" type="d3p1:DMButton"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonRevokeTaskAcceptance" type="d3p1:DMButton"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonSelectTaskTemplate" type="d3p1:DMButton"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="buttonUndoExecution" type="d3p1:DMButton"/>
+		<property name="dataVersion" type="xs:string"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="processingAction" type="d3p1:DMAction" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="flagsSubmenu" type="d3p1:DMFormGroup"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="resultOfOption1" type="d3p1:DMResultOfTaskAction" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="resultOfOption2" type="d3p1:DMResultOfTaskAction" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="resultOfOption3" type="d3p1:DMResultOfTaskAction" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMTaskActionType" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMTaskParticipant" base="d2p1:DMObject">
+		<property name="employee" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="completeRole" type="d2p1:DMCompleteRole" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMTerminateProcessingRequest" base="d2p1:DMRequest">
+		<property name="object" type="d2p1:DMObjectID"/>
+		<property name="terminationReason" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMTerminateProcessingResponse" base="d2p1:DMResponse"/>
+	<objectType name="DMType">
+		<property name="xdtoClassName" type="xs:string"/>
+		<property name="presentation" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUnlockFileRequest" base="d2p1:DMRequest">
+		<property name="objectId" type="d2p1:DMObjectID"/>
+		<property name="columnSet" type="xs:string" lowerBound="0" upperBound="-1"/>
+		<property name="clientIdentifier" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUnlockFileResponse" base="d2p1:DMResponse">
+		<property name="object" type="d2p1:DMObject" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUpdateBarcodesRequest" base="d2p1:DMRequest">
+		<property name="objectBarcodes" type="d2p1:DMObjectBarcodes"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUpdateBarcodesResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUpdateFileEditingInfoRequest" base="d2p1:DMRequest">
+		<property name="objectId" type="d2p1:DMObjectID"/>
+		<property name="info" type="d2p1:DMFileEditingInfo"/>
+		<property name="clientIdentifier" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUpdateFileEditingInfoResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUpdateFilesRequest" base="d2p1:DMRequest">
+		<property name="objects" type="d2p1:DMObject" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUpdateFilesResponse" base="d2p1:DMResponse"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUpdateFromIncomingDataRequest" base="d2p1:DMRequest">
+		<property name="objects" type="d2p1:DMIncomingDataRequestStructure" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUpdateFromIncomingDataResponse" base="d2p1:DMResponse">
+		<property name="objects" type="d2p1:DMObjectChangeResponseStructure" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUpdateRequest" base="d2p1:DMRequest">
+		<property name="objects" type="d2p1:DMObject" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUpdateResponse" base="d2p1:DMResponse">
+		<property name="objects" type="d2p1:DMObjectChangeResponseStructure" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUser" base="d2p1:DMObject">
+		<property name="privatePerson" type="d2p1:DMPrivatePerson" lowerBound="0"/>
+		<property name="subdivision" type="d2p1:DMSubdivision" lowerBound="0"/>
+		<property name="infoBaseUser" type="d2p1:DMInfoBaseUser" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMUserGroup" base="d2p1:DMObject">
+		<property name="isNotAvailableAccordingCommunicationRules" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMVATRateUniversal" base="d2p1:DMObject">
+		<property name="beginOfPeriod" type="xs:dateTime" lowerBound="0"/>
+		<property name="endOfPeriod" type="xs:dateTime" lowerBound="0"/>
+		<property name="rate" type="xs:decimal" lowerBound="0"/>
+		<property name="calculatedRate" type="xs:boolean" lowerBound="0"/>
+		<property name="country" type="d2p1:DMCountry" lowerBound="0"/>
+		<property name="predefinedName" type="d2p1:DMVATRate" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMVerificationAlgorithm" base="d2p1:DMObject"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMVisa" base="d2p1:DMObject">
+		<property name="reviewer" type="d2p1:DMObject" lowerBound="0"/>
+		<property name="addedBy" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="date" type="xs:dateTime" lowerBound="0"/>
+		<property name="signed" type="xs:boolean" lowerBound="0"/>
+		<property name="signatureChecked" type="xs:boolean" lowerBound="0"/>
+		<property name="signatureValid" type="xs:boolean" lowerBound="0"/>
+		<property name="result" type="d2p1:DMActionExecutionResult" lowerBound="0"/>
+		<property name="comment" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMWeeklyReport" base="d2p1:DMObject">
+		<property name="date" type="xs:dateTime" lowerBound="0"/>
+		<property name="number" type="xs:string" lowerBound="0"/>
+		<property name="mainWorkType" type="d2p1:DMWorkType" lowerBound="0"/>
+		<property name="mainProject" type="d2p1:DMProject" lowerBound="0"/>
+		<property name="projectsEnabled" type="xs:boolean" lowerBound="0"/>
+		<property name="duration" type="xs:string" lowerBound="0"/>
+		<property name="workingDuration" type="xs:string" lowerBound="0"/>
+		<property name="infoProgress" type="xs:string" lowerBound="0"/>
+		<property name="infoFailure" type="xs:string" lowerBound="0"/>
+		<property name="infoPlans" type="xs:string" lowerBound="0"/>
+		<property name="subdivision" type="d2p1:DMSubdivision" lowerBound="0"/>
+		<property name="employee" type="d2p1:DMEmployee" lowerBound="0"/>
+		<property name="works" type="d2p1:DMWeeklyReportWork" lowerBound="0" upperBound="-1"/>
+		<property name="daysOfTheWeek" type="d2p1:DMWeeklyReportDayOfTheWeek" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DMWeeklyReportDayOfTheWeek">
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="dayOfTheWeek" type="d3p1:DMDaysOfTheWeek" lowerBound="0"/>
+		<property name="date" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="kindOfDay" type="d3p1:DMKindsOfDays"/>
+		<property name="startTime" type="xs:time" lowerBound="0"/>
+		<property name="endTime" type="xs:time" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="dailyReport" type="d3p1:DMDailyReport" lowerBound="0"/>
+		<property name="duration" type="xs:string" lowerBound="0"/>
+		<property name="workingDuration" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DMWeeklyReportWork">
+		<property name="description" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="workType" type="d3p1:DMWorkType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="project" type="d3p1:DMProject" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="projectTask" type="d3p1:DMProjectTask" lowerBound="0"/>
+		<property name="projectsEnabled" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/dm" name="source" type="d3p1:DMObject" lowerBound="0"/>
+		<property name="addDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="mon" type="xs:time" lowerBound="0"/>
+		<property name="tue" type="xs:time" lowerBound="0"/>
+		<property name="wed" type="xs:time" lowerBound="0"/>
+		<property name="thu" type="xs:time" lowerBound="0"/>
+		<property name="fri" type="xs:time" lowerBound="0"/>
+		<property name="sat" type="xs:time" lowerBound="0"/>
+		<property name="sun" type="xs:time" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/dm" name="DMWorkType" base="d2p1:DMObject"/>
+	<objectType name="ExternalObject">
+		<property name="name" type="xs:string" nillable="true"/>
+		<property name="id" type="xs:string"/>
+		<property name="type" type="xs:string"/>
+	</objectType>
+	<objectType name="ExternalObjectID">
+		<property name="id" type="xs:string"/>
+		<property name="type" type="xs:string"/>
+	</objectType>
+</package>

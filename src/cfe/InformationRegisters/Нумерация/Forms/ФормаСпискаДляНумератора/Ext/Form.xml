@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Все номера</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer" callType="After">ЦППК_ПриСозданииНаСервереПосле</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<SkipOnInput>false</SkipOnInput>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="20"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="28">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="30"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="31">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="33"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="34">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="36"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПериодНумерации" id="4">
+					<DefaultItem>true</DefaultItem>
+					<Width>7</Width>
+					<ContextMenu name="ПериодНумерацииКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ПериодНумерацииExtendedTooltip" id="21"/>
+				</LabelField>
+				<LabelField name="Организация" id="10">
+					<Width>10</Width>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="22"/>
+				</LabelField>
+				<LabelField name="СвязанныйДокумент" id="12">
+					<Width>10</Width>
+					<ContextMenu name="СвязанныйДокументКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="СвязанныйДокументExtendedTooltip" id="23"/>
+				</LabelField>
+				<LabelField name="Подразделение" id="14">
+					<Width>10</Width>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ПодразделениеExtendedTooltip" id="24"/>
+				</LabelField>
+				<LabelField name="ВидДокумента" id="37">
+					<ContextMenu name="ВидДокументаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="Тематика" id="40">
+					<ContextMenu name="ТематикаКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ТематикаРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="Проект" id="16">
+					<Width>10</Width>
+					<ContextMenu name="ПроектКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПроектExtendedTooltip" id="25"/>
+				</LabelField>
+				<LabelField name="ВопросДеятельности" id="18">
+					<Width>10</Width>
+					<ContextMenu name="ВопросДеятельностиКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ВопросДеятельностиExtendedTooltip" id="26"/>
+				</LabelField>
+				<InputField name="ГрифДоступа" id="43">
+					<ContextMenu name="ГрифДоступаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ГрифДоступаРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="УзелКОД" id="46">
+					<ContextMenu name="УзелКОДКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="УзелКОДРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<LabelField name="ТекущийНомер" id="6">
+					<DefaultItem>true</DefaultItem>
+					<Width>10</Width>
+					<ContextMenu name="ТекущийНомерКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ТекущийНомерExtendedTooltip" id="27"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.18">
+		<Title>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Все номера</v8:content>
+			</v8:item>
+		</Title>
+		<AutoTitle>false</AutoTitle>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+		<ChildItems>
+			<Table name="Список" id="1">
+				<Representation>List</Representation>
+				<CommandBarLocation>None</CommandBarLocation>
+				<SkipOnInput>false</SkipOnInput>
+				<DefaultItem>true</DefaultItem>
+				<UseAlternationRowColor>true</UseAlternationRowColor>
+				<EnableStartDrag>true</EnableStartDrag>
+				<FileDragMode>AsFile</FileDragMode>
+				<SearchControlLocation>None</SearchControlLocation>
+				<AutoRefresh>false</AutoRefresh>
+				<AutoRefreshPeriod>60</AutoRefreshPeriod>
+				<Period>
+					<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+					<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+					<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+				</Period>
+				<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+				<RestoreCurrentRow>false</RestoreCurrentRow>
+				<TopLevelParent xsi:nil="true"/>
+				<ShowRoot>true</ShowRoot>
+				<AllowRootChoice>false</AllowRootChoice>
+				<UpdateOnDataChange>Auto</UpdateOnDataChange>
+				<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+				<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+				<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+				<ExtendedTooltip name="СписокExtendedTooltip" id="20"/>
+				<SearchStringAddition name="СписокСтрокаПоиска" id="28">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>SearchStringRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="30"/>
+				</SearchStringAddition>
+				<ViewStatusAddition name="СписокСостояниеПросмотра" id="31">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>ViewStatusRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="33"/>
+				</ViewStatusAddition>
+				<SearchControlAddition name="СписокУправлениеПоиском" id="34">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>SearchControl</Type>
+					</AdditionSource>
+					<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="36"/>
+				</SearchControlAddition>
+				<ChildItems>
+					<LabelField name="ПериодНумерации" id="4">
+						<DefaultItem>true</DefaultItem>
+						<Width>7</Width>
+						<ContextMenu name="ПериодНумерацииКонтекстноеМеню" id="5"/>
+						<ExtendedTooltip name="ПериодНумерацииExtendedTooltip" id="21"/>
+					</LabelField>
+					<LabelField name="Организация" id="10">
+						<Width>10</Width>
+						<ContextMenu name="ОрганизацияКонтекстноеМеню" id="11"/>
+						<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="22"/>
+					</LabelField>
+					<LabelField name="СвязанныйДокумент" id="12">
+						<Width>10</Width>
+						<ContextMenu name="СвязанныйДокументКонтекстноеМеню" id="13"/>
+						<ExtendedTooltip name="СвязанныйДокументExtendedTooltip" id="23"/>
+					</LabelField>
+					<LabelField name="Подразделение" id="14">
+						<Width>10</Width>
+						<ContextMenu name="ПодразделениеКонтекстноеМеню" id="15"/>
+						<ExtendedTooltip name="ПодразделениеExtendedTooltip" id="24"/>
+					</LabelField>
+					<LabelField name="ВидДокумента" id="37">
+						<ContextMenu name="ВидДокументаКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="39"/>
+					</LabelField>
+					<LabelField name="Тематика" id="40">
+						<ContextMenu name="ТематикаКонтекстноеМеню" id="41"/>
+						<ExtendedTooltip name="ТематикаРасширеннаяПодсказка" id="42"/>
+					</LabelField>
+					<LabelField name="Проект" id="16">
+						<Width>10</Width>
+						<ContextMenu name="ПроектКонтекстноеМеню" id="17"/>
+						<ExtendedTooltip name="ПроектExtendedTooltip" id="25"/>
+					</LabelField>
+					<LabelField name="ВопросДеятельности" id="18">
+						<Width>10</Width>
+						<ContextMenu name="ВопросДеятельностиКонтекстноеМеню" id="19"/>
+						<ExtendedTooltip name="ВопросДеятельностиExtendedTooltip" id="26"/>
+					</LabelField>
+					<InputField name="ГрифДоступа" id="43">
+						<ContextMenu name="ГрифДоступаКонтекстноеМеню" id="44"/>
+						<ExtendedTooltip name="ГрифДоступаРасширеннаяПодсказка" id="45"/>
+					</InputField>
+					<InputField name="УзелКОД" id="46">
+						<ContextMenu name="УзелКОДКонтекстноеМеню" id="47"/>
+						<ExtendedTooltip name="УзелКОДРасширеннаяПодсказка" id="48"/>
+					</InputField>
+					<LabelField name="ТекущийНомер" id="6">
+						<DefaultItem>true</DefaultItem>
+						<Width>10</Width>
+						<ContextMenu name="ТекущийНомерКонтекстноеМеню" id="7"/>
+						<ExtendedTooltip name="ТекущийНомерExtendedTooltip" id="27"/>
+					</LabelField>
+				</ChildItems>
+			</Table>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>

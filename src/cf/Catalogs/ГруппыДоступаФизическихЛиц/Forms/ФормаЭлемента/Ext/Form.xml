@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПраваДоступа" id="13">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПраваДоступа</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаПраваДоступаРасширеннаяПодсказка" id="14"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНаименованиеКод" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеКодРасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Комментарий" id="7">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Ответственный" id="10">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ChooseType>false</ChooseType>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="ChoiceProcessing">ОтветственныйОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаКоманды" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<LabelDecoration name="ЗаголовокТаблицыДоступа" id="21">
+					<Width>5</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступ:</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сотрудники, которым доступны физ. лица этой группы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="ЗаголовокТаблицыДоступаКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ЗаголовокТаблицыДоступаРасширеннаяПодсказка" id="23"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаКнопкиТаблицыДоступа" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки таблицы доступа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки таблицы доступа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаКнопкиТаблицыДоступаExtendedTooltip" id="25"/>
+					<ChildItems>
+						<Button name="ДоступПодобрать" id="48">
+							<Type>CommandBarButton</Type>
+							<Representation>Text</Representation>
+							<CommandName>Form.Command.ПодобратьСотрудниковДоступ</CommandName>
+							<ExtendedTooltip name="ДоступПодобратьРасширеннаяПодсказка" id="49"/>
+						</Button>
+						<Button name="ДоступДобавить" id="28">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Item.Доступ.StandardCommand.Add</CommandName>
+							<ExtendedTooltip name="ДоступДобавитьExtendedTooltip" id="29"/>
+						</Button>
+						<Button name="ДоступУдалить" id="30">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Item.Доступ.StandardCommand.Delete</CommandName>
+							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ДоступУдалитьExtendedTooltip" id="31"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Доступ" id="32">
+			<Header>false</Header>
+			<HorizontalLines>false</HorizontalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Доступ</DataPath>
+			<CommandSet>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДоступКонтекстноеМеню" id="33"/>
+			<AutoCommandBar name="ДоступКоманднаяПанель" id="34">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДоступРасширеннаяПодсказка" id="35"/>
+			<SearchStringAddition name="ДоступСтрокаПоиска" id="36">
+				<AdditionSource>
+					<Item>Доступ</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДоступСтрокаПоискаКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="ДоступСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДоступСостояниеПросмотра" id="39">
+				<AdditionSource>
+					<Item>Доступ</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДоступСостояниеПросмотраКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="ДоступСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДоступУправлениеПоиском" id="42">
+				<AdditionSource>
+					<Item>Доступ</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДоступУправлениеПоискомКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="ДоступУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="ChoiceProcessing">ДоступОбработкаВыбора</Event>
+				<Event name="OnStartEdit">ДоступПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ДоступУчастник" id="45">
+					<DataPath>Объект.Доступ.Участник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДоступУчастникКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ДоступУчастникРасширеннаяПодсказка" id="47"/>
+					<Events>
+						<Event name="AutoComplete">ДоступУчастникАвтоПодбор</Event>
+						<Event name="StartChoice">ДоступУчастникНачалоВыбора</Event>
+						<Event name="TextEditEnd">ДоступУчастникОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ГруппыДоступаФизическихЛиц</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПраваДоступа" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права доступа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права доступа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПраваДоступа</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ДокументооборотИспользоватьОграничениеПравДоступа</Item>
+			</FunctionalOptions>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодобратьСотрудниковДоступ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F8</Shortcut>
+			<Picture>
+				<xr:Ref>CommonPicture.ПодобратьРаботы</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПодобратьСотрудниковДоступ</Action>
+			<Representation>Text</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

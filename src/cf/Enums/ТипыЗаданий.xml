@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Enum uuid="ca1c22ee-3acb-4c5c-9f18-6c5535436a98">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ТипыЗаданий" category="Ref">
+				<xr:TypeId>1b0c99ee-b1db-4713-9c57-2ddc9fcdcfda</xr:TypeId>
+				<xr:ValueId>6145c56b-d617-42c9-ba9a-381385049b31</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ТипыЗаданий" category="Manager">
+				<xr:TypeId>c4b54b0d-559c-4a2f-a618-3af6550b0866</xr:TypeId>
+				<xr:ValueId>9cd8e429-7e41-4abb-bc70-8377134852ed</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ТипыЗаданий" category="List">
+				<xr:TypeId>c712fb43-d80e-47e3-9b8f-e4cfa840f15e</xr:TypeId>
+				<xr:ValueId>f053e0c1-06f2-4750-93c3-6cd8a0bb10fb</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ТипыЗаданий</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы заданий</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="f77b2321-d147-4d84-8b34-f3ad5a373894">
+				<Properties>
+					<Name>ВыполнениеЗадачи</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнение задачи</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f387eba2-689d-419a-a4e4-f4ae9de9684b">
+				<Properties>
+					<Name>ДобавитьТегиHtmlПередОзнакомлениемБыстрый</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавить теги html перед ознакомлением быстрый</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f0715339-9605-4ada-aa6a-55a72b581570">
+				<Properties>
+					<Name>ДобавитьТегиHtmlПередОзнакомлениемДолгий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавить теги html перед ознакомлением долгий</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="51f5ffbb-58a0-410c-82a6-c142a91bf999">
+				<Properties>
+					<Name>ДобавитьТегиHtmlПриНачалеСогласованияБыстрый</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавить теги html при начале согласования быстрый</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="5d12bb5f-4d3c-4756-84ff-58ea205e05e3">
+				<Properties>
+					<Name>ДобавитьТегиHtmlПриНачалеСогласованияДолгий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавить теги html при начале согласования долгий</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e824d67d-40f9-4c71-b6b4-591146f6b055">
+				<Properties>
+					<Name>ДобавитьУдалитьЗаполняемыйПредмет</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавить(удалить) заполняемый предмет</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b958807d-b43b-4617-836c-717d815b91fe">
+				<Properties>
+					<Name>ЗавершениеОзнакомленияСогласования</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершение ознакомления согласования</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8850a459-299e-4f31-bc75-d996ab6e963d">
+				<Properties>
+					<Name>ЗапускОбработкиПоЗадачеЭлемента</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запуск обработки по задаче элемента</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ea6689f8-6b0f-411b-b80c-0735a26690ba">
+				<Properties>
+					<Name>ЗапускОбработкиПоОбработке</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запуск обработки по обработке</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b9fc77e9-32bb-4f2c-9047-785a69157568">
+				<Properties>
+					<Name>МаршрутизацияКомплексногоПроцессаПослеВыполненияВложенного</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маршрутизация комплексного процесса после выполнения вложенного</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e3dff58f-5219-4eb5-b7f3-7b3560e3fde3">
+				<Properties>
+					<Name>МаршрутизацияКомплексногоПроцессаПослеВыполненияЗадачи</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маршрутизация комплексного процесса после выполнения задачи</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="32d14583-2c14-40d6-91a9-ab35c8b5b9c6">
+				<Properties>
+					<Name>МаршрутизацияКомплексногоПроцессаПоСхемеПослеПродолжения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маршрутизация комплексного процесса по схеме после продолжения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="68d59106-5d55-46c8-8a0d-51fd3f8d6895">
+				<Properties>
+					<Name>НачатьВыполнениеДействияИсполненияПроцессами</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начать выполнение действия исполнения процессами</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6a569169-6d75-497d-99f1-afada3bf8c30">
+				<Properties>
+					<Name>НачатьВыполнениеДействияМассовогоОзнакомления</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начать выполнение действия массового ознакомления</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9e2530f0-a90e-48b1-ae86-b18923f9ea6b">
+				<Properties>
+					<Name>НачатьВыполнениеДействияПроцессамиНовыеУчастники</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начать выполнение действия процессами (новые участники)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d70a08e1-42bb-4634-85aa-fea59c90f2db">
+				<Properties>
+					<Name>НачатьВыполнениеДействияПроцессом</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начать выполнение действия процессом</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="586783f9-d0bb-45ca-a634-d9c65a3a162a">
+				<Properties>
+					<Name>НачатьВыполнениеДействияСогласованияПроцессом</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начать выполнение действия согласования процессом</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c8e736cc-814f-487f-a417-2de53eed44dc">
+				<Properties>
+					<Name>НачатьВыполнениеДействияСогласованияПроцессомНовыеУчастники</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начать выполнение действия согласования процессом (новые участники)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="02bca9d1-9d83-46dc-8593-b0d48daa1306">
+				<Properties>
+					<Name>ОбновитьHtmlПередОзнакомлением</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить html перед ознакомлением</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3e8c783e-c329-4f0e-89b3-7d74641606c1">
+				<Properties>
+					<Name>ОбновитьДанныеЗадачПоЗамещению</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить данные задач по замещению</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="5ece3bc7-af1c-4faf-9c5b-cc1e57f7c8a3">
+				<Properties>
+					<Name>ОбновитьДействиеОбработки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить действие обработки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a398c579-28c8-4a83-ac79-f6d95bda0c5c">
+				<Properties>
+					<Name>ОбновитьДействиеОзнакомленияЦеликомЕслиНужно</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить действие ознакомления целиком если нужно</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2fcd6992-37cd-4cf0-b06d-e3b08c790368">
+				<Properties>
+					<Name>ОбновитьЗадачуПоСостояниюДействия</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить задачу по состоянию действия</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3404d6aa-1b12-455b-bf1d-ce2c21e87bbc">
+				<Properties>
+					<Name>ОбновитьЗадачуПриПеренаправлении</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить задачу при перенаправлении</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1ac3f25c-b777-41bf-891c-2eb83e151bec">
+				<Properties>
+					<Name>ОбновитьЗадачуУчастникаМассовогоОзнакомления</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить задачу участника массового ознакомления</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="28afac8e-f4fb-40d3-bc38-ee8fdd46b42b">
+				<Properties>
+					<Name>ОбновитьОбработкуОбъекта</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить обработку объекта</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c3bd88fc-3e35-48d6-9929-eecc240f3879">
+				<Properties>
+					<Name>ОбновитьПроцессБезДействия</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить процесс без действия</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="73ff5a6d-8107-41de-9d2b-9dd8c741771c">
+				<Properties>
+					<Name>ОбработатьИзменениеКонтейнеровДля2ФА</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обработать изменение контейнеров для 2ФА</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="42e2b4ec-a535-40a6-9a8c-68e38ddda1ce">
+				<Properties>
+					<Name>ОстановитьОбработку</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остановить обработку</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e78f1674-7171-4c1f-b4af-374cd69ab76d">
+				<Properties>
+					<Name>ОстановитьПроцесс</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остановить процесс</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3ebddb6a-d442-4f75-9203-c23ad7e36669">
+				<Properties>
+					<Name>ОтменитьВыполнениеЗадачи</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отменить выполнение задачи</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="16772852-df4e-4cd0-9168-bf666569a8da">
+				<Properties>
+					<Name>ОтменитьПринятиеКИсполнениюЗадачуПроцесса</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отменить принятие к исполнению задачу процесса</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4820e9da-3bfa-492e-8806-39d62b1b9e1a">
+				<Properties>
+					<Name>ПерейтиКВыполнениюДействияВнеОчереди</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перейти к выполнению действия вне очереди</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d2573436-64ac-4293-985f-4847412c86d8">
+				<Properties>
+					<Name>ПеренаправлениеЗадачи</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перенаправление задачи</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a858fa04-8e45-4cf9-9178-36f9b77af0c2">
+				<Properties>
+					<Name>ПереносСрокаВыполненияЗадачи</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перенос срока выполнения задачи</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e2f8172b-a061-42df-92f1-f64f4bd5c8c6">
+				<Properties>
+					<Name>ПодготовитьПредметКСогласованиюВРежимеЗамечаний</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подготовить предмет к согласованию в режиме замечаний</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="7ce65332-9b53-45f2-b54f-fda8c0d06da5">
+				<Properties>
+					<Name>ПодготовкаОзнакомленияСогласования</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подготовка ознакомления согласования</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8e2261b1-5106-4486-9553-cc01a5b75df0">
+				<Properties>
+					<Name>ПрерватьПроцесс</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прервать процесс</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="0864024f-0da7-4f6a-8934-c03dcef5bc77">
+				<Properties>
+					<Name>ПринятьКИсполнениюЗадачуПроцесса</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Принять к исполнению задачу процесса</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="39e597e1-5af8-43e6-a07a-5ffe291655ad">
+				<Properties>
+					<Name>ПродолжитьВыполнениеОбработкиПослеЗавершенияОзнакомленияСОжиданием</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продолжить выполнение обработки после завершения ознакомления с ожиданием</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4731b837-8af2-4df9-982c-ca7bef977f4b">
+				<Properties>
+					<Name>ПродолжитьОбработку</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продолжить обработку</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9f6ff984-6c65-4ac3-9350-96234f5c6626">
+				<Properties>
+					<Name>ПродолжитьПроцесс</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продолжить процесс</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ecc1876f-e6ff-4c2f-8e9e-2e420ef377ce">
+				<Properties>
+					<Name>СоздатьHtmlПриНачалеСогласования</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создать html при начале согласования</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="405c9dc3-7f1b-4472-8361-9864b376909f">
+				<Properties>
+					<Name>СохранитьРезультатВыполненияВЗадачуПроцесса</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сохранить результат выполнения в задачу процесса</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c79a2366-5e3b-41dd-a972-37fbe30176b7">
+				<Properties>
+					<Name>СтартоватьПроцесс</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стартовать процесс</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c04241eb-c516-4e44-92db-7ac989565fbd">
+				<Properties>
+					<Name>СформироватьДанныеДляПредпросмотраФайла</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сформировать данные для предпросмотра файла</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="22bfc621-699a-488f-8d75-a43d43ac24e1">
+				<Properties>
+					<Name>СформироватьПроцессДляИсполнителейДействияИсполнения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сформировать процесс для исполнителей действия исполнения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="27ceffb5-ece9-43f4-93c0-317e219f8d62">
+				<Properties>
+					<Name>СформироватьПроцессДляОбработкиОбъекта</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сформировать процесс для обработки объекта</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="36742bd2-5767-4e53-90ce-78e3b6e352ca">
+				<Properties>
+					<Name>СформироватьПроцессДляПунктаДействияИсполнения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сформировать процесс для пункта действия исполнения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f488ea76-b560-4a09-bf6b-9a4d45010837">
+				<Properties>
+					<Name>СформироватьПроцессДляРассматривающегоДействияИсполнения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сформировать процесс для рассматривающего действия исполнения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

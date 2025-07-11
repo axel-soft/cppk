@@ -1,0 +1,757 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.18">
+	<setForNewObjects>false</setForNewObjects>
+	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
+	<object>
+		<name>InformationRegister.СостоянияКонтрагентовБЭД</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ТранспортныеКонтейнерыЭДО</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.КриптографияБЭД</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ШаблоныДляСозданияДокументовПоВходящимЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "Получатель", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ТранспортныйКонтейнерЭДОПрисоединенныеФайлы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "ВладелецФайла", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ДиагностикаЭДО</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.СообщениеЭДОПрисоединенныеФайлы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "ВладелецФайла.ЭлектронныйДокумент.Организация", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ЖурналДействийПоЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "ЭлектронныйДокумент", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonCommand.ВыгрузитьДанныеВФайл</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ВизуализацииДокументовОблачногоЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonCommand.ЗагрузитьПерезаполнитьОбъектИзФайла</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТранспортныйКонтейнерЭДО.Command.СохранитьТранспортныйКонтейнерНаДиск</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.НастройкиЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УдалитьАктуальныеДокументыЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "ЭлектронныйДокумент", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.УчетныеЗаписиЭДО</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.НастройкиВнутреннегоЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "Организация", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.НаличиеНовыхЭлектронныхДокументов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТранспортныйКонтейнерЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящийЭДО.Command.КарточкаЭлектронногоДокумента</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ФорматАктПриемкиСтроительныхРаботИнформацияПодрядчикаЭДО</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ОповещениеОСобытияхЭДО</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ИнтеграцияБРО_ЭДО</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПроверкиЭлектронныхПодписейЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "ЭлектронныйДокумент", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.НастройкиЭДО</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументВходящийЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ФорматДоговорныйДокумент101</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументИсходящийЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ДатаОбновленияНаВерсиюСПрочтенностью</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ОбменСКонтрагентами.Command.ОткрытьТекущиеДелаЭДО</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронныйДокументВходящийЭДО.Command.КарточкаЭлектронногоДокумента</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.СведенияОПрочтенииДокументовЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ФорматДоговорныйДокументИнформацияОтправителяЭДО</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.СостоянияОбменовЭДЧерезОператоровЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ОбменСКонтрагентами.Command.ДокументыНаПодпись</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.НастройкиОтправкиЭДО</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ОбработчикОшибокЭДО</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ФорматАктПриемкиСтроительныхРаботИнформацияЗаказчикаЭДО</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.СостоянияПравилВизуализацииОблачногоЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.СостоянияПоОбъектамУчетаЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "Организация", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.ДиаграммаСостоянияЭДО</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Configuration.ДокументооборотКОРП</name>
+		<right>
+			<name>MainWindowModeNormal</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeEmbeddedWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeFullscreenWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeKiosk</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>AnalyticsSystemClient</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ОбменСКонтрагентами</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ОбъектыУчетаДокументовЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "ЭлектронныйДокумент.Организация", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ИнтерфейсДокументовЭДО</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ОшибкиПередачиЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.СостоянияДокументовЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "ЭлектронныйДокумент", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ОбменСКонтрагентами.Command.АрхивЭлектронныхДокументов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.СообщениеЭДО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "ЭлектронныйДокумент", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.НастройкиПолученияЭлектронныхДокументов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "Получатель", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<restrictionTemplate>
+		<name>ПоДескрипторуОбъекта</name>
+		<condition>// Параметр(1) - отбор по полям Изменение, Добавление:
+//	по умолчанию нет условий, проверяется право чтения
+//  "Изменение" - условие Изменение = ИСТИНА
+//	"ИзменениеИлиДобавление" - условие (Изменение = ИСТИНА ИЛИ Добавление = ИСТИНА)
+//
+// Параметр(2) - имя поля, указывающее на объект, чьи права будут проанализированы
+//	по умолчанию "Ссылка"
+// 
+// Параметр(3) - дополнительные условия:
+//  "БезРуководителейИДелегатов" - не включать руководителей и делегатов в права
+//  "БезРуководителей" - не включать руководителей в права
+//  "БезДелегатов" - не включать делегатов в права
+// 
+// Параметр(4) - оставлять пустым (зарезервирован, не используется)
+// 
+// Примеры использования шаблона:
+//	#ПоДескрипторуОбъекта("", "")
+//	#ПоДескрипторуОбъекта("Изменение", "")
+//	#ПоДескрипторуОбъекта("", "Документ")
+//	#ПоДескрипторуОбъекта("ИзменениеИлиДобавление", "Мероприятие")
+//	#ПоДескрипторуОбъекта("ИзменениеИлиДобавление", "Мероприятие", "БезРуководителейИДелегатов")
+
+#Если &amp;ДокументооборотИспользоватьОграниченияПравДоступа #Тогда
+	
+	ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДескрипторыДляОбъектов КАК ДескрипторыДляОбъектов
+	#Если "#Параметр(2)" = "" #Тогда
+		ПО ТекущаяТаблица.Ссылка = ДескрипторыДляОбъектов.Объект
+	#Иначе
+		ПО ТекущаяТаблица.#Параметр(2) = ДескрипторыДляОбъектов.Объект
+	#КонецЕсли
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПраваПоДескрипторамДоступаОбъектов КАК ПраваПоДескрипторамДоступаОбъектов
+	ПО ДескрипторыДляОбъектов.Дескриптор = ПраваПоДескрипторамДоступаОбъектов.Дескриптор
+	
+	ГДЕ ПраваПоДескрипторамДоступаОбъектов.Сотрудник В (&amp;СотрудникиПользователя)
+	
+	#Если "#Параметр(1)" = "Изменение" #Тогда
+		И ПраваПоДескрипторамДоступаОбъектов.Изменение
+	#ИначеЕсли "#Параметр(1)" = "ИзменениеИлиДобавление" #Тогда
+		И (ПраваПоДескрипторамДоступаОбъектов.Изменение
+			ИЛИ ПраваПоДескрипторамДоступаОбъектов.Добавление)
+	#КонецЕсли
+	
+	#Если "#Параметр(3)" = "БезРуководителейИДелегатов" #Тогда
+		И ПраваПоДескрипторамДоступаОбъектов.ОбъектОснование = НЕОПРЕДЕЛЕНО
+	#КонецЕсли
+	
+#КонецЕсли
+
+#Если "#Параметр(4)" = "" #Тогда
+#КонецЕсли
+</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>ПоДескрипторуРегистра</name>
+		<condition>// Параметр(1) - отбор по полям Изменение, Добавление:
+//	по умолчанию нет условий, проверяется право чтения
+//  "Изменение" - условие Изменение = ИСТИНА
+//	"ИзменениеИлиДобавление" - условие (Изменение = ИСТИНА ИЛИ Добавление = ИСТИНА)
+//
+// Параметр(2) - имя поля - объекта доступа №1
+// Параметр(3) - имя поля - объекта доступа №2
+// Параметр(4) - имя поля - объекта доступа №3
+//
+// Параметр(5) - дополнительные условия:
+//  "БезРуководителейИДелегатов" - не включать руководителей и делегатов в права
+//  "БезРуководителей" - не включать руководителей в права
+//  "БезДелегатов" - не включать делегатов в права
+// 
+// Параметр(6) - оставлять пустым (зарезервирован, не используется)
+// 
+// Примеры использования шаблона:
+//	#ПоДескрипторуРегистра("Изменение", "Сотрудник", "", "", "")
+//	#ПоДескрипторуРегистра("", "Сотрудник", "Подразделение", "Организация", "")
+//	#ПоДескрипторуРегистра("", "Сотрудник", "Подразделение", "Организация", "БезРуководителейИДелегатов")
+
+#Если &amp;ДокументооборотИспользоватьОграниченияПравДоступа #Тогда
+
+	
+	ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ДескрипторыДоступаРегистров КАК ДескрипторыДоступаРегистров
+	ПО ДескрипторыДоступаРегистров.Регистр = #ИмяТекущейТаблицы
+	И ТекущаяТаблица.#Параметр(2) = ДескрипторыДоступаРегистров.ОбъектДоступа1
+	#Если "#Параметр(3)" &lt;&gt; "" #Тогда
+		И ТекущаяТаблица.#Параметр(3) = ДескрипторыДоступаРегистров.ОбъектДоступа2
+	#КонецЕсли
+	#Если "#Параметр(4)" &lt;&gt; "" #Тогда
+		И ТекущаяТаблица.#Параметр(4) = ДескрипторыДоступаРегистров.ОбъектДоступа3
+	#КонецЕсли
+
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПраваПоДескрипторамДоступаРегистров КАК ПраваПоДескрипторамДоступаРегистров
+	ПО ДескрипторыДоступаРегистров.Ссылка = ПраваПоДескрипторамДоступаРегистров.Дескриптор
+	
+	ГДЕ ПраваПоДескрипторамДоступаРегистров.Сотрудник В (&amp;СотрудникиПользователя)
+	
+	#Если "#Параметр(1)" = "Изменение" #Тогда
+		И ПраваПоДескрипторамДоступаРегистров.Изменение = ИСТИНА
+	#ИначеЕсли "#Параметр(1)" = "ИзменениеИлиДобавление" #Тогда
+		И (ПраваПоДескрипторамДоступаРегистров.Изменение = ИСТИНА ИЛИ ПраваПоДескрипторамДоступаРегистров.Добавление = ИСТИНА)
+	#КонецЕсли
+	
+	#Если "#Параметр(5)" = "БезРуководителейИДелегатов" #Тогда
+		И ПраваПоДескрипторамДоступаРегистров.ОбъектОснование = НЕОПРЕДЕЛЕНО
+	#КонецЕсли
+	
+#КонецЕсли
+
+#Если "#Параметр(6)" = "" #Тогда
+#КонецЕсли
+</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>ЭДДоступныеПоДокументуДО</name>
+		<condition>#Если &amp;ДокументооборотИспользоватьОграниченияПравДоступа #Тогда
+	
+	ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ОбъектыУчетаДокументовЭДО КАК ОбъектыУчетаДокументовЭДО
+	#Если "#Параметр(1)" = "" #Тогда
+			ПО ТекущаяТаблица.Ссылка = ОбъектыУчетаДокументовЭДО.ЭлектронныйДокумент
+	#Иначе
+			ПО ТекущаяТаблица.#Параметр(1) = ОбъектыУчетаДокументовЭДО.ЭлектронныйДокумент
+	#КонецЕсли
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДескрипторыДляОбъектов КАК ДескрипторыДляОбъектов
+		ПО ОбъектыУчетаДокументовЭДО.ОбъектУчета = ДескрипторыДляОбъектов.Объект
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПраваПоДескрипторамДоступаОбъектов КАК ПраваПоДескрипторамДоступаОбъектов
+		ПО ДескрипторыДляОбъектов.Дескриптор = ПраваПоДескрипторамДоступаОбъектов.Дескриптор
+	
+	ГДЕ ПраваПоДескрипторамДоступаОбъектов.Сотрудник В (&amp;СотрудникиПользователя)
+#КонецЕсли
+</condition>
+	</restrictionTemplate>
+</Rights>

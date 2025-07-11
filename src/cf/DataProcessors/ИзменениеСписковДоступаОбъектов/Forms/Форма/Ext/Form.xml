@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ВыполнитьИзменения" id="48">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ВыполнитьИзменения</CommandName>
+				<ExtendedTooltip name="ВыполнитьИзмененияРасширеннаяПодсказка" id="49"/>
+			</Button>
+			<Button name="Отмена" id="50">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="51"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ТипОбъектов" id="1">
+			<DataPath>ТипОбъектов</DataPath>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>30</MaxWidth>
+			<DropListButton>true</DropListButton>
+			<ContextMenu name="ТипОбъектовКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ТипОбъектовРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ТипОбъектовПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="КомпоновщикНастроекНастройкиОтбор" id="4">
+			<Representation>Tree</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<Autofill>true</Autofill>
+			<DefaultItem>true</DefaultItem>
+			<Width>60</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>80</MaxWidth>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>КомпоновщикНастроек.Settings.Filter</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условия отбора</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ViewMode>All</ViewMode>
+			<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+			<ContextMenu name="КомпоновщикНастроекНастройкиОтборКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="КомпоновщикНастроекНастройкиОтборКоманднаяПанель" id="6"/>
+			<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="КомпоновщикНастроекНастройкиОтборСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>КомпоновщикНастроекНастройкиОтбор</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КомпоновщикНастроекНастройкиОтборСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КомпоновщикНастроекНастройкиОтборСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>КомпоновщикНастроекНастройкиОтбор</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КомпоновщикНастроекНастройкиОтборСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КомпоновщикНастроекНастройкиОтборУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>КомпоновщикНастроекНастройкиОтбор</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КомпоновщикНастроекНастройкиОтборУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+		</Table>
+		<Table name="ИзмененияДоступа" id="17">
+			<Representation>List</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>80</MaxWidth>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ИзмененияДоступа</DataPath>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ИзмененияДоступаКонтекстноеМеню" id="18"/>
+			<AutoCommandBar name="ИзмененияДоступаКоманднаяПанель" id="19">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ИзмененияДоступаДобавить" id="52">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Item.ИзмененияДоступа.StandardCommand.Add</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="ИзмененияДоступаДобавитьРасширеннаяПодсказка" id="53"/>
+					</Button>
+					<Button name="ИзмененияДоступаУдалить" id="54">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Item.ИзмененияДоступа.StandardCommand.Delete</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="ИзмененияДоступаУдалитьРасширеннаяПодсказка" id="55"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ИзмененияДоступаРасширеннаяПодсказка" id="20"/>
+			<SearchStringAddition name="ИзмененияДоступаСтрокаПоиска" id="21">
+				<AdditionSource>
+					<Item>ИзмененияДоступа</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИзмененияДоступаСтрокаПоискаКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="ИзмененияДоступаСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ИзмененияДоступаСостояниеПросмотра" id="24">
+				<AdditionSource>
+					<Item>ИзмененияДоступа</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИзмененияДоступаСостояниеПросмотраКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="ИзмененияДоступаСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ИзмененияДоступаУправлениеПоиском" id="27">
+				<AdditionSource>
+					<Item>ИзмененияДоступа</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ИзмененияДоступаУправлениеПоискомКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="ИзмененияДоступаУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnStartEdit">ИзмененияДоступаПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ИзмененияДоступаДействие" id="30">
+					<DataPath>ИзмененияДоступа.Действие</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>14</Width>
+					<MaxWidth>6</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ListChoiceMode>true</ListChoiceMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ИзмененияДоступаДействиеКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ИзмененияДоступаДействиеРасширеннаяПодсказка" id="32"/>
+					<Events>
+						<Event name="OnChange">ИзмененияДоступаДействиеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ИзмененияДоступаУчастник" id="33">
+					<DataPath>ИзмененияДоступа.Участник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ИзмененияДоступаУчастникКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ИзмененияДоступаУчастникРасширеннаяПодсказка" id="35"/>
+					<Events>
+						<Event name="AutoComplete">ИзмененияДоступаУчастникАвтоПодбор</Event>
+						<Event name="StartChoice">ИзмененияДоступаУчастникНачалоВыбора</Event>
+						<Event name="ChoiceProcessing">ИзмененияДоступаУчастникОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="ИзмененияДоступаИзменение" id="36">
+					<DataPath>ИзмененияДоступа.Изменение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ThreeState>true</ThreeState>
+					<ContextMenu name="ИзмененияДоступаИзменениеКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ИзмененияДоступаИзменениеРасширеннаяПодсказка" id="38"/>
+					<Events>
+						<Event name="OnChange">ИзмененияДоступаИзменениеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ИзменениеСписковДоступаОбъектов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="КомпоновщикНастроек" id="2">
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипОбъектов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ИзмененияДоступа" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменения списков доступа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Действие" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Что сделать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Участник" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Участник</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.КонтейнерыСотрудников</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Изменение" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>0</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="АдресСхемы" id="5">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбработанныеСОшибками" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработанные с ошибками</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Объект" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:AnyIBRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Попыток" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Попыток</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЛимитПопытокОбработкиОбъекта" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лимит попыток обработки объекта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьИзменения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить изменения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьИзменения</Action>
+		</Command>
+	</Commands>
+</Form>

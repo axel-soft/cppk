@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФИОБК_ТТС</dataPath>
+			<field>ФИОБК_ТТС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО билетного кассира</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПретензионнаяКасса</dataPath>
+			<field>ПретензионнаяКасса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЗаявлений</dataPath>
+			<field>КоличествоЗаявлений</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество заявлений</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заявка</dataPath>
+			<field>Заявка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ДокументыПредприятия.Ссылка) КАК КоличествоЗаявлений,
+	ДокументыПредприятия.ПретензионнаяКасса КАК ПретензионнаяКасса,
+	ДокументыПредприятия.ФИОБК_ТТС КАК ФИОБК_ТТС,
+	ДокументыПредприятия.Ссылка КАК Заявка
+ИЗ
+	Справочник.ДокументыПредприятия КАК ДокументыПредприятия
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+			ТекущиеСостоянияДокументов.Документ КАК Документ
+		ИЗ
+			РегистрСведений.ТекущиеСостоянияДокументов КАК ТекущиеСостоянияДокументов
+		ГДЕ
+			ТекущиеСостоянияДокументов.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияДокументов.Исполнен)) КАК ВложенныйЗапросИсполнен
+		ПО (ДокументыПредприятия.Ссылка = ВложенныйЗапросИсполнен.Документ)
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+			ТекущиеСостоянияДокументовИсполнен.Документ КАК Документ
+		ИЗ
+			РегистрСведений.ТекущиеСостоянияДокументов КАК ТекущиеСостоянияДокументовИсполнен
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ТекущиеСостоянияДокументов КАК ТекущиеСостоянияДокументовНаРассмотрении
+				ПО ТекущиеСостоянияДокументовИсполнен.Документ = ТекущиеСостоянияДокументовНаРассмотрении.Документ
+					И (ТекущиеСостоянияДокументовИсполнен.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияДокументов.Исполнен))
+					И (ТекущиеСостоянияДокументовНаРассмотрении.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияДокументов.НаРассмотрении))
+		ГДЕ
+			ТекущиеСостоянияДокументовИсполнен.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияДокументов.Исполнен)) КАК ВложенныйЗапросИсполненНаРассмотрении
+		ПО (ДокументыПредприятия.Ссылка = ВложенныйЗапросИсполненНаРассмотрении.Документ)
+ГДЕ
+	ДокументыПредприятия.ПометкаУдаления = ЛОЖЬ
+	И ДокументыПредприятия.ВидДокумента = &amp;ВидДокумента
+	И ДокументыПредприятия.СрокИсполнения &lt; НАЧАЛОПЕРИОДА(&amp;ТекущаяДата, ДЕНЬ)
+	И (ВложенныйЗапросИсполнен.Документ ЕСТЬ NULL
+			ИЛИ НЕ ВложенныйЗапросИсполненНаРассмотрении.Документ ЕСТЬ NULL)
+	И ВЫБОР
+			КОГДА &amp;МестоРассмотрения = 1
+				ТОГДА ИСТИНА
+			КОГДА &amp;МестоРассмотрения = 2
+				ТОГДА ДокументыПредприятия.МестоРассмотрения = ЗНАЧЕНИЕ(Перечисление.МестоРассмотренияПоДокументуЗВДС.ПретензионнаяКасса)
+							И НЕ ДокументыПредприятия.РешениеСтанции = ЗНАЧЕНИЕ(Перечисление.РешенияПоДокументамЗВДС.РассмотрениеВЦО)
+						ИЛИ ДокументыПредприятия.МестоРассмотрения = ЗНАЧЕНИЕ(Перечисление.МестоРассмотренияПоДокументуЗВДС.ЦентральныйОфис)
+							И ДокументыПредприятия.РешениеЦО = ЗНАЧЕНИЕ(Перечисление.РешенияПоДокументамЗВДС_ЦО.РассмотрениеНаСтанции)
+			КОГДА &amp;МестоРассмотрения = 3
+				ТОГДА ДокументыПредприятия.МестоРассмотрения = ЗНАЧЕНИЕ(Перечисление.МестоРассмотренияПоДокументуЗВДС.ЦентральныйОфис)
+							И НЕ ДокументыПредприятия.РешениеЦО = ЗНАЧЕНИЕ(Перечисление.РешенияПоДокументамЗВДС_ЦО.РассмотрениеНаСтанции)
+						ИЛИ ДокументыПредприятия.МестоРассмотрения = ЗНАЧЕНИЕ(Перечисление.МестоРассмотренияПоДокументуЗВДС.ПретензионнаяКасса)
+							И ДокументыПредприятия.РешениеСтанции = ЗНАЧЕНИЕ(Перечисление.РешенияПоДокументамЗВДС.РассмотрениеВЦО)
+		КОНЕЦ
+	И ДокументыПредприятия.РегистрационныйНомер &lt;&gt; ""
+{ГДЕ
+	(ДокументыПредприятия.ДатаСоздания МЕЖДУ &amp;ДатаСозданияС И &amp;ДатаСозданияПо)}
+
+СГРУППИРОВАТЬ ПО
+	ДокументыПредприятия.ПретензионнаяКасса,
+	ДокументыПредприятия.ФИОБК_ТТС,
+	ДокументыПредприятия.Ссылка</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоЗаявлений</dataPath>
+		<expression>Сумма(КоличествоЗаявлений)</expression>
+	</totalField>
+	<parameter>
+		<name>ВидДокумента</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид документа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыДокументов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаСозданияПо</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата создания по</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаСозданияС</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата создания С</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>МестоРассмотрения</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Место рассмотрения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">1</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:decimal">1</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">2</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только ПК</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">3</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только ЦО</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>КоличествоПросроченныхЗаявленийНаВозврат</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество просроченных заявлений</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЗаявлений</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>6f370da3-7c98-456e-9c9c-e969a633f26c</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МестоРассмотрения</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">1</dcscor:value>
+					<dcsset:userSettingID>8f540312-4e91-488c-b672-318273c79d94</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПретензионнаяКасса</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ФИОБК_ТТС</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:ChartType">Pie3D</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ПретензионнаяКасса</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:name>ФИО билетного кассира</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ФИОБК_ТТС</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:point>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПретензионнаяКасса</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>КоличествоЗаявлений</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:point>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

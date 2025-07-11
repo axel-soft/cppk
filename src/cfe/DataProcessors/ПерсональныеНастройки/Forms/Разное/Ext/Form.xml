@@ -1,0 +1,1008 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer" callType="After">ЦППК_ПриСозданииНаСервереПосле</Event>
+	</Events>
+	<ChildItems>
+		<CommandBar name="КоманднаяПанель" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="КоманднаяПанельExtendedTooltip" id="208"/>
+			<ChildItems>
+				<Button name="ЗаписатьИЗакрыть" id="2">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ЗаписатьИЗакрытьExtendedTooltip" id="209"/>
+				</Button>
+				<Button name="Отмена" id="3">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ОтменаExtendedTooltip" id="210"/>
+				</Button>
+				<Button name="Справка" id="4">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>0</CommandName>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="СправкаExtendedTooltip" id="211"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<InputField name="Проект" id="212">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проект по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Width>30</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<ContextMenu name="ПроектКонтекстноеМеню" id="213"/>
+			<ExtendedTooltip name="ПроектExtendedTooltip" id="214"/>
+		</InputField>
+		<InputField name="ВидПроекта" id="215">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид проекта по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Width>30</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ВидПроектаКонтекстноеМеню" id="216"/>
+			<ExtendedTooltip name="ВидПроектаExtendedTooltip" id="217"/>
+		</InputField>
+		<InputField name="РежимОтображенияМестногоВремени" id="310">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображение местного времени</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<Width>31</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="РежимОтображенияМестногоВремениКонтекстноеМеню" id="311"/>
+			<ExtendedTooltip name="РежимОтображенияМестногоВремениРасширеннаяПодсказка" id="312">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>«Местное время с часовым поясом» - хранимая в базе дата в часовом поясе сеанса будет приводиться к часовом поясу клиента, и будет отображаться часовой пояс клиента, чтобы было понятно – что это именно местное время.
+«Местное время без часового пояса» - хранимая в базе дата в часовом поясе сеанса будет приводиться к часовому поясу клиента, и не будет отображаться часовой пояс клиента.
+«Время сеанса» - хранимая в базе дата в часовом поясе сеанса будет отображаться без изменений.</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</InputField>
+		<CheckBoxField name="ИспользоватьОбзорПроектов" id="218">
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользоватьОбзорПроектовКонтекстноеМеню" id="219"/>
+			<ExtendedTooltip name="ИспользоватьОбзорПроектовРасширеннаяПодсказка" id="220"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаНапоминания" id="221">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа напоминания</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНапоминанияExtendedTooltip" id="222"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИнтервалПроверки" id="223">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа интервал проверки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИнтервалПроверкиExtendedTooltip" id="224"/>
+					<ChildItems>
+						<InputField name="ИнтервалПроверкиНапоминаний" id="225">
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="ИнтервалПроверкиНапоминанийКонтекстноеМеню" id="226"/>
+							<ExtendedTooltip name="ИнтервалПроверкиНапоминанийExtendedTooltip" id="227"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияМинИнтервалПроверки" id="228">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>мин.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияМинИнтервалПроверкиКонтекстноеМеню" id="229"/>
+							<ExtendedTooltip name="ДекорацияМинИнтервалПроверкиExtendedTooltip" id="230"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСрокНапоминания" id="231">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа срок напоминания</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСрокНапоминанияExtendedTooltip" id="232"/>
+					<ChildItems>
+						<InputField name="СрокНапоминанияПоУмолчанию" id="233">
+							<Width>4</Width>
+							<ContextMenu name="СрокНапоминанияПоУмолчаниюКонтекстноеМеню" id="234"/>
+							<ExtendedTooltip name="СрокНапоминанияПоУмолчаниюExtendedTooltip" id="235"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияМинСрокНапоминания" id="236">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>мин.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияМинСрокНапоминанияКонтекстноеМеню" id="237"/>
+							<ExtendedTooltip name="ДекорацияМинСрокНапоминанияExtendedTooltip" id="238"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="УстанавливатьНапоминаниеАвтоматически" id="239">
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УстанавливатьНапоминаниеАвтоматическиКонтекстноеМеню" id="240"/>
+					<ExtendedTooltip name="УстанавливатьНапоминаниеАвтоматическиExtendedTooltip" id="241"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ОтображатьФотографииПерсональнаяНастройка" id="242">
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтображатьФотографииПерсональнаяНастройкаКонтекстноеМеню" id="243"/>
+			<ExtendedTooltip name="ОтображатьФотографииПерсональнаяНастройкаExtendedTooltip" id="244"/>
+		</CheckBoxField>
+		<CheckBoxField name="ЗапрашиватьПодтверждениеПриЗакрытииПрограммы" id="58">
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗапрашиватьПодтверждениеПриЗакрытииПрограммыКонтекстноеМеню" id="59"/>
+			<ExtendedTooltip name="ЗапрашиватьПодтверждениеПриЗакрытииПрограммыExtendedTooltip" id="206"/>
+		</CheckBoxField>
+		<CheckBoxField name="ИспользоватьАвтоматическоеПрочтение" id="245">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмечать сообщения форума как прочтенные при просмотре в области чтения</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользоватьАвтоматическоеПрочтениеКонтекстноеМеню" id="246"/>
+			<ExtendedTooltip name="ИспользоватьАвтоматическоеПрочтениеExtendedTooltip" id="247"/>
+		</CheckBoxField>
+		<CheckBoxField name="ЯвкаОбязательнаПоУмолчанию" id="304">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Устанавливать участникам мероприятия "Явка обязательна" по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЯвкаОбязательнаПоУмолчаниюКонтекстноеМеню" id="305"/>
+			<ExtendedTooltip name="ЯвкаОбязательнаПоУмолчаниюРасширеннаяПодсказка" id="306"/>
+		</CheckBoxField>
+		<Button name="ОчиститьИсториюВыбора" id="318">
+			<Type>UsualButton</Type>
+			<Representation>PictureAndText</Representation>
+			<CommandName>0</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить историю выбора</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<ExtendedTooltip name="ОчиститьИсториюВыбораРасширеннаяПодсказка" id="319">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>При работе с полем ранее вводимые значения отображаются в выпадающем списке. Иногда такие данные могут мешать работе.
+Команда позволяет очистить историю выбора, удаляя сохраненные значения</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</Button>
+		<UsualGroup name="ГруппаЗадачи" id="316">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа задачи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаЗадачиРасширеннаяПодсказка" id="317"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаФлагЗадач" id="248">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа флаг задач</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаФлагЗадачExtendedTooltip" id="249"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьФлагЗадач" id="250">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Флаг по умолчанию для задач:</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Устанавливается при двойном щелчке левой кнопкой мыши</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="НадписьФлагЗадачКонтекстноеМеню" id="251"/>
+							<ExtendedTooltip name="НадписьФлагЗадачExtendedTooltip" id="252"/>
+						</LabelDecoration>
+						<CommandBar name="КоманднаяПанельФлагЗадач" id="253">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель флаг задач</v8:content>
+								</v8:item>
+							</Title>
+							<Width>5</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ExtendedTooltip name="КоманднаяПанельФлагЗадачExtendedTooltip" id="254"/>
+							<ChildItems>
+								<Popup name="ПодменюФлагиЗадач" id="255">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Флаг</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Флаг</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Picture>
+										<xr:Ref>CommonPicture.ПустойФлаг</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<Representation>Picture</Representation>
+									<ExtendedTooltip name="ПодменюФлагиЗадачExtendedTooltip" id="256"/>
+									<ChildItems>
+										<ButtonGroup name="ГруппаФлагиЗадач" id="257">
+											<ExtendedTooltip name="ГруппаФлагиЗадачExtendedTooltip" id="258"/>
+											<ChildItems>
+												<Button name="КрасныйФлагЗадачи" id="259">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="КрасныйФлагЗадачиExtendedTooltip" id="260"/>
+												</Button>
+												<Button name="СинийФлагЗадачи" id="261">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="СинийФлагЗадачиExtendedTooltip" id="262"/>
+												</Button>
+												<Button name="ЖелтыйФлагЗадачи" id="263">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="ЖелтыйФлагЗадачиExtendedTooltip" id="264"/>
+												</Button>
+												<Button name="ЗеленыйФлагЗадачи" id="265">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="ЗеленыйФлагЗадачиExtendedTooltip" id="266"/>
+												</Button>
+												<Button name="ОранжевыйФлагЗадачи" id="267">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="ОранжевыйФлагЗадачиExtendedTooltip" id="268"/>
+												</Button>
+												<Button name="ЛиловыйФлагЗадачи" id="269">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="ЛиловыйФлагЗадачиExtendedTooltip" id="270"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+									</ChildItems>
+								</Popup>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКатегории" id="271">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка категорий</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаКатегорииExtendedTooltip" id="272"/>
+			<ChildItems>
+				<CheckBoxField name="ЗапрашиватьПодтверждениеПриПроверкеКатегорий" id="273">
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗапрашиватьПодтверждениеПриПроверкеКатегорийКонтекстноеМеню" id="274"/>
+					<ExtendedTooltip name="ЗапрашиватьПодтверждениеПриПроверкеКатегорийExtendedTooltip" id="275"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПоказыватьПодтверждениеПовторнойКатегоризации" id="276">
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоказыватьПодтверждениеПовторнойКатегоризацииКонтекстноеМеню" id="277"/>
+					<ExtendedTooltip name="ПоказыватьПодтверждениеПовторнойКатегоризацииExtendedTooltip" id="278"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОтсутствия" id="285">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отсутствия</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаОтсутствияРасширеннаяПодсказка" id="286"/>
+			<ChildItems>
+				<CheckBoxField name="ПредупреждатьОбОтсутствии" id="287">
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПредупреждатьОбОтсутствииКонтекстноеМеню" id="288"/>
+					<ExtendedTooltip name="ПредупреждатьОбОтсутствииРасширеннаяПодсказка" id="289"/>
+				</CheckBoxField>
+				<InputField name="ВопросСоздаватьПисьмо" id="290">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>При создании отсутствия</v8:content>
+						</v8:item>
+					</Title>
+					<Width>30</Width>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Создавать письмо</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Предлагать создать письмо</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Не создавать письмо</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВопросСоздаватьПисьмоКонтекстноеМеню" id="291"/>
+					<ExtendedTooltip name="ВопросСоздаватьПисьмоРасширеннаяПодсказка" id="292"/>
+				</InputField>
+				<InputField name="ВопросСоздатьПравило" id="293">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>При создании отсутствия</v8:content>
+						</v8:item>
+					</Title>
+					<Width>30</Width>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Создавать правило обработки писем</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Предлагать создать правило обработки писем</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Не создавать правило обработки писем</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВопросСоздатьПравилоКонтекстноеМеню" id="294"/>
+					<ExtendedTooltip name="ВопросСоздатьПравилоРасширеннаяПодсказка" id="295"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.18">
+		<CommandBarLocation>None</CommandBarLocation>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+		</AutoCommandBar>
+		<ChildItems>
+			<CommandBar name="КоманднаяПанель" id="1">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Командная панель</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="КоманднаяПанельExtendedTooltip" id="208"/>
+				<ChildItems>
+					<Button name="ЗаписатьИЗакрыть" id="2">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ЗаписатьИЗакрытьExtendedTooltip" id="209"/>
+					</Button>
+					<Button name="Отмена" id="3">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ОтменаExtendedTooltip" id="210"/>
+					</Button>
+					<Button name="Справка" id="4">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>0</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СправкаExtendedTooltip" id="211"/>
+					</Button>
+				</ChildItems>
+			</CommandBar>
+			<InputField name="Проект" id="212">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Проект по умолчанию</v8:content>
+					</v8:item>
+				</Title>
+				<Width>30</Width>
+				<HorizontalStretch>false</HorizontalStretch>
+				<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+				<ContextMenu name="ПроектКонтекстноеМеню" id="213"/>
+				<ExtendedTooltip name="ПроектExtendedTooltip" id="214"/>
+			</InputField>
+			<InputField name="ВидПроекта" id="215">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вид проекта по умолчанию</v8:content>
+					</v8:item>
+				</Title>
+				<Width>30</Width>
+				<HorizontalStretch>false</HorizontalStretch>
+				<ContextMenu name="ВидПроектаКонтекстноеМеню" id="216"/>
+				<ExtendedTooltip name="ВидПроектаExtendedTooltip" id="217"/>
+			</InputField>
+			<InputField name="РежимОтображенияМестногоВремени" id="310">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отображение местного времени</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTipRepresentation>Button</ToolTipRepresentation>
+				<Width>31</Width>
+				<HorizontalStretch>false</HorizontalStretch>
+				<ContextMenu name="РежимОтображенияМестногоВремениКонтекстноеМеню" id="311"/>
+				<ExtendedTooltip name="РежимОтображенияМестногоВремениРасширеннаяПодсказка" id="312">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>«Местное время с часовым поясом» - хранимая в базе дата в часовом поясе сеанса будет приводиться к часовом поясу клиента, и будет отображаться часовой пояс клиента, чтобы было понятно – что это именно местное время.
+«Местное время без часового пояса» - хранимая в базе дата в часовом поясе сеанса будет приводиться к часовому поясу клиента, и не будет отображаться часовой пояс клиента.
+«Время сеанса» - хранимая в базе дата в часовом поясе сеанса будет отображаться без изменений.</v8:content>
+						</v8:item>
+					</Title>
+				</ExtendedTooltip>
+			</InputField>
+			<CheckBoxField name="ИспользоватьОбзорПроектов" id="218">
+				<TitleLocation>Right</TitleLocation>
+				<CheckBoxType>Auto</CheckBoxType>
+				<ContextMenu name="ИспользоватьОбзорПроектовКонтекстноеМеню" id="219"/>
+				<ExtendedTooltip name="ИспользоватьОбзорПроектовРасширеннаяПодсказка" id="220"/>
+			</CheckBoxField>
+			<UsualGroup name="ГруппаНапоминания" id="221">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа напоминания</v8:content>
+					</v8:item>
+				</Title>
+				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаНапоминанияExtendedTooltip" id="222"/>
+				<ChildItems>
+					<UsualGroup name="ГруппаИнтервалПроверки" id="223">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа интервал проверки</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Horizontal</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаИнтервалПроверкиExtendedTooltip" id="224"/>
+						<ChildItems>
+							<InputField name="ИнтервалПроверкиНапоминаний" id="225">
+								<SpinButton>true</SpinButton>
+								<ContextMenu name="ИнтервалПроверкиНапоминанийКонтекстноеМеню" id="226"/>
+								<ExtendedTooltip name="ИнтервалПроверкиНапоминанийExtendedTooltip" id="227"/>
+							</InputField>
+							<LabelDecoration name="ДекорацияМинИнтервалПроверки" id="228">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>мин.</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="ДекорацияМинИнтервалПроверкиКонтекстноеМеню" id="229"/>
+								<ExtendedTooltip name="ДекорацияМинИнтервалПроверкиExtendedTooltip" id="230"/>
+							</LabelDecoration>
+						</ChildItems>
+					</UsualGroup>
+					<UsualGroup name="ГруппаСрокНапоминания" id="231">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа срок напоминания</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Horizontal</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаСрокНапоминанияExtendedTooltip" id="232"/>
+						<ChildItems>
+							<InputField name="СрокНапоминанияПоУмолчанию" id="233">
+								<Width>4</Width>
+								<ContextMenu name="СрокНапоминанияПоУмолчаниюКонтекстноеМеню" id="234"/>
+								<ExtendedTooltip name="СрокНапоминанияПоУмолчаниюExtendedTooltip" id="235"/>
+							</InputField>
+							<LabelDecoration name="ДекорацияМинСрокНапоминания" id="236">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>мин.</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="ДекорацияМинСрокНапоминанияКонтекстноеМеню" id="237"/>
+								<ExtendedTooltip name="ДекорацияМинСрокНапоминанияExtendedTooltip" id="238"/>
+							</LabelDecoration>
+						</ChildItems>
+					</UsualGroup>
+					<CheckBoxField name="УстанавливатьНапоминаниеАвтоматически" id="239">
+						<TitleLocation>Right</TitleLocation>
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="УстанавливатьНапоминаниеАвтоматическиКонтекстноеМеню" id="240"/>
+						<ExtendedTooltip name="УстанавливатьНапоминаниеАвтоматическиExtendedTooltip" id="241"/>
+					</CheckBoxField>
+				</ChildItems>
+			</UsualGroup>
+			<CheckBoxField name="ОтображатьФотографииПерсональнаяНастройка" id="242">
+				<TitleLocation>Right</TitleLocation>
+				<CheckBoxType>Auto</CheckBoxType>
+				<ContextMenu name="ОтображатьФотографииПерсональнаяНастройкаКонтекстноеМеню" id="243"/>
+				<ExtendedTooltip name="ОтображатьФотографииПерсональнаяНастройкаExtendedTooltip" id="244"/>
+			</CheckBoxField>
+			<CheckBoxField name="ЗапрашиватьПодтверждениеПриЗакрытииПрограммы" id="58">
+				<TitleLocation>Right</TitleLocation>
+				<CheckBoxType>Auto</CheckBoxType>
+				<ContextMenu name="ЗапрашиватьПодтверждениеПриЗакрытииПрограммыКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="ЗапрашиватьПодтверждениеПриЗакрытииПрограммыExtendedTooltip" id="206"/>
+			</CheckBoxField>
+			<CheckBoxField name="ИспользоватьАвтоматическоеПрочтение" id="245">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отмечать сообщения форума как прочтенные при просмотре в области чтения</v8:content>
+					</v8:item>
+				</Title>
+				<TitleLocation>Right</TitleLocation>
+				<CheckBoxType>Auto</CheckBoxType>
+				<ContextMenu name="ИспользоватьАвтоматическоеПрочтениеКонтекстноеМеню" id="246"/>
+				<ExtendedTooltip name="ИспользоватьАвтоматическоеПрочтениеExtendedTooltip" id="247"/>
+			</CheckBoxField>
+			<CheckBoxField name="ЯвкаОбязательнаПоУмолчанию" id="304">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Устанавливать участникам мероприятия "Явка обязательна" по умолчанию</v8:content>
+					</v8:item>
+				</Title>
+				<TitleLocation>Right</TitleLocation>
+				<CheckBoxType>Auto</CheckBoxType>
+				<ContextMenu name="ЯвкаОбязательнаПоУмолчаниюКонтекстноеМеню" id="305"/>
+				<ExtendedTooltip name="ЯвкаОбязательнаПоУмолчаниюРасширеннаяПодсказка" id="306"/>
+			</CheckBoxField>
+			<Button name="ОчиститьИсториюВыбора" id="318">
+				<Type>UsualButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>0</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Очистить историю выбора</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTipRepresentation>Button</ToolTipRepresentation>
+				<ExtendedTooltip name="ОчиститьИсториюВыбораРасширеннаяПодсказка" id="319">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>При работе с полем ранее вводимые значения отображаются в выпадающем списке. Иногда такие данные могут мешать работе.
+Команда позволяет очистить историю выбора, удаляя сохраненные значения</v8:content>
+						</v8:item>
+					</Title>
+				</ExtendedTooltip>
+			</Button>
+			<UsualGroup name="ГруппаЗадачи" id="316">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Задачи</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа задачи</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
+				<ExtendedTooltip name="ГруппаЗадачиРасширеннаяПодсказка" id="317"/>
+				<ChildItems>
+					<UsualGroup name="ГруппаФлагЗадач" id="248">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа флаг задач</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Horizontal</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаФлагЗадачExtendedTooltip" id="249"/>
+						<ChildItems>
+							<LabelDecoration name="НадписьФлагЗадач" id="250">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Флаг по умолчанию для задач:</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Устанавливается при двойном щелчке левой кнопкой мыши</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ContextMenu name="НадписьФлагЗадачКонтекстноеМеню" id="251"/>
+								<ExtendedTooltip name="НадписьФлагЗадачExtendedTooltip" id="252"/>
+							</LabelDecoration>
+							<CommandBar name="КоманднаяПанельФлагЗадач" id="253">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Командная панель флаг задач</v8:content>
+									</v8:item>
+								</Title>
+								<Width>5</Width>
+								<HorizontalStretch>false</HorizontalStretch>
+								<ExtendedTooltip name="КоманднаяПанельФлагЗадачExtendedTooltip" id="254"/>
+								<ChildItems>
+									<Popup name="ПодменюФлагиЗадач" id="255">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Флаг</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Флаг</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Picture>
+											<xr:Ref>CommonPicture.ПустойФлаг</xr:Ref>
+											<xr:LoadTransparent>false</xr:LoadTransparent>
+										</Picture>
+										<Representation>Picture</Representation>
+										<ExtendedTooltip name="ПодменюФлагиЗадачExtendedTooltip" id="256"/>
+										<ChildItems>
+											<ButtonGroup name="ГруппаФлагиЗадач" id="257">
+												<ExtendedTooltip name="ГруппаФлагиЗадачExtendedTooltip" id="258"/>
+												<ChildItems>
+													<Button name="КрасныйФлагЗадачи" id="259">
+														<Type>CommandBarButton</Type>
+														<CommandName>0</CommandName>
+														<ExtendedTooltip name="КрасныйФлагЗадачиExtendedTooltip" id="260"/>
+													</Button>
+													<Button name="СинийФлагЗадачи" id="261">
+														<Type>CommandBarButton</Type>
+														<CommandName>0</CommandName>
+														<ExtendedTooltip name="СинийФлагЗадачиExtendedTooltip" id="262"/>
+													</Button>
+													<Button name="ЖелтыйФлагЗадачи" id="263">
+														<Type>CommandBarButton</Type>
+														<CommandName>0</CommandName>
+														<ExtendedTooltip name="ЖелтыйФлагЗадачиExtendedTooltip" id="264"/>
+													</Button>
+													<Button name="ЗеленыйФлагЗадачи" id="265">
+														<Type>CommandBarButton</Type>
+														<CommandName>0</CommandName>
+														<ExtendedTooltip name="ЗеленыйФлагЗадачиExtendedTooltip" id="266"/>
+													</Button>
+													<Button name="ОранжевыйФлагЗадачи" id="267">
+														<Type>CommandBarButton</Type>
+														<CommandName>0</CommandName>
+														<ExtendedTooltip name="ОранжевыйФлагЗадачиExtendedTooltip" id="268"/>
+													</Button>
+													<Button name="ЛиловыйФлагЗадачи" id="269">
+														<Type>CommandBarButton</Type>
+														<CommandName>0</CommandName>
+														<ExtendedTooltip name="ЛиловыйФлагЗадачиExtendedTooltip" id="270"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</CommandBar>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаКатегории" id="271">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Проверка категорий</v8:content>
+					</v8:item>
+				</Title>
+				<HorizontalStretch>true</HorizontalStretch>
+				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
+				<ExtendedTooltip name="ГруппаКатегорииExtendedTooltip" id="272"/>
+				<ChildItems>
+					<CheckBoxField name="ЗапрашиватьПодтверждениеПриПроверкеКатегорий" id="273">
+						<TitleLocation>Right</TitleLocation>
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="ЗапрашиватьПодтверждениеПриПроверкеКатегорийКонтекстноеМеню" id="274"/>
+						<ExtendedTooltip name="ЗапрашиватьПодтверждениеПриПроверкеКатегорийExtendedTooltip" id="275"/>
+					</CheckBoxField>
+					<CheckBoxField name="ПоказыватьПодтверждениеПовторнойКатегоризации" id="276">
+						<TitleLocation>Right</TitleLocation>
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="ПоказыватьПодтверждениеПовторнойКатегоризацииКонтекстноеМеню" id="277"/>
+						<ExtendedTooltip name="ПоказыватьПодтверждениеПовторнойКатегоризацииExtendedTooltip" id="278"/>
+					</CheckBoxField>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаОтсутствия" id="285">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отсутствия</v8:content>
+					</v8:item>
+				</Title>
+				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
+				<ExtendedTooltip name="ГруппаОтсутствияРасширеннаяПодсказка" id="286"/>
+				<ChildItems>
+					<CheckBoxField name="ПредупреждатьОбОтсутствии" id="287">
+						<TitleLocation>Right</TitleLocation>
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="ПредупреждатьОбОтсутствииКонтекстноеМеню" id="288"/>
+						<ExtendedTooltip name="ПредупреждатьОбОтсутствииРасширеннаяПодсказка" id="289"/>
+					</CheckBoxField>
+					<InputField name="ВопросСоздаватьПисьмо" id="290">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>При создании отсутствия</v8:content>
+							</v8:item>
+						</Title>
+						<Width>30</Width>
+						<ListChoiceMode>true</ListChoiceMode>
+						<ChoiceList>
+							<xr:Item>
+								<xr:Presentation/>
+								<xr:CheckState>0</xr:CheckState>
+								<xr:Value xsi:type="FormChoiceListDesTimeValue">
+									<Presentation>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Создавать письмо</v8:content>
+										</v8:item>
+									</Presentation>
+									<Value xsi:type="xs:decimal">0</Value>
+								</xr:Value>
+							</xr:Item>
+							<xr:Item>
+								<xr:Presentation/>
+								<xr:CheckState>0</xr:CheckState>
+								<xr:Value xsi:type="FormChoiceListDesTimeValue">
+									<Presentation>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Предлагать создать письмо</v8:content>
+										</v8:item>
+									</Presentation>
+									<Value xsi:type="xs:decimal">1</Value>
+								</xr:Value>
+							</xr:Item>
+							<xr:Item>
+								<xr:Presentation/>
+								<xr:CheckState>0</xr:CheckState>
+								<xr:Value xsi:type="FormChoiceListDesTimeValue">
+									<Presentation>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не создавать письмо</v8:content>
+										</v8:item>
+									</Presentation>
+									<Value xsi:type="xs:decimal">2</Value>
+								</xr:Value>
+							</xr:Item>
+						</ChoiceList>
+						<ContextMenu name="ВопросСоздаватьПисьмоКонтекстноеМеню" id="291"/>
+						<ExtendedTooltip name="ВопросСоздаватьПисьмоРасширеннаяПодсказка" id="292"/>
+					</InputField>
+					<InputField name="ВопросСоздатьПравило" id="293">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>При создании отсутствия</v8:content>
+							</v8:item>
+						</Title>
+						<Width>30</Width>
+						<ListChoiceMode>true</ListChoiceMode>
+						<ChoiceList>
+							<xr:Item>
+								<xr:Presentation/>
+								<xr:CheckState>0</xr:CheckState>
+								<xr:Value xsi:type="FormChoiceListDesTimeValue">
+									<Presentation>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Создавать правило обработки писем</v8:content>
+										</v8:item>
+									</Presentation>
+									<Value xsi:type="xs:decimal">0</Value>
+								</xr:Value>
+							</xr:Item>
+							<xr:Item>
+								<xr:Presentation/>
+								<xr:CheckState>0</xr:CheckState>
+								<xr:Value xsi:type="FormChoiceListDesTimeValue">
+									<Presentation>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Предлагать создать правило обработки писем</v8:content>
+										</v8:item>
+									</Presentation>
+									<Value xsi:type="xs:decimal">1</Value>
+								</xr:Value>
+							</xr:Item>
+							<xr:Item>
+								<xr:Presentation/>
+								<xr:CheckState>0</xr:CheckState>
+								<xr:Value xsi:type="FormChoiceListDesTimeValue">
+									<Presentation>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не создавать правило обработки писем</v8:content>
+										</v8:item>
+									</Presentation>
+									<Value xsi:type="xs:decimal">2</Value>
+								</xr:Value>
+							</xr:Item>
+						</ChoiceList>
+						<ContextMenu name="ВопросСоздатьПравилоКонтекстноеМеню" id="294"/>
+						<ExtendedTooltip name="ВопросСоздатьПравилоРасширеннаяПодсказка" id="295"/>
+					</InputField>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>

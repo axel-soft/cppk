@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<BusinessProcess uuid="d120da26-4a7d-41dc-a0d3-3c3b686f9b07">
+		<InternalInfo>
+			<xr:GeneratedType name="BusinessProcessObject.Исполнение" category="Object">
+				<xr:TypeId>c5ede454-944c-450d-8363-a3430ab6fb07</xr:TypeId>
+				<xr:ValueId>44ed780f-9528-4ff8-ad1e-b2ac4b5704f0</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="BusinessProcessRef.Исполнение" category="Ref">
+				<xr:TypeId>25dad80e-ee92-4b7a-842b-c6739fb73e9d</xr:TypeId>
+				<xr:ValueId>1c1096d4-1dd9-4a50-83c6-fd13d5026981</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="BusinessProcessSelection.Исполнение" category="Selection">
+				<xr:TypeId>7d013740-d0c1-4978-832a-9098f4ad5cf3</xr:TypeId>
+				<xr:ValueId>6aa0ba00-6e5d-4e58-9018-a9c7c8e29f71</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="BusinessProcessList.Исполнение" category="List">
+				<xr:TypeId>e908b155-43ae-4aaf-b3f4-6164a81bd0af</xr:TypeId>
+				<xr:ValueId>640ec90e-1155-43db-aa11-aaa347349c29</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="BusinessProcessManager.Исполнение" category="Manager">
+				<xr:TypeId>06274fea-9b6f-4806-baed-7e07103f2070</xr:TypeId>
+				<xr:ValueId>0d7fdc4d-2704-47a2-9a1a-6a1417d22b05</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="BusinessProcessRoutePointRef.Исполнение" category="RoutePointRef">
+				<xr:TypeId>593202e4-5c55-41c5-a06b-73d50d378735</xr:TypeId>
+				<xr:ValueId>bc634857-459c-4909-8492-19fdd60adaff</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>Исполнение</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>679bd72a-4cf8-4c2e-ae00-3f01f48050c4</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="42caceb5-b7c3-44e8-960c-977103be268c">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Автор</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>e2c1c140-9b38-47f5-9bde-c996685f6ff3</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="6e0dd5a2-5608-4e06-8a3d-1cd5af736a7b">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Проект</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>7bf534ab-1f77-4e89-a3cf-b64948303d4c</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<TabularSection uuid="2c8a9b87-cd86-4d53-b9df-c7ddadfc203d">
+				<InternalInfo>
+					<xr:GeneratedType name="BusinessProcessTabularSection.Исполнение.Исполнители" category="TabularSection">
+						<xr:TypeId>d910567b-0eb5-40f6-83cd-06c4c160682e</xr:TypeId>
+						<xr:ValueId>46161964-4a5e-494f-b6b3-f5d8510b1d9f</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="BusinessProcessTabularSectionRow.Исполнение.Исполнители" category="TabularSectionRow">
+						<xr:TypeId>1a7d049c-ef52-42ba-9dd9-b48ccbe298c2</xr:TypeId>
+						<xr:ValueId>de2f2cf8-0246-4733-8339-5d0c0f5ab644</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Исполнители</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>dc217b92-a1c9-485b-a575-92dd20ca2759</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects/>
+			</TabularSection>
+			<TabularSection uuid="19bddbfd-d436-47ce-a903-e76e814de0d1">
+				<InternalInfo>
+					<xr:GeneratedType name="BusinessProcessTabularSection.Исполнение.Предметы" category="TabularSection">
+						<xr:TypeId>ea049016-30de-457f-b944-213e4af5dad3</xr:TypeId>
+						<xr:ValueId>03add22f-7297-47e6-82b1-6663e0355ccb</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="BusinessProcessTabularSectionRow.Исполнение.Предметы" category="TabularSectionRow">
+						<xr:TypeId>338351f5-9e90-4d0c-b1f5-5d37323963f0</xr:TypeId>
+						<xr:ValueId>11d9c1ce-f4e0-48d7-a347-69728316c7c2</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Предметы</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>e15e700a-bbf4-4611-923a-eb446ca53452</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects/>
+			</TabularSection>
+			<Form>ФормаБизнесПроцесса</Form>
+		</ChildObjects>
+	</BusinessProcess>
+</MetaDataObject>

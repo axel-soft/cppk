@@ -1,0 +1,1450 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка работы с файлами</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CommandBar name="ОсновнаяКоманднаяПанель" id="1">
+			<ExtendedTooltip name="ОсновнаяКоманднаяПанельExtendedTooltip" id="485"/>
+			<ChildItems>
+				<Button name="КомандаЗаписатьИЗакрыть" id="513">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаЗаписатьИЗакрыть</CommandName>
+					<ExtendedTooltip name="КомандаЗаписатьИЗакрытьРасширеннаяПодсказка" id="514"/>
+				</Button>
+				<Button name="Отмена" id="20">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Cancel</CommandName>
+					<ExtendedTooltip name="ОтменаExtendedTooltip" id="487"/>
+				</Button>
+				<Button name="Справка" id="21">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="СправкаExtendedTooltip" id="488"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="ГруппаРаботаСФайлами" id="92">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа работа с файлами</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРаботаСФайламиExtendedTooltip" id="435"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРазмер" id="133">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа размер</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Размер</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="ГруппаРазмерExtendedTooltip" id="436"/>
+					<ChildItems>
+						<InputField name="МаксимальныйРазмерФайла" id="2">
+							<DataPath>МаксимальныйРазмерФайла</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Максимальный размер файла</v8:content>
+								</v8:item>
+							</Title>
+							<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+							<Width>8</Width>
+							<Wrap>false</Wrap>
+							<SpinButton>true</SpinButton>
+							<BorderColor>style:BorderColor</BorderColor>
+							<ContextMenu name="МаксимальныйРазмерФайлаКонтекстноеМеню" id="3"/>
+							<ExtendedTooltip name="МаксимальныйРазмерФайлаExtendedTooltip" id="437"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияМб" id="134">
+							<SkipOnInput>false</SkipOnInput>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>(Мб)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияМбКонтекстноеМеню" id="135"/>
+							<ExtendedTooltip name="ДекорацияМбExtendedTooltip" id="438"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТипХранения" id="286">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа тип хранения</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТипХраненияExtendedTooltip" id="439"/>
+					<ChildItems>
+						<CheckBoxField name="ХранитьФайлыВТомахНаДиске" id="293">
+							<DataPath>НаборКонстант.ХранитьФайлыВТомахНаДиске</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ХранитьФайлыВТомахНаДискеКонтекстноеМеню" id="294"/>
+							<ExtendedTooltip name="ХранитьФайлыВТомахНаДискеExtendedTooltip" id="440"/>
+							<Events>
+								<Event name="OnChange">ХранитьФайлыВТомахНаДискеПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<Button name="ОткрытьТомаХраненияФайлов" id="287">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьТомаХраненияФайлов</CommandName>
+							<ExtendedTooltip name="ОткрытьТомаХраненияФайловExtendedTooltip" id="441"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="ИзвлекатьТекстыФайловНаСервере" id="6">
+					<DataPath>НаборКонстант.ИзвлекатьТекстыФайловНаСервере</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Извлекать тексты только на сервере</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИзвлекатьТекстыФайловНаСервереКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ИзвлекатьТекстыФайловНаСервереExtendedTooltip" id="442"/>
+				</CheckBoxField>
+				<InputField name="СписокРасширенийФайловOpenDocument" id="295">
+					<DataPath>НаборКонстант.СписокРасширенийФайловOpenDocument</DataPath>
+					<ContextMenu name="СписокРасширенийФайловOpenDocumentКонтекстноеМеню" id="296"/>
+					<ExtendedTooltip name="СписокРасширенийФайловOpenDocumentExtendedTooltip" id="443"/>
+				</InputField>
+				<InputField name="СписокРасширенийТекстовыхФайлов" id="299">
+					<DataPath>НаборКонстант.СписокРасширенийТекстовыхФайлов</DataPath>
+					<ContextMenu name="СписокРасширенийТекстовыхФайловКонтекстноеМеню" id="300"/>
+					<ExtendedTooltip name="СписокРасширенийТекстовыхФайловExtendedTooltip" id="444"/>
+				</InputField>
+				<InputField name="РасширенияФайловICalendar" id="593">
+					<DataPath>НаборКонстант.РасширенияФайловICalendar</DataPath>
+					<ContextMenu name="РасширенияФайловICalendarКонтекстноеМеню" id="594"/>
+					<ExtendedTooltip name="РасширенияФайловICalendarРасширеннаяПодсказка" id="595"/>
+				</InputField>
+				<InputField name="РасширенияФайловДляПроверкиБлокировкиФайлаНаДиске" id="541">
+					<DataPath>НаборКонстант.РасширенияФайловДляПроверкиБлокировкиФайлаНаДиске</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расширения файлов для автовозврата</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка работает только для клиентов в Windows</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="РасширенияФайловДляПроверкиБлокировкиФайлаНаДискеКонтекстноеМеню" id="542"/>
+					<ExtendedTooltip name="РасширенияФайловДляПроверкиБлокировкиФайлаНаДискеРасширеннаяПодсказка" id="543"/>
+				</InputField>
+				<CheckBoxField name="ИспользоватьАвтозаполнениеФайлов" id="168">
+					<DataPath>НаборКонстант.ИспользоватьАвтозаполнениеФайлов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать автозаполнение шаблонов файлов</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьАвтозаполнениеФайловКонтекстноеМеню" id="169"/>
+					<ExtendedTooltip name="ИспользоватьАвтозаполнениеФайловExtendedTooltip" id="445"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВставкаШКвMSWordНаСервере" id="183">
+					<DataPath>НаборКонстант.ИзменениеФайловMSWordТолькоНаСервере</DataPath>
+					<Visible>false</Visible>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВставкаШКвMSWordНаСервереКонтекстноеМеню" id="184"/>
+					<ExtendedTooltip name="ВставкаШКвMSWordНаСервереExtendedTooltip" id="446"/>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаРасширение" id="127">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа расширение</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРасширениеExtendedTooltip" id="447"/>
+					<ChildItems>
+						<CheckBoxField name="ЗапретЗагрузкиФайловПоРасширению" id="128">
+							<DataPath>НаборКонстант.ЗапрещатьЗагрузкуФайловПоРасширению</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запретить загрузку файлов с расширением:</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗапретЗагрузкиФайловПоРасширениюКонтекстноеМеню" id="129"/>
+							<ExtendedTooltip name="ЗапретЗагрузкиФайловПоРасширениюExtendedTooltip" id="448"/>
+							<Events>
+								<Event name="OnChange">ЗапретЗагрузкиФайловПоРасширениюПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="СписокЗапрещенныхРасширений" id="130">
+							<DataPath>НаборКонстант.СписокЗапрещенныхРасширений</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="СписокЗапрещенныхРасширенийКонтекстноеМеню" id="131"/>
+							<ExtendedTooltip name="СписокЗапрещенныхРасширенийExtendedTooltip" id="449"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="НастройкаАвтоматическойЗагрузкиФайлов" id="212">
+					<Type>UsualButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.НастройкаАвтоматическойЗагрузкиФайлов</CommandName>
+					<ExtendedTooltip name="НастройкаАвтоматическойЗагрузкиФайловExtendedTooltip" id="450"/>
+				</Button>
+				<UsualGroup name="ГруппаПредпросмотр" id="548">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа предпросмотр</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПредпросмотрРасширеннаяПодсказка" id="549"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьПредпросмотрФайлов" id="550">
+							<DataPath>НаборКонстант.ИспользоватьПредпросмотрФайлов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предпросмотр файлов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьПредпросмотрФайловКонтекстноеМеню" id="551"/>
+							<ExtendedTooltip name="ИспользоватьПредпросмотрФайловРасширеннаяПодсказка" id="552"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьПредпросмотрФайловПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаСрокХранения" id="553">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа срок хранения</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСрокХраненияРасширеннаяПодсказка" id="554"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОтступПередСрок" id="561">
+									<Width>1</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияОтступПередСрокКонтекстноеМеню" id="562"/>
+									<ExtendedTooltip name="ДекорацияОтступПередСрокРасширеннаяПодсказка" id="563"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаДляПредпросмотраВер" id="564">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа для предпросмотра вер</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДляПредпросмотраВерРасширеннаяПодсказка" id="565"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПредпросмотрПолностью" id="622">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа предпросмотр полностью</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа предпросмотр полностью</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПредпросмотрПолностьюРасширеннаяПодсказка" id="623"/>
+											<ChildItems>
+												<CheckBoxField name="ПредпросмотрПолностью" id="624">
+													<DataPath>ПредпросмотрПолностью</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Показывать большие файлы doc, docx, odt полностью внутри Документооборота (блоками по 20 страниц, с кнопками перехода между блоками)</v8:content>
+														</v8:item>
+													</ToolTip>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПредпросмотрПолностьюКонтекстноеМеню" id="625"/>
+													<ExtendedTooltip name="ПредпросмотрПолностьюРасширеннаяПодсказка" id="626"/>
+													<Events>
+														<Event name="OnChange">ПредпросмотрПолностьюПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<UsualGroup name="ГруппаЧастично" id="635">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа частично</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа частично</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаЧастичноРасширеннаяПодсказка" id="636"/>
+													<ChildItems>
+														<CheckBoxField name="ПредпросмотрЧастично" id="632">
+															<DataPath>ПредпросмотрЧастично</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Показывать только начало файла для больших файлов doc, docx, odt. Полностью увидеть файл  можно во внешней программе по кнопке Просмотреть.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПредпросмотрЧастичноКонтекстноеМеню" id="633"/>
+															<ExtendedTooltip name="ПредпросмотрЧастичноРасширеннаяПодсказка" id="634"/>
+															<Events>
+																<Event name="OnChange">ПредпросмотрЧастичноПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<LabelDecoration name="Декорация1" id="637">
+															<Width>1</Width>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content> </v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="Декорация1КонтекстноеМеню" id="638"/>
+															<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="639"/>
+														</LabelDecoration>
+														<InputField name="МаксимальноеЧислоСтраницДляПредпросмотра" id="568">
+															<DataPath>НаборКонстант.МаксимальноеЧислоСтраницДляПредпросмотра</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>страниц</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Настройка "Показывать не более ... страниц" не используется для файлов PDF, если "Способ предпросмотра PDF" = "1С Предприятие", и для файлов doc, docx, odt, если в персональных настройках "Готовить предпросмотр для офисных файлов с помощью" = "OpenOffice</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<Width>3</Width>
+															<ContextMenu name="МаксимальноеЧислоСтраницДляПредпросмотраКонтекстноеМеню" id="569"/>
+															<ExtendedTooltip name="МаксимальноеЧислоСтраницДляПредпросмотраРасширеннаяПодсказка" id="570"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="ПоказыватьPdfСредствами1С" id="596">
+											<DataPath>НаборКонстант.ПоказыватьPdfСредствами1С</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Способ предпросмотра PDF</v8:content>
+												</v8:item>
+											</Title>
+											<Width>16</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ListChoiceMode>true</ListChoiceMode>
+											<TextEdit>false</TextEdit>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>ImageMagick + Ghostscript</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:boolean">false</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>1С:Предприятие</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:boolean">true</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ПоказыватьPdfСредствами1СКонтекстноеМеню" id="597"/>
+											<ExtendedTooltip name="ПоказыватьPdfСредствами1СРасширеннаяПодсказка" id="598"/>
+											<Events>
+												<Event name="OnChange">ПоказыватьPdfСредствами1СПриИзменении</Event>
+												<Event name="Clearing">ПоказыватьPdfСредствами1СОчистка</Event>
+											</Events>
+										</InputField>
+										<InputField name="КачествоПреобразованияPDFДляПредпросмотра" id="590">
+											<DataPath>НаборКонстант.КачествоПреобразованияPDFДляПредпросмотра</DataPath>
+											<Shortcut>Ctrl+S</Shortcut>
+											<Width>3</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ListChoiceMode>true</ListChoiceMode>
+											<TextEdit>false</TextEdit>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>96</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">96</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>150</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">150</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>300</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">300</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="КачествоПреобразованияPDFДляПредпросмотраКонтекстноеМеню" id="591"/>
+											<ExtendedTooltip name="КачествоПреобразованияPDFДляПредпросмотраРасширеннаяПодсказка" id="592"/>
+											<Events>
+												<Event name="Clearing">КачествоПреобразованияPDFДляПредпросмотраОчистка</Event>
+											</Events>
+										</InputField>
+										<CheckBoxField name="ГотовитьПредставленияФайловДляПредпросмотраНаКлиенте" id="571">
+											<DataPath>НаборКонстант.ГотовитьПредставленияФайловДляПредпросмотраНаКлиенте</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>После включения настройки для ее работы должна постоянно быть запущена обработка "Выполнение заданий (клиент)"  (в тонком клиенте Windows, на компьютере с MS Office или OpenOffice)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ГотовитьПредставленияФайловДляПредпросмотраНаКлиентеКонтекстноеМеню" id="572"/>
+											<ExtendedTooltip name="ГотовитьПредставленияФайловДляПредпросмотраНаКлиентеРасширеннаяПодсказка" id="573"/>
+											<Events>
+												<Event name="OnChange">ГотовитьПредставленияФайловДляПредпросмотраНаКлиентеПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<UsualGroup name="ГруппаСрокХраненияГор" id="566">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа срок хранения гор</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСрокХраненияГорРасширеннаяПодсказка" id="567"/>
+											<ChildItems>
+												<InputField name="СрокХраненияПредпросмотраФайлов" id="555">
+													<DataPath>НаборКонстант.СрокХраненияПредпросмотраФайлов</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Срок хранения данных предпросмотра</v8:content>
+														</v8:item>
+													</Title>
+													<Width>3</Width>
+													<ContextMenu name="СрокХраненияПредпросмотраФайловКонтекстноеМеню" id="556"/>
+													<ExtendedTooltip name="СрокХраненияПредпросмотраФайловРасширеннаяПодсказка" id="557"/>
+												</InputField>
+												<LabelDecoration name="ДекорацияДней" id="558">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>дней</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияДнейКонтекстноеМеню" id="559"/>
+													<ExtendedTooltip name="ДекорацияДнейРасширеннаяПодсказка" id="560"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ШаблоныИменФайлов" id="544">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ШаблоныИменФайлов</CommandName>
+					<ExtendedTooltip name="ШаблоныИменФайловРасширеннаяПодсказка" id="545"/>
+				</Button>
+				<Button name="НастройкаСканирования" id="546">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.НастройкаСканирования</CommandName>
+					<ExtendedTooltip name="НастройкаСканированияРасширеннаяПодсказка" id="547"/>
+				</Button>
+				<UsualGroup name="ГруппаРаспознавание" id="164">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа распознавание</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРаспознаваниеExtendedTooltip" id="451"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьРаспознавание" id="143">
+							<DataPath>НаборКонстант.ИспользоватьРаспознавание</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать распознавание:</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьРаспознаваниеКонтекстноеМеню" id="144"/>
+							<ExtendedTooltip name="ИспользоватьРаспознаваниеExtendedTooltip" id="452"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьРаспознаваниеПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаПрограммыРаспознавания" id="526">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа программы распознавания</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа программы распознавания</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>DontUse</ThroughAlign>
+							<ExtendedTooltip name="ГруппаПрограммыРаспознаванияРасширеннаяПодсказка" id="527"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОтступПрограммыРаспознавания1" id="531">
+									<Width>1</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>1</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<ContextMenu name="ДекорацияОтступПрограммыРаспознавания1КонтекстноеМеню" id="532"/>
+									<ExtendedTooltip name="ДекорацияОтступПрограммыРаспознавания1РасширеннаяПодсказка" id="533"/>
+								</LabelDecoration>
+								<RadioButtonField name="ПрограммаРаспознавания" id="528">
+									<DataPath>НаборКонстант.ПрограммаРаспознавания</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>с помощью CuneiForm</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ПрограммыРаспознавания.EnumValue.CuneiForm</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>с помощью сервиса распознавания документов</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ПрограммыРаспознавания.EnumValue.СервисРаспознавания</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ПрограммаРаспознаванияКонтекстноеМеню" id="529"/>
+									<ExtendedTooltip name="ПрограммаРаспознаванияРасширеннаяПодсказка" id="530"/>
+									<Events>
+										<Event name="OnChange">ПрограммаРаспознаванияПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<LabelDecoration name="ДекорацияОтступПрограммыРаспознавания4" id="616">
+									<Width>1</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>1</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<ContextMenu name="ДекорацияОтступПрограммыРаспознавания4КонтекстноеМеню" id="617"/>
+									<ExtendedTooltip name="ДекорацияОтступПрограммыРаспознавания4РасширеннаяПодсказка" id="618"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаНастройкиПрогаммРаспознавания" id="534">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройки прогамм распознавания</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройки прогамм распознавания</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиПрогаммРаспознаванияРасширеннаяПодсказка" id="535"/>
+									<ChildItems>
+										<Button name="НастройкиРаспознаванияCuneiForm" id="165">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.НастройкиРаспознаванияCuneiForm</CommandName>
+											<ExtendedTooltip name="НастройкиРаспознаванияCuneiFormРасширеннаяПодсказка" id="453"/>
+										</Button>
+										<Button name="НастройкиСервисаРаспознавания" id="536">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.НастройкиСервисаРаспознавания</CommandName>
+											<ExtendedTooltip name="НастройкиСервисаРаспознаванияРасширеннаяПодсказка" id="537"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаТаймлист" id="602">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа Таймлист</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа 1С:Таймлист</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>DontUse</ThroughAlign>
+							<ExtendedTooltip name="ГруппаТаймлистРасширеннаяПодсказка" id="603"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНастройкаТаймлист" id="614">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройка Таймлист</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройки 1С:Таймлист</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкаТаймлистРасширеннаяПодсказка" id="615"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияОтступПрограммыРаспознавания2" id="538">
+											<Width>1</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>1</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<ContextMenu name="ДекорацияОтступПрограммыРаспознавания2КонтекстноеМеню" id="539"/>
+											<ExtendedTooltip name="ДекорацияОтступПрограммыРаспознавания2РасширеннаяПодсказка" id="540"/>
+										</LabelDecoration>
+										<CheckBoxField name="ИспользуетсяРаспознаваниеТаймлист" id="599">
+											<DataPath>НаборКонстант.ИспользуетсяРаспознаваниеТаймлист</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>с помощью Таймлист (аудио- и видеофайлы)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользуетсяРаспознаваниеТаймлистКонтекстноеМеню" id="600"/>
+											<ExtendedTooltip name="ИспользуетсяРаспознаваниеТаймлистРасширеннаяПодсказка" id="601"/>
+											<Events>
+												<Event name="OnChange">ИспользуетсяРаспознаваниеТаймлистПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<LabelDecoration name="ДекорацияОтступПрограммыРаспознавания3" id="604">
+											<Width>3</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>1</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<ContextMenu name="ДекорацияОтступПрограммыРаспознавания3КонтекстноеМеню" id="605"/>
+											<ExtendedTooltip name="ДекорацияОтступПрограммыРаспознавания3РасширеннаяПодсказка" id="606"/>
+										</LabelDecoration>
+										<Button name="НастройкиСервисаТаймлист" id="607">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.НастройкиСервисаТаймлист</CommandName>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<ExtendedTooltip name="НастройкиСервисаТаймлистРасширеннаяПодсказка" id="608">
+												<HorizontalAlign>Auto</HorizontalAlign>
+											</ExtendedTooltip>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаImageMagick" id="515">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа image magick</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа image magick</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаImageMagickРасширеннаяПодсказка" id="516"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаМаджикПерваяСтрока" id="574">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа маджик первая строка</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаМаджикПерваяСтрокаРасширеннаяПодсказка" id="575"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьImageMagickДляРаспознаванияPDF" id="517">
+									<DataPath>НаборКонстант.ИспользоватьImageMagickДляРаспознаванияPDF</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать ImageMagick</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьImageMagickДляРаспознаванияPDFКонтекстноеМеню" id="518"/>
+									<ExtendedTooltip name="ИспользоватьImageMagickДляРаспознаванияPDFРасширеннаяПодсказка" id="519"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьImageMagickДляРаспознаванияPDFПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ПутьКПрограммеКонвертацииPDF" id="520">
+									<DataPath>НаборКонстант.ПутьКПрограммеКонвертацииPDF</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Путь</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если сервер под управлением Windows, нужно указать путь и имя файла, например: “С:\Program Files\ImageMagick-7.0.10-Q8\magick.exe” или “magick.exe”.
+Для сервера под управлением Linux путь должен быть пустым.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="ПутьКПрограммеКонвертацииPDFКонтекстноеМеню" id="521"/>
+									<ExtendedTooltip name="ПутьКПрограммеКонвертацииPDFРасширеннаяПодсказка" id="522"/>
+								</InputField>
+								<LabelDecoration name="ДекорацияМаджик" id="523">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>(путь на сервере)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияМаджикКонтекстноеМеню" id="524"/>
+									<ExtendedTooltip name="ДекорацияМаджикРасширеннаяПодсказка" id="525"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияОтступ" id="587">
+									<Width>2</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="588"/>
+									<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="589"/>
+								</LabelDecoration>
+								<CheckBoxField name="ИспользоватьGhostscript" id="584">
+									<DataPath>НаборКонстант.ИспользоватьGhostscript</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если настройка включена и на сервере (или клиенте) установлена программа Ghostscript, для PDF-файлов станут доступны: сканирование, потоковое сканирование, распознавание и автоматическая вставка штампа ЭП (с установленным ImageMagick).
+Если настройка отключена, перечисленные возможности недоступны. </v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьGhostscriptКонтекстноеМеню" id="585"/>
+									<ExtendedTooltip name="ИспользоватьGhostscriptРасширеннаяПодсказка" id="586"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаМаджикВтораяСтрока" id="582">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа маджик вторая строка</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаМаджикВтораяСтрокаРасширеннаяПодсказка" id="583"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПередОписаниемМаджик" id="579">
+									<Width>2</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПередОписаниемМаджикКонтекстноеМеню" id="580"/>
+									<ExtendedTooltip name="ДекорацияПередОписаниемМаджикРасширеннаяПодсказка" id="581"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПояснениеМаджик" id="576">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ИнформационнаяНадпись</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для работы ImageMagick надо установить на сервере ImageMagick.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПояснениеМаджикКонтекстноеМеню" id="577"/>
+									<ExtendedTooltip name="ДекорацияПояснениеМаджикРасширеннаяПодсказка" id="578"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="ИспользоватьХранилищеФайлов" id="80">
+					<DataPath>НаборКонстант.ИспользоватьХранилищеФайлов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать папки файлов</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьХранилищеФайловКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="ИспользоватьХранилищеФайловExtendedTooltip" id="470"/>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаНеактивныеВерсии" id="282">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очистка устаревших версий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очистка устаревших версий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Collapsible</Behavior>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<ExtendedTooltip name="ГруппаНеактивныеВерсииExtendedTooltip" id="454"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОчистки" id="304">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа очистки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОчисткиExtendedTooltip" id="455"/>
+							<ChildItems>
+								<CheckBoxField name="УдалятьНеактивныеВерсии" id="267">
+									<DataPath>НаборКонстант.УдалятьНеактивныеВерсии</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Автоматически очищать устаревшие версии файлов</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="УдалятьНеактивныеВерсииКонтекстноеМеню" id="268"/>
+									<ExtendedTooltip name="УдалятьНеактивныеВерсииExtendedTooltip" id="456"/>
+									<Events>
+										<Event name="OnChange">УдалятьНеактивныеВерсииПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<Button name="ОчиститьСейчас" id="303">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОчиститьСейчас</CommandName>
+									<ExtendedTooltip name="ОчиститьСейчасExtendedTooltip" id="457"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастроекОчистки" id="321">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настроек очистки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастроекОчисткиExtendedTooltip" id="458"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСрокХраненияВерсий" id="279">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа срок хранения версий</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСрокХраненияВерсийExtendedTooltip" id="459"/>
+									<ChildItems>
+										<InputField name="СрокХраненияНеактивныхВерсий" id="269">
+											<DataPath>НаборКонстант.СрокХраненияНеактивныхВерсий</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Срок устаревания неактивных версий</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СрокХраненияНеактивныхВерсийКонтекстноеМеню" id="270"/>
+											<ExtendedTooltip name="СрокХраненияНеактивныхВерсийExtendedTooltip" id="460"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияДнейХранения" id="280">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>дней</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияДнейХраненияКонтекстноеМеню" id="281"/>
+											<ExtendedTooltip name="ДекорацияДнейХраненияExtendedTooltip" id="461"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ПутьСохраненияУдаляемыхВерсий" id="271">
+									<DataPath>ПутьСохраненияУдаляемыхВерсий</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещать устаревшие версии файлов в каталог (путь в формате UNC, например \\server\path)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ChoiceButton>true</ChoiceButton>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ПутьСохраненияУдаляемыхВерсийКонтекстноеМеню" id="272"/>
+									<ExtendedTooltip name="ПутьСохраненияУдаляемыхВерсийExtendedTooltip" id="463"/>
+									<Events>
+										<Event name="StartChoice">ПутьСохраненияУдаляемыхВерсийНачалоВыбора</Event>
+										<Event name="Clearing">ПутьСохраненияУдаляемыхВерсийОчистка</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="ОчищатьДанныеДляПолнотекстовогоПоиска" id="307">
+									<DataPath>НаборКонстант.ОчищатьДанныеДляПолнотекстовогоПоиска</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОчищатьДанныеДляПолнотекстовогоПоискаКонтекстноеМеню" id="308"/>
+									<ExtendedTooltip name="ОчищатьДанныеДляПолнотекстовогоПоискаExtendedTooltip" id="462"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаОповещениеОВыполненииОчистки" id="288">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оповещение о выполнении очистки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оповещение о выполнении очистки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Collapsible</Behavior>
+									<ControlRepresentation>Picture</ControlRepresentation>
+									<ExtendedTooltip name="ГруппаОповещениеОВыполненииОчисткиExtendedTooltip" id="464"/>
+									<ChildItems>
+										<InputField name="ОтветственныйЗаУдалениеНеактивныхВерсий" id="273">
+											<DataPath>НаборКонстант.ОтветственныйЗаУдалениеНеактивныхВерсий</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кого оповещать</v8:content>
+												</v8:item>
+											</Title>
+											<ChooseType>false</ChooseType>
+											<ContextMenu name="ОтветственныйЗаУдалениеНеактивныхВерсийКонтекстноеМеню" id="274"/>
+											<ExtendedTooltip name="ОтветственныйЗаУдалениеНеактивныхВерсийExtendedTooltip" id="465"/>
+											<Events>
+												<Event name="ChoiceProcessing">ОтветственныйЗаУдалениеНеактивныхВерсийОбработкаВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсий" id="275">
+											<DataPath>НаборКонстант.ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсий</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Как оповещать</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсийКонтекстноеМеню" id="276"/>
+											<ExtendedTooltip name="ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсийExtendedTooltip" id="466"/>
+											<Events>
+												<Event name="OnChange">ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсийПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПапкаДляХраненияОтчетовОбУдалении" id="277">
+											<DataPath>НаборКонстант.ПапкаДляХраненияОтчетовОбУдалении</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Папка для отчета</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В этой папке будет сохранен отчет о результатах очистки устаревших версий в формате HTML.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ContextMenu name="ПапкаДляХраненияОтчетовОбУдаленииКонтекстноеМеню" id="278"/>
+											<ExtendedTooltip name="ПапкаДляХраненияОтчетовОбУдаленииExtendedTooltip" id="468"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>НаборКонстант.ГотовитьПредставленияФайловДляПредпросмотраНаКлиенте</Field>
+				<Field>НаборКонстант.ИспользоватьПредпросмотрФайлов</Field>
+				<Field>НаборКонстант.ПутьСохраненияУдаляемыхВерсийLinux</Field>
+				<Field>НаборКонстант.ПутьСохраненияУдаляемыхВерсийWindows</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="МаксимальныйРазмерФайла" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальный размер файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ХранениеВТомахНаДискеВключено" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранение в томах на диске включено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВключеноИспользованиРаспознаванияCuneiForm" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включено использовани распознавания cunei form</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ХранитьФайлыВТомахНаДискеНачальноеЗначение" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранить файлы в томах на диске начальное значение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьСохраненияУдаляемыхВерсий" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь сохранения удаляемых версий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РазделениеВключено" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разделение включено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьGhostscriptПриОткрытии" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать ghostscript при открытии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьImageMagickДляРаспознаванияPDFПриОткрытии" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать image magick для распознавания PDFПри открытии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредпросмотрПолностью" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать полностью</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредпросмотрЧастично" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать первые</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастройкиРаспознаванияCuneiForm" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к настройкам CuneiForm</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиРаспознаванияCuneiForm</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкаАвтоматическойЗагрузкиФайлов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка автоматической загрузки файлов...</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастройкаАвтоматическойЗагрузкиФайлов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьТомаХраненияФайлов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тома хранения файлов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть тома хранения файлов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьТомаХраненияФайлов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьСейчас" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить сейчас...</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОчиститьСейчас</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаписатьИЗакрыть" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаЗаписатьИЗакрыть</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкиСервисаРаспознавания" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к настройкам сервиса распознавания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиСервисаРаспознавания</Action>
+		</Command>
+		<Command name="НастройкаСканирования" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка сканирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка сканирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкаСканирования</Action>
+		</Command>
+		<Command name="ШаблоныИменФайлов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблоны имен файлов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблоны имен файлов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ШаблоныИменФайлов</Action>
+		</Command>
+		<Command name="НастройкиСервисаТаймлист" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки сервиса 1С:Таймлист</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиСервисаТаймлист</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

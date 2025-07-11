@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="26">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="27"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="ИдентификаторОбъектаМетаданных" id="1">
+			<DataPath>Запись.Объект</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистр</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ИдентификаторОбъектаМетаданныхКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИдентификаторОбъектаМетаданныхРасширеннаяПодсказка" id="3"/>
+		</LabelField>
+		<LabelField name="Ключ" id="4">
+			<DataPath>Запись.Ключ</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КлючКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="КлючРасширеннаяПодсказка" id="6"/>
+		</LabelField>
+		<UsualGroup name="УзелИмя" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узел имя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узел имя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="УзелИмяРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<LabelField name="Узел" id="7">
+					<DataPath>Запись.Узел</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Узел-отправитель</v8:content>
+						</v8:item>
+					</Title>
+					<Width>24</Width>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="УзелКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="УзелРасширеннаяПодсказка" id="9"/>
+				</LabelField>
+				<LabelField name="ИмяСообщения" id="16">
+					<DataPath>Запись.ИмяСообщения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сообщение</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИмяСообщенияКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ИмяСообщенияРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Отметки" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОтметкиРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<LabelField name="ОтметкаНепринятойВерсии" id="10">
+					<DataPath>Запись.ОтметкаНепринятойВерсии</DataPath>
+					<Width>24</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ОтметкаНепринятойВерсииКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ОтметкаНепринятойВерсииРасширеннаяПодсказка" id="12"/>
+				</LabelField>
+				<LabelField name="ОтметкаСохраненнойВерсии" id="31">
+					<DataPath>Запись.ОтметкаСохраненнойВерсии</DataPath>
+					<Width>24</Width>
+					<ContextMenu name="ОтметкаСохраненнойВерсииКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ОтметкаСохраненнойВерсииРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<LabelField name="Дата" id="13">
+			<DataPath>Запись.Дата</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата отказа</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="15"/>
+		</LabelField>
+		<LabelField name="Причина" id="28">
+			<DataPath>Запись.Причина</DataPath>
+			<ContextMenu name="ПричинаКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ПричинаРасширеннаяПодсказка" id="30"/>
+		</LabelField>
+		<InputField name="СтрокаXML" id="23">
+			<DataPath>СтрокаXML</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Непринятые данные</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Top</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>16</Height>
+			<MultiLine>true</MultiLine>
+			<ExtendedEdit>true</ExtendedEdit>
+			<ContextMenu name="СтрокаXMLКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="СтрокаXMLРасширеннаяПодсказка" id="25"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.УдалитьНепринятыеВерсииНаборовЗаписей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СтрокаXML" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка XML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

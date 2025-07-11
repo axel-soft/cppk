@@ -1,0 +1,1608 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>CancelSearch</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+		<ExcludedCommand>Find</ExcludedCommand>
+		<ExcludedCommand>HierarchicalList</ExcludedCommand>
+		<ExcludedCommand>LevelDown</ExcludedCommand>
+		<ExcludedCommand>LevelUp</ExcludedCommand>
+		<ExcludedCommand>List</ExcludedCommand>
+		<ExcludedCommand>ListSettings</ExcludedCommand>
+		<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
+		<ExcludedCommand>OutputList</ExcludedCommand>
+		<ExcludedCommand>Refresh</ExcludedCommand>
+		<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+		<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+		<ExcludedCommand>Tree</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="ИнфоРазмерЗаДень" id="145">
+			<DataPath>ИнфоРазмерЗаДень</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="ИнфоРазмерЗаДеньКонтекстноеМеню" id="146"/>
+			<ExtendedTooltip name="ИнфоРазмерЗаДеньРасширеннаяПодсказка" id="147"/>
+		</LabelField>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<CommandBar name="ГруппаКоманды" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<Button name="Создать" id="239">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Create</CommandName>
+					<ExtendedTooltip name="СоздатьРасширеннаяПодсказка" id="240"/>
+				</Button>
+				<Button name="ФормаОбновитьВсе" id="132">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ОбновитьВсе</CommandName>
+					<ExtendedTooltip name="ФормаОбновитьВсеРасширеннаяПодсказка" id="133"/>
+				</Button>
+				<ButtonGroup name="ГруппаНачатьПереносИсторическихДанных" id="245">
+					<ExtendedTooltip name="ГруппаНачатьПереносИсторическихДанныхРасширеннаяПодсказка" id="246"/>
+					<ChildItems>
+						<Button name="НачатьПереносИсторическихДанныхВУзелКОД" id="228">
+							<Type>CommandBarButton</Type>
+							<CommandName>Catalog.УзлыКОД.Command.НачатьПереносИсторическихДанныхВУзелКОД</CommandName>
+							<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="НачатьПереносИсторическихДанныхВУзелКОДРасширеннаяПодсказка" id="229"/>
+						</Button>
+					</ChildItems>
+				</ButtonGroup>
+				<Popup name="ГруппаИсторияОбменаДанными" id="243">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>История обмена данными</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.History</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаИсторияОбменаДаннымиРасширеннаяПодсказка" id="244"/>
+					<ChildItems>
+						<Button name="ФормаВсяИстория" id="82">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ВсяИстория</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ФормаВсяИсторияРасширеннаяПодсказка" id="83"/>
+						</Button>
+						<Button name="ФормаРегистрСведенийНепринятыеВерсииСсылочныхДанныхНепринятыеВерсииУзла" id="80">
+							<Type>CommandBarButton</Type>
+							<CommandName>InformationRegister.УдалитьНепринятыеВерсииСсылочныхДанных.Command.НепринятыеВерсииУзла</CommandName>
+							<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ФормаРегистрСведенийНепринятыеВерсииСсылочныхДанныхНепринятыеВерсииУзлаРасширеннаяПодсказка" id="81"/>
+						</Button>
+					</ChildItems>
+				</Popup>
+				<Popup name="ГруппаНастройки" id="241">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.Setting</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="242"/>
+					<ChildItems>
+						<Button name="ВключитьОтключитьРегламентныеЗаданияОбмена" id="224">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ВключитьОтключитьРегламентныеЗаданияОбмена</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ВключитьОтключитьРегламентныеЗаданияОбменаРасширеннаяПодсказка" id="225"/>
+						</Button>
+						<ButtonGroup name="ГруппаНастройкиФайлИнициализацииУзла" id="249">
+							<ExtendedTooltip name="ГруппаНастройкиФайлИнициализацииУзлаРасширеннаяПодсказка" id="250"/>
+							<ChildItems>
+								<Button name="СоздатьФайлНастроекУзла" id="247" DisplayImportance="VeryLow">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.СоздатьФайлНастроекУзла</CommandName>
+									<RepresentationInContextMenu>None</RepresentationInContextMenu>
+									<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="СоздатьФайлНастроекУзлаРасширеннаяПодсказка" id="248"/>
+								</Button>
+								<Button name="ЗагрузитьНастройкиИзФайла" id="177" DisplayImportance="VeryLow">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ИнициализироватьУзелНастройкамиИзФайла</CommandName>
+									<RepresentationInContextMenu>None</RepresentationInContextMenu>
+									<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ЗагрузитьНастройкиИзФайлаРасширеннаяПодсказка" id="178"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+					</ChildItems>
+				</Popup>
+				<Button name="ФормаСправочникУзлыКОДЗарегистрироватьНепринятыеДанные" id="72">
+					<Type>CommandBarButton</Type>
+					<Visible>false</Visible>
+					<CommandName>Catalog.УзлыКОД.Command.ЗарегистрироватьНепринятыеДанные</CommandName>
+					<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаСправочникУзлыКОДЗарегистрироватьНепринятыеДанныеРасширеннаяПодсказка" id="73"/>
+				</Button>
+				<Button name="ФормаОтправитьДанныеПринудительно" id="251">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ОтправитьДанныеПринудительно</CommandName>
+					<RepresentationInContextMenu>None</RepresentationInContextMenu>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаОтправитьДанныеПринудительноРасширеннаяПодсказка" id="252"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="ГруппаДанные" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДанныеРасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<Table name="Список" id="3">
+					<Representation>Tree</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<Width>72</Width>
+					<InitialTreeView>ExpandAllLevels</InitialTreeView>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Список</DataPath>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>false</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="СписокКонтекстноеМеню" id="4">
+						<ChildItems>
+							<ButtonGroup name="СписокКонтекстноеМенюИсторическиеДанные" id="265">
+								<ExtendedTooltip name="СписокКонтекстноеМенюИсторическиеДанныеРасширеннаяПодсказка" id="266"/>
+								<ChildItems>
+									<Button name="КомандаНачатьПереносИсторическихДанныхВУзелКОД" id="267">
+										<Type>CommandBarButton</Type>
+										<CommandName>Catalog.УзлыКОД.Command.НачатьПереносИсторическихДанныхВУзелКОД</CommandName>
+										<DataPath>ТекущийУзел</DataPath>
+										<ExtendedTooltip name="КомандаНачатьПереносИсторическихДанныхВУзелКОДРасширеннаяПодсказка" id="268"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="СписокКонтекстноеМенюОстановитьОбменДанными" id="257">
+								<ExtendedTooltip name="СписокКонтекстноеМенюОстановитьОбменДаннымиРасширеннаяПодсказка" id="258"/>
+								<ChildItems>
+									<Button name="КомандаОстановитьОперативнуюОтправку" id="259">
+										<Type>CommandBarButton</Type>
+										<CommandName>Catalog.УзлыКОД.Command.ОстановитьОперативнуюОтправку</CommandName>
+										<DataPath>ТекущийУзел</DataPath>
+										<ExtendedTooltip name="КомандаОстановитьОперативнуюОтправкуРасширеннаяПодсказка" id="260"/>
+									</Button>
+									<Button name="КомандаОстановитьОперативнуюПриемку" id="261">
+										<Type>CommandBarButton</Type>
+										<CommandName>Catalog.УзлыКОД.Command.ОстановитьОперативнуюПриемку</CommandName>
+										<DataPath>ТекущийУзел</DataPath>
+										<ExtendedTooltip name="КомандаОстановитьОперативнуюПриемкуРасширеннаяПодсказка" id="262"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="СписокКонтекстноеМенюСтатистика" id="263">
+								<ExtendedTooltip name="СписокКонтекстноеМенюСтатистикаРасширеннаяПодсказка" id="264"/>
+								<ChildItems>
+									<Button name="СписокКонтекстноеМенюФайлыВКаталогеОбмена" id="143">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ФайлыВКаталогеОбмена</CommandName>
+										<ExtendedTooltip name="СписокКонтекстноеМенюФайлыВКаталогеОбменаРасширеннаяПодсказка" id="144"/>
+									</Button>
+									<Button name="СписокКонтекстноеМенюФайлыВКаталогеОбменаПоУзлам" id="148">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ФайлыВКаталогеОбменаПоУзлам</CommandName>
+										<ExtendedTooltip name="СписокКонтекстноеМенюФайлыВКаталогеОбменаПоУзламРасширеннаяПодсказка" id="149"/>
+									</Button>
+									<Button name="СписокКонтекстноеМенюТрафикПоУзлам" id="158">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ТрафикПоУзлам</CommandName>
+										<ExtendedTooltip name="СписокКонтекстноеМенюТрафикПоУзламРасширеннаяПодсказка" id="159"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</ContextMenu>
+					<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+					<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+						<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+						<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+						<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">СписокВыбор</Event>
+						<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<ColumnGroup name="ГруппаНаименование" id="117">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа наименование</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа наименование</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="ГруппаНаименованиеРасширеннаяПодсказка" id="118"/>
+							<ChildItems>
+								<PictureField name="ЕстьОшибки" id="37">
+									<DataPath>Список.НомерКартинкиСостояния</DataPath>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>1</Width>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.СостоянияУзловКОД</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</ValuesPicture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ЕстьОшибкиКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="ЕстьОшибкиРасширеннаяПодсказка" id="39"/>
+								</PictureField>
+								<LabelField name="Наименование" id="16">
+									<DataPath>Список.Наименование</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Узел</v8:content>
+										</v8:item>
+									</Title>
+									<Width>32</Width>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="ГруппаОтправлено" id="40">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отправка</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<ShowInHeader>true</ShowInHeader>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<ExtendedTooltip name="ГруппаОтправленоРасширеннаяПодсказка" id="41"/>
+							<ChildItems>
+								<ColumnGroup name="ГруппаСостояниеДатаОтправки" id="253">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ГруппаСостояниеДатаОтправкиРасширеннаяПодсказка" id="254"/>
+									<ChildItems>
+										<PictureField name="СостояниеОтправка" id="137">
+											<DataPath>Список.СостояниеОтправка</DataPath>
+											<ShowInHeader>false</ShowInHeader>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>1</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СостоянияПриемкиОтправкиКОД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="СостояниеОтправкаКонтекстноеМеню" id="138"/>
+											<ExtendedTooltip name="СостояниеОтправкаРасширеннаяПодсказка" id="139"/>
+										</PictureField>
+										<LabelField name="ДатаПоследнейОтправки" id="25">
+											<DataPath>Список.ДатаПоследнейОтправки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата последней отправки</v8:content>
+												</v8:item>
+											</Title>
+											<CellHyperlink>true</CellHyperlink>
+											<Width>15</Width>
+											<TextColor>style:ДосьеГиперссылкаЦвет</TextColor>
+											<ContextMenu name="ДатаПоследнейОтправкиКонтекстноеМеню" id="26"/>
+											<ExtendedTooltip name="ДатаПоследнейОтправкиРасширеннаяПодсказка" id="27"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<LabelField name="СкоростьОтправки" id="206">
+									<DataPath>Список.СкоростьОтправки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Скорость, байт/c</v8:content>
+										</v8:item>
+									</Title>
+									<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
+									<Width>10</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=0; ЧН=-; ЧГ=3,0</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СкоростьОтправкиКонтекстноеМеню" id="207"/>
+									<ExtendedTooltip name="СкоростьОтправкиРасширеннаяПодсказка" id="208"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="ГруппаПолучено" id="42">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получение</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<ShowInHeader>true</ShowInHeader>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<ExtendedTooltip name="ГруппаПолученоРасширеннаяПодсказка" id="43"/>
+							<ChildItems>
+								<ColumnGroup name="ГруппаСостояниеДатаПолучения" id="255">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ГруппаСостояниеДатаПолученияРасширеннаяПодсказка" id="256"/>
+									<ChildItems>
+										<PictureField name="СостояниеПолучение" id="134">
+											<DataPath>Список.СостояниеПолучение</DataPath>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>1</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СостоянияПриемкиОтправкиКОД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="СостояниеПолучениеКонтекстноеМеню" id="135"/>
+											<ExtendedTooltip name="СостояниеПолучениеРасширеннаяПодсказка" id="136"/>
+										</PictureField>
+										<LabelField name="ДатаПоследнегоПолучения" id="28">
+											<DataPath>Список.ДатаПоследнегоПолучения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата последнего получения</v8:content>
+												</v8:item>
+											</Title>
+											<CellHyperlink>true</CellHyperlink>
+											<Width>15</Width>
+											<TextColor>style:ДосьеГиперссылкаЦвет</TextColor>
+											<ContextMenu name="ДатаПоследнегоПолученияКонтекстноеМеню" id="29"/>
+											<ExtendedTooltip name="ДатаПоследнегоПолученияРасширеннаяПодсказка" id="30"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<LabelField name="СкоростьПолучения" id="209">
+									<DataPath>Список.СкоростьПолучения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Скорость, байт/c</v8:content>
+										</v8:item>
+									</Title>
+									<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
+									<Width>10</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=0; ЧН=-; ЧГ=3,0</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СкоростьПолученияКонтекстноеМеню" id="210"/>
+									<ExtendedTooltip name="СкоростьПолученияРасширеннаяПодсказка" id="211"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<LabelField name="Версия" id="22">
+							<DataPath>Список.Версия</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Width>7</Width>
+							<ContextMenu name="ВерсияКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="24"/>
+						</LabelField>
+						<LabelField name="Ссылка" id="95">
+							<DataPath>Список.Ссылка</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<ContextMenu name="СсылкаКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="97"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТрафик" id="212">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа трафик</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа трафик</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТрафикРасширеннаяПодсказка" id="213"/>
+			<ChildItems>
+				<ChartField name="Трафик" id="217">
+					<DataPath>Трафик</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ТрафикКонтекстноеМеню" id="218"/>
+					<ExtendedTooltip name="ТрафикРасширеннаяПодсказка" id="219"/>
+				</ChartField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРежимВосстановления" id="172">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа режим восстановления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа режим восстановления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРежимВосстановленияРасширеннаяПодсказка" id="173"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияПредупреждениеРежимВосстановления" id="174">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация предупреждение режим восстановления</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДекорацияПредупреждениеРежимВосстановленияКонтекстноеМеню" id="175"/>
+					<ExtendedTooltip name="ДекорацияПредупреждениеРежимВосстановленияРасширеннаяПодсказка" id="176"/>
+				</PictureDecoration>
+				<LabelDecoration name="ДекорацияРежимВосстановления" id="74">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<TextColor>style:ИнформационнаяНадпись</TextColor>
+					<ContextMenu name="ДекорацияРежимВосстановленияКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ДекорацияРежимВосстановленияРасширеннаяПодсказка" id="76"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Информация" id="179">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>6</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="ИнформацияКонтекстноеМеню" id="180"/>
+			<ExtendedTooltip name="ИнформацияРасширеннаяПодсказка" id="181"/>
+			<Events>
+				<Event name="URLProcessing">ИнформацияОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаСхемаДанных" id="190">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Схема данных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа схема данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<ChildrenAlign>None</ChildrenAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСхемаДанныхРасширеннаяПодсказка" id="191"/>
+			<ChildItems>
+				<LabelField name="ОписаниеСхемыДанных" id="192">
+					<DataPath>ОписаниеСхемыДанных</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Схема данных</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>25</MaxWidth>
+					<ContextMenu name="ОписаниеСхемыДанныхКонтекстноеМеню" id="193"/>
+					<ExtendedTooltip name="ОписаниеСхемыДанныхРасширеннаяПодсказка" id="194"/>
+				</LabelField>
+				<Button name="ЗагрузитьСхемуДанныхКОД" id="202">
+					<Type>Hyperlink</Type>
+					<CommandName>CommonCommand.ЗагрузитьСхемуДанныхКОД</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузить из файла</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗагрузитьСхемуДанныхКОДРасширеннаяПодсказка" id="203"/>
+				</Button>
+				<Button name="ОчиститьСхемуДанныхКОД" id="204">
+					<Type>Hyperlink</Type>
+					<CommandName>CommonCommand.ОчиститьСхемуДанныхКОД</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вернуться ко встроенной</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ОчиститьСхемуДанныхКОДРасширеннаяПодсказка" id="205"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ЕстьОшибки</Field>
+				<Field>Список.ЕстьОшибкиОтправки</Field>
+				<Field>Список.ЕстьОшибкиПолучения</Field>
+				<Field>Список.МиграцияИсторическихДанныхВыполняется</Field>
+				<Field>Список.ПометкаУдаления</Field>
+				<Field>Список.Ссылка</Field>
+				<Field>Список.ЭтотУзел</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ТекущиеОшибкиКОД.Узел КАК Узел,
+	ТекущиеОшибкиКОД.Направление КАК Направление
+ПОМЕСТИТЬ ТекущиеОшибкиКОДУникальные
+ИЗ
+	РегистрСведений.ТекущиеОшибкиКОД КАК ТекущиеОшибкиКОД
+;
+
+ВЫБРАТЬ ПЕРВЫЕ 1
+	ИСТИНА КАК ЕстьОшибки
+ПОМЕСТИТЬ ТекущиеОбщиеОшибкиОтправки
+ИЗ
+	РегистрСведений.ТекущиеОшибкиКОД КАК ТекущиеОбщиеОшибкиОтправки
+ГДЕ
+	ТекущиеОбщиеОшибкиОтправки.Узел = ЗНАЧЕНИЕ(Справочник.УзлыКОД.ПустаяСсылка)
+	И (ТекущиеОбщиеОшибкиОтправки.Направление = ЗНАЧЕНИЕ(Перечисление.НаправленияПотоковКОД.Отправка))
+;
+
+ВЫБРАТЬ 
+	ИсторияКОД.Узел КАК Узел,
+	ЕСТЬNULL(СУММА(ВЫБОР
+		КОГДА ИсторияКОД.Направление = ЗНАЧЕНИЕ(Перечисление.НаправленияПотоковКОД.Отправка)
+		ТОГДА ИсторияКОД.Размер
+		ИНАЧЕ 0
+	КОНЕЦ), 0) / &amp;СекундСНачалаЗамеров КАК СкоростьОтправки,
+	ЕСТЬNULL(СУММА(ВЫБОР
+		КОГДА ИсторияКОД.Направление = ЗНАЧЕНИЕ(Перечисление.НаправленияПотоковКОД.Получение)
+		ТОГДА ИсторияКОД.Размер
+		ИНАЧЕ 0
+	КОНЕЦ), 0) / &amp;СекундСНачалаЗамеров КАК СкоростьПолучения
+ПОМЕСТИТЬ Замеры
+ИЗ РегистрСведений.ИсторияКОД КАК ИсторияКОД
+ГДЕ УниверсальнаяДатаВМиллисекундах &gt; &amp;УниверсальнаяДатаНачалаЗамеровВМиллисекундах
+СГРУППИРОВАТЬ ПО ИсторияКОД.Узел
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Узлы.Ссылка КАК Ссылка,
+	Узлы.ПометкаУдаления КАК ПометкаУдаления,
+	Узлы.Родитель КАК Родитель,
+	Узлы.Код КАК Код,
+	Узлы.Версия КАК Версия,
+	Узлы.ВРежимеВосстановления КАК ВРежимеВосстановления,
+	Узлы.Наименование КАК Наименование,
+	СостоянияУзловОтправка.ДатаПоследнейОтправки КАК ДатаПоследнейОтправки,
+	СостоянияУзловПолучение.ДатаПоследнегоПолучения КАК ДатаПоследнегоПолучения,
+	СостоянияУзловПолучение.ОбменОстановлен КАК ОбменОстановлен,
+	Замеры.СкоростьОтправки КАК СкоростьОтправки,
+	Замеры.СкоростьПолучения КАК СкоростьПолучения,
+	ВЫБОР
+		КОГДА НЕ ТекущиеОшибкиКОДПолучение.Направление ЕСТЬ NULL
+				ИЛИ НЕ ТекущиеОшибкиКОДОтправка.Направление ЕСТЬ NULL
+				ИЛИ НЕ ТекущиеОбщиеОшибкиОтправки.ЕстьОшибки ЕСТЬ NULL
+			ТОГДА 0
+		КОГДА Узлы.ВРежимеВосстановления
+			ТОГДА 1
+		ИНАЧЕ -1
+	КОНЕЦ КАК НомерКартинкиСостояния,
+	ВЫБОР
+		КОГДА НЕ ТекущиеОшибкиКОДПолучение.Направление ЕСТЬ NULL
+				ИЛИ НЕ ТекущиеОшибкиКОДОтправка.Направление ЕСТЬ NULL
+				ИЛИ СостоянияУзловПолучение.ОбменОстановлен
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьОшибки,
+	ВЫБОР
+		КОГДА НЕ ТекущиеОшибкиКОДПолучение.Направление ЕСТЬ NULL
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьОшибкиПолучения,
+	ВЫБОР
+		КОГДА НЕ ТекущиеОшибкиКОДОтправка.Направление ЕСТЬ NULL
+			ИЛИ НЕ ТекущиеОбщиеОшибкиОтправки.ЕстьОшибки ЕСТЬ NULL
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьОшибкиОтправки,
+	ВЫБОР
+		КОГДА СостоянияУзловПолучение.ОбменОстановлен
+			ТОГДА 3
+		КОГДА Узлы.Ссылка &lt;&gt; &amp;ЭтотУзел
+				И ЕСТЬNULL(СостоянияУзловПолучение.ДатаПоследнегоПолучения, ДАТАВРЕМЯ(1, 1, 1)) &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА 1
+		ИНАЧЕ
+			0
+	КОНЕЦ КАК СостояниеПолучение,
+	ВЫБОР
+		КОГДА СостоянияУзловОтправка.ОбменОстановлен
+				И ЕСТЬNULL(ГраницаПереноса.Граница, 0) &lt;&gt; 0
+			ТОГДА 2
+		КОГДА СостоянияУзловОтправка.ОбменОстановлен
+			ТОГДА 3
+		КОГДА Узлы.Ссылка &lt;&gt; &amp;ЭтотУзел
+				И ЕСТЬNULL(СостоянияУзловОтправка.ДатаПоследнейОтправки, ДАТАВРЕМЯ(1, 1, 1)) &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК СостояниеОтправка,
+	ВЫБОР
+		КОГДА Узлы.Ссылка = &amp;ЭтотУзел
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЭтотУзел,
+	ЕСТЬNULL(ГраницаПереноса.Граница, 0) &lt;&gt; 0 КАК МиграцияИсторическихДанныхВыполняется
+ИЗ
+	Справочник.УзлыКОД КАК Узлы
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияУзловКОД КАК СостоянияУзловПолучение
+		ПО Узлы.Ссылка = СостоянияУзловПолучение.Узел
+			И (СостоянияУзловПолучение.Направление = ЗНАЧЕНИЕ(Перечисление.НаправленияПотоковКОД.Получение))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияУзловКОД КАК СостоянияУзловОтправка
+		ПО Узлы.Ссылка = СостоянияУзловОтправка.Узел
+			И (СостоянияУзловОтправка.Направление = ЗНАЧЕНИЕ(Перечисление.НаправленияПотоковКОД.Отправка))
+		ЛЕВОЕ СОЕДИНЕНИЕ ТекущиеОшибкиКОДУникальные КАК ТекущиеОшибкиКОДОтправка
+		ПО Узлы.Ссылка = ТекущиеОшибкиКОДОтправка.Узел
+			И (ТекущиеОшибкиКОДОтправка.Направление = ЗНАЧЕНИЕ(Перечисление.НаправленияПотоковКОД.Отправка))
+		ЛЕВОЕ СОЕДИНЕНИЕ ТекущиеОшибкиКОДУникальные КАК ТекущиеОшибкиКОДПолучение
+		ПО Узлы.Ссылка = ТекущиеОшибкиКОДПолучение.Узел
+			И (ТекущиеОшибкиКОДПолучение.Направление = ЗНАЧЕНИЕ(Перечисление.НаправленияПотоковКОД.Получение))
+		ЛЕВОЕ СОЕДИНЕНИЕ ТекущиеОбщиеОшибкиОтправки КАК ТекущиеОбщиеОшибкиОтправки
+		ПО ИСТИНА
+		ЛЕВОЕ СОЕДИНЕНИЕ Замеры КАК Замеры
+		ПО Узлы.Ссылка = Замеры.Узел
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ГраницаПереносаИсторическихДанныхКОД КАК ГраницаПереноса
+		ПО Узлы.Ссылка = ГраницаПереноса.Узел</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПоследнейОтправки</dcssch:dataPath>
+					<dcssch:field>ДатаПоследнейОтправки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЭтотУзел</dcssch:dataPath>
+					<dcssch:field>ЭтотУзел</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этот узел</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Родитель</dcssch:dataPath>
+					<dcssch:field>Родитель</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Код</dcssch:dataPath>
+					<dcssch:field>Код</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВРежимеВосстановления</dcssch:dataPath>
+					<dcssch:field>ВРежимеВосстановления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Версия</dcssch:dataPath>
+					<dcssch:field>Версия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПоследнегоПолучения</dcssch:dataPath>
+					<dcssch:field>ДатаПоследнегоПолучения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СкоростьОтправки</dcssch:dataPath>
+					<dcssch:field>СкоростьОтправки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Скорость отправки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СкоростьПолучения</dcssch:dataPath>
+					<dcssch:field>СкоростьПолучения</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Скорость получения</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЕстьОшибки</dcssch:dataPath>
+					<dcssch:field>ЕстьОшибки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть ошибки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЕстьОшибкиПолучения</dcssch:dataPath>
+					<dcssch:field>ЕстьОшибкиПолучения</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть ошибки получения</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МиграцияИсторическихДанныхВыполняется</dcssch:dataPath>
+					<dcssch:field>МиграцияИсторическихДанныхВыполняется</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Миграция исторических данных выполняется</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерКартинкиСостояния</dcssch:dataPath>
+					<dcssch:field>НомерКартинкиСостояния</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер картинки состояния</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЕстьОшибкиОтправки</dcssch:dataPath>
+					<dcssch:field>ЕстьОшибкиОтправки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть ошибки отправки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбменОстановлен</dcssch:dataPath>
+					<dcssch:field>ОбменОстановлен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеПолучение</dcssch:dataPath>
+					<dcssch:field>СостояниеПолучение</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние получение</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ГраницаАктуальностиДанных</dcssch:dataPath>
+					<dcssch:field>ГраницаАктуальностиДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяБазы</dcssch:dataPath>
+					<dcssch:field>ИмяБазы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КонецИнтервалаВосстановления</dcssch:dataPath>
+					<dcssch:field>КонецИнтервалаВосстановления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НачалоИнтервалаВосстановления</dcssch:dataPath>
+					<dcssch:field>НачалоИнтервалаВосстановления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НеОтправлятьДанные</dcssch:dataPath>
+					<dcssch:field>НеОтправлятьДанные</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НеПолучатьДанные</dcssch:dataPath>
+					<dcssch:field>НеПолучатьДанные</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПортПриложений</dcssch:dataPath>
+					<dcssch:field>ПортПриложений</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПортСервисов</dcssch:dataPath>
+					<dcssch:field>ПортСервисов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПрефиксШтрихкода</dcssch:dataPath>
+					<dcssch:field>ПрефиксШтрихкода</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СерверПриложений</dcssch:dataPath>
+					<dcssch:field>СерверПриложений</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СерверСервисов</dcssch:dataPath>
+					<dcssch:field>СерверСервисов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СхемаПриложений</dcssch:dataPath>
+					<dcssch:field>СхемаПриложений</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СхемаСервисов</dcssch:dataPath>
+					<dcssch:field>СхемаСервисов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Подразделения</dcssch:dataPath>
+					<dcssch:field>Подразделения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеОтправка</dcssch:dataPath>
+					<dcssch:field>СостояниеОтправка</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние отправка</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Parameter>
+					<dcssch:name>СекундСНачалаЗамеров</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Секунд с начала замеров</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>0</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:decimal">0</dcssch:value>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>УниверсальнаяДатаНачалаЗамеровВМиллисекундах</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Универсальная дата начала замеров в миллисекундах</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>0</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:decimal">0</dcssch:value>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ЭтотУзел</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этот узел</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.УзлыКОД</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<MainTable>Catalog.УзлыКОД</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЭтотУзел" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этот узел</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УзлыКОД</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеДиспетчераКОД" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние диспетчера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.НаправленияПотоковКОД</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаУстановкиСостоянияДиспетчераКод" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата установки состояния диспетчера код</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьОшибкиПеререгистрации" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Информация" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийУзел" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий узел</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УзлыКОД</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДлительностьПоследнегоЦиклаОбмена" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительность последнего цикла обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СреднееВремяПриемки" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Среднее время приемки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнфоРазмерЗаДень" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инфо размер за день</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимВосстановления" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим восстановления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.РежимыВосстановленияСообщениямиКОД</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатистикаТипов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статистика типов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ОписаниеСхемыДанных" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание схемы данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Трафик" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трафик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/chart">d5p1:Chart</v8:Type>
+			</Type>
+			<Settings xmlns:d4p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d4p1:Chart">
+				<d4p1:seriesCurId>3</d4p1:seriesCurId>
+				<d4p1:pointsCurId>0</d4p1:pointsCurId>
+				<d4p1:isSeriesDesign>true</d4p1:isSeriesDesign>
+				<d4p1:realSeriesCount>2</d4p1:realSeriesCount>
+				<d4p1:realSeriesData>
+					<d4p1:id>2</d4p1:id>
+					<d4p1:color>#333399</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>None</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправка, байт</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>true</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realSeriesData>
+				<d4p1:realSeriesData>
+					<d4p1:id>3</d4p1:id>
+					<d4p1:color>#FF6600</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>None</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получение, байт</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>true</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realSeriesData>
+				<d4p1:realExSeriesData>
+					<d4p1:id>1</d4p1:id>
+					<d4p1:color>auto</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Auto</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>#</v8:lang>
+							<v8:content>Сводная</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>false</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realExSeriesData>
+				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
+				<d4p1:realPointCount>0</d4p1:realPointCount>
+				<d4p1:curSeries>1</d4p1:curSeries>
+				<d4p1:curPoint>0</d4p1:curPoint>
+				<d4p1:chartType>Line</d4p1:chartType>
+				<d4p1:circleLabelType>None</d4p1:circleLabelType>
+				<d4p1:labelsDelimiter>, </d4p1:labelsDelimiter>
+				<d4p1:labelsLocation>Edge</d4p1:labelsLocation>
+				<d4p1:lbFormat>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧГ=3,0; ДФ=HH:mm</v8:content>
+					</v8:item>
+				</d4p1:lbFormat>
+				<d4p1:lbpFormat/>
+				<d4p1:labelsColor>style:FormTextColor</d4p1:labelsColor>
+				<d4p1:labelsFont kind="AutoFont"/>
+				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>
+				<d4p1:labelsBkgColor>auto</d4p1:labelsBkgColor>
+				<d4p1:labelsBorder width="1">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+				</d4p1:labelsBorder>
+				<d4p1:labelsBorderColor>auto</d4p1:labelsBorderColor>
+				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
+				<d4p1:chart3Dcrd>SouthWest</d4p1:chart3Dcrd>
+				<d4p1:title/>
+				<d4p1:isShowTitle>true</d4p1:isShowTitle>
+				<d4p1:isShowLegend>true</d4p1:isShowLegend>
+				<d4p1:ttlBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:ttlBorder>
+				<d4p1:ttlBorderColor>style:BorderColor</d4p1:ttlBorderColor>
+				<d4p1:lgBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:lgBorder>
+				<d4p1:lgBorderColor>style:BorderColor</d4p1:lgBorderColor>
+				<d4p1:chBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:chBorder>
+				<d4p1:chBorderColor>style:BorderColor</d4p1:chBorderColor>
+				<d4p1:transparent>false</d4p1:transparent>
+				<d4p1:bkgColor>style:FieldBackColor</d4p1:bkgColor>
+				<d4p1:isTrnspTtl>false</d4p1:isTrnspTtl>
+				<d4p1:ttlColor>style:FieldBackColor</d4p1:ttlColor>
+				<d4p1:isTrnspLeg>false</d4p1:isTrnspLeg>
+				<d4p1:legColor>style:FieldBackColor</d4p1:legColor>
+				<d4p1:isTrnspCh>false</d4p1:isTrnspCh>
+				<d4p1:chColor>style:FieldBackColor</d4p1:chColor>
+				<d4p1:ttlTxtColor>style:FormTextColor</d4p1:ttlTxtColor>
+				<d4p1:legTxtColor>style:FormTextColor</d4p1:legTxtColor>
+				<d4p1:chTxtColor>style:FormTextColor</d4p1:chTxtColor>
+				<d4p1:ttlFont kind="AutoFont"/>
+				<d4p1:legFont kind="AutoFont"/>
+				<d4p1:chFont kind="AutoFont"/>
+				<d4p1:isShowScale>true</d4p1:isShowScale>
+				<d4p1:isShowScaleVL>true</d4p1:isShowScaleVL>
+				<d4p1:isShowSeriesScale>true</d4p1:isShowSeriesScale>
+				<d4p1:isShowPointsScale>true</d4p1:isShowPointsScale>
+				<d4p1:isShowValuesScale>true</d4p1:isShowValuesScale>
+				<d4p1:vsFormat/>
+				<d4p1:xLabelsOrientation>Auto</d4p1:xLabelsOrientation>
+				<d4p1:scaleLine width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+				</d4p1:scaleLine>
+				<d4p1:scaleColor>auto</d4p1:scaleColor>
+				<d4p1:isAutoSeriesName>true</d4p1:isAutoSeriesName>
+				<d4p1:isAutoPointName>true</d4p1:isAutoPointName>
+				<d4p1:maxMode>NotDefined</d4p1:maxMode>
+				<d4p1:maxSeries>4</d4p1:maxSeries>
+				<d4p1:maxSeriesPrc>30</d4p1:maxSeriesPrc>
+				<d4p1:spaceMode>Half</d4p1:spaceMode>
+				<d4p1:baseVal>0</d4p1:baseVal>
+				<d4p1:isOutline>false</d4p1:isOutline>
+				<d4p1:realPiePoint>0</d4p1:realPiePoint>
+				<d4p1:realStockSeries>0</d4p1:realStockSeries>
+				<d4p1:isLight>true</d4p1:isLight>
+				<d4p1:isGradient>false</d4p1:isGradient>
+				<d4p1:isTransposition>false</d4p1:isTransposition>
+				<d4p1:hideBaseVal>false</d4p1:hideBaseVal>
+				<d4p1:dataTable>false</d4p1:dataTable>
+				<d4p1:dtVerLines>true</d4p1:dtVerLines>
+				<d4p1:dtHorLines>true</d4p1:dtHorLines>
+				<d4p1:dtHAlign>Right</d4p1:dtHAlign>
+				<d4p1:dtFormat/>
+				<d4p1:dtKeys>true</d4p1:dtKeys>
+				<d4p1:paletteKind>Auto</d4p1:paletteKind>
+				<d4p1:animation>Auto</d4p1:animation>
+				<d4p1:rebuildTime>9609364</d4p1:rebuildTime>
+				<d4p1:isTransposed>false</d4p1:isTransposed>
+				<d4p1:autoTransposition>false</d4p1:autoTransposition>
+				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
+				<d4p1:surfaceColor>#A90000</d4p1:surfaceColor>
+				<d4p1:radarScaleType>Circle</d4p1:radarScaleType>
+				<d4p1:gaugeValuesPresentation>Needle</d4p1:gaugeValuesPresentation>
+				<d4p1:gaugeQualityBands useTextStr="false" useTooltipStr="false"/>
+				<d4p1:beginGaugeAngle>0</d4p1:beginGaugeAngle>
+				<d4p1:endGaugeAngle>180</d4p1:endGaugeAngle>
+				<d4p1:gaugeThickness>5</d4p1:gaugeThickness>
+				<d4p1:gaugeLabelsLocation>InsideScale</d4p1:gaugeLabelsLocation>
+				<d4p1:gaugeLabelsArcDirection>false</d4p1:gaugeLabelsArcDirection>
+				<d4p1:gaugeBushThickness>4</d4p1:gaugeBushThickness>
+				<d4p1:gaugeBushColor>#A9A9A9</d4p1:gaugeBushColor>
+				<d4p1:autoMaxValue>true</d4p1:autoMaxValue>
+				<d4p1:userMaxValue>0</d4p1:userMaxValue>
+				<d4p1:autoMinValue>true</d4p1:autoMinValue>
+				<d4p1:userMinValue>0</d4p1:userMinValue>
+				<d4p1:elementsIsInit>false</d4p1:elementsIsInit>
+				<d4p1:titleIsInit>true</d4p1:titleIsInit>
+				<d4p1:legendIsInit>true</d4p1:legendIsInit>
+				<d4p1:chartIsInit>true</d4p1:chartIsInit>
+				<d4p1:elementsChart>
+					<d4p1:left>0</d4p1:left>
+					<d4p1:right>0.17</d4p1:right>
+					<d4p1:top>0</d4p1:top>
+					<d4p1:bottom>0</d4p1:bottom>
+				</d4p1:elementsChart>
+				<d4p1:elementsLegend>
+					<d4p1:left>0.83</d4p1:left>
+					<d4p1:right>0</d4p1:right>
+					<d4p1:top>0.08</d4p1:top>
+					<d4p1:bottom>0</d4p1:bottom>
+				</d4p1:elementsLegend>
+				<d4p1:elementsTitle>
+					<d4p1:left>0.83</d4p1:left>
+					<d4p1:right>0</d4p1:right>
+					<d4p1:top>0</d4p1:top>
+					<d4p1:bottom>0.92</d4p1:bottom>
+				</d4p1:elementsTitle>
+				<d4p1:borderColor>style:BorderColor</d4p1:borderColor>
+				<d4p1:border width="1">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+				</d4p1:border>
+				<d4p1:dataSourceDescription/>
+				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
+				<d4p1:isRandomizedNewValues>true</d4p1:isRandomizedNewValues>
+				<d4p1:splineStrain>95</d4p1:splineStrain>
+				<d4p1:translucencePercent>0</d4p1:translucencePercent>
+				<d4p1:funnelNeckHeightPercent>10</d4p1:funnelNeckHeightPercent>
+				<d4p1:funnelNeckWidthPercent>10</d4p1:funnelNeckWidthPercent>
+				<d4p1:funnelGapSumPercent>3</d4p1:funnelGapSumPercent>
+				<d4p1:multiStageLinkLine width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+				</d4p1:multiStageLinkLine>
+				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
+				<d4p1:valuesAxis/>
+				<d4p1:pointsAxis/>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЗаданияОбменаВключены" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задания обмена включены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВсяИстория" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вся история</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вся история</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВсяИстория</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьВсе" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ФайлыВКаталогеОбмена" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы в каталоге обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы в каталоге обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ФайлыВКаталогеОбмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ФайлыВКаталогеОбменаПоУзлам" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы обмена по узлам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы в каталоге обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ФайлыВКаталогеОбменаПоУзлам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ТрафикПоУзлам" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трафик по узлам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трафик по узлам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТрафикПоУзлам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИнициализироватьУзелНастройкамиИзФайла" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инициализировать узел настройками из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инициализировать этот узел</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.LoadReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьНастройкиИзФайла</Action>
+		</Command>
+		<Command name="ВключитьОтключитьРегламентныеЗаданияОбмена" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить/отключить регламентные задания обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.МетаданныеРегламентныеЗадания</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВключитьОтключитьРегламентныеЗаданияОбмена</Action>
+		</Command>
+		<Command name="ОтправитьДанныеПринудительно" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить данные принудительно...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить данные принудительно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьДанныеПринудительно</Action>
+		</Command>
+		<Command name="СоздатьФайлНастроекУзла" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать файл настроек узла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать файл настроек узла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьФайлНастроекУзла</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>Catalog.УзлыКОД.Command.ЗарегистрироватьНепринятыеДанные</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.УзлыКОД.Command.НачатьПереносИсторическихДанныхВУзелКОД</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

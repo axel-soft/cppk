@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Width>77</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОК" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаОтмена" id="43">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="44"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="УсловияПроверки" id="8">
+			<Representation>List</Representation>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<HeightInTableRows>7</HeightInTableRows>
+			<DataPath>УсловияПроверки</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условия проверки</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="УсловияПроверкиКонтекстноеМеню" id="10"/>
+			<AutoCommandBar name="УсловияПроверкиКоманднаяПанель" id="9">
+				<ChildItems>
+					<Button name="УсловияПроверкиИзменитьФорму" id="45">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.OpenFromStandaloneServer</CommandName>
+						<ExtendedTooltip name="УсловияПроверкиИзменитьФормуРасширеннаяПодсказка" id="46"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="УсловияПроверкиРасширеннаяПодсказка" id="11"/>
+			<SearchStringAddition name="УсловияПроверкиСтрокаПоиска" id="12">
+				<AdditionSource>
+					<Item>УсловияПроверки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УсловияПроверкиСтрокаПоискаКонтекстноеМеню" id="13"/>
+				<ExtendedTooltip name="УсловияПроверкиСтрокаПоискаРасширеннаяПодсказка" id="14"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УсловияПроверкиСостояниеПросмотра" id="18">
+				<AdditionSource>
+					<Item>УсловияПроверки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УсловияПроверкиСостояниеПросмотраКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="УсловияПроверкиСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УсловияПроверкиУправлениеПоиском" id="15">
+				<AdditionSource>
+					<Item>УсловияПроверки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="УсловияПроверкиУправлениеПоискомКонтекстноеМеню" id="16"/>
+				<ExtendedTooltip name="УсловияПроверкиУправлениеПоискомРасширеннаяПодсказка" id="17"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeRowChange">УсловияПроверкиПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="УсловияПроверкиУсловие" id="24">
+					<DataPath>УсловияПроверки.Условие</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Условие</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УсловияПроверкиУсловиеКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="УсловияПроверкиУсловиеРасширеннаяПодсказка" id="26"/>
+					<Events>
+						<Event name="AutoComplete">УсловияПроверкиУсловиеАвтоПодбор</Event>
+						<Event name="StartChoice">УсловияПроверкиУсловиеНачалоВыбора</Event>
+						<Event name="TextEditEnd">УсловияПроверкиУсловиеОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+				<InputField name="УсловияПроверкиТекстПредупреждения" id="21">
+					<DataPath>УсловияПроверки.ТекстПредупреждения</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст, который будет показан пользователю в случае невыполнения условия проверки.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="УсловияПроверкиТекстПредупрежденияКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="УсловияПроверкиТекстПредупрежденияРасширеннаяПодсказка" id="23"/>
+				</InputField>
+				<InputField name="УсловияПроверкиФункция" id="47">
+					<DataPath>УсловияПроверки.Функция</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по функции. Если не выбрана, то для всех</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ChoiceButton>false</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<QuickChoice>true</QuickChoice>
+					<ContextMenu name="УсловияПроверкиФункцияКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="УсловияПроверкиФункцияРасширеннаяПодсказка" id="49"/>
+					<Events>
+						<Event name="OnChange">УсловияПроверкиФункцияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="УсловияПроверкиЭтап" id="50">
+					<DataPath>УсловияПроверки.Этап</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по этапу действия. Если не выбран, то для всех</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="УсловияПроверкиЭтапКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="УсловияПроверкиЭтапРасширеннаяПодсказка" id="52"/>
+					<Events>
+						<Event name="OnChange">УсловияПроверкиЭтапПриИзменении</Event>
+						<Event name="AutoComplete">УсловияПроверкиЭтапАвтоПодбор</Event>
+						<Event name="Opening">УсловияПроверкиЭтапОткрытие</Event>
+						<Event name="TextEditEnd">УсловияПроверкиЭтапОкончаниеВводаТекста</Event>
+						<Event name="ChoiceProcessing">УсловияПроверкиЭтапОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="УсловияПроверки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условия проверки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="ТекстПредупреждения" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст предупреждения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Условие" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Условие</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.АлгоритмыПроверки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Функция" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Функция участника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ФункцииУчастниковДействий</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Этап" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этап</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.НаименованиеЭтапа</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НастройкаОбработки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.НастройкиОбработкиВидовОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидДействия" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид действия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыДействий</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеУсловий" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление условий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипыОбъектов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:EnumRef.ТипыОбъектов</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТипДействия" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип действия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыДействий</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОК</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="НастройкаОбработки">
+			<Type>
+				<v8:Type>cfg:CatalogRef.НастройкиОбработкиВидовОбъектов</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ВидДействия">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыДействий</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

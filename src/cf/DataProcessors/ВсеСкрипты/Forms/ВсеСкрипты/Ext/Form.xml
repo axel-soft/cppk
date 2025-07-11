@@ -1,0 +1,1634 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ВидСкрипта" id="1">
+			<DataPath>ВидСкрипта</DataPath>
+			<SkipOnInput>true</SkipOnInput>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ContextMenu name="ВидСкриптаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВидСкриптаРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ВидСкриптаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Pages name="СтраницыСкриптов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы скриптов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы скриптов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыСкриптовРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<Page name="СтраницаАвтоподстановкиДляОбъектов" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница автоподстановки для объектов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница алгоритмы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаАвтоподстановкиДляОбъектовРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<Table name="СписокАвтоподстановкиДляОбъектов" id="43">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокАвтоподстановкиДляОбъектов</DataPath>
+							<RowPictureDataPath>СписокАвтоподстановкиДляОбъектов.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокАвтоподстановкиДляОбъектовКонтекстноеМеню" id="44"/>
+							<AutoCommandBar name="СписокАвтоподстановкиДляОбъектовКоманднаяПанель" id="45">
+								<ChildItems>
+									<Button name="ОтчетИспользованиеСкриптовИспользованиеСкрипта" id="325">
+										<Type>CommandBarButton</Type>
+										<CommandName>Report.ИспользованиеСкриптов.Command.ИспользованиеСкрипта</CommandName>
+										<DataPath>Items.СписокАвтоподстановкиДляОбъектов.CurrentData.Ref</DataPath>
+										<ExtendedTooltip name="ОтчетИспользованиеСкриптовИспользованиеСкриптаРасширеннаяПодсказка" id="326"/>
+									</Button>
+									<Button name="СписокАвтоподстановкиДляОбъектовСправочникАвтоподстановкиДляОбъектовПроверить" id="335">
+										<Type>CommandBarButton</Type>
+										<CommandName>Catalog.АвтоподстановкиДляОбъектов.Command.Проверить</CommandName>
+										<DataPath>Items.СписокАвтоподстановкиДляОбъектов.CurrentData.Ref</DataPath>
+										<ExtendedTooltip name="СписокАвтоподстановкиДляОбъектовСправочникАвтоподстановкиДляОбъектовПроверитьРасширеннаяПодсказка" id="336"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокАвтоподстановкиДляОбъектовРасширеннаяПодсказка" id="46"/>
+							<SearchStringAddition name="СписокАвтоподстановкиДляОбъектовСтрокаПоиска" id="47">
+								<AdditionSource>
+									<Item>СписокАвтоподстановкиДляОбъектов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАвтоподстановкиДляОбъектовСтрокаПоискаКонтекстноеМеню" id="48"/>
+								<ExtendedTooltip name="СписокАвтоподстановкиДляОбъектовСтрокаПоискаРасширеннаяПодсказка" id="49"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокАвтоподстановкиДляОбъектовСостояниеПросмотра" id="50">
+								<AdditionSource>
+									<Item>СписокАвтоподстановкиДляОбъектов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАвтоподстановкиДляОбъектовСостояниеПросмотраКонтекстноеМеню" id="51"/>
+								<ExtendedTooltip name="СписокАвтоподстановкиДляОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="52"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокАвтоподстановкиДляОбъектовУправлениеПоиском" id="53">
+								<AdditionSource>
+									<Item>СписокАвтоподстановкиДляОбъектов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАвтоподстановкиДляОбъектовУправлениеПоискомКонтекстноеМеню" id="54"/>
+								<ExtendedTooltip name="СписокАвтоподстановкиДляОбъектовУправлениеПоискомРасширеннаяПодсказка" id="55"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокАвтоподстановкиДляОбъектовНаименование" id="56">
+									<DataPath>СписокАвтоподстановкиДляОбъектов.Description</DataPath>
+									<ContextMenu name="СписокАвтоподстановкиДляОбъектовНаименованиеКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="СписокАвтоподстановкиДляОбъектовНаименованиеРасширеннаяПодсказка" id="58"/>
+								</LabelField>
+								<LabelField name="СписокАвтоподстановкиДляОбъектовВыражение" id="59">
+									<DataPath>СписокАвтоподстановкиДляОбъектов.Выражение</DataPath>
+									<Font ref="style:ШрифтСкрипта" kind="StyleItem"/>
+									<ContextMenu name="СписокАвтоподстановкиДляОбъектовВыражениеКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="СписокАвтоподстановкиДляОбъектовВыражениеРасширеннаяПодсказка" id="61"/>
+								</LabelField>
+								<LabelField name="СписокАвтоподстановкиДляОбъектовДатаСоздания" id="62">
+									<DataPath>СписокАвтоподстановкиДляОбъектов.ДатаСоздания</DataPath>
+									<ContextMenu name="СписокАвтоподстановкиДляОбъектовДатаСозданияКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="СписокАвтоподстановкиДляОбъектовДатаСозданияРасширеннаяПодсказка" id="64"/>
+								</LabelField>
+								<LabelField name="СписокАвтоподстановкиДляОбъектовДатаИзменения" id="65">
+									<DataPath>СписокАвтоподстановкиДляОбъектов.ДатаИзменения</DataPath>
+									<ContextMenu name="СписокАвтоподстановкиДляОбъектовДатаИзмененияКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="СписокАвтоподстановкиДляОбъектовДатаИзмененияРасширеннаяПодсказка" id="67"/>
+								</LabelField>
+								<LabelField name="СписокАвтоподстановкиДляОбъектовКомментарий" id="68">
+									<DataPath>СписокАвтоподстановкиДляОбъектов.Комментарий</DataPath>
+									<ContextMenu name="СписокАвтоподстановкиДляОбъектовКомментарийКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="СписокАвтоподстановкиДляОбъектовКомментарийРасширеннаяПодсказка" id="70"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаАвтоподстановкиДляПроцессов" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница автоподстановки для процессов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница алгоритмы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаАвтоподстановкиДляПроцессовРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<Table name="СписокАвтоподстановкиДляПроцессов" id="71">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокАвтоподстановкиДляПроцессов</DataPath>
+							<RowPictureDataPath>СписокАвтоподстановкиДляПроцессов.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокАвтоподстановкиДляПроцессовКонтекстноеМеню" id="72"/>
+							<AutoCommandBar name="СписокАвтоподстановкиДляПроцессовКоманднаяПанель" id="73">
+								<ChildItems>
+									<Button name="СписокАвтоподстановкиДляПроцессовОтчетИспользованиеСкриптовИспользованиеСкрипта" id="329">
+										<Type>CommandBarButton</Type>
+										<CommandName>Report.ИспользованиеСкриптов.Command.ИспользованиеСкрипта</CommandName>
+										<DataPath>Items.СписокАвтоподстановкиДляПроцессов.CurrentData.Ref</DataPath>
+										<ExtendedTooltip name="СписокАвтоподстановкиДляПроцессовОтчетИспользованиеСкриптовИспользованиеСкриптаРасширеннаяПодсказка" id="330"/>
+									</Button>
+									<Button name="СписокАвтоподстановкиДляПроцессовСправочникАвтоподстановкиДляПроцессовПроверить" id="337">
+										<Type>CommandBarButton</Type>
+										<CommandName>Catalog.АвтоподстановкиДляПроцессов.Command.Проверить</CommandName>
+										<DataPath>Items.СписокАвтоподстановкиДляПроцессов.CurrentData.Ref</DataPath>
+										<ExtendedTooltip name="СписокАвтоподстановкиДляПроцессовСправочникАвтоподстановкиДляПроцессовПроверитьРасширеннаяПодсказка" id="338"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокАвтоподстановкиДляПроцессовРасширеннаяПодсказка" id="74"/>
+							<SearchStringAddition name="СписокАвтоподстановкиДляПроцессовСтрокаПоиска" id="75">
+								<AdditionSource>
+									<Item>СписокАвтоподстановкиДляПроцессов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАвтоподстановкиДляПроцессовСтрокаПоискаКонтекстноеМеню" id="76"/>
+								<ExtendedTooltip name="СписокАвтоподстановкиДляПроцессовСтрокаПоискаРасширеннаяПодсказка" id="77"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокАвтоподстановкиДляПроцессовСостояниеПросмотра" id="78">
+								<AdditionSource>
+									<Item>СписокАвтоподстановкиДляПроцессов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАвтоподстановкиДляПроцессовСостояниеПросмотраКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="СписокАвтоподстановкиДляПроцессовСостояниеПросмотраРасширеннаяПодсказка" id="80"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокАвтоподстановкиДляПроцессовУправлениеПоиском" id="81">
+								<AdditionSource>
+									<Item>СписокАвтоподстановкиДляПроцессов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАвтоподстановкиДляПроцессовУправлениеПоискомКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="СписокАвтоподстановкиДляПроцессовУправлениеПоискомРасширеннаяПодсказка" id="83"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокАвтоподстановкиДляПроцессовНаименование" id="84">
+									<DataPath>СписокАвтоподстановкиДляПроцессов.Description</DataPath>
+									<ContextMenu name="СписокАвтоподстановкиДляПроцессовНаименованиеКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="СписокАвтоподстановкиДляПроцессовНаименованиеРасширеннаяПодсказка" id="86"/>
+								</LabelField>
+								<LabelField name="СписокАвтоподстановкиДляПроцессовВыражение" id="87">
+									<DataPath>СписокАвтоподстановкиДляПроцессов.Выражение</DataPath>
+									<Font ref="style:ШрифтСкрипта" kind="StyleItem"/>
+									<ContextMenu name="СписокАвтоподстановкиДляПроцессовВыражениеКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="СписокАвтоподстановкиДляПроцессовВыражениеРасширеннаяПодсказка" id="89"/>
+								</LabelField>
+								<LabelField name="СписокАвтоподстановкиДляПроцессовДатаСоздания" id="90">
+									<DataPath>СписокАвтоподстановкиДляПроцессов.ДатаСоздания</DataPath>
+									<ContextMenu name="СписокАвтоподстановкиДляПроцессовДатаСозданияКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="СписокАвтоподстановкиДляПроцессовДатаСозданияРасширеннаяПодсказка" id="92"/>
+								</LabelField>
+								<LabelField name="СписокАвтоподстановкиДляПроцессовДатаИзменения" id="93">
+									<DataPath>СписокАвтоподстановкиДляПроцессов.ДатаИзменения</DataPath>
+									<ContextMenu name="СписокАвтоподстановкиДляПроцессовДатаИзмененияКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="СписокАвтоподстановкиДляПроцессовДатаИзмененияРасширеннаяПодсказка" id="95"/>
+								</LabelField>
+								<LabelField name="СписокАвтоподстановкиДляПроцессовКомментарий" id="96">
+									<DataPath>СписокАвтоподстановкиДляПроцессов.Комментарий</DataPath>
+									<ContextMenu name="СписокАвтоподстановкиДляПроцессовКомментарийКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="СписокАвтоподстановкиДляПроцессовКомментарийРасширеннаяПодсказка" id="98"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаАлгоритмы" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница алгоритмы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница алгоритмы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаАлгоритмыРасширеннаяПодсказка" id="7"/>
+					<ChildItems>
+						<Table name="СписокАлгоритмы" id="8">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокАлгоритмы</DataPath>
+							<RowPictureDataPath>СписокАлгоритмы.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокАлгоритмыКонтекстноеМеню" id="9"/>
+							<AutoCommandBar name="СписокАлгоритмыКоманднаяПанель" id="10">
+								<ChildItems>
+									<Button name="СписокАлгоритмыОтчетИспользованиеСкриптовИспользованиеСкрипта" id="327">
+										<Type>CommandBarButton</Type>
+										<CommandName>Report.ИспользованиеСкриптов.Command.ИспользованиеСкрипта</CommandName>
+										<DataPath>Items.СписокАлгоритмы.CurrentData.Ref</DataPath>
+										<ExtendedTooltip name="СписокАлгоритмыОтчетИспользованиеСкриптовИспользованиеСкриптаРасширеннаяПодсказка" id="328"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокАлгоритмыРасширеннаяПодсказка" id="11"/>
+							<SearchStringAddition name="СписокАлгоритмыСтрокаПоиска" id="12">
+								<AdditionSource>
+									<Item>СписокАлгоритмы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАлгоритмыСтрокаПоискаКонтекстноеМеню" id="13"/>
+								<ExtendedTooltip name="СписокАлгоритмыСтрокаПоискаРасширеннаяПодсказка" id="14"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокАлгоритмыСостояниеПросмотра" id="15">
+								<AdditionSource>
+									<Item>СписокАлгоритмы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАлгоритмыСостояниеПросмотраКонтекстноеМеню" id="16"/>
+								<ExtendedTooltip name="СписокАлгоритмыСостояниеПросмотраРасширеннаяПодсказка" id="17"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокАлгоритмыУправлениеПоиском" id="18">
+								<AdditionSource>
+									<Item>СписокАлгоритмы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАлгоритмыУправлениеПоискомКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="СписокАлгоритмыУправлениеПоискомРасширеннаяПодсказка" id="20"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокАлгоритмыНаименование" id="21">
+									<DataPath>СписокАлгоритмы.Description</DataPath>
+									<ContextMenu name="СписокАлгоритмыНаименованиеКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="СписокАлгоритмыНаименованиеРасширеннаяПодсказка" id="23"/>
+								</LabelField>
+								<LabelField name="СписокАлгоритмыВыражение" id="24">
+									<DataPath>СписокАлгоритмы.Выражение</DataPath>
+									<Font ref="style:ШрифтСкрипта" kind="StyleItem"/>
+									<ContextMenu name="СписокАлгоритмыВыражениеКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="СписокАлгоритмыВыражениеРасширеннаяПодсказка" id="26"/>
+								</LabelField>
+								<LabelField name="СписокАлгоритмыДатаСоздания" id="27">
+									<DataPath>СписокАлгоритмы.ДатаСоздания</DataPath>
+									<ContextMenu name="СписокАлгоритмыДатаСозданияКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="СписокАлгоритмыДатаСозданияРасширеннаяПодсказка" id="29"/>
+								</LabelField>
+								<LabelField name="СписокАлгоритмыДатаИзменения" id="30">
+									<DataPath>СписокАлгоритмы.ДатаИзменения</DataPath>
+									<ContextMenu name="СписокАлгоритмыДатаИзмененияКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="СписокАлгоритмыДатаИзмененияРасширеннаяПодсказка" id="32"/>
+								</LabelField>
+								<LabelField name="СписокАлгоритмыКлючДляВызова" id="33">
+									<DataPath>СписокАлгоритмы.КлючДляВызова</DataPath>
+									<ContextMenu name="СписокАлгоритмыКлючДляВызоваКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="СписокАлгоритмыКлючДляВызоваРасширеннаяПодсказка" id="35"/>
+								</LabelField>
+								<LabelField name="СписокАлгоритмыКомментарий" id="36">
+									<DataPath>СписокАлгоритмы.Комментарий</DataPath>
+									<ContextMenu name="СписокАлгоритмыКомментарийКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="СписокАлгоритмыКомментарийРасширеннаяПодсказка" id="38"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаВычисляемыеПараметрыЧатБота" id="99">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница вычисляемые параметры чат бота</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница вычисляемые параметры чат бота</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаВычисляемыеПараметрыЧатБотаРасширеннаяПодсказка" id="100"/>
+					<ChildItems>
+						<Table name="СписокВычисляемыеПараметрыЧатБота" id="111">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокВычисляемыеПараметрыЧатБота</DataPath>
+							<RowPictureDataPath>СписокВычисляемыеПараметрыЧатБота.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокВычисляемыеПараметрыЧатБотаКонтекстноеМеню" id="112"/>
+							<AutoCommandBar name="СписокВычисляемыеПараметрыЧатБотаКоманднаяПанель" id="113"/>
+							<ExtendedTooltip name="СписокВычисляемыеПараметрыЧатБотаРасширеннаяПодсказка" id="114"/>
+							<SearchStringAddition name="СписокВычисляемыеПараметрыЧатБотаСтрокаПоиска" id="115">
+								<AdditionSource>
+									<Item>СписокВычисляемыеПараметрыЧатБота</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВычисляемыеПараметрыЧатБотаСтрокаПоискаКонтекстноеМеню" id="116"/>
+								<ExtendedTooltip name="СписокВычисляемыеПараметрыЧатБотаСтрокаПоискаРасширеннаяПодсказка" id="117"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокВычисляемыеПараметрыЧатБотаСостояниеПросмотра" id="118">
+								<AdditionSource>
+									<Item>СписокВычисляемыеПараметрыЧатБота</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВычисляемыеПараметрыЧатБотаСостояниеПросмотраКонтекстноеМеню" id="119"/>
+								<ExtendedTooltip name="СписокВычисляемыеПараметрыЧатБотаСостояниеПросмотраРасширеннаяПодсказка" id="120"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокВычисляемыеПараметрыЧатБотаУправлениеПоиском" id="121">
+								<AdditionSource>
+									<Item>СписокВычисляемыеПараметрыЧатБота</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВычисляемыеПараметрыЧатБотаУправлениеПоискомКонтекстноеМеню" id="122"/>
+								<ExtendedTooltip name="СписокВычисляемыеПараметрыЧатБотаУправлениеПоискомРасширеннаяПодсказка" id="123"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокВычисляемыеПараметрыЧатБотаНаименование" id="124">
+									<DataPath>СписокВычисляемыеПараметрыЧатБота.Description</DataPath>
+									<ContextMenu name="СписокВычисляемыеПараметрыЧатБотаНаименованиеКонтекстноеМеню" id="125"/>
+									<ExtendedTooltip name="СписокВычисляемыеПараметрыЧатБотаНаименованиеРасширеннаяПодсказка" id="126"/>
+								</LabelField>
+								<LabelField name="СписокВычисляемыеПараметрыЧатБотаСкрипт" id="130">
+									<DataPath>СписокВычисляемыеПараметрыЧатБота.Скрипт</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выражение</v8:content>
+										</v8:item>
+									</Title>
+									<Font ref="style:ШрифтСкрипта" kind="StyleItem"/>
+									<ContextMenu name="СписокВычисляемыеПараметрыЧатБотаСкриптКонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="СписокВычисляемыеПараметрыЧатБотаСкриптРасширеннаяПодсказка" id="132"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаМетрики" id="101">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница метрики</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница метрики</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаМетрикиРасширеннаяПодсказка" id="102"/>
+					<ChildItems>
+						<Table name="СписокМетрики" id="288">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокМетрики</DataPath>
+							<RowPictureDataPath>СписокМетрики.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокМетрикиКонтекстноеМеню" id="289"/>
+							<AutoCommandBar name="СписокМетрикиКоманднаяПанель" id="290"/>
+							<ExtendedTooltip name="СписокМетрикиРасширеннаяПодсказка" id="291"/>
+							<SearchStringAddition name="СписокМетрикиСтрокаПоиска" id="292">
+								<AdditionSource>
+									<Item>СписокМетрики</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокМетрикиСтрокаПоискаКонтекстноеМеню" id="293"/>
+								<ExtendedTooltip name="СписокМетрикиСтрокаПоискаРасширеннаяПодсказка" id="294"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокМетрикиСостояниеПросмотра" id="295">
+								<AdditionSource>
+									<Item>СписокМетрики</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокМетрикиСостояниеПросмотраКонтекстноеМеню" id="296"/>
+								<ExtendedTooltip name="СписокМетрикиСостояниеПросмотраРасширеннаяПодсказка" id="297"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокМетрикиУправлениеПоиском" id="298">
+								<AdditionSource>
+									<Item>СписокМетрики</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокМетрикиУправлениеПоискомКонтекстноеМеню" id="299"/>
+								<ExtendedTooltip name="СписокМетрикиУправлениеПоискомРасширеннаяПодсказка" id="300"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокМетрикиНаименование" id="301">
+									<DataPath>СписокМетрики.Description</DataPath>
+									<ContextMenu name="СписокМетрикиНаименованиеКонтекстноеМеню" id="302"/>
+									<ExtendedTooltip name="СписокМетрикиНаименованиеРасширеннаяПодсказка" id="303"/>
+								</LabelField>
+								<LabelField name="СписокМетрикиВыражение" id="307">
+									<DataPath>СписокМетрики.Выражение</DataPath>
+									<Font ref="style:ШрифтСкрипта" kind="StyleItem"/>
+									<ContextMenu name="СписокМетрикиВыражениеКонтекстноеМеню" id="308"/>
+									<ExtendedTooltip name="СписокМетрикиВыражениеРасширеннаяПодсказка" id="309"/>
+								</LabelField>
+								<CheckBoxField name="СписокМетрикиНедействителен" id="313">
+									<DataPath>СписокМетрики.Недействителен</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СписокМетрикиНедействителенКонтекстноеМеню" id="314"/>
+									<ExtendedTooltip name="СписокМетрикиНедействителенРасширеннаяПодсказка" id="315"/>
+								</CheckBoxField>
+								<LabelField name="СписокМетрикиПериодЗамеров" id="319">
+									<DataPath>СписокМетрики.ПериодЗамеров</DataPath>
+									<ContextMenu name="СписокМетрикиПериодЗамеровКонтекстноеМеню" id="320"/>
+									<ExtendedTooltip name="СписокМетрикиПериодЗамеровРасширеннаяПодсказка" id="321"/>
+								</LabelField>
+								<LabelField name="СписокМетрикиПериодХранения" id="322">
+									<DataPath>СписокМетрики.ПериодХранения</DataPath>
+									<ContextMenu name="СписокМетрикиПериодХраненияКонтекстноеМеню" id="323"/>
+									<ExtendedTooltip name="СписокМетрикиПериодХраненияРасширеннаяПодсказка" id="324"/>
+								</LabelField>
+								<LabelField name="СписокМетрикиОписание" id="316">
+									<DataPath>СписокМетрики.Описание</DataPath>
+									<ContextMenu name="СписокМетрикиОписаниеКонтекстноеМеню" id="317"/>
+									<ExtendedTooltip name="СписокМетрикиОписаниеРасширеннаяПодсказка" id="318"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПользовательскиеОбработчикиБизнесСобытий" id="103">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница пользовательские обработчики бизнес-событий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница пользовательские обработчики бизнес событий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПользовательскиеОбработчикиБизнесСобытийРасширеннаяПодсказка" id="104"/>
+					<ChildItems>
+						<Table name="СписокПользовательскиеОбработчикиБизнесСобытий" id="133">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокПользовательскиеОбработчикиБизнесСобытий</DataPath>
+							<RowPictureDataPath>СписокПользовательскиеОбработчикиБизнесСобытий.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокПользовательскиеОбработчикиБизнесСобытийКонтекстноеМеню" id="134"/>
+							<AutoCommandBar name="СписокПользовательскиеОбработчикиБизнесСобытийКоманднаяПанель" id="135"/>
+							<ExtendedTooltip name="СписокПользовательскиеОбработчикиБизнесСобытийРасширеннаяПодсказка" id="136"/>
+							<SearchStringAddition name="СписокПользовательскиеОбработчикиБизнесСобытийСтрокаПоиска" id="137">
+								<AdditionSource>
+									<Item>СписокПользовательскиеОбработчикиБизнесСобытий</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПользовательскиеОбработчикиБизнесСобытийСтрокаПоискаКонтекстноеМеню" id="138"/>
+								<ExtendedTooltip name="СписокПользовательскиеОбработчикиБизнесСобытийСтрокаПоискаРасширеннаяПодсказка" id="139"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокПользовательскиеОбработчикиБизнесСобытийСостояниеПросмотра" id="140">
+								<AdditionSource>
+									<Item>СписокПользовательскиеОбработчикиБизнесСобытий</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПользовательскиеОбработчикиБизнесСобытийСостояниеПросмотраКонтекстноеМеню" id="141"/>
+								<ExtendedTooltip name="СписокПользовательскиеОбработчикиБизнесСобытийСостояниеПросмотраРасширеннаяПодсказка" id="142"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокПользовательскиеОбработчикиБизнесСобытийУправлениеПоиском" id="143">
+								<AdditionSource>
+									<Item>СписокПользовательскиеОбработчикиБизнесСобытий</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПользовательскиеОбработчикиБизнесСобытийУправлениеПоискомКонтекстноеМеню" id="144"/>
+								<ExtendedTooltip name="СписокПользовательскиеОбработчикиБизнесСобытийУправлениеПоискомРасширеннаяПодсказка" id="145"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокПользовательскиеОбработчикиБизнесСобытийНаименование" id="146">
+									<DataPath>СписокПользовательскиеОбработчикиБизнесСобытий.Description</DataPath>
+									<ContextMenu name="СписокПользовательскиеОбработчикиБизнесСобытийНаименованиеКонтекстноеМеню" id="147"/>
+									<ExtendedTooltip name="СписокПользовательскиеОбработчикиБизнесСобытийНаименованиеРасширеннаяПодсказка" id="148"/>
+								</LabelField>
+								<InputField name="СписокПользовательскиеОбработчикиБизнесСобытийВыполняемыйКод" id="374">
+									<DataPath>СписокПользовательскиеОбработчикиБизнесСобытий.ВыполняемыйКод</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выражение</v8:content>
+										</v8:item>
+									</Title>
+									<Font ref="style:ШрифтСкрипта" kind="StyleItem"/>
+									<ContextMenu name="СписокПользовательскиеОбработчикиБизнесСобытийВыполняемыйКодКонтекстноеМеню" id="375"/>
+									<ExtendedTooltip name="СписокПользовательскиеОбработчикиБизнесСобытийВыполняемыйКодРасширеннаяПодсказка" id="376"/>
+								</InputField>
+								<LabelField name="СписокПользовательскиеОбработчикиБизнесСобытийКомментарий" id="161">
+									<DataPath>СписокПользовательскиеОбработчикиБизнесСобытий.Комментарий</DataPath>
+									<ContextMenu name="СписокПользовательскиеОбработчикиБизнесСобытийКомментарийКонтекстноеМеню" id="162"/>
+									<ExtendedTooltip name="СписокПользовательскиеОбработчикиБизнесСобытийКомментарийРасширеннаяПодсказка" id="163"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПравилаАвтозаполненияФайлов" id="105">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница правила автозаполнения файлов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница правила автозаполнения файлов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПравилаАвтозаполненияФайловРасширеннаяПодсказка" id="106"/>
+					<ChildItems>
+						<Table name="СписокПравилаАвтозаполненияФайлов" id="260">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокПравилаАвтозаполненияФайлов</DataPath>
+							<RowPictureDataPath>~СписокПравилаАвтозаполненияФайлов.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокПравилаАвтозаполненияФайловКонтекстноеМеню" id="261"/>
+							<AutoCommandBar name="СписокПравилаАвтозаполненияФайловКоманднаяПанель" id="262"/>
+							<ExtendedTooltip name="СписокПравилаАвтозаполненияФайловРасширеннаяПодсказка" id="263"/>
+							<SearchStringAddition name="СписокПравилаАвтозаполненияФайловСтрокаПоиска" id="264">
+								<AdditionSource>
+									<Item>СписокПравилаАвтозаполненияФайлов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПравилаАвтозаполненияФайловСтрокаПоискаКонтекстноеМеню" id="265"/>
+								<ExtendedTooltip name="СписокПравилаАвтозаполненияФайловСтрокаПоискаРасширеннаяПодсказка" id="266"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокПравилаАвтозаполненияФайловСостояниеПросмотра" id="267">
+								<AdditionSource>
+									<Item>СписокПравилаАвтозаполненияФайлов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПравилаАвтозаполненияФайловСостояниеПросмотраКонтекстноеМеню" id="268"/>
+								<ExtendedTooltip name="СписокПравилаАвтозаполненияФайловСостояниеПросмотраРасширеннаяПодсказка" id="269"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокПравилаАвтозаполненияФайловУправлениеПоиском" id="270">
+								<AdditionSource>
+									<Item>СписокПравилаАвтозаполненияФайлов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПравилаАвтозаполненияФайловУправлениеПоискомКонтекстноеМеню" id="271"/>
+								<ExtendedTooltip name="СписокПравилаАвтозаполненияФайловУправлениеПоискомРасширеннаяПодсказка" id="272"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СписокПравилаАвтозаполненияФайловВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СписокПравилаАвтозаполненияФайловВидДокумента" id="273">
+									<DataPath>СписокПравилаАвтозаполненияФайлов.ВидДокумента</DataPath>
+									<ContextMenu name="СписокПравилаАвтозаполненияФайловВидДокументаКонтекстноеМеню" id="274"/>
+									<ExtendedTooltip name="СписокПравилаАвтозаполненияФайловВидДокументаРасширеннаяПодсказка" id="275"/>
+								</LabelField>
+								<LabelField name="СписокПравилаАвтозаполненияФайловФайл" id="285">
+									<DataPath>СписокПравилаАвтозаполненияФайлов.Файл</DataPath>
+									<ContextMenu name="СписокПравилаАвтозаполненияФайловФайлКонтекстноеМеню" id="286"/>
+									<ExtendedTooltip name="СписокПравилаАвтозаполненияФайловФайлРасширеннаяПодсказка" id="287"/>
+								</LabelField>
+								<LabelField name="СписокПравилаАвтозаполненияФайловПолеФайла" id="279">
+									<DataPath>СписокПравилаАвтозаполненияФайлов.ПолеФайла</DataPath>
+									<ContextMenu name="СписокПравилаАвтозаполненияФайловПолеФайлаКонтекстноеМеню" id="280"/>
+									<ExtendedTooltip name="СписокПравилаАвтозаполненияФайловПолеФайлаРасширеннаяПодсказка" id="281"/>
+								</LabelField>
+								<LabelField name="СписокПравилаАвтозаполненияФайловВыражение" id="276">
+									<DataPath>СписокПравилаАвтозаполненияФайлов.Выражение</DataPath>
+									<Font ref="style:ШрифтСкрипта" kind="StyleItem"/>
+									<ContextMenu name="СписокПравилаАвтозаполненияФайловВыражениеКонтекстноеМеню" id="277"/>
+									<ExtendedTooltip name="СписокПравилаАвтозаполненияФайловВыражениеРасширеннаяПодсказка" id="278"/>
+								</LabelField>
+								<LabelField name="СписокПравилаАвтозаполненияФайловТаблицаФайла" id="282">
+									<DataPath>СписокПравилаАвтозаполненияФайлов.ТаблицаФайла</DataPath>
+									<ContextMenu name="СписокПравилаАвтозаполненияФайловТаблицаФайлаКонтекстноеМеню" id="283"/>
+									<ExtendedTooltip name="СписокПравилаАвтозаполненияФайловТаблицаФайлаРасширеннаяПодсказка" id="284"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаУсловияЗадач" id="107">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница условия задач</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница условия задач</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаУсловияЗадачРасширеннаяПодсказка" id="108"/>
+					<ChildItems>
+						<Table name="СписокУсловияЗадач" id="198">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокУсловияЗадач</DataPath>
+							<RowPictureDataPath>СписокУсловияЗадач.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокУсловияЗадачКонтекстноеМеню" id="199"/>
+							<AutoCommandBar name="СписокУсловияЗадачКоманднаяПанель" id="200">
+								<ChildItems>
+									<Button name="СписокУсловияЗадачОтчетИспользованиеСкриптовИспользованиеСкрипта" id="331">
+										<Type>CommandBarButton</Type>
+										<CommandName>Report.ИспользованиеСкриптов.Command.ИспользованиеСкрипта</CommandName>
+										<DataPath>Items.СписокУсловияЗадач.CurrentData.Ref</DataPath>
+										<ExtendedTooltip name="СписокУсловияЗадачОтчетИспользованиеСкриптовИспользованиеСкриптаРасширеннаяПодсказка" id="332"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокУсловияЗадачРасширеннаяПодсказка" id="201"/>
+							<SearchStringAddition name="СписокУсловияЗадачСтрокаПоиска" id="202">
+								<AdditionSource>
+									<Item>СписокУсловияЗадач</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУсловияЗадачСтрокаПоискаКонтекстноеМеню" id="203"/>
+								<ExtendedTooltip name="СписокУсловияЗадачСтрокаПоискаРасширеннаяПодсказка" id="204"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокУсловияЗадачСостояниеПросмотра" id="205">
+								<AdditionSource>
+									<Item>СписокУсловияЗадач</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУсловияЗадачСостояниеПросмотраКонтекстноеМеню" id="206"/>
+								<ExtendedTooltip name="СписокУсловияЗадачСостояниеПросмотраРасширеннаяПодсказка" id="207"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУсловияЗадачУправлениеПоиском" id="208">
+								<AdditionSource>
+									<Item>СписокУсловияЗадач</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУсловияЗадачУправлениеПоискомКонтекстноеМеню" id="209"/>
+								<ExtendedTooltip name="СписокУсловияЗадачУправлениеПоискомРасширеннаяПодсказка" id="210"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокУсловияЗадачНаименование" id="211">
+									<DataPath>СписокУсловияЗадач.Description</DataPath>
+									<ContextMenu name="СписокУсловияЗадачНаименованиеКонтекстноеМеню" id="212"/>
+									<ExtendedTooltip name="СписокУсловияЗадачНаименованиеРасширеннаяПодсказка" id="213"/>
+								</LabelField>
+								<LabelField name="СписокУсловияЗадачКод" id="214">
+									<DataPath>СписокУсловияЗадач.Code</DataPath>
+									<ContextMenu name="СписокУсловияЗадачКодКонтекстноеМеню" id="215"/>
+									<ExtendedTooltip name="СписокУсловияЗадачКодРасширеннаяПодсказка" id="216"/>
+								</LabelField>
+								<LabelField name="СписокУсловияЗадачВыражениеУсловия" id="217">
+									<DataPath>СписокУсловияЗадач.ВыражениеУсловия</DataPath>
+									<Font ref="style:ШрифтСкрипта" kind="StyleItem"/>
+									<ContextMenu name="СписокУсловияЗадачВыражениеУсловияКонтекстноеМеню" id="218"/>
+									<ExtendedTooltip name="СписокУсловияЗадачВыражениеУсловияРасширеннаяПодсказка" id="219"/>
+								</LabelField>
+								<LabelField name="СписокУсловияЗадачСпособЗаданияУсловия" id="220">
+									<DataPath>СписокУсловияЗадач.СпособЗаданияУсловия</DataPath>
+									<ContextMenu name="СписокУсловияЗадачСпособЗаданияУсловияКонтекстноеМеню" id="221"/>
+									<ExtendedTooltip name="СписокУсловияЗадачСпособЗаданияУсловияРасширеннаяПодсказка" id="222"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаАлгоритмыПроверки" id="109">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница условия маршрутизации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница условия маршрутизации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаАлгоритмыПроверкиРасширеннаяПодсказка" id="110"/>
+					<ChildItems>
+						<Table name="СписокАлгоритмыПроверки" id="223">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокАлгоритмыПроверки</DataPath>
+							<RowPictureDataPath>СписокАлгоритмыПроверки.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокАлгоритмыПроверкиКонтекстноеМеню" id="224"/>
+							<AutoCommandBar name="СписокАлгоритмыПроверкиКоманднаяПанель" id="225">
+								<ChildItems>
+									<Button name="СписокАлгоритмыПроверкиОтчетИспользованиеСкриптовИспользованиеСкрипта" id="333">
+										<Type>CommandBarButton</Type>
+										<CommandName>Report.ИспользованиеСкриптов.Command.ИспользованиеСкрипта</CommandName>
+										<DataPath>Items.СписокАлгоритмыПроверки.CurrentData.Ref</DataPath>
+										<ExtendedTooltip name="СписокАлгоритмыПроверкиОтчетИспользованиеСкриптовИспользованиеСкриптаРасширеннаяПодсказка" id="334"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокАлгоритмыПроверкиРасширеннаяПодсказка" id="226"/>
+							<SearchStringAddition name="СписокАлгоритмыПроверкиСтрокаПоиска" id="227">
+								<AdditionSource>
+									<Item>СписокАлгоритмыПроверки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАлгоритмыПроверкиСтрокаПоискаКонтекстноеМеню" id="228"/>
+								<ExtendedTooltip name="СписокАлгоритмыПроверкиСтрокаПоискаРасширеннаяПодсказка" id="229"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокАлгоритмыПроверкиСостояниеПросмотра" id="230">
+								<AdditionSource>
+									<Item>СписокАлгоритмыПроверки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАлгоритмыПроверкиСостояниеПросмотраКонтекстноеМеню" id="231"/>
+								<ExtendedTooltip name="СписокАлгоритмыПроверкиСостояниеПросмотраРасширеннаяПодсказка" id="232"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокАлгоритмыПроверкиУправлениеПоиском" id="233">
+								<AdditionSource>
+									<Item>СписокАлгоритмыПроверки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАлгоритмыПроверкиУправлениеПоискомКонтекстноеМеню" id="234"/>
+								<ExtendedTooltip name="СписокАлгоритмыПроверкиУправлениеПоискомРасширеннаяПодсказка" id="235"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокАлгоритмыПроверкиНаименование" id="236">
+									<DataPath>СписокАлгоритмыПроверки.Description</DataPath>
+									<ContextMenu name="СписокАлгоритмыПроверкиНаименованиеКонтекстноеМеню" id="237"/>
+									<ExtendedTooltip name="СписокАлгоритмыПроверкиНаименованиеРасширеннаяПодсказка" id="238"/>
+								</LabelField>
+								<LabelField name="СписокАлгоритмыПроверкиВыражениеУсловия" id="242">
+									<DataPath>СписокАлгоритмыПроверки.ВыражениеУсловия</DataPath>
+									<Font ref="style:ШрифтСкрипта" kind="StyleItem"/>
+									<ContextMenu name="СписокАлгоритмыПроверкиВыражениеУсловияКонтекстноеМеню" id="243"/>
+									<ExtendedTooltip name="СписокАлгоритмыПроверкиВыражениеУсловияРасширеннаяПодсказка" id="244"/>
+								</LabelField>
+								<LabelField name="СписокАлгоритмыПроверкиКомментарий" id="245">
+									<DataPath>СписокАлгоритмыПроверки.Комментарий</DataPath>
+									<ContextMenu name="СписокАлгоритмыПроверкиКомментарийКонтекстноеМеню" id="246"/>
+									<ExtendedTooltip name="СписокАлгоритмыПроверкиКомментарийРасширеннаяПодсказка" id="247"/>
+								</LabelField>
+								<LabelField name="СписокАлгоритмыПроверкиОтветственный" id="248">
+									<DataPath>СписокАлгоритмыПроверки.Ответственный</DataPath>
+									<ContextMenu name="СписокАлгоритмыПроверкиОтветственныйКонтекстноеМеню" id="249"/>
+									<ExtendedTooltip name="СписокАлгоритмыПроверкиОтветственныйРасширеннаяПодсказка" id="250"/>
+								</LabelField>
+								<LabelField name="СписокАлгоритмыПроверкиПредставлениеОтбора" id="251">
+									<DataPath>СписокАлгоритмыПроверки.ПредставлениеОтбора</DataPath>
+									<ContextMenu name="СписокАлгоритмыПроверкиПредставлениеОтбораКонтекстноеМеню" id="252"/>
+									<ExtendedTooltip name="СписокАлгоритмыПроверкиПредставлениеОтбораРасширеннаяПодсказка" id="253"/>
+								</LabelField>
+								<LabelField name="СписокАлгоритмыПроверкиСпособЗаданияУсловия" id="254">
+									<DataPath>СписокАлгоритмыПроверки.СпособЗаданияУсловия</DataPath>
+									<ContextMenu name="СписокАлгоритмыПроверкиСпособЗаданияУсловияКонтекстноеМеню" id="255"/>
+									<ExtendedTooltip name="СписокАлгоритмыПроверкиСпособЗаданияУсловияРасширеннаяПодсказка" id="256"/>
+								</LabelField>
+								<LabelField name="СписокАлгоритмыПроверкиТипОбъекта" id="257">
+									<DataPath>СписокАлгоритмыПроверки.ТипОбъекта</DataPath>
+									<ContextMenu name="СписокАлгоритмыПроверкиТипОбъектаКонтекстноеМеню" id="258"/>
+									<ExtendedTooltip name="СписокАлгоритмыПроверкиТипОбъектаРасширеннаяПодсказка" id="259"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСкриптыСхемДляОбработокОбъектов" id="339">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница скрипты схем для обработок объектов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаСкриптыСхемДляОбработокОбъектовРасширеннаяПодсказка" id="340"/>
+					<ChildItems>
+						<Table name="СписокСкриптыСхемДляОбработокОбъектов" id="341">
+							<DataPath>СписокСкриптыСхемДляОбработокОбъектов</DataPath>
+							<RowPictureDataPath>СписокСкриптыСхемДляОбработокОбъектов.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокСкриптыСхемДляОбработокОбъектовКонтекстноеМеню" id="343"/>
+							<AutoCommandBar name="СписокСкриптыСхемДляОбработокОбъектовКоманднаяПанель" id="342">
+								<ChildItems>
+									<Button name="СписокСкриптыСхемДляОбработокОбъектовReportИспользованиеСкриптовCommandИспользованиеСкрипта" id="369">
+										<Type>CommandBarButton</Type>
+										<CommandName>Report.ИспользованиеСкриптов.Command.ИспользованиеСкрипта</CommandName>
+										<DataPath>Items.СписокСкриптыСхемДляОбработокОбъектов.CurrentData.Ref</DataPath>
+										<ExtendedTooltip name="СписокСкриптыСхемДляОбработокОбъектовReportИспользованиеСкриптовCommandИспользованиеСкриптаРасширеннаяПодсказка" id="370"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокСкриптыСхемДляОбработокОбъектовРасширеннаяПодсказка" id="344"/>
+							<SearchStringAddition name="СписокСкриптыСхемДляОбработокОбъектовСтрокаПоиска" id="345">
+								<AdditionSource>
+									<Item>СписокСкриптыСхемДляОбработокОбъектов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСкриптыСхемДляОбработокОбъектовСтрокаПоискаКонтекстноеМеню" id="346"/>
+								<ExtendedTooltip name="СписокСкриптыСхемДляОбработокОбъектовСтрокаПоискаРасширеннаяПодсказка" id="347"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСкриптыСхемДляОбработокОбъектовСостояниеПросмотра" id="351">
+								<AdditionSource>
+									<Item>СписокСкриптыСхемДляОбработокОбъектов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСкриптыСхемДляОбработокОбъектовСостояниеПросмотраКонтекстноеМеню" id="352"/>
+								<ExtendedTooltip name="СписокСкриптыСхемДляОбработокОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="353"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокСкриптыСхемДляОбработокОбъектовУправлениеПоиском" id="348">
+								<AdditionSource>
+									<Item>СписокСкриптыСхемДляОбработокОбъектов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСкриптыСхемДляОбработокОбъектовУправлениеПоискомКонтекстноеМеню" id="349"/>
+								<ExtendedTooltip name="СписокСкриптыСхемДляОбработокОбъектовУправлениеПоискомРасширеннаяПодсказка" id="350"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="СписокСкриптыСхемДляОбработокОбъектовНаименование" id="354">
+									<DataPath>СписокСкриптыСхемДляОбработокОбъектов.Description</DataPath>
+									<ContextMenu name="СписокСкриптыСхемДляОбработокОбъектовНаименованиеКонтекстноеМеню" id="355"/>
+									<ExtendedTooltip name="СписокСкриптыСхемДляОбработокОбъектовНаименованиеРасширеннаяПодсказка" id="356"/>
+								</InputField>
+								<InputField name="СписокСкриптыСхемДляОбработокОбъектовВыражение" id="357">
+									<DataPath>СписокСкриптыСхемДляОбработокОбъектов.Выражение</DataPath>
+									<Font ref="style:ШрифтСкрипта" kind="StyleItem"/>
+									<ContextMenu name="СписокСкриптыСхемДляОбработокОбъектовВыражениеКонтекстноеМеню" id="358"/>
+									<ExtendedTooltip name="СписокСкриптыСхемДляОбработокОбъектовВыражениеРасширеннаяПодсказка" id="359"/>
+								</InputField>
+								<InputField name="СписокСкриптыСхемДляОбработокОбъектовДатаСоздания" id="360">
+									<DataPath>СписокСкриптыСхемДляОбработокОбъектов.ДатаСоздания</DataPath>
+									<ContextMenu name="СписокСкриптыСхемДляОбработокОбъектовДатаСозданияКонтекстноеМеню" id="361"/>
+									<ExtendedTooltip name="СписокСкриптыСхемДляОбработокОбъектовДатаСозданияРасширеннаяПодсказка" id="362"/>
+								</InputField>
+								<InputField name="СписокСкриптыСхемДляОбработокОбъектовДатаИзменения" id="363">
+									<DataPath>СписокСкриптыСхемДляОбработокОбъектов.ДатаИзменения</DataPath>
+									<ContextMenu name="СписокСкриптыСхемДляОбработокОбъектовДатаИзмененияКонтекстноеМеню" id="364"/>
+									<ExtendedTooltip name="СписокСкриптыСхемДляОбработокОбъектовДатаИзмененияРасширеннаяПодсказка" id="365"/>
+								</InputField>
+								<InputField name="СписокСкриптыСхемДляОбработокОбъектовКомментарий" id="366">
+									<DataPath>СписокСкриптыСхемДляОбработокОбъектов.Комментарий</DataPath>
+									<ContextMenu name="СписокСкриптыСхемДляОбработокОбъектовКомментарийКонтекстноеМеню" id="367"/>
+									<ExtendedTooltip name="СписокСкриптыСхемДляОбработокОбъектовКомментарийРасширеннаяПодсказка" id="368"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСкриптыСхемДляКомплексныхПроцессов" id="377">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница скрипты схем для комплексных процессов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаСкриптыСхемДляКомплексныхПроцессовРасширеннаяПодсказка" id="378"/>
+					<ChildItems>
+						<Table name="СписокСкриптыСхемДляКомплексныхПроцессов" id="379">
+							<DataPath>СписокСкриптыСхемДляКомплексныхПроцессов</DataPath>
+							<RowPictureDataPath>СписокСкриптыСхемДляКомплексныхПроцессов.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокСкриптыСхемДляКомплексныхПроцессовКонтекстноеМеню" id="381"/>
+							<AutoCommandBar name="СписокСкриптыСхемДляКомплексныхПроцессовКоманднаяПанель" id="380">
+								<ChildItems>
+									<Button name="СписокСкриптыСхемДляКомплексныхПроцессовReportИспользованиеСкриптовCommandИспользованиеСкрипта" id="445">
+										<Type>CommandBarButton</Type>
+										<CommandName>Report.ИспользованиеСкриптов.Command.ИспользованиеСкрипта</CommandName>
+										<DataPath>Items.СписокСкриптыСхемДляКомплексныхПроцессов.CurrentData.Ref</DataPath>
+										<ExtendedTooltip name="СписокСкриптыСхемДляКомплексныхПроцессовReportИспользованиеСкриптовCommandИспользованиеСкриптаРасширеннаяПодсказка" id="446"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокСкриптыСхемДляКомплексныхПроцессовРасширеннаяПодсказка" id="382"/>
+							<SearchStringAddition name="СписокСкриптыСхемДляКомплексныхПроцессовСтрокаПоиска" id="383">
+								<AdditionSource>
+									<Item>СписокСкриптыСхемДляКомплексныхПроцессов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСкриптыСхемДляКомплексныхПроцессовСтрокаПоискаКонтекстноеМеню" id="384"/>
+								<ExtendedTooltip name="СписокСкриптыСхемДляКомплексныхПроцессовСтрокаПоискаРасширеннаяПодсказка" id="385"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСкриптыСхемДляКомплексныхПроцессовСостояниеПросмотра" id="389">
+								<AdditionSource>
+									<Item>СписокСкриптыСхемДляКомплексныхПроцессов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСкриптыСхемДляКомплексныхПроцессовСостояниеПросмотраКонтекстноеМеню" id="390"/>
+								<ExtendedTooltip name="СписокСкриптыСхемДляКомплексныхПроцессовСостояниеПросмотраРасширеннаяПодсказка" id="391"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокСкриптыСхемДляКомплексныхПроцессовУправлениеПоиском" id="386">
+								<AdditionSource>
+									<Item>СписокСкриптыСхемДляКомплексныхПроцессов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСкриптыСхемДляКомплексныхПроцессовУправлениеПоискомКонтекстноеМеню" id="387"/>
+								<ExtendedTooltip name="СписокСкриптыСхемДляКомплексныхПроцессовУправлениеПоискомРасширеннаяПодсказка" id="388"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СкриптыСхемДляКомплексныхПроцессовНаименование" id="392">
+									<DataPath>СписокСкриптыСхемДляКомплексныхПроцессов.Description</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<Width>30</Width>
+									<MaxWidth>36</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СкриптыСхемДляКомплексныхПроцессовНаименованиеКонтекстноеМеню" id="393"/>
+									<ExtendedTooltip name="СкриптыСхемДляКомплексныхПроцессовНаименованиеРасширеннаяПодсказка" id="394"/>
+								</LabelField>
+								<LabelField name="СкриптыСхемДляКомплексныхПроцессовВыражение" id="395">
+									<DataPath>СписокСкриптыСхемДляКомплексныхПроцессов.Выражение</DataPath>
+									<Font ref="style:ШрифтСкрипта" kind="StyleItem"/>
+									<ContextMenu name="СкриптыСхемДляКомплексныхПроцессовВыражениеКонтекстноеМеню" id="396"/>
+									<ExtendedTooltip name="СкриптыСхемДляКомплексныхПроцессовВыражениеРасширеннаяПодсказка" id="397"/>
+								</LabelField>
+								<LabelField name="СкриптыСхемДляКомплексныхПроцессовДатаСоздания" id="398">
+									<DataPath>СписокСкриптыСхемДляКомплексныхПроцессов.ДатаСоздания</DataPath>
+									<ContextMenu name="СкриптыСхемДляКомплексныхПроцессовДатаСозданияКонтекстноеМеню" id="399"/>
+									<ExtendedTooltip name="СкриптыСхемДляКомплексныхПроцессовДатаСозданияРасширеннаяПодсказка" id="400"/>
+								</LabelField>
+								<LabelField name="СкриптыСхемДляКомплексныхПроцессовДатаИзменения" id="401">
+									<DataPath>СписокСкриптыСхемДляКомплексныхПроцессов.ДатаИзменения</DataPath>
+									<ContextMenu name="СкриптыСхемДляКомплексныхПроцессовДатаИзмененияКонтекстноеМеню" id="402"/>
+									<ExtendedTooltip name="СкриптыСхемДляКомплексныхПроцессовДатаИзмененияРасширеннаяПодсказка" id="403"/>
+								</LabelField>
+								<LabelField name="СкриптыСхемДляКомплексныхПроцессовКомментарий" id="404">
+									<DataPath>СписокСкриптыСхемДляКомплексныхПроцессов.Комментарий</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СкриптыСхемДляКомплексныхПроцессовКомментарийКонтекстноеМеню" id="405"/>
+									<ExtendedTooltip name="СкриптыСхемДляКомплексныхПроцессовКомментарийРасширеннаяПодсказка" id="406"/>
+								</LabelField>
+								<InputField name="СкриптыСхемДляКомплексныхПроцессовХешВыражения" id="407">
+									<DataPath>СписокСкриптыСхемДляКомплексныхПроцессов.ХешВыражения</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СкриптыСхемДляКомплексныхПроцессовХешВыраженияКонтекстноеМеню" id="408"/>
+									<ExtendedTooltip name="СкриптыСхемДляКомплексныхПроцессовХешВыраженияРасширеннаяПодсказка" id="409"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСкриптыУсловийСхемДляКомплексныхПроцессов" id="410">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница скрипты условий схем для комплексных процессов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаСкриптыУсловийСхемДляКомплексныхПроцессовРасширеннаяПодсказка" id="411"/>
+					<ChildItems>
+						<Table name="СписокСкриптыУсловийСхемДляКомплексныхПроцессов" id="412">
+							<DataPath>СписокСкриптыУсловийСхемДляКомплексныхПроцессов</DataPath>
+							<RowPictureDataPath>СписокСкриптыУсловийСхемДляКомплексныхПроцессов.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовКонтекстноеМеню" id="414"/>
+							<AutoCommandBar name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовКоманднаяПанель" id="413">
+								<ChildItems>
+									<Button name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовReportИспользованиеСкриптовCommandИспользованиеСкрипта" id="443">
+										<Type>CommandBarButton</Type>
+										<CommandName>Report.ИспользованиеСкриптов.Command.ИспользованиеСкрипта</CommandName>
+										<DataPath>Items.СписокСкриптыУсловийСхемДляКомплексныхПроцессов.CurrentData.Ref</DataPath>
+										<ExtendedTooltip name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовReportИспользованиеСкриптовCommandИспользованиеСкриптаРасширеннаяПодсказка" id="444"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовРасширеннаяПодсказка" id="415"/>
+							<SearchStringAddition name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовСтрокаПоиска" id="416">
+								<AdditionSource>
+									<Item>СписокСкриптыУсловийСхемДляКомплексныхПроцессов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовСтрокаПоискаКонтекстноеМеню" id="417"/>
+								<ExtendedTooltip name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовСтрокаПоискаРасширеннаяПодсказка" id="418"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовСостояниеПросмотра" id="422">
+								<AdditionSource>
+									<Item>СписокСкриптыУсловийСхемДляКомплексныхПроцессов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовСостояниеПросмотраКонтекстноеМеню" id="423"/>
+								<ExtendedTooltip name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовСостояниеПросмотраРасширеннаяПодсказка" id="424"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовУправлениеПоиском" id="419">
+								<AdditionSource>
+									<Item>СписокСкриптыУсловийСхемДляКомплексныхПроцессов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовУправлениеПоискомКонтекстноеМеню" id="420"/>
+								<ExtendedTooltip name="СписокСкриптыУсловийСхемДляКомплексныхПроцессовУправлениеПоискомРасширеннаяПодсказка" id="421"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СкриптыУсловийСхемДляКомплексныхПроцессовНаименование" id="425">
+									<DataPath>СписокСкриптыУсловийСхемДляКомплексныхПроцессов.Description</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<Width>30</Width>
+									<MaxWidth>36</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СкриптыУсловийСхемДляКомплексныхПроцессовНаименованиеКонтекстноеМеню" id="426"/>
+									<ExtendedTooltip name="СкриптыУсловийСхемДляКомплексныхПроцессовНаименованиеРасширеннаяПодсказка" id="427"/>
+								</LabelField>
+								<LabelField name="СкриптыУсловийСхемДляКомплексныхПроцессовВыражение" id="428">
+									<DataPath>СписокСкриптыУсловийСхемДляКомплексныхПроцессов.Выражение</DataPath>
+									<Font ref="style:ШрифтСкрипта" kind="StyleItem"/>
+									<ContextMenu name="СкриптыУсловийСхемДляКомплексныхПроцессовВыражениеКонтекстноеМеню" id="429"/>
+									<ExtendedTooltip name="СкриптыУсловийСхемДляКомплексныхПроцессовВыражениеРасширеннаяПодсказка" id="430"/>
+								</LabelField>
+								<LabelField name="СкриптыУсловийСхемДляКомплексныхПроцессовДатаСоздания" id="431">
+									<DataPath>СписокСкриптыУсловийСхемДляКомплексныхПроцессов.ДатаСоздания</DataPath>
+									<ContextMenu name="СкриптыУсловийСхемДляКомплексныхПроцессовДатаСозданияКонтекстноеМеню" id="432"/>
+									<ExtendedTooltip name="СкриптыУсловийСхемДляКомплексныхПроцессовДатаСозданияРасширеннаяПодсказка" id="433"/>
+								</LabelField>
+								<LabelField name="СкриптыУсловийСхемДляКомплексныхПроцессовДатаДатаИзменения" id="434">
+									<DataPath>СписокСкриптыУсловийСхемДляКомплексныхПроцессов.ДатаИзменения</DataPath>
+									<ContextMenu name="СкриптыУсловийСхемДляКомплексныхПроцессовДатаДатаИзмененияКонтекстноеМеню" id="435"/>
+									<ExtendedTooltip name="СкриптыУсловийСхемДляКомплексныхПроцессовДатаДатаИзмененияРасширеннаяПодсказка" id="436"/>
+								</LabelField>
+								<LabelField name="СкриптыУсловийСхемДляКомплексныхПроцессовДатаКомментарий" id="437">
+									<DataPath>СписокСкриптыУсловийСхемДляКомплексныхПроцессов.Комментарий</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СкриптыУсловийСхемДляКомплексныхПроцессовДатаКомментарийКонтекстноеМеню" id="438"/>
+									<ExtendedTooltip name="СкриптыУсловийСхемДляКомплексныхПроцессовДатаКомментарийРасширеннаяПодсказка" id="439"/>
+								</LabelField>
+								<InputField name="СкриптыУсловийСхемДляКомплексныхПроцессовДатаХешВыражения" id="440">
+									<DataPath>СписокСкриптыУсловийСхемДляКомплексныхПроцессов.ХешВыражения</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СкриптыУсловийСхемДляКомплексныхПроцессовДатаХешВыраженияКонтекстноеМеню" id="441"/>
+									<ExtendedTooltip name="СкриптыУсловийСхемДляКомплексныхПроцессовДатаХешВыраженияРасширеннаяПодсказка" id="442"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВидСкрипта" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокАлгоритмы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список алгоритмы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Алгоритмы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокАвтоподстановкиДляОбъектов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список автоподстановки для объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.АвтоподстановкиДляОбъектов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокАвтоподстановкиДляПроцессов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список автоподстановки для процессов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.АвтоподстановкиДляПроцессов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокВычисляемыеПараметрыЧатБота" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список вычисляемые параметры чат бота</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ВычисляемыеПараметрыЧатБота</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокПользовательскиеОбработчикиБизнесСобытий" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список пользовательские обработчики бизнес-событий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ПользовательскиеОбработчикиБизнесСобытий</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокПравилаАвтозаполненияФайлов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список правила автозаполнения файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокПравилаАвтозаполненияФайлов.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ПравилаАвтозаполненияФайлов.Ссылка КАК Ссылка,
+	ПравилаАвтозаполненияФайлов.ВладелецФайла КАК ВидДокумента,
+	ПравилаАвтозаполненияФайлов.ШаблонФайла КАК Файл,
+	"" КАК ТаблицаФайла,
+	ПравилаАвтозаполненияФайловДанныеДляАвтозаполнения.ТермДляЗамены КАК ПолеФайла,
+	ПравилаАвтозаполненияФайловДанныеДляАвтозаполнения.ВыражениеОбработкиРезультатаЗамены КАК Выражение
+ИЗ
+	Справочник.ПравилаАвтозаполненияФайлов.ДанныеДляАвтозаполнения КАК ПравилаАвтозаполненияФайловДанныеДляАвтозаполнения
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ПравилаАвтозаполненияФайлов КАК ПравилаАвтозаполненияФайлов
+		ПО ПравилаАвтозаполненияФайловДанныеДляАвтозаполнения.Ссылка = ПравилаАвтозаполненияФайлов.Ссылка
+ГДЕ
+	ВЫРАЗИТЬ(ПравилаАвтозаполненияФайловДанныеДляАвтозаполнения.ВыражениеОбработкиРезультатаЗамены КАК СТРОКА(10)) &lt;&gt; ""
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПравилаАвтозаполненияФайлов.Ссылка КАК Ссылка,
+	ПравилаАвтозаполненияФайлов.ВладелецФайла,
+	ПравилаАвтозаполненияФайлов.ШаблонФайла,
+	ПравилаАвтозаполненияФайловПравилаЗаполненияТаблиц.ЗаполняемаяТаблица,
+	ПравилаАвтозаполненияФайловПравилаЗаполненияТаблиц.ЗаменяемоеПоле,
+	ПравилаАвтозаполненияФайловПравилаЗаполненияТаблиц.ЗначениеЗаменыВыражение
+ИЗ
+	Справочник.ПравилаАвтозаполненияФайлов.ПравилаЗаполненияТаблиц КАК ПравилаАвтозаполненияФайловПравилаЗаполненияТаблиц
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ПравилаАвтозаполненияФайлов КАК ПравилаАвтозаполненияФайлов
+		ПО ПравилаАвтозаполненияФайловПравилаЗаполненияТаблиц.Ссылка = ПравилаАвтозаполненияФайлов.Ссылка
+ГДЕ
+	ВЫРАЗИТЬ(ПравилаАвтозаполненияФайловПравилаЗаполненияТаблиц.ЗначениеЗаменыВыражение КАК СТРОКА(10)) &lt;&gt; ""</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ВидДокумента</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Файл</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ТаблицаФайла</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокУсловияЗадач" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список условия задач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.УсловияЗадач</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокАлгоритмыПроверки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список условия маршрутизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.АлгоритмыПроверки</MainTable>
+				<ListSettings/>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокМетрики" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список метрики</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Метрики</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокСкриптыСхемДляОбработокОбъектов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список скрипты схем для обработок объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокСкриптыСхемДляОбработокОбъектов.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.СкриптыСхемДляОбработокОбъектов</MainTable>
+				<ListSettings/>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокСкриптыСхемДляКомплексныхПроцессов" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список скрипты схем для комплексных процессов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокСкриптыСхемДляКомплексныхПроцессов.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.СкриптыСхемДляКомплексныхПроцессов</MainTable>
+				<ListSettings/>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокСкриптыУсловийСхемДляКомплексныхПроцессов" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список скрипты условий схем для комплексных процессов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.СкриптыУсловийСхемДляКомплексныхПроцессов</MainTable>
+				<ListSettings/>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

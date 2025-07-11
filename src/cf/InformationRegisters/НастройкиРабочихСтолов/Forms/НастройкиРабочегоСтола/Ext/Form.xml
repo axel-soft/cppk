@@ -1,0 +1,3672 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<VerticalSpacing>Double</VerticalSpacing>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="6">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="7"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаВариантИКолонки" id="2329">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вариант и колонки</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВариантИКолонкиРасширеннаяПодсказка" id="2330"/>
+			<ChildItems>
+				<UsualGroup name="КонтейнерВариантРабочегоСтола" id="2337">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контейнер вариант рабочего стола</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<VerticalSpacing>None</VerticalSpacing>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="КонтейнерВариантРабочегоСтолаРасширеннаяПодсказка" id="2338"/>
+					<ChildItems>
+						<PictureDecoration name="ВнешняяРамкаВариантаРабочегоСтолаВерх" id="2342">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Внешняя рамка виджета верх1</v8:content>
+								</v8:item>
+							</Title>
+							<PictureSize>Stretch</PictureSize>
+							<Picture>
+								<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхОранжевый</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ВнешняяРамкаВариантаРабочегоСтолаВерхКонтекстноеМеню" id="2343"/>
+							<ExtendedTooltip name="ВнешняяРамкаВариантаРабочегоСтолаВерхРасширеннаяПодсказка" id="2344"/>
+						</PictureDecoration>
+						<UsualGroup name="ГруппаВариантРабочегоСтола" id="77">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа вариант рабочего стола</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>style:ФонВиджетаОранжевый</BackColor>
+							<ExtendedTooltip name="ГруппаВариантРабочегоСтолаРасширеннаяПодсказка" id="78"/>
+							<ChildItems>
+								<InputField name="ВариантРабочегоСтола" id="1">
+									<DataPath>ВариантРабочегоСтола</DataPath>
+									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Width>28</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>28</MaxWidth>
+									<ListChoiceMode>true</ListChoiceMode>
+									<QuickChoice>true</QuickChoice>
+									<ContextMenu name="ВариантРабочегоСтолаКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="ВариантРабочегоСтолаРасширеннаяПодсказка" id="3"/>
+									<Events>
+										<Event name="OnChange">ВариантРабочегоСтолаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Button name="ВосстановитьНастройкиПоУмолчанию" id="2097">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ВосстановитьНастройкиПоУмолчанию</CommandName>
+									<ExtendedTooltip name="ВосстановитьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="2098"/>
+								</Button>
+								<CheckBoxField name="ФоновоеОбновление" id="16">
+									<DataPath>ФоновоеОбновление</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Фоновое обновление рабочего стола позволяет сократить задержки при просмотре рабочего стола</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<CheckBoxType>Switcher</CheckBoxType>
+									<ContextMenu name="ФоновоеОбновлениеКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ФоновоеОбновлениеРасширеннаяПодсказка" id="18"/>
+									<Events>
+										<Event name="OnChange">ФоновоеОбновлениеПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<PictureDecoration name="ВнешняяРамкаВариантаРабочегоСтолаНиз" id="2339">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Внешняя рамка виджета верх1</v8:content>
+								</v8:item>
+							</Title>
+							<PictureSize>Stretch</PictureSize>
+							<Picture>
+								<xr:Ref>CommonPicture.ВнешняяРамкаШирокийНизОранжевый</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ВнешняяРамкаВариантаРабочегоСтолаНизКонтекстноеМеню" id="2340"/>
+							<ExtendedTooltip name="ВнешняяРамкаВариантаРабочегоСтолаНизРасширеннаяПодсказка" id="2341"/>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКолонки" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа колонки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКолонкиРасширеннаяПодсказка" id="28"/>
+					<ChildItems>
+						<UsualGroup name="Колонка1" id="29">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Колонка1</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Single</VerticalSpacing>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Колонка1РасширеннаяПодсказка" id="30"/>
+							<ChildItems>
+								<UsualGroup name="Строка1_1" id="52">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка1 1</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Строка1_1РасширеннаяПодсказка" id="53"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх1" id="60">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх1КонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх1РасширеннаяПодсказка" id="62"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаВиджет1_1" id="56">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа виджет1 1</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаВиджет1_1РасширеннаяПодсказка" id="57"/>
+											<ChildItems>
+												<InputField name="Виджет1_1" id="66">
+													<DataPath>Виджет1_1</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<DropListButton>true</DropListButton>
+													<ClearButton>false</ClearButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Задачи мне</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">ЗадачиМне</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="Виджет1_1КонтекстноеМеню" id="67"/>
+													<ExtendedTooltip name="Виджет1_1РасширеннаяПодсказка" id="68"/>
+													<Events>
+														<Event name="OnChange">Виджет1_1ПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="КомандыВиджет1_1" id="2383">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды виджет5 1</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="КомандыВиджет1_1РасширеннаяПодсказка" id="2384"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтступКомандЛево1_1" id="2385">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд лево5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандЛево1_1РасширеннаяПодсказка" id="2386"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандЛево1_1" id="2387">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандЛево1_1КонтекстноеМеню" id="2388"/>
+																	<ExtendedTooltip name="ОтступКомандЛево1_1РасширеннаяПодсказка" id="2389"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<Button name="УдалитьВиджет1_1" id="2390">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УдалитьВиджет1_1</CommandName>
+															<ShapeRepresentation>None</ShapeRepresentation>
+															<ExtendedTooltip name="УдалитьВиджет1_1РасширеннаяПодсказка" id="2391"/>
+														</Button>
+														<UsualGroup name="ГруппаОтступКомандПраво1_1" id="2392">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд право5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Right</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандПраво1_1РасширеннаяПодсказка" id="2393"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандПраво1_1" id="2394">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандПраво1_1КонтекстноеМеню" id="2395"/>
+																	<ExtendedTooltip name="ОтступКомандПраво1_1РасширеннаяПодсказка" id="2396"/>
+																</LabelDecoration>
+																<Button name="НастроитьВиджет1_1" id="2397">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.НастроитьВиджет1_1</CommandName>
+																	<TextColor>style:ЦветГиперссылки</TextColor>
+																	<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="НастроитьВиджет1_1РасширеннаяПодсказка" id="2398"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз1" id="63">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз1КонтекстноеМеню" id="64"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз1РасширеннаяПодсказка" id="65"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Строка1_2" id="1784">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка1 2</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Строка1_2РасширеннаяПодсказка" id="1785"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх2" id="2099">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх2КонтекстноеМеню" id="2100"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх2РасширеннаяПодсказка" id="2101"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаВиджет1_2" id="1789">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа виджет1 2</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаВиджет1_2РасширеннаяПодсказка" id="1790"/>
+											<ChildItems>
+												<InputField name="Виджет1_2" id="1791">
+													<DataPath>Виджет1_2</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="Виджет1_2КонтекстноеМеню" id="1792"/>
+													<ExtendedTooltip name="Виджет1_2РасширеннаяПодсказка" id="1793"/>
+													<Events>
+														<Event name="OnChange">Виджет1_2ПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="КомандыВиджет1_2" id="2399">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды виджет5 1</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="КомандыВиджет1_2РасширеннаяПодсказка" id="2400"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтступКомандЛево1_2" id="2401">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд лево5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандЛево1_2РасширеннаяПодсказка" id="2402"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандЛево1_2" id="2403">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандЛево1_2КонтекстноеМеню" id="2404"/>
+																	<ExtendedTooltip name="ОтступКомандЛево1_2РасширеннаяПодсказка" id="2405"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<Button name="УдалитьВиджет1_2" id="2406">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УдалитьВиджет1_2</CommandName>
+															<ShapeRepresentation>None</ShapeRepresentation>
+															<ExtendedTooltip name="УдалитьВиджет1_2РасширеннаяПодсказка" id="2407"/>
+														</Button>
+														<UsualGroup name="ГруппаОтступКомандПраво1_2" id="2408">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд право5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Right</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандПраво1_2РасширеннаяПодсказка" id="2409"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандПраво1_2" id="2410">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандПраво1_2КонтекстноеМеню" id="2411"/>
+																	<ExtendedTooltip name="ОтступКомандПраво1_2РасширеннаяПодсказка" id="2412"/>
+																</LabelDecoration>
+																<Button name="НастроитьВиджет1_2" id="2413">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.НастроитьВиджет1_2</CommandName>
+																	<TextColor>style:ЦветГиперссылки</TextColor>
+																	<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="НастроитьВиджет1_2РасширеннаяПодсказка" id="2414"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз2" id="2150">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз2КонтекстноеМеню" id="2151"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз2РасширеннаяПодсказка" id="2152"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Строка1_3" id="1803">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка1 3</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Строка1_3РасширеннаяПодсказка" id="1804"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх3" id="2102">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх3КонтекстноеМеню" id="2103"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх3РасширеннаяПодсказка" id="2104"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаВиджет1_3" id="1808">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа виджет1 3</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаВиджет1_3РасширеннаяПодсказка" id="1809"/>
+											<ChildItems>
+												<InputField name="Виджет1_3" id="1810">
+													<DataPath>Виджет1_3</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="Виджет1_3КонтекстноеМеню" id="1811"/>
+													<ExtendedTooltip name="Виджет1_3РасширеннаяПодсказка" id="1812"/>
+													<Events>
+														<Event name="OnChange">Виджет1_3ПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="КомандыВиджет1_3" id="2415">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды виджет5 1</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="КомандыВиджет1_3РасширеннаяПодсказка" id="2416"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтступКомандЛево1_3" id="2417">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд лево5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандЛево1_3РасширеннаяПодсказка" id="2418"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандЛево1_3" id="2419">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандЛево1_3КонтекстноеМеню" id="2420"/>
+																	<ExtendedTooltip name="ОтступКомандЛево1_3РасширеннаяПодсказка" id="2421"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<Button name="УдалитьВиджет1_3" id="2422">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УдалитьВиджет1_3</CommandName>
+															<ShapeRepresentation>None</ShapeRepresentation>
+															<ExtendedTooltip name="УдалитьВиджет1_3РасширеннаяПодсказка" id="2423"/>
+														</Button>
+														<UsualGroup name="ГруппаОтступКомандПраво1_3" id="2424">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд право5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Right</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандПраво1_3РасширеннаяПодсказка" id="2425"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандПраво1_3" id="2426">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандПраво1_3КонтекстноеМеню" id="2427"/>
+																	<ExtendedTooltip name="ОтступКомандПраво1_3РасширеннаяПодсказка" id="2428"/>
+																</LabelDecoration>
+																<Button name="НастроитьВиджет1_3" id="2429">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.НастроитьВиджет1_3</CommandName>
+																	<TextColor>style:ЦветГиперссылки</TextColor>
+																	<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="НастроитьВиджет1_3РасширеннаяПодсказка" id="2430"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз3" id="2153">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз3КонтекстноеМеню" id="2154"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз3РасширеннаяПодсказка" id="2155"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Колонка1Добавить" id="2073">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Колонка1 добавить</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Колонка1ДобавитьРасширеннаяПодсказка" id="2074"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх4" id="2105">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх4КонтекстноеМеню" id="2106"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх4РасширеннаяПодсказка" id="2107"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаДобавить1" id="2078">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа добавить1</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаДобавить1РасширеннаяПодсказка" id="2079"/>
+											<ChildItems>
+												<Button name="ДобавитьВиджет1" id="2281">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ДобавитьВиджет1</CommandName>
+													<ShapeRepresentation>None</ShapeRepresentation>
+													<ExtendedTooltip name="ДобавитьВиджет1РасширеннаяПодсказка" id="2282"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз4" id="2156">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз4КонтекстноеМеню" id="2157"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз4РасширеннаяПодсказка" id="2158"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Колонка2" id="1822">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Колонка1</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Single</VerticalSpacing>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Колонка2РасширеннаяПодсказка" id="1823"/>
+							<ChildItems>
+								<UsualGroup name="Строка2_1" id="1824">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка2 1</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Строка2_1РасширеннаяПодсказка" id="1825"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх5" id="2108">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх5КонтекстноеМеню" id="2109"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх5РасширеннаяПодсказка" id="2110"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаВиджет2_1" id="1829">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа виджет2 1</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаВиджет2_1РасширеннаяПодсказка" id="1830"/>
+											<ChildItems>
+												<InputField name="Виджет2_1" id="1831">
+													<DataPath>Виджет2_1</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="Виджет2_1КонтекстноеМеню" id="1832"/>
+													<ExtendedTooltip name="Виджет2_1РасширеннаяПодсказка" id="1833"/>
+													<Events>
+														<Event name="OnChange">Виджет2_1ПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="КомандыВиджет2_1" id="2431">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды виджет5 1</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="КомандыВиджет2_1РасширеннаяПодсказка" id="2432"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтступКомандЛево2_1" id="2433">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд лево5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандЛево2_1РасширеннаяПодсказка" id="2434"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандЛево2_1" id="2435">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандЛево2_1КонтекстноеМеню" id="2436"/>
+																	<ExtendedTooltip name="ОтступКомандЛево2_1РасширеннаяПодсказка" id="2437"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<Button name="УдалитьВиджет2_1" id="2438">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УдалитьВиджет2_1</CommandName>
+															<ShapeRepresentation>None</ShapeRepresentation>
+															<ExtendedTooltip name="УдалитьВиджет2_1РасширеннаяПодсказка" id="2439"/>
+														</Button>
+														<UsualGroup name="ГруппаОтступКомандПраво2_1" id="2440">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд право5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Right</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандПраво2_1РасширеннаяПодсказка" id="2441"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандПраво2_1" id="2442">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандПраво2_1КонтекстноеМеню" id="2443"/>
+																	<ExtendedTooltip name="ОтступКомандПраво2_1РасширеннаяПодсказка" id="2444"/>
+																</LabelDecoration>
+																<Button name="НастроитьВиджет2_1" id="2445">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.НастроитьВиджет2_1</CommandName>
+																	<TextColor>style:ЦветГиперссылки</TextColor>
+																	<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="НастроитьВиджет2_1РасширеннаяПодсказка" id="2446"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз5" id="2159">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз5КонтекстноеМеню" id="2160"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз5РасширеннаяПодсказка" id="2161"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Строка2_2" id="1843">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка2 2</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Строка2_2РасширеннаяПодсказка" id="1844"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх6" id="2111">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх6КонтекстноеМеню" id="2112"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх6РасширеннаяПодсказка" id="2113"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаВиджет2_2" id="1848">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа виджет2 2</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаВиджет2_2РасширеннаяПодсказка" id="1849"/>
+											<ChildItems>
+												<InputField name="Виджет2_2" id="1850">
+													<DataPath>Виджет2_2</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="Виджет2_2КонтекстноеМеню" id="1851"/>
+													<ExtendedTooltip name="Виджет2_2РасширеннаяПодсказка" id="1852"/>
+													<Events>
+														<Event name="OnChange">Виджет2_2ПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="КомандыВиджет2_2" id="2447">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды виджет5 1</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="КомандыВиджет2_2РасширеннаяПодсказка" id="2448"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтступКомандЛево2_2" id="2449">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд лево5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандЛево2_2РасширеннаяПодсказка" id="2450"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандЛево2_2" id="2451">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандЛево2_2КонтекстноеМеню" id="2452"/>
+																	<ExtendedTooltip name="ОтступКомандЛево2_2РасширеннаяПодсказка" id="2453"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<Button name="УдалитьВиджет2_2" id="2454">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УдалитьВиджет2_2</CommandName>
+															<ShapeRepresentation>None</ShapeRepresentation>
+															<ExtendedTooltip name="УдалитьВиджет2_2РасширеннаяПодсказка" id="2455"/>
+														</Button>
+														<UsualGroup name="ГруппаОтступКомандПраво2_2" id="2456">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд право5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Right</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандПраво2_2РасширеннаяПодсказка" id="2457"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандПраво2_2" id="2458">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандПраво2_2КонтекстноеМеню" id="2459"/>
+																	<ExtendedTooltip name="ОтступКомандПраво2_2РасширеннаяПодсказка" id="2460"/>
+																</LabelDecoration>
+																<Button name="НастроитьВиджет2_2" id="2461">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.НастроитьВиджет2_2</CommandName>
+																	<TextColor>style:ЦветГиперссылки</TextColor>
+																	<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="НастроитьВиджет2_2РасширеннаяПодсказка" id="2462"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз6" id="2162">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз6КонтекстноеМеню" id="2163"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз6РасширеннаяПодсказка" id="2164"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Строка2_3" id="1862">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка2 3</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Строка2_3РасширеннаяПодсказка" id="1863"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх7" id="2114">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх7КонтекстноеМеню" id="2115"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх7РасширеннаяПодсказка" id="2116"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаВиджет2_3" id="1867">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа виджет2 3</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаВиджет2_3РасширеннаяПодсказка" id="1868"/>
+											<ChildItems>
+												<InputField name="Виджет2_3" id="1869">
+													<DataPath>Виджет2_3</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="Виджет2_3КонтекстноеМеню" id="1870"/>
+													<ExtendedTooltip name="Виджет2_3РасширеннаяПодсказка" id="1871"/>
+													<Events>
+														<Event name="OnChange">Виджет2_3ПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="КомандыВиджет2_3" id="2463">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды виджет5 1</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="КомандыВиджет2_3РасширеннаяПодсказка" id="2464"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтступКомандЛево2_3" id="2465">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд лево5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандЛево2_3РасширеннаяПодсказка" id="2466"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандЛево2_3" id="2467">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандЛево2_3КонтекстноеМеню" id="2468"/>
+																	<ExtendedTooltip name="ОтступКомандЛево2_3РасширеннаяПодсказка" id="2469"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<Button name="УдалитьВиджет2_3" id="2470">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УдалитьВиджет2_3</CommandName>
+															<ShapeRepresentation>None</ShapeRepresentation>
+															<ExtendedTooltip name="УдалитьВиджет2_3РасширеннаяПодсказка" id="2471"/>
+														</Button>
+														<UsualGroup name="ГруппаОтступКомандПраво2_3" id="2472">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд право5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Right</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандПраво2_3РасширеннаяПодсказка" id="2473"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандПраво2_3" id="2474">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандПраво2_3КонтекстноеМеню" id="2475"/>
+																	<ExtendedTooltip name="ОтступКомандПраво2_3РасширеннаяПодсказка" id="2476"/>
+																</LabelDecoration>
+																<Button name="НастроитьВиджет2_3" id="2477">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.НастроитьВиджет2_3</CommandName>
+																	<TextColor>style:ЦветГиперссылки</TextColor>
+																	<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="НастроитьВиджет2_3РасширеннаяПодсказка" id="2478"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз7" id="2165">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз7КонтекстноеМеню" id="2166"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз7РасширеннаяПодсказка" id="2167"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Колонка2Добавить" id="2035">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Колонка2 добавить</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Колонка2ДобавитьРасширеннаяПодсказка" id="2036"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх8" id="2117">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх8КонтекстноеМеню" id="2118"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх8РасширеннаяПодсказка" id="2119"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаДобавить2" id="2040">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа добавить2</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаДобавить2РасширеннаяПодсказка" id="2041"/>
+											<ChildItems>
+												<Button name="ДобавитьВиджет2" id="2283">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ДобавитьВиджет2</CommandName>
+													<ShapeRepresentation>None</ShapeRepresentation>
+													<ExtendedTooltip name="ДобавитьВиджет2РасширеннаяПодсказка" id="2284"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз8" id="2168">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз8КонтекстноеМеню" id="2169"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз8РасширеннаяПодсказка" id="2170"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Колонка3" id="1881">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Колонка1</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Single</VerticalSpacing>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Колонка3РасширеннаяПодсказка" id="1882"/>
+							<ChildItems>
+								<UsualGroup name="Строка3_1" id="1883">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка3 1</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Строка3_1РасширеннаяПодсказка" id="1884"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх9" id="2120">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх9КонтекстноеМеню" id="2121"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх9РасширеннаяПодсказка" id="2122"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаВиджет3_1" id="1888">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа виджет3 1</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаВиджет3_1РасширеннаяПодсказка" id="1889"/>
+											<ChildItems>
+												<InputField name="Виджет3_1" id="1890">
+													<DataPath>Виджет3_1</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="Виджет3_1КонтекстноеМеню" id="1891"/>
+													<ExtendedTooltip name="Виджет3_1РасширеннаяПодсказка" id="1892"/>
+													<Events>
+														<Event name="OnChange">Виджет3_1ПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="КомандыВиджет3_1" id="2479">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды виджет5 1</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="КомандыВиджет3_1РасширеннаяПодсказка" id="2480"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтступКомандЛево3_1" id="2481">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд лево5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандЛево3_1РасширеннаяПодсказка" id="2482"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандЛево3_1" id="2483">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандЛево3_1КонтекстноеМеню" id="2484"/>
+																	<ExtendedTooltip name="ОтступКомандЛево3_1РасширеннаяПодсказка" id="2485"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<Button name="УдалитьВиджет3_1" id="2486">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УдалитьВиджет3_1</CommandName>
+															<ShapeRepresentation>None</ShapeRepresentation>
+															<ExtendedTooltip name="УдалитьВиджет3_1РасширеннаяПодсказка" id="2487"/>
+														</Button>
+														<UsualGroup name="ГруппаОтступКомандПраво3_1" id="2488">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд право5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Right</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандПраво3_1РасширеннаяПодсказка" id="2489"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандПраво3_1" id="2490">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандПраво3_1КонтекстноеМеню" id="2491"/>
+																	<ExtendedTooltip name="ОтступКомандПраво3_1РасширеннаяПодсказка" id="2492"/>
+																</LabelDecoration>
+																<Button name="НастроитьВиджет3_1" id="2493">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.НастроитьВиджет3_1</CommandName>
+																	<TextColor>style:ЦветГиперссылки</TextColor>
+																	<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="НастроитьВиджет3_1РасширеннаяПодсказка" id="2494"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз9" id="2171">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз9КонтекстноеМеню" id="2172"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз9РасширеннаяПодсказка" id="2173"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Строка3_2" id="1902">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка3 2</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Строка3_2РасширеннаяПодсказка" id="1903"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх10" id="2123">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх10КонтекстноеМеню" id="2124"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх10РасширеннаяПодсказка" id="2125"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаВиджет3_2" id="1907">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа виджет3 2</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаВиджет3_2РасширеннаяПодсказка" id="1908"/>
+											<ChildItems>
+												<InputField name="Виджет3_2" id="1909">
+													<DataPath>Виджет3_2</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="Виджет3_2КонтекстноеМеню" id="1910"/>
+													<ExtendedTooltip name="Виджет3_2РасширеннаяПодсказка" id="1911"/>
+													<Events>
+														<Event name="OnChange">Виджет3_2ПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="КомандыВиджет3_2" id="2495">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды виджет5 1</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="КомандыВиджет3_2РасширеннаяПодсказка" id="2496"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтступКомандЛево3_2" id="2497">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд лево5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандЛево3_2РасширеннаяПодсказка" id="2498"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандЛево3_2" id="2499">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандЛево3_2КонтекстноеМеню" id="2500"/>
+																	<ExtendedTooltip name="ОтступКомандЛево3_2РасширеннаяПодсказка" id="2501"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<Button name="УдалитьВиджет3_2" id="2502">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УдалитьВиджет3_2</CommandName>
+															<ShapeRepresentation>None</ShapeRepresentation>
+															<ExtendedTooltip name="УдалитьВиджет3_2РасширеннаяПодсказка" id="2503"/>
+														</Button>
+														<UsualGroup name="ГруппаОтступКомандПраво3_2" id="2504">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд право5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Right</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандПраво3_2РасширеннаяПодсказка" id="2505"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандПраво3_2" id="2506">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандПраво3_2КонтекстноеМеню" id="2507"/>
+																	<ExtendedTooltip name="ОтступКомандПраво3_2РасширеннаяПодсказка" id="2508"/>
+																</LabelDecoration>
+																<Button name="НастроитьВиджет3_2" id="2509">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.НастроитьВиджет3_2</CommandName>
+																	<TextColor>style:ЦветГиперссылки</TextColor>
+																	<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="НастроитьВиджет3_2РасширеннаяПодсказка" id="2510"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз10" id="2174">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз10КонтекстноеМеню" id="2175"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз10РасширеннаяПодсказка" id="2176"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Строка3_3" id="1921">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка3 3</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Строка3_3РасширеннаяПодсказка" id="1922"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх11" id="2126">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх11КонтекстноеМеню" id="2127"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх11РасширеннаяПодсказка" id="2128"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаВиджет3_3" id="1926">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа виджет3 3</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаВиджет3_3РасширеннаяПодсказка" id="1927"/>
+											<ChildItems>
+												<InputField name="Виджет3_3" id="1928">
+													<DataPath>Виджет3_3</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="Виджет3_3КонтекстноеМеню" id="1929"/>
+													<ExtendedTooltip name="Виджет3_3РасширеннаяПодсказка" id="1930"/>
+													<Events>
+														<Event name="OnChange">Виджет3_3ПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="КомандыВиджет3_3" id="2511">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды виджет5 1</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="КомандыВиджет3_3РасширеннаяПодсказка" id="2512"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтступКомандЛево3_3" id="2513">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд лево5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандЛево3_3РасширеннаяПодсказка" id="2514"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандЛево3_3" id="2515">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандЛево3_3КонтекстноеМеню" id="2516"/>
+																	<ExtendedTooltip name="ОтступКомандЛево3_3РасширеннаяПодсказка" id="2517"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<Button name="УдалитьВиджет3_3" id="2518">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УдалитьВиджет3_3</CommandName>
+															<ShapeRepresentation>None</ShapeRepresentation>
+															<ExtendedTooltip name="УдалитьВиджет3_3РасширеннаяПодсказка" id="2519"/>
+														</Button>
+														<UsualGroup name="ГруппаОтступКомандПраво3_3" id="2520">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд право5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Right</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандПраво3_3РасширеннаяПодсказка" id="2521"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандПраво3_3" id="2522">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандПраво3_3КонтекстноеМеню" id="2523"/>
+																	<ExtendedTooltip name="ОтступКомандПраво3_3РасширеннаяПодсказка" id="2524"/>
+																</LabelDecoration>
+																<Button name="НастроитьВиджет3_3" id="2525">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.НастроитьВиджет3_3</CommandName>
+																	<TextColor>style:ЦветГиперссылки</TextColor>
+																	<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="НастроитьВиджет3_3РасширеннаяПодсказка" id="2526"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз11" id="2177">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз11КонтекстноеМеню" id="2178"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз11РасширеннаяПодсказка" id="2179"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Колонка3Добавить" id="2023">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Колонка3 добавить</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Колонка3ДобавитьРасширеннаяПодсказка" id="2024"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх12" id="2129">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх12КонтекстноеМеню" id="2130"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх12РасширеннаяПодсказка" id="2131"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаДобавить3" id="2028">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа добавить3</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаДобавить3РасширеннаяПодсказка" id="2029"/>
+											<ChildItems>
+												<Button name="ДобавитьВиджет3" id="2285">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ДобавитьВиджет3</CommandName>
+													<ShapeRepresentation>None</ShapeRepresentation>
+													<ExtendedTooltip name="ДобавитьВиджет3РасширеннаяПодсказка" id="2286"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз12" id="2180">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз12КонтекстноеМеню" id="2181"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз12РасширеннаяПодсказка" id="2182"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Колонка4" id="1940">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Колонка1</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Single</VerticalSpacing>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Колонка4РасширеннаяПодсказка" id="1941"/>
+							<ChildItems>
+								<UsualGroup name="Строка4_1" id="1942">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка4 1</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Строка4_1РасширеннаяПодсказка" id="1943"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх13" id="2132">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх13КонтекстноеМеню" id="2133"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх13РасширеннаяПодсказка" id="2134"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаВиджет4_1" id="1947">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа виджет4 1</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаВиджет4_1РасширеннаяПодсказка" id="1948"/>
+											<ChildItems>
+												<InputField name="Виджет4_1" id="1949">
+													<DataPath>Виджет4_1</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="Виджет4_1КонтекстноеМеню" id="1950"/>
+													<ExtendedTooltip name="Виджет4_1РасширеннаяПодсказка" id="1951"/>
+													<Events>
+														<Event name="OnChange">Виджет4_1ПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="КомандыВиджет4_1" id="2527">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды виджет5 1</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="КомандыВиджет4_1РасширеннаяПодсказка" id="2528"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтступКомандЛево4_1" id="2529">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд лево5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандЛево4_1РасширеннаяПодсказка" id="2530"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандЛево4_1" id="2531">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандЛево4_1КонтекстноеМеню" id="2532"/>
+																	<ExtendedTooltip name="ОтступКомандЛево4_1РасширеннаяПодсказка" id="2533"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<Button name="УдалитьВиджет4_1" id="2534">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УдалитьВиджет4_1</CommandName>
+															<ShapeRepresentation>None</ShapeRepresentation>
+															<ExtendedTooltip name="УдалитьВиджет4_1РасширеннаяПодсказка" id="2535"/>
+														</Button>
+														<UsualGroup name="ГруппаОтступКомандПраво4_1" id="2536">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд право5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Right</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандПраво4_1РасширеннаяПодсказка" id="2537"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандПраво4_1" id="2538">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандПраво4_1КонтекстноеМеню" id="2539"/>
+																	<ExtendedTooltip name="ОтступКомандПраво4_1РасширеннаяПодсказка" id="2540"/>
+																</LabelDecoration>
+																<Button name="НастроитьВиджет4_1" id="2541">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.НастроитьВиджет4_1</CommandName>
+																	<TextColor>style:ЦветГиперссылки</TextColor>
+																	<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="НастроитьВиджет4_1РасширеннаяПодсказка" id="2542"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз13" id="2183">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз13КонтекстноеМеню" id="2184"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз13РасширеннаяПодсказка" id="2185"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Строка4_2" id="1961">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка4 2</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Строка4_2РасширеннаяПодсказка" id="1962"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх14" id="2135">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх14КонтекстноеМеню" id="2136"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх14РасширеннаяПодсказка" id="2137"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаВиджет4_2" id="1966">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа виджет4 2</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаВиджет4_2РасширеннаяПодсказка" id="1967"/>
+											<ChildItems>
+												<InputField name="Виджет4_2" id="1968">
+													<DataPath>Виджет4_2</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="Виджет4_2КонтекстноеМеню" id="1969"/>
+													<ExtendedTooltip name="Виджет4_2РасширеннаяПодсказка" id="1970"/>
+													<Events>
+														<Event name="OnChange">Виджет4_2ПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="КомандыВиджет4_2" id="2543">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды виджет5 1</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="КомандыВиджет4_2РасширеннаяПодсказка" id="2544"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтступКомандЛево4_2" id="2545">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд лево5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандЛево4_2РасширеннаяПодсказка" id="2546"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандЛево4_2" id="2547">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандЛево4_2КонтекстноеМеню" id="2548"/>
+																	<ExtendedTooltip name="ОтступКомандЛево4_2РасширеннаяПодсказка" id="2549"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<Button name="УдалитьВиджет4_2" id="2550">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УдалитьВиджет4_2</CommandName>
+															<ShapeRepresentation>None</ShapeRepresentation>
+															<ExtendedTooltip name="УдалитьВиджет4_2РасширеннаяПодсказка" id="2551"/>
+														</Button>
+														<UsualGroup name="ГруппаОтступКомандПраво4_2" id="2552">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд право5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Right</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандПраво4_2РасширеннаяПодсказка" id="2553"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандПраво4_2" id="2554">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандПраво4_2КонтекстноеМеню" id="2555"/>
+																	<ExtendedTooltip name="ОтступКомандПраво4_2РасширеннаяПодсказка" id="2556"/>
+																</LabelDecoration>
+																<Button name="НастроитьВиджет4_2" id="2557">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.НастроитьВиджет4_2</CommandName>
+																	<TextColor>style:ЦветГиперссылки</TextColor>
+																	<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="НастроитьВиджет4_2РасширеннаяПодсказка" id="2558"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз14" id="2186">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз14КонтекстноеМеню" id="2187"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз14РасширеннаяПодсказка" id="2188"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Строка4_3" id="1980">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка4 3</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Строка4_3РасширеннаяПодсказка" id="1981"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх15" id="2138">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх15КонтекстноеМеню" id="2139"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх15РасширеннаяПодсказка" id="2140"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаВиджет4_3" id="1985">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа виджет4 3</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаВиджет4_3РасширеннаяПодсказка" id="1986"/>
+											<ChildItems>
+												<InputField name="Виджет4_3" id="1987">
+													<DataPath>Виджет4_3</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="Виджет4_3КонтекстноеМеню" id="1988"/>
+													<ExtendedTooltip name="Виджет4_3РасширеннаяПодсказка" id="1989"/>
+													<Events>
+														<Event name="OnChange">Виджет4_3ПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="КомандыВиджет4_3" id="2559">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды виджет5 1</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="КомандыВиджет4_3РасширеннаяПодсказка" id="2560"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтступКомандЛево4_3" id="2561">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд лево5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандЛево4_3РасширеннаяПодсказка" id="2562"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандЛево4_3" id="2563">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандЛево4_3КонтекстноеМеню" id="2564"/>
+																	<ExtendedTooltip name="ОтступКомандЛево4_3РасширеннаяПодсказка" id="2565"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<Button name="УдалитьВиджет4_3" id="2566">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УдалитьВиджет4_3</CommandName>
+															<ShapeRepresentation>None</ShapeRepresentation>
+															<ExtendedTooltip name="УдалитьВиджет4_3РасширеннаяПодсказка" id="2567"/>
+														</Button>
+														<UsualGroup name="ГруппаОтступКомандПраво4_3" id="2568">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отступ команд право5 1</v8:content>
+																</v8:item>
+															</Title>
+															<Width>7</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+															<Group>AlwaysHorizontal</Group>
+															<HorizontalAlign>Right</HorizontalAlign>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтступКомандПраво4_3РасширеннаяПодсказка" id="2569"/>
+															<ChildItems>
+																<LabelDecoration name="ОтступКомандПраво4_3" id="2570">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content> </v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<ContextMenu name="ОтступКомандПраво4_3КонтекстноеМеню" id="2571"/>
+																	<ExtendedTooltip name="ОтступКомандПраво4_3РасширеннаяПодсказка" id="2572"/>
+																</LabelDecoration>
+																<Button name="НастроитьВиджет4_3" id="2573">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.НастроитьВиджет4_3</CommandName>
+																	<TextColor>style:ЦветГиперссылки</TextColor>
+																	<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																	<ShapeRepresentation>None</ShapeRepresentation>
+																	<ExtendedTooltip name="НастроитьВиджет4_3РасширеннаяПодсказка" id="2574"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз15" id="2189">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз15КонтекстноеМеню" id="2190"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз15РасширеннаяПодсказка" id="2191"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Колонка4Добавить" id="2002">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Колонка4 добавить</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Колонка4ДобавитьРасширеннаяПодсказка" id="2003"/>
+									<ChildItems>
+										<PictureDecoration name="ВнешняяРамкаВиджетаВерх16" id="2141">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета верх1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйВерхСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаВерх16КонтекстноеМеню" id="2142"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаВерх16РасширеннаяПодсказка" id="2143"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаДобавить4" id="2007">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа добавить4</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<Height>7</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<VerticalSpacing>Single</VerticalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ФонВиджетаСерый</BackColor>
+											<ExtendedTooltip name="ГруппаДобавить4РасширеннаяПодсказка" id="2008"/>
+											<ChildItems>
+												<Button name="ДобавитьВиджет4" id="2287">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ДобавитьВиджет4</CommandName>
+													<ShapeRepresentation>None</ShapeRepresentation>
+													<ExtendedTooltip name="ДобавитьВиджет4РасширеннаяПодсказка" id="2288"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<PictureDecoration name="ВнешняяРамкаВиджетаНиз16" id="2192">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внешняя рамка виджета низ1</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ВнешняяРамкаОбычныйНизСерый</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ВнешняяРамкаВиджетаНиз16КонтекстноеМеню" id="2193"/>
+											<ExtendedTooltip name="ВнешняяРамкаВиджетаНиз16РасширеннаяПодсказка" id="2194"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаБлокНавигации" id="2618">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа блок навигации</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаБлокНавигацииРасширеннаяПодсказка" id="2619"/>
+			<ChildItems>
+				<RadioButtonField name="БлокНавигации" id="2615">
+					<DataPath>БлокНавигации</DataPath>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<TitleLocation>Top</TitleLocation>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ContextMenu name="БлокНавигацииКонтекстноеМеню" id="2616"/>
+					<ExtendedTooltip name="БлокНавигацииРасширеннаяПодсказка" id="2617"/>
+					<Events>
+						<Event name="OnChange">БлокНавигацииПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<Button name="НастроитьБлокНавигации" id="2620">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.НастроитьБлокНавигации</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<Font ref="style:SmallTextFont" kind="StyleItem"/>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="НастроитьБлокНавигацииРасширеннаяПодсказка" id="2621"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<RadioButtonField name="ВариантКомпоновки" id="2625">
+			<DataPath>ВариантКомпоновки</DataPath>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<TitleLocation>Top</TitleLocation>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ContextMenu name="ВариантКомпоновкиКонтекстноеМеню" id="2626"/>
+			<ExtendedTooltip name="ВариантКомпоновкиРасширеннаяПодсказка" id="2627"/>
+			<Events>
+				<Event name="OnChange">ВариантКомпоновкиПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<UsualGroup name="ГруппаЦветоваяСхема" id="2607">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цветовая схема:</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:FormTextColor</TitleTextColor>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаЦветоваяСхемаРасширеннаяПодсказка" id="2608"/>
+			<ChildItems>
+				<PictureDecoration name="ЦветоваяСхемаЦветная" id="2609">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цветовая схема цветная</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<Picture>
+						<xr:Ref>CommonPicture.ЦветоваяСхемаЦветная</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ЦветоваяСхемаЦветнаяКонтекстноеМеню" id="2610"/>
+					<ExtendedTooltip name="ЦветоваяСхемаЦветнаяРасширеннаяПодсказка" id="2611"/>
+					<Events>
+						<Event name="Click">ЦветоваяСхемаЦветнаяНажатие</Event>
+					</Events>
+				</PictureDecoration>
+				<PictureDecoration name="ЦветоваяСхемаСерая" id="2612">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цветовая схема серая</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<Picture>
+						<xr:Ref>CommonPicture.ЦветоваяСхемаСерая</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ЦветоваяСхемаСераяКонтекстноеМеню" id="2613"/>
+					<ExtendedTooltip name="ЦветоваяСхемаСераяРасширеннаяПодсказка" id="2614"/>
+					<Events>
+						<Event name="Click">ЦветоваяСхемаСераяНажатие</Event>
+					</Events>
+				</PictureDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<RadioButtonField name="ЗначениеНастройкиМасштаб" id="13">
+			<DataPath>ЗначениеНастройкиМасштаб</DataPath>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<TitleLocation>Top</TitleLocation>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Автоматически</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Мелко</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">70</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Средне</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">90</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Крупно</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">115</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Очень крупно</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">120</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ЗначениеНастройкиМасштабКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ЗначениеНастройкиМасштабРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="OnChange">ЗначениеНастройкиМасштабПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВариантРабочегоСтола" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант рабочего стола</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.РабочиеСтолы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦветоваяСхема" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цветовая схема</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ЦветовыеСхемыРабочегоСтола</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеНастройкиМасштаб" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштаб</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФоновоеОбновление" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фоновое обновление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Виджет1_1" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виджет1 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Виджеты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Виджет1_2" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виджет1 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Виджеты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Виджет1_3" id="7">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Виджеты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Виджет4_1" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виджет1 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Виджеты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Виджет2_1" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виджет1 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Виджеты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Виджет2_2" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виджет1 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Виджеты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Виджет2_3" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виджет1 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Виджеты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Виджет4_2" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виджет1 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Виджеты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Виджет3_1" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виджет1 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Виджеты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Виджет3_2" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виджет1 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Виджеты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Виджет3_3" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виджет1 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Виджеты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Виджет4_3" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виджет1 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Виджеты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантРабочегоСтолаИзменен" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант рабочего стола изменен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="БлокНавигации" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Блок навигации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Виджеты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантКомпоновки" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант компоновки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоКолонок" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество колонок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоСтрок" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество строк</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИменаСвойствВариантаКомпоновки" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имена свойств варианта компоновки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяСвойства" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя свойства</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерКолонки" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер колонки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерСтроки" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьВиджет1" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВиджет1</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ВосстановитьНастройкиПоУмолчанию" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить схему варианта по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВосстановитьНастройкиПоУмолчанию</Action>
+		</Command>
+		<Command name="НастроитьВиджет1_1" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьВиджет1_1</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="НастроитьВиджет1_2" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьВиджет1_2</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="НастроитьВиджет1_3" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьВиджет1_3</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="НастроитьВиджет2_1" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьВиджет2_1</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="НастроитьВиджет2_2" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьВиджет2_2</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="НастроитьВиджет2_3" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьВиджет2_3</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="НастроитьВиджет3_1" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьВиджет3_1</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="НастроитьВиджет3_2" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьВиджет3_2</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="НастроитьВиджет3_3" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьВиджет3_3</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="НастроитьВиджет4_1" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьВиджет4_1</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="НастроитьВиджет4_2" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьВиджет4_2</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="НастроитьВиджет4_3" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьВиджет4_3</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="УдалитьВиджет1_1" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УбратьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВиджет1_1</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьВиджет1_2" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УбратьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВиджет1_2</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьВиджет1_3" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УбратьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВиджет1_3</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьВиджет2_1" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УбратьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВиджет2_1</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьВиджет2_2" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УбратьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВиджет2_2</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьВиджет2_3" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УбратьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВиджет2_3</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьВиджет3_1" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УбратьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВиджет3_1</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьВиджет3_2" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УбратьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВиджет3_2</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьВиджет3_3" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УбратьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВиджет3_3</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьВиджет4_1" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УбратьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВиджет4_1</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьВиджет4_2" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УбратьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВиджет4_2</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьВиджет4_3" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УбратьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВиджет4_3</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ДобавитьВиджет2" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВиджет2</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ДобавитьВиджет3" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВиджет3</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ДобавитьВиджет4" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить виджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить виджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВиджет</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВиджет4</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="НастроитьБлокНавигации" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить блок навигации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьБлокНавигации</Action>
+		</Command>
+	</Commands>
+</Form>

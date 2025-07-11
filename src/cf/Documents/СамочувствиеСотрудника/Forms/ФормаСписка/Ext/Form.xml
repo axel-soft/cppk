@@ -1,0 +1,730 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Post</ExcludedCommand>
+		<ExcludedCommand>UndoPosting</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаБыстрыеОтборы" id="41">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаБыстрыеОтборыExtendedTooltip" id="42"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВариантОтбораПоДате" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вариант отбора по дате</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вариант отбора по дате</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВариантОтбораПоДатеРасширеннаяПодсказка" id="44"/>
+					<ChildItems>
+						<InputField name="ВариантОтбора" id="45">
+							<DataPath>ВариантОтбора</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отбор по периоду</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<OpenButton>false</OpenButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Все</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Все</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>За день</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ЗаДень</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>За неделю</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ЗаНеделю</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>За месяц</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ЗаМесяц</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>За год</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ЗаГод</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ВариантОтбораКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="ВариантОтбораРасширеннаяПодсказка" id="47"/>
+							<Events>
+								<Event name="OnChange">ВариантОтбораПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ОтборДатаПолеВвода" id="48">
+							<DataPath>ОтборДата</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="ОтборДатаПолеВводаКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="ОтборДатаПолеВводаРасширеннаяПодсказка" id="50"/>
+							<Events>
+								<Event name="OnChange">ОтборДатаПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="ОтборПодразделение" id="57">
+					<DataPath>ОтборПодразделение</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по подразделению</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>25</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>24</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<OpenButton>false</OpenButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ОтборПодразделениеКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ОтборПодразделениеРасширеннаяПодсказка" id="59"/>
+					<Events>
+						<Event name="OnChange">ОтборПодразделениеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОтборПоТемпературе" id="72">
+					<DataPath>ОтборПоТемпературе</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показать только с повышенной температурой</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>25</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<OpenButton>false</OpenButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Все</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Все</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Только с повышенной температурой</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ТолькоСТемпературой</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>С температурой</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ОтборПоТемпературеКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ОтборПоТемпературеРасширеннаяПодсказка" id="74"/>
+					<Events>
+						<Event name="OnChange">ОтборПоТемпературеПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ГруппаКоманды" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<Button name="ФормаОткрытьОтчеты" id="78">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.КонтрольСамочувствияСотрудников</CommandName>
+					<ExtendedTooltip name="ФормаОткрытьОтчетыРасширеннаяПодсказка" id="79"/>
+				</Button>
+				<Button name="УчитыватьИерархиюПодразделений" id="62">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.УчитыватьИерархиюПодразделений</CommandName>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="УчитыватьИерархиюПодразделенийРасширеннаяПодсказка" id="63"/>
+				</Button>
+				<Button name="ФормаПоказыватьУдаленные" id="70">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ПоказыватьУдаленные</CommandName>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаПоказыватьУдаленныеРасширеннаяПодсказка" id="71"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСписокИДополнительныеДанные" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список и дополнительные данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список и дополнительные данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСписокИДополнительныеДанныеРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДополнительныеДанные" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительные данные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительные данные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДополнительныеДанныеРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<CalendarField name="ОтборДата" id="38">
+							<DataPath>ОтборДата</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>1</Width>
+							<Height>1</Height>
+							<VerticalStretch>false</VerticalStretch>
+							<ContextMenu name="ОтборДатаКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ОтборДатаРасширеннаяПодсказка" id="40"/>
+							<Events>
+								<Event name="OnChange">ОтборДатаПриИзменении</Event>
+								<Event name="OnPeriodOutput">ОтборДатаПриВыводеПериода</Event>
+							</Events>
+						</CalendarField>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="Список" id="3">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<DefaultItem>true</DefaultItem>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<InitialTreeView>ExpandTopLevel</InitialTreeView>
+					<EnableStartDrag>true</EnableStartDrag>
+					<DataPath>Список</DataPath>
+					<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+					<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+					<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+						<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+						<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+						<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="Дата" id="16">
+							<DataPath>Список.ДатаЗамера</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Width>10</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДЛФ=D</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="18"/>
+						</LabelField>
+						<LabelField name="ДатаВремя" id="64">
+							<DataPath>Список.ТочкаЗамера</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Время</v8:content>
+								</v8:item>
+							</Title>
+							<Width>8</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ='ЧЧ:мм'</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ДатаВремяКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ДатаВремяРасширеннаяПодсказка" id="66"/>
+						</LabelField>
+						<LabelField name="Сотрудник" id="19">
+							<DataPath>Список.Сотрудник</DataPath>
+							<Width>15</Width>
+							<ContextMenu name="СотрудникКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="21"/>
+						</LabelField>
+						<LabelField name="Подразделение" id="67">
+							<DataPath>Список.Подразделение</DataPath>
+							<Width>15</Width>
+							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="69"/>
+						</LabelField>
+						<LabelField name="Температура" id="25">
+							<DataPath>Список.Температура</DataPath>
+							<Width>8</Width>
+							<ContextMenu name="ТемператураКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ТемператураРасширеннаяПодсказка" id="27"/>
+						</LabelField>
+						<LabelField name="Самочувствие" id="28">
+							<DataPath>Список.Самочувствие</DataPath>
+							<ContextMenu name="СамочувствиеКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="СамочувствиеРасширеннаяПодсказка" id="30"/>
+						</LabelField>
+						<LabelField name="ДатаЗаписи" id="75">
+							<DataPath>Список.Дата</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<ContextMenu name="ДатаЗаписиКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="ДатаЗаписиРасширеннаяПодсказка" id="77"/>
+						</LabelField>
+						<LabelField name="Ссылка" id="31">
+							<DataPath>Список.Ссылка</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<ContextMenu name="СсылкаКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="33"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ДатаЗамера</Field>
+				<Field>Список.ПовышеннаяТемпература</Field>
+				<Field>Список.Подразделение</Field>
+				<Field>Список.Ссылка</Field>
+				<Field>Список.Температура</Field>
+				<Field>Список.ТочкаЗамера</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументСамочувствиеСотрудника.Ссылка КАК Ссылка,
+	ДокументСамочувствиеСотрудника.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументСамочувствиеСотрудника.Номер КАК Номер,
+	ДокументСамочувствиеСотрудника.Дата КАК Дата,
+	ДокументСамочувствиеСотрудника.Проведен КАК Проведен,
+	ДокументСамочувствиеСотрудника.Сотрудник КАК Сотрудник,
+	ДокументСамочувствиеСотрудника.Температура КАК Температура,
+	ДокументСамочувствиеСотрудника.Самочувствие КАК Самочувствие,
+	ДокументСамочувствиеСотрудника.ПовышеннаяТемпература КАК ПовышеннаяТемпература,
+	ДокументСамочувствиеСотрудника.МоментВремени КАК МоментВремени,
+	Сотрудники.Подразделение КАК Подразделение,
+	ДокументСамочувствиеСотрудника.ДатаЗамера КАК ДатаЗамера,
+	ДокументСамочувствиеСотрудника.ТочкаЗамера КАК ТочкаЗамера
+ИЗ
+	Документ.СамочувствиеСотрудника КАК ДокументСамочувствиеСотрудника
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Сотрудники КАК Сотрудники
+		ПО ДокументСамочувствиеСотрудника.Сотрудник = Сотрудники.Ссылка
+{ГДЕ
+	(ДокументСамочувствиеСотрудника.ДатаЗамера &lt;= &amp;КонецДняОтбора
+			И ДокументСамочувствиеСотрудника.ДатаЗамера &gt;= &amp;НачалоДняОтбора),
+	(ДокументСамочувствиеСотрудника.ПометкаУдаления = &amp;ОтборПоказыватьУдаленные),
+	(ДокументСамочувствиеСотрудника.Сотрудник В (&amp;ОтборСотрудник)),
+	(ДокументСамочувствиеСотрудника.ПовышеннаяТемпература = &amp;ПовышеннаяТемпература),
+	(Сотрудники.Подразделение = &amp;Подразделение),
+	(Сотрудники.Подразделение В ИЕРАРХИИ (&amp;ПодразделениеВИерархии))}</QueryText>
+				<MainTable>Document.СамочувствиеСотрудника</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаЗамера</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ТочкаЗамера</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтборДата" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На дату</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантОтбора" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ВариантОтбора</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтборПодразделение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтборПодразделение</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="УчитыватьИерархиюПодразделений" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать иерархию подразделений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>УчитыватьИерархиюПодразделений</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПоказыватьУдаленные" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПоказыватьУдаленные</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтборПоТемпературе" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по температуре</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ОтборПоТемпературе</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="РежимМоеСамочувствие" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим мое самочувствие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Температура</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Температура</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ПовышеннаяТемпература</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="УчитыватьИерархиюПодразделений" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать иерархию подразделений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать иерархию подразделений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УчитыватьИерархиюПодразделений</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказыватьУдаленные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьУдаленные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КонтрольСамочувствияСотрудников" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контроль самочувствия сотрудников</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьОтчеты</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

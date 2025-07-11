@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Width>72</Width>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="ЦППК_ФормаГруппаОбработать" id="49">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Обработать</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЦППК форма группа обработать</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ЦППК_ФормаГруппаОбработатьРасширеннаяПодсказка" id="50"/>
+				<ChildItems>
+					<Button name="ФормаОбработать" id="40">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>0</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Обработать всю очередь...</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаОбработатьРасширеннаяПодсказка" id="41"/>
+					</Button>
+					<Button name="ФормаЦППК_ОбработатьВыделенные" id="47">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЦППК_ОбработатьВыделенные</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаЦППК_ОбработатьВыделенныеРасширеннаяПодсказка" id="48"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Button name="ФормаСброситьПопытки" id="45">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаСброситьПопыткиРасширеннаяПодсказка" id="46"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ОтметкаВремени" id="37">
+					<Width>16</Width>
+					<ContextMenu name="ОтметкаВремениКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ОтметкаВремениРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="ЗависимыйОбъектМетаданных" id="28">
+					<ContextMenu name="ЗависимыйОбъектМетаданныхКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ЗависимыйОбъектМетаданныхРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="ВлияющийОбъектМетаданных" id="31">
+					<ContextMenu name="ВлияющийОбъектМетаданныхКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ВлияющийОбъектМетаданныхРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="КлючВлияющихДанных" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КлючВлияющихДанныхКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="КлючВлияющихДанныхРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<InputField name="Автор" id="42">
+					<ContextMenu name="АвторКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="44"/>
+				</InputField>
+				<LabelField name="Попыток" id="22">
+					<DefaultItem>true</DefaultItem>
+					<Width>8</Width>
+					<ContextMenu name="ПопытокКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПопытокРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="ИнформацияОбОшибке" id="25">
+					<DefaultItem>true</DefaultItem>
+					<AutoCellHeight>true</AutoCellHeight>
+					<Width>36</Width>
+					<ContextMenu name="ИнформацияОбОшибкеКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ИнформацияОбОшибкеРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ИнформацияОбОшибке</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ИнформацияОбОшибке</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЦППК_ОбработатьВыделенные" id="1000000">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработать выделенные объекты метаданных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработать выделенные объекты метаданных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ЦППК_ЦППК_ОбработатьВыделенныеПосле</Action>
+		</Command>
+	</Commands>
+	<BaseForm version="2.18">
+		<Width>72</Width>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<ChildItems>
+				<Button name="ФормаОбработать" id="40">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаОбработатьРасширеннаяПодсказка" id="41"/>
+				</Button>
+				<Button name="ФормаСброситьПопытки" id="45">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаСброситьПопыткиРасширеннаяПодсказка" id="46"/>
+				</Button>
+			</ChildItems>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа пользовательских настроек</v8:content>
+					</v8:item>
+				</Title>
+				<VerticalStretch>false</VerticalStretch>
+				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+			</UsualGroup>
+			<Table name="Список" id="3">
+				<Representation>List</Representation>
+				<CommandBarLocation>None</CommandBarLocation>
+				<DefaultItem>true</DefaultItem>
+				<InitialTreeView>ExpandTopLevel</InitialTreeView>
+				<EnableStartDrag>true</EnableStartDrag>
+				<FileDragMode>AsFile</FileDragMode>
+				<AutoRefresh>false</AutoRefresh>
+				<AutoRefreshPeriod>60</AutoRefreshPeriod>
+				<Period>
+					<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+					<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+					<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+				</Period>
+				<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+				<RestoreCurrentRow>false</RestoreCurrentRow>
+				<TopLevelParent xsi:nil="true"/>
+				<ShowRoot>true</ShowRoot>
+				<AllowRootChoice>false</AllowRootChoice>
+				<UpdateOnDataChange>Auto</UpdateOnDataChange>
+				<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+				<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+				<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+				<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+					<Autofill>false</Autofill>
+				</AutoCommandBar>
+				<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+				<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>SearchStringRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+				</SearchStringAddition>
+				<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>ViewStatusRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+				</ViewStatusAddition>
+				<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>SearchControl</Type>
+					</AdditionSource>
+					<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+				</SearchControlAddition>
+				<ChildItems>
+					<LabelField name="ОтметкаВремени" id="37">
+						<Width>16</Width>
+						<ContextMenu name="ОтметкаВремениКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ОтметкаВремениРасширеннаяПодсказка" id="39"/>
+					</LabelField>
+					<LabelField name="ЗависимыйОбъектМетаданных" id="28">
+						<ContextMenu name="ЗависимыйОбъектМетаданныхКонтекстноеМеню" id="29"/>
+						<ExtendedTooltip name="ЗависимыйОбъектМетаданныхРасширеннаяПодсказка" id="30"/>
+					</LabelField>
+					<LabelField name="ВлияющийОбъектМетаданных" id="31">
+						<ContextMenu name="ВлияющийОбъектМетаданныхКонтекстноеМеню" id="32"/>
+						<ExtendedTooltip name="ВлияющийОбъектМетаданныхРасширеннаяПодсказка" id="33"/>
+					</LabelField>
+					<LabelField name="КлючВлияющихДанных" id="34">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ключ</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="КлючВлияющихДанныхКонтекстноеМеню" id="35"/>
+						<ExtendedTooltip name="КлючВлияющихДанныхРасширеннаяПодсказка" id="36"/>
+					</LabelField>
+					<InputField name="Автор" id="42">
+						<ContextMenu name="АвторКонтекстноеМеню" id="43"/>
+						<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="44"/>
+					</InputField>
+					<LabelField name="Попыток" id="22">
+						<DefaultItem>true</DefaultItem>
+						<Width>8</Width>
+						<ContextMenu name="ПопытокКонтекстноеМеню" id="23"/>
+						<ExtendedTooltip name="ПопытокРасширеннаяПодсказка" id="24"/>
+					</LabelField>
+					<LabelField name="ИнформацияОбОшибке" id="25">
+						<DefaultItem>true</DefaultItem>
+						<AutoCellHeight>true</AutoCellHeight>
+						<Width>36</Width>
+						<ContextMenu name="ИнформацияОбОшибкеКонтекстноеМеню" id="26"/>
+						<ExtendedTooltip name="ИнформацияОбОшибкеРасширеннаяПодсказка" id="27"/>
+					</LabelField>
+				</ChildItems>
+			</Table>
+		</ChildItems>
+		<Attributes>
+			<ConditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ИнформацияОбОшибке</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.ИнформацияОбОшибке</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</ConditionalAppearance>
+		</Attributes>
+	</BaseForm>
+</Form>

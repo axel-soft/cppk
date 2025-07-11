@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВерсияДанных</dataPath>
+			<field>ВерсияДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проведен</dataPath>
+			<field>Проведен</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВерсияОбновления</dataPath>
+			<field>ВерсияОбновления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидДействия</dataPath>
+			<field>ВидДействия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидУчастника</dataPath>
+			<field>ВидУчастника</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВыполнения</dataPath>
+			<field>ДатаВыполнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНачала</dataPath>
+			<field>ДатаНачала</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕстьОсобыйСрок</dataPath>
+			<field>ЕстьОсобыйСрок</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕстьПриложения</dataPath>
+			<field>ЕстьПриложения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Задача</dataPath>
+			<field>Задача</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдентификаторВИсточнике</dataPath>
+			<field>ИдентификаторВИсточнике</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Исполнитель</dataPath>
+			<field>Исполнитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Источник</dataPath>
+			<field>Источник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник (Задача исполнителя, Действие ознакомления)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КтоОтметил</dataPath>
+			<field>КтоОтметил</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбщаяПричинаВозврата</dataPath>
+			<field>ОбщаяПричинаВозврата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсобоеОписание</dataPath>
+			<field>ОсобоеОписание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсобоеОписаниеФорматированное</dataPath>
+			<field>ОсобоеОписаниеФорматированное</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсобыеПричиныВозврата</dataPath>
+			<field>ОсобыеПричиныВозврата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Особые причины возврата (хранилище значения)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсобыйАвтор</dataPath>
+			<field>ОсобыйАвтор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсобыйЗаголовок</dataPath>
+			<field>ОсобыйЗаголовок</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсобыйСрок</dataPath>
+			<field>ОсобыйСрок</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезультатДействия</dataPath>
+			<field>РезультатДействия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезультатДействияТекстом</dataPath>
+			<field>РезультатДействияТекстом</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СостояниеУчастникаЗадачи</dataPath>
+			<field>СостояниеУчастникаЗадачи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическийИсполнитель</dataPath>
+			<field>ФактическийИсполнитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Флаг</dataPath>
+			<field>Флаг</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсточникДанных</dataPath>
+			<field>ИсточникДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПриложениеИзДействияЗадачи</dataPath>
+			<field>ПриложениеИзДействияЗадачи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приложение из действия задачи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ как предмет задачи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Мероприятие</dataPath>
+			<field>Мероприятие</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мероприятие как предмет задачи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Шапка.Ссылка,
+	Шапка.ВерсияДанных,
+	Шапка.Дата,
+	Шапка.Номер,
+	Шапка.ПометкаУдаления,
+	Шапка.Проведен,
+	Шапка.ВерсияОбновления,
+	Шапка.ВидДействия,
+	Шапка.ВидУчастника,
+	Шапка.ДатаВыполнения,
+	Шапка.ДатаНачала,
+	Шапка.ЕстьОсобыйСрок,
+	Шапка.ЕстьПриложения,
+	Шапка.Задача,
+	Шапка.ИдентификаторВИсточнике,
+	Шапка.Исполнитель,
+	Шапка.Источник,
+	ВЫРАЗИТЬ(Шапка.КтоОтметил КАК Справочник.Сотрудники) КАК КтоОтметил,
+	Шапка.ОбщаяПричинаВозврата,
+	Шапка.ОсобоеОписание,
+	Шапка.ОсобоеОписаниеФорматированное,
+	Шапка.ОсобыеПричиныВозврата,
+	Шапка.ОсобыйАвтор,
+	Шапка.ОсобыйЗаголовок,
+	Шапка.ОсобыйСрок,
+	Шапка.РезультатДействия,
+	Шапка.РезультатДействияТекстом,
+	Шапка.СостояниеУчастникаЗадачи,
+	Шапка.ФактическийИсполнитель,
+	Шапка.Флаг,
+	Шапка.Представление,
+	Шапка.ИсточникДанных,
+	ТЧ.Приложение КАК ПриложениеИзДействияЗадачи,
+	ВЫБОР
+		КОГДА ЗадачаТЧ.Приложение ССЫЛКА Справочник.ДокументыПредприятия ТОГДА ЗадачаТЧ.Приложение
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ДокументыПредприятия.ПустаяСсылка)
+	КОНЕЦ КАК Документ,
+	ВЫБОР
+		КОГДА ЗадачаТЧ.Приложение ССЫЛКА Справочник.Мероприятия ТОГДА ЗадачаТЧ.Приложение
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.Мероприятия.ПустаяСсылка)
+	КОНЕЦ КАК Мероприятие
+ИЗ
+	Документ.ДействиеЗадачи КАК Шапка
+	ЛЕВОЕ СОЕДИНЕНИЕ
+	Документ.ДействиеЗадачи.Приложения КАК ТЧ
+		ПО
+			ТЧ.Ссылка = Шапка.Ссылка
+	ЛЕВОЕ СОЕДИНЕНИЕ
+	Документ.Задача.Приложения КАК ЗадачаТЧ
+		ПО
+			ЗадачаТЧ.Ссылка = Шапка.Задача
+ГДЕ
+	Шапка.Ссылка = &amp;Предмет</query>
+	</dataSet>
+	<parameter>
+		<name>Предмет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Предмет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ДействиеЗадачи</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Документ.ДействиеЗадачи.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ссылка</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,1344 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://v8.1c.ru/doc8/ProcessingSettings" elementFormQualified="true" attributeFormQualified="false">
+	<property name="ВыгрузкаНастроекОбработки">
+		<typeDef xsi:type="ObjectType">
+			<property name="ВерсияПрограммыВыгрузки" type="xs:string" lowerBound="1" form="Attribute"/>
+			<property name="НастройкиОбработки" upperBound="-1">
+				<typeDef xsi:type="ObjectType">
+					<property name="НастройкиОбработкиВидовОбъектов">
+						<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+							<property name="Тип" lowerBound="1" form="Attribute">
+								<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+									<enumeration>Справочник_НастройкиОбработкиВидовОбъектов</enumeration>
+								</typeDef>
+							</property>
+							<property xmlns:d8p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиОбработкиВидовОбъектов" type="d8p1:УникальныйИдентификатор" lowerBound="0"/>
+						</typeDef>
+					</property>
+					<property name="ПараметрыСхем" upperBound="-1">
+						<typeDef xsi:type="ObjectType">
+							<property name="ПараметрыСхемДляОбработокОбъектов">
+								<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+									<property name="Тип" lowerBound="1" form="Attribute">
+										<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+											<enumeration>Справочник_ПараметрыСхемДляОбработокОбъектов</enumeration>
+										</typeDef>
+									</property>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПараметрыСхемДляОбработокОбъектов" type="d10p1:УникальныйИдентификатор" lowerBound="0"/>
+								</typeDef>
+							</property>
+						</typeDef>
+					</property>
+					<property name="ПравилаОбработки" lowerBound="0" upperBound="-1">
+						<typeDef xsi:type="ObjectType">
+							<property name="ПравилоОбработки">
+								<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+									<property name="Тип" lowerBound="1" form="Attribute">
+										<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+											<enumeration>Справочник_ПравилаОбработки</enumeration>
+										</typeDef>
+									</property>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПравилаОбработки" type="d10p1:УникальныйИдентификатор" lowerBound="0"/>
+								</typeDef>
+							</property>
+							<property name="ВидДействия">
+								<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+									<property name="Тип" lowerBound="1" form="Attribute">
+										<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+											<enumeration>Справочник_ВидыДействий</enumeration>
+										</typeDef>
+									</property>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДействий" type="d10p1:УникальныйИдентификатор" lowerBound="0"/>
+								</typeDef>
+							</property>
+							<property name="Настройка" lowerBound="0">
+								<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+									<property name="Тип" lowerBound="1" form="Attribute">
+										<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+											<enumeration>Справочник_НастройкиДействийПодписания</enumeration>
+											<enumeration>Справочник_НастройкиДействийСогласования</enumeration>
+											<enumeration>Справочник_НастройкиДействийОзнакомления</enumeration>
+											<enumeration>Справочник_НастройкиДействийИсполнения</enumeration>
+											<enumeration>Справочник_НастройкиДействийУтверждения</enumeration>
+											<enumeration>Справочник_НастройкиДействийРегистрации</enumeration>
+										</typeDef>
+									</property>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиДействийПодписания" type="d10p1:УникальныйИдентификатор" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиДействийСогласования" type="d10p1:УникальныйИдентификатор" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиДействийОзнакомления" type="d10p1:УникальныйИдентификатор" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиДействийИсполнения" type="d10p1:УникальныйИдентификатор" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиДействийУтверждения" type="d10p1:УникальныйИдентификатор" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиДействийРегистрации" type="d10p1:УникальныйИдентификатор" lowerBound="0"/>
+								</typeDef>
+							</property>
+							<property name="НастройкаВключена" type="xs:boolean"/>
+						</typeDef>
+					</property>
+					<property name="ВидОбъекта">
+						<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+							<property name="Тип" lowerBound="1" form="Attribute">
+								<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+									<enumeration>Справочник_ВидыМероприятий</enumeration>
+									<enumeration>Справочник_ВидыДокументов</enumeration>
+								</typeDef>
+							</property>
+							<property xmlns:d8p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыМероприятий" type="d8p1:УникальныйИдентификатор" lowerBound="0"/>
+							<property xmlns:d8p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДокументов" type="d8p1:УникальныйИдентификатор" lowerBound="0"/>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+			<property name="ИспользуемыеСсылки">
+				<typeDef xsi:type="ObjectType">
+					<property name="ИспользуемаяСсылка" upperBound="-1">
+						<typeDef xsi:type="ObjectType">
+							<property name="Ссылка">
+								<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+									<property name="ОбъектМетаданных" lowerBound="1" form="Attribute">
+										<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+											<enumeration>Справочник_НастройкиОбработкиВидовОбъектов</enumeration>
+											<enumeration>Справочник_ВидыДокументов</enumeration>
+											<enumeration>Справочник_ВидыМероприятий</enumeration>
+											<enumeration>Справочник_ВидыДействий</enumeration>
+											<enumeration>Справочник_ПараметрыСхемДляОбработокОбъектов</enumeration>
+											<enumeration>Справочник_АлгоритмыПроверки</enumeration>
+											<enumeration>Справочник_ВидыБизнесСобытий</enumeration>
+											<enumeration>Справочник_СкриптыСхемДляОбработокОбъектов</enumeration>
+											<enumeration>Справочник_СхемыПроцессов</enumeration>
+											<enumeration>Справочник_ПравилаОбработки</enumeration>
+											<enumeration>Справочник_НастройкиДействийИсполнения</enumeration>
+											<enumeration>Справочник_НастройкиДействийОзнакомления</enumeration>
+											<enumeration>Справочник_НастройкиДействийПодписания</enumeration>
+											<enumeration>Справочник_НастройкиДействийРегистрации</enumeration>
+											<enumeration>Справочник_НастройкиДействийСогласования</enumeration>
+											<enumeration>Справочник_НастройкиДействийУтверждения</enumeration>
+											<enumeration>Справочник_Пользователи</enumeration>
+											<enumeration>Справочник_Сотрудники</enumeration>
+											<enumeration>Справочник_СтруктураПредприятия</enumeration>
+											<enumeration>Справочник_ПроектыКонтейнеры</enumeration>
+											<enumeration>Справочник_Проекты</enumeration>
+											<enumeration>Справочник_ПодразделенияКонтейнеры</enumeration>
+											<enumeration>Справочник_ТематикиДокументов</enumeration>
+											<enumeration>Справочник_ПолныеРоли</enumeration>
+											<enumeration>Справочник_Контрагенты</enumeration>
+											<enumeration>Справочник_Организации</enumeration>
+											<enumeration>Справочник_РабочиеГруппы</enumeration>
+											<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+											<enumeration>Справочник_ГрифыДоступа</enumeration>
+										</typeDef>
+									</property>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиОбработкиВидовОбъектов" type="d10p1:Справочник_НастройкиОбработкиВидовОбъектов" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДокументов" type="d10p1:Справочник_ВидыДокументов" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыМероприятий" type="d10p1:Справочник_ВидыМероприятий" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДействий" type="d10p1:Справочник_ВидыДействий" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПараметрыСхемДляОбработокОбъектов" type="d10p1:Справочник_ПараметрыСхемДляОбработокОбъектов" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АлгоритмыПроверки" type="d10p1:Справочник_АлгоритмыПроверки" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыБизнесСобытий" type="d10p1:Справочник_ВидыБизнесСобытий" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_СкриптыСхемДляОбработокОбъектов" type="d10p1:Справочник_СкриптыСхемДляОбработокОбъектов" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_СхемыПроцессов" type="d10p1:Справочник_СхемыПроцессов" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПравилаОбработки" type="d10p1:Справочник_ПравилаОбработки" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиДействийИсполнения" type="d10p1:Справочник_НастройкиДействийИсполнения" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиДействийОзнакомления" type="d10p1:Справочник_НастройкиДействийОзнакомления" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиДействийПодписания" type="d10p1:Справочник_НастройкиДействийПодписания" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиДействийРегистрации" type="d10p1:Справочник_НастройкиДействийРегистрации" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиДействийСогласования" type="d10p1:Справочник_НастройкиДействийСогласования" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиДействийУтверждения" type="d10p1:Справочник_НастройкиДействийУтверждения" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Пользователи" type="d10p1:Справочник_Пользователи" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d10p1:Справочник_Сотрудники" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_СтруктураПредприятия" type="d10p1:Справочник_СтруктураПредприятия" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПроектыКонтейнеры" type="d10p1:Справочник_ПроектыКонтейнеры" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Проекты" type="d10p1:Справочник_Проекты" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПодразделенияКонтейнеры" type="d10p1:Справочник_ПодразделенияКонтейнеры" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ТематикиДокументов" type="d10p1:Справочник_ТематикиДокументов" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d10p1:Справочник_ПолныеРоли" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Контрагенты" type="d10p1:Справочник_Контрагенты" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Организации" type="d10p1:Справочник_Организации" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_РабочиеГруппы" type="d10p1:Справочник_РабочиеГруппы" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d10p1:Справочник_АвтоподстановкиДляОбъектов" lowerBound="0"/>
+									<property xmlns:d10p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ГрифыДоступа" type="d10p1:Справочник_ГрифыДоступа" lowerBound="0"/>
+								</typeDef>
+							</property>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<valueType name="Перечисление_ВариантыВажностиОбъектов" base="xs:string" variety="Atomic">
+		<enumeration>Высокая</enumeration>
+		<enumeration>Обычная</enumeration>
+		<enumeration>Низкая</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ВариантыДоступностиИзмененияДействий" base="xs:string" variety="Atomic">
+		<enumeration>Запрещено</enumeration>
+		<enumeration>Разрешено</enumeration>
+		<enumeration>Авто</enumeration>
+		<enumeration>РазрешеноДобавлять</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ВариантыМаршрутизацииЗадач" base="xs:string" variety="Atomic">
+		<enumeration>Последовательно</enumeration>
+		<enumeration>Параллельно</enumeration>
+		<enumeration>Смешанно</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ВариантыУстановкиСрокаИсполнения" base="xs:string" variety="Atomic">
+		<enumeration>ОтносительныйСрок</enumeration>
+		<enumeration>ТочныйСрок</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ВариантыФормДокументов" base="xs:string" variety="Atomic">
+		<enumeration>Бумажная</enumeration>
+		<enumeration>Электронная</enumeration>
+		<enumeration>БумажнаяИлиЭлектронная</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ВидыИнтерактивныхДействий" base="xs:string" variety="Atomic">
+		<enumeration>ЗакрытиеКарточкиТолькоЧтоСозданногоДокумента</enumeration>
+		<enumeration>ЗакрытиеКарточкиТолькоЧтоСозданногоВходящегоДокумента</enumeration>
+		<enumeration>ЗакрытиеКарточкиТолькоЧтоСозданногоИсходящегоДокумента</enumeration>
+		<enumeration>ИнтерактивнаяРегистрацияДокумента</enumeration>
+		<enumeration>ИнтерактивнаяРегистрацияВходящегоДокумента</enumeration>
+		<enumeration>ИнтерактивнаяРегистрацияИсходящегоДокумента</enumeration>
+	</valueType>
+	<valueType name="Перечисление_МоментыРазыменованияУчастниковДействий" base="xs:string" variety="Atomic">
+		<enumeration>ПриСозданииДействия</enumeration>
+		<enumeration>ПриЗапускеДокументаВОбработку</enumeration>
+		<enumeration>ПередВыполнениемДействия</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ПорядокВыполненияЭтапаДействия" base="xs:string" variety="Atomic">
+		<enumeration>Параллельно</enumeration>
+		<enumeration>Последовательно</enumeration>
+	</valueType>
+	<valueType name="Перечисление_СпособВключенияСотрудниковПодразделения" base="xs:string" variety="Atomic">
+		<enumeration>БезПодчиненных</enumeration>
+		<enumeration>СПодчиненными</enumeration>
+		<enumeration>ТолькоРуководитель</enumeration>
+	</valueType>
+	<valueType name="Перечисление_СпособВключенияУчастниковПроекта" base="xs:string" variety="Atomic">
+		<enumeration>ВсеУчастники</enumeration>
+		<enumeration>ТолькоРуководитель</enumeration>
+	</valueType>
+	<valueType name="Перечисление_СпособыПодписанияПредметаДействия" base="xs:string" variety="Atomic">
+		<enumeration>НаБумаге</enumeration>
+		<enumeration>ПЭП</enumeration>
+		<enumeration>УЭП</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ТипыДействий" base="xs:string" variety="Atomic">
+		<enumeration>Исполнение</enumeration>
+		<enumeration>Ознакомление</enumeration>
+		<enumeration>Подписание</enumeration>
+		<enumeration>Регистрация</enumeration>
+		<enumeration>Согласование</enumeration>
+		<enumeration>Утверждение</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ФункцииУчастниковИсполнения" base="xs:string" variety="Atomic">
+		<enumeration>Исполнитель</enumeration>
+		<enumeration>ОбрабатывающийРезолюцию</enumeration>
+		<enumeration>Рассматривающий</enumeration>
+		<enumeration>ОбрабатывающийРезультат</enumeration>
+		<enumeration>АвтоопределениеФункцииУчастника</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ФункцииУчастниковОзнакомления" base="xs:string" variety="Atomic">
+		<enumeration>Ознакомляемый</enumeration>
+		<enumeration>Ознакомляющий</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ФункцииУчастниковПодписания" base="xs:string" variety="Atomic">
+		<enumeration>Подписывающий</enumeration>
+		<enumeration>ОбеспечивающийПодписание</enumeration>
+		<enumeration>ОбрабатывающийРезультат</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ФункцииУчастниковРегистрации" base="xs:string" variety="Atomic">
+		<enumeration>Регистратор</enumeration>
+		<enumeration>ОбрабатывающийРезультат</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ФункцииУчастниковСогласования" base="xs:string" variety="Atomic">
+		<enumeration>Согласующий</enumeration>
+		<enumeration>ОбеспечивающийСогласование</enumeration>
+		<enumeration>ОбрабатывающийРезультат</enumeration>
+		<enumeration>ПодготавливающийОбработкуРезультата</enumeration>
+		<enumeration>ПодготавливающийЗавершение</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ФункцииУчастниковУтверждения" base="xs:string" variety="Atomic">
+		<enumeration>Утверждающий</enumeration>
+		<enumeration>ОбрабатывающийРезультат</enumeration>
+	</valueType>
+	<valueType name="Перечисление_ЮрФизЛицо" base="xs:string" variety="Atomic">
+		<enumeration>ЮрЛицо</enumeration>
+		<enumeration>ФизЛицо</enumeration>
+		<enumeration>ИндивидуальныйПредприниматель</enumeration>
+		<enumeration>ЮрЛицоНеРезидент</enumeration>
+	</valueType>
+	<valueType name="УникальныйИдентификатор" base="xs:string" variety="Atomic"/>
+	<valueType name="ХранилищеЗначения" base="xs:string" variety="Atomic"/>
+	<objectType name="Справочник_АвтоподстановкиДляОбъектов">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="Выражение" type="xs:string"/>
+	</objectType>
+	<objectType name="Справочник_АлгоритмыПроверки">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="ВыражениеУсловия" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник_ВидыБизнесСобытий">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+	</objectType>
+	<objectType name="Справочник_ВидыДействий">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Тип" type="d3p1:Перечисление_ТипыДействий"/>
+	</objectType>
+	<objectType name="Справочник_ВидыДокументов">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+	</objectType>
+	<objectType name="Справочник_ВидыМероприятий">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+	</objectType>
+	<objectType name="Справочник_ГрифыДоступа">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+	</objectType>
+	<objectType name="Справочник_Контрагенты">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="ИНН" type="xs:string" lowerBound="0"/>
+		<property name="КПП" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ЮрФизЛицо" type="d3p1:Перечисление_ЮрФизЛицо"/>
+	</objectType>
+	<objectType name="Справочник_НастройкиДействийИсполнения">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Автор" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+						<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+						<enumeration>Справочник_ПолныеРоли</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Важность" type="d3p1:Перечисление_ВариантыВажностиОбъектов" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВариантИсполнения" type="d3p1:Перечисление_ВариантыМаршрутизацииЗадач" lowerBound="0"/>
+		<property name="ВидДействия" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_ВидыДействий</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДействий" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВозможностьИзменятьУчастников" type="d3p1:Перечисление_ВариантыДоступностиИзмененияДействий" lowerBound="0"/>
+		<property name="ДобавлятьНаименованиеПредмета" type="xs:boolean" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="Контролер" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+						<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+						<enumeration>Справочник_ПолныеРоли</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="МоментРазыменованияУчастников" type="d3p1:Перечисление_МоментыРазыменованияУчастниковДействий" lowerBound="0"/>
+		<property name="ОтложенноеНачалоВыполнения" type="xs:decimal" lowerBound="0"/>
+		<property name="ПодписыватьРезолюцииЭП" type="xs:boolean" lowerBound="0"/>
+		<property name="ПоПунктам" type="xs:boolean" lowerBound="0"/>
+		<property name="Создал" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="СрокИсполненияПроцесса" type="xs:dateTime" lowerBound="0"/>
+		<property name="Участники" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВариантУстановкиСрока" type="d5p1:Перечисление_ВариантыУстановкиСрокаИсполнения" lowerBound="0"/>
+				<property name="Защищенный" type="xs:boolean" lowerBound="0"/>
+				<property name="НаименованиеЗадачи" type="xs:string" lowerBound="0"/>
+				<property name="Описание" type="xs:string" lowerBound="0"/>
+				<property name="Ответственный" type="xs:boolean" lowerBound="0"/>
+				<property name="Срок" type="xs:dateTime" lowerBound="0"/>
+				<property name="СрокДни" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокМинуты" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокОбщий" type="xs:boolean" lowerBound="0"/>
+				<property name="СрокЧасы" type="xs:decimal" lowerBound="0"/>
+				<property name="Условие" lowerBound="0">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_АлгоритмыПроверки</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АлгоритмыПроверки" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property name="Участник">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_Сотрудники</enumeration>
+								<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+								<enumeration>Справочник_РабочиеГруппы</enumeration>
+								<enumeration>Строка</enumeration>
+								<enumeration>Справочник_ПроектыКонтейнеры</enumeration>
+								<enumeration>Справочник_ПолныеРоли</enumeration>
+								<enumeration>Справочник_Пользователи</enumeration>
+								<enumeration>Справочник_ПодразделенияКонтейнеры</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_РабочиеГруппы" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property name="Строка" type="xs:string" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПроектыКонтейнеры" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Пользователи" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПодразделенияКонтейнеры" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ФункцияУчастника" type="d5p1:Перечисление_ФункцииУчастниковИсполнения" lowerBound="0"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Справочник_НастройкиДействийОзнакомления">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Автор" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+						<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+						<enumeration>Справочник_ПолныеРоли</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Важность" type="d3p1:Перечисление_ВариантыВажностиОбъектов" lowerBound="0"/>
+		<property name="ВидДействия" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_ВидыДействий</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДействий" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВозможностьИзменятьУчастников" type="d3p1:Перечисление_ВариантыДоступностиИзмененияДействий" lowerBound="0"/>
+		<property name="ДобавлятьНаименованиеПредмета" type="xs:boolean" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="МоментРазыменованияУчастников" type="d3p1:Перечисление_МоментыРазыменованияУчастниковДействий" lowerBound="0"/>
+		<property name="ОжидатьЗавершения" type="xs:boolean" lowerBound="0"/>
+		<property name="Описание" type="xs:string" lowerBound="0"/>
+		<property name="ОтложенноеНачалоВыполнения" type="xs:decimal" lowerBound="0"/>
+		<property name="ПодписыватьУЭП" type="xs:boolean" lowerBound="0"/>
+		<property name="Создал" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="СрокИсполненияПроцесса" type="xs:dateTime" lowerBound="0"/>
+		<property name="Участники" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВариантУстановкиСрока" type="d5p1:Перечисление_ВариантыУстановкиСрокаИсполнения" lowerBound="0"/>
+				<property name="Защищенный" type="xs:boolean" lowerBound="0"/>
+				<property name="Описание" type="xs:string" lowerBound="0"/>
+				<property name="Срок" type="xs:dateTime" lowerBound="0"/>
+				<property name="СрокДни" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокМинуты" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокЧасы" type="xs:decimal" lowerBound="0"/>
+				<property name="Условие" lowerBound="0">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_АлгоритмыПроверки</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АлгоритмыПроверки" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property name="Участник">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_Сотрудники</enumeration>
+								<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+								<enumeration>Справочник_РабочиеГруппы</enumeration>
+								<enumeration>Строка</enumeration>
+								<enumeration>Справочник_ПроектыКонтейнеры</enumeration>
+								<enumeration>Справочник_ПолныеРоли</enumeration>
+								<enumeration>Справочник_Пользователи</enumeration>
+								<enumeration>Справочник_ПодразделенияКонтейнеры</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_РабочиеГруппы" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property name="Строка" type="xs:string" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПроектыКонтейнеры" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Пользователи" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПодразделенияКонтейнеры" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Справочник_НастройкиДействийПодписания">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Автор" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+						<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+						<enumeration>Справочник_ПолныеРоли</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Важность" type="d3p1:Перечисление_ВариантыВажностиОбъектов" lowerBound="0"/>
+		<property name="ВидДействия" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_ВидыДействий</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДействий" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВозможностьИзменятьУчастников" type="d3p1:Перечисление_ВариантыДоступностиИзмененияДействий" lowerBound="0"/>
+		<property name="ДобавлятьНаименованиеПредмета" type="xs:boolean" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="МоментРазыменованияУчастников" type="d3p1:Перечисление_МоментыРазыменованияУчастниковДействий" lowerBound="0"/>
+		<property name="Описание" type="xs:string" lowerBound="0"/>
+		<property name="ОтложенноеНачалоВыполнения" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ПорядокВыполненияУчастниками" type="d3p1:Перечисление_ПорядокВыполненияЭтапаДействия" lowerBound="0"/>
+		<property name="Создал" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="СпособПодписания" type="d3p1:Перечисление_СпособыПодписанияПредметаДействия" lowerBound="0"/>
+		<property name="СрокИсполненияПроцесса" type="xs:dateTime" lowerBound="0"/>
+		<property name="Участники" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВариантУстановкиСрока" type="d5p1:Перечисление_ВариантыУстановкиСрокаИсполнения" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВышестоящийУчастник" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property name="Защищенный" type="xs:boolean" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Идентификатор" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ИдентификаторЭтапа" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property name="НаименованиеЗадачи" type="xs:string" lowerBound="0"/>
+				<property name="Описание" type="xs:string" lowerBound="0"/>
+				<property name="Срок" type="xs:dateTime" lowerBound="0"/>
+				<property name="СрокДни" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокМинуты" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокОбщий" type="xs:boolean" lowerBound="0"/>
+				<property name="СрокЧасы" type="xs:decimal" lowerBound="0"/>
+				<property name="Условие" lowerBound="0">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_АлгоритмыПроверки</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АлгоритмыПроверки" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property name="Участник">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_Сотрудники</enumeration>
+								<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+								<enumeration>Справочник_РабочиеГруппы</enumeration>
+								<enumeration>Строка</enumeration>
+								<enumeration>Справочник_ПроектыКонтейнеры</enumeration>
+								<enumeration>Справочник_ПолныеРоли</enumeration>
+								<enumeration>Справочник_Пользователи</enumeration>
+								<enumeration>Справочник_ПодразделенияКонтейнеры</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_РабочиеГруппы" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property name="Строка" type="xs:string" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПроектыКонтейнеры" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Пользователи" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПодразделенияКонтейнеры" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ФункцияУчастника" type="d5p1:Перечисление_ФункцииУчастниковПодписания" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="Этапы" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВариантУстановкиСрока" type="d5p1:Перечисление_ВариантыУстановкиСрокаИсполнения" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВозможностьИзменятьУчастников" type="d5p1:Перечисление_ВариантыДоступностиИзмененияДействий" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Идентификатор" type="d5p1:УникальныйИдентификатор"/>
+				<property name="НаименованиеЭтапа" type="xs:string"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ПорядокВыполненияУчастниками" type="d5p1:Перечисление_ПорядокВыполненияЭтапаДействия" lowerBound="0"/>
+				<property name="РангПо" type="xs:decimal" lowerBound="0"/>
+				<property name="РангС" type="xs:decimal" lowerBound="0"/>
+				<property name="Срок" type="xs:dateTime" lowerBound="0"/>
+				<property name="СрокДни" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокМинуты" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокОбщий" type="xs:boolean" lowerBound="0"/>
+				<property name="СрокЧасы" type="xs:decimal" lowerBound="0"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Справочник_НастройкиДействийРегистрации">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Автор" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+						<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+						<enumeration>Справочник_ПолныеРоли</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Важность" type="d3p1:Перечисление_ВариантыВажностиОбъектов" lowerBound="0"/>
+		<property name="ВидДействия" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_ВидыДействий</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДействий" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВозможностьИзменятьУчастников" type="d3p1:Перечисление_ВариантыДоступностиИзмененияДействий" lowerBound="0"/>
+		<property name="ДобавлятьНаименованиеПредмета" type="xs:boolean" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="МоментРазыменованияУчастников" type="d3p1:Перечисление_МоментыРазыменованияУчастниковДействий" lowerBound="0"/>
+		<property name="Описание" type="xs:string" lowerBound="0"/>
+		<property name="ОтложенноеНачалоВыполнения" type="xs:decimal" lowerBound="0"/>
+		<property name="Создал" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="СрокИсполненияПроцесса" type="xs:dateTime" lowerBound="0"/>
+		<property name="Участники" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВариантУстановкиСрока" type="d5p1:Перечисление_ВариантыУстановкиСрокаИсполнения" lowerBound="0"/>
+				<property name="Защищенный" type="xs:boolean" lowerBound="0"/>
+				<property name="НаименованиеЗадачи" type="xs:string" lowerBound="0"/>
+				<property name="Описание" type="xs:string" lowerBound="0"/>
+				<property name="Срок" type="xs:dateTime" lowerBound="0"/>
+				<property name="СрокДни" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокМинуты" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокОбщий" type="xs:boolean" lowerBound="0"/>
+				<property name="СрокЧасы" type="xs:decimal" lowerBound="0"/>
+				<property name="Условие" lowerBound="0">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_АлгоритмыПроверки</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АлгоритмыПроверки" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property name="Участник">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_Сотрудники</enumeration>
+								<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+								<enumeration>Справочник_ПолныеРоли</enumeration>
+								<enumeration>Справочник_Пользователи</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Пользователи" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ФункцияУчастника" type="d5p1:Перечисление_ФункцииУчастниковРегистрации" lowerBound="0"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Справочник_НастройкиДействийСогласования">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Автор" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+						<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+						<enumeration>Справочник_ПолныеРоли</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Важность" type="d3p1:Перечисление_ВариантыВажностиОбъектов" lowerBound="0"/>
+		<property name="ВидДействия" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_ВидыДействий</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДействий" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВозможностьИзменятьУчастников" type="d3p1:Перечисление_ВариантыДоступностиИзмененияДействий" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="МоментРазыменованияУчастников" type="d3p1:Перечисление_МоментыРазыменованияУчастниковДействий" lowerBound="0"/>
+		<property name="Описание" type="xs:string" lowerBound="0"/>
+		<property name="ОтложенноеНачалоВыполнения" type="xs:decimal" lowerBound="0"/>
+		<property name="ПодписыватьУЭП" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ПорядокВыполненияУчастниками" type="d3p1:Перечисление_ПорядокВыполненияЭтапаДействия" lowerBound="0"/>
+		<property name="СогласованиеВРежимеЗамечаний" type="xs:boolean" lowerBound="0"/>
+		<property name="Создал" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="СрокИсполненияПроцесса" type="xs:dateTime" lowerBound="0"/>
+		<property name="ФормироватьВизы" type="xs:boolean" lowerBound="0"/>
+		<property name="Участники" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВариантУстановкиСрока" type="d5p1:Перечисление_ВариантыУстановкиСрокаИсполнения" lowerBound="0"/>
+				<property name="Защищенный" type="xs:boolean" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ИдентификаторЭтапа" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property name="НаименованиеЗадачи" type="xs:string" lowerBound="0"/>
+				<property name="Описание" type="xs:string" lowerBound="0"/>
+				<property name="Срок" type="xs:dateTime" lowerBound="0"/>
+				<property name="СрокДни" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокМинуты" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокОбщий" type="xs:boolean" lowerBound="0"/>
+				<property name="СрокЧасы" type="xs:decimal" lowerBound="0"/>
+				<property name="Условие" lowerBound="0">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_АлгоритмыПроверки</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АлгоритмыПроверки" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property name="Участник">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_Сотрудники</enumeration>
+								<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+								<enumeration>Справочник_РабочиеГруппы</enumeration>
+								<enumeration>Строка</enumeration>
+								<enumeration>Справочник_ПроектыКонтейнеры</enumeration>
+								<enumeration>Справочник_ПолныеРоли</enumeration>
+								<enumeration>Справочник_Пользователи</enumeration>
+								<enumeration>Справочник_ПодразделенияКонтейнеры</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_РабочиеГруппы" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property name="Строка" type="xs:string" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПроектыКонтейнеры" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Пользователи" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПодразделенияКонтейнеры" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property name="ФункцияУчастника" lowerBound="0">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Перечисление_ФункцииУчастниковРегистрации</enumeration>
+								<enumeration>Перечисление_ФункцииУчастниковИсполнения</enumeration>
+								<enumeration>Перечисление_ФункцииУчастниковСогласования</enumeration>
+								<enumeration>Перечисление_ФункцииУчастниковУтверждения</enumeration>
+								<enumeration>Перечисление_ФункцииУчастниковПодписания</enumeration>
+								<enumeration>Перечисление_ФункцииУчастниковОзнакомления</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ФункцииУчастниковРегистрации" type="d7p1:Перечисление_ФункцииУчастниковРегистрации" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ФункцииУчастниковИсполнения" type="d7p1:Перечисление_ФункцииУчастниковИсполнения" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ФункцииУчастниковСогласования" type="d7p1:Перечисление_ФункцииУчастниковСогласования" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ФункцииУчастниковУтверждения" type="d7p1:Перечисление_ФункцииУчастниковУтверждения" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ФункцииУчастниковПодписания" type="d7p1:Перечисление_ФункцииУчастниковПодписания" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ФункцииУчастниковОзнакомления" type="d7p1:Перечисление_ФункцииУчастниковОзнакомления" lowerBound="0"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Этапы" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВариантУстановкиСрока" type="d5p1:Перечисление_ВариантыУстановкиСрокаИсполнения" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВозможностьИзменятьУчастников" type="d5p1:Перечисление_ВариантыДоступностиИзмененияДействий" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Идентификатор" type="d5p1:УникальныйИдентификатор"/>
+				<property name="НаименованиеЭтапа" type="xs:string"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ПорядокВыполненияУчастниками" type="d5p1:Перечисление_ПорядокВыполненияЭтапаДействия" lowerBound="0"/>
+				<property name="РангПо" type="xs:decimal" lowerBound="0"/>
+				<property name="РангС" type="xs:decimal" lowerBound="0"/>
+				<property name="Срок" type="xs:dateTime" lowerBound="0"/>
+				<property name="СрокДни" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокМинуты" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокОбщий" type="xs:boolean" lowerBound="0"/>
+				<property name="СрокЧасы" type="xs:decimal" lowerBound="0"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Справочник_НастройкиДействийУтверждения">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Автор" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+						<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+						<enumeration>Справочник_ПолныеРоли</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Важность" type="d3p1:Перечисление_ВариантыВажностиОбъектов" lowerBound="0"/>
+		<property name="ВидДействия" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_ВидыДействий</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДействий" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВозможностьИзменятьУчастников" type="d3p1:Перечисление_ВариантыДоступностиИзмененияДействий" lowerBound="0"/>
+		<property name="ДобавлятьНаименованиеПредмета" type="xs:boolean" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="МоментРазыменованияУчастников" type="d3p1:Перечисление_МоментыРазыменованияУчастниковДействий" lowerBound="0"/>
+		<property name="Описание" type="xs:string" lowerBound="0"/>
+		<property name="ОтложенноеНачалоВыполнения" type="xs:decimal" lowerBound="0"/>
+		<property name="Создал" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="СрокИсполненияПроцесса" type="xs:dateTime" lowerBound="0"/>
+		<property name="Участники" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВариантУстановкиСрока" type="d5p1:Перечисление_ВариантыУстановкиСрокаИсполнения" lowerBound="0"/>
+				<property name="Защищенный" type="xs:boolean" lowerBound="0"/>
+				<property name="НаименованиеЗадачи" type="xs:string" lowerBound="0"/>
+				<property name="Описание" type="xs:string" lowerBound="0"/>
+				<property name="Срок" type="xs:dateTime" lowerBound="0"/>
+				<property name="СрокДни" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокМинуты" type="xs:decimal" lowerBound="0"/>
+				<property name="СрокОбщий" type="xs:boolean" lowerBound="0"/>
+				<property name="СрокЧасы" type="xs:decimal" lowerBound="0"/>
+				<property name="Условие" lowerBound="0">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_АлгоритмыПроверки</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АлгоритмыПроверки" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property name="Участник">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_Сотрудники</enumeration>
+								<enumeration>Справочник_АвтоподстановкиДляОбъектов</enumeration>
+								<enumeration>Справочник_ПолныеРоли</enumeration>
+								<enumeration>Справочник_Пользователи</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АвтоподстановкиДляОбъектов" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПолныеРоли" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Пользователи" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ФункцияУчастника" type="d5p1:Перечисление_ФункцииУчастниковУтверждения" lowerBound="0"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Справочник_НастройкиОбработкиВидовОбъектов">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Автор" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="ВидБизнесСобытия" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_ВидыБизнесСобытий</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыБизнесСобытий" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ВидИнтерактивногоСобытия" type="d3p1:Перечисление_ВидыИнтерактивныхДействий" lowerBound="0"/>
+		<property name="ВидОбъекта" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_ВидыМероприятий</enumeration>
+						<enumeration>Справочник_ВидыДокументов</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыМероприятий" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДокументов" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="ДействуетПо" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДействуетС" type="xs:dateTime"/>
+		<property name="ВидыДействий" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ВидДействия" lowerBound="0">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_ВидыДействий</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДействий" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="УсловияЗапуска" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ТекстПредупреждения" type="xs:string" lowerBound="0"/>
+				<property name="Условие" lowerBound="0">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_АлгоритмыПроверки</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АлгоритмыПроверки" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="УсловияПроверкиВыполнения" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ВидДействия" lowerBound="0">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_ВидыДействий</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДействий" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property name="ТекстПредупреждения" type="xs:string" lowerBound="0"/>
+				<property name="Условие" lowerBound="0">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_АлгоритмыПроверки</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_АлгоритмыПроверки" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property name="Функция" lowerBound="0">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Перечисление_ФункцииУчастниковРегистрации</enumeration>
+								<enumeration>Перечисление_ФункцииУчастниковИсполнения</enumeration>
+								<enumeration>Перечисление_ФункцииУчастниковСогласования</enumeration>
+								<enumeration>Перечисление_ФункцииУчастниковУтверждения</enumeration>
+								<enumeration>Перечисление_ФункцииУчастниковПодписания</enumeration>
+								<enumeration>Перечисление_ФункцииУчастниковОзнакомления</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ФункцииУчастниковРегистрации" type="d7p1:Перечисление_ФункцииУчастниковРегистрации" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ФункцииУчастниковИсполнения" type="d7p1:Перечисление_ФункцииУчастниковИсполнения" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ФункцииУчастниковСогласования" type="d7p1:Перечисление_ФункцииУчастниковСогласования" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ФункцииУчастниковУтверждения" type="d7p1:Перечисление_ФункцииУчастниковУтверждения" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ФункцииУчастниковПодписания" type="d7p1:Перечисление_ФункцииУчастниковПодписания" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ФункцииУчастниковОзнакомления" type="d7p1:Перечисление_ФункцииУчастниковОзнакомления" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property name="Этап" type="xs:string" lowerBound="0"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Справочник_Организации">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="ИНН" type="xs:string" lowerBound="0"/>
+		<property name="КПП" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="ЮрФизЛицо" type="d3p1:Перечисление_ЮрФизЛицо"/>
+	</objectType>
+	<objectType name="Справочник_ПараметрыСхемДляОбработокОбъектов">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="АвтоформируемаяСхема" type="xs:boolean" lowerBound="0"/>
+		<property name="ВладелецСхемы" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_НастройкиОбработкиВидовОбъектов</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_НастройкиОбработкиВидовОбъектов" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="ОбъектДоступа" type="xs:string" lowerBound="0"/>
+		<property name="Схема" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_СхемыПроцессов</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_СхемыПроцессов" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="НастройкиЭлементов" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ИмяЭлемента" type="xs:string" lowerBound="0"/>
+				<property name="Настройка" lowerBound="0">
+					<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+						<property name="Тип" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+								<enumeration>Справочник_ВидыДействий</enumeration>
+								<enumeration>Справочник_СкриптыСхемДляОбработокОбъектов</enumeration>
+							</typeDef>
+						</property>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДействий" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+						<property xmlns:d7p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_СкриптыСхемДляОбработокОбъектов" type="d7p1:УникальныйИдентификатор" lowerBound="0"/>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="НастройкаХранилище" type="d5p1:ХранилищеЗначения" lowerBound="0"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Справочник_ПодразделенияКонтейнеры">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Владелец">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_СтруктураПредприятия</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_СтруктураПредприятия" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="СпособВключенияПодчиненных" type="d3p1:Перечисление_СпособВключенияСотрудниковПодразделения" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник_ПолныеРоли">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Владелец" type="xs:string"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="ДополнительныйОбъектАдресации" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Контрагенты</enumeration>
+						<enumeration>Справочник_Проекты</enumeration>
+						<enumeration>Справочник_СтруктураПредприятия</enumeration>
+						<enumeration>Справочник_Организации</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Контрагенты" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Проекты" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_СтруктураПредприятия" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Организации" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="ОсновнойОбъектАдресации" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Контрагенты</enumeration>
+						<enumeration>Справочник_Проекты</enumeration>
+						<enumeration>Справочник_СтруктураПредприятия</enumeration>
+						<enumeration>Справочник_Организации</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Контрагенты" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Проекты" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_СтруктураПредприятия" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Организации" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Справочник_Пользователи">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="Подразделение" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_СтруктураПредприятия</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_СтруктураПредприятия" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="Служебный" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник_ПравилаОбработки">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Родитель" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_ПравилаОбработки</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПравилаОбработки" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="ДатаСоздания" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДействуетПо" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДействуетС" type="xs:dateTime"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="Создал" lowerBound="0">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Сотрудники</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Сотрудники" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="ЭлементГруппировки">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Перечисление_ВариантыВажностиОбъектов</enumeration>
+						<enumeration>Справочник_СтруктураПредприятия</enumeration>
+						<enumeration>Справочник_ВидыМероприятий</enumeration>
+						<enumeration>Справочник_ВидыДокументов</enumeration>
+						<enumeration>Перечисление_ВариантыФормДокументов</enumeration>
+						<enumeration>Справочник_ТематикиДокументов</enumeration>
+						<enumeration>Справочник_ПодразделенияКонтейнеры</enumeration>
+						<enumeration>Справочник_ГрифыДоступа</enumeration>
+						<enumeration>Справочник_Организации</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ВариантыВажностиОбъектов" type="d5p1:Перечисление_ВариантыВажностиОбъектов" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_СтруктураПредприятия" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыМероприятий" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДокументов" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Перечисление_ВариантыФормДокументов" type="d5p1:Перечисление_ВариантыФормДокументов" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ТематикиДокументов" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ПодразделенияКонтейнеры" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ГрифыДоступа" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Организации" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Справочник_Проекты">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник_ПроектыКонтейнеры">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Владелец">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_Проекты</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_Проекты" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="СпособВключенияУчастников" type="d3p1:Перечисление_СпособВключенияУчастниковПроекта" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник_РабочиеГруппы">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+	</objectType>
+	<objectType name="Справочник_СкриптыСхемДляОбработокОбъектов">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="Выражение" type="xs:string"/>
+	</objectType>
+	<objectType name="Справочник_Сотрудники">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property name="Должность" type="xs:string"/>
+		<property name="Подразделение">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_СтруктураПредприятия</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_СтруктураПредприятия" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Справочник_СтруктураПредприятия">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+	</objectType>
+	<objectType name="Справочник_СхемыПроцессов">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Настройки" type="d3p1:ХранилищеЗначения" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Схема" type="d3p1:ХранилищеЗначения" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник_ТематикиДокументов">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/ProcessingSettings" name="УникальныйИдентификатор" type="d3p1:УникальныйИдентификатор" lowerBound="1" form="Attribute"/>
+		<property name="Представление" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ИмяПредопределенныхДанных" type="xs:string" lowerBound="0"/>
+		<property name="Предопределенный" type="xs:boolean" lowerBound="0"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="ВидДокумента">
+			<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+				<property name="Тип" lowerBound="1" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>Справочник_ВидыДокументов</enumeration>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/ProcessingSettings" name="Справочник_ВидыДокументов" type="d5p1:УникальныйИдентификатор" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="НеДействует" type="xs:boolean" lowerBound="0"/>
+		<property name="НеДействуетДата" type="xs:dateTime" lowerBound="0"/>
+	</objectType>
+</package>

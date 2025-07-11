@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Subsystem uuid="bfcd649f-c6c2-4643-8d61-6714d193782d">
+		<Properties>
+			<Name>Юрлица</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Юрлица</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагенты и организации</v8:content>
+				</v8:item>
+			</Explanation>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Организации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИсторияКППЮрлиц</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.Юрлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбзорКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбзорКонтрагентаПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.КонтрагентыПоГруппеДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборКонтрагентаКонтактноеЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ПерепискаПоКонтрагенту</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПерепискаПоКонтрагенту</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НастройкаКонтрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьСпискиРассылкиПоКонтрагентам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СпискиРассылкиПоКонтрагентам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ГруппыДоступаКонтрагентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СводкаПоКонтрагенту</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВставкаКартинкиОрганизацииOpenOfficeСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВставкаКартинкиОрганизацииСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВставкаКартинкиОрганизацииСерверMSOffice</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОрганизацииСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСОрганизациями</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOptionsParameter.Организация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПередЗаписьюДокументаПроверкаНомераПоДатеИОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПередЗаписьюСправочникаПроверкаКодаПоОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПриУстановкеНовогоКодаСправочникаПоИнформационнойБазеИОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПриУстановкеНовогоНомераДокументаПоИнформационнойБазеИОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПроверитьЗначениеОпцииИспользоватьУчетПоОрганизациям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиУчетПоОрганизациям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьНесколькоОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьУчетПоОрганизациям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьОднуОрганизацию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ПрефиксыОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьНесколькоОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьУчетПоОрганизациям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьОднуОрганизацию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ОтветственныеЛицаОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОтветственныеЛицаОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИсторияНаименованийЮрлиц</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.РедактированиеИсторииНаименований</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЮрлицаКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Юрлица</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЮрлицаКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.РедактированиеИсторииКПП</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

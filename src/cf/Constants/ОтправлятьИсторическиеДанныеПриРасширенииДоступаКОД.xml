@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Constant uuid="fd2fffab-7184-44f8-834c-0ac0c6b03e46">
+		<InternalInfo>
+			<xr:GeneratedType name="ConstantManager.ОтправлятьИсторическиеДанныеПриРасширенииДоступаКОД" category="Manager">
+				<xr:TypeId>e854b18f-419a-4d61-9919-7af39b4cacf3</xr:TypeId>
+				<xr:ValueId>4c942824-b7d5-42aa-b536-73993268fec4</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ConstantValueManager.ОтправлятьИсторическиеДанныеПриРасширенииДоступаКОД" category="ValueManager">
+				<xr:TypeId>fb71f175-2456-4639-aaa9-946a4491b5dd</xr:TypeId>
+				<xr:ValueId>0b5f65f3-7ea5-4a96-8c47-7c460d930d46</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ConstantValueKey.ОтправлятьИсторическиеДанныеПриРасширенииДоступаКОД" category="ValueKey">
+				<xr:TypeId>6c74d460-ed35-4942-8908-92af07d79460</xr:TypeId>
+				<xr:ValueId>ace8021f-6079-44ab-bd98-c433e66f8d8d</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ОтправлятьИсторическиеДанныеПриРасширенииДоступаКОД</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправлять исторические данные при расширении доступа к ним</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Если на старые данные по каким-то причинам появился доступ из другого узла, то нужно ли их отправлять туда.</Comment>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<UseStandardCommands>false</UseStandardCommands>
+			<DefaultForm/>
+			<ExtendedPresentation/>
+			<Explanation/>
+			<PasswordMode>false</PasswordMode>
+			<Format/>
+			<EditFormat/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>После включения настройки программа будет отслеживать расширение прав доступа к объектам. Если сотруднику некоторого узла будут предоставлены права на объект, которого раньше не было в узле этого сотрудника, то будет произведена отправка этого объекта. Включение данной настройки может увеличить объем передаваемых данных между узлами и нагрузку на сервер.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<MarkNegatives>false</MarkNegatives>
+			<Mask/>
+			<MultiLine>false</MultiLine>
+			<ExtendedEdit>false</ExtendedEdit>
+			<MinValue xsi:nil="true"/>
+			<MaxValue xsi:nil="true"/>
+			<FillChecking>DontCheck</FillChecking>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<ChoiceParameterLinks/>
+			<ChoiceParameters/>
+			<QuickChoice>Auto</QuickChoice>
+			<ChoiceForm/>
+			<LinkByType/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+			<DataLockControlMode>Managed</DataLockControlMode>
+			<DataHistory>DontUse</DataHistory>
+			<UpdateDataHistoryImmediatelyAfterWrite>false</UpdateDataHistoryImmediatelyAfterWrite>
+			<ExecuteAfterWriteDataHistoryVersionProcessing>false</ExecuteAfterWriteDataHistoryVersionProcessing>
+		</Properties>
+	</Constant>
+</MetaDataObject>

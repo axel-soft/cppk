@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Width>100</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandSet>
+		<ExcludedCommand>CancelSearch</ExcludedCommand>
+		<ExcludedCommand>Find</ExcludedCommand>
+		<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ПоказыватьУдаленные" id="23">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПоказыватьУдаленные</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ПоказыватьУдаленныеРасширеннаяПодсказка" id="24"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСписки" id="25">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСпискиРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Table name="Список" id="1">
+					<CommandBarLocation>None</CommandBarLocation>
+					<SkipOnInput>false</SkipOnInput>
+					<DefaultItem>true</DefaultItem>
+					<ChoiceMode>true</ChoiceMode>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<InitialTreeView>ExpandTopLevel</InitialTreeView>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Список</DataPath>
+					<CommandSet>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+					</CommandSet>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>false</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+					<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="11"/>
+					<SearchStringAddition name="СписокСтрокаПоиска" id="12">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="13"/>
+						<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="14"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокСостояниеПросмотра" id="15">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="16"/>
+						<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="17"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокУправлениеПоиском" id="18">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="19"/>
+						<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="20"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="ValueChoice">СписокВыборЗначения</Event>
+						<Event name="Selection">СписокВыбор</Event>
+						<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="Наименование" id="4">
+							<DataPath>Список.Наименование</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид документа</v8:content>
+								</v8:item>
+							</Title>
+							<Width>45</Width>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="21"/>
+						</LabelField>
+						<LabelField name="Комментарий" id="8">
+							<DataPath>Список.Комментарий</DataPath>
+							<Width>30</Width>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="22"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+				<Table name="Тематики" id="27">
+					<ChoiceMode>true</ChoiceMode>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<DataPath>Тематики</DataPath>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>false</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="ТематикиКонтекстноеМеню" id="28"/>
+					<AutoCommandBar name="ТематикиКоманднаяПанель" id="29">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТематикиРасширеннаяПодсказка" id="30"/>
+					<SearchStringAddition name="ТематикиСтрокаПоиска" id="31">
+						<AdditionSource>
+							<Item>Тематики</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТематикиСтрокаПоискаКонтекстноеМеню" id="32"/>
+						<ExtendedTooltip name="ТематикиСтрокаПоискаРасширеннаяПодсказка" id="33"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТематикиСостояниеПросмотра" id="34">
+						<AdditionSource>
+							<Item>Тематики</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТематикиСостояниеПросмотраКонтекстноеМеню" id="35"/>
+						<ExtendedTooltip name="ТематикиСостояниеПросмотраРасширеннаяПодсказка" id="36"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТематикиУправлениеПоиском" id="37">
+						<AdditionSource>
+							<Item>Тематики</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТематикиУправлениеПоискомКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ТематикиУправлениеПоискомРасширеннаяПодсказка" id="39"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ТематикиВыбор</Event>
+						<Event name="BeforeAddRow">ТематикиПередНачаломДобавления</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="ТематикиНаименование" id="40">
+							<DataPath>Тематики.Наименование</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тематика</v8:content>
+								</v8:item>
+							</Title>
+							<AutoCellHeight>true</AutoCellHeight>
+							<ContextMenu name="ТематикиНаименованиеКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ТематикиНаименованиеРасширеннаяПодсказка" id="42"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ВестиУчетПоТематикам</Field>
+				<Field>Список.ЕстьРазрешениеНаСозданиеДокументов</Field>
+				<Field>Список.ПометкаУдаления</Field>
+				<Field>Список.Ссылка</Field>
+				<Field>Список.ЭтоГруппа</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникВидыДокументов.Ссылка,
+	СправочникВидыДокументов.ПометкаУдаления,
+	СправочникВидыДокументов.Родитель,
+	СправочникВидыДокументов.ЭтоГруппа,
+	СправочникВидыДокументов.Наименование,
+	СправочникВидыДокументов.ВариантПодписания,
+	СправочникВидыДокументов.ВестиУчетПоАдресатам,
+	СправочникВидыДокументов.ВестиУчетПоКонтрагентам,
+	СправочникВидыДокументов.ВестиУчетПоНоменклатуреДел,
+	СправочникВидыДокументов.ВестиУчетПоОрганизациям,
+	СправочникВидыДокументов.ВестиУчетПоСтатьямДДС,
+	СправочникВидыДокументов.ВестиУчетПоТематикам,
+	СправочникВидыДокументов.ВестиУчетСторон,
+	СправочникВидыДокументов.ВестиУчетТоваровИУслуг,
+	СправочникВидыДокументов.ВключенУчетПоНоменклатуреДел,
+	СправочникВидыДокументов.ЗапретитьСозданиеДокументовНеПоШаблону,
+	СправочникВидыДокументов.ИспользоватьВременныеНомера,
+	СправочникВидыДокументов.ИспользоватьСрокИсполнения,
+	СправочникВидыДокументов.Комментарий,
+	СправочникВидыДокументов.КонтролироватьНаличиеОригинала,
+	СправочникВидыДокументов.КонтролироватьУникальностьДокументаВРамкахПроекта,
+	СправочникВидыДокументов.НаборСвойств,
+	СправочникВидыДокументов.НеобходимаПечатьШтрихкода,
+	СправочникВидыДокументов.ОбязателенФайлОригинала,
+	СправочникВидыДокументов.ОбязательноеУказаниеОтветственного,
+	СправочникВидыДокументов.ОбязательноУказаниеПроекта,
+	СправочникВидыДокументов.СрокИсполнения,
+	СправочникВидыДокументов.СрокИсполненияУказанВРабочихДнях,
+	СправочникВидыДокументов.УчитыватьВходящийНомерИДатуПолучателя,
+	СправочникВидыДокументов.УчитыватьМестоХранения,
+	СправочникВидыДокументов.УчитыватьНедействующиеДокументы,
+	СправочникВидыДокументов.УчитыватьОтветственногоЗаХранение,
+	СправочникВидыДокументов.УчитыватьСрокДействия,
+	СправочникВидыДокументов.УчитыватьСуммуДокумента,
+	СправочникВидыДокументов.ФормаДокумента,
+	СправочникВидыДокументов.ЯвляетсяВходящейКорреспонденцией,
+	СправочникВидыДокументов.ЯвляетсяДоговором,
+	СправочникВидыДокументов.ЯвляетсяЗаявкойНаОплату,
+	СправочникВидыДокументов.ЯвляетсяИсходящейКорреспонденцией,
+	СправочникВидыДокументов.ЯвляетсяКомплектомДокументов,
+	СправочникВидыДокументов.ЯвляетсяОбращениемОтГраждан,
+	СправочникВидыДокументов.НаименованияСторон,
+	СправочникВидыДокументов.РолиФайлов,
+	СправочникВидыДокументов.Предопределенный,
+	СправочникВидыДокументов.ИмяПредопределенныхДанных,
+	ИСТИНА В
+		(ВЫБРАТЬ ПЕРВЫЕ 1
+			ИСТИНА
+		ИЗ
+			РегистрСведений.РазрешенияНаСозданиеДокументов КАК РазрешенияНаСозданиеДокументов
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СотрудникиВКонтейнерах КАК СотрудникиВКонтейнерах
+				ПО РазрешенияНаСозданиеДокументов.Участник = СотрудникиВКонтейнерах.Контейнер
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СоставСубъектовПравДоступа КАК СоставСубъектовПравДоступа
+				ПО СотрудникиВКонтейнерах.Сотрудник = СоставСубъектовПравДоступа.Субъект
+		ГДЕ
+			РазрешенияНаСозданиеДокументов.ВидДокумента = СправочникВидыДокументов.Ссылка
+			И СоставСубъектовПравДоступа.Сотрудник В (&amp;ВсеСотрудникиПользователя)
+			И СоставСубъектовПравДоступа.ИмяОбластиДелегирования В ("", "Документы", "ДокументыПросмотрИРедактирование")
+			И НЕ РазрешенияНаСозданиеДокументов.Участник.ПометкаУдаления
+			И НЕ СоставСубъектовПравДоступа.СотрудникПометкаУдаления
+			И НЕ СоставСубъектовПравДоступа.СубъектПометкаУдаления) КАК ЕстьРазрешениеНаСозданиеДокументов
+	
+ИЗ
+	Справочник.ВидыДокументов КАК СправочникВидыДокументов</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИспользоватьВажность</dcssch:dataPath>
+					<dcssch:field>ИспользоватьВажность</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РазрешитьРучноеИзменениеСписковДоступа</dcssch:dataPath>
+					<dcssch:field>РазрешитьРучноеИзменениеСписковДоступа</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеЯзык2</dcssch:dataPath>
+					<dcssch:field>НаименованиеЯзык2</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеЯзык1</dcssch:dataPath>
+					<dcssch:field>НаименованиеЯзык1</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Родитель</dcssch:dataPath>
+					<dcssch:field>Родитель</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЭтоГруппа</dcssch:dataPath>
+					<dcssch:field>ЭтоГруппа</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВариантПодписания</dcssch:dataPath>
+					<dcssch:field>ВариантПодписания</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВестиУчетПоАдресатам</dcssch:dataPath>
+					<dcssch:field>ВестиУчетПоАдресатам</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВестиУчетПоКонтрагентам</dcssch:dataPath>
+					<dcssch:field>ВестиУчетПоКонтрагентам</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВестиУчетПоНоменклатуреДел</dcssch:dataPath>
+					<dcssch:field>ВестиУчетПоНоменклатуреДел</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВестиУчетПоОрганизациям</dcssch:dataPath>
+					<dcssch:field>ВестиУчетПоОрганизациям</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВестиУчетПоСтатьямДДС</dcssch:dataPath>
+					<dcssch:field>ВестиУчетПоСтатьямДДС</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВестиУчетПоТематикам</dcssch:dataPath>
+					<dcssch:field>ВестиУчетПоТематикам</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВестиУчетСторон</dcssch:dataPath>
+					<dcssch:field>ВестиУчетСторон</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВестиУчетТоваровИУслуг</dcssch:dataPath>
+					<dcssch:field>ВестиУчетТоваровИУслуг</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВключенУчетПоНоменклатуреДел</dcssch:dataPath>
+					<dcssch:field>ВключенУчетПоНоменклатуреДел</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗапретитьСозданиеДокументовНеПоШаблону</dcssch:dataPath>
+					<dcssch:field>ЗапретитьСозданиеДокументовНеПоШаблону</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИспользоватьВременныеНомера</dcssch:dataPath>
+					<dcssch:field>ИспользоватьВременныеНомера</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИспользоватьСрокИсполнения</dcssch:dataPath>
+					<dcssch:field>ИспользоватьСрокИсполнения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КонтролироватьНаличиеОригинала</dcssch:dataPath>
+					<dcssch:field>КонтролироватьНаличиеОригинала</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КонтролироватьУникальностьДокументаВРамкахПроекта</dcssch:dataPath>
+					<dcssch:field>КонтролироватьУникальностьДокументаВРамкахПроекта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаборСвойств</dcssch:dataPath>
+					<dcssch:field>НаборСвойств</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НеобходимаПечатьШтрихкода</dcssch:dataPath>
+					<dcssch:field>НеобходимаПечатьШтрихкода</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбязателенФайлОригинала</dcssch:dataPath>
+					<dcssch:field>ОбязателенФайлОригинала</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбязательноеУказаниеОтветственного</dcssch:dataPath>
+					<dcssch:field>ОбязательноеУказаниеОтветственного</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбязательноУказаниеПроекта</dcssch:dataPath>
+					<dcssch:field>ОбязательноУказаниеПроекта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СрокИсполнения</dcssch:dataPath>
+					<dcssch:field>СрокИсполнения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СрокИсполненияУказанВРабочихДнях</dcssch:dataPath>
+					<dcssch:field>СрокИсполненияУказанВРабочихДнях</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УчитыватьВходящийНомерИДатуПолучателя</dcssch:dataPath>
+					<dcssch:field>УчитыватьВходящийНомерИДатуПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УчитыватьМестоХранения</dcssch:dataPath>
+					<dcssch:field>УчитыватьМестоХранения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УчитыватьНедействующиеДокументы</dcssch:dataPath>
+					<dcssch:field>УчитыватьНедействующиеДокументы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УчитыватьОтветственногоЗаХранение</dcssch:dataPath>
+					<dcssch:field>УчитыватьОтветственногоЗаХранение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УчитыватьСрокДействия</dcssch:dataPath>
+					<dcssch:field>УчитыватьСрокДействия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УчитыватьСуммуДокумента</dcssch:dataPath>
+					<dcssch:field>УчитыватьСуммуДокумента</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФормаДокумента</dcssch:dataPath>
+					<dcssch:field>ФормаДокумента</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЯвляетсяВходящейКорреспонденцией</dcssch:dataPath>
+					<dcssch:field>ЯвляетсяВходящейКорреспонденцией</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЯвляетсяДоговором</dcssch:dataPath>
+					<dcssch:field>ЯвляетсяДоговором</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЯвляетсяЗаявкойНаОплату</dcssch:dataPath>
+					<dcssch:field>ЯвляетсяЗаявкойНаОплату</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЯвляетсяИсходящейКорреспонденцией</dcssch:dataPath>
+					<dcssch:field>ЯвляетсяИсходящейКорреспонденцией</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЯвляетсяКомплектомДокументов</dcssch:dataPath>
+					<dcssch:field>ЯвляетсяКомплектомДокументов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЯвляетсяОбращениемОтГраждан</dcssch:dataPath>
+					<dcssch:field>ЯвляетсяОбращениемОтГраждан</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованияСторон.Ссылка</dcssch:dataPath>
+					<dcssch:field>НаименованияСторон.Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованияСторон.НомерСтроки</dcssch:dataPath>
+					<dcssch:field>НаименованияСторон.НомерСтроки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованияСторон.НаименованиеСтороны</dcssch:dataPath>
+					<dcssch:field>НаименованияСторон.НаименованиеСтороны</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованияСторон.ДопустимыОрганизации</dcssch:dataPath>
+					<dcssch:field>НаименованияСторон.ДопустимыОрганизации</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованияСторон.ДопустимыКонтрагенты</dcssch:dataPath>
+					<dcssch:field>НаименованияСторон.ДопустимыКонтрагенты</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованияСторон.ДопустимыСотрудники</dcssch:dataPath>
+					<dcssch:field>НаименованияСторон.ДопустимыСотрудники</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldNestedDataSet">
+					<dcssch:dataPath>НаименованияСторон</dcssch:dataPath>
+					<dcssch:field>НаименованияСторон</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РолиФайлов.Ссылка</dcssch:dataPath>
+					<dcssch:field>РолиФайлов.Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РолиФайлов.НомерСтроки</dcssch:dataPath>
+					<dcssch:field>РолиФайлов.НомерСтроки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РолиФайлов.Роль</dcssch:dataPath>
+					<dcssch:field>РолиФайлов.Роль</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РолиФайлов.Обязательная</dcssch:dataPath>
+					<dcssch:field>РолиФайлов.Обязательная</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РолиФайлов.ТолькоОдинФайл</dcssch:dataPath>
+					<dcssch:field>РолиФайлов.ТолькоОдинФайл</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РолиФайлов.ФайлЭлектронногоДокумента</dcssch:dataPath>
+					<dcssch:field>РолиФайлов.ФайлЭлектронногоДокумента</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldNestedDataSet">
+					<dcssch:dataPath>РолиФайлов</dcssch:dataPath>
+					<dcssch:field>РолиФайлов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЕстьРазрешениеНаСозданиеДокументов</dcssch:dataPath>
+					<dcssch:field>ЕстьРазрешениеНаСозданиеДокументов</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть разрешение на создание документов</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Parameter>
+					<dcssch:name>ВсеСотрудникиПользователя</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все сотрудники пользователя</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+					<dcssch:valueListAllowed>true</dcssch:valueListAllowed>
+				</Parameter>
+				<MainTable>Catalog.ВидыДокументов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПоказыватьУдаленные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПоказыватьУдаленные</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Тематики" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тематики</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Тематики.ВидДокумента</Field>
+				<Field>Тематики.ЕстьРазрешениеНаСозданиеДокументов</Field>
+				<Field>Тематики.НеДействует</Field>
+				<Field>Тематики.НеДействуетДата</Field>
+				<Field>Тематики.ПометкаУдаления</Field>
+				<Field>Тематики.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникТематикиДокументов.Ссылка КАК Ссылка,
+	СправочникТематикиДокументов.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникТематикиДокументов.Код КАК Код,
+	СправочникТематикиДокументов.Наименование КАК Наименование,
+	СправочникТематикиДокументов.ВидДокумента КАК ВидДокумента,
+	СправочникТематикиДокументов.ДатаСоздания КАК ДатаСоздания,
+	СправочникТематикиДокументов.Комментарий КАК Комментарий,
+	СправочникТематикиДокументов.НеДействует КАК НеДействует,
+	СправочникТематикиДокументов.НеДействуетДата КАК НеДействуетДата,
+	СправочникТематикиДокументов.Создал КАК Создал,
+	СправочникТематикиДокументов.Предопределенный КАК Предопределенный,
+	СправочникТематикиДокументов.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
+	ИСТИНА В
+		(ВЫБРАТЬ ПЕРВЫЕ 1
+			ИСТИНА
+		ИЗ
+			РегистрСведений.РазрешенияНаСозданиеДокументов КАК РазрешенияНаСозданиеДокументов
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СотрудникиВКонтейнерах КАК СотрудникиВКонтейнерах
+				ПО
+					РазрешенияНаСозданиеДокументов.Участник = СотрудникиВКонтейнерах.Контейнер
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СоставСубъектовПравДоступа КАК СоставСубъектовПравДоступа
+				ПО
+					СотрудникиВКонтейнерах.Сотрудник = СоставСубъектовПравДоступа.Субъект
+		ГДЕ
+			РазрешенияНаСозданиеДокументов.ВидДокумента = СправочникТематикиДокументов.ВидДокумента
+			И РазрешенияНаСозданиеДокументов.Тематика В (СправочникТематикиДокументов.Ссылка, ЗНАЧЕНИЕ(Справочник.ТематикиДокументов.ПустаяСсылка))
+			И СоставСубъектовПравДоступа.Сотрудник В (&amp;ВсеСотрудникиПользователя)
+			И СоставСубъектовПравДоступа.ИмяОбластиДелегирования В ("", "Документы", "ДокументыПросмотрИРедактирование")
+			И НЕ РазрешенияНаСозданиеДокументов.Участник.ПометкаУдаления
+			И НЕ СоставСубъектовПравДоступа.СотрудникПометкаУдаления
+			И НЕ СоставСубъектовПравДоступа.СубъектПометкаУдаления) КАК ЕстьРазрешениеНаСозданиеДокументов
+ИЗ
+	Справочник.ТематикиДокументов КАК СправочникТематикиДокументов
+ГДЕ
+	СправочникТематикиДокументов.ВидДокумента.ВестиУчетПоТематикам
+{ГДЕ
+	(СправочникТематикиДокументов.ВидДокумента = &amp;ВидДокумента),
+	(ИСТИНА = &amp;ПоказыватьДействующие
+			И (НЕ СправочникТематикиДокументов.НеДействует
+				ИЛИ СправочникТематикиДокументов.НеДействуетДата &gt; &amp;ТекущаяДата))}</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Код</dcssch:dataPath>
+					<dcssch:field>Код</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидДокумента</dcssch:dataPath>
+					<dcssch:field>ВидДокумента</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаСоздания</dcssch:dataPath>
+					<dcssch:field>ДатаСоздания</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НеДействует</dcssch:dataPath>
+					<dcssch:field>НеДействует</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НеДействуетДата</dcssch:dataPath>
+					<dcssch:field>НеДействуетДата</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Создал</dcssch:dataPath>
+					<dcssch:field>Создал</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЕстьРазрешениеНаСозданиеДокументов</dcssch:dataPath>
+					<dcssch:field>ЕстьРазрешениеНаСозданиеДокументов</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть разрешение на создание документов</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Parameter>
+					<dcssch:name>ВсеСотрудникиПользователя</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все сотрудники пользователя</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+					<dcssch:valueListAllowed>true</dcssch:valueListAllowed>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ВидДокумента</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документа</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.ВидыДокументов</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ПоказыватьДействующие</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показывать действующие</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:boolean</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ТекущаяДата</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущая дата</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<MainTable>Catalog.ТематикиДокументов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТематикиИспользуются" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тематики используются</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийВид" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий вид</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыДокументов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоПолноправныйПользователь" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это полноправный пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказыватьУдаленные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьУдаленные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ПроверятьРазрешенияНаСозданиеДокументов">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

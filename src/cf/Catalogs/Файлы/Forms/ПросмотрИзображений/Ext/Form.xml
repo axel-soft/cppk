@@ -1,0 +1,964 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTitle>false</AutoTitle>
+	<Group>AlwaysHorizontal</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<ConversationsRepresentation>Show</ConversationsRepresentation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаПросмотр" id="77">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа просмотр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа просмотр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаПросмотрРасширеннаяПодсказка" id="78"/>
+			<ChildItems>
+				<Page name="ГруппаИзображение" id="115">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа изображение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа изображение</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ГруппаИзображениеРасширеннаяПодсказка" id="116"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПред" id="132">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пред</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пред</v8:content>
+								</v8:item>
+							</ToolTip>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПредРасширеннаяПодсказка" id="133"/>
+							<ChildItems>
+								<Button name="Предыдущая" id="134">
+									<Type>Hyperlink</Type>
+									<Representation>Picture</Representation>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<CommandName>Form.Command.Предыдущая</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ПредыдущаяРасширеннаяПодсказка" id="135"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<PictureField name="ИзображениеФайла" id="1">
+							<DataPath>АдресВременногоФайла</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>50</Width>
+							<Height>15</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<PictureSize>AutoSize</PictureSize>
+							<Zoomable>true</Zoomable>
+							<ContextMenu name="ИзображениеФайлаКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ИзображениеФайлаРасширеннаяПодсказка" id="3"/>
+						</PictureField>
+						<UsualGroup name="ГруппаСлед" id="136">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа след</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа след</v8:content>
+								</v8:item>
+							</ToolTip>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСледРасширеннаяПодсказка" id="137"/>
+							<ChildItems>
+								<Button name="Следующая" id="138">
+									<Type>Hyperlink</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.Следующая</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.MoveRight</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="СледующаяРасширеннаяПодсказка" id="139"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаИзображениеИТекст" id="117">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа изображение и текст</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа изображение и текст</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ГруппаИзображениеИТекстРасширеннаяПодсказка" id="118"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПред1" id="144">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пред</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пред</v8:content>
+								</v8:item>
+							</ToolTip>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПред1РасширеннаяПодсказка" id="145"/>
+							<ChildItems>
+								<Button name="Предыдущая1" id="146">
+									<Type>Hyperlink</Type>
+									<Representation>Picture</Representation>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<CommandName>Form.Command.Предыдущая</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="Предыдущая1РасширеннаяПодсказка" id="147"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<PictureField name="ИзображениеФайлаРядомСТекстом" id="119">
+							<DataPath>АдресВременногоФайла</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>50</Width>
+							<Height>15</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<PictureSize>AutoSize</PictureSize>
+							<Zoomable>true</Zoomable>
+							<ContextMenu name="ИзображениеФайлаРядомСТекстомКонтекстноеМеню" id="120"/>
+							<ExtendedTooltip name="ИзображениеФайлаРядомСТекстомРасширеннаяПодсказка" id="121"/>
+						</PictureField>
+						<UsualGroup name="ГруппаСлед1" id="148">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа след</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа след</v8:content>
+								</v8:item>
+							</ToolTip>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСлед1РасширеннаяПодсказка" id="149"/>
+							<ChildItems>
+								<Button name="Следующая1" id="150">
+									<Type>Hyperlink</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.Следующая</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.MoveRight</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="Следующая1РасширеннаяПодсказка" id="151"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Pages name="ГруппаТекстФайла" id="101">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа текст файла</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа текст файла</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ГруппаТекстФайлаРасширеннаяПодсказка" id="102"/>
+							<ChildItems>
+								<Page name="ГруппаТекстРаспознается" id="105">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа текст распознается</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа текст распознается</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<ExtendedTooltip name="ГруппаТекстРаспознаетсяРасширеннаяПодсказка" id="106"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияФайлРаспознается" id="29">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выполняется распознавание файла.
+Пожалуйста подождите...</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияФайлРаспознаетсяКонтекстноеМеню" id="30"/>
+											<ExtendedTooltip name="ДекорацияФайлРаспознаетсяРасширеннаяПодсказка" id="31"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаТекст" id="103">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа текст</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа текст</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаТекстРасширеннаяПодсказка" id="104"/>
+									<ChildItems>
+										<HTMLDocumentField name="ТекстФайлаHTML" id="4">
+											<DataPath>ТекстФайлаHTML</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Height>15</Height>
+											<ContextMenu name="ТекстФайлаHTMLКонтекстноеМеню" id="5"/>
+											<ExtendedTooltip name="ТекстФайлаHTMLРасширеннаяПодсказка" id="6"/>
+										</HTMLDocumentField>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаОшибкаПриРаспознавании" id="107">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ошибка при распознавании</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ошибка при распознавании</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<ExtendedTooltip name="ГруппаОшибкаПриРаспознаванииРасширеннаяПодсказка" id="108"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияОшибкаРаспознавания" id="37">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация длительная операция</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>StdPicture.DialogStop</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияОшибкаРаспознаванияКонтекстноеМеню" id="38"/>
+											<ExtendedTooltip name="ДекорацияОшибкаРаспознаванияРасширеннаяПодсказка" id="39"/>
+										</PictureDecoration>
+										<LabelDecoration name="ДекорацияФайлРаспознатьНеУдалось" id="34">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При распознавании файла произошла ошибка.
+Обратитесь к администратору.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияФайлРаспознатьНеУдалосьКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="ДекорацияФайлРаспознатьНеУдалосьРасширеннаяПодсказка" id="36"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаПраво" id="122">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа право</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа право</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="123"/>
+			<ChildItems>
+				<CommandBar name="ГруппаКоманды" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>4</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<Popup name="ГруппаПодменю" id="66">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Команды</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Команды</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<Picture>
+								<xr:Ref>CommonPicture.Меню</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<Representation>Picture</Representation>
+							<ExtendedTooltip name="ГруппаПодменюРасширеннаяПодсказка" id="67"/>
+							<ChildItems>
+								<Button name="ОтправитьОбъекты" id="99">
+									<Type>CommandBarButton</Type>
+									<CommandName>CommonCommand.ОтправитьОбъекты</CommandName>
+									<DataPath>Файл</DataPath>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ОтправитьОбъектыРасширеннаяПодсказка" id="100"/>
+								</Button>
+								<Button name="Напечатать" id="46">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Напечатать</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="НапечататьРасширеннаяПодсказка" id="47"/>
+								</Button>
+								<Button name="ОткрытьКарточку" id="50">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ОткрытьКарточку</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ОткрытьКарточкуРасширеннаяПодсказка" id="51"/>
+								</Button>
+								<Button name="СохранитьКак" id="52">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.СохранитьКак</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="СохранитьКакРасширеннаяПодсказка" id="53"/>
+								</Button>
+								<Button name="ВнешнийРедактор" id="54">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ВнешнийРедактор</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ВнешнийРедакторРасширеннаяПодсказка" id="55"/>
+								</Button>
+								<Button name="РаспознатьФайлПодменю" id="97">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.РаспознатьФайл</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="РаспознатьФайлПодменюРасширеннаяПодсказка" id="98"/>
+								</Button>
+								<Button name="Задачи" id="48">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Задачи</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ЗадачиРасширеннаяПодсказка" id="49"/>
+								</Button>
+								<Button name="Справка" id="56">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="57"/>
+								</Button>
+							</ChildItems>
+						</Popup>
+					</ChildItems>
+				</CommandBar>
+				<UsualGroup name="ГруппаКомандыПоворота" id="124">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды поворота</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды поворота</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<VerticalSpacing>None</VerticalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКомандыПоворотаРасширеннаяПодсказка" id="125"/>
+					<ChildItems>
+						<Button name="Повернуть90Влево" id="128">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.Повернуть90Влево</CommandName>
+							<ExtendedTooltip name="Повернуть90ВлевоРасширеннаяПодсказка" id="129"/>
+						</Button>
+						<Button name="Повернуть90Вправо" id="130">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.Повернуть90Вправо</CommandName>
+							<ExtendedTooltip name="Повернуть90ВправоРасширеннаяПодсказка" id="131"/>
+						</Button>
+						<Button name="Повернуть180" id="126">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.Повернуть180</CommandName>
+							<ExtendedTooltip name="Повернуть180РасширеннаяПодсказка" id="127"/>
+						</Button>
+						<Button name="РаспознатьФайл" id="142">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.РаспознатьФайл</CommandName>
+							<ExtendedTooltip name="РаспознатьФайлРасширеннаяПодсказка" id="143"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="МК_Содержимое" id="140">
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="МК_СодержимоеРасширеннаяПодсказка" id="141"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Файл" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Файлы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресВременногоФайла" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес временного файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеФайла" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТекстФайла" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЯзыкРаспознавания" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Язык распознавания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьРаспознавание</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ИспользоватьРаспознавание" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать распознавание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьImageMagickДляРаспознаванияPDF" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать image magick для распознавания PDF</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтратегияРаспознавания" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стратегия распознавания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СтратегииРаспознаванияТекста</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяОткрываемогоФайла" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя открываемого файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстФайлаHTML" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст файла HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрограммаРаспознавания" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Программа распознавания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПрограммыРаспознавания</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлМожноРаспознать" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл можно распознать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоступноРаспознаваниеПоЗапросу" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступно распознавание по запросу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВозможноНачалоАвтораспознаванияНовогоФайла" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возможно начало автораспознавания нового файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзменяетсяВДругойСистеме" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменяется в другой системе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтоговыйУголПоворота" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоговый угол поворота</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийНомерФайла" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий номер файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокВсехКартинок" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список всех картинок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Файлы</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Напечатать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напечатать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напечатать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Print</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Печатать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Задачи" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Задачи</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьКарточку" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть карточку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть карточку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьКарточку</Action>
+			<Representation>Text</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СохранитьКак" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить на диск...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить файл на диск или другое устройство</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СохранитьФайлКак</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьКак</Action>
+			<Representation>Text</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВнешнийРедактор" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть в приложении</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внешний редактор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВнешнийРедактор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РаспознатьФайл" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распознать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распознать файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.РаспознаваниеДокументов</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>РаспознатьФайл</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Повернуть180" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повернуть180</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повернуть на 180 градусов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СканПоворот180</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>Повернуть180</Action>
+		</Command>
+		<Command name="Повернуть90Влево" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повернуть90 влево</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повернуть на 90 градусов вправо</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СканПоворотВправо</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>Повернуть90Влево</Action>
+		</Command>
+		<Command name="Повернуть90Вправо" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повернуть90 вправо</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повернуть на 90 градусов влево</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СканПоворотВлево</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>Повернуть90Вправо</Action>
+		</Command>
+		<Command name="Предыдущая" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая картинка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Предыдущая</Action>
+		</Command>
+		<Command name="Следующая" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующая</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующая картинка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Следующая</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Файл">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Файлы</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ДанныеФайла">
+			<Type/>
+		</Parameter>
+		<Parameter name="ИмяОткрываемогоФайла">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

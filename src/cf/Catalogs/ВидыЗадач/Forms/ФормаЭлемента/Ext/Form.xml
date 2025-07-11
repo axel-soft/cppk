@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ВидДействияИсполнителя" id="4">
+			<DataPath>Объект.ВидДействияИсполнителя</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидДействияИсполнителяКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ВидДействияИсполнителяРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ВидДействияПроверяющего" id="7">
+			<DataPath>Объект.ВидДействияПроверяющего</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидДействияПроверяющегоКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВидДействияПроверяющегоРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ВидУчастникаИсполнитель" id="10">
+			<DataPath>Объект.ВидУчастникаИсполнитель</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидУчастникаИсполнительКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ВидУчастникаИсполнительРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ВидУчастникаОтветственный" id="13">
+			<DataPath>Объект.ВидУчастникаОтветственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидУчастникаОтветственныйКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВидУчастникаОтветственныйРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ВидУчастникаПроверяющий" id="16">
+			<DataPath>Объект.ВидУчастникаПроверяющий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидУчастникаПроверяющийКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ВидУчастникаПроверяющийРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<CheckBoxField name="ДоступенДляВыбора" id="19">
+			<DataPath>Объект.ДоступенДляВыбора</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ДоступенДляВыбораКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ДоступенДляВыбораРасширеннаяПодсказка" id="21"/>
+		</CheckBoxField>
+		<InputField name="ЗаголовокКомандыПодобратьИсполнителей" id="22">
+			<DataPath>Объект.ЗаголовокКомандыПодобратьИсполнителей</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЗаголовокКомандыПодобратьИсполнителейКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ЗаголовокКомандыПодобратьИсполнителейРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ЗаголовокСпискаВыбранныхУчастников" id="31">
+			<DataPath>Объект.ЗаголовокСпискаВыбранныхУчастников</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЗаголовокСпискаВыбранныхУчастниковКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ЗаголовокСпискаВыбранныхУчастниковРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="ЗаголовокФормыВыбораИсполнителей" id="40">
+			<DataPath>Объект.ЗаголовокФормыВыбораИсполнителей</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЗаголовокФормыВыбораИсполнителейКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="ЗаголовокФормыВыбораИсполнителейРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<CheckBoxField name="ЗакрыватьПодзадачи" id="49">
+			<DataPath>Объект.ЗакрыватьПодзадачи</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗакрыватьПодзадачиКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="ЗакрыватьПодзадачиРасширеннаяПодсказка" id="51"/>
+		</CheckBoxField>
+		<InputField name="НаборСостояний" id="52">
+			<DataPath>Объект.НаборСостояний</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаборСостоянийКонтекстноеМеню" id="53"/>
+			<ExtendedTooltip name="НаборСостоянийРасширеннаяПодсказка" id="54"/>
+		</InputField>
+		<InputField name="РезультатЗадачиИсполнено" id="55">
+			<DataPath>Объект.РезультатЗадачиИсполнено</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РезультатЗадачиИсполненоКонтекстноеМеню" id="56"/>
+			<ExtendedTooltip name="РезультатЗадачиИсполненоРасширеннаяПодсказка" id="57"/>
+		</InputField>
+		<InputField name="РезультатЗадачиИсполненоОтрицательно" id="197">
+			<DataPath>Объект.РезультатЗадачиИсполненоОтрицательно</DataPath>
+			<ContextMenu name="РезультатЗадачиИсполненоОтрицательноКонтекстноеМеню" id="198"/>
+			<ExtendedTooltip name="РезультатЗадачиИсполненоОтрицательноРасширеннаяПодсказка" id="199"/>
+		</InputField>
+		<InputField name="РезультатЗадачиИсполненоСЗамечаниями" id="200">
+			<DataPath>Объект.РезультатЗадачиИсполненоСЗамечаниями</DataPath>
+			<ContextMenu name="РезультатЗадачиИсполненоСЗамечаниямиКонтекстноеМеню" id="201"/>
+			<ExtendedTooltip name="РезультатЗадачиИсполненоСЗамечаниямиРасширеннаяПодсказка" id="202"/>
+		</InputField>
+		<InputField name="РезультатИсполнителяВыполнена" id="58">
+			<DataPath>Объект.РезультатИсполнителяВыполнена</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РезультатИсполнителяВыполненаКонтекстноеМеню" id="59"/>
+			<ExtendedTooltip name="РезультатИсполнителяВыполненаРасширеннаяПодсказка" id="60"/>
+		</InputField>
+		<InputField name="РезультатИсполнителяВыполненаОтрицательно" id="203">
+			<DataPath>Объект.РезультатИсполнителяВыполненаОтрицательно</DataPath>
+			<ContextMenu name="РезультатИсполнителяВыполненаОтрицательноКонтекстноеМеню" id="204"/>
+			<ExtendedTooltip name="РезультатИсполнителяВыполненаОтрицательноРасширеннаяПодсказка" id="205"/>
+		</InputField>
+		<InputField name="РезультатИсполнителяВыполненаСЗамечаниями" id="206">
+			<DataPath>Объект.РезультатИсполнителяВыполненаСЗамечаниями</DataPath>
+			<ContextMenu name="РезультатИсполнителяВыполненаСЗамечаниямиКонтекстноеМеню" id="207"/>
+			<ExtendedTooltip name="РезультатИсполнителяВыполненаСЗамечаниямиРасширеннаяПодсказка" id="208"/>
+		</InputField>
+		<InputField name="РезультатПроверяющегоВозвращеноНаДоработку" id="61">
+			<DataPath>Объект.РезультатПроверяющегоВозвращеноНаДоработку</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РезультатПроверяющегоВозвращеноНаДоработкуКонтекстноеМеню" id="62"/>
+			<ExtendedTooltip name="РезультатПроверяющегоВозвращеноНаДоработкуРасширеннаяПодсказка" id="63"/>
+		</InputField>
+		<InputField name="РезультатПроверяющегоПроверено" id="64">
+			<DataPath>Объект.РезультатПроверяющегоПроверено</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РезультатПроверяющегоПровереноКонтекстноеМеню" id="65"/>
+			<ExtendedTooltip name="РезультатПроверяющегоПровереноРасширеннаяПодсказка" id="66"/>
+		</InputField>
+		<InputField name="СостояниеЗадачиВРаботе" id="67">
+			<DataPath>Объект.СостояниеЗадачиВРаботе</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеЗадачиВРаботеКонтекстноеМеню" id="68"/>
+			<ExtendedTooltip name="СостояниеЗадачиВРаботеРасширеннаяПодсказка" id="69"/>
+		</InputField>
+		<InputField name="СостояниеЗадачиЗакрыта" id="70">
+			<DataPath>Объект.СостояниеЗадачиЗакрыта</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеЗадачиЗакрытаКонтекстноеМеню" id="71"/>
+			<ExtendedTooltip name="СостояниеЗадачиЗакрытаРасширеннаяПодсказка" id="72"/>
+		</InputField>
+		<InputField name="СостояниеЗадачиЗакрытаОтрицательно" id="209">
+			<DataPath>Объект.СостояниеЗадачиЗакрытаОтрицательно</DataPath>
+			<ContextMenu name="СостояниеЗадачиЗакрытаОтрицательноКонтекстноеМеню" id="210"/>
+			<ExtendedTooltip name="СостояниеЗадачиЗакрытаОтрицательноРасширеннаяПодсказка" id="211"/>
+		</InputField>
+		<InputField name="СостояниеЗадачиЗакрытаСЗамечаниями" id="212">
+			<DataPath>Объект.СостояниеЗадачиЗакрытаСЗамечаниями</DataPath>
+			<ContextMenu name="СостояниеЗадачиЗакрытаСЗамечаниямиКонтекстноеМеню" id="213"/>
+			<ExtendedTooltip name="СостояниеЗадачиЗакрытаСЗамечаниямиРасширеннаяПодсказка" id="214"/>
+		</InputField>
+		<InputField name="СостояниеЗадачиНаПроверке" id="73">
+			<DataPath>Объект.СостояниеЗадачиНаПроверке</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеЗадачиНаПроверкеКонтекстноеМеню" id="74"/>
+			<ExtendedTooltip name="СостояниеЗадачиНаПроверкеРасширеннаяПодсказка" id="75"/>
+		</InputField>
+		<InputField name="СостояниеЗадачиНовая" id="76">
+			<DataPath>Объект.СостояниеЗадачиНовая</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеЗадачиНоваяКонтекстноеМеню" id="77"/>
+			<ExtendedTooltip name="СостояниеЗадачиНоваяРасширеннаяПодсказка" id="78"/>
+		</InputField>
+		<InputField name="СостояниеЗадачиОтложена" id="82">
+			<DataPath>Объект.СостояниеЗадачиОтложена</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеЗадачиОтложенаКонтекстноеМеню" id="83"/>
+			<ExtendedTooltip name="СостояниеЗадачиОтложенаРасширеннаяПодсказка" id="84"/>
+		</InputField>
+		<InputField name="СостояниеЗадачиОтменена" id="85">
+			<DataPath>Объект.СостояниеЗадачиОтменена</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеЗадачиОтмененаКонтекстноеМеню" id="86"/>
+			<ExtendedTooltip name="СостояниеЗадачиОтмененаРасширеннаяПодсказка" id="87"/>
+		</InputField>
+		<InputField name="СостояниеЗадачиЧерновик" id="88">
+			<DataPath>Объект.СостояниеЗадачиЧерновик</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеЗадачиЧерновикКонтекстноеМеню" id="89"/>
+			<ExtendedTooltip name="СостояниеЗадачиЧерновикРасширеннаяПодсказка" id="90"/>
+		</InputField>
+		<InputField name="СостояниеУчастниковВозвращеноНаДоработку" id="91">
+			<DataPath>Объект.СостояниеУчастниковВозвращеноНаДоработку</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеУчастниковВозвращеноНаДоработкуКонтекстноеМеню" id="92"/>
+			<ExtendedTooltip name="СостояниеУчастниковВозвращеноНаДоработкуРасширеннаяПодсказка" id="93"/>
+		</InputField>
+		<InputField name="СостояниеУчастниковВРаботе" id="94">
+			<DataPath>Объект.СостояниеУчастниковВРаботе</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеУчастниковВРаботеКонтекстноеМеню" id="95"/>
+			<ExtendedTooltip name="СостояниеУчастниковВРаботеРасширеннаяПодсказка" id="96"/>
+		</InputField>
+		<InputField name="СостояниеУчастниковВыполнена" id="97">
+			<DataPath>Объект.СостояниеУчастниковВыполнена</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеУчастниковВыполненаКонтекстноеМеню" id="98"/>
+			<ExtendedTooltip name="СостояниеУчастниковВыполненаРасширеннаяПодсказка" id="99"/>
+		</InputField>
+		<InputField name="СостояниеУчастниковВыполненаОтрицательно" id="215">
+			<DataPath>Объект.СостояниеУчастниковВыполненаОтрицательно</DataPath>
+			<ContextMenu name="СостояниеУчастниковВыполненаОтрицательноКонтекстноеМеню" id="216"/>
+			<ExtendedTooltip name="СостояниеУчастниковВыполненаОтрицательноРасширеннаяПодсказка" id="217"/>
+		</InputField>
+		<InputField name="СостояниеУчастниковВыполненаСЗамечаниями" id="218">
+			<DataPath>Объект.СостояниеУчастниковВыполненаСЗамечаниями</DataPath>
+			<ContextMenu name="СостояниеУчастниковВыполненаСЗамечаниямиКонтекстноеМеню" id="219"/>
+			<ExtendedTooltip name="СостояниеУчастниковВыполненаСЗамечаниямиРасширеннаяПодсказка" id="220"/>
+		</InputField>
+		<InputField name="СостояниеУчастниковНаПроверке" id="100">
+			<DataPath>Объект.СостояниеУчастниковНаПроверке</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеУчастниковНаПроверкеКонтекстноеМеню" id="101"/>
+			<ExtendedTooltip name="СостояниеУчастниковНаПроверкеРасширеннаяПодсказка" id="102"/>
+		</InputField>
+		<InputField name="СостояниеУчастниковНовая" id="103">
+			<DataPath>Объект.СостояниеУчастниковНовая</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеУчастниковНоваяКонтекстноеМеню" id="104"/>
+			<ExtendedTooltip name="СостояниеУчастниковНоваяРасширеннаяПодсказка" id="105"/>
+		</InputField>
+		<InputField name="СостояниеУчастниковОжидаетПроверки" id="106">
+			<DataPath>Объект.СостояниеУчастниковОжидаетПроверки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеУчастниковОжидаетПроверкиКонтекстноеМеню" id="107"/>
+			<ExtendedTooltip name="СостояниеУчастниковОжидаетПроверкиРасширеннаяПодсказка" id="108"/>
+		</InputField>
+		<InputField name="СостояниеУчастниковОжидаетПроверкиОтрицательно" id="221">
+			<DataPath>Объект.СостояниеУчастниковОжидаетПроверкиОтрицательно</DataPath>
+			<ContextMenu name="СостояниеУчастниковОжидаетПроверкиОтрицательноКонтекстноеМеню" id="222"/>
+			<ExtendedTooltip name="СостояниеУчастниковОжидаетПроверкиОтрицательноРасширеннаяПодсказка" id="223"/>
+		</InputField>
+		<InputField name="СостояниеУчастниковОжидаетПроверкиСЗамечаниями" id="224">
+			<DataPath>Объект.СостояниеУчастниковОжидаетПроверкиСЗамечаниями</DataPath>
+			<ContextMenu name="СостояниеУчастниковОжидаетПроверкиСЗамечаниямиКонтекстноеМеню" id="225"/>
+			<ExtendedTooltip name="СостояниеУчастниковОжидаетПроверкиСЗамечаниямиРасширеннаяПодсказка" id="226"/>
+		</InputField>
+		<InputField name="СостояниеУчастниковОтменена" id="109">
+			<DataPath>Объект.СостояниеУчастниковОтменена</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеУчастниковОтмененаКонтекстноеМеню" id="110"/>
+			<ExtendedTooltip name="СостояниеУчастниковОтмененаРасширеннаяПодсказка" id="111"/>
+		</InputField>
+		<InputField name="СостояниеУчастниковПроверено" id="112">
+			<DataPath>Объект.СостояниеУчастниковПроверено</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеУчастниковПровереноКонтекстноеМеню" id="113"/>
+			<ExtendedTooltip name="СостояниеУчастниковПровереноРасширеннаяПодсказка" id="114"/>
+		</InputField>
+		<InputField name="ТерминНаправилНаИсполнениеЖенский" id="115">
+			<DataPath>Объект.ТерминНаправилНаИсполнениеЖенский</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТерминНаправилНаИсполнениеЖенскийКонтекстноеМеню" id="116"/>
+			<ExtendedTooltip name="ТерминНаправилНаИсполнениеЖенскийРасширеннаяПодсказка" id="117"/>
+		</InputField>
+		<InputField name="ТерминНаправилНаИсполнениеМужской" id="124">
+			<DataPath>Объект.ТерминНаправилНаИсполнениеМужской</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТерминНаправилНаИсполнениеМужскойКонтекстноеМеню" id="125"/>
+			<ExtendedTooltip name="ТерминНаправилНаИсполнениеМужскойРасширеннаяПодсказка" id="126"/>
+		</InputField>
+		<InputField name="ТерминНаправитьНаИсполнение" id="133">
+			<DataPath>Объект.ТерминНаправитьНаИсполнение</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТерминНаправитьНаИсполнениеКонтекстноеМеню" id="134"/>
+			<ExtendedTooltip name="ТерминНаправитьНаИсполнениеРасширеннаяПодсказка" id="135"/>
+		</InputField>
+		<InputField name="ТерминНаправленаНаИсполнение" id="142">
+			<DataPath>Объект.ТерминНаправленаНаИсполнение</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТерминНаправленаНаИсполнениеКонтекстноеМеню" id="143"/>
+			<ExtendedTooltip name="ТерминНаправленаНаИсполнениеРасширеннаяПодсказка" id="144"/>
+		</InputField>
+		<InputField name="ТерминНеНаправленаНаИсполнение" id="151">
+			<DataPath>Объект.ТерминНеНаправленаНаИсполнение</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТерминНеНаправленаНаИсполнениеКонтекстноеМеню" id="152"/>
+			<ExtendedTooltip name="ТерминНеНаправленаНаИсполнениеРасширеннаяПодсказка" id="153"/>
+		</InputField>
+		<InputField name="ШаблонЗаголовка" id="160">
+			<DataPath>Объект.ШаблонЗаголовка</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ШаблонЗаголовкаКонтекстноеМеню" id="161"/>
+			<ExtendedTooltip name="ШаблонЗаголовкаРасширеннаяПодсказка" id="162"/>
+		</InputField>
+		<Table name="ВидыДействий" id="175">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ВидыДействий</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ВидыДействийКонтекстноеМеню" id="176"/>
+			<AutoCommandBar name="ВидыДействийКоманднаяПанель" id="177"/>
+			<ExtendedTooltip name="ВидыДействийРасширеннаяПодсказка" id="178"/>
+			<SearchStringAddition name="ВидыДействийСтрокаПоиска" id="179">
+				<AdditionSource>
+					<Item>ВидыДействий</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВидыДействийСтрокаПоискаКонтекстноеМеню" id="180"/>
+				<ExtendedTooltip name="ВидыДействийСтрокаПоискаРасширеннаяПодсказка" id="181"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ВидыДействийСостояниеПросмотра" id="182">
+				<AdditionSource>
+					<Item>ВидыДействий</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВидыДействийСостояниеПросмотраКонтекстноеМеню" id="183"/>
+				<ExtendedTooltip name="ВидыДействийСостояниеПросмотраРасширеннаяПодсказка" id="184"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ВидыДействийУправлениеПоиском" id="185">
+				<AdditionSource>
+					<Item>ВидыДействий</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ВидыДействийУправлениеПоискомКонтекстноеМеню" id="186"/>
+				<ExtendedTooltip name="ВидыДействийУправлениеПоискомРасширеннаяПодсказка" id="187"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ВидыДействийНомерСтроки" id="188">
+					<DataPath>Объект.ВидыДействий.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВидыДействийНомерСтрокиКонтекстноеМеню" id="189"/>
+					<ExtendedTooltip name="ВидыДействийНомерСтрокиРасширеннаяПодсказка" id="190"/>
+				</LabelField>
+				<InputField name="ВидыДействийВидДействия" id="191">
+					<DataPath>Объект.ВидыДействий.ВидДействия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВидыДействийВидДействияКонтекстноеМеню" id="192"/>
+					<ExtendedTooltip name="ВидыДействийВидДействияРасширеннаяПодсказка" id="193"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВидыЗадач</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

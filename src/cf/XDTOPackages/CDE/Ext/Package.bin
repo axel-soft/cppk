@@ -1,0 +1,118 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://v8.1c.ru/doc8/CDE">
+	<import namespace="http://v8.1c.ru/doc8/CDE/1"/>
+	<import namespace="http://v8.1c.ru/doc8/CDE/1_1"/>
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<valueType name="timeStamp" base="xs:string"/>
+	<valueType name="node" base="xs:string"/>
+	<objectType name="Request" abstract="true">
+		<property name="version" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Response" abstract="true"/>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="GetObjectStateRequest" base="d2p1:Request">
+		<property name="objects" type="xs:anyType" lowerBound="0" upperBound="-1"/>
+		<property name="properties" type="xs:string" lowerBound="0" upperBound="-1"/>
+		<property name="hashSumByPresentationOfProperties" type="xs:boolean"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="GetObjectStateResponse" base="d2p1:Response">
+		<property name="objectStates" type="d2p1:objectState" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="Error" base="d2p1:Response">
+		<property name="subject" type="xs:string" lowerBound="0"/>
+		<property name="description" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="objectState">
+		<property name="object" type="xs:anyType"/>
+		<property name="exists" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/CDE" name="timeStamp" type="d3p1:timeStamp" lowerBound="0"/>
+		<property name="hashSum" type="xs:string" lowerBound="0"/>
+		<property name="received" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/CDE" name="node" type="d5p1:node"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/CDE" name="timeStamp" type="d5p1:timeStamp"/>
+			</typeDef>
+		</property>
+		<property name="sent" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/CDE" name="node" type="d5p1:node"/>
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/CDE" name="timeStamp" type="d5p1:timeStamp"/>
+				<property name="date" type="xs:dateTime"/>
+				<property name="hashSum" type="xs:string"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="GetObjectVersionsRequest" base="d2p1:Request">
+		<property name="object" type="xs:anyType"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="GetObjectVersionsResponse" base="d2p1:Response">
+		<property name="records" type="d2p1:objectVersionRecord" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="GetUserActivityLogRequest" base="d2p1:Request">
+		<property name="object" type="xs:anyType"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="GetUserActivityLogResponse" base="d2p1:Response">
+		<property name="records" type="d2p1:userActivityRecord" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="userActivityRecord">
+		<property name="date" type="xs:dateTime"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/CDE/1" name="user" type="d3p1:Ссылка"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/CDE/1" name="eventType" type="d3p1:Ссылка"/>
+		<property name="duration" type="xs:decimal"/>
+		<property name="additionalInformation" type="xs:string"/>
+		<property name="eventDetails" type="xs:string"/>
+		<property name="computerName" type="xs:string"/>
+	</objectType>
+	<objectType name="objectVersionRecord">
+		<property name="number" type="xs:decimal"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="data" type="d3p1:ValueStorage" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/CDE/1" name="author" type="d3p1:Ссылка"/>
+		<property name="date" type="xs:dateTime"/>
+		<property name="comment" type="xs:string"/>
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/CDE/1" name="versionType" type="d3p1:Ссылка"/>
+		<property name="ignored" type="xs:boolean"/>
+		<property name="dataSize" type="xs:decimal"/>
+		<property name="checksum" type="xs:string"/>
+		<property name="dataNotEmpty" type="xs:boolean"/>
+		<property name="owner" type="xs:decimal"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="СonfirmReservationRequest" base="d2p1:Request">
+		<property name="reservation" type="xs:string"/>
+		<property name="user" type="xs:string"/>
+		<property name="premises" type="xs:string"/>
+		<property name="startDate" type="xs:dateTime"/>
+		<property name="endDate" type="xs:dateTime"/>
+		<property name="rrule" type="xs:string"/>
+		<property name="exDate" type="xs:dateTime"/>
+		<property name="exReservation" type="xs:string"/>
+		<property name="timeStamp" type="d2p1:timeStamp"/>
+		<property name="node" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="СonfirmReservationResponse" base="d2p1:Response">
+		<property name="reserved" type="xs:decimal"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="CancelReservationRequest" base="d2p1:Request">
+		<property name="reservation" type="xs:string"/>
+		<property name="partial" type="xs:boolean"/>
+		<property name="rrule" type="xs:string"/>
+		<property name="user" type="xs:string"/>
+		<property name="timeStamp" type="d2p1:timeStamp"/>
+		<property name="node" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="CancelReservationResponse" base="d2p1:Response"/>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="GetReceivedEmailIdentifiersRequest" base="d2p1:Request">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/CDE/1" name="emailAccount" type="d3p1:Ссылка"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="PutReceivedEmailIdentifiersResponse" base="d2p1:Response"/>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="GetAccessibleObjectsCountRequest" base="d2p1:Request">
+		<property xmlns:d3p1="http://v8.1c.ru/doc8/CDE/1" name="users" type="d3p1:Ссылка" lowerBound="0" upperBound="-1"/>
+		<property name="startDate" type="xs:dateTime"/>
+		<property name="endDate" type="xs:dateTime"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/doc8/CDE" name="GetAccessibleObjectsCountResponse" base="d2p1:Response">
+		<property name="rows" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://v8.1c.ru/doc8/CDE/1" name="user" type="d5p1:Ссылка"/>
+				<property name="count" type="xs:decimal"/>
+			</typeDef>
+		</property>
+	</objectType>
+</package>

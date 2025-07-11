@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ВходящиеДокументы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заявитель</dataPath>
+			<field>Заявитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявитель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗаявления</dataPath>
+			<field>ДатаЗаявления</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата заявления</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПретензионнаяКасса</dataPath>
+			<field>ПретензионнаяКасса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФИОКассира</dataPath>
+			<field>ФИОКассира</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИОКассира</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заявление</dataPath>
+			<field>Заявление</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РегистрационныйНомер</dataPath>
+			<field>РегистрационныйНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРегистрации</dataPath>
+			<field>ДатаРегистрации</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДокументыПредприятия.РегистрационныйНомер КАК РегистрационныйНомер,
+	ДокументыПредприятия.ДатаЗаявления_ТТС КАК ДатаЗаявления,
+	ВЫБОР
+		КОГДА ДокументыПредприятия.НовыйСрокРассмотренияЗаявления_ТТС &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ДокументыПредприятия.НовыйСрокРассмотренияЗаявления_ТТС
+		ИНАЧЕ ДокументыПредприятия.СрокИсполнения
+	КОНЕЦ КАК СрокРассмотрения,
+	ДокументыПредприятия.ФИОБК_ТТС КАК ФИОКассира,
+	ДокументыПредприятия.Ссылка КАК Заявление,
+	ДокументыПредприятия.ПретензионнаяКасса КАК ПретензионнаяКасса,
+	ЕСТЬNULL(ВложенныйЗапрос3.НаИсполнении, 0) КАК НаИсполнении,
+	ЕСТЬNULL(ВложенныйЗапрос2.Исполнен, 0) КАК Исполнен,
+	ЕСТЬNULL(ВложенныйЗапрос.Зарегистрирован, 0) КАК Зарегистрирован,
+	ЕСТЬNULL(ВложенныйЗапрос1.Рассмотрен, 0) КАК Рассмотрен,
+	ЕСТЬNULL(ВложенныйЗапрос4.НаРегистрации, 0) КАК НаРегистрации,
+	ДокументыПредприятия.ДатаРегистрации КАК ДатаРегистрации,
+	ЕСТЬNULL(ВложенныйЗапрос5.НаРассмотрении, 0) КАК НаРассмотрении,
+	ДокументыПредприятия.ФИОЗаявителя_ТТС КАК Заявитель
+ПОМЕСТИТЬ ДокументыДляОтбора
+ИЗ
+	Справочник.ДокументыПредприятия КАК ДокументыПредприятия
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ТекущиеСостоянияДокументов.Документ КАК Документ,
+			1 КАК Зарегистрирован
+		ИЗ
+			РегистрСведений.ТекущиеСостоянияДокументов КАК ТекущиеСостоянияДокументов
+		ГДЕ
+			ТекущиеСостоянияДокументов.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияДокументов.Зарегистрирован)) КАК ВложенныйЗапрос
+		ПО (ДокументыПредприятия.Ссылка = ВложенныйЗапрос.Документ)
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ТекущиеСостоянияДокументов.Документ КАК Документ,
+			1 КАК Исполнен
+		ИЗ
+			РегистрСведений.ТекущиеСостоянияДокументов КАК ТекущиеСостоянияДокументов
+		ГДЕ
+			ТекущиеСостоянияДокументов.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияДокументов.Исполнен)) КАК ВложенныйЗапрос2
+		ПО (ДокументыПредприятия.Ссылка = ВложенныйЗапрос2.Документ)
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ТекущиеСостоянияДокументов.Документ КАК Документ,
+			1 КАК Рассмотрен
+		ИЗ
+			РегистрСведений.ТекущиеСостоянияДокументов КАК ТекущиеСостоянияДокументов
+		ГДЕ
+			ТекущиеСостоянияДокументов.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияДокументов.Рассмотрен)) КАК ВложенныйЗапрос1
+		ПО (ДокументыПредприятия.Ссылка = ВложенныйЗапрос1.Документ)
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ТекущиеСостоянияДокументов.Документ КАК Документ,
+			1 КАК НаИсполнении
+		ИЗ
+			РегистрСведений.ТекущиеСостоянияДокументов КАК ТекущиеСостоянияДокументов
+		ГДЕ
+			ТекущиеСостоянияДокументов.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияДокументов.НаИсполнении)) КАК ВложенныйЗапрос3
+		ПО (ДокументыПредприятия.Ссылка = ВложенныйЗапрос3.Документ)
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ТекущиеСостоянияДокументов.Документ КАК Документ,
+			1 КАК НаРегистрации
+		ИЗ
+			РегистрСведений.ТекущиеСостоянияДокументов КАК ТекущиеСостоянияДокументов
+		ГДЕ
+			ТекущиеСостоянияДокументов.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияДокументов.НаРегистрации)) КАК ВложенныйЗапрос4
+		ПО (ДокументыПредприятия.Ссылка = ВложенныйЗапрос4.Документ)
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ТекущиеСостоянияДокументов.Документ КАК Документ,
+			1 КАК НаРассмотрении
+		ИЗ
+			РегистрСведений.ТекущиеСостоянияДокументов КАК ТекущиеСостоянияДокументов
+		ГДЕ
+			ТекущиеСостоянияДокументов.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияДокументов.наРассмотрении)) КАК ВложенныйЗапрос5
+		ПО (ДокументыПредприятия.Ссылка = ВложенныйЗапрос5.Документ)
+ГДЕ
+	ДокументыПредприятия.ПометкаУдаления = ЛОЖЬ
+	И ДокументыПредприятия.ВидДокумента = &amp;ВидДокумента
+{ГДЕ
+	(ДокументыПредприятия.ДатаСоздания МЕЖДУ &amp;ДатаСозданияС И &amp;ДатаСозданияПо)}
+
+СГРУППИРОВАТЬ ПО
+	ДокументыПредприятия.ФИОБК_ТТС,
+	ДокументыПредприятия.Ссылка,
+	ВЫБОР
+		КОГДА ДокументыПредприятия.НовыйСрокРассмотренияЗаявления_ТТС &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ДокументыПредприятия.НовыйСрокРассмотренияЗаявления_ТТС
+		ИНАЧЕ ДокументыПредприятия.СрокИсполнения
+	КОНЕЦ,
+	ДокументыПредприятия.РегистрационныйНомер,
+	ДокументыПредприятия.ДатаЗаявления_ТТС,
+	ДокументыПредприятия.ПретензионнаяКасса,
+	ЕСТЬNULL(ВложенныйЗапрос2.Исполнен, 0),
+	ЕСТЬNULL(ВложенныйЗапрос3.НаИсполнении, 0),
+	ЕСТЬNULL(ВложенныйЗапрос.Зарегистрирован, 0),
+	ЕСТЬNULL(ВложенныйЗапрос1.Рассмотрен, 0),
+	ЕСТЬNULL(ВложенныйЗапрос4.НаРегистрации, 0),
+	ДокументыПредприятия.ДатаРегистрации,
+	ЕСТЬNULL(ВложенныйЗапрос5.НаРассмотрении, 0),
+	ДокументыПредприятия.ФИОЗаявителя_ТТС
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДокументыДляОтбора.РегистрационныйНомер КАК РегистрационныйНомер,
+	ДокументыДляОтбора.ДатаЗаявления КАК ДатаЗаявления,
+	ДокументыДляОтбора.ДатаРегистрации КАК ДатаРегистрации,
+	ДокументыДляОтбора.ФИОКассира КАК ФИОКассира,
+	ДокументыДляОтбора.Заявление КАК Заявление,
+	ДокументыДляОтбора.ПретензионнаяКасса КАК ПретензионнаяКасса,
+	ДокументыДляОтбора.Заявитель КАК Заявитель
+ИЗ
+	ДокументыДляОтбора КАК ДокументыДляОтбора
+ГДЕ
+	ДокументыДляОтбора.НаИсполнении = 0
+	И ДокументыДляОтбора.Исполнен = 0
+	И ДокументыДляОтбора.Зарегистрирован = 1
+	И ДокументыДляОтбора.Рассмотрен = 0
+	И ДокументыДляОтбора.НаРегистрации = 0
+	И ДокументыДляОтбора.НаРассмотрении = 0
+
+УПОРЯДОЧИТЬ ПО
+	ПретензионнаяКасса,
+	ДатаЗаявления УБЫВ</query>
+	</dataSet>
+	<parameter>
+		<name>ВидДокумента</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид документа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыДокументов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>ДатаСозданияПо</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата создания по</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаСозданияС</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата создания С</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ЗаявленияНеОтправленныеВОбработку</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Заявления, не отправленные в обработку</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РегистрационныйНомер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаЗаявления</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаРегистрации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФИОКассира</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИО билетного кассира</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заявитель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заявление</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВидДокумента</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>9180a4e7-42d3-43d9-af68-ed7b4ad0e530</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПретензионнаяКасса</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДатаЗаявления</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ПретензионнаяКасса</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

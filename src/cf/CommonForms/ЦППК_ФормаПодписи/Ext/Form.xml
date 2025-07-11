@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаПодписатьФайлы" id="271">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ПодписатьФайлы</CommandName>
+				<ExtendedTooltip name="ФормаПодписатьФайлыРасширеннаяПодсказка" id="272"/>
+			</Button>
+			<Button name="ФормаПодписатьВсеФайлы" id="310">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПодписатьВсеФайлы</CommandName>
+				<BackColor>style:ФонПодписьВерна</BackColor>
+				<Font ref="style:ШрифтКнопкиВыполненияЗадачиОбычный" kind="StyleItem"/>
+				<ExtendedTooltip name="ФормаПодписатьВсеФайлыРасширеннаяПодсказка" id="311"/>
+			</Button>
+			<Popup name="ФормаГруппаДополнительно" id="320">
+				<Visible>false</Visible>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дополнительно</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаГруппаДополнительноРасширеннаяПодсказка" id="321"/>
+				<ChildItems>
+					<Button name="ФормаЗарегистрироватьДокумент" id="322">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗарегистрироватьДокумент</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ВнешняяКомпонентаДоступна</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаЗарегистрироватьДокументРасширеннаяПодсказка" id="323"/>
+					</Button>
+					<Button name="ФормаДобавитьФайлы" id="324">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьФайл</CommandName>
+						<ExtendedTooltip name="ФормаДобавитьФайлыРасширеннаяПодсказка" id="325"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ТаблицаСФайлами" id="273">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаСФайлами</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаСФайламиКонтекстноеМеню" id="274"/>
+			<AutoCommandBar name="ТаблицаСФайламиКоманднаяПанель" id="275"/>
+			<ExtendedTooltip name="ТаблицаСФайламиРасширеннаяПодсказка" id="276"/>
+			<SearchStringAddition name="ТаблицаСФайламиСтрокаПоиска" id="277">
+				<AdditionSource>
+					<Item>ТаблицаСФайлами</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСФайламиСтрокаПоискаКонтекстноеМеню" id="278"/>
+				<ExtendedTooltip name="ТаблицаСФайламиСтрокаПоискаРасширеннаяПодсказка" id="279"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаСФайламиСостояниеПросмотра" id="280">
+				<AdditionSource>
+					<Item>ТаблицаСФайлами</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСФайламиСостояниеПросмотраКонтекстноеМеню" id="281"/>
+				<ExtendedTooltip name="ТаблицаСФайламиСостояниеПросмотраРасширеннаяПодсказка" id="282"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаСФайламиУправлениеПоиском" id="283">
+				<AdditionSource>
+					<Item>ТаблицаСФайлами</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСФайламиУправлениеПоискомКонтекстноеМеню" id="284"/>
+				<ExtendedTooltip name="ТаблицаСФайламиУправлениеПоискомРасширеннаяПодсказка" id="285"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<PictureField name="ТаблицаСФайламиИндексКартинки" id="312">
+					<DataPath>ТаблицаСФайлами.ИндексКартинки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.КоллекцияПиктограммФайлов</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<ContextMenu name="ТаблицаСФайламиИндексКартинкиКонтекстноеМеню" id="313"/>
+					<ExtendedTooltip name="ТаблицаСФайламиИндексКартинкиРасширеннаяПодсказка" id="314"/>
+				</PictureField>
+				<CheckBoxField name="ТаблицаСФайламиНаПодпись" id="326">
+					<DataPath>ТаблицаСФайлами.НаПодпись</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТаблицаСФайламиНаПодписьКонтекстноеМеню" id="327"/>
+					<ExtendedTooltip name="ТаблицаСФайламиНаПодписьРасширеннаяПодсказка" id="328"/>
+				</CheckBoxField>
+				<CheckBoxField name="ТаблицаСФайламиПодписанЭП" id="286">
+					<DataPath>ТаблицаСФайлами.ПодписанЭП</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТаблицаСФайламиПодписанЭПКонтекстноеМеню" id="287"/>
+					<ExtendedTooltip name="ТаблицаСФайламиПодписанЭПРасширеннаяПодсказка" id="288"/>
+				</CheckBoxField>
+				<InputField name="ТаблицаСФайламиСсылка" id="315">
+					<DataPath>ТаблицаСФайлами.Ссылка</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСФайламиСсылкаКонтекстноеМеню" id="316"/>
+					<ExtendedTooltip name="ТаблицаСФайламиСсылкаРасширеннаяПодсказка" id="317"/>
+				</InputField>
+				<InputField name="ТаблицаСФайламиАвтор" id="304">
+					<DataPath>ТаблицаСФайлами.Автор</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСФайламиАвторКонтекстноеМеню" id="305"/>
+					<ExtendedTooltip name="ТаблицаСФайламиАвторРасширеннаяПодсказка" id="306"/>
+				</InputField>
+				<InputField name="ТаблицаСФайламиДатаСоздания" id="301">
+					<DataPath>ТаблицаСФайлами.ДатаСоздания</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСФайламиДатаСозданияКонтекстноеМеню" id="302"/>
+					<ExtendedTooltip name="ТаблицаСФайламиДатаСозданияРасширеннаяПодсказка" id="303"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТаблицаСФайлами" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица с файлами</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="ПодписанЭП" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписано ЭП</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Зашифрован" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зашифрован</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Описание" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаСоздания" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Автор" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Файлы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Расширение" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расширение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтатусПроверкиЭП" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус проверки ЭП</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="РольФайла" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Роль файла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.РолиФайлов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НаПодпись" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На подпись</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекущийДокумент" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДокументыПредприятия</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьРолиФайлов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать роли файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидДокументаКэш" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документа кэш</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СостояниеОбработки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СостоянияОбработкиОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнформацияОРегистрации" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаСФайлами</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаСФайлами.ПодписанЭП</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПодписатьФайлы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать выбранные файлы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать файлы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодписатьФайлы</Action>
+		</Command>
+		<Command name="ПодписатьВсеФайлы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать все файлы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать все файлы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодписатьВсеФайлы</Action>
+		</Command>
+		<Command name="ЗарегистрироватьДокумент" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать документ - источник</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗарегистрироватьДокумент1</Action>
+		</Command>
+		<Command name="ДобавитьФайл" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.OpenFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьФайл</Action>
+		</Command>
+	</Commands>
+</Form>

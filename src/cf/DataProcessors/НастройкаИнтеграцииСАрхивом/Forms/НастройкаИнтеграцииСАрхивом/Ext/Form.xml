@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CommandBar name="ОсновнаяКоманднаяПанель" id="1">
+			<ExtendedTooltip name="ОсновнаяКоманднаяПанельExtendedTooltip" id="485"/>
+			<ChildItems>
+				<Button name="КомандаЗаписатьИЗакрыть" id="513">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаЗаписатьИЗакрыть</CommandName>
+					<ExtendedTooltip name="КомандаЗаписатьИЗакрытьРасширеннаяПодсказка" id="514"/>
+				</Button>
+				<Button name="Отмена" id="20">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Cancel</CommandName>
+					<ExtendedTooltip name="ОтменаExtendedTooltip" id="487"/>
+				</Button>
+				<Button name="Справка" id="21">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="СправкаExtendedTooltip" id="488"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<CheckBoxField name="ИнтеграцияС1САрхивом" id="521">
+			<DataPath>НаборКонстант.ИнтеграцияС1САрхивом</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вкл. интеграцию</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Switcher</CheckBoxType>
+			<ContextMenu name="ИнтеграцияС1САрхивомКонтекстноеМеню" id="522"/>
+			<ExtendedTooltip name="ИнтеграцияС1САрхивомРасширеннаяПодсказка" id="523"/>
+			<Events>
+				<Event name="OnChange">ИнтеграцияС1САрхивомПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаСдвигВправо" id="551">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сдвиг вправо</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сдвиг вправо</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСдвигВправоРасширеннаяПодсказка" id="552"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВертикальнаяГруппировка" id="535">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вертикальная группировка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вертикальная группировка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВертикальнаяГруппировкаРасширеннаяПодсказка" id="536"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКаталогИКод" id="553">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа каталог и код</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа каталог и код</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКаталогИКодРасширеннаяПодсказка" id="554"/>
+							<ChildItems>
+								<InputField name="КаталогИнтеграцииСАрхивом" id="524">
+									<DataPath>НаборКонстант.КаталогИнтеграцииСАрхивом</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Каталог обмена</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ChoiceButton>true</ChoiceButton>
+									<OpenButton>true</OpenButton>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>\\Servername\Folder\</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="КаталогИнтеграцииСАрхивомКонтекстноеМеню" id="525"/>
+									<ExtendedTooltip name="КаталогИнтеграцииСАрхивомРасширеннаяПодсказка" id="526"/>
+									<Events>
+										<Event name="StartChoice">КаталогИнтеграцииСАрхивомНачалоВыбора</Event>
+										<Event name="Opening">КаталогИнтеграцииСАрхивомОткрытие</Event>
+									</Events>
+								</InputField>
+								<InputField name="КодДляОбменаСАрхивом" id="527">
+									<DataPath>НаборКонстант.КодДляОбменаСАрхивом</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Код этой базы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="КодДляОбменаСАрхивомКонтекстноеМеню" id="528"/>
+									<ExtendedTooltip name="КодДляОбменаСАрхивомРасширеннаяПодсказка" id="529">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Каталог обмена используется для выгрузки документов в Архив и загрузки подтверждений о принятии. Он должен совпадать  с каталогом, указанным в 1С:Архиве.
+
+Код базы должен совпадать со значением реквизита "Код" в справочнике "Источники комплектования" 1С:Архива.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ВерсияФорматаОбменаПоддерживаемая1САрхивом" id="567">
+							<DataPath>НаборКонстант.ВерсияФорматаОбменаПоддерживаемая1САрхивом</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Версия формата</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+							<WarningOnEdit>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Контроль версий осуществляется автоматически</v8:content>
+								</v8:item>
+							</WarningOnEdit>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ВерсияФорматаОбменаПоддерживаемая1САрхивомКонтекстноеМеню" id="568"/>
+							<ExtendedTooltip name="ВерсияФорматаОбменаПоддерживаемая1САрхивомРасширеннаяПодсказка" id="569">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Максимальная версия формата, поддерживаемая 1С:Архивом.
+
+Контроль версий осуществляется автоматически, но при необходимости можно поменять значение вручную. Например, автоматически не отслеживается откат обновления 1С:Архива (переход с новой версии на старую).</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</InputField>
+						<UsualGroup name="ГруппаПубликацияАрхиваНаВебСервере" id="555">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Публикация 1С:Архива на web-сервере</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа публикация архива на веб сервере</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаПубликацияАрхиваНаВебСервереРасширеннаяПодсказка" id="556"/>
+							<ChildItems>
+								<InputField name="АдресПубликации1САрхива" id="515">
+									<DataPath>НаборКонстант.АдресПубликации1САрхива</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Адрес</v8:content>
+										</v8:item>
+									</Title>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>http://Servername/Archive</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="АдресПубликации1САрхиваКонтекстноеМеню" id="516"/>
+									<ExtendedTooltip name="АдресПубликации1САрхиваРасширеннаяПодсказка" id="517"/>
+								</InputField>
+								<InputField name="ИмяПользователя1САрхива" id="518">
+									<DataPath>НаборКонстант.ИмяПользователя1САрхива</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пользователь</v8:content>
+										</v8:item>
+									</Title>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Администратор</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ИмяПользователя1САрхиваКонтекстноеМеню" id="519"/>
+									<ExtendedTooltip name="ИмяПользователя1САрхиваРасширеннаяПодсказка" id="520"/>
+								</InputField>
+								<InputField name="ПарольПользователяВебСервиса" id="557">
+									<DataPath>ПарольПользователяВебСервиса</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пароль</v8:content>
+										</v8:item>
+									</Title>
+									<PasswordMode>true</PasswordMode>
+									<ContextMenu name="ПарольПользователяВебСервисаКонтекстноеМеню" id="558"/>
+									<ExtendedTooltip name="ПарольПользователяВебСервисаРасширеннаяПодсказка" id="559"/>
+								</InputField>
+								<Button name="ПроверитьВебСервис" id="565">
+									<Type>UsualButton</Type>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<CommandName>Form.Command.ПроверитьВебСервис</CommandName>
+									<ExtendedTooltip name="ПроверитьВебСервисРасширеннаяПодсказка" id="566"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>НаборКонстант.ВерсияФорматаОбменаПоддерживаемая1САрхивом</Field>
+				<Field>НаборКонстант.ИспользоватьОтметкиВремени</Field>
+				<Field>НаборКонстант.КаталогСообщенийОбменаДаннымиДляLinux</Field>
+				<Field>НаборКонстант.КаталогСообщенийОбменаДаннымиДляWindows</Field>
+				<Field>НаборКонстант.КаталогСохраненияКопииПротоколаРаботыСотрудниковLinux</Field>
+				<Field>НаборКонстант.КаталогСохраненияКопииПротоколаРаботыСотрудниковWindows</Field>
+				<Field>НаборКонстант.ОграничиватьДоступНаУровнеЗаписей</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ПарольПользователяВебСервиса" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль пользователя веб сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗаписатьИЗакрыть" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаЗаписатьИЗакрыть</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПроверитьВебСервис" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение к веб-сервису ArchiveDocuments</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПодключениеБЭДСерая</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроверитьВебСервис</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer" callType="Before">ЦППК_ПриСозданииНаСервереПеред</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПометкаУдаления" id="21">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пометка удаления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пометка удаления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ОбъектПомеченНаУдаление</BackColor>
+			<ExtendedTooltip name="ГруппаПометкаУдаленияРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<PictureDecoration name="ПометкаУдаленияКартинка" id="23">
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>1</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<SkipOnInput>false</SkipOnInput>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления картинка</v8:content>
+						</v8:item>
+					</Title>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ПометкаУдаленияКартинкаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПометкаУдаленияКартинкаРасширеннаяПодсказка" id="25"/>
+				</PictureDecoration>
+				<LabelDecoration name="ПометкаУдаленияНадпись" id="26">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Раздел помечен на удаление</v8:content>
+						</v8:item>
+					</Title>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<ContextMenu name="ПометкаУдаленияНадписьКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПометкаУдаленияНадписьРасширеннаяПодсказка" id="28"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИндексГод" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа индекс год</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа индекс год</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИндексГодExtendedTooltip" id="12"/>
+			<ChildItems>
+				<InputField name="Индекс" id="1">
+					<EditMode>EnterOnInput</EditMode>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ИндексКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ИндексExtendedTooltip" id="13"/>
+				</InputField>
+				<InputField name="Год" id="7">
+					<SpinButton>true</SpinButton>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧГ=</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ГодКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ГодExtendedTooltip" id="14"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="3">
+			<EditMode>EnterOnInput</EditMode>
+			<Width>40</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Wrap>false</Wrap>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="15"/>
+		</InputField>
+		<InputField name="Родитель" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вышестоящий раздел</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Wrap>false</Wrap>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="РодительExtendedTooltip" id="16"/>
+		</InputField>
+		<InputField name="Организация" id="10">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="17"/>
+		</InputField>
+		<InputField name="Подразделение" id="18">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="20"/>
+		</InputField>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.18">
+		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+		<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+		<ChildItems>
+			<UsualGroup name="ГруппаПометкаУдаления" id="21">
+				<Visible>false</Visible>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа пометка удаления</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа пометка удаления</v8:content>
+					</v8:item>
+				</ToolTip>
+				<HorizontalStretch>true</HorizontalStretch>
+				<VerticalStretch>false</VerticalStretch>
+				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
+				<ShowTitle>false</ShowTitle>
+				<BackColor>style:ОбъектПомеченНаУдаление</BackColor>
+				<ExtendedTooltip name="ГруппаПометкаУдаленияРасширеннаяПодсказка" id="22"/>
+				<ChildItems>
+					<PictureDecoration name="ПометкаУдаленияКартинка" id="23">
+						<Width>5</Width>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<Height>1</Height>
+						<HorizontalStretch>false</HorizontalStretch>
+						<SkipOnInput>false</SkipOnInput>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Пометка удаления картинка</v8:content>
+							</v8:item>
+						</Title>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="ПометкаУдаленияКартинкаКонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="ПометкаУдаленияКартинкаРасширеннаяПодсказка" id="25"/>
+					</PictureDecoration>
+					<LabelDecoration name="ПометкаУдаленияНадпись" id="26">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Раздел помечен на удаление</v8:content>
+							</v8:item>
+						</Title>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<ContextMenu name="ПометкаУдаленияНадписьКонтекстноеМеню" id="27"/>
+						<ExtendedTooltip name="ПометкаУдаленияНадписьРасширеннаяПодсказка" id="28"/>
+					</LabelDecoration>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаИндексГод" id="9">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа индекс год</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа индекс год</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаИндексГодExtendedTooltip" id="12"/>
+				<ChildItems>
+					<InputField name="Индекс" id="1">
+						<EditMode>EnterOnInput</EditMode>
+						<Wrap>false</Wrap>
+						<ContextMenu name="ИндексКонтекстноеМеню" id="2"/>
+						<ExtendedTooltip name="ИндексExtendedTooltip" id="13"/>
+					</InputField>
+					<InputField name="Год" id="7">
+						<SpinButton>true</SpinButton>
+						<EditFormat>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ЧГ=</v8:content>
+							</v8:item>
+						</EditFormat>
+						<ContextMenu name="ГодКонтекстноеМеню" id="8"/>
+						<ExtendedTooltip name="ГодExtendedTooltip" id="14"/>
+					</InputField>
+				</ChildItems>
+			</UsualGroup>
+			<InputField name="Наименование" id="3">
+				<EditMode>EnterOnInput</EditMode>
+				<Width>40</Width>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<Wrap>false</Wrap>
+				<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+				<ExtendedTooltip name="НаименованиеExtendedTooltip" id="15"/>
+			</InputField>
+			<InputField name="Родитель" id="5">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вышестоящий раздел</v8:content>
+					</v8:item>
+				</Title>
+				<EditMode>EnterOnInput</EditMode>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<Wrap>false</Wrap>
+				<ClearButton>true</ClearButton>
+				<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="РодительExtendedTooltip" id="16"/>
+			</InputField>
+			<InputField name="Организация" id="10">
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<ContextMenu name="ОрганизацияКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="17"/>
+			</InputField>
+			<InputField name="Подразделение" id="18">
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+				<ContextMenu name="ПодразделениеКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="20"/>
+			</InputField>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>

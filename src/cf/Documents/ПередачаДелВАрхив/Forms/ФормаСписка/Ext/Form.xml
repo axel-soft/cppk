@@ -1,0 +1,931 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandSet>
+		<ExcludedCommand>CancelSearch</ExcludedCommand>
+		<ExcludedCommand>Find</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ПоказыватьУдаленные" id="208">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПоказыватьУдаленные</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ПоказыватьУдаленныеРасширеннаяПодсказка" id="209"/>
+			</Button>
+			<Popup name="ПодменюРежимПросмотра" id="210">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Просмотр</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ПодменюРежимПросмотраРасширеннаяПодсказка" id="211"/>
+				<ChildItems>
+					<Button name="РежимПросмотраСписком" id="212">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.РежимПросмотраСписком</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="РежимПросмотраСпискомРасширеннаяПодсказка" id="213"/>
+					</Button>
+					<Button name="РежимПросмотраПоСтатусамОбмена" id="214">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.РежимПросмотраПоСтатусамОбмена</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="РежимПросмотраПоСтатусамОбменаРасширеннаяПодсказка" id="215"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Button name="ФормаОбновить" id="270">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаОбновить</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Refresh</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="271"/>
+			</Button>
+			<ButtonGroup name="ФормаСтандартныеКоманды" id="97">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма стандартные команды</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="ФормаСтандартныеКомандыРасширеннаяПодсказка" id="98"/>
+			</ButtonGroup>
+			<ButtonGroup name="ФормаГруппаПровести" id="107">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа провести</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаГруппаПровестиРасширеннаяПодсказка" id="108"/>
+				<ChildItems>
+					<Button name="ФормаПровести" id="99">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Post</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Провести</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="100"/>
+					</Button>
+					<Button name="ФормаОтменитьПроведение" id="101">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.UndoPosting</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отменить проведение</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаОтменитьПроведениеРасширеннаяПодсказка" id="102"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Button name="ФормаКнопкаУстановитьСтатус" id="262">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УстановитьСтатусОбменаСАрхивом</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаКнопкаУстановитьСтатусРасширеннаяПодсказка" id="263"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновная" id="234">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="235"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДеревоСтатусовОбмена" id="232">
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДеревоСтатусовОбменаРасширеннаяПодсказка" id="233"/>
+					<ChildItems>
+						<Table name="СтатусыОбмена" id="236">
+							<DataPath>СтатусыОбмена</DataPath>
+							<AutoRefresh>true</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СтатусыОбменаКонтекстноеМеню" id="238"/>
+							<AutoCommandBar name="СтатусыОбменаКоманднаяПанель" id="237">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СтатусыОбменаРасширеннаяПодсказка" id="239"/>
+							<SearchStringAddition name="СтатусыОбменаСтрокаПоиска" id="240">
+								<Enabled>false</Enabled>
+								<AdditionSource>
+									<Item>СтатусыОбмена</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтатусыОбменаСтрокаПоискаКонтекстноеМеню" id="241"/>
+								<ExtendedTooltip name="СтатусыОбменаСтрокаПоискаРасширеннаяПодсказка" id="242"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СтатусыОбменаСостояниеПросмотра" id="246">
+								<Enabled>false</Enabled>
+								<AdditionSource>
+									<Item>СтатусыОбмена</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтатусыОбменаСостояниеПросмотраКонтекстноеМеню" id="247"/>
+								<ExtendedTooltip name="СтатусыОбменаСостояниеПросмотраРасширеннаяПодсказка" id="248"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СтатусыОбменаУправлениеПоиском" id="243">
+								<Enabled>false</Enabled>
+								<AdditionSource>
+									<Item>СтатусыОбмена</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СтатусыОбменаУправлениеПоискомКонтекстноеМеню" id="244"/>
+								<ExtendedTooltip name="СтатусыОбменаУправлениеПоискомРасширеннаяПодсказка" id="245"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">СтатусыОбменаПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="СтатусыОбменаГруппа" id="274">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статусы обмена с 1С:Архивом</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="СтатусыОбменаГруппаРасширеннаяПодсказка" id="275"/>
+									<ChildItems>
+										<InputField name="СтатусыОбменаСтатусВыгрузкиВАрхив" id="249">
+											<DataPath>СтатусыОбмена.СтатусВыгрузкиВАрхив</DataPath>
+											<ShowInHeader>false</ShowInHeader>
+											<ContextMenu name="СтатусыОбменаСтатусВыгрузкиВАрхивКонтекстноеМеню" id="250"/>
+											<ExtendedTooltip name="СтатусыОбменаСтатусВыгрузкиВАрхивРасширеннаяПодсказка" id="251"/>
+										</InputField>
+										<InputField name="СтатусыОбменаКоличество" id="255">
+											<DataPath>СтатусыОбмена.Количество</DataPath>
+											<ShowInHeader>false</ShowInHeader>
+											<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+											<Width>2</Width>
+											<ContextMenu name="СтатусыОбменаКоличествоКонтекстноеМеню" id="256"/>
+											<ExtendedTooltip name="СтатусыОбменаКоличествоРасширеннаяПодсказка" id="257"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="Список" id="1">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<SkipOnInput>false</SkipOnInput>
+					<DefaultItem>true</DefaultItem>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<InitialTreeView>ExpandTopLevel</InitialTreeView>
+					<EnableStartDrag>true</EnableStartDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Список</DataPath>
+					<RowPictureDataPath>Список.СостояниеДокумента</RowPictureDataPath>
+					<RowsPicture>
+						<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</RowsPicture>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>true</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="СписокКонтекстноеМеню" id="2">
+						<ChildItems>
+							<ButtonGroup name="СписокКонтекстноеМенюГруппаПровести" id="109">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа провести</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="СписокКонтекстноеМенюГруппаПровестиРасширеннаяПодсказка" id="110"/>
+								<ChildItems>
+									<Button name="СписокКонтекстноеМенюКнопкаПровести" id="103">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Список.StandardCommand.Post</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Провести</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СписокКонтекстноеМенюКнопкаПровестиРасширеннаяПодсказка" id="104"/>
+									</Button>
+									<Button name="СписокКонтекстноеМенюКнопкаОтменитПроведение" id="105">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Список.StandardCommand.UndoPosting</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отменить проведение</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СписокКонтекстноеМенюКнопкаОтменитПроведениеРасширеннаяПодсказка" id="106"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="СписокКонтекстноеМенюГруппаСтатус" id="260">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Список контекстное меню группа статус</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Список контекстное меню группа статус</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="СписокКонтекстноеМенюГруппаСтатусРасширеннаяПодсказка" id="261"/>
+								<ChildItems>
+									<Button name="СписокУстановитьСтатус" id="258">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьСтатусОбменаСАрхивом</CommandName>
+										<ExtendedTooltip name="СписокУстановитьСтатусРасширеннаяПодсказка" id="259"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</ContextMenu>
+					<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="14"/>
+					<SearchStringAddition name="СписокСтрокаПоиска" id="15">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<HorizontalStretch>false</HorizontalStretch>
+						<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="16"/>
+						<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокСостояниеПросмотра" id="18">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="19"/>
+						<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокУправлениеПоиском" id="21">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="22"/>
+						<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="23"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="СтатусВыгрузкиВАрхив" id="197">
+							<DataPath>Список.СтатусВыгрузкиВАрхив</DataPath>
+							<ContextMenu name="СтатусВыгрузкиВАрхивКонтекстноеМеню" id="198"/>
+							<ExtendedTooltip name="СтатусВыгрузкиВАрхивРасширеннаяПодсказка" id="199"/>
+						</InputField>
+						<LabelField name="Дата" id="4">
+							<DataPath>Список.Дата</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Width>10</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=dd.MM.yyyy</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="24"/>
+						</LabelField>
+						<LabelField name="Номер" id="6">
+							<DataPath>Список.Номер</DataPath>
+							<ContextMenu name="НомерКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="25"/>
+						</LabelField>
+						<LabelField name="ФормаДокументов" id="29">
+							<DataPath>Список.ФормаДокументов</DataPath>
+							<ContextMenu name="ФормаДокументовКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ФормаДокументовРасширеннаяПодсказка" id="31"/>
+						</LabelField>
+						<LabelField name="Организация" id="12">
+							<DataPath>Список.Организация</DataPath>
+							<Width>16</Width>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="26"/>
+						</LabelField>
+						<LabelField name="Подразделение" id="32">
+							<DataPath>Список.Подразделение</DataPath>
+							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="34"/>
+						</LabelField>
+						<LabelField name="ГрифДоступа" id="264">
+							<DataPath>Список.ГрифДоступа</DataPath>
+							<ContextMenu name="ГрифДоступаКонтекстноеМеню" id="265"/>
+							<ExtendedTooltip name="ГрифДоступаРасширеннаяПодсказка" id="266"/>
+						</LabelField>
+						<LabelField name="Передал" id="8">
+							<DataPath>Список.Передал</DataPath>
+							<Width>12</Width>
+							<ContextMenu name="ПередалКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ПередалРасширеннаяПодсказка" id="27"/>
+						</LabelField>
+						<LabelField name="Ссылка" id="267">
+							<DataPath>Список.Ссылка</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<ContextMenu name="СсылкаКонтекстноеМеню" id="268"/>
+							<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="269"/>
+						</LabelField>
+						<ColumnGroup name="СписокГруппаКоличество" id="200">
+							<ExtendedTooltip name="СписокГруппаКоличествоРасширеннаяПодсказка" id="201"/>
+							<ChildItems>
+								<InputField name="КоличествоДел" id="202">
+									<DataPath>Список.КоличествоДел</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дел</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="КоличествоДелКонтекстноеМеню" id="203"/>
+									<ExtendedTooltip name="КоличествоДелРасширеннаяПодсказка" id="204"/>
+								</InputField>
+								<InputField name="КоличествоДокументов" id="205">
+									<DataPath>Список.КоличествоДокументов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документов</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="КоличествоДокументовКонтекстноеМеню" id="206"/>
+									<ExtendedTooltip name="КоличествоДокументовРасширеннаяПодсказка" id="207"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ПометкаУдаления</Field>
+				<Field>Список.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументПередачаДелВАрхив.Ссылка КАК Ссылка,
+	ДокументПередачаДелВАрхив.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументПередачаДелВАрхив.Номер КАК Номер,
+	ДокументПередачаДелВАрхив.Дата КАК Дата,
+	ДокументПередачаДелВАрхив.Организация КАК Организация,
+	ДокументПередачаДелВАрхив.Передал КАК Передал,
+	ДокументПередачаДелВАрхив.ФормаДокументов КАК ФормаДокументов,
+	ДокументПередачаДелВАрхив.Подразделение КАК Подразделение,
+	ДокументПередачаДелВАрхив.ГрифДоступа КАК ГрифДоступа,
+	ВЫБОР
+		КОГДА ДокументПередачаДелВАрхив.ПометкаУдаления
+			ТОГДА 2
+		КОГДА ДокументПередачаДелВАрхив.Проведен
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК СостояниеДокумента,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТабличнаяЧасть.ДелоХраненияДокументов) КАК КоличествоДел,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ДанныеДокументовПредприятия.Документ) КАК КоличествоДокументов,
+	ДокументПередачаДелВАрхив.СтатусВыгрузкиВАрхив КАК СтатусВыгрузкиВАрхив
+ИЗ
+	Документ.ПередачаДелВАрхив КАК ДокументПередачаДелВАрхив
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПередачаДелВАрхив.ДелаХраненияДокументов КАК ТабличнаяЧасть
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДанныеДокументовПредприятия КАК ДанныеДокументовПредприятия
+			ПО ТабличнаяЧасть.ДелоХраненияДокументов = ДанныеДокументовПредприятия.Дело
+		ПО (ТабличнаяЧасть.Ссылка = ДокументПередачаДелВАрхив.Ссылка)
+
+СГРУППИРОВАТЬ ПО
+	ДокументПередачаДелВАрхив.Ссылка,
+	ДокументПередачаДелВАрхив.ПометкаУдаления,
+	ДокументПередачаДелВАрхив.Номер,
+	ДокументПередачаДелВАрхив.Дата,
+	ДокументПередачаДелВАрхив.Организация,
+	ДокументПередачаДелВАрхив.Передал,
+	ДокументПередачаДелВАрхив.ФормаДокументов,
+	ДокументПередачаДелВАрхив.Подразделение,
+	ВЫБОР
+		КОГДА ДокументПередачаДелВАрхив.ПометкаУдаления
+			ТОГДА 2
+		КОГДА ДокументПередачаДелВАрхив.Проведен
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ
+	
+	{ГДЕ
+	(ДокументПередачаДелВАрхив.СтатусВыгрузкиВАрхив = &amp;СтатусОбменаСАрхивом)}</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПередачи</dcssch:dataPath>
+					<dcssch:field>ДатаПередачи</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПриемки</dcssch:dataPath>
+					<dcssch:field>ДатаПриемки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезультатПроверки</dcssch:dataPath>
+					<dcssch:field>РезультатПроверки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеДокумента</dcssch:dataPath>
+					<dcssch:field>СостояниеДокумента</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние документа</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтатусВыгрузкиВАрхив</dcssch:dataPath>
+					<dcssch:field>СтатусВыгрузкиВАрхив</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дата</dcssch:dataPath>
+					<dcssch:field>Дата</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДелаХраненияДокументов</dcssch:dataPath>
+					<dcssch:field>ДелаХраненияДокументов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Принял</dcssch:dataPath>
+					<dcssch:field>Принял</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Создал</dcssch:dataPath>
+					<dcssch:field>Создал</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Проведен</dcssch:dataPath>
+					<dcssch:field>Проведен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МоментВремени</dcssch:dataPath>
+					<dcssch:field>МоментВремени</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Номер</dcssch:dataPath>
+					<dcssch:field>Номер</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Организация</dcssch:dataPath>
+					<dcssch:field>Организация</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФормаДокументов</dcssch:dataPath>
+					<dcssch:field>ФормаДокументов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Подразделение</dcssch:dataPath>
+					<dcssch:field>Подразделение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ГрифДоступа</dcssch:dataPath>
+					<dcssch:field>ГрифДоступа</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоличествоДел</dcssch:dataPath>
+					<dcssch:field>КоличествоДел</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество дел</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоличествоДокументов</dcssch:dataPath>
+					<dcssch:field>КоличествоДокументов</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество документов</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Передал</dcssch:dataPath>
+					<dcssch:field>Передал</dcssch:field>
+				</Field>
+				<Parameter>
+					<dcssch:name>СтатусОбменаСАрхивом</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус обмена с архивом</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:EnumRef.СтатусыОбменаСАрхивом</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>false</dcssch:useRestriction>
+				</Parameter>
+				<MainTable>Document.ПередачаДелВАрхив</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПараметрыПодключаемыхКоманд" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры подключаемых команд</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПоказыватьУдаленные" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПоказыватьУдаленные</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВидПросмотра" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид просмотра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыПросмотраСпискаОбъектов</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВидПросмотра</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПредыдущийВидПросмотра" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий вид просмотра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыПросмотраСпискаОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусыОбмена" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статусы обмена с 1С:Архивом</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СтатусыОбмена.ЗначениеУпорядочивания</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВЫРАЗИТЬ("Все" КАК СТРОКА(20)) КАК СтатусВыгрузкиВАрхив,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ПередачаДелВАрхив.Ссылка) КАК Количество,
+	ПередачаДелВАрхив.ПометкаУдаления КАК ПометкаУдаления,
+	0 КАК ЗначениеУпорядочивания
+ИЗ
+	Документ.ПередачаДелВАрхив КАК ПередачаДелВАрхив
+СГРУППИРОВАТЬ ПО
+	ПередачаДелВАрхив.ПометкаУдаления
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ПустаяСсылка)
+			ТОГДА &amp;ПредставлениеПустогоСтатуса
+		ИНАЧЕ ПередачаДелВАрхив.СтатусВыгрузкиВАрхив
+	КОНЕЦ КАК СтатусВыгрузкиВАрхив,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ПередачаДелВАрхив.Ссылка),
+	ПередачаДелВАрхив.ПометкаУдаления,
+	ВЫБОР
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ПустаяСсылка)
+			ТОГДА 1
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.НеГотовКВыгрузке)
+			ТОГДА 2
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ГотовКВыгрузке)
+			ТОГДА 3
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ВыгрузкаВыполнена)
+			ТОГДА 4
+		КОГДА
+			ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ОбнаруженыОшибкиПриВыгрузке)
+			ТОГДА 5
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ЗагрузкаВАрхивВыполнена)
+			ТОГДА 6
+		КОГДА
+			ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ОбнаруженыОшибкиПриЗагрузкеВАрхив)
+			ТОГДА 7
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ПринятВАрхив)
+			ТОГДА 8
+		КОГДА
+			ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ОбнаруженыОшибкиПриПроверкеВАрхиве)
+			ТОГДА 9
+	КОНЕЦ
+ИЗ
+	Документ.ПередачаДелВАрхив КАК ПередачаДелВАрхив
+СГРУППИРОВАТЬ ПО
+	ВЫБОР
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ПустаяСсылка)
+			ТОГДА &amp;ПредставлениеПустогоСтатуса
+		ИНАЧЕ ПередачаДелВАрхив.СтатусВыгрузкиВАрхив
+	КОНЕЦ,
+	ПередачаДелВАрхив.ПометкаУдаления,
+	ВЫБОР
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ПустаяСсылка)
+			ТОГДА 1
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.НеГотовКВыгрузке)
+			ТОГДА 2
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ГотовКВыгрузке)
+			ТОГДА 3
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ВыгрузкаВыполнена)
+			ТОГДА 4
+		КОГДА
+			ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ОбнаруженыОшибкиПриВыгрузке)
+			ТОГДА 5
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ЗагрузкаВАрхивВыполнена)
+			ТОГДА 6
+		КОГДА
+			ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ОбнаруженыОшибкиПриЗагрузкеВАрхив)
+			ТОГДА 7
+		КОГДА ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ПринятВАрхив)
+			ТОГДА 8
+		КОГДА
+			ПередачаДелВАрхив.СтатусВыгрузкиВАрхив = ЗНАЧЕНИЕ(Перечисление.СтатусыОбменаСАрхивом.ОбнаруженыОшибкиПриПроверкеВАрхиве)
+			ТОГДА 9
+	КОНЕЦ
+
+УПОРЯДОЧИТЬ ПО
+	ЗначениеУпорядочивания</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтатусВыгрузкиВАрхив</dcssch:dataPath>
+					<dcssch:field>СтатусВыгрузкиВАрхив</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус выгрузки в архив</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Количество</dcssch:dataPath>
+					<dcssch:field>Количество</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗначениеУпорядочивания</dcssch:dataPath>
+					<dcssch:field>ЗначениеУпорядочивания</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение упорядочивания</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Parameter>
+					<dcssch:name>ПредставлениеПустогоСтатуса</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление пустого статуса</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<ListSettings/>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТекущийСтатусОбмена" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий статус обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:Type>cfg:EnumRef.СтатусыОбменаСАрхивом</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусыДляВыбора" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статусы для выбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ПометкаУдаления</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="true" kind="StyleItem"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказыватьУдаленные" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьУдаленные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РежимПросмотраСписком" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списком</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РежимПросмотраСписком</Action>
+		</Command>
+		<Command name="РежимПросмотраПоСтатусамОбмена" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По статусам обмена с 1С:Архивом</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РежимПросмотраПоСтатусамОбмена</Action>
+		</Command>
+		<Command name="УстановитьСтатусОбменаСАрхивом" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить статус</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить статус обмена с архивом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьСтатусОбменаСАрхивом</Action>
+		</Command>
+		<Command name="КомандаОбновить" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>F5</Shortcut>
+			<Action>КомандаОбновить</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

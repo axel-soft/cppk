@@ -1,0 +1,1523 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаПодвал" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>Horizontal</Group>
+			<VerticalAlign>Bottom</VerticalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалExtendedTooltip" id="75"/>
+			<ChildItems>
+				<CommandBar name="ГруппаКоманды" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаКомандыExtendedTooltip" id="77"/>
+					<ChildItems>
+						<Button name="Напечатать" id="15">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.Напечатать</CommandName>
+							<ExtendedTooltip name="НапечататьExtendedTooltip" id="78"/>
+						</Button>
+						<Button name="ФормаОтмена" id="16">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ФормаОтменаExtendedTooltip" id="79"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДвеКолонки" id="114">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДвеКолонкиРасширеннаяПодсказка" id="115"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПараметрыИПримерРегНомер" id="116">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа1</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПараметрыИПримерРегНомерРасширеннаяПодсказка" id="117"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНадписиРегНомер" id="167">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа1</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНадписиРегНомерРасширеннаяПодсказка" id="168"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация3Жирный" id="169">
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Положение рег. номера:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация3ЖирныйКонтекстноеМеню" id="170"/>
+									<ExtendedTooltip name="Декорация3ЖирныйРасширеннаяПодсказка" id="171"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПоложениеРегНомера" id="191">
+									<Width>20</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;&lt;&gt;&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПоложениеРегНомераКонтекстноеМеню" id="192"/>
+									<ExtendedTooltip name="ДекорацияПоложениеРегНомераРасширеннаяПодсказка" id="193"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПримерРегНомер" id="118">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Положение рег номера:</v8:content>
+								</v8:item>
+							</Title>
+							<TitleTextColor>style:FormTextColor</TitleTextColor>
+							<TitleFont ref="style:LargeTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПримерРегНомерРасширеннаяПодсказка" id="119"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСтрока1РегНомер" id="120">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа1</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСтрока1РегНомерРасширеннаяПодсказка" id="121"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияЛевоВерхРегНомер" id="124">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация лево верх</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<PictureSize>Proportionally</PictureSize>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияЛевоВерхРегНомерКонтекстноеМеню" id="125"/>
+											<ExtendedTooltip name="ДекорацияЛевоВерхРегНомерРасширеннаяПодсказка" id="126"/>
+										</PictureDecoration>
+										<PictureDecoration name="ДекорацияПравоВерхРегНомер" id="127">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация право верх</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<PictureSize>Proportionally</PictureSize>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияПравоВерхРегНомерКонтекстноеМеню" id="128"/>
+											<ExtendedTooltip name="ДекорацияПравоВерхРегНомерРасширеннаяПодсказка" id="129"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСтрока2РегНомер" id="122">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа1</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСтрока2РегНомерРасширеннаяПодсказка" id="123"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияЛевоНизРегНомер" id="130">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация лево низ рег номер</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<PictureSize>Proportionally</PictureSize>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияЛевоНизРегНомерКонтекстноеМеню" id="131"/>
+											<ExtendedTooltip name="ДекорацияЛевоНизРегНомерРасширеннаяПодсказка" id="132"/>
+										</PictureDecoration>
+										<PictureDecoration name="ДекорацияПравоНизРегНомер" id="133">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация право низ рег номер</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<PictureSize>Proportionally</PictureSize>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияПравоНизРегНомерКонтекстноеМеню" id="134"/>
+											<ExtendedTooltip name="ДекорацияПравоНизРегНомерРасширеннаяПодсказка" id="135"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПоложениеРегНомера1" id="194">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа - Положение рег.номера 1</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПоложениеРегНомера1РасширеннаяПодсказка" id="216"/>
+							<ChildItems>
+								<CheckBoxField name="ПроизвольноеПоложениеРегНомер" id="141">
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПроизвольноеПоложениеРегНомерКонтекстноеМеню" id="142"/>
+									<ExtendedTooltip name="ПроизвольноеПоложениеРегНомерРасширеннаяПодсказка" id="143"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаПоложениеРегНомера2" id="196">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа - Положение рег. номера 2</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПоложениеРегНомера2РасширеннаяПодсказка" id="217"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация2" id="146">
+											<Width>1</Width>
+											<Height>1</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация2КонтекстноеМеню" id="147"/>
+											<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="148"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаПоложениеРегНомера3" id="198">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа- Положение рег. номера 3</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПоложениеРегНомера3РасширеннаяПодсказка" id="218"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаСмещениеПоГоризонталиРегНомер" id="151">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа - Смещение по горизонтали, рег. номер</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаСмещениеПоГоризонталиРегНомерРасширеннаяПодсказка" id="152"/>
+													<ChildItems>
+														<InputField name="ПоГоризонталиРегНомер" id="153">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Отступ слева</v8:content>
+																</v8:item>
+															</Title>
+															<Width>3</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ContextMenu name="ПоГоризонталиРегНомерКонтекстноеМеню" id="154"/>
+															<ExtendedTooltip name="ПоГоризонталиРегНомерРасширеннаяПодсказка" id="155"/>
+														</InputField>
+														<LabelDecoration name="ЕдиницыИзмеренияГоризонтальРегНомер" id="213">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>мм</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ЕдиницыИзмеренияГоризонтальРегНомерКонтекстноеМеню" id="219"/>
+															<ExtendedTooltip name="ЕдиницыИзмеренияГоризонтальРегНомерРасширеннаяПодсказка" id="220"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаСмещениеПоВертикалиРегНомер" id="159">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа - Смещение по вертикали, рег. номер</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаСмещениеПоВертикалиРегНомерРасширеннаяПодсказка" id="160"/>
+													<ChildItems>
+														<InputField name="ПоВертикалиРегНомер" id="161">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Отступ сверху</v8:content>
+																</v8:item>
+															</Title>
+															<Width>3</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ContextMenu name="ПоВертикалиРегНомерКонтекстноеМеню" id="162"/>
+															<ExtendedTooltip name="ПоВертикалиРегНомерРасширеннаяПодсказка" id="163"/>
+														</InputField>
+														<LabelDecoration name="ЕдиницыИзмеренияВертикальРегНомер" id="210">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>мм</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ЕдиницыИзмеренияВертикальРегНомерКонтекстноеМеню" id="221"/>
+															<ExtendedTooltip name="ЕдиницыИзмеренияВертикальРегНомерРасширеннаяПодсказка" id="222"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСтраницаВставкиРегНомера" id="183">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа - Страница вставки рег. номера</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСтраницаВставкиРегНомераРасширеннаяПодсказка" id="184"/>
+							<ChildItems>
+								<InputField name="СтраницаВставкиРегНомера" id="185">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>9</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>9</MaxWidth>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="СтраницаВставкиРегНомераКонтекстноеМеню" id="186"/>
+									<ExtendedTooltip name="СтраницаВставкиРегНомераРасширеннаяПодсказка" id="187"/>
+								</InputField>
+								<InputField name="НомерСтраницыРегНомера" id="188">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если указать больше, чем страниц в файле - будет на последней</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>3</Width>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="НомерСтраницыРегНомераКонтекстноеМеню" id="189"/>
+									<ExtendedTooltip name="НомерСтраницыРегНомераРасширеннаяПодсказка" id="190"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="Декорация2Отступ" id="136">
+					<Width>1</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>  </v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация2ОтступКонтекстноеМеню" id="137"/>
+					<ExtendedTooltip name="Декорация2ОтступРасширеннаяПодсказка" id="138"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаПараметрыИПримерШтрихкод" id="51">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры и пример штрихкод</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры и пример</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПараметрыИПримерШтрихкодРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗаголовкиШтрихкод" id="175">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа1</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗаголовкиШтрихкодРасширеннаяПодсказка" id="176"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация4Жирный" id="177">
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Положение штрихкода:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация4ЖирныйКонтекстноеМеню" id="178"/>
+									<ExtendedTooltip name="Декорация4ЖирныйРасширеннаяПодсказка" id="179"/>
+								</LabelDecoration>
+								<LabelField name="ПоложениеШтрихкода" id="180">
+									<TitleLocation>None</TitleLocation>
+									<Width>20</Width>
+									<ContextMenu name="ПоложениеШтрихкодаКонтекстноеМеню" id="181"/>
+									<ExtendedTooltip name="ПоложениеШтрихкодаРасширеннаяПодсказка" id="182"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПример" id="31">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Положение штрихкода:</v8:content>
+								</v8:item>
+							</Title>
+							<TitleTextColor>style:FormTextColor</TitleTextColor>
+							<TitleFont ref="style:LargeTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пример</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПримерExtendedTooltip" id="73"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСтрока1" id="85">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа строка1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа строка1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСтрока1РасширеннаяПодсказка" id="86"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияЛевоВерх" id="89">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация лево верх</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<PictureSize>Proportionally</PictureSize>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияЛевоВерхКонтекстноеМеню" id="90"/>
+											<ExtendedTooltip name="ДекорацияЛевоВерхРасширеннаяПодсказка" id="91"/>
+										</PictureDecoration>
+										<PictureDecoration name="ДекорацияПравоВерх" id="92">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация право верх</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<PictureSize>Proportionally</PictureSize>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияПравоВерхКонтекстноеМеню" id="93"/>
+											<ExtendedTooltip name="ДекорацияПравоВерхРасширеннаяПодсказка" id="94"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСтрока2" id="87">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа строка2</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа строка2</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСтрока2РасширеннаяПодсказка" id="88"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияЛевоНиз" id="95">
+											<Hyperlink>true</Hyperlink>
+											<PictureSize>Proportionally</PictureSize>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияЛевоНизКонтекстноеМеню" id="96"/>
+											<ExtendedTooltip name="ДекорацияЛевоНизРасширеннаяПодсказка" id="97"/>
+										</PictureDecoration>
+										<PictureDecoration name="ДекорацияПравоНиз" id="98">
+											<Hyperlink>true</Hyperlink>
+											<PictureSize>Proportionally</PictureSize>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияПравоНизКонтекстноеМеню" id="99"/>
+											<ExtendedTooltip name="ДекорацияПравоНизРасширеннаяПодсказка" id="100"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПоложениеШтрихкода1" id="200">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа - Положение штрихкода 1</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПоложениеШтрихкода1РасширеннаяПодсказка" id="223"/>
+							<ChildItems>
+								<CheckBoxField name="ПроизвольноеПоложение" id="101">
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПроизвольноеПоложениеКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="ПроизвольноеПоложениеРасширеннаяПодсказка" id="103"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаПоложениеШтрихкода2" id="202">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа - Положение штрихкода 2</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПоложениеШтрихкода2РасширеннаяПодсказка" id="224"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация1" id="44">
+											<Width>1</Width>
+											<Height>1</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="45"/>
+											<ExtendedTooltip name="Декорация1ExtendedTooltip" id="58"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаПоложениеШтрихкода3" id="204">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа - Положение штрихкода 3</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПоложениеШтрихкода3РасширеннаяПодсказка" id="225"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаСмещениеПоГоризонталиШтрихкода" id="208">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа - Смещение по горизонтали штрихкода</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаСмещениеПоГоризонталиШтрихкодаРасширеннаяПодсказка" id="226"/>
+													<ChildItems>
+														<InputField name="ПоГоризонтали" id="10">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Отступ слева</v8:content>
+																</v8:item>
+															</Title>
+															<Width>3</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ContextMenu name="ПоГоризонталиКонтекстноеМеню" id="11"/>
+															<ExtendedTooltip name="ПоГоризонталиExtendedTooltip" id="61"/>
+														</InputField>
+														<LabelDecoration name="ЕдиницыИзмеренияГоризонталь" id="26">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>мм</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ЕдиницыИзмеренияГоризонтальКонтекстноеМеню" id="27"/>
+															<ExtendedTooltip name="ЕдиницыИзмеренияГоризонтальExtendedTooltip" id="62"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаСмещениеПоВертикалиШтрихкода" id="206">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа смещение по вертикали штрихкода</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа смещение по вертикали</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаСмещениеПоВертикалиШтрихкодаРасширеннаяПодсказка" id="227"/>
+													<ChildItems>
+														<InputField name="ПоВертикали" id="12">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Отступ сверху</v8:content>
+																</v8:item>
+															</Title>
+															<Width>3</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ContextMenu name="ПоВертикалиКонтекстноеМеню" id="13"/>
+															<ExtendedTooltip name="ПоВертикалиExtendedTooltip" id="64"/>
+														</InputField>
+														<LabelDecoration name="ЕдиницыИзмеренияВертикаль" id="29">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>мм</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ЕдиницыИзмеренияВертикальКонтекстноеМеню" id="30"/>
+															<ExtendedTooltip name="ЕдиницыИзмеренияВертикальExtendedTooltip" id="65"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Декорация3" id="197">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация3КонтекстноеМеню" id="231"/>
+			<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="199"/>
+		</LabelDecoration>
+		<CheckBoxField name="ПоказыватьПриВставке" id="229">
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПоказыватьПриВставкеКонтекстноеМеню" id="195"/>
+			<ExtendedTooltip name="ПоказыватьПриВставкеРасширеннаяПодсказка" id="232"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="Напечатать" id="1000002">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить</v8:content>
+				</v8:item>
+			</Title>
+			<Action callType="Override">ЦППК_НапечататьВместо</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<BaseForm version="2.18">
+		<AutoTitle>false</AutoTitle>
+		<CommandBarLocation>Bottom</CommandBarLocation>
+		<CommandSet>
+			<ExcludedCommand>Abort</ExcludedCommand>
+			<ExcludedCommand>Cancel</ExcludedCommand>
+			<ExcludedCommand>Close</ExcludedCommand>
+			<ExcludedCommand>CustomizeForm</ExcludedCommand>
+			<ExcludedCommand>Help</ExcludedCommand>
+			<ExcludedCommand>Ignore</ExcludedCommand>
+			<ExcludedCommand>No</ExcludedCommand>
+			<ExcludedCommand>OK</ExcludedCommand>
+			<ExcludedCommand>RestoreValues</ExcludedCommand>
+			<ExcludedCommand>Retry</ExcludedCommand>
+			<ExcludedCommand>SaveValues</ExcludedCommand>
+			<ExcludedCommand>Yes</ExcludedCommand>
+		</CommandSet>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<HorizontalAlign>Right</HorizontalAlign>
+			<Autofill>false</Autofill>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="ГруппаПодвал" id="48">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа подвал</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа подвал</v8:content>
+					</v8:item>
+				</ToolTip>
+				<VerticalStretch>true</VerticalStretch>
+				<Group>Horizontal</Group>
+				<VerticalAlign>Bottom</VerticalAlign>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаПодвалExtendedTooltip" id="75"/>
+				<ChildItems>
+					<CommandBar name="ГруппаКоманды" id="49">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа команды</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа команды</v8:content>
+							</v8:item>
+						</ToolTip>
+						<HorizontalStretch>true</HorizontalStretch>
+						<ExtendedTooltip name="ГруппаКомандыExtendedTooltip" id="77"/>
+						<ChildItems>
+							<Button name="Напечатать" id="15">
+								<Type>CommandBarButton</Type>
+								<DefaultButton>true</DefaultButton>
+								<CommandName>Form.Command.Напечатать</CommandName>
+								<ExtendedTooltip name="НапечататьExtendedTooltip" id="78"/>
+							</Button>
+							<Button name="ФормаОтмена" id="16">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<ExtendedTooltip name="ФормаОтменаExtendedTooltip" id="79"/>
+							</Button>
+						</ChildItems>
+					</CommandBar>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаДвеКолонки" id="114">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа1</v8:content>
+					</v8:item>
+				</Title>
+				<Group>AlwaysHorizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаДвеКолонкиРасширеннаяПодсказка" id="115"/>
+				<ChildItems>
+					<UsualGroup name="ГруппаПараметрыИПримерРегНомер" id="116">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа1</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Vertical</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаПараметрыИПримерРегНомерРасширеннаяПодсказка" id="117"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаНадписиРегНомер" id="167">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа1</v8:content>
+									</v8:item>
+								</Title>
+								<Group>AlwaysHorizontal</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаНадписиРегНомерРасширеннаяПодсказка" id="168"/>
+								<ChildItems>
+									<LabelDecoration name="Декорация3Жирный" id="169">
+										<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Положение рег. номера:</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="Декорация3ЖирныйКонтекстноеМеню" id="170"/>
+										<ExtendedTooltip name="Декорация3ЖирныйРасширеннаяПодсказка" id="171"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияПоложениеРегНомера" id="191">
+										<Width>20</Width>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>&lt;&lt;&gt;&gt;</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ДекорацияПоложениеРегНомераКонтекстноеМеню" id="192"/>
+										<ExtendedTooltip name="ДекорацияПоложениеРегНомераРасширеннаяПодсказка" id="193"/>
+									</LabelDecoration>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаПримерРегНомер" id="118">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Положение рег номера:</v8:content>
+									</v8:item>
+								</Title>
+								<TitleTextColor>style:FormTextColor</TitleTextColor>
+								<TitleFont ref="style:LargeTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаПримерРегНомерРасширеннаяПодсказка" id="119"/>
+								<ChildItems>
+									<UsualGroup name="ГруппаСтрока1РегНомер" id="120">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа1</v8:content>
+											</v8:item>
+										</Title>
+										<Group>AlwaysHorizontal</Group>
+										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаСтрока1РегНомерРасширеннаяПодсказка" id="121"/>
+										<ChildItems>
+											<PictureDecoration name="ДекорацияЛевоВерхРегНомер" id="124">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация лево верх</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<PictureSize>Proportionally</PictureSize>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияЛевоВерхРегНомерКонтекстноеМеню" id="125"/>
+												<ExtendedTooltip name="ДекорацияЛевоВерхРегНомерРасширеннаяПодсказка" id="126"/>
+											</PictureDecoration>
+											<PictureDecoration name="ДекорацияПравоВерхРегНомер" id="127">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация право верх</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<PictureSize>Proportionally</PictureSize>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияПравоВерхРегНомерКонтекстноеМеню" id="128"/>
+												<ExtendedTooltip name="ДекорацияПравоВерхРегНомерРасширеннаяПодсказка" id="129"/>
+											</PictureDecoration>
+										</ChildItems>
+									</UsualGroup>
+									<UsualGroup name="ГруппаСтрока2РегНомер" id="122">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа1</v8:content>
+											</v8:item>
+										</Title>
+										<Group>AlwaysHorizontal</Group>
+										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаСтрока2РегНомерРасширеннаяПодсказка" id="123"/>
+										<ChildItems>
+											<PictureDecoration name="ДекорацияЛевоНизРегНомер" id="130">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация лево низ рег номер</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<PictureSize>Proportionally</PictureSize>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияЛевоНизРегНомерКонтекстноеМеню" id="131"/>
+												<ExtendedTooltip name="ДекорацияЛевоНизРегНомерРасширеннаяПодсказка" id="132"/>
+											</PictureDecoration>
+											<PictureDecoration name="ДекорацияПравоНизРегНомер" id="133">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация право низ рег номер</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<PictureSize>Proportionally</PictureSize>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияПравоНизРегНомерКонтекстноеМеню" id="134"/>
+												<ExtendedTooltip name="ДекорацияПравоНизРегНомерРасширеннаяПодсказка" id="135"/>
+											</PictureDecoration>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаПоложениеРегНомера1" id="139">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа - Положение рег.номера 1</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>NormalSeparation</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаПоложениеРегНомера1РасширеннаяПодсказка" id="140"/>
+								<ChildItems>
+									<CheckBoxField name="ПроизвольноеПоложениеРегНомер" id="141">
+										<TitleLocation>Right</TitleLocation>
+										<CheckBoxType>Auto</CheckBoxType>
+										<ContextMenu name="ПроизвольноеПоложениеРегНомерКонтекстноеМеню" id="142"/>
+										<ExtendedTooltip name="ПроизвольноеПоложениеРегНомерРасширеннаяПодсказка" id="143"/>
+									</CheckBoxField>
+									<UsualGroup name="ГруппаПоложениеРегНомера2" id="144">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа - Положение рег. номера 2</v8:content>
+											</v8:item>
+										</Title>
+										<Group>AlwaysHorizontal</Group>
+										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаПоложениеРегНомера2РасширеннаяПодсказка" id="145"/>
+										<ChildItems>
+											<PictureDecoration name="Декорация2" id="146">
+												<Width>1</Width>
+												<Height>1</Height>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="Декорация2КонтекстноеМеню" id="147"/>
+												<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="148"/>
+											</PictureDecoration>
+											<UsualGroup name="ГруппаПоложениеРегНомера3" id="149">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа- Положение рег. номера 3</v8:content>
+													</v8:item>
+												</Title>
+												<Group>Vertical</Group>
+												<Behavior>Usual</Behavior>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаПоложениеРегНомера3РасширеннаяПодсказка" id="150"/>
+												<ChildItems>
+													<UsualGroup name="ГруппаСмещениеПоГоризонталиРегНомер" id="151">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Группа - Смещение по горизонтали, рег. номер</v8:content>
+															</v8:item>
+														</Title>
+														<Group>Horizontal</Group>
+														<Behavior>Usual</Behavior>
+														<Representation>None</Representation>
+														<ShowTitle>false</ShowTitle>
+														<ExtendedTooltip name="ГруппаСмещениеПоГоризонталиРегНомерРасширеннаяПодсказка" id="152"/>
+														<ChildItems>
+															<InputField name="ПоГоризонталиРегНомер" id="153">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Отступ слева</v8:content>
+																	</v8:item>
+																</Title>
+																<Width>3</Width>
+																<HorizontalStretch>false</HorizontalStretch>
+																<ContextMenu name="ПоГоризонталиРегНомерКонтекстноеМеню" id="154"/>
+																<ExtendedTooltip name="ПоГоризонталиРегНомерРасширеннаяПодсказка" id="155"/>
+															</InputField>
+															<LabelDecoration name="ЕдиницыИзмеренияГоризонтальРегНомер" id="156">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>мм</v8:content>
+																	</v8:item>
+																</Title>
+																<ContextMenu name="ЕдиницыИзмеренияГоризонтальРегНомерКонтекстноеМеню" id="157"/>
+																<ExtendedTooltip name="ЕдиницыИзмеренияГоризонтальРегНомерРасширеннаяПодсказка" id="158"/>
+															</LabelDecoration>
+														</ChildItems>
+													</UsualGroup>
+													<UsualGroup name="ГруппаСмещениеПоВертикалиРегНомер" id="159">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Группа - Смещение по вертикали, рег. номер</v8:content>
+															</v8:item>
+														</Title>
+														<Group>Horizontal</Group>
+														<Behavior>Usual</Behavior>
+														<Representation>None</Representation>
+														<ShowTitle>false</ShowTitle>
+														<ExtendedTooltip name="ГруппаСмещениеПоВертикалиРегНомерРасширеннаяПодсказка" id="160"/>
+														<ChildItems>
+															<InputField name="ПоВертикалиРегНомер" id="161">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Отступ сверху</v8:content>
+																	</v8:item>
+																</Title>
+																<Width>3</Width>
+																<HorizontalStretch>false</HorizontalStretch>
+																<ContextMenu name="ПоВертикалиРегНомерКонтекстноеМеню" id="162"/>
+																<ExtendedTooltip name="ПоВертикалиРегНомерРасширеннаяПодсказка" id="163"/>
+															</InputField>
+															<LabelDecoration name="ЕдиницыИзмеренияВертикальРегНомер" id="164">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>мм</v8:content>
+																	</v8:item>
+																</Title>
+																<ContextMenu name="ЕдиницыИзмеренияВертикальРегНомерКонтекстноеМеню" id="165"/>
+																<ExtendedTooltip name="ЕдиницыИзмеренияВертикальРегНомерРасширеннаяПодсказка" id="166"/>
+															</LabelDecoration>
+														</ChildItems>
+													</UsualGroup>
+												</ChildItems>
+											</UsualGroup>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаСтраницаВставкиРегНомера" id="183">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа - Страница вставки рег. номера</v8:content>
+									</v8:item>
+								</Title>
+								<Group>AlwaysHorizontal</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаСтраницаВставкиРегНомераРасширеннаяПодсказка" id="184"/>
+								<ChildItems>
+									<InputField name="СтраницаВставкиРегНомера" id="185">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Страница</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTipRepresentation>Button</ToolTipRepresentation>
+										<Width>9</Width>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>9</MaxWidth>
+										<ChooseType>false</ChooseType>
+										<TextEdit>false</TextEdit>
+										<ContextMenu name="СтраницаВставкиРегНомераКонтекстноеМеню" id="186"/>
+										<ExtendedTooltip name="СтраницаВставкиРегНомераРасширеннаяПодсказка" id="187"/>
+									</InputField>
+									<InputField name="НомерСтраницыРегНомера" id="188">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>№</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Если указать больше, чем страниц в файле - будет на последней</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Width>3</Width>
+										<SpinButton>true</SpinButton>
+										<ContextMenu name="НомерСтраницыРегНомераКонтекстноеМеню" id="189"/>
+										<ExtendedTooltip name="НомерСтраницыРегНомераРасширеннаяПодсказка" id="190"/>
+									</InputField>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</UsualGroup>
+					<LabelDecoration name="Декорация2Отступ" id="136">
+						<Width>1</Width>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>1</MaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>  </v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="Декорация2ОтступКонтекстноеМеню" id="137"/>
+						<ExtendedTooltip name="Декорация2ОтступРасширеннаяПодсказка" id="138"/>
+					</LabelDecoration>
+					<UsualGroup name="ГруппаПараметрыИПримерШтрихкод" id="51">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа параметры и пример штрихкод</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа параметры и пример</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>Vertical</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаПараметрыИПримерШтрихкодРасширеннаяПодсказка" id="52"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаЗаголовкиШтрихкод" id="175">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа1</v8:content>
+									</v8:item>
+								</Title>
+								<Group>AlwaysHorizontal</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаЗаголовкиШтрихкодРасширеннаяПодсказка" id="176"/>
+								<ChildItems>
+									<LabelDecoration name="Декорация4Жирный" id="177">
+										<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Положение штрихкода:</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="Декорация4ЖирныйКонтекстноеМеню" id="178"/>
+										<ExtendedTooltip name="Декорация4ЖирныйРасширеннаяПодсказка" id="179"/>
+									</LabelDecoration>
+									<LabelField name="ПоложениеШтрихкода" id="180">
+										<TitleLocation>None</TitleLocation>
+										<Width>20</Width>
+										<ContextMenu name="ПоложениеШтрихкодаКонтекстноеМеню" id="181"/>
+										<ExtendedTooltip name="ПоложениеШтрихкодаРасширеннаяПодсказка" id="182"/>
+									</LabelField>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаПример" id="31">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Положение штрихкода:</v8:content>
+									</v8:item>
+								</Title>
+								<TitleTextColor>style:FormTextColor</TitleTextColor>
+								<TitleFont ref="style:LargeTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа пример</v8:content>
+									</v8:item>
+								</ToolTip>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаПримерExtendedTooltip" id="73"/>
+								<ChildItems>
+									<UsualGroup name="ГруппаСтрока1" id="85">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа строка1</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа строка1</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Group>Horizontal</Group>
+										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаСтрока1РасширеннаяПодсказка" id="86"/>
+										<ChildItems>
+											<PictureDecoration name="ДекорацияЛевоВерх" id="89">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация лево верх</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<PictureSize>Proportionally</PictureSize>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияЛевоВерхКонтекстноеМеню" id="90"/>
+												<ExtendedTooltip name="ДекорацияЛевоВерхРасширеннаяПодсказка" id="91"/>
+											</PictureDecoration>
+											<PictureDecoration name="ДекорацияПравоВерх" id="92">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация право верх</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<PictureSize>Proportionally</PictureSize>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияПравоВерхКонтекстноеМеню" id="93"/>
+												<ExtendedTooltip name="ДекорацияПравоВерхРасширеннаяПодсказка" id="94"/>
+											</PictureDecoration>
+										</ChildItems>
+									</UsualGroup>
+									<UsualGroup name="ГруппаСтрока2" id="87">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа строка2</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа строка2</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Group>Horizontal</Group>
+										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаСтрока2РасширеннаяПодсказка" id="88"/>
+										<ChildItems>
+											<PictureDecoration name="ДекорацияЛевоНиз" id="95">
+												<Hyperlink>true</Hyperlink>
+												<PictureSize>Proportionally</PictureSize>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияЛевоНизКонтекстноеМеню" id="96"/>
+												<ExtendedTooltip name="ДекорацияЛевоНизРасширеннаяПодсказка" id="97"/>
+											</PictureDecoration>
+											<PictureDecoration name="ДекорацияПравоНиз" id="98">
+												<Hyperlink>true</Hyperlink>
+												<PictureSize>Proportionally</PictureSize>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияПравоНизКонтекстноеМеню" id="99"/>
+												<ExtendedTooltip name="ДекорацияПравоНизРасширеннаяПодсказка" id="100"/>
+											</PictureDecoration>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаПоложениеШтрихкода1" id="110">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа - Положение штрихкода 1</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>NormalSeparation</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаПоложениеШтрихкода1РасширеннаяПодсказка" id="111"/>
+								<ChildItems>
+									<CheckBoxField name="ПроизвольноеПоложение" id="101">
+										<TitleLocation>Right</TitleLocation>
+										<CheckBoxType>Auto</CheckBoxType>
+										<ContextMenu name="ПроизвольноеПоложениеКонтекстноеМеню" id="102"/>
+										<ExtendedTooltip name="ПроизвольноеПоложениеРасширеннаяПодсказка" id="103"/>
+									</CheckBoxField>
+									<UsualGroup name="ГруппаПоложениеШтрихкода2" id="43">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа - Положение штрихкода 2</v8:content>
+											</v8:item>
+										</Title>
+										<Group>AlwaysHorizontal</Group>
+										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаПоложениеШтрихкода2РасширеннаяПодсказка" id="57"/>
+										<ChildItems>
+											<PictureDecoration name="Декорация1" id="44">
+												<Width>1</Width>
+												<Height>1</Height>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="Декорация1КонтекстноеМеню" id="45"/>
+												<ExtendedTooltip name="Декорация1ExtendedTooltip" id="58"/>
+											</PictureDecoration>
+											<UsualGroup name="ГруппаПоложениеШтрихкода3" id="9">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа - Положение штрихкода 3</v8:content>
+													</v8:item>
+												</Title>
+												<Group>Vertical</Group>
+												<Behavior>Usual</Behavior>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаПоложениеШтрихкода3РасширеннаяПодсказка" id="59"/>
+												<ChildItems>
+													<UsualGroup name="ГруппаСмещениеПоГоризонталиШтрихкода" id="25">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Группа - Смещение по горизонтали штрихкода</v8:content>
+															</v8:item>
+														</Title>
+														<Group>Horizontal</Group>
+														<Behavior>Usual</Behavior>
+														<Representation>None</Representation>
+														<ShowTitle>false</ShowTitle>
+														<ExtendedTooltip name="ГруппаСмещениеПоГоризонталиШтрихкодаРасширеннаяПодсказка" id="60"/>
+														<ChildItems>
+															<InputField name="ПоГоризонтали" id="10">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Отступ слева</v8:content>
+																	</v8:item>
+																</Title>
+																<Width>3</Width>
+																<HorizontalStretch>false</HorizontalStretch>
+																<ContextMenu name="ПоГоризонталиКонтекстноеМеню" id="11"/>
+																<ExtendedTooltip name="ПоГоризонталиExtendedTooltip" id="61"/>
+															</InputField>
+															<LabelDecoration name="ЕдиницыИзмеренияГоризонталь" id="26">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>мм</v8:content>
+																	</v8:item>
+																</Title>
+																<ContextMenu name="ЕдиницыИзмеренияГоризонтальКонтекстноеМеню" id="27"/>
+																<ExtendedTooltip name="ЕдиницыИзмеренияГоризонтальExtendedTooltip" id="62"/>
+															</LabelDecoration>
+														</ChildItems>
+													</UsualGroup>
+													<UsualGroup name="ГруппаСмещениеПоВертикалиШтрихкода" id="28">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Группа смещение по вертикали штрихкода</v8:content>
+															</v8:item>
+														</Title>
+														<ToolTip>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Группа смещение по вертикали</v8:content>
+															</v8:item>
+														</ToolTip>
+														<Group>Horizontal</Group>
+														<Behavior>Usual</Behavior>
+														<Representation>None</Representation>
+														<ShowTitle>false</ShowTitle>
+														<ExtendedTooltip name="ГруппаСмещениеПоВертикалиШтрихкодаРасширеннаяПодсказка" id="63"/>
+														<ChildItems>
+															<InputField name="ПоВертикали" id="12">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Отступ сверху</v8:content>
+																	</v8:item>
+																</Title>
+																<Width>3</Width>
+																<HorizontalStretch>false</HorizontalStretch>
+																<ContextMenu name="ПоВертикалиКонтекстноеМеню" id="13"/>
+																<ExtendedTooltip name="ПоВертикалиExtendedTooltip" id="64"/>
+															</InputField>
+															<LabelDecoration name="ЕдиницыИзмеренияВертикаль" id="29">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>мм</v8:content>
+																	</v8:item>
+																</Title>
+																<ContextMenu name="ЕдиницыИзмеренияВертикальКонтекстноеМеню" id="30"/>
+																<ExtendedTooltip name="ЕдиницыИзмеренияВертикальExtendedTooltip" id="65"/>
+															</LabelDecoration>
+														</ChildItems>
+													</UsualGroup>
+												</ChildItems>
+											</UsualGroup>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+			<LabelDecoration name="Декорация3" id="197">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content> </v8:content>
+					</v8:item>
+				</Title>
+				<ContextMenu name="Декорация3КонтекстноеМеню" id="198"/>
+				<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="199"/>
+			</LabelDecoration>
+			<CheckBoxField name="ПоказыватьПриВставке" id="194">
+				<TitleLocation>Right</TitleLocation>
+				<CheckBoxType>Auto</CheckBoxType>
+				<ContextMenu name="ПоказыватьПриВставкеКонтекстноеМеню" id="195"/>
+				<ExtendedTooltip name="ПоказыватьПриВставкеРасширеннаяПодсказка" id="196"/>
+			</CheckBoxField>
+		</ChildItems>
+		<Attributes/>
+		<Commands>
+			<Command name="Напечатать" id="1000001">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вставить</v8:content>
+					</v8:item>
+				</Title>
+				<CurrentRowUse>DontUse</CurrentRowUse>
+			</Command>
+		</Commands>
+	</BaseForm>
+</Form>

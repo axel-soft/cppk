@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Родитель" id="4">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Автор" id="7">
+			<DataPath>Объект.Автор</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="АвторКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="ChoiceProcessing">АвторОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<CheckBoxField name="БезПроекта" id="10">
+			<DataPath>Объект.БезПроекта</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="БезПроектаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="БезПроектаРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<CheckBoxField name="БезФлага" id="13">
+			<DataPath>Объект.БезФлага</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="БезФлагаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="БезФлагаРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<InputField name="ВидДействия" id="16">
+			<DataPath>Объект.ВидДействия</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидДействияКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ВидДействияРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ВидЗадачи" id="19">
+			<DataPath>Объект.ВидЗадачи</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидЗадачиКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ВидЗадачиРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ВидПриложения" id="22">
+			<DataPath>Объект.ВидПриложения</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидПриложенияКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ВидПриложенияРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Исполнитель" id="25">
+			<DataPath>Объект.Исполнитель</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИсполнительКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ИсполнительРасширеннаяПодсказка" id="27"/>
+			<Events>
+				<Event name="ChoiceProcessing">ИсполнительОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<CheckBoxField name="ИсполнительРазыменован" id="28">
+			<DataPath>Объект.ИсполнительРазыменован</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИсполнительРазыменованКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ИсполнительРазыменованРасширеннаяПодсказка" id="30"/>
+		</CheckBoxField>
+		<CheckBoxField name="ОтображатьИтоги" id="34">
+			<DataPath>Объект.ОтображатьИтоги</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтображатьИтогиКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ОтображатьИтогиРасширеннаяПодсказка" id="36"/>
+		</CheckBoxField>
+		<InputField name="Проект" id="40">
+			<DataPath>Объект.Проект</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПроектКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<InputField name="Состояние" id="43">
+			<DataPath>Объект.Состояние</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СостояниеКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<InputField name="ТипОтбора" id="46">
+			<DataPath>Объект.ТипОтбора</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипОтбораКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="ТипОтбораРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="ТипПриложения" id="49">
+			<DataPath>Объект.ТипПриложения</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипПриложенияКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="ТипПриложенияРасширеннаяПодсказка" id="51"/>
+		</InputField>
+		<InputField name="Флаг" id="52">
+			<DataPath>Объект.Флаг</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ФлагКонтекстноеМеню" id="53"/>
+			<ExtendedTooltip name="ФлагРасширеннаяПодсказка" id="54"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ГруппировкиЗадач</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Catalog uuid="f2e1c29c-3dce-4709-b849-c2d9162c1031">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.ПравилаЭскалации" category="Object">
+				<xr:TypeId>edb0f710-698f-4160-b411-9809f1fa2e84</xr:TypeId>
+				<xr:ValueId>a8b39f92-5f30-4692-b03f-003978b89f3d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.ПравилаЭскалации" category="Ref">
+				<xr:TypeId>91854825-d78e-4696-a76b-59201d625b88</xr:TypeId>
+				<xr:ValueId>e9b0e2fc-cb70-4953-b358-227ab866ff5e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.ПравилаЭскалации" category="Selection">
+				<xr:TypeId>b2de9d7d-9ceb-496c-b16e-2980a4131583</xr:TypeId>
+				<xr:ValueId>ba9c98c8-02d6-46be-a711-0d97d2261f2a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.ПравилаЭскалации" category="List">
+				<xr:TypeId>f8882260-4e34-4f2c-96b8-157ff29a9336</xr:TypeId>
+				<xr:ValueId>9576fbd9-4df9-469e-92c2-fe6b2d449a0d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.ПравилаЭскалации" category="Manager">
+				<xr:TypeId>bf562059-dcae-4f40-8af6-a7b835ebd209</xr:TypeId>
+				<xr:ValueId>275a59a3-88bb-4fef-af53-af16f21058fd</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>ПравилаЭскалации</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>a96036bf-7e3d-4fb7-8e88-d56353d47e7f</ExtendedConfigurationObject>
+			<DescriptionLength>100</DescriptionLength>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="63c56c6f-e04f-4416-b983-e93c35432446">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ВариантВыполнения</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>c52e8cc5-a3c3-4a38-b39d-11ce0bb642fe</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="9e04b415-2dc5-4faf-835c-4e8630989cb4">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ТипПредметаЭскалации</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>712b7085-bcdc-4d39-b208-fcf3c1709ab1</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыПредметовЭскалации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="9f8f7ce5-37b6-4417-840a-29670cae96c5">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Ответственный</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>e3ff05a9-4987-4d02-97e2-47c1268da412</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="1dc195d3-86de-4af3-b9a9-760a14365fa3">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ВариантСрока</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>486e824f-2aad-4d1c-b73b-b836207ec27a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВариантыСрокаПравилЭскалацииЗадач</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="4e5ce335-7ef1-43b6-8408-9380e89d1564">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Комментарий</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>a3713c4f-81f2-42ff-873d-79e82f47de7a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="8f5e3a49-9d8b-4732-8e2d-94cf78bdfa78">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Действие</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>6cd3c75e-f782-40e9-8d2e-52b76b5aef6c</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ДействияПравилЭскалацииЗадач</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="4353c7d3-386b-49d5-9446-bd19ec26b8c7">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>НаправлениеЭскалации</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>928e6f18-1ff1-4f2a-814a-4c6415e1711b</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="2c21c831-c200-4bf1-aaef-3d9dd6328588">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ЦППК_КомментарийДействия</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>784c1798-d79e-420c-80f7-8457ffb40c06</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<TabularSection uuid="3eb4b590-426b-4306-90fe-b321797dedfb">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.ПравилаЭскалации.ДополнительныеУсловия" category="TabularSection">
+						<xr:TypeId>638df8e1-72f4-49b8-94bc-2c198e9af57d</xr:TypeId>
+						<xr:ValueId>22a9dc71-a84f-4d64-aee1-f1ae7bf88435</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.ПравилаЭскалации.ДополнительныеУсловия" category="TabularSectionRow">
+						<xr:TypeId>b78230ed-6f4b-41f7-a83c-05e5e23a8d18</xr:TypeId>
+						<xr:ValueId>f766c1aa-819e-4ccc-87e0-839316f46e6c</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ДополнительныеУсловия</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>91157099-1146-432c-abb9-5267914a8fa0</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="5d4c725a-164f-438e-9b23-87c2d564a531">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>Условие</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>05420a7a-d869-465f-a1e5-b0d93115094b</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:EnumRef.УсловияПравилЭскалацииЗадач</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="82e5b45b-ebbf-46ba-91ef-0b4c641e1a7d">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>ЗначениеУсловия</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>30d20ee3-b1a1-4d80-8000-d84ed2d13ee2</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<Form>ФормаЭлемента</Form>
+			<Form>ЦППК_ФормаКомментария</Form>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

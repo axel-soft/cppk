@@ -1,0 +1,830 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Колонки" id="21">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="КолонкиExtendedTooltip" id="22"/>
+			<ChildItems>
+				<UsualGroup name="ЛеваяКолонка" id="23">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЛеваяКолонкаExtendedTooltip" id="24"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОбщиеНастройки" id="25">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОбщиеНастройкиРасширеннаяПодсказка" id="26"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаОбщиеНастройки" id="27">
+									<SkipOnInput>false</SkipOnInput>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.НастройкаОбщие</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаОбщиеНастройкиКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="КартинкаОбщиеНастройкиРасширеннаяПодсказка" id="29"/>
+									<Events>
+										<Event name="Click">ОбщиеНастройки</Event>
+									</Events>
+								</PictureDecoration>
+								<Button name="ОбщиеНастройки" id="7">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОбщиеНастройки</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОбщиеНастройкиРасширеннаяПодсказка" id="8">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменение заголовка программы, дополнительных реквизитов и других общих настроек</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОбщиеПраваДоступа" id="171">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОбщиеПраваДоступаРасширеннаяПодсказка" id="172"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаПраваДоступа" id="173">
+									<SkipOnInput>false</SkipOnInput>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.НастройкаПраваДоступа48</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаПраваДоступаКонтекстноеМеню" id="174"/>
+									<ExtendedTooltip name="КартинкаПраваДоступаРасширеннаяПодсказка" id="175"/>
+									<Events>
+										<Event name="Click">ПраваДоступа</Event>
+									</Events>
+								</PictureDecoration>
+								<Button name="ОбщиеПраваДоступа" id="178">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ПраваДоступа</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОбщиеПраваДоступаРасширеннаяПодсказка" id="179">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка прав доступа к документам, процессам, задачам и другим объектам</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДелопроизводство" id="61">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДелопроизводствоРасширеннаяПодсказка" id="62"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаДелопроизводство" id="63">
+									<SkipOnInput>false</SkipOnInput>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.НастройкаДелопроизводство</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаДелопроизводствоКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="КартинкаДелопроизводствоРасширеннаяПодсказка" id="65"/>
+									<Events>
+										<Event name="Click">Документы</Event>
+									</Events>
+								</PictureDecoration>
+								<Button name="Документы" id="3">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.Документы</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ДокументыРасширеннаяПодсказка" id="4">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка параметров работы с документами</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаФайлы" id="73">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФайлыРасширеннаяПодсказка" id="74"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаФайлы" id="75">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка файлы</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.НастройкаФайлы</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаФайлыКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="КартинкаФайлыРасширеннаяПодсказка" id="77"/>
+									<Events>
+										<Event name="Click">Файлы</Event>
+									</Events>
+								</PictureDecoration>
+								<Button name="Файлы" id="19">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.Файлы</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Файлы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ФайлыРасширеннаяПодсказка" id="20">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка параметров загрузки, хранения и обработки файлов</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРабочийСтол" id="228">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа рабочий стол</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРабочийСтолРасширеннаяПодсказка" id="229"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаРабочийСтол" id="230">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка рабочий стол</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.НастройкаРабочийСтол</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаРабочийСтолКонтекстноеМеню" id="231"/>
+									<ExtendedTooltip name="КартинкаРабочийСтолРасширеннаяПодсказка" id="232"/>
+									<Events>
+										<Event name="Click">РабочийСтол</Event>
+									</Events>
+								</PictureDecoration>
+								<Button name="РабочийСтол" id="235">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.РабочийСтол</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Рабочий стол</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="РабочийСтолРасширеннаяПодсказка" id="236">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка рабочего стола по умолчанию</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаАрхив" id="237">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа архив</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа архив</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаАрхивРасширеннаяПодсказка" id="238"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаАрхив" id="239">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка архив</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.Архив48</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаАрхивКонтекстноеМеню" id="240"/>
+									<ExtendedTooltip name="КартинкаАрхивРасширеннаяПодсказка" id="241"/>
+									<Events>
+										<Event name="Click">Архив</Event>
+									</Events>
+								</PictureDecoration>
+								<Button name="Архив" id="242">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.Архив</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="АрхивРасширеннаяПодсказка" id="243">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Каталог обмена, доступ через web и другие настройки
+</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПраваяКолонка" id="97">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПраваяКолонкаExtendedTooltip" id="98"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПроцессыИЗадачи" id="99">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПроцессыИЗадачиРасширеннаяПодсказка" id="100"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаПроцессыИЗадачи" id="101">
+									<SkipOnInput>false</SkipOnInput>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.НастройкаПроцессыИЗадачи</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаПроцессыИЗадачиКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="КартинкаПроцессыИЗадачиРасширеннаяПодсказка" id="103"/>
+									<Events>
+										<Event name="Click">ПроцессыИЗадачи</Event>
+									</Events>
+								</PictureDecoration>
+								<Button name="ПроцессыИЗадачи" id="17">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ПроцессыИЗадачи</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ПроцессыИЗадачиРасширеннаяПодсказка" id="18">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка параметров работы процессов, обработок и задач</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПроектыИТрудозатраты" id="183">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПроектыИТрудозатратыРасширеннаяПодсказка" id="184"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаПроектыИТрудозатраты" id="185">
+									<SkipOnInput>false</SkipOnInput>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.НастройкаПроектыИТрудозатраты</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаПроектыИТрудозатратыКонтекстноеМеню" id="186"/>
+									<ExtendedTooltip name="КартинкаПроектыИТрудозатратыРасширеннаяПодсказка" id="187"/>
+									<Events>
+										<Event name="Click">ПроектыИТрудозатраты</Event>
+									</Events>
+								</PictureDecoration>
+								<Button name="ПроектыИТрудозатраты" id="190">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ПроектыИТрудозатраты</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ПроектыИТрудозатратыРасширеннаяПодсказка" id="191">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка параметров работы с проектами и учета трудозатрат</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПочта" id="195">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПочтаРасширеннаяПодсказка" id="196"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаПочта" id="197">
+									<SkipOnInput>false</SkipOnInput>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.НастройкаВстроеннаяПочта</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаПочтаКонтекстноеМеню" id="198"/>
+									<ExtendedTooltip name="КартинкаПочтаРасширеннаяПодсказка" id="199"/>
+									<Events>
+										<Event name="Click">Почта</Event>
+									</Events>
+								</PictureDecoration>
+								<Button name="Почта" id="202">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.Почта</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ПочтаРасширеннаяПодсказка" id="203">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка параметров работы со встроенной почтой</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКонтрагенты" id="219">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа контрагенты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа контрагенты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКонтрагентыРасширеннаяПодсказка" id="220"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаКонтрагенты" id="221">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка контрагенты</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.НастройкаКонтрагенты</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаКонтрагентыКонтекстноеМеню" id="222"/>
+									<ExtendedTooltip name="КартинкаКонтрагентыРасширеннаяПодсказка" id="223"/>
+									<Events>
+										<Event name="Click">Контрагенты</Event>
+									</Events>
+								</PictureDecoration>
+								<Button name="Контрагенты" id="226">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.Контрагенты</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="КонтрагентыРасширеннаяПодсказка" id="227">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка параметров работы с контрагентами</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОбменДанными" id="135">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОбменДаннымиРасширеннаяПодсказка" id="136"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаОбменДанными" id="137">
+									<SkipOnInput>false</SkipOnInput>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.НастройкаОбменДанными</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаОбменДаннымиКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="КартинкаОбменДаннымиРасширеннаяПодсказка" id="139"/>
+									<Events>
+										<Event name="Click">ОбменДанными</Event>
+									</Events>
+								</PictureDecoration>
+								<Button name="ОбменДанными" id="5">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОбменДанными</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОбменДаннымиРасширеннаяПодсказка" id="6">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка параметров обмена данными и электронными документами</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУведомленияОПроблемах" id="207">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа уведомления о проблемах</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа уведомления о проблемах</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУведомленияОПроблемахРасширеннаяПодсказка" id="208"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаОповещенияОПроблемах" id="209">
+									<SkipOnInput>false</SkipOnInput>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.НастройкаОповещенияОПроблемах</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаОповещенияОПроблемахКонтекстноеМеню" id="210"/>
+									<ExtendedTooltip name="КартинкаОповещенияОПроблемахРасширеннаяПодсказка" id="211"/>
+									<Events>
+										<Event name="Click">УведомленияОПроблемах</Event>
+									</Events>
+								</PictureDecoration>
+								<Button name="УведомленияОПроблемах" id="214">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.УведомленияОПроблемах</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="УведомленияОПроблемахРасширеннаяПодсказка" id="215">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка получателей уведомлений о возникающих проблемах в работе программы</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКабинетСотрудника" id="244">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кабинет сотрудника</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа уведомления о проблемах</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКабинетСотрудникаРасширеннаяПодсказка" id="245"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаКабинетСотрудника" id="246">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка кабинет сотрудника</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.СервисКабинетСотрудника48</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаКабинетСотрудникаКонтекстноеМеню" id="247"/>
+									<ExtendedTooltip name="КартинкаКабинетСотрудникаРасширеннаяПодсказка" id="248"/>
+									<Events>
+										<Event name="Click">УведомленияОПроблемах</Event>
+									</Events>
+								</PictureDecoration>
+								<Button name="КабинетСотрудника" id="249">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.КабинетСотрудника</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="КабинетСотрудникаРасширеннаяПодсказка" id="250">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка интеграции сервиса 1С:Кабинет сотрудника
+&lt;color #e37200&gt;(бета-версия)&lt;/&gt;</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИспользоватьУчетПоОрганизациям" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать учет по организациям</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбщиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общие настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общие настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбщиеНастройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Документы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Документы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Файлы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Файлы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПроцессыИЗадачи" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процессы, обработки, задачи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процессы и задачи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроцессыИЗадачи</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбменДанными" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен данными</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен данными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбменДанными</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПраваДоступа" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права доступа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права доступа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПраваДоступа</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПроектыИТрудозатраты" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проекты и трудозатраты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проекты и трудозатраты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроектыИТрудозатраты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Почта" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Почта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Почта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Почта</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УведомленияОПроблемах" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уведомления о проблемах</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уведомления о проблемах</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УведомленияОПроблемах</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Контрагенты" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагенты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оповещения о проблемах</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Контрагенты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РабочийСтол" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочий стол</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочий стол</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РабочийСтол</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Архив" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интеграция с 1С:Архивом</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Архив</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Архив</Action>
+		</Command>
+		<Command name="КабинетСотрудника" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кабинет сотрудника</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка интеграции сервиса 1С:Кабинет сотрудника</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КабинетСотрудника</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

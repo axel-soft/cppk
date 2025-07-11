@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСправочноПараметры" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа - Справочно параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСправочноПараметрыРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<InputField name="Период" id="45">
+					<DataPath>Период</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Width>30</Width>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<InputField name="Организация" id="36">
+					<DataPath>Организация</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="38"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОтборы" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа - Отборы</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтборыРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<InputField name="СостояниеВыгрузкиССТУ" id="42">
+					<DataPath>СостояниеВыгрузкиССТУ</DataPath>
+					<ContextMenu name="СостояниеВыгрузкиССТУКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="СостояниеВыгрузкиССТУРасширеннаяПодсказка" id="44"/>
+					<Events>
+						<Event name="OnChange">СостояниеВыгрузкиССТУПриИзменении</Event>
+					</Events>
+				</InputField>
+				<RadioButtonField name="СостояниеГотовности" id="59">
+					<DataPath>СостояниеГотовности</DataPath>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ColumnsCount>2</ColumnsCount>
+					<ContextMenu name="СостояниеГотовностиКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="СостояниеГотовностиРасширеннаяПодсказка" id="61"/>
+					<Events>
+						<Event name="OnChange">СостояниеГотовностиПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Обращения" id="4">
+			<Representation>List</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<Header>false</Header>
+			<DataPath>Обращения</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;&lt;Динамический заголовок&gt;&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ОбращенияКонтекстноеМеню" id="6"/>
+			<AutoCommandBar name="ОбращенияКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ДокументыОбращенияУстановитьФлажки" id="22">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Обращения.StandardCommand.CheckAll</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ДокументыОбращенияУстановитьФлажкиРасширеннаяПодсказка" id="23"/>
+					</Button>
+					<Button name="ДокументыОбращенияСнятьФлажки" id="24">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Обращения.StandardCommand.UncheckAll</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ДокументыОбращенияСнятьФлажкиРасширеннаяПодсказка" id="25"/>
+					</Button>
+					<Button name="ОбращенияПеречитатьСписок" id="67">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПеречитатьСписок</CommandName>
+						<ExtendedTooltip name="ОбращенияПеречитатьСписокРасширеннаяПодсказка" id="68"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ОбращенияРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="ОбращенияСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>Обращения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбращенияСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ОбращенияСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОбращенияСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>Обращения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбращенияСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ОбращенияСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОбращенияУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Обращения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбращенияУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ОбращенияУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ОбращенияВыбор</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="ОбращенияПометка" id="64">
+					<DataPath>Обращения.Check</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОбращенияПометкаКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ОбращенияПометкаРасширеннаяПодсказка" id="66"/>
+				</CheckBoxField>
+				<InputField name="ДокументыОбращенияЗначение" id="17">
+					<DataPath>Обращения.Value</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ДокументыОбращенияЗначениеКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ДокументыОбращенияЗначениеРасширеннаяПодсказка" id="19"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаКнопки" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа - Кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<Button name="УстановитьСнятьПризнак" id="30">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.УстановитьСнятьПризнак</CommandName>
+					<ExtendedTooltip name="УстановитьСнятьПризнакРасширеннаяПодсказка" id="31"/>
+				</Button>
+				<Button name="Закрыть" id="32">
+					<Type>UsualButton</Type>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="33"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Обращения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы-обращения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.ДокументыПредприятия</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="Организация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>За период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеВыгрузкиССТУ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобрать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>40</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Период" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеГотовности" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Признак "Готово к выгрузке в ССТУ"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>40</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьСнятьПризнак" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;&lt;Динамическое название&gt;&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;&lt;Динамическая подсказка&gt;&gt;</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьСнятьПризнак</Action>
+		</Command>
+		<Command name="ПеречитатьСписок" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать список</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПеречитатьСписок</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Период">
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="СостояниеВыгрузкиССТУ">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

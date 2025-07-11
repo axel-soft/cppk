@@ -1,0 +1,750 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Срок исполнения</v8:content>
+		</v8:item>
+	</Title>
+	<Width>59</Width>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CollapseItemsByImportanceVariant>DontUse</CollapseItemsByImportanceVariant>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer" callType="Before">ЦППК_ПриСозданииНаСервереПеред</Event>
+	</Events>
+	<ChildItems>
+		<CommandBar name="МК_БыстрыеСрокиКомПанель" id="210">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>МК_Быстры сроки</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="МК_БыстрыеСрокиКомПанельРасширеннаяПодсказка" id="211"/>
+			<ChildItems>
+				<Button name="БыстрыйСрокСегодня1" id="212">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="БыстрыйСрокСегодня1РасширеннаяПодсказка" id="213"/>
+				</Button>
+				<Button name="БыстрыйСрок1День1" id="214">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="БыстрыйСрок1День1РасширеннаяПодсказка" id="215"/>
+				</Button>
+				<Button name="БыстрыйСрок2Дня1" id="216">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="БыстрыйСрок2Дня1РасширеннаяПодсказка" id="217"/>
+				</Button>
+				<Button name="БыстрыйСрок3Дня1" id="218">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="БыстрыйСрок3Дня1РасширеннаяПодсказка" id="219"/>
+				</Button>
+				<Button name="БыстрыйСрокНеделя1" id="220">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="БыстрыйСрокНеделя1РасширеннаяПодсказка" id="221"/>
+				</Button>
+				<Button name="БыстрыйСрокМесяц1" id="222">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="БыстрыйСрокМесяц1РасширеннаяПодсказка" id="223"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="ГруппаБыстрыеСроки" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа быстрые сроки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа быстрые сроки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаБыстрыеСрокиРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<Button name="БыстрыйСрокСегодня" id="77">
+					<Type>UsualButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="БыстрыйСрокСегодняРасширеннаяПодсказка" id="78"/>
+				</Button>
+				<Button name="БыстрыйСрок1День" id="79">
+					<Type>UsualButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="БыстрыйСрок1ДеньРасширеннаяПодсказка" id="80"/>
+				</Button>
+				<Button name="БыстрыйСрок2Дня" id="81">
+					<Type>UsualButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="БыстрыйСрок2ДняРасширеннаяПодсказка" id="82"/>
+				</Button>
+				<Button name="БыстрыйСрок3Дня" id="83">
+					<Type>UsualButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="БыстрыйСрок3ДняРасширеннаяПодсказка" id="84"/>
+				</Button>
+				<Button name="БыстрыйСрокНеделя" id="89">
+					<Type>UsualButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="БыстрыйСрокНеделяРасширеннаяПодсказка" id="90"/>
+				</Button>
+				<Button name="БыстрыйСрокМесяц" id="87">
+					<Type>UsualButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="БыстрыйСрокМесяцРасширеннаяПодсказка" id="88"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВыборСрокаИсполнения" id="91">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выбор срока исполнения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выбор срока исполнения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВыборСрокаИсполненияРасширеннаяПодсказка" id="92"/>
+			<ChildItems>
+				<CalendarField name="СрокДата" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<Width>1</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>1</Height>
+					<ShowCurrentDate>false</ShowCurrentDate>
+					<ShowMonthsPanel>true</ShowMonthsPanel>
+					<WidthInMonths>0</WidthInMonths>
+					<ContextMenu name="СрокДатаКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="СрокДатаРасширеннаяПодсказка" id="23"/>
+				</CalendarField>
+				<UsualGroup name="ГруппаВремя" id="114">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВремяРасширеннаяПодсказка" id="115"/>
+					<ChildItems>
+						<Table name="ВариантыВремени" id="98">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Width>15</Width>
+							<Height>9</Height>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<FileDragMode>AsFile</FileDragMode>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВариантыВремениКонтекстноеМеню" id="99"/>
+							<AutoCommandBar name="ВариантыВремениКоманднаяПанель" id="100"/>
+							<ExtendedTooltip name="ВариантыВремениРасширеннаяПодсказка" id="101"/>
+							<SearchStringAddition name="ВариантыВремениСтрокаПоиска" id="102">
+								<AdditionSource>
+									<Item>ВариантыВремени</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВариантыВремениСтрокаПоискаКонтекстноеМеню" id="103"/>
+								<ExtendedTooltip name="ВариантыВремениСтрокаПоискаРасширеннаяПодсказка" id="104"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВариантыВремениСостояниеПросмотра" id="105">
+								<AdditionSource>
+									<Item>ВариантыВремени</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВариантыВремениСостояниеПросмотраКонтекстноеМеню" id="106"/>
+								<ExtendedTooltip name="ВариантыВремениСостояниеПросмотраРасширеннаяПодсказка" id="107"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВариантыВремениУправлениеПоиском" id="108">
+								<AdditionSource>
+									<Item>ВариантыВремени</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВариантыВремениУправлениеПоискомКонтекстноеМеню" id="109"/>
+								<ExtendedTooltip name="ВариантыВремениУправлениеПоискомРасширеннаяПодсказка" id="110"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ВариантыВремениПредставление" id="199">
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>11</Width>
+									<ContextMenu name="ВариантыВремениПредставлениеКонтекстноеМеню" id="200"/>
+									<ExtendedTooltip name="ВариантыВремениПредставлениеРасширеннаяПодсказка" id="201"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаЧасыМинуты" id="116">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа часы минуты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа часы минуты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЧасыМинутыРасширеннаяПодсказка" id="117"/>
+							<ChildItems>
+								<InputField name="СрокВремя_Часы" id="120">
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Часы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>5</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<SpinButton>true</SpinButton>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=2; ЧН=00; ЧВН=</v8:content>
+										</v8:item>
+									</EditFormat>
+									<MinValue xsi:type="xs:decimal">0</MinValue>
+									<MaxValue xsi:type="xs:decimal">23</MaxValue>
+									<ContextMenu name="СрокВремя_ЧасыКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="СрокВремя_ЧасыРасширеннаяПодсказка" id="122"/>
+								</InputField>
+								<LabelDecoration name="ДекорацияВремяРазделитель" id="196">
+									<Width>1</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>:</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ДекорацияВремяРазделительКонтекстноеМеню" id="197"/>
+									<ExtendedTooltip name="ДекорацияВремяРазделительРасширеннаяПодсказка" id="198"/>
+								</LabelDecoration>
+								<InputField name="СрокВремя_Минуты" id="123">
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Минуты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>5</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<SpinButton>true</SpinButton>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=2; ЧН=00; ЧВН=</v8:content>
+										</v8:item>
+									</EditFormat>
+									<MinValue xsi:type="xs:decimal">-1</MinValue>
+									<MaxValue xsi:type="xs:decimal">60</MaxValue>
+									<ContextMenu name="СрокВремя_МинутыКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="СрокВремя_МинутыРасширеннаяПодсказка" id="125"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelField name="ГрафикРаботыИсполнителя" id="202">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График работы</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Hiperlink>true</Hiperlink>
+			<ContextMenu name="ГрафикРаботыИсполнителяКонтекстноеМеню" id="203"/>
+			<ExtendedTooltip name="ГрафикРаботыИсполнителяРасширеннаяПодсказка" id="204"/>
+		</LabelField>
+		<UsualGroup name="ГруппаКоманды" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<Button name="Готово" id="46">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ГотовоРасширеннаяПодсказка" id="47"/>
+				</Button>
+				<Button name="Отмена" id="48">
+					<Type>UsualButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="49"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="МК_Основное" id="208">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="МК_ОсновноеРасширеннаяПодсказка" id="209"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВариантыВремени</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ВариантыВремени.ЭтоРабочееВремя</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Red</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<BaseForm version="2.18">
+		<Title>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Срок исполнения</v8:content>
+			</v8:item>
+		</Title>
+		<Width>59</Width>
+		<AutoTitle>false</AutoTitle>
+		<CommandBarLocation>None</CommandBarLocation>
+		<CollapseItemsByImportanceVariant>DontUse</CollapseItemsByImportanceVariant>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+		<ChildItems>
+			<CommandBar name="МК_БыстрыеСрокиКомПанель" id="210">
+				<Visible>false</Visible>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>МК_Быстры сроки</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="МК_БыстрыеСрокиКомПанельРасширеннаяПодсказка" id="211"/>
+				<ChildItems>
+					<Button name="БыстрыйСрокСегодня1" id="212">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="БыстрыйСрокСегодня1РасширеннаяПодсказка" id="213"/>
+					</Button>
+					<Button name="БыстрыйСрок1День1" id="214">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="БыстрыйСрок1День1РасширеннаяПодсказка" id="215"/>
+					</Button>
+					<Button name="БыстрыйСрок2Дня1" id="216">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="БыстрыйСрок2Дня1РасширеннаяПодсказка" id="217"/>
+					</Button>
+					<Button name="БыстрыйСрок3Дня1" id="218">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="БыстрыйСрок3Дня1РасширеннаяПодсказка" id="219"/>
+					</Button>
+					<Button name="БыстрыйСрокНеделя1" id="220">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="БыстрыйСрокНеделя1РасширеннаяПодсказка" id="221"/>
+					</Button>
+					<Button name="БыстрыйСрокМесяц1" id="222">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="БыстрыйСрокМесяц1РасширеннаяПодсказка" id="223"/>
+					</Button>
+				</ChildItems>
+			</CommandBar>
+			<UsualGroup name="ГруппаБыстрыеСроки" id="58">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа быстрые сроки</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа быстрые сроки</v8:content>
+					</v8:item>
+				</ToolTip>
+				<VerticalStretch>false</VerticalStretch>
+				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаБыстрыеСрокиРасширеннаяПодсказка" id="59"/>
+				<ChildItems>
+					<Button name="БыстрыйСрокСегодня" id="77">
+						<Type>UsualButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="БыстрыйСрокСегодняРасширеннаяПодсказка" id="78"/>
+					</Button>
+					<Button name="БыстрыйСрок1День" id="79">
+						<Type>UsualButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="БыстрыйСрок1ДеньРасширеннаяПодсказка" id="80"/>
+					</Button>
+					<Button name="БыстрыйСрок2Дня" id="81">
+						<Type>UsualButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="БыстрыйСрок2ДняРасширеннаяПодсказка" id="82"/>
+					</Button>
+					<Button name="БыстрыйСрок3Дня" id="83">
+						<Type>UsualButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="БыстрыйСрок3ДняРасширеннаяПодсказка" id="84"/>
+					</Button>
+					<Button name="БыстрыйСрокНеделя" id="89">
+						<Type>UsualButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="БыстрыйСрокНеделяРасширеннаяПодсказка" id="90"/>
+					</Button>
+					<Button name="БыстрыйСрокМесяц" id="87">
+						<Type>UsualButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="БыстрыйСрокМесяцРасширеннаяПодсказка" id="88"/>
+					</Button>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаВыборСрокаИсполнения" id="91">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа выбор срока исполнения</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа выбор срока исполнения</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаВыборСрокаИсполненияРасширеннаяПодсказка" id="92"/>
+				<ChildItems>
+					<CalendarField name="СрокДата" id="21">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дата</v8:content>
+							</v8:item>
+						</Title>
+						<TitleLocation>None</TitleLocation>
+						<Width>1</Width>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<Height>1</Height>
+						<ShowCurrentDate>false</ShowCurrentDate>
+						<ShowMonthsPanel>true</ShowMonthsPanel>
+						<WidthInMonths>0</WidthInMonths>
+						<ContextMenu name="СрокДатаКонтекстноеМеню" id="22"/>
+						<ExtendedTooltip name="СрокДатаРасширеннаяПодсказка" id="23"/>
+					</CalendarField>
+					<UsualGroup name="ГруппаВремя" id="114">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Время</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Vertical</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаВремяРасширеннаяПодсказка" id="115"/>
+						<ChildItems>
+							<Table name="ВариантыВремени" id="98">
+								<Representation>List</Representation>
+								<CommandBarLocation>None</CommandBarLocation>
+								<ChangeRowSet>false</ChangeRowSet>
+								<ChangeRowOrder>false</ChangeRowOrder>
+								<Width>15</Width>
+								<Height>9</Height>
+								<Header>false</Header>
+								<HorizontalLines>false</HorizontalLines>
+								<VerticalLines>false</VerticalLines>
+								<AutoInsertNewRow>true</AutoInsertNewRow>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<FileDragMode>AsFile</FileDragMode>
+								<RowFilter xsi:nil="true"/>
+								<ContextMenu name="ВариантыВремениКонтекстноеМеню" id="99"/>
+								<AutoCommandBar name="ВариантыВремениКоманднаяПанель" id="100"/>
+								<ExtendedTooltip name="ВариантыВремениРасширеннаяПодсказка" id="101"/>
+								<SearchStringAddition name="ВариантыВремениСтрокаПоиска" id="102">
+									<AdditionSource>
+										<Item>ВариантыВремени</Item>
+										<Type>SearchStringRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="ВариантыВремениСтрокаПоискаКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="ВариантыВремениСтрокаПоискаРасширеннаяПодсказка" id="104"/>
+								</SearchStringAddition>
+								<ViewStatusAddition name="ВариантыВремениСостояниеПросмотра" id="105">
+									<AdditionSource>
+										<Item>ВариантыВремени</Item>
+										<Type>ViewStatusRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="ВариантыВремениСостояниеПросмотраКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ВариантыВремениСостояниеПросмотраРасширеннаяПодсказка" id="107"/>
+								</ViewStatusAddition>
+								<SearchControlAddition name="ВариантыВремениУправлениеПоиском" id="108">
+									<AdditionSource>
+										<Item>ВариантыВремени</Item>
+										<Type>SearchControl</Type>
+									</AdditionSource>
+									<ContextMenu name="ВариантыВремениУправлениеПоискомКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="ВариантыВремениУправлениеПоискомРасширеннаяПодсказка" id="110"/>
+								</SearchControlAddition>
+								<ChildItems>
+									<InputField name="ВариантыВремениПредставление" id="199">
+										<ReadOnly>true</ReadOnly>
+										<EditMode>EnterOnInput</EditMode>
+										<Width>11</Width>
+										<ContextMenu name="ВариантыВремениПредставлениеКонтекстноеМеню" id="200"/>
+										<ExtendedTooltip name="ВариантыВремениПредставлениеРасширеннаяПодсказка" id="201"/>
+									</InputField>
+								</ChildItems>
+							</Table>
+							<UsualGroup name="ГруппаЧасыМинуты" id="116">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа часы минуты</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа часы минуты</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Group>AlwaysHorizontal</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаЧасыМинутыРасширеннаяПодсказка" id="117"/>
+								<ChildItems>
+									<InputField name="СрокВремя_Часы" id="120">
+										<TitleLocation>None</TitleLocation>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Часы</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Width>5</Width>
+										<HorizontalStretch>false</HorizontalStretch>
+										<VerticalStretch>false</VerticalStretch>
+										<SpinButton>true</SpinButton>
+										<EditFormat>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ЧЦ=2; ЧН=00; ЧВН=</v8:content>
+											</v8:item>
+										</EditFormat>
+										<MinValue xsi:type="xs:decimal">0</MinValue>
+										<MaxValue xsi:type="xs:decimal">23</MaxValue>
+										<ContextMenu name="СрокВремя_ЧасыКонтекстноеМеню" id="121"/>
+										<ExtendedTooltip name="СрокВремя_ЧасыРасширеннаяПодсказка" id="122"/>
+									</InputField>
+									<LabelDecoration name="ДекорацияВремяРазделитель" id="196">
+										<Width>1</Width>
+										<Height>1</Height>
+										<HorizontalStretch>false</HorizontalStretch>
+										<VerticalStretch>false</VerticalStretch>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>:</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Center</HorizontalAlign>
+										<ContextMenu name="ДекорацияВремяРазделительКонтекстноеМеню" id="197"/>
+										<ExtendedTooltip name="ДекорацияВремяРазделительРасширеннаяПодсказка" id="198"/>
+									</LabelDecoration>
+									<InputField name="СрокВремя_Минуты" id="123">
+										<TitleLocation>None</TitleLocation>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Минуты</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Width>5</Width>
+										<HorizontalStretch>false</HorizontalStretch>
+										<VerticalStretch>false</VerticalStretch>
+										<SpinButton>true</SpinButton>
+										<EditFormat>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ЧЦ=2; ЧН=00; ЧВН=</v8:content>
+											</v8:item>
+										</EditFormat>
+										<MinValue xsi:type="xs:decimal">-1</MinValue>
+										<MaxValue xsi:type="xs:decimal">60</MaxValue>
+										<ContextMenu name="СрокВремя_МинутыКонтекстноеМеню" id="124"/>
+										<ExtendedTooltip name="СрокВремя_МинутыРасширеннаяПодсказка" id="125"/>
+									</InputField>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+			<LabelField name="ГрафикРаботыИсполнителя" id="202">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>График работы</v8:content>
+					</v8:item>
+				</Title>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<Hiperlink>true</Hiperlink>
+				<ContextMenu name="ГрафикРаботыИсполнителяКонтекстноеМеню" id="203"/>
+				<ExtendedTooltip name="ГрафикРаботыИсполнителяРасширеннаяПодсказка" id="204"/>
+			</LabelField>
+			<UsualGroup name="ГруппаКоманды" id="41">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа команды</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа команды</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>NormalSeparation</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="42"/>
+				<ChildItems>
+					<Button name="Готово" id="46">
+						<Type>UsualButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ГотовоРасширеннаяПодсказка" id="47"/>
+					</Button>
+					<Button name="Отмена" id="48">
+						<Type>UsualButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="49"/>
+					</Button>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="МК_Основное" id="208">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа1</v8:content>
+					</v8:item>
+				</Title>
+				<Behavior>Usual</Behavior>
+				<ExtendedTooltip name="МК_ОсновноеРасширеннаяПодсказка" id="209"/>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes>
+			<ConditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВариантыВремени</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ВариантыВремени.ЭтоРабочееВремя</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:Red</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</ConditionalAppearance>
+		</Attributes>
+	</BaseForm>
+</Form>

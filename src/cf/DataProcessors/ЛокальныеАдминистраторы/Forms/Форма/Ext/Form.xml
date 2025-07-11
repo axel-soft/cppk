@@ -1,0 +1,1044 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СтраницаЛокальныеАдминистраторы" id="248">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Локальные администраторы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница разрешения доступа общие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СтраницаЛокальныеАдминистраторыРасширеннаяПодсказка" id="249"/>
+			<ChildItems>
+				<UsualGroup name="ЛокАдминистраторыТаблицыИПодсказка" id="350">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лок администраторы таблицы и подсказка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лок администраторы таблицы и подсказка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЛокАдминистраторыТаблицыИПодсказкаРасширеннаяПодсказка" id="351"/>
+					<ChildItems>
+						<UsualGroup name="ЛокАдминистраторыТаблицы" id="352">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Лок администраторы таблицы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ЛокАдминистраторыТаблицыРасширеннаяПодсказка" id="353"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПредметыДоступаДляЛА" id="250">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа предметы доступа для лок. администраторов</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа предметы доступа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПредметыДоступаДляЛАРасширеннаяПодсказка" id="251"/>
+									<ChildItems>
+										<LabelDecoration name="Отступ3" id="252">
+											<Font ref="style:NormalTextFont" height="14" kind="StyleItem"/>
+											<ContextMenu name="Отступ3КонтекстноеМеню" id="253"/>
+											<ExtendedTooltip name="Отступ3РасширеннаяПодсказка" id="254"/>
+										</LabelDecoration>
+										<Table name="ПредметыДоступаДляЛА" id="255">
+											<Representation>List</Representation>
+											<ReadOnly>true</ReadOnly>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<HorizontalLines>false</HorizontalLines>
+											<VerticalLines>false</VerticalLines>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ПредметыДоступаДляЛА</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ПредметыДоступаДляЛАКонтекстноеМеню" id="256">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="СкопироватьРазрешенияОтПредметаДляЛА" id="271">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Command.СкопироватьРазрешенияОтПредметаДляЛА</CommandName>
+														<ExtendedTooltip name="СкопироватьРазрешенияОтПредметаДляЛАРасширеннаяПодсказка" id="272"/>
+													</Button>
+												</ChildItems>
+											</ContextMenu>
+											<AutoCommandBar name="ПредметыДоступаДляЛАКоманднаяПанель" id="257">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ПредметыДоступаДляЛАРасширеннаяПодсказка" id="258"/>
+											<SearchStringAddition name="ПредметыДоступаДляЛАСтрокаПоиска" id="259">
+												<AdditionSource>
+													<Item>ПредметыДоступаДляЛА</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПредметыДоступаДляЛАСтрокаПоискаКонтекстноеМеню" id="260"/>
+												<ExtendedTooltip name="ПредметыДоступаДляЛАСтрокаПоискаРасширеннаяПодсказка" id="261"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ПредметыДоступаДляЛАСостояниеПросмотра" id="262">
+												<AdditionSource>
+													<Item>ПредметыДоступаДляЛА</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПредметыДоступаДляЛАСостояниеПросмотраКонтекстноеМеню" id="263"/>
+												<ExtendedTooltip name="ПредметыДоступаДляЛАСостояниеПросмотраРасширеннаяПодсказка" id="264"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ПредметыДоступаДляЛАУправлениеПоиском" id="265">
+												<AdditionSource>
+													<Item>ПредметыДоступаДляЛА</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ПредметыДоступаДляЛАУправлениеПоискомКонтекстноеМеню" id="266"/>
+												<ExtendedTooltip name="ПредметыДоступаДляЛАУправлениеПоискомРасширеннаяПодсказка" id="267"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="OnActivateRow">ПредметыДоступаДляЛАПриАктивизацииСтроки</Event>
+											</Events>
+											<ChildItems>
+												<InputField name="ПредметыДоступаДляЛАПредставление" id="321">
+													<DataPath>ПредметыДоступаДляЛА.Представление</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Предмет доступа</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПредметыДоступаДляЛАПредставлениеКонтекстноеМеню" id="322"/>
+													<ExtendedTooltip name="ПредметыДоступаДляЛАПредставлениеРасширеннаяПодсказка" id="323"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+								<Table name="РазрешенияДляЛА" id="273">
+									<Representation>List</Representation>
+									<HorizontalLines>false</HorizontalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>РазрешенияДляЛА</DataPath>
+									<CommandSet>
+										<ExcludedCommand>CancelSearch</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>Find</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>OutputList</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+										<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+									</CommandSet>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="РазрешенияДляЛАКонтекстноеМеню" id="274"/>
+									<AutoCommandBar name="РазрешенияДляЛАКоманднаяПанель" id="275">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="РазрешенияДляЛАДобавить" id="292">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Item.РазрешенияДляЛА.StandardCommand.Add</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="РазрешенияДляЛАДобавитьРасширеннаяПодсказка" id="293"/>
+											</Button>
+											<Button name="РазрешенияДляЛАУдалить" id="294">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Item.РазрешенияДляЛА.StandardCommand.Delete</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="РазрешенияДляЛАУдалитьРасширеннаяПодсказка" id="295"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="РазрешенияДляЛАРасширеннаяПодсказка" id="276"/>
+									<SearchStringAddition name="РазрешенияДляЛАСтрокаПоиска" id="277">
+										<AdditionSource>
+											<Item>РазрешенияДляЛА</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="РазрешенияДляЛАСтрокаПоискаКонтекстноеМеню" id="278"/>
+										<ExtendedTooltip name="РазрешенияДляЛАСтрокаПоискаРасширеннаяПодсказка" id="279"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="РазрешенияДляЛАСостояниеПросмотра" id="280">
+										<AdditionSource>
+											<Item>РазрешенияДляЛА</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="РазрешенияДляЛАСостояниеПросмотраКонтекстноеМеню" id="281"/>
+										<ExtendedTooltip name="РазрешенияДляЛАСостояниеПросмотраРасширеннаяПодсказка" id="282"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="РазрешенияДляЛАУправлениеПоиском" id="283">
+										<AdditionSource>
+											<Item>РазрешенияДляЛА</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="РазрешенияДляЛАУправлениеПоискомКонтекстноеМеню" id="284"/>
+										<ExtendedTooltip name="РазрешенияДляЛАУправлениеПоискомРасширеннаяПодсказка" id="285"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">РазрешенияДляЛАВыбор</Event>
+										<Event name="BeforeAddRow">РазрешенияДляЛАПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">РазрешенияДляЛАПередУдалением</Event>
+										<Event name="OnActivateRow">РазрешенияДляЛАПриАктивизацииСтроки</Event>
+										<Event name="ChoiceProcessing">РазрешенияДляЛАОбработкаВыбора</Event>
+										<Event name="AfterDeleteRow">РазрешенияДляЛАПослеУдаления</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="РазрешенияДляЛАПользователь" id="324">
+											<DataPath>РазрешенияДляЛА.Пользователь</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кому</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РазрешенияДляЛАПользовательКонтекстноеМеню" id="325"/>
+											<ExtendedTooltip name="РазрешенияДляЛАПользовательРасширеннаяПодсказка" id="326"/>
+										</InputField>
+										<InputField name="РазрешенияДляЛАУровеньДоступа" id="327">
+											<DataPath>РазрешенияДляЛА.УровеньДоступа</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<OpenButton>false</OpenButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ContextMenu name="РазрешенияДляЛАУровеньДоступаКонтекстноеМеню" id="328"/>
+											<ExtendedTooltip name="РазрешенияДляЛАУровеньДоступаРасширеннаяПодсказка" id="329"/>
+											<Events>
+												<Event name="Opening">РазрешенияДляЛАУровеньДоступаОткрытие</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<Table name="ЗначенияДоступаДляЛА" id="296">
+									<Representation>Tree</Representation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<HorizontalLines>false</HorizontalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ЗначенияДоступаДляЛА</DataPath>
+									<ContextMenu name="ЗначенияДоступаДляЛАКонтекстноеМеню" id="297">
+										<Autofill>false</Autofill>
+									</ContextMenu>
+									<AutoCommandBar name="ЗначенияДоступаДляЛАКоманднаяПанель" id="298">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="ЗначенияДоступаДляЛАВсеПометкиУстановить" id="317">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ВсеПометкиУстановитьДляЛА</CommandName>
+												<ExtendedTooltip name="ЗначенияДоступаДляЛАВсеПометкиУстановитьРасширеннаяПодсказка" id="318"/>
+											</Button>
+											<Button name="ЗначенияДоступаДляЛАВсеПометкиСнять" id="319">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ВсеПометкиСнятьДляЛА</CommandName>
+												<ExtendedTooltip name="ЗначенияДоступаДляЛАВсеПометкиСнятьРасширеннаяПодсказка" id="320"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ЗначенияДоступаДляЛАРасширеннаяПодсказка" id="299"/>
+									<SearchStringAddition name="ЗначенияДоступаДляЛАСтрокаПоиска" id="300">
+										<AdditionSource>
+											<Item>ЗначенияДоступаДляЛА</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗначенияДоступаДляЛАСтрокаПоискаКонтекстноеМеню" id="301"/>
+										<ExtendedTooltip name="ЗначенияДоступаДляЛАСтрокаПоискаРасширеннаяПодсказка" id="302"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ЗначенияДоступаДляЛАСостояниеПросмотра" id="303">
+										<AdditionSource>
+											<Item>ЗначенияДоступаДляЛА</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗначенияДоступаДляЛАСостояниеПросмотраКонтекстноеМеню" id="304"/>
+										<ExtendedTooltip name="ЗначенияДоступаДляЛАСостояниеПросмотраРасширеннаяПодсказка" id="305"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ЗначенияДоступаДляЛАУправлениеПоиском" id="306">
+										<AdditionSource>
+											<Item>ЗначенияДоступаДляЛА</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗначенияДоступаДляЛАУправлениеПоискомКонтекстноеМеню" id="307"/>
+										<ExtendedTooltip name="ЗначенияДоступаДляЛАУправлениеПоискомРасширеннаяПодсказка" id="308"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ЗначенияДоступаДляЛАВыбор</Event>
+									</Events>
+									<ChildItems>
+										<ColumnGroup name="ЗначенияДоступаЛАКолонки" id="309">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Значения доступа лок. администраторов
+колонки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Значения доступа списков колонки</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="ЗначенияДоступаЛАКолонкиРасширеннаяПодсказка" id="310"/>
+											<ChildItems>
+												<CheckBoxField name="ЗначенияДоступаДляЛАПометка" id="330">
+													<DataPath>ЗначенияДоступаДляЛА.Пометка</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<ThreeState>true</ThreeState>
+													<ContextMenu name="ЗначенияДоступаДляЛАПометкаКонтекстноеМеню" id="331"/>
+													<ExtendedTooltip name="ЗначенияДоступаДляЛАПометкаРасширеннаяПодсказка" id="332"/>
+													<Events>
+														<Event name="OnChange">ЗначенияДоступаДляЛАПометкаПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ЗначенияДоступаДляЛАПредставление" id="333">
+													<DataPath>ЗначенияДоступаДляЛА.Представление</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>По каким разрезам</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЗначенияДоступаДляЛАПредставлениеКонтекстноеМеню" id="334"/>
+													<ExtendedTooltip name="ЗначенияДоступаДляЛАПредставлениеРасширеннаяПодсказка" id="335"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПодсказкаПоЛА" id="354">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подсказка по ЛА</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подсказка по спец разрешениям</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПодсказкаПоЛАРасширеннаяПодсказка" id="355"/>
+							<ChildItems>
+								<LabelDecoration name="ПодсказкаПоЛА" id="356">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ИнформационнаяНадпись</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Локальный администратор имеет доступ к объекту, даже если не входит в его список доступа</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ContextMenu name="ПодсказкаПоЛАКонтекстноеМеню" id="357"/>
+									<ExtendedTooltip name="ПодсказкаПоЛАРасширеннаяПодсказка" id="358"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКнопки" id="102">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="103"/>
+			<ChildItems>
+				<CommandBar name="ГруппаКнопкиСлева" id="240">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки слева</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки слева</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКнопкиСлеваРасширеннаяПодсказка" id="241"/>
+					<ChildItems>
+						<Button name="Готово" id="96">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.Готово</CommandName>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ExtendedTooltip name="ГотовоРасширеннаяПодсказка" id="97"/>
+						</Button>
+						<Button name="Применить" id="246">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Применить</CommandName>
+							<ExtendedTooltip name="ПрименитьРасширеннаяПодсказка" id="247"/>
+						</Button>
+						<Button name="Отмена" id="100">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Cancel</CommandName>
+							<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="101"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОбработкаОбъект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработка объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЛокальныеАдминистраторы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ИдентификаторДобавленнойСтроки" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор добавленной строки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВсеВидыДоступа" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все виды доступа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="ВидДоступа" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.ВидыДоступа</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗначениеДоступа" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.РазрезДоступа</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Представление" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИзмененаСтрокаСписка" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменена строка списка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторТекущейСтрокиИнд" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор текущей строки исключительных разрешений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторКопируемойСтроки" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор копируемой строки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешенияИзмененыВДругойФорме" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешения изменены в другой форме</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторТекущейСтрокиОбщ" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор текущей строки общих разрешений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредметыДоступаДляЛА" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предметы доступа для лок. администраторов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Предмет" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Представление" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидыДоступа" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виды доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueListType</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЕстьРазрешения" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть разрешения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РазрешенияДляЛА" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешения для лок. администраторов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Предмет" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Пользователь" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа или пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.КонтейнерыСотрудников</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="КоллекцияЗначенийДоступа" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Коллекция значений доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КоллекцииЗначенийДоступа</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторКоллекции" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор коллекции</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УровеньДоступа" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровень доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УровниДоступа</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РазрешенияДляЛАРазвернутые" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешения для лок. администраторов развернутые</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Предмет" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Пользователь" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа или пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.КонтейнерыСотрудников</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторКоллекции" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор коллекции</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗначениеДоступа" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.РазрезДоступа</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЗначенияДоступаДляЛА" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значения доступа для лок. администраторов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="ВидДоступа" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.ВидыДоступа</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗначениеДоступа" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.РазрезДоступа</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Представление" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="4">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИдентификаторТекущейСтрокиЛА" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор текущей строки локальных администраторов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипКонтейнеровСотрудников" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип контейнеров сотрудников</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:TypeDescription</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредметыДоступаИспользующиеРегистрацию" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предметы доступа использующие регистрацию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СпискиДоступа</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПредметыДоступа.ЕстьИсключения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Истина</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Готово" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Готово</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Обновить" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Action>Обновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Применить" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+S</Shortcut>
+			<Action>Применить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СкопироватьРазрешенияОтПредметаДляЛА" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать другим...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать разрешения от предмета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CloneObject</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СкопироватьРазрешенияОтПредметаДляЛА</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВсеПометкиСнятьДляЛА" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все пометки снять</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все пометки снять</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВсеПометкиСнятьДляЛА</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВсеПометкиУстановитьДляЛА" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все пометки установить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все пометки установить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВсеПометкиУстановитьДляЛА</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

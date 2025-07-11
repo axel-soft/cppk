@@ -1,0 +1,2369 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Width>100</Width>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Create</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Post</ExcludedCommand>
+		<ExcludedCommand>SetDateInterval</ExcludedCommand>
+		<ExcludedCommand>UndoPosting</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnChangeDisplaySettings">ПриИзмененииПараметровЭкрана</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаБыстрыеОтборы" id="284">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаБыстрыеОтборыExtendedTooltip" id="285"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВариантОтбораПоДате" id="324">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вариант отбора по дате</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вариант отбора по дате</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВариантОтбораПоДатеРасширеннаяПодсказка" id="325"/>
+					<ChildItems>
+						<InputField name="ВариантОтбора" id="279">
+							<DataPath>ВариантОтбора</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отбор по периоду отсутствия</v8:content>
+								</v8:item>
+							</ToolTip>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
+							<OpenButton>false</OpenButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Все отсутствия</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Все</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отсутствия за день</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ЗаДень</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отсутствия за неделю</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ЗаНеделю</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отсутствия за месяц</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ЗаМесяц</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отсутствия за год</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ЗаГод</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ВариантОтбораКонтекстноеМеню" id="280"/>
+							<ExtendedTooltip name="ВариантОтбораРасширеннаяПодсказка" id="281"/>
+							<Events>
+								<Event name="OnChange">ВариантОтбораПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ОтборДатаОтсутствияПолеВвода" id="329">
+							<DataPath>ОтборДатаОтсутствия</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="ОтборДатаОтсутствияПолеВводаКонтекстноеМеню" id="330"/>
+							<ExtendedTooltip name="ОтборДатаОтсутствияПолеВводаРасширеннаяПодсказка" id="331"/>
+							<Events>
+								<Event name="OnChange">ОтборДатаОтсутствияПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="ОтборУдаленнаяРабота" id="318">
+					<DataPath>ОтборУдаленнаяРабота</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по признаку удаленной работы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>24</MaxWidth>
+					<OpenButton>false</OpenButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Все</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Все</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Только работающие удаленно</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ТолькоРаботающиеУдаленно</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Только не работающие удаленно</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ТолькоНеРаботающиеУдаленно</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ОтборУдаленнаяРаботаКонтекстноеМеню" id="319"/>
+					<ExtendedTooltip name="ОтборУдаленнаяРаботаРасширеннаяПодсказка" id="320"/>
+					<Events>
+						<Event name="OnChange">ОтборУдаленнаяРаботаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОтборПричина" id="313">
+					<DataPath>ОтборПричина</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по причине отсутствия</v8:content>
+						</v8:item>
+					</ToolTip>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>24</MaxWidth>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<QuickChoice>true</QuickChoice>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причина</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ОтборПричинаКонтекстноеМеню" id="314"/>
+					<ExtendedTooltip name="ОтборПричинаРасширеннаяПодсказка" id="315"/>
+					<Events>
+						<Event name="OnChange">ОтборПричинаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОтборПодразделение" id="296">
+					<DataPath>ОтборПодразделение</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по подразделению отсутствующего</v8:content>
+						</v8:item>
+					</ToolTip>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>24</MaxWidth>
+					<OpenButton>false</OpenButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ОтборПодразделениеКонтекстноеМеню" id="297"/>
+					<ExtendedTooltip name="ОтборПодразделениеРасширеннаяПодсказка" id="298"/>
+					<Events>
+						<Event name="OnChange">ОтборПодразделениеПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПользовательскиеНастройкиСписка" id="289">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользовательские настройки списка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПользовательскиеНастройкиСпискаРасширеннаяПодсказка" id="290"/>
+		</UsualGroup>
+		<CommandBar name="ГруппаКоманднаяПанель" id="291">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="292"/>
+			<ChildItems>
+				<ButtonGroup name="ФормаГруппаОсновные" id="96">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма группа основные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма группа основные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ФормаГруппаОсновныеРасширеннаяПодсказка" id="97"/>
+					<ChildItems>
+						<Button name="Выбрать" id="353">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Item.Список.StandardCommand.Choose</CommandName>
+							<ExtendedTooltip name="ВыбратьРасширеннаяПодсказка" id="354"/>
+						</Button>
+						<Button name="ФормаСоздать" id="277">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Item.Список.StandardCommand.Create</CommandName>
+							<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="278"/>
+						</Button>
+						<Button name="Изменить" id="164">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Change</CommandName>
+							<ExtendedTooltip name="ИзменитьРасширеннаяПодсказка" id="165"/>
+						</Button>
+					</ChildItems>
+				</ButtonGroup>
+				<ButtonGroup name="ФормаГруппаДополнительные" id="122">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма группа дополнительные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма группа дополнительные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ФормаГруппаДополнительныеРасширеннаяПодсказка" id="123"/>
+					<ChildItems>
+						<Button name="ФормаСкопировать" id="124">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Copy</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="125"/>
+						</Button>
+						<Button name="ФормаУстановитьПометкуУдаления" id="126">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.SetDeletionMark</CommandName>
+							<ExtendedTooltip name="ФормаУстановитьПометкуУдаленияРасширеннаяПодсказка" id="127"/>
+						</Button>
+						<Button name="ФормаОбновить" id="128">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Refresh</CommandName>
+							<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="129"/>
+						</Button>
+						<ButtonGroup name="ФормаГруппаГлобальныеКоманды" id="24">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Форма группа глобальные команды</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Форма группа глобальные команды</v8:content>
+								</v8:item>
+							</ToolTip>
+							<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+							<ExtendedTooltip name="ФормаГруппаГлобальныеКомандыРасширеннаяПодсказка" id="25"/>
+						</ButtonGroup>
+						<Button name="ФормаОткрытьОтчеты" id="316">
+							<Type>CommandBarButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.ОткрытьОтчеты</CommandName>
+							<ExtendedTooltip name="ФормаОткрытьОтчетыРасширеннаяПодсказка" id="317"/>
+						</Button>
+					</ChildItems>
+				</ButtonGroup>
+				<Popup name="ПодменюПечать" id="282">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печать</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подменю печать</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.Print</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="283"/>
+				</Popup>
+				<Popup name="ФормаГруппаСервис" id="402">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сервис</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма группа сервис</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ФормаГруппаСервисРасширеннаяПодсказка" id="403"/>
+					<ChildItems>
+						<Popup name="ПодменюОтчеты" id="404">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отчеты</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Picture>
+								<xr:Ref>StdPicture.Report</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Representation>PictureAndText</Representation>
+							<ExtendedTooltip name="ПодменюОтчетыРасширеннаяПодсказка" id="405"/>
+						</Popup>
+					</ChildItems>
+				</Popup>
+				<Popup name="ФормаГруппаНастройки" id="140">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма группа настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ФормаГруппаНастройкиРасширеннаяПодсказка" id="141"/>
+					<ChildItems>
+						<ButtonGroup name="ФормаГруппаНастройкиСписка" id="148">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки списка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ФормаГруппаНастройкиСпискаРасширеннаяПодсказка" id="149"/>
+							<ChildItems>
+								<Button name="ФормаНастройкаСписка" id="160">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.ListSettings</CommandName>
+									<ExtendedTooltip name="ФормаНастройкаСпискаРасширеннаяПодсказка" id="161"/>
+								</Button>
+								<Button name="ФормаЗагрузитьНастройкиДинамическогоСписка" id="150">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.LoadDynamicListSettings</CommandName>
+									<ExtendedTooltip name="ФормаЗагрузитьНастройкиДинамическогоСпискаРасширеннаяПодсказка" id="151"/>
+								</Button>
+								<Button name="ФормаСохранитьНастройкиДинамическогоСписка" id="152">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.SaveDynamicListSettings</CommandName>
+									<ExtendedTooltip name="ФормаСохранитьНастройкиДинамическогоСпискаРасширеннаяПодсказка" id="153"/>
+								</Button>
+								<Button name="ФормаСтандартныеНастройкиДинамическогоСписка" id="154">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.DynamicListStandardSettings</CommandName>
+									<ExtendedTooltip name="ФормаСтандартныеНастройкиДинамическогоСпискаРасширеннаяПодсказка" id="155"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+						<Button name="УчитыватьИерархиюПодразделений" id="308">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.УчитыватьИерархиюПодразделений</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="УчитыватьИерархиюПодразделенийРасширеннаяПодсказка" id="309"/>
+						</Button>
+						<Button name="ФормаПоказыватьУдаленные" id="44">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ПоказыватьУдаленные</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ФормаПоказыватьУдаленныеРасширеннаяПодсказка" id="45"/>
+						</Button>
+						<Button name="ФормаИзменитьФорму" id="158">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+							<ExtendedTooltip name="ФормаИзменитьФормуРасширеннаяПодсказка" id="159"/>
+						</Button>
+					</ChildItems>
+				</Popup>
+				<SearchStringAddition name="ФормаСтрокаПоиска" id="299">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>SearchStringRepresentation</Type>
+					</AdditionSource>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Строка поиска</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ФормаСтрокаПоискаКонтекстноеМеню" id="300"/>
+					<ExtendedTooltip name="ФормаСтрокаПоискаРасширеннаяПодсказка" id="301"/>
+				</SearchStringAddition>
+				<SearchControlAddition name="ФормаУправлениеПоиском" id="302">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>SearchControl</Type>
+					</AdditionSource>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управление поиском</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ФормаУправлениеПоискомКонтекстноеМеню" id="303"/>
+					<ExtendedTooltip name="ФормаУправлениеПоискомРасширеннаяПодсказка" id="304"/>
+				</SearchControlAddition>
+				<Button name="ФормаВывестиСписок" id="162">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.OutputList</CommandName>
+					<ExtendedTooltip name="ФормаВывестиСписокРасширеннаяПодсказка" id="163"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="МК" id="363">
+			<Visible>false</Visible>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:МК_ЦветФонаГруппы</BackColor>
+			<ExtendedTooltip name="МКРасширеннаяПодсказка" id="364"/>
+			<ChildItems>
+				<UsualGroup name="МК_КоманднаяПанель" id="379">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="МК_КоманднаяПанельРасширеннаяПодсказка" id="380"/>
+					<ChildItems>
+						<Button name="ПоказатьМножественноеВыделение" id="400">
+							<Type>UsualButton</Type>
+							<CommandName>Form.StandardCommand.ShowMultipleSelection</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.CheckAll</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+							<ExtendedTooltip name="ПоказатьМножественноеВыделениеРасширеннаяПодсказка" id="401"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="МК_ГруппаСписокИДополнительныеДанные" id="361">
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>web:White</BackColor>
+					<ExtendedTooltip name="МК_ГруппаСписокИДополнительныеДанныеРасширеннаяПодсказка" id="362"/>
+					<ChildItems>
+						<UsualGroup name="МК_ГруппаСписок" id="375">
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="МК_ГруппаСписокРасширеннаяПодсказка" id="376"/>
+							<ChildItems>
+								<UsualGroup name="МК_ВерхняяПанель" id="365">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="МК_ВерхняяПанельРасширеннаяПодсказка" id="366"/>
+									<ChildItems>
+										<UsualGroup name="МК_ГруппаВариантОтбораПоДате" id="334">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа вариант отбора по дате</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа вариант отбора по дате</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalStretch>true</HorizontalStretch>
+											<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>web:White</BackColor>
+											<ExtendedTooltip name="МК_ГруппаВариантОтбораПоДатеРасширеннаяПодсказка" id="335"/>
+											<ChildItems>
+												<Button name="МК_ВариантОтбора" id="369">
+													<Type>UsualButton</Type>
+													<Representation>Text</Representation>
+													<Height>1</Height>
+													<HorizontalStretch>true</HorizontalStretch>
+													<CommandName>Form.Command.МК_ВариантОтбора</CommandName>
+													<TextColor>web:Black</TextColor>
+													<BackColor>style:МК_ЦветДополнительнойКнопки</BackColor>
+													<BorderColor>style:МК_ЦветДополнительнойКнопки</BorderColor>
+													<Font ref="style:МК_ШрифтДополнительнойКнопки" kind="StyleItem"/>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Период</v8:content>
+														</v8:item>
+													</Title>
+													<Shape>Oval</Shape>
+													<ShapeRepresentation>Always</ShapeRepresentation>
+													<ExtendedTooltip name="МК_ВариантОтбораРасширеннаяПодсказка" id="370"/>
+												</Button>
+												<InputField name="МК_ОтборДатаОтсутствияПолеВвода" id="339">
+													<DataPath>ОтборДатаОтсутствия</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<HorizontalStretch>true</HorizontalStretch>
+													<SpinButton>false</SpinButton>
+													<TextColor>style:МК_ЦветТекстаПоляФормы</TextColor>
+													<Font ref="style:МК_ШрифтПоляФормы" kind="StyleItem"/>
+													<ContextMenu name="МК_ОтборДатаОтсутствияПолеВводаКонтекстноеМеню" id="340"/>
+													<ExtendedTooltip name="МК_ОтборДатаОтсутствияПолеВводаРасширеннаяПодсказка" id="341"/>
+													<Events>
+														<Event name="OnChange">ОтборДатаОтсутствияПриИзменении</Event>
+													</Events>
+												</InputField>
+												<Button name="МК_ПоказатьСкрытьФильтры" id="371">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Height>1</Height>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<HorizontalStretch>true</HorizontalStretch>
+													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<GroupVerticalAlign>Center</GroupVerticalAlign>
+													<CommandName>Form.Command.МК_ПоказатьСкрытьФильтры</CommandName>
+													<TextColor>web:Black</TextColor>
+													<BackColor>style:МК_ЦветДополнительнойКнопки</BackColor>
+													<BorderColor>style:МК_ЦветДополнительнойКнопки</BorderColor>
+													<Shape>Oval</Shape>
+													<ShapeRepresentation>Always</ShapeRepresentation>
+													<ExtendedTooltip name="МК_ПоказатьСкрытьФильтрыРасширеннаяПодсказка" id="372"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="МК_НижняяПанель" id="367">
+									<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:МК_ЦветФонаГруппы</BackColor>
+									<HiddenStateTitleBackColor>style:МК_ЦветФонаГруппы</HiddenStateTitleBackColor>
+									<ExtendedTooltip name="МК_НижняяПанельРасширеннаяПодсказка" id="368"/>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаФильтрыИДопДанные" id="390">
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФильтрыИДопДанныеРасширеннаяПодсказка" id="391"/>
+							<ChildItems>
+								<UsualGroup name="МК_ГруппаФильтры" id="351">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Фильтры</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<ChildrenAlign>ItemsRightTitlesLeft</ChildrenAlign>
+									<Behavior>Usual</Behavior>
+									<CollapsedRepresentationTitle>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Фильтры</v8:content>
+										</v8:item>
+									</CollapsedRepresentationTitle>
+									<Collapsed>true</Collapsed>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>web:White</BackColor>
+									<ExtendedTooltip name="МК_ГруппаФильтрыРасширеннаяПодсказка" id="352"/>
+									<ChildItems>
+										<UsualGroup name="МК_ГруппаФильтрыШапка" id="392">
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="МК_ГруппаФильтрыШапкаРасширеннаяПодсказка" id="393"/>
+											<ChildItems>
+												<Button name="МК_ОчиститьФильтры" id="381">
+													<Type>UsualButton</Type>
+													<Representation>Text</Representation>
+													<Height>1</Height>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<HorizontalStretch>true</HorizontalStretch>
+													<CommandName>Form.Command.МК_ОчиститьФильтры</CommandName>
+													<TextColor>web:Black</TextColor>
+													<BackColor>style:МК_ЦветДополнительнойКнопки</BackColor>
+													<BorderColor>style:МК_ЦветДополнительнойКнопки</BorderColor>
+													<Font ref="style:МК_ШрифтДополнительнойКнопки" kind="StyleItem"/>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Очистить</v8:content>
+														</v8:item>
+													</Title>
+													<Shape>Oval</Shape>
+													<ShapeRepresentation>Always</ShapeRepresentation>
+													<ExtendedTooltip name="МК_ОчиститьФильтрыРасширеннаяПодсказка" id="382"/>
+												</Button>
+												<Button name="МК_ЗакрытьОтборы" id="398">
+													<Type>UsualButton</Type>
+													<Representation>PictureAndText</Representation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<GroupVerticalAlign>Top</GroupVerticalAlign>
+													<CommandName>Form.Command.МК_ЗакрытьОтборы</CommandName>
+													<TextColor>#000000</TextColor>
+													<BackColor>style:МК_ЦветАктивнойДополнительнойКнопки</BackColor>
+													<BorderColor>style:МК_ЦветДополнительнойКнопки</BorderColor>
+													<Font ref="style:SmallTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отборы</v8:content>
+														</v8:item>
+													</Title>
+													<Shape>Oval</Shape>
+													<PictureLocation>Right</PictureLocation>
+													<ExtendedTooltip name="МК_ЗакрытьОтборыРасширеннаяПодсказка" id="399"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="МК_ОтборПричина" id="345">
+											<DataPath>ОтборПричина</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Причина</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по причине отсутствия</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<MaxWidth>24</MaxWidth>
+											<Height>1</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<OpenButton>false</OpenButton>
+											<CreateButton>false</CreateButton>
+											<QuickChoice>true</QuickChoice>
+											<Font ref="style:SmallTextFont" kind="StyleItem"/>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Причина</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="МК_ОтборПричинаКонтекстноеМеню" id="346"/>
+											<ExtendedTooltip name="МК_ОтборПричинаРасширеннаяПодсказка" id="347"/>
+											<Events>
+												<Event name="OnChange">ОтборПричинаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="МК_ОтборПодразделение" id="348">
+											<DataPath>ОтборПодразделение</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подразделение</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по подразделению отсутствующего</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<MaxWidth>24</MaxWidth>
+											<Height>1</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<OpenButton>false</OpenButton>
+											<Font ref="style:SmallTextFont" kind="StyleItem"/>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подразделение</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="МК_ОтборПодразделениеКонтекстноеМеню" id="349"/>
+											<ExtendedTooltip name="МК_ОтборПодразделениеРасширеннаяПодсказка" id="350"/>
+											<Events>
+												<Event name="OnChange">ОтборПодразделениеПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="МК_ОтборУдаленнаяРабота" id="342">
+											<DataPath>ОтборУдаленнаяРабота</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Удаленная работа</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по признаку удаленной работы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<MaxWidth>24</MaxWidth>
+											<Height>1</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<OpenButton>false</OpenButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Все сотрудники</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Все</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Только работающие удаленно</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">ТолькоРаботающиеУдаленно</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Только не работающие удаленно</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">ТолькоНеРаботающиеУдаленно</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<Font ref="style:SmallTextFont" kind="StyleItem"/>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по признаку удаленной работы</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="МК_ОтборУдаленнаяРаботаКонтекстноеМеню" id="343"/>
+											<ExtendedTooltip name="МК_ОтборУдаленнаяРаботаРасширеннаяПодсказка" id="344"/>
+											<Events>
+												<Event name="OnChange">ОтборУдаленнаяРаботаПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="МК_ГруппаДополнительныеДанные" id="377">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="МК_ГруппаДополнительныеДанныеРасширеннаяПодсказка" id="378"/>
+									<ChildItems>
+										<Button name="МК_Открыть" id="385">
+											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
+											<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+											<CommandName>Form.StandardCommand.Change</CommandName>
+											<TextColor>#000000</TextColor>
+											<BackColor>style:МК_ЦветДополнительнойКнопки</BackColor>
+											<BorderColor>style:МК_ЦветДополнительнойКнопки</BorderColor>
+											<Font ref="style:SmallTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Открыть</v8:content>
+												</v8:item>
+											</Title>
+											<Shape>Oval</Shape>
+											<ExtendedTooltip name="МК_ОткрытьРасширеннаяПодсказка" id="386"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСписокИДополнительныеДанные" id="172">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список и дополнительные данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список и дополнительные данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСписокИДополнительныеДанныеРасширеннаяПодсказка" id="173"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДополнительныеДанные" id="174">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительные данные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительные данные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДополнительныеДанныеРасширеннаяПодсказка" id="175"/>
+					<ChildItems>
+						<CalendarField name="ОтборДатаОтсутствия" id="89">
+							<DataPath>ОтборДатаОтсутствия</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>1</Width>
+							<Height>1</Height>
+							<VerticalStretch>false</VerticalStretch>
+							<ContextMenu name="ОтборДатаОтсутствияКонтекстноеМеню" id="90"/>
+							<ExtendedTooltip name="ОтборДатаОтсутствияРасширеннаяПодсказка" id="91"/>
+							<Events>
+								<Event name="OnChange">ОтборДатаОтсутствияПриИзменении</Event>
+								<Event name="OnPeriodOutput">ОтборДатаОтсутствияПриВыводеПериода</Event>
+							</Events>
+						</CalendarField>
+						<HTMLDocumentField name="ПолноеОписаниеОтсутствия" id="55">
+							<DataPath>ПолноеОписаниеОтсутствия</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>29</Width>
+							<Height>5</Height>
+							<ContextMenu name="ПолноеОписаниеОтсутствияКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ПолноеОписаниеОтсутствияРасширеннаяПодсказка" id="57"/>
+							<Events>
+								<Event name="OnClick">ПолноеОписаниеОтсутствияПриНажатии</Event>
+							</Events>
+						</HTMLDocumentField>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="Список" id="3">
+					<Representation>List</Representation>
+					<DefaultItem>true</DefaultItem>
+					<ChoiceMode>true</ChoiceMode>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<InitialTreeView>ExpandTopLevel</InitialTreeView>
+					<EnableStartDrag>true</EnableStartDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Список</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>Post</ExcludedCommand>
+						<ExcludedCommand>SetDateInterval</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+						<ExcludedCommand>UndoPosting</ExcludedCommand>
+					</CommandSet>
+					<RefreshRequest>PullFromTop</RefreshRequest>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<UserSettingsGroup>ПользовательскиеНастройкиСписка</UserSettingsGroup>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+					<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+					<SearchStringAddition name="СписокСтрокаПоиска" id="75">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="76"/>
+						<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="77"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокСостояниеПросмотра" id="78">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="79"/>
+						<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="80"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокУправлениеПоиском" id="81">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="82"/>
+						<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="83"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
+						<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+						<Event name="OnGetDataAtServer">СписокПриПолученииДанныхНаСервере</Event>
+						<Event name="RefreshRequestProcessing">СписокОбработкаЗапросаОбновления</Event>
+					</Events>
+					<ChildItems>
+						<ColumnGroup name="МК_ГруппаКолонок" id="355">
+							<Visible>false</Visible>
+							<ExtendedTooltip name="МК_ГруппаКолонокРасширеннаяПодсказка" id="356"/>
+						</ColumnGroup>
+						<LabelField name="Сотрудник" id="28">
+							<DataPath>Список.Сотрудник</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кто отсутствует</v8:content>
+								</v8:item>
+							</Title>
+							<Width>20</Width>
+							<ContextMenu name="СотрудникКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="30"/>
+						</LabelField>
+						<ColumnGroup name="ГруппаПериодСтрокой" id="84">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период строкой</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период строкой</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>7</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="ГруппаПериодСтрокойРасширеннаяПодсказка" id="85"/>
+							<ChildItems>
+								<LabelField name="ДатаНачала" id="31">
+									<DataPath>Список.ДатаНачала</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="33"/>
+								</LabelField>
+								<LabelField name="ПериодСтрокой" id="86">
+									<DataPath>Список.ПериодСтрокой</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Когда отсутствует сотрудник</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>7</Width>
+									<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="ПериодСтрокойРасширеннаяПодсказка" id="88"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="ГруппаКомментарий" id="48">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа комментарий</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа комментарий</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="ГруппаКомментарийРасширеннаяПодсказка" id="49"/>
+							<ChildItems>
+								<LabelField name="ВидОтсутствия" id="50">
+									<DataPath>Список.ВидОтсутствия</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>10</Width>
+									<ContextMenu name="ВидОтсутствияКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ВидОтсутствияРасширеннаяПодсказка" id="52"/>
+								</LabelField>
+								<LabelField name="Комментарий" id="37">
+									<DataPath>Список.Комментарий</DataPath>
+									<Width>10</Width>
+									<Height>1</Height>
+									<ContextMenu name="КомментарийКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="39"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<LabelField name="Ссылка" id="58">
+							<DataPath>Список.Ссылка</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<ContextMenu name="СсылкаКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="60"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ВесьДень</Field>
+				<Field>Список.ДатаНачала</Field>
+				<Field>Список.ДатаОкончания</Field>
+				<Field>Список.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументОтсутствие.Ссылка КАК Ссылка,
+	ДокументОтсутствие.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументОтсутствие.Номер КАК Номер,
+	ДокументОтсутствие.Дата КАК Дата,
+	ДокументОтсутствие.Проведен КАК Проведен,
+	ДокументОтсутствие.Автор КАК Автор,
+	ДокументОтсутствие.ВесьДень КАК ВесьДень,
+	ДокументОтсутствие.ВидОтсутствия КАК ВидОтсутствия,
+	ДокументОтсутствие.ДатаНачала КАК ДатаНачала,
+	НАЧАЛОПЕРИОДА(ДокументОтсутствие.ДатаНачала, ДЕНЬ) КАК ДеньДатаНачала,
+	ДокументОтсутствие.ДатаОкончания КАК ДатаОкончания,
+	НАЧАЛОПЕРИОДА(ДокументОтсутствие.ДатаОкончания, ДЕНЬ) КАК ДеньДатаОкончания,
+	ДокументОтсутствие.Комментарий КАК Комментарий,
+	ДокументОтсутствие.Сотрудник КАК Сотрудник,
+	ДокументОтсутствие.МоментВремени КАК МоментВремени,
+	ДокументОтсутствие.ПериодСтрокой КАК ПериодСтрокой,
+	ДокументОтсутствие.БудуРазбиратьЗадачи КАК БудуРазбиратьЗадачи
+ИЗ
+	Документ.Отсутствие КАК ДокументОтсутствие
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыОтсутствий КАК ВидыОтсутствий
+		ПО ДокументОтсутствие.ВидОтсутствия = ВидыОтсутствий.Ссылка
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Сотрудники КАК СправочникСотрудники
+		ПО ДокументОтсутствие.Сотрудник = СправочникСотрудники.Ссылка}
+{ГДЕ
+	(ДокументОтсутствие.ПометкаУдаления = &amp;ОтборПоказыватьУдаленные),
+	(ДокументОтсутствие.ДатаНачала &lt; &amp;КонецДняОтбора
+	И ДокументОтсутствие.ДатаОкончания &gt; &amp;НачалоДняОтбора),
+	(ДокументОтсутствие.Ссылка В (&amp;МассивСсылок)),
+	(ДокументОтсутствие.ВидОтсутствия = &amp;ВидОтсутствия),
+	(ДокументОтсутствие.ВидОтсутствия В (&amp;ВидыОтсутствия)),
+	(СправочникСотрудники.Подразделение = &amp;Подразделение),
+	(СправочникСотрудники.Подразделение В ИЕРАРХИИ (&amp;ПодразделениеВИерархии))}</QueryText>
+				<MainTable>Document.Отсутствие</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Сотрудник</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаНачала</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>OrGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+										<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+										<dcsset:right xsi:type="v8:StandardBeginningDate">
+											<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextYear</v8:variant>
+										</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+										<dcsset:comparisonType>Less</dcsset:comparisonType>
+										<dcsset:right xsi:type="v8:StandardBeginningDate">
+											<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisYear</v8:variant>
+										</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='d MMMM yyyy'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Начало весь день - другой год</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаНачала</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>OrGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemGroup">
+										<dcsset:groupType>AndGroup</dcsset:groupType>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+											<dcsset:comparisonType>Less</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextYear</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+											<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemGroup">
+										<dcsset:groupType>AndGroup</dcsset:groupType>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+											<dcsset:comparisonType>Less</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfLastDay</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+											<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisYear</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+									</dcsset:item>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='d MMMM'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Начало весь день - этот год</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаНачала</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextYear</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДеньДатаНачала</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='За''в''тра'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Начало весь день - завтра</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаНачала</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+									<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='Се''г''о''д''ня'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Начало весь день - сегодня</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаНачала</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+									<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfLastDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='В''ч''ера'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Начало весь день - вчера</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаОкончания</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>OrGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+										<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+										<dcsset:right xsi:type="v8:StandardBeginningDate">
+											<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextYear</v8:variant>
+										</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+										<dcsset:comparisonType>Less</dcsset:comparisonType>
+										<dcsset:right xsi:type="v8:StandardBeginningDate">
+											<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisYear</v8:variant>
+										</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='d MMMM yyyy'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Окончание весь день - другой год</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаОкончания</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>OrGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemGroup">
+										<dcsset:groupType>AndGroup</dcsset:groupType>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+											<dcsset:comparisonType>Less</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextYear</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+											<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemGroup">
+										<dcsset:groupType>AndGroup</dcsset:groupType>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+											<dcsset:comparisonType>Less</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfLastDay</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+											<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisYear</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+									</dcsset:item>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='d MMMM'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Окончание весь день - этот год</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаОкончания</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextYear</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДеньДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='За''в''тра'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Окончание весь день - завтра</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаОкончания</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='Се''г''о''д''ня'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Окончание весь день - сегодня</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаОкончания</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfLastDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='В''ч''ера'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Окончание весь день - вчера</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаНачала</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>OrGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+										<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+										<dcsset:right xsi:type="v8:StandardBeginningDate">
+											<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextYear</v8:variant>
+										</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+										<dcsset:comparisonType>Less</dcsset:comparisonType>
+										<dcsset:right xsi:type="v8:StandardBeginningDate">
+											<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisYear</v8:variant>
+										</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='d MMMM yyyy HH:mm'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Начало - другой год</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаНачала</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>OrGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemGroup">
+										<dcsset:groupType>AndGroup</dcsset:groupType>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+											<dcsset:comparisonType>Less</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextYear</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+											<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemGroup">
+										<dcsset:groupType>AndGroup</dcsset:groupType>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+											<dcsset:comparisonType>Less</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfLastDay</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+											<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisYear</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+									</dcsset:item>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='d MMMM HH:mm'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Начало - этот год</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаНачала</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextYear</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДеньДатаНачала</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='За''в''тра HH:mm'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Начало - завтра</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаНачала</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+									<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='Се''г''о''д''ня HH:mm'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Начало - сегодня</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаНачала</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+									<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfLastDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='В''ч''ера HH:mm'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Начало - вчера</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаОкончания</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>OrGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+										<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+										<dcsset:right xsi:type="v8:StandardBeginningDate">
+											<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextYear</v8:variant>
+										</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+										<dcsset:comparisonType>Less</dcsset:comparisonType>
+										<dcsset:right xsi:type="v8:StandardBeginningDate">
+											<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisYear</v8:variant>
+										</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='d MMMM yyyy HH:mm'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Окончание - другой год</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаОкончания</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>OrGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemGroup">
+										<dcsset:groupType>AndGroup</dcsset:groupType>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+											<dcsset:comparisonType>Less</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextYear</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+											<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemGroup">
+										<dcsset:groupType>AndGroup</dcsset:groupType>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+											<dcsset:comparisonType>Less</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfLastDay</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+											<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+											<dcsset:right xsi:type="v8:StandardBeginningDate">
+												<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisYear</v8:variant>
+											</dcsset:right>
+										</dcsset:item>
+									</dcsset:item>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='d MMMM HH:mm'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Окончание - этот год</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаОкончания</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextYear</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДеньДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='За''в''тра HH:mm'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Окончание - завтра</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаОкончания</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='Се''г''о''д''ня HH:mm'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Окончание - сегодня</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаОкончания</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfLastDay</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВесьДень</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">ДФ='В''ч''ера HH:mm'</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Окончание - вчера</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Сотрудник</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Шрифт</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="true" kind="StyleItem"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтборДатаОтсутствия" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На дату</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьУдаленные" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПоказыватьУдаленные</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПолноеОписаниеОтсутствия" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полное описание отсутствия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущееОтсутствие" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее отсутствие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.Отсутствие</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантОтбора" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ВариантОтбора</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтборПодразделение" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтборПодразделение</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="УчитыватьИерархиюПодразделений" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать иерархию подразделений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>УчитыватьИерархиюПодразделений</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтборПричина" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор причина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыОтсутствий</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтборПричина</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтборУдаленнаяРабота" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор удаленная работа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ОтборУдаленнаяРабота</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ЭтоМобильныйКлиент" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это мобильный клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоМобильноеУстройствоСБольшимЭкраном" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это мобильное устройство с большим экраном</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МК_ЭлементыСтиля" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М к элементы стиля</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказыватьУдаленные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьУдаленные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УчитыватьИерархиюПодразделений" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать иерархию подразделений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать иерархию подразделений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УчитыватьИерархиюПодразделений</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьОтчеты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчеты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть отчеты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьОтчеты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="МК_ВариантОтбора" id="6">
+			<Action>МК_ВариантОтбора</Action>
+		</Command>
+		<Command name="МК_ПоказатьСкрытьФильтры" id="7">
+			<Picture>
+				<xr:Ref>CommonPicture.МК_Фильтр</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>МК_ПоказатьСкрытьФильтры</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="МК_ОчиститьФильтры" id="8">
+			<Action>МК_ОчиститьФильтры</Action>
+		</Command>
+		<Command name="МК_ЗакрытьОтборы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М к закрыть отборы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗакрытьОтборы</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>Catalog.ПравилаОбработкиПисем.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Document.ИсходящееПисьмо.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.СоздатьПисьмоНаОсновании</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

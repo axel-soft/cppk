@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаДатаПометка" id="233">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаПометкаРасширеннаяПодсказка" id="234"/>
+			<ChildItems>
+				<InputField name="ДатаСортировки" id="1">
+					<DataPath>Запись.ДатаСортировки</DataPath>
+					<ContextMenu name="ДатаСортировкиКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ДатаСортировкиРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<CheckBoxField name="ПометкаУдаления" id="4">
+					<DataPath>Запись.ПометкаУдаления</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПометкаУдаленияКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ПометкаУдаленияРасширеннаяПодсказка" id="6"/>
+				</CheckBoxField>
+				<InputField name="Документ" id="7">
+					<DataPath>Запись.Документ</DataPath>
+					<ContextMenu name="ДокументКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="9"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКолонки" id="227">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКолонкиРасширеннаяПодсказка" id="228"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКолонка1" id="229">
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКолонка1РасширеннаяПодсказка" id="230"/>
+					<ChildItems>
+						<InputField name="АдресатыДляСписков" id="10">
+							<DataPath>Запись.АдресатыДляСписков</DataPath>
+							<ContextMenu name="АдресатыДляСписковКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="АдресатыДляСписковРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="Важность" id="13">
+							<DataPath>Запись.Важность</DataPath>
+							<ContextMenu name="ВажностьКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ВажностьРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="Валюта" id="16">
+							<DataPath>Запись.Валюта</DataPath>
+							<ContextMenu name="ВалютаКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="ВидДокумента" id="19">
+							<DataPath>Запись.ВидДокумента</DataPath>
+							<ContextMenu name="ВидДокументаКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="ВидКорреспонденции" id="22">
+							<DataPath>Запись.ВидКорреспонденции</DataPath>
+							<ContextMenu name="ВидКорреспонденцииКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ВидКорреспонденцииРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<InputField name="ВидОбращения" id="25">
+							<DataPath>Запись.ВидОбращения</DataPath>
+							<ContextMenu name="ВидОбращенияКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ВидОбращенияРасширеннаяПодсказка" id="27"/>
+						</InputField>
+						<InputField name="ВопросДеятельности" id="28">
+							<DataPath>Запись.ВопросДеятельности</DataPath>
+							<ContextMenu name="ВопросДеятельностиКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ВопросДеятельностиРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<InputField name="ВременныйНомер" id="31">
+							<DataPath>Запись.ВременныйНомер</DataPath>
+							<ContextMenu name="ВременныйНомерКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ВременныйНомерРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<InputField name="ГрифДоступа" id="34">
+							<DataPath>Запись.ГрифДоступа</DataPath>
+							<ContextMenu name="ГрифДоступаКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ГрифДоступаРасширеннаяПодсказка" id="36"/>
+						</InputField>
+						<InputField name="ДатаИзмененияСостоянияОбработки" id="37">
+							<DataPath>Запись.ДатаИзмененияСостоянияОбработки</DataPath>
+							<ContextMenu name="ДатаИзмененияСостоянияОбработкиКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ДатаИзмененияСостоянияОбработкиРасширеннаяПодсказка" id="39"/>
+						</InputField>
+						<InputField name="ДатаНачалаДействия" id="40">
+							<DataPath>Запись.ДатаНачалаДействия</DataPath>
+							<ContextMenu name="ДатаНачалаДействияКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ДатаНачалаДействияРасширеннаяПодсказка" id="42"/>
+						</InputField>
+						<InputField name="ДатаОкончанияДействия" id="43">
+							<DataPath>Запись.ДатаОкончанияДействия</DataPath>
+							<ContextMenu name="ДатаОкончанияДействияКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ДатаОкончанияДействияРасширеннаяПодсказка" id="45"/>
+						</InputField>
+						<InputField name="ДатаПолученияОригинала" id="46">
+							<DataPath>Запись.ДатаПолученияОригинала</DataPath>
+							<ContextMenu name="ДатаПолученияОригиналаКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ДатаПолученияОригиналаРасширеннаяПодсказка" id="48"/>
+						</InputField>
+						<InputField name="ДатаПроверкиЭП" id="49">
+							<DataPath>Запись.ДатаПроверкиЭП</DataPath>
+							<ContextMenu name="ДатаПроверкиЭПКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ДатаПроверкиЭПРасширеннаяПодсказка" id="51"/>
+						</InputField>
+						<InputField name="ДатаРегистрации" id="52">
+							<DataPath>Запись.ДатаРегистрации</DataPath>
+							<ContextMenu name="ДатаРегистрацииКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ДатаРегистрацииРасширеннаяПодсказка" id="54"/>
+						</InputField>
+						<InputField name="ДатаСоздания" id="55">
+							<DataPath>Запись.ДатаСоздания</DataPath>
+							<ContextMenu name="ДатаСозданияКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ДатаСозданияРасширеннаяПодсказка" id="57"/>
+						</InputField>
+						<InputField name="Дело" id="58">
+							<DataPath>Запись.Дело</DataPath>
+							<ContextMenu name="ДелоКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ДелоРасширеннаяПодсказка" id="60"/>
+						</InputField>
+						<CheckBoxField name="Дубликат" id="61">
+							<DataPath>Запись.Дубликат</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДубликатКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ДубликатРасширеннаяПодсказка" id="63"/>
+						</CheckBoxField>
+						<CheckBoxField name="ЕстьЗадачи" id="64">
+							<DataPath>Запись.ЕстьЗадачи</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЕстьЗадачиКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ЕстьЗадачиРасширеннаяПодсказка" id="66"/>
+						</CheckBoxField>
+						<CheckBoxField name="ЕстьКатегории" id="67">
+							<DataPath>Запись.ЕстьКатегории</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЕстьКатегорииКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ЕстьКатегорииРасширеннаяПодсказка" id="69"/>
+						</CheckBoxField>
+						<CheckBoxField name="ЕстьФайлы" id="70">
+							<DataPath>Запись.ЕстьФайлы</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЕстьФайлыКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="ЕстьФайлыРасширеннаяПодсказка" id="72"/>
+						</CheckBoxField>
+						<InputField name="Заголовок" id="73">
+							<DataPath>Запись.Заголовок</DataPath>
+							<ContextMenu name="ЗаголовокКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="ЗаголовокРасширеннаяПодсказка" id="75"/>
+						</InputField>
+						<InputField name="Зарегистрировал" id="76">
+							<DataPath>Запись.Зарегистрировал</DataPath>
+							<ContextMenu name="ЗарегистрировалКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="ЗарегистрировалРасширеннаяПодсказка" id="78"/>
+						</InputField>
+						<CheckBoxField name="Исполнен" id="79">
+							<DataPath>Запись.Исполнен</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИсполненКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ИсполненРасширеннаяПодсказка" id="81"/>
+						</CheckBoxField>
+						<InputField name="ИсходящаяДата" id="82">
+							<DataPath>Запись.ИсходящаяДата</DataPath>
+							<ContextMenu name="ИсходящаяДатаКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ИсходящаяДатаРасширеннаяПодсказка" id="84"/>
+						</InputField>
+						<InputField name="ИсходящийНомер" id="85">
+							<DataPath>Запись.ИсходящийНомер</DataPath>
+							<ContextMenu name="ИсходящийНомерКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="ИсходящийНомерРасширеннаяПодсказка" id="87"/>
+						</InputField>
+						<InputField name="ИсходящийНомерИДата" id="88">
+							<DataPath>Запись.ИсходящийНомерИДата</DataPath>
+							<ContextMenu name="ИсходящийНомерИДатаКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="ИсходящийНомерИДатаРасширеннаяПодсказка" id="90"/>
+						</InputField>
+						<InputField name="Код" id="91">
+							<DataPath>Запись.Код</DataPath>
+							<ContextMenu name="КодКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="93"/>
+						</InputField>
+						<InputField name="Комментарий" id="94">
+							<DataPath>Запись.Комментарий</DataPath>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="96"/>
+						</InputField>
+						<InputField name="КонтрагентыДляСписков" id="97">
+							<DataPath>Запись.КонтрагентыДляСписков</DataPath>
+							<ContextMenu name="КонтрагентыДляСписковКонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="КонтрагентыДляСписковРасширеннаяПодсказка" id="99"/>
+						</InputField>
+						<InputField name="Наименование" id="100">
+							<DataPath>Запись.Наименование</DataPath>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="102"/>
+						</InputField>
+						<CheckBoxField name="НеДействует" id="103">
+							<DataPath>Запись.НеДействует</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НеДействуетКонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="НеДействуетРасширеннаяПодсказка" id="105"/>
+						</CheckBoxField>
+						<InputField name="НоменклатураДел" id="106">
+							<DataPath>Запись.НоменклатураДел</DataPath>
+							<ContextMenu name="НоменклатураДелКонтекстноеМеню" id="107"/>
+							<ExtendedTooltip name="НоменклатураДелРасширеннаяПодсказка" id="108"/>
+						</InputField>
+						<InputField name="Организация" id="109">
+							<DataPath>Запись.Организация</DataPath>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="110"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="111"/>
+						</InputField>
+						<InputField name="Ответственный" id="118">
+							<DataPath>Запись.Ответственный</DataPath>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="120"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКолонка2" id="231">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКолонка2РасширеннаяПодсказка" id="232"/>
+					<ChildItems>
+						<InputField name="Папка" id="121">
+							<DataPath>Запись.Папка</DataPath>
+							<ContextMenu name="ПапкаКонтекстноеМеню" id="122"/>
+							<ExtendedTooltip name="ПапкаРасширеннаяПодсказка" id="123"/>
+						</InputField>
+						<InputField name="Переадресовавший" id="124">
+							<DataPath>Запись.Переадресовавший</DataPath>
+							<ContextMenu name="ПереадресовавшийКонтекстноеМеню" id="125"/>
+							<ExtendedTooltip name="ПереадресовавшийРасширеннаяПодсказка" id="126"/>
+						</InputField>
+						<CheckBoxField name="Повторное" id="127">
+							<DataPath>Запись.Повторное</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПовторноеКонтекстноеМеню" id="128"/>
+							<ExtendedTooltip name="ПовторноеРасширеннаяПодсказка" id="129"/>
+						</CheckBoxField>
+						<InputField name="Подготовил" id="130">
+							<DataPath>Запись.Подготовил</DataPath>
+							<ContextMenu name="ПодготовилКонтекстноеМеню" id="131"/>
+							<ExtendedTooltip name="ПодготовилРасширеннаяПодсказка" id="132"/>
+						</InputField>
+						<InputField name="ПодотчетноеЛицо" id="133">
+							<DataPath>Запись.ПодотчетноеЛицо</DataPath>
+							<ContextMenu name="ПодотчетноеЛицоКонтекстноеМеню" id="134"/>
+							<ExtendedTooltip name="ПодотчетноеЛицоРасширеннаяПодсказка" id="135"/>
+						</InputField>
+						<CheckBoxField name="ПодписанВсеми" id="136">
+							<DataPath>Запись.ПодписанВсеми</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПодписанВсемиКонтекстноеМеню" id="137"/>
+							<ExtendedTooltip name="ПодписанВсемиРасширеннаяПодсказка" id="138"/>
+						</CheckBoxField>
+						<InputField name="ПодписанУтвержден" id="139">
+							<DataPath>Запись.ПодписанУтвержден</DataPath>
+							<ContextMenu name="ПодписанУтвержденКонтекстноеМеню" id="140"/>
+							<ExtendedTooltip name="ПодписанУтвержденРасширеннаяПодсказка" id="141"/>
+						</InputField>
+						<CheckBoxField name="ПодписанЭП" id="142">
+							<DataPath>Запись.ПодписанЭП</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПодписанЭПКонтекстноеМеню" id="143"/>
+							<ExtendedTooltip name="ПодписанЭПРасширеннаяПодсказка" id="144"/>
+						</CheckBoxField>
+						<InputField name="Подразделение" id="145">
+							<DataPath>Запись.Подразделение</DataPath>
+							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="146"/>
+							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="147"/>
+						</InputField>
+						<InputField name="ПредставлениеСостояния" id="148">
+							<DataPath>Запись.ПредставлениеСостояния</DataPath>
+							<ContextMenu name="ПредставлениеСостоянияКонтекстноеМеню" id="149"/>
+							<ExtendedTooltip name="ПредставлениеСостоянияРасширеннаяПодсказка" id="150"/>
+						</InputField>
+						<InputField name="Проект" id="151">
+							<DataPath>Запись.Проект</DataPath>
+							<ContextMenu name="ПроектКонтекстноеМеню" id="152"/>
+							<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="153"/>
+						</InputField>
+						<InputField name="РегистрационныйНомер" id="154">
+							<DataPath>Запись.РегистрационныйНомер</DataPath>
+							<ContextMenu name="РегистрационныйНомерКонтекстноеМеню" id="155"/>
+							<ExtendedTooltip name="РегистрационныйНомерРасширеннаяПодсказка" id="156"/>
+						</InputField>
+						<InputField name="РегистрационныйНомерИДата" id="157">
+							<DataPath>Запись.РегистрационныйНомерИДата</DataPath>
+							<ContextMenu name="РегистрационныйНомерИДатаКонтекстноеМеню" id="158"/>
+							<ExtendedTooltip name="РегистрационныйНомерИДатаРасширеннаяПодсказка" id="159"/>
+						</InputField>
+						<InputField name="Содержание" id="160">
+							<DataPath>Запись.Содержание</DataPath>
+							<ContextMenu name="СодержаниеКонтекстноеМеню" id="161"/>
+							<ExtendedTooltip name="СодержаниеРасширеннаяПодсказка" id="162"/>
+						</InputField>
+						<CheckBoxField name="ОригиналПолучен" id="112">
+							<DataPath>Запись.ОригиналПолучен</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОригиналПолученКонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="ОригиналПолученРасширеннаяПодсказка" id="114"/>
+						</CheckBoxField>
+						<InputField name="ОригиналПолучил" id="115">
+							<DataPath>Запись.ОригиналПолучил</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оригинал получил</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="ОригиналПолучилКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="ОригиналПолучилРасширеннаяПодсказка" id="117"/>
+						</InputField>
+						<CheckBoxField name="СодержитОригинал" id="163">
+							<DataPath>Запись.СодержитОригинал</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СодержитОригиналКонтекстноеМеню" id="164"/>
+							<ExtendedTooltip name="СодержитОригиналРасширеннаяПодсказка" id="165"/>
+						</CheckBoxField>
+						<InputField name="Создал" id="166">
+							<DataPath>Запись.Создал</DataPath>
+							<ContextMenu name="СоздалКонтекстноеМеню" id="167"/>
+							<ExtendedTooltip name="СоздалРасширеннаяПодсказка" id="168"/>
+						</InputField>
+						<InputField name="СостояниеДелаХранения" id="169">
+							<DataPath>Запись.СостояниеДелаХранения</DataPath>
+							<ContextMenu name="СостояниеДелаХраненияКонтекстноеМеню" id="170"/>
+							<ExtendedTooltip name="СостояниеДелаХраненияРасширеннаяПодсказка" id="171"/>
+						</InputField>
+						<InputField name="СостояниеКонтроля" id="172">
+							<DataPath>Запись.СостояниеКонтроля</DataPath>
+							<ContextMenu name="СостояниеКонтроляКонтекстноеМеню" id="173"/>
+							<ExtendedTooltip name="СостояниеКонтроляРасширеннаяПодсказка" id="174"/>
+						</InputField>
+						<InputField name="СостояниеМЭДО" id="175">
+							<DataPath>Запись.СостояниеМЭДО</DataPath>
+							<ContextMenu name="СостояниеМЭДОКонтекстноеМеню" id="176"/>
+							<ExtendedTooltip name="СостояниеМЭДОРасширеннаяПодсказка" id="177"/>
+						</InputField>
+						<InputField name="СостояниеОбработки" id="178">
+							<DataPath>Запись.СостояниеОбработки</DataPath>
+							<ContextMenu name="СостояниеОбработкиКонтекстноеМеню" id="179"/>
+							<ExtendedTooltip name="СостояниеОбработкиРасширеннаяПодсказка" id="180"/>
+						</InputField>
+						<InputField name="СостояниеЭДО" id="181">
+							<DataPath>Запись.СостояниеЭДО</DataPath>
+							<ContextMenu name="СостояниеЭДОКонтекстноеМеню" id="182"/>
+							<ExtendedTooltip name="СостояниеЭДОРасширеннаяПодсказка" id="183"/>
+						</InputField>
+						<InputField name="СпособПолучения" id="184">
+							<DataPath>Запись.СпособПолучения</DataPath>
+							<ContextMenu name="СпособПолученияКонтекстноеМеню" id="185"/>
+							<ExtendedTooltip name="СпособПолученияРасширеннаяПодсказка" id="186"/>
+						</InputField>
+						<InputField name="СрокИсполнения" id="187">
+							<DataPath>Запись.СрокИсполнения</DataPath>
+							<ContextMenu name="СрокИсполненияКонтекстноеМеню" id="188"/>
+							<ExtendedTooltip name="СрокИсполненияРасширеннаяПодсказка" id="189"/>
+						</InputField>
+						<InputField name="СрокКонтроля" id="190">
+							<DataPath>Запись.СрокКонтроля</DataPath>
+							<ContextMenu name="СрокКонтроляКонтекстноеМеню" id="191"/>
+							<ExtendedTooltip name="СрокКонтроляРасширеннаяПодсказка" id="192"/>
+						</InputField>
+						<InputField name="СрокКонтроляОбщий" id="193">
+							<DataPath>Запись.СрокКонтроляОбщий</DataPath>
+							<ContextMenu name="СрокКонтроляОбщийКонтекстноеМеню" id="194"/>
+							<ExtendedTooltip name="СрокКонтроляОбщийРасширеннаяПодсказка" id="195"/>
+						</InputField>
+						<InputField name="СтатусЭП" id="196">
+							<DataPath>Запись.СтатусЭП</DataPath>
+							<ContextMenu name="СтатусЭПКонтекстноеМеню" id="197"/>
+							<ExtendedTooltip name="СтатусЭПРасширеннаяПодсказка" id="198"/>
+						</InputField>
+						<InputField name="Сторона1" id="199">
+							<DataPath>Запись.Сторона1</DataPath>
+							<ContextMenu name="Сторона1КонтекстноеМеню" id="200"/>
+							<ExtendedTooltip name="Сторона1РасширеннаяПодсказка" id="201"/>
+						</InputField>
+						<InputField name="Сторона2" id="202">
+							<DataPath>Запись.Сторона2</DataPath>
+							<ContextMenu name="Сторона2КонтекстноеМеню" id="203"/>
+							<ExtendedTooltip name="Сторона2РасширеннаяПодсказка" id="204"/>
+						</InputField>
+						<InputField name="Сумма" id="205">
+							<DataPath>Запись.Сумма</DataPath>
+							<ContextMenu name="СуммаКонтекстноеМеню" id="206"/>
+							<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="207"/>
+						</InputField>
+						<InputField name="Тематика" id="208">
+							<DataPath>Запись.Тематика</DataPath>
+							<ContextMenu name="ТематикаКонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="ТематикаРасширеннаяПодсказка" id="210"/>
+						</InputField>
+						<InputField name="Утвердил" id="211">
+							<DataPath>Запись.Утвердил</DataPath>
+							<ContextMenu name="УтвердилКонтекстноеМеню" id="212"/>
+							<ExtendedTooltip name="УтвердилРасширеннаяПодсказка" id="213"/>
+						</InputField>
+						<InputField name="ЧисловойНомер" id="214">
+							<DataPath>Запись.ЧисловойНомер</DataPath>
+							<ContextMenu name="ЧисловойНомерКонтекстноеМеню" id="215"/>
+							<ExtendedTooltip name="ЧисловойНомерРасширеннаяПодсказка" id="216"/>
+						</InputField>
+						<CheckBoxField name="ЯвляетсяКомплектомДокументов" id="217">
+							<DataPath>Запись.ЯвляетсяКомплектомДокументов</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЯвляетсяКомплектомДокументовКонтекстноеМеню" id="218"/>
+							<ExtendedTooltip name="ЯвляетсяКомплектомДокументовРасширеннаяПодсказка" id="219"/>
+						</CheckBoxField>
+						<LabelField name="ИдентификаторОтметкиВремени" id="220">
+							<DataPath>Запись.ИдентификаторОтметкиВремени</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<ContextMenu name="ИдентификаторОтметкиВремениКонтекстноеМеню" id="221"/>
+							<ExtendedTooltip name="ИдентификаторОтметкиВремениРасширеннаяПодсказка" id="222"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ДанныеДокументовПредприятия</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Create</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаБыстрыеОтборы" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа быстрые отборы</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаБыстрыеОтборыРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<InputField name="ОтборДата" id="43">
+					<DataPath>ОтборДата</DataPath>
+					<ContextMenu name="ОтборДатаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ОтборДатаРасширеннаяПодсказка" id="45"/>
+					<Events>
+						<Event name="OnChange">ОтборДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОтборСотрудник" id="46">
+					<DataPath>ОтборСотрудник</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сотрудник</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ОтборСотрудникКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ОтборСотрудникРасширеннаяПодсказка" id="48"/>
+					<Events>
+						<Event name="OnChange">ОтборСотрудникПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОтборЗамещающий" id="49">
+					<DataPath>ОтборЗамещающий</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замещающий</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ОтборЗамещающийКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ОтборЗамещающийРасширеннаяПодсказка" id="51"/>
+					<Events>
+						<Event name="OnChange">ОтборЗамещающийПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CommandBar name="КомПанельФормы" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ком панель формы</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSource>Form</CommandSource>
+					<ExtendedTooltip name="КомПанельФормыРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<Button name="ПоказыватьУдаленные" id="56">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ПоказыватьУдаленные</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ПоказыватьУдаленныеРасширеннаяПодсказка" id="57"/>
+						</Button>
+						<Button name="ИсторияИзменений" id="76">
+							<Type>CommandBarButton</Type>
+							<CommandName>CommonCommand.ИсторияИзменений</CommandName>
+							<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ИсторияИзмененийРасширеннаяПодсказка" id="77"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="МК_ГруппаБыстрыеОтборы" id="81">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые отборы</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Collapsible</Behavior>
+			<CollapsedRepresentationTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые отборы</v8:content>
+				</v8:item>
+			</CollapsedRepresentationTitle>
+			<Collapsed>true</Collapsed>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="МК_ГруппаБыстрыеОтборыРасширеннаяПодсказка" id="82"/>
+			<ChildItems>
+				<InputField name="МК_БыстрыйОтборДата" id="83">
+					<DataPath>ОтборДата</DataPath>
+					<ContextMenu name="МК_БыстрыйОтборДатаКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="МК_БыстрыйОтборДатаРасширеннаяПодсказка" id="85"/>
+					<Events>
+						<Event name="OnChange">ОтборДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="МК_БыстрыйОтборСотрудник" id="86">
+					<DataPath>ОтборСотрудник</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сотрудник</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="МК_БыстрыйОтборСотрудникКонтекстноеМеню" id="87"/>
+					<ExtendedTooltip name="МК_БыстрыйОтборСотрудникРасширеннаяПодсказка" id="88"/>
+					<Events>
+						<Event name="OnChange">ОтборСотрудникПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="МК_БыстрыОтборЗамещающий" id="89">
+					<DataPath>ОтборЗамещающий</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замещающий</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="МК_БыстрыОтборЗамещающийКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="МК_БыстрыОтборЗамещающийРасширеннаяПодсказка" id="91"/>
+					<Events>
+						<Event name="OnChange">ОтборЗамещающийПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="КомПанельФормы2" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ком панель формы2</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="КомПанельФормы2РасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<Button name="Создать" id="60">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Item.Список.StandardCommand.Create</CommandName>
+					<ExtendedTooltip name="СоздатьРасширеннаяПодсказка" id="61"/>
+				</Button>
+				<Button name="Скопировать" id="62">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Item.Список.StandardCommand.Copy</CommandName>
+					<ExtendedTooltip name="СкопироватьРасширеннаяПодсказка" id="63"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>User settings group</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Список</DataPath>
+			<CommandSet>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>ChangeHistory</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+			</CommandSet>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
+				<Event name="OnGetDataAtServer">СписокПриПолученииДанныхНаСервере</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="Сотрудник" id="19">
+					<DataPath>Список.Сотрудник</DataPath>
+					<Width>40</Width>
+					<MaxWidth>30</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="СотрудникКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="Замещающий" id="22">
+					<DataPath>Список.Замещающий</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замещающий / помощник</v8:content>
+						</v8:item>
+					</Title>
+					<Width>40</Width>
+					<MaxWidth>30</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ЗамещающийКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ЗамещающийРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<InputField name="ПоКакимВопросам" id="25">
+					<DataPath>Список.ПоКакимВопросам</DataPath>
+					<Width>12</Width>
+					<MaxWidth>10</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПоКакимВопросамКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ПоКакимВопросамРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="ПериодСтрокой" id="67">
+					<DataPath>Список.ПериодСтрокой</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Width>22</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ПериодСтрокойРасширеннаяПодсказка" id="69"/>
+				</InputField>
+				<InputField name="Основание" id="64">
+					<DataPath>Список.Основание</DataPath>
+					<ContextMenu name="ОснованиеКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ОснованиеРасширеннаяПодсказка" id="66"/>
+				</InputField>
+				<LabelField name="Комментарий" id="92">
+					<DataPath>Список.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="94"/>
+				</LabelField>
+				<InputField name="Ссылка" id="95">
+					<DataPath>Список.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="97"/>
+				</InputField>
+				<InputField name="ПустаяКолонка" id="78">
+					<DataPath>Список.Действует</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=; БИ=</v8:content>
+						</v8:item>
+					</Format>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=; БИ=</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ПустаяКолонкаКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="ПустаяКолонкаРасширеннаяПодсказка" id="80"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ДатаНачала</Field>
+				<Field>Список.ДатаОкончания</Field>
+				<Field>Список.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЗамещающиеИПомощники.Ссылка КАК Ссылка,
+	ЗамещающиеИПомощники.ПометкаУдаления КАК ПометкаУдаления,
+	ЗамещающиеИПомощники.Наименование КАК Наименование,
+	ЗамещающиеИПомощники.Сотрудник КАК Сотрудник,
+	ЗамещающиеИПомощники.Замещающий КАК Замещающий,
+	ЗамещающиеИПомощники.ДатаНачала КАК ДатаНачала,
+	ЗамещающиеИПомощники.ДатаОкончания КАК ДатаОкончания,
+	ЗамещающиеИПомощники.Действует КАК Действует,
+	ЗамещающиеИПомощники.Создал КАК Создал,
+	ЗамещающиеИПомощники.Основание КАК Основание,
+	ЗамещающиеИПомощники.Комментарий КАК Комментарий,
+	ВЫРАЗИТЬ("" КАК СТРОКА(50)) КАК ПериодСтрокой,
+	ВЫБОР
+		КОГДА ИСТИНА В
+			(ВЫБРАТЬ
+				ИСТИНА
+			ИЗ
+				Справочник.ЗамещающиеИПомощники.ВопросыЗамещения КАК ВопросыЗамещения
+			ГДЕ
+				ВопросыЗамещения.Ссылка = ЗамещающиеИПомощники.Ссылка
+				И ВопросыЗамещения.Область = ЗНАЧЕНИЕ(Справочник.ОбластиЗамещения.ВсеОбласти))
+			ТОГДА &amp;СтрокаПоВсем
+		ИНАЧЕ &amp;СтрокаВыборочно
+	КОНЕЦ КАК ПоКакимВопросам
+ИЗ
+	Справочник.ЗамещающиеИПомощники КАК ЗамещающиеИПомощники
+ГДЕ
+	ЗамещающиеИПомощники.ВидЗамещения = &amp;ВидЗамещения
+{ГДЕ
+	(ЗамещающиеИПомощники.ДатаНачала &lt;= &amp;ОтборДата
+	И (ЗамещающиеИПомощники.ДатаОкончания &gt;= &amp;ОтборДата
+	ИЛИ ЗамещающиеИПомощники.ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1)))}</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаНачала</dcssch:dataPath>
+					<dcssch:field>ДатаНачала</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Замещающий</dcssch:dataPath>
+					<dcssch:field>Замещающий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сотрудник</dcssch:dataPath>
+					<dcssch:field>Сотрудник</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаОкончания</dcssch:dataPath>
+					<dcssch:field>ДатаОкончания</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Действует</dcssch:dataPath>
+					<dcssch:field>Действует</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Создал</dcssch:dataPath>
+					<dcssch:field>Создал</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Основание</dcssch:dataPath>
+					<dcssch:field>Основание</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПериодСтрокой</dcssch:dataPath>
+					<dcssch:field>ПериодСтрокой</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период строкой</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПоКакимВопросам</dcssch:dataPath>
+					<dcssch:field>ПоКакимВопросам</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По каким вопросам</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидЗамещения</dcssch:dataPath>
+					<dcssch:field>ВидЗамещения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВопросыЗамещения</dcssch:dataPath>
+					<dcssch:field>ВопросыЗамещения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Parameter>
+					<dcssch:name>ВидЗамещения</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид замещения</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:EnumRef.ВидыЗамещения</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ОтборДата</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор дата</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
+					<dcssch:useRestriction>false</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>СтрокаВыборочно</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Строка выборочно</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>СтрокаПоВсем</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Строка по всем</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<MainTable>Catalog.ЗамещающиеИПомощники</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Сотрудник.Владелец.Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>71509c14-f340-4edb-a275-e6e2fc273903</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтборДата" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действующие на</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборСотрудник" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборЗамещающий" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Замещающий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьУдаленные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПоказыватьУдаленные</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ЭтоМобильныйКлиент" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это мобильный клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказыватьУдаленные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоказыватьУдаленные</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ВидЗамещения">
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыЗамещения</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

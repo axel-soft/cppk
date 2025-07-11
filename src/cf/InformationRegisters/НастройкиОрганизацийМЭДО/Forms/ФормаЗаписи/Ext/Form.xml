@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКолонки" id="21">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКолонкиРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛевая" id="23">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="24"/>
+					<ChildItems>
+						<InputField name="Организация" id="1">
+							<DataPath>Запись.Организация</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="АдресМЭДО" id="44">
+							<DataPath>Запись.АдресМЭДО</DataPath>
+							<ContextMenu name="АдресМЭДОКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="АдресМЭДОРасширеннаяПодсказка" id="46"/>
+						</InputField>
+						<InputField name="ИдентификаторМЭДО" id="4">
+							<DataPath>Запись.ИдентификаторМЭДО</DataPath>
+							<Mask>NNNNNNNN-NNNN-NNNN-NNNN-NNNNNNNNNNNN</Mask>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>00000000-0000-0000-0000-000000000000</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ИдентификаторМЭДОКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ИдентификаторМЭДОРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<RadioButtonField name="СпособОбмена" id="47">
+							<DataPath>Запись.СпособОбмена</DataPath>
+							<Visible>false</Visible>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СпособыОбменаМЭДО.EnumValue.ДискСеть</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СпособыОбменаМЭДО.EnumValue.FTP</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="СпособОбменаКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="СпособОбменаРасширеннаяПодсказка" id="49"/>
+							<Events>
+								<Event name="OnChange">СпособОбменаПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<UsualGroup name="ГруппаДискСеть" id="56">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДискСетьРасширеннаяПодсказка" id="57"/>
+							<ChildItems>
+								<InputField name="КаталогОтправки" id="10">
+									<DataPath>Запись.КаталогОтправки</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>\\server\ToSend</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="КаталогОтправкиКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="КаталогОтправкиРасширеннаяПодсказка" id="12"/>
+								</InputField>
+								<InputField name="КаталогПолучения" id="13">
+									<DataPath>Запись.КаталогПолучения</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>\\server\ToReceive</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="КаталогПолученияКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="КаталогПолученияРасширеннаяПодсказка" id="15"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаFTP" id="58">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаFTPРасширеннаяПодсказка" id="59"/>
+							<ChildItems>
+								<InputField name="КаталогОтправкиFTP" id="50">
+									<DataPath>Запись.КаталогОтправкиFTP</DataPath>
+									<Visible>false</Visible>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ftp://server/ToSend</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="КаталогОтправкиFTPКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="КаталогОтправкиFTPРасширеннаяПодсказка" id="52"/>
+								</InputField>
+								<InputField name="КаталогПолученияFTP" id="53">
+									<DataPath>Запись.КаталогПолученияFTP</DataPath>
+									<Visible>false</Visible>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ftp://server/ToReceive</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="КаталогПолученияFTPКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="КаталогПолученияFTPРасширеннаяПодсказка" id="55"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПравая" id="25">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<InputField name="НаименованиеМЭДО" id="7">
+							<DataPath>Запись.НаименованиеМЭДО</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<ContextMenu name="НаименованиеМЭДОКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="НаименованиеМЭДОРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="ВидВходящегоДокументаПоУмолчанию" id="27">
+							<DataPath>Запись.ВидВходящегоДокументаПоУмолчанию</DataPath>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ВидВходящегоДокументаПоУмолчаниюКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ВидВходящегоДокументаПоУмолчаниюРасширеннаяПодсказка" id="29"/>
+						</InputField>
+						<UsualGroup name="ГруппаГрифы" id="60">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Грифы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Нужно включить настройку "Использовать грифы доступа" для корректной работы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ГруппаГрифыРасширеннаяПодсказка" id="61"/>
+							<ChildItems>
+								<InputField name="ГрифОбычнаяИнформация" id="65">
+									<DataPath>Запись.ГрифОбычнаяИнформация</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обычная информация</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ГрифОбычнаяИнформацияКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ГрифОбычнаяИнформацияРасширеннаяПодсказка" id="67"/>
+								</InputField>
+								<InputField name="ГрифИнформацияОграниченногоРаспространения" id="62">
+									<DataPath>Запись.ГрифИнформацияОграниченногоРаспространения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ограниченного распространения</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ГрифИнформацияОграниченногоРаспространенияКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ГрифИнформацияОграниченногоРаспространенияРасширеннаяПодсказка" id="64"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиШтампаДляИсходящих" id="68">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки штампа ЭП и рег. штампа для исходящих документов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки штампа ЭП и регистрационного штампа для исходящих документов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ГруппаНастройкиШтампаДляИсходящихРасширеннаяПодсказка" id="69"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаШтамп" id="30">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Штамп электронной подписи</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки визуализации штампа электронной подписи</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<ControlRepresentation>Picture</ControlRepresentation>
+									<Representation>NormalSeparation</Representation>
+									<ExtendedTooltip name="ГруппаШтампРасширеннаяПодсказка" id="31"/>
+									<ChildItems>
+										<InputField name="ШтампСлева" id="35">
+											<DataPath>Запись.ШтампСлева</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Слева</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ШтампСлеваКонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="ШтампСлеваРасширеннаяПодсказка" id="37"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияМм2" id="70">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>мм</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияМм2КонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="ДекорацияМм2РасширеннаяПодсказка" id="72"/>
+										</LabelDecoration>
+										<InputField name="ШтампСверху" id="32">
+											<DataPath>Запись.ШтампСверху</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сверху</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ШтампСверхуКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="ШтампСверхуРасширеннаяПодсказка" id="34"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияМм1" id="73">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>мм</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияМм1КонтекстноеМеню" id="74"/>
+											<ExtendedTooltip name="ДекорацияМм1РасширеннаяПодсказка" id="75"/>
+										</LabelDecoration>
+										<InputField name="СтраницаВставкиШтампаЭП" id="76">
+											<DataPath>Запись.СтраницаВставкиШтампаЭП</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница вставки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>14</MaxWidth>
+											<ContextMenu name="СтраницаВставкиШтампаЭПКонтекстноеМеню" id="77"/>
+											<ExtendedTooltip name="СтраницаВставкиШтампаЭПРасширеннаяПодсказка" id="78"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаРегШтамп" id="79">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Регистрационный штамп ("№ &lt;рег. номер&gt; от &lt;Дата&gt;")</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<ControlRepresentation>Picture</ControlRepresentation>
+									<Representation>NormalSeparation</Representation>
+									<ExtendedTooltip name="ГруппаРегШтампРасширеннаяПодсказка" id="80"/>
+									<ChildItems>
+										<InputField name="РегШтампСлева" id="99">
+											<DataPath>Запись.РегШтампСлева</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Слева</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="РегШтампСлеваКонтекстноеМеню" id="100"/>
+											<ExtendedTooltip name="РегШтампСлеваРасширеннаяПодсказка" id="101"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияМм3" id="102">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>мм</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияМм3КонтекстноеМеню" id="103"/>
+											<ExtendedTooltip name="ДекорацияМм3РасширеннаяПодсказка" id="104"/>
+										</LabelDecoration>
+										<InputField name="РегШтампСверху" id="96">
+											<DataPath>Запись.РегШтампСверху</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сверху</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="РегШтампСверхуКонтекстноеМеню" id="97"/>
+											<ExtendedTooltip name="РегШтампСверхуРасширеннаяПодсказка" id="98"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияМм4" id="93">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>мм</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияМм4КонтекстноеМеню" id="94"/>
+											<ExtendedTooltip name="ДекорацияМм4РасширеннаяПодсказка" id="95"/>
+										</LabelDecoration>
+										<InputField name="СтраницаВставкиРегШтампа" id="108">
+											<DataPath>Запись.СтраницаВставкиРегШтампа</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница вставки</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>14</MaxWidth>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Первая страница</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xr:DesignTimeRef">Enum.СтраницаВставкиКартинки.EnumValue.Первая</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Последняя страница</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xr:DesignTimeRef">Enum.СтраницаВставкиКартинки.EnumValue.Последняя</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="СтраницаВставкиРегШтампаКонтекстноеМеню" id="109"/>
+											<ExtendedTooltip name="СтраницаВставкиРегШтампаРасширеннаяПодсказка" id="110"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НастройкиОрганизацийМЭДО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

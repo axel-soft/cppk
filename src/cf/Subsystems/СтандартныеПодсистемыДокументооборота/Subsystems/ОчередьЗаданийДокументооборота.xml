@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Subsystem uuid="4f50855d-767a-4cc2-be05-97b5093f5eb4">
+		<Properties>
+			<Name>ОчередьЗаданийДокументооборота</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очередь заданий документооборота</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьЗадания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьЗадания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ОчередьЗаданийДокументооборота</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыЗаданий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыЗаданий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПротоколВыполненияЗаданий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЧислоПотоковВыполненияЗаданийНаСервере</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЧислоПотоковВыполненияДолгихЗаданийНаСервере</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПериодКонтроляПроблемВыполненияЗаданий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДатаКонтроляПроблемВыполненияЗаданий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПредельноеОжиданиеВыполненияЗадания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПредельноеОжиданиеВыполненияДолгогоЗадания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СрокХраненияЗавершенныхЗаданий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ХранитьЗавершенныеЗадания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыполнениеЗаданийНаКлиенте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ВыполнениеЗаданийНаКлиенте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВыполнятьЗаданияНаКлиенте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПоследняяАктивностьОбработчикаЗаданийНаКлиенте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИнтервалВыполненияЗаданийНаКлиенте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РазмерПорцииЗаданийДляВыполненияНаКлиенте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ДиспетчерОбработкиОчередиЗаданий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДиспетчерОбработкиОчередиЗаданийВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДиспетчерОбработкиОчередиЗаданийПолныеПрава</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбработкаОчередиЗаданийВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбработкаОчередиЗаданийКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбработкаОчередиЗаданийКлиентПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбработкаОчередиЗаданийСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДиспетчерОбработкиОчередиЗаданийКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбработкаОчередиЗаданийКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДатаСбросаПопытокОбработкиОчередиЗаданий</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

@@ -1,0 +1,177 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="urn:IEDMS:CONTAINER" elementFormQualified="true" attributeFormQualified="true">
+	<property name="container">
+		<typeDef xsi:type="ObjectType">
+			<property xmlns:d4p1="urn:IEDMS:CONTAINER" name="uid" type="d4p1:globalUniqueIdentifier" lowerBound="1" form="Attribute"/>
+			<property name="version" type="xs:token" lowerBound="1" form="Attribute"/>
+			<property name="requisites">
+				<typeDef xsi:type="ObjectType">
+					<property xmlns:d6p1="urn:IEDMS:CONTAINER" name="documentKind" type="d6p1:qualifiedValue"/>
+					<property xmlns:d6p1="urn:IEDMS:CONTAINER" name="documentPlace" type="d6p1:qualifiedValue"/>
+					<property xmlns:d6p1="urn:IEDMS:CONTAINER" name="classification" type="d6p1:qualifiedValue"/>
+					<property xmlns:d6p1="urn:IEDMS:CONTAINER" name="annotation" type="d6p1:shortText"/>
+					<property name="links" lowerBound="0">
+						<typeDef xsi:type="ObjectType">
+							<property xmlns:d8p1="urn:IEDMS:CONTAINER" name="link" type="d8p1:linkedDocument" upperBound="-1"/>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+			<property name="authors">
+				<typeDef xsi:type="ObjectType">
+					<property xmlns:d6p1="urn:IEDMS:CONTAINER" name="author" type="d6p1:issuer" upperBound="-1"/>
+				</typeDef>
+			</property>
+			<property name="addressees">
+				<typeDef xsi:type="ObjectType">
+					<property name="addressee" upperBound="-1">
+						<typeDef xsi:type="ObjectType">
+							<property xmlns:d8p1="urn:IEDMS:CONTAINER" name="organization" type="d8p1:organization"/>
+							<property xmlns:d8p1="urn:IEDMS:CONTAINER" name="department" type="d8p1:qualifiedValue" lowerBound="0"/>
+							<property xmlns:d8p1="urn:IEDMS:CONTAINER" name="person" type="d8p1:person" lowerBound="0" upperBound="-1"/>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="urn:IEDMS:CONTAINER" name="document" type="d4p1:document"/>
+			<property name="attachments" lowerBound="0">
+				<typeDef xsi:type="ObjectType">
+					<property name="attachment" upperBound="-1">
+						<typeDef xsi:type="ObjectType">
+							<property xmlns:d8p1="urn:IEDMS:CONTAINER" name="localName" type="d8p1:fileName" lowerBound="1" form="Attribute"/>
+							<property name="order" type="xs:nonNegativeInteger"/>
+							<property xmlns:d8p1="urn:IEDMS:CONTAINER" name="description" type="d8p1:shortText" lowerBound="0"/>
+							<property name="signature" lowerBound="0" upperBound="-1">
+								<typeDef xsi:type="ObjectType">
+									<property xmlns:d10p1="urn:IEDMS:CONTAINER" name="localName" type="d10p1:fileName" lowerBound="1" form="Attribute"/>
+								</typeDef>
+							</property>
+						</typeDef>
+					</property>
+				</typeDef>
+			</property>
+			<property name="containerSignature" lowerBound="0">
+				<typeDef xsi:type="ObjectType">
+					<property xmlns:d6p1="urn:IEDMS:CONTAINER" name="localName" type="d6p1:fileName" lowerBound="1" form="Attribute"/>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<valueType xmlns:d2p1="urn:IEDMS:CONTAINER" name="documentFileName" base="d2p1:fileName" variety="Atomic" minLength="1" maxLength="255">
+		<pattern>[a-zA-Z0-9_]{1,250}.pdf</pattern>
+	</valueType>
+	<valueType name="fileName" base="xs:normalizedString" variety="Atomic" minLength="1" maxLength="255">
+		<pattern>[a-zA-Z0-9_]{1,250}.[a-zA-Z0-9]{3,4}</pattern>
+	</valueType>
+	<valueType name="globalUniqueIdentifier" base="xs:normalizedString" variety="Atomic"/>
+	<valueType name="identityValue" base="xs:token" variety="Atomic" minLength="1" maxLength="127"/>
+	<valueType name="shortText" base="xs:string" variety="Atomic" maxLength="4000"/>
+	<valueType name="stringValue" base="xs:normalizedString" variety="Atomic" minLength="1" maxLength="511"/>
+	<objectType name="coordinate">
+		<property name="x">
+			<typeDef xsi:type="ValueType" base="xs:short" variety="Atomic" minInclusive="0"/>
+		</property>
+		<property name="y">
+			<typeDef xsi:type="ValueType" base="xs:short" variety="Atomic" minInclusive="0"/>
+		</property>
+	</objectType>
+	<objectType name="dimension">
+		<property name="w" type="xs:positiveInteger"/>
+		<property name="h" type="xs:positiveInteger"/>
+	</objectType>
+	<objectType name="document">
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="localName" type="d3p1:documentFileName" lowerBound="1" form="Attribute"/>
+		<property name="pagesQuantity" type="xs:positiveInteger"/>
+		<property name="enclosurePagesQuantity" type="xs:nonNegativeInteger" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="description" type="d3p1:shortText" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="urn:IEDMS:CONTAINER" name="employee" base="d2p1:person">
+		<property name="post" type="d2p1:stringValue" lowerBound="0"/>
+		<property name="name" type="d2p1:stringValue"/>
+		<property name="phone" type="d2p1:stringValue" lowerBound="0"/>
+		<property name="email" type="d2p1:stringValue" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="urn:IEDMS:CONTAINER" name="executor" base="d2p1:person">
+		<property name="post" type="d2p1:stringValue" lowerBound="0"/>
+		<property name="name" type="d2p1:stringValue"/>
+		<property name="phone" type="d2p1:stringValue"/>
+		<property name="email" type="d2p1:stringValue" lowerBound="0"/>
+	</objectType>
+	<objectType name="issuer">
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="organization" type="d3p1:organization"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="department" type="d3p1:qualifiedValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="registration" type="d3p1:registration"/>
+		<property name="sign" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="urn:IEDMS:CONTAINER" name="person" type="d5p1:signer"/>
+				<property xmlns:d5p1="urn:IEDMS:CONTAINER" name="documentSignature" type="d5p1:signatureInfo"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="executor" type="d3p1:executor"/>
+	</objectType>
+	<objectType name="linkedDocument">
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="uid" type="d3p1:globalUniqueIdentifier" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="organization" type="d3p1:organization"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="department" type="d3p1:qualifiedValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="registration" type="d3p1:registrationData"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="signer" type="d3p1:employee" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="linkType" type="d3p1:qualifiedValue"/>
+	</objectType>
+	<objectType name="organization">
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="id" type="d3p1:identityValue" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="title" type="d3p1:stringValue"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="address" type="d3p1:stringValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="phone" type="d3p1:stringValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="email" type="d3p1:stringValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="website" type="d3p1:stringValue" lowerBound="0"/>
+	</objectType>
+	<objectType name="person">
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="id" type="d3p1:identityValue" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="post" type="d3p1:stringValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="name" type="d3p1:stringValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="phone" type="d3p1:stringValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="email" type="d3p1:stringValue" lowerBound="0"/>
+	</objectType>
+	<objectType name="position">
+		<property name="page" type="xs:positiveInteger"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="topLeft" type="d3p1:coordinate"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="dimension" type="d3p1:dimension"/>
+	</objectType>
+	<objectType name="qualifiedValue">
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="id" type="d3p1:identityValue" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="__content" type="d3p1:stringValue" form="Text"/>
+	</objectType>
+	<objectType xmlns:d2p1="urn:IEDMS:CONTAINER" name="registration" base="d2p1:registrationData">
+		<property name="registrationStamp" type="d2p1:stamp"/>
+	</objectType>
+	<objectType name="registrationData">
+		<property name="number">
+			<typeDef xsi:type="ValueType" base="xs:token" variety="Atomic" maxLength="31"/>
+		</property>
+		<property name="date">
+			<typeDef xsi:type="ValueType" base="xs:date" variety="Atomic" minInclusive="1900-01-01">
+				<pattern>\d{4}-\d{2}-\d{2}</pattern>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="signatureInfo">
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="localName" type="d3p1:fileName" lowerBound="1" form="Attribute"/>
+		<property name="type" lowerBound="0" fixed="false" default="Утверждающая" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:normalizedString" variety="Atomic">
+				<enumeration>Визирующая</enumeration>
+				<enumeration>Утверждающая</enumeration>
+				<enumeration>Заверяющая</enumeration>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="signatureStamp" type="d3p1:stamp"/>
+	</objectType>
+	<objectType xmlns:d2p1="urn:IEDMS:CONTAINER" name="signer" base="d2p1:person">
+		<property name="post" type="d2p1:stringValue"/>
+		<property name="name" type="d2p1:stringValue"/>
+		<property name="phone" type="d2p1:stringValue" lowerBound="0"/>
+		<property name="email" type="d2p1:stringValue" lowerBound="0"/>
+	</objectType>
+	<objectType name="stamp">
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="localName" type="d3p1:fileName" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="urn:IEDMS:CONTAINER" name="position" type="d3p1:position"/>
+	</objectType>
+</package>

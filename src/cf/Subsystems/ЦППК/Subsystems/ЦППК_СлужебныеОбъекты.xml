@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Subsystem uuid="9f7264d4-fee9-4dcb-922e-adaf50f62ae3">
+		<Properties>
+			<Name>ЦППК_СлужебныеОбъекты</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Служебные объекты(ЦППК)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ТТС_ОбщийМодуль</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЦППК_ПодключаемыеКоманды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ТТС_ЖурналыТУВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ТТС_ЖурналыТУКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ТТС_ОтчетыЖТУСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ТТС_РаботаСБизнесПроцессамиВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ТТСВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.БазовыеПрава_ТТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ТТС_ДобавлениеИзменениеЖурналовТУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ТТС_ПроверкаЖурналовТУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ТТС_ПриИзмененииСтруктурыПредприятия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ЗагрузкаСообщенийОМиУ_ТТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ТТС_ЖурналыТУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ТТС_ВводПароля</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ТТС_ДоступностьПолейЖТУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОбщаяКартинка1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АдресПочтыОМиУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ТТС_ПарольНаИзменениеЖурналовТУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДобавлятьРабочуюГруппуИзСвязанногоДокумента_ТТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ОбяательноеЗаполнениеКомментарияВИсполнении</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПроверятьЗаполненостьИНН_ТТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ГруппаРуководителиПодразделений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Станции_ТТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТТС_ДистанцииСЦБ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТТС_ПодразделенияКорреспондентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЦППК_ВидПД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЦППК_ЭлектронныеНосители</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЦППК_СпособыОплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЦППК_ПричиныОтказаВозврата</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТТС_СерииЛокомотивовЖТУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТТС_КодыНарушенийЖТУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТТС_КодыВидовМерЖТУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТТС_Направления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТТС_Машинисты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТТС_Расстояния</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТТС_ГрафыОтчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВопросВхДокументы_ТТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыСоглашений_ТТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.МестоРассмотренияПоДокументуЗВДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РешенияПоДокументамЗВДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.МестоВозвратаПоДокументуЗВДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РешенияПоДокументамЗВДС_ЦО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТТС_ВидыКонтроляРегистрации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТТС_ВидыЖурналовТУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТТС_ХарактерыПереключенияСветофоров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТТС_РежимыВеденияПоезда</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТТС_ЛитерыГоловнойСекции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТТС_ТипыЖДОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТТС_КодыПринятыхМер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТТС_ОтчетыПоЖурналамТУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ЦППК_ВариантыПечатиШтампаЭП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ЦППК_СпособыВставкиШтампаЭПВPDF</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ЦППК_ВариантыФормДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ТТС_КоличествоЖурналовТУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЦППК_ОтчетПоПроверяющимЖТУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ТТС_ОтчетОЗаписях</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ТТС_ОтчетОНарушениях</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ТТС_ОтчетОСитуациях</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ТТС_ОтчетПоЭДТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КоличествоЗарегистрированныхЗаявленийНаВозврат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗаявленияНеОтправленныеВОбработку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КоличествоПросроченныхЗаявленийНаВозврат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗаявленияСНарушениемСрокаРегистрации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗаявленияВРаботеУКассировПК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОбменЦППККрок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИсторияСроковДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостояниеОбработчиковОМиУНаКлиенте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СтанцииИКассы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ТТС_ЖурналыТУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ТТС_ОтметкиОПроверкеЖурналов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ТТС_НаправленияСтанций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ТТС_ДанныеОтчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.CтатистикаКИД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЦППК_ПричиныОбращений</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

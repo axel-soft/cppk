@@ -1,0 +1,218 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="urn:IEDMS:MESSAGE" elementFormQualified="true" attributeFormQualified="true">
+	<property name="communication">
+		<typeDef xsi:type="ObjectType" ordered="false" sequenced="true">
+			<property name="version" type="xs:token" lowerBound="1" form="Attribute"/>
+			<property name="header" lowerBound="0">
+				<typeDef xsi:type="ObjectType">
+					<property xmlns:d6p1="urn:IEDMS:MESSAGE" name="type" type="d6p1:messageType" lowerBound="1" form="Attribute"/>
+					<property xmlns:d6p1="urn:IEDMS:MESSAGE" name="uid" type="d6p1:globalUniqueIdentifier" lowerBound="1" form="Attribute"/>
+					<property name="created" type="xs:string" lowerBound="1" form="Attribute"/>
+					<property xmlns:d6p1="urn:IEDMS:MESSAGE" name="source" type="d6p1:communicationPartner"/>
+					<property xmlns:d6p1="urn:IEDMS:MESSAGE" name="operator" type="d6p1:qualifiedValue" lowerBound="0"/>
+				</typeDef>
+			</property>
+			<property xmlns:d4p1="urn:IEDMS:MESSAGE" name="container" type="d4p1:documentContainer" lowerBound="0"/>
+			<property xmlns:d4p1="urn:IEDMS:MESSAGE" name="notification" type="d4p1:messageNotification" lowerBound="0"/>
+			<property xmlns:d4p1="urn:IEDMS:MESSAGE" name="acknowledgment" type="d4p1:messageAcknowledgment" lowerBound="0"/>
+			<property name="deliveryIndex" lowerBound="0">
+				<typeDef xsi:type="ObjectType">
+					<property xmlns:d6p1="urn:IEDMS:MESSAGE" name="destination" type="d6p1:deliveryDestination" upperBound="-1"/>
+				</typeDef>
+			</property>
+		</typeDef>
+	</property>
+	<valueType name="anyValue" base="xs:string" variety="Atomic" minLength="1" maxLength="255"/>
+	<valueType name="dateDocument" base="xs:date" variety="Atomic" minInclusive="1900-01-01">
+		<pattern>\d{4}-\d{2}-\d{2}</pattern>
+	</valueType>
+	<valueType name="dateTimeZone" base="xs:dateTime" variety="Atomic" minInclusive="1900-01-01T00:00:00">
+		<pattern>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+|-]\d{2}:\d{2}</pattern>
+	</valueType>
+	<valueType name="fileName" base="xs:normalizedString" variety="Atomic" minLength="1" maxLength="255"/>
+	<valueType name="globalUniqueIdentifier" base="xs:token" variety="Atomic"/>
+	<valueType name="identityValue" base="xs:token" variety="Atomic" minLength="1" maxLength="127"/>
+	<valueType name="messageType" base="xs:token" variety="Atomic">
+		<enumeration>Уведомление</enumeration>
+		<enumeration>Квитанция</enumeration>
+		<enumeration>Транспортный контейнер</enumeration>
+	</valueType>
+	<valueType name="notificationType" base="xs:token" variety="Atomic">
+		<enumeration>Поставлен на контроль</enumeration>
+		<enumeration>Зарегистрирован</enumeration>
+		<enumeration>Отказано в регистрации</enumeration>
+		<enumeration>Назначен исполнитель</enumeration>
+		<enumeration>Доклад подготовлен</enumeration>
+		<enumeration>Доклад направлен</enumeration>
+		<enumeration>Исполнение</enumeration>
+		<enumeration>Опубликование</enumeration>
+	</valueType>
+	<valueType name="reasonForRejection" base="xs:normalizedString" variety="Atomic" minLength="1" maxLength="127"/>
+	<valueType name="shortText" base="xs:string" variety="Atomic" maxLength="4000"/>
+	<valueType name="stringValue" base="xs:normalizedString" variety="Atomic" minLength="1" maxLength="511"/>
+	<objectType xmlns:d2p1="urn:IEDMS:MESSAGE" name="addressee" base="d2p1:anyone">
+		<property name="uid" type="d2p1:globalUniqueIdentifier" lowerBound="0" form="Attribute"/>
+		<property name="comment" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2047"/>
+		</property>
+	</objectType>
+	<objectType name="anyone">
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="region" type="d3p1:qualifiedValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="organization" type="d3p1:qualifiedValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="person" type="d3p1:qualifiedValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="department" type="d3p1:qualifiedValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="post" type="d3p1:qualifiedValue" lowerBound="0"/>
+		<property name="contactInfo" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="511"/>
+		</property>
+	</objectType>
+	<objectType name="communicationPartner">
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="uid" type="d3p1:globalUniqueIdentifier" lowerBound="1" form="Attribute"/>
+		<property name="organization">
+			<typeDef xsi:type="ValueType" base="xs:normalizedString" variety="Atomic" minLength="1" maxLength="511"/>
+		</property>
+		<property name="comment" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2047"/>
+		</property>
+	</objectType>
+	<objectType name="deliveryDestination">
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="destination" type="d3p1:communicationPartner"/>
+		<property name="comment" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2047"/>
+		</property>
+	</objectType>
+	<objectType name="documentClause">
+		<property name="localId" type="xs:nonNegativeInteger" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="id" type="d3p1:identityValue" lowerBound="1" form="Attribute"/>
+		<property name="designation" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:normalizedString" variety="Atomic" maxLength="255"/>
+		</property>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="text" type="d3p1:shortText" lowerBound="0"/>
+		<property name="deadline" type="xs:date" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="principal" type="d3p1:addressee"/>
+	</objectType>
+	<objectType name="documentContainer">
+		<property name="type" type="xs:normalizedString" lowerBound="0" fixed="false" default="Документ в электронном виде" form="Attribute"/>
+		<property name="body">
+			<typeDef xmlns:d4p1="urn:IEDMS:MESSAGE" xsi:type="ValueType" base="d4p1:fileName" variety="Atomic">
+				<pattern>[a-zA-Z0-9_]{1,247}.edc.zip</pattern>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="documentNumber">
+		<property name="number">
+			<typeDef xsi:type="ValueType" base="xs:token" variety="Atomic" minLength="1" maxLength="31"/>
+		</property>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="date" type="d3p1:dateDocument" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="documentReference">
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="region" type="d3p1:qualifiedValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="organization" type="d3p1:qualifiedValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="person" type="d3p1:qualifiedValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="department" type="d3p1:qualifiedValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="post" type="d3p1:qualifiedValue" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="num" type="d3p1:documentNumber"/>
+		<property name="comment" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2047"/>
+		</property>
+	</objectType>
+	<objectType name="messageAcknowledgment">
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="uid" type="d3p1:globalUniqueIdentifier" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="content" type="d3p1:stringValue" lowerBound="0" form="Attribute"/>
+		<property name="time" type="xs:string"/>
+		<property name="accepted" type="xs:boolean"/>
+		<property name="errorCode" type="xs:nonNegativeInteger" lowerBound="0"/>
+		<property name="errorFileMessage" lowerBound="0">
+			<typeDef xmlns:d4p1="urn:IEDMS:MESSAGE" xsi:type="ValueType" base="d4p1:fileName" variety="Atomic">
+				<pattern>[a-zA-Z0-9_]{1,247}.zip</pattern>
+			</typeDef>
+		</property>
+		<property name="comment" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2047"/>
+		</property>
+	</objectType>
+	<objectType name="messageNotification" ordered="false" sequenced="true">
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="type" type="d3p1:notificationType" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="uid" type="d3p1:globalUniqueIdentifier" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="id" type="d3p1:identityValue" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="mid" type="d3p1:globalUniqueIdentifier" lowerBound="0" form="Attribute"/>
+		<property name="documentSent" lowerBound="0">
+			<typeDef xmlns:d4p1="urn:IEDMS:MESSAGE" xsi:type="ObjectType" base="d4p1:notification">
+				<property name="needRegistration" type="xs:boolean"/>
+				<property name="needExecution" type="xs:boolean"/>
+				<property name="needPublication" type="xs:boolean"/>
+				<property name="clauses" lowerBound="0">
+					<typeDef xsi:type="ObjectType">
+						<property name="clause" type="d4p1:documentClause" upperBound="-1"/>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="documentAccepted" lowerBound="0">
+			<typeDef xmlns:d4p1="urn:IEDMS:MESSAGE" xsi:type="ObjectType" base="d4p1:notification">
+				<property name="num" type="d4p1:documentNumber"/>
+			</typeDef>
+		</property>
+		<property name="documentRefused" lowerBound="0">
+			<typeDef xmlns:d4p1="urn:IEDMS:MESSAGE" xsi:type="ObjectType" base="d4p1:notification">
+				<property name="reason" type="d4p1:reasonForRejection" upperBound="-1"/>
+			</typeDef>
+		</property>
+		<property name="executorAssigned" lowerBound="0">
+			<typeDef xmlns:d4p1="urn:IEDMS:MESSAGE" xsi:type="ObjectType" base="d4p1:notification">
+				<property name="secretary" type="d4p1:addressee"/>
+				<property name="manager" type="d4p1:addressee"/>
+				<property name="executor" type="d4p1:addressee"/>
+			</typeDef>
+		</property>
+		<property name="reportPrepared" lowerBound="0">
+			<typeDef xmlns:d4p1="urn:IEDMS:MESSAGE" xsi:type="ObjectType" base="d4p1:notification">
+				<property name="signatory" type="d4p1:signatory"/>
+			</typeDef>
+		</property>
+		<property name="reportSent" lowerBound="0">
+			<typeDef xmlns:d4p1="urn:IEDMS:MESSAGE" xsi:type="ObjectType" base="d4p1:notification">
+				<property name="report" type="d4p1:documentReference"/>
+			</typeDef>
+		</property>
+		<property name="courseChanged" lowerBound="0">
+			<typeDef xmlns:d4p1="urn:IEDMS:MESSAGE" xsi:type="ObjectType" base="d4p1:notification">
+				<property name="courseText" type="d4p1:shortText"/>
+				<property name="reference" type="d4p1:documentReference" lowerBound="0"/>
+			</typeDef>
+		</property>
+		<property name="documentPublished" lowerBound="0">
+			<typeDef xmlns:d4p1="urn:IEDMS:MESSAGE" xsi:type="ObjectType" base="d4p1:notification">
+				<property name="num">
+					<typeDef xsi:type="ObjectType">
+						<property name="number">
+							<typeDef xsi:type="ValueType" base="xs:token" variety="Atomic" minLength="1" maxLength="31"/>
+						</property>
+						<property name="date" type="xs:dateTime"/>
+					</typeDef>
+				</property>
+				<property name="publicationPoint" type="d4p1:stringValue"/>
+			</typeDef>
+		</property>
+		<property name="comment" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2047"/>
+		</property>
+	</objectType>
+	<objectType name="notification">
+		<property name="time" type="xs:dateTime"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="foundation" type="d3p1:documentReference"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="clause" type="d3p1:documentClause" lowerBound="0"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="correspondent" type="d3p1:addressee" lowerBound="0"/>
+	</objectType>
+	<objectType name="qualifiedValue">
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="id" type="d3p1:identityValue" lowerBound="0" form="Attribute"/>
+		<property name="retro" type="xs:boolean" lowerBound="0" form="Attribute"/>
+		<property name="modified" type="xs:dateTime" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="urn:IEDMS:MESSAGE" name="__content" type="d3p1:stringValue" form="Text"/>
+	</objectType>
+	<objectType xmlns:d2p1="urn:IEDMS:MESSAGE" name="signatory" base="d2p1:anyone">
+		<property name="signed" type="xs:date"/>
+		<property name="comment" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2047"/>
+		</property>
+	</objectType>
+</package>

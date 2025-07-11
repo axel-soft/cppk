@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+		<ExcludedCommand>ShowInList</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ИдентификаторСистемы" id="7">
+			<DataPath>Объект.Идентификатор</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор можно изменить на стороне интегрируемой системы в пункте «Идентификатор этой базы» настроек интеграции с 1С:Документооборотом. После этого интегрируемую систему нужно будет добавить в 1С:Документооборот заново.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="ИдентификаторСистемыКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИдентификаторСистемыРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<UsualGroup name="ГруппаНастройки" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<InputField name="АдресВебСервиса" id="29">
+					<DataPath>Объект.АдресВебСервиса</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес, на котором опубликован веб-сервис интегрированной системы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="АдресВебСервисаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="АдресВебСервисаРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<CheckBoxField name="ПоддерживаетПравилаЗагрузкиДанныхВДО" id="26">
+					<DataPath>Объект.ПоддерживаетПравилаЗагрузкиДанныхВДО</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоддерживаетПравилаЗагрузкиДанныхВДОКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПоддерживаетПравилаЗагрузкиДанныхВДОРасширеннаяПодсказка" id="28"/>
+				</CheckBoxField>
+				<CheckBoxField name="СопоставлятьСотрудниковПоДолжности" id="32">
+					<DataPath>Объект.СопоставлятьСотрудниковПоДолжности</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СопоставлятьСотрудниковПоДолжностиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="СопоставлятьСотрудниковПоДолжностиРасширеннаяПодсказка" id="34"/>
+				</CheckBoxField>
+				<CheckBoxField name="СопоставлятьСотрудниковПоПодразделению" id="35">
+					<DataPath>Объект.СопоставлятьСотрудниковПоПодразделению</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СопоставлятьСотрудниковПоПодразделениюКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="СопоставлятьСотрудниковПоПодразделениюРасширеннаяПодсказка" id="37"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExchangePlanObject.ИнтегрированныеСистемы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

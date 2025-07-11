@@ -1,0 +1,764 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Width>60</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Декорации" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декорации</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ДекорацииРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<Page name="ПредопределеннаяДекорация" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предопределенная декорация</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПредопределеннаяДекорацияРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация2" id="44">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ИнформационнаяНадпись</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предопределенная настройка связей доступна только для просмотра</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="46"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ПустаяДекорация" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пустая декорация</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПустаяДекорацияРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="39">
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="41"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаТипСвязи" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тип связи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тип связи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТипСвязиExtendedTooltip" id="23"/>
+			<ChildItems>
+				<InputField name="ТипСвязи" id="1">
+					<DataPath>Запись.ТипСвязи</DataPath>
+					<Width>17</Width>
+					<OpenButton>false</OpenButton>
+					<ChoiceParameters>
+						<app:item name="Отбор.ПометкаУдаления">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:boolean">false</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
+					<ContextMenu name="ТипСвязиКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ТипСвязиExtendedTooltip" id="24"/>
+				</InputField>
+				<InputField name="ХарактерСвязи" id="7">
+					<DataPath>Запись.ХарактерСвязи</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ХарактерСвязиКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ХарактерСвязиExtendedTooltip" id="25"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСсылкаИз" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ссылка из</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ссылка из</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСсылкаИзExtendedTooltip" id="26"/>
+			<ChildItems>
+				<InputField name="ТипСсылкаИз" id="17">
+					<DataPath>ТипСсылкаИз</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка из</v8:content>
+						</v8:item>
+					</Title>
+					<Width>15</Width>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Документ</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">СправочникСсылка.ВидыДокументов</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Документ (Входящая корреспонденция)</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Перечисление.ВидыКорреспонденции.Входящая</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Документ (Исходящая корреспонденция)</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Перечисление.ВидыКорреспонденции.Исходящая</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Файл</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">СправочникСсылка.Файлы</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Мероприятие</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">СправочникСсылка.Мероприятия</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Проект</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">СправочникСсылка.Проекты</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Входящее письмо</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ДокументСсылка.ВходящееПисьмо</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Исходящее письмо</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ДокументСсылка.ИсходящееПисьмо</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ТипСсылкаИзКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ТипСсылкаИзExtendedTooltip" id="27"/>
+					<Events>
+						<Event name="OnChange">ТипСсылкаИзПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СсылкаИз" id="3">
+					<DataPath>Запись.СсылкаИз</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<OpenButton>false</OpenButton>
+					<ChoiceFoldersAndItems>FoldersAndItems</ChoiceFoldersAndItems>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="СсылкаИзКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="СсылкаИзExtendedTooltip" id="28"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСсылкаНа" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ссылка на</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ссылка на</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСсылкаНаExtendedTooltip" id="29"/>
+			<ChildItems>
+				<InputField name="ТипСсылкаНа" id="20">
+					<DataPath>ТипСсылкаНа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка на</v8:content>
+						</v8:item>
+					</Title>
+					<Width>15</Width>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Документ</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">СправочникСсылка.ВидыДокументов</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Документ (Входящая корреспонденция)</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Перечисление.ВидыКорреспонденции.Входящая</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Документ (Исходящая корреспонденция)</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Перечисление.ВидыКорреспонденции.Исходящая</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Файл</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">СправочникСсылка.Файлы</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Мероприятие</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">СправочникСсылка.Мероприятия</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Проект</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">СправочникСсылка.Проекты</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Входящее письмо</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ДокументСсылка.ВходящееПисьмо</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Исходящее письмо</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ДокументСсылка.ИсходящееПисьмо</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Внешняя ссылка</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Строка</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ТипСсылкаНаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ТипСсылкаНаExtendedTooltip" id="30"/>
+					<Events>
+						<Event name="OnChange">ТипСсылкаНаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СсылкаНа" id="5">
+					<DataPath>Запись.СсылкаНа</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<OpenButton>false</OpenButton>
+					<ChoiceFoldersAndItems>FoldersAndItems</ChoiceFoldersAndItems>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="СсылкаНаКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="СсылкаНаExtendedTooltip" id="31"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СинхронизироватьДоступ" id="50">
+			<DataPath>Запись.СинхронизироватьДоступ</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ClearButton>true</ClearButton>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не синхронизировать</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="СинхронизироватьДоступКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="СинхронизироватьДоступРасширеннаяПодсказка" id="52"/>
+		</InputField>
+		<UsualGroup name="ГруппаСвойства" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа свойства</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа свойства</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСвойстваРасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<CheckBoxField name="Обязательная" id="47">
+					<DataPath>Запись.Обязательная</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОбязательнаяКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ОбязательнаяРасширеннаяПодсказка" id="49"/>
+					<Events>
+						<Event name="OnChange">ОбязательнаяПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="Важная" id="53">
+					<DataPath>Запись.Важная</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Важная связь видна в форме связей; число важных связей показано в колонке "Связи" списка документов. </v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВажнаяКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ВажнаяРасширеннаяПодсказка" id="55"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОбратнаяСвязь" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обратная связь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обратная связь</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаОбратнаяСвязьРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаТипОбратнойСвязи" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа тип обратной связи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа тип обратной связи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТипОбратнойСвязиРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<InputField name="ТипОбратнойСвязи" id="9">
+							<DataPath>Запись.ТипОбратнойСвязи</DataPath>
+							<OpenButton>false</OpenButton>
+							<ChoiceParameters>
+								<app:item name="Отбор.ПометкаУдаления">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:boolean">false</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="ТипОбратнойСвязиКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="ТипОбратнойСвязиExtendedTooltip" id="33"/>
+							<Events>
+								<Event name="OnChange">ТипОбратнойСвязиПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ХарактерОбратнойСвязи" id="11">
+							<DataPath>Запись.ХарактерОбратнойСвязи</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ХарактерОбратнойСвязиКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ХарактерОбратнойСвязиExtendedTooltip" id="34"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСинхронизироватьОбратныйДоступ" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа синхронизировать обратный доступ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа синхронизировать обратный доступ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСинхронизироватьОбратныйДоступРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<InputField name="СинхронизироватьОбратныйДоступ" id="58">
+							<DataPath>СинхронизироватьОбратныйДоступ</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Синхронизировать доступ по обратной связи</v8:content>
+								</v8:item>
+							</ToolTip>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Не синхронизировать</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="СинхронизироватьОбратныйДоступКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="СинхронизироватьОбратныйДоступРасширеннаяПодсказка" id="60"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НастройкаСвязей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТипСсылкаИз" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип ссылка из</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ТипСсылкаНа" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип ссылка на</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ЗаписьОбратнойСвязи" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запись обратной связи</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВыполняетсяПоказПредупреждения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполняется показ предупреждения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НужноЗакрытьФорму" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нужно закрыть форму</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбязательнаяНачальноеЗначение" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обязательная начальное значение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЧислоДокументовСНезаполненнойСвязью" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Число документов с незаполненной связью</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоПолныеПрава" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это полные права</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СинхронизироватьДоступПриОткрытии" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать доступ при открытии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВариантыСинхронизацииДоступа</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидКорреспонденцииДокументИз" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид корреспонденции документ из</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыКорреспонденции</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидКорреспонденцииДокументНа" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид корреспонденции документ на</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыКорреспонденции</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СинхронизироватьОбратныйДоступ" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать доступ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВариантыСинхронизацииДоступа</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВажнаяПриОткрытии" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Важная при открытии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыведенныеОбъекты" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выведенные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+	</Attributes>
+</Form>

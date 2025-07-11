@@ -1,0 +1,1884 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Направление</dataPath>
+			<field>Направление</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаименованиеНарушения</dataPath>
+			<field>НаименованиеНарушения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование нарушения</v8:content>
+				</v8:item>
+			</title>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПоНаправлению</dataPath>
+			<field>КоличествоПоНаправлению</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоИтогТекущий</dataPath>
+			<field>КоличествоИтогТекущий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего за период</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоИтогПрошлый</dataPath>
+			<field>КоличествоИтогПрошлый</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего за период в прошлом году</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтчетныйПериодТекущий</dataPath>
+			<field>ОтчетныйПериодТекущий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтчетныйПериодПрошлый</dataPath>
+			<field>ОтчетныйПериодПрошлый</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц в прошлом году</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНарИтогТекущий</dataPath>
+			<field>КоличествоНарИтогТекущий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нарастающий итог</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНарИтогПрошлый</dataPath>
+			<field>КоличествоНарИтогПрошлый</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нарастающий итог в прошлом году</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтчетныйПериодТекущийНар</dataPath>
+			<field>ОтчетныйПериодТекущийНар</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период нарастающего итога</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтчетныйПериодПрошлыйНар</dataPath>
+			<field>ОтчетныйПериодПрошлыйНар</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период нарастающего итога в прошлом году</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ЗНАЧЕНИЕ(Справочник.ТТС_ГрафыОтчетов.ОтчетПоНарушениям_КоличествоРасшифрованныхНосителейИнформации) КАК НаименованиеНарушения,
+	ТТС_ЖурналыТУ.ВнутреннийДокумент КАК Документ,
+	ТТС_ЖурналыТУ.Направление,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТТС_ЖурналыТУ.ВнутреннийДокумент) КАК Количество
+ПОМЕСТИТЬ втТекущийПериод
+ИЗ
+	РегистрСведений.ТТС_ЖурналыТУ КАК ТТС_ЖурналыТУ
+ГДЕ
+	ТТС_ЖурналыТУ.ДатаПоездки МЕЖДУ &amp;НачалоПериода И &amp;ОкончаниеПериода
+	И ТТС_ЖурналыТУ.ВидЖурнала = ЗНАЧЕНИЕ(Перечисление.ТТС_ВидыЖурналовТУ.Журнал1)
+	И НЕ ТТС_ЖурналыТУ.ВнутреннийДокумент.ПометкаУдаления
+	И НЕ ТТС_ЖурналыТУ.ВнутреннийДокумент.РегистрационныйНомер = ""
+{ГДЕ
+	(ТТС_ЖурналыТУ.Направление = &amp;Направление)}
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ЖурналыТУ.Направление,
+	ТТС_ЖурналыТУ.ВнутреннийДокумент
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ТТС_ДанныеОтчетов.ГрафаОтчета,
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент,
+	ТТС_ДанныеОтчетов.Направление,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент)
+ИЗ
+	РегистрСведений.ТТС_ДанныеОтчетов КАК ТТС_ДанныеОтчетов
+ГДЕ
+	НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.ПометкаУдаления
+	И ТТС_ДанныеОтчетов.Период МЕЖДУ &amp;НачалоПериода И &amp;ОкончаниеПериода
+	И НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.РегистрационныйНомер = ""
+{ГДЕ
+	(ТТС_ДанныеОтчетов.Направление = &amp;Направление)}
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ДанныеОтчетов.Направление,
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент,
+	ТТС_ДанныеОтчетов.ГрафаОтчета
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЗНАЧЕНИЕ(Справочник.ТТС_ГрафыОтчетов.ОтчетПоНарушениям_НарушенияДопущенныеЛокомотивнымиБригадами),
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент,
+	ТТС_ДанныеОтчетов.Направление,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент)
+ИЗ
+	РегистрСведений.ТТС_ДанныеОтчетов КАК ТТС_ДанныеОтчетов
+ГДЕ
+	НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.ПометкаУдаления
+	И ТТС_ДанныеОтчетов.Период МЕЖДУ &amp;НачалоПериода И &amp;ОкончаниеПериода
+	И НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.РегистрационныйНомер = ""
+	И ТТС_ДанныеОтчетов.Отчет = &amp;Отчет
+{ГДЕ
+	(ТТС_ДанныеОтчетов.Направление = &amp;Направление)}
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ДанныеОтчетов.Направление,
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	&amp;НачалоГода КАК ОтчетныйПериод,
+	ЗНАЧЕНИЕ(Справочник.ТТС_ГрафыОтчетов.ОтчетПоНарушениям_КоличествоРасшифрованныхНосителейИнформации) КАК НаименованиеНарушения,
+	ТТС_ЖурналыТУ.ВнутреннийДокумент КАК Документ,
+	ТТС_ЖурналыТУ.Направление,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТТС_ЖурналыТУ.ВнутреннийДокумент) КАК Количество
+ПОМЕСТИТЬ втНарИтогТекущий
+ИЗ
+	РегистрСведений.ТТС_ЖурналыТУ КАК ТТС_ЖурналыТУ
+ГДЕ
+	ТТС_ЖурналыТУ.ДатаПоездки МЕЖДУ &amp;НачалоГода И &amp;ОкончаниеПериода
+	И ТТС_ЖурналыТУ.ВидЖурнала = ЗНАЧЕНИЕ(Перечисление.ТТС_ВидыЖурналовТУ.Журнал1)
+	И НЕ ТТС_ЖурналыТУ.ВнутреннийДокумент.ПометкаУдаления
+	И НЕ ТТС_ЖурналыТУ.ВнутреннийДокумент.РегистрационныйНомер = ""
+{ГДЕ
+	(ТТС_ЖурналыТУ.Направление = &amp;Направление)}
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ЖурналыТУ.Направление,
+	ТТС_ЖурналыТУ.ВнутреннийДокумент
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	&amp;НачалоГода,
+	ТТС_ДанныеОтчетов.ГрафаОтчета,
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент,
+	ТТС_ДанныеОтчетов.Направление,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент)
+ИЗ
+	РегистрСведений.ТТС_ДанныеОтчетов КАК ТТС_ДанныеОтчетов
+ГДЕ
+	НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.ПометкаУдаления
+	И ТТС_ДанныеОтчетов.Период МЕЖДУ &amp;НачалоГода И &amp;ОкончаниеПериода
+	И НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.РегистрационныйНомер = ""
+{ГДЕ
+	(ТТС_ДанныеОтчетов.Направление = &amp;Направление)}
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ДанныеОтчетов.Направление,
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент,
+	ТТС_ДанныеОтчетов.ГрафаОтчета
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	&amp;НачалоГода,
+	ЗНАЧЕНИЕ(Справочник.ТТС_ГрафыОтчетов.ОтчетПоНарушениям_НарушенияДопущенныеЛокомотивнымиБригадами),
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент,
+	ТТС_ДанныеОтчетов.Направление,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент)
+ИЗ
+	РегистрСведений.ТТС_ДанныеОтчетов КАК ТТС_ДанныеОтчетов
+ГДЕ
+	НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.ПометкаУдаления
+	И ТТС_ДанныеОтчетов.Период МЕЖДУ &amp;НачалоГода И &amp;ОкончаниеПериода
+	И НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.РегистрационныйНомер = ""
+	И ТТС_ДанныеОтчетов.Отчет = &amp;Отчет
+{ГДЕ
+	(ТТС_ДанныеОтчетов.Направление = &amp;Направление)}
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ДанныеОтчетов.Направление,
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	&amp;НачалоПрошлогоГода КАК ОтчетныйПериод,
+	ЗНАЧЕНИЕ(Справочник.ТТС_ГрафыОтчетов.ОтчетПоНарушениям_КоличествоРасшифрованныхНосителейИнформации) КАК НаименованиеНарушения,
+	ТТС_ЖурналыТУ.ВнутреннийДокумент КАК Документ,
+	ТТС_ЖурналыТУ.Направление,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТТС_ЖурналыТУ.ВнутреннийДокумент) КАК Количество
+ПОМЕСТИТЬ втНарИтогПрошлый
+ИЗ
+	РегистрСведений.ТТС_ЖурналыТУ КАК ТТС_ЖурналыТУ
+ГДЕ
+	ТТС_ЖурналыТУ.ДатаПоездки МЕЖДУ &amp;НачалоПрошлогоГода И &amp;ОкончаниеПрошлогоПериода
+	И ТТС_ЖурналыТУ.ВидЖурнала = ЗНАЧЕНИЕ(Перечисление.ТТС_ВидыЖурналовТУ.Журнал1)
+	И НЕ ТТС_ЖурналыТУ.ВнутреннийДокумент.ПометкаУдаления
+	И НЕ ТТС_ЖурналыТУ.ВнутреннийДокумент.РегистрационныйНомер = ""
+{ГДЕ
+	(ТТС_ЖурналыТУ.Направление = &amp;Направление)}
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ЖурналыТУ.Направление,
+	ТТС_ЖурналыТУ.ВнутреннийДокумент
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	&amp;НачалоПрошлогоГода,
+	ТТС_ДанныеОтчетов.ГрафаОтчета,
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент,
+	ТТС_ДанныеОтчетов.Направление,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент)
+ИЗ
+	РегистрСведений.ТТС_ДанныеОтчетов КАК ТТС_ДанныеОтчетов
+ГДЕ
+	НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.ПометкаУдаления
+	И ТТС_ДанныеОтчетов.Период МЕЖДУ &amp;НачалоПрошлогоГода И &amp;ОкончаниеПрошлогоПериода
+	И НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.РегистрационныйНомер = ""
+{ГДЕ
+	(ТТС_ДанныеОтчетов.Направление = &amp;Направление)}
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ДанныеОтчетов.Направление,
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент,
+	ТТС_ДанныеОтчетов.ГрафаОтчета
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	&amp;НачалоПрошлогоГода,
+	ЗНАЧЕНИЕ(Справочник.ТТС_ГрафыОтчетов.ОтчетПоНарушениям_НарушенияДопущенныеЛокомотивнымиБригадами),
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент,
+	ТТС_ДанныеОтчетов.Направление,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент)
+ИЗ
+	РегистрСведений.ТТС_ДанныеОтчетов КАК ТТС_ДанныеОтчетов
+ГДЕ
+	НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.ПометкаУдаления
+	И ТТС_ДанныеОтчетов.Период МЕЖДУ &amp;НачалоПрошлогоГода И &amp;ОкончаниеПрошлогоПериода
+	И НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.РегистрационныйНомер = ""
+	И ТТС_ДанныеОтчетов.Отчет = &amp;Отчет
+{ГДЕ
+	(ТТС_ДанныеОтчетов.Направление = &amp;Направление)}
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ДанныеОтчетов.Направление,
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	НАЧАЛОПЕРИОДА(&amp;НачалоПериода, МЕСЯЦ) КАК ОтчетныйПериод,
+	втТекущийПериод.НаименованиеНарушения КАК НаименованиеНарушения,
+	СУММА(втТекущийПериод.Количество) КАК Количество,
+	втТекущийПериод.Документ
+ПОМЕСТИТЬ втИтогТекущий
+ИЗ
+	втТекущийПериод КАК втТекущийПериод
+
+СГРУППИРОВАТЬ ПО
+	втТекущийПериод.НаименованиеНарушения,
+	втТекущийПериод.Документ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	&amp;НачалоПрошлогоПериода КАК ОтчетныйПериод,
+	ЗНАЧЕНИЕ(Справочник.ТТС_ГрафыОтчетов.ОтчетПоНарушениям_КоличествоРасшифрованныхНосителейИнформации) КАК НаименованиеНарушения,
+	ТТС_ЖурналыТУ.ВнутреннийДокумент КАК Документ,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТТС_ЖурналыТУ.ВнутреннийДокумент) КАК Количество
+ПОМЕСТИТЬ втИтогПрошлый
+ИЗ
+	РегистрСведений.ТТС_ЖурналыТУ КАК ТТС_ЖурналыТУ
+ГДЕ
+	ТТС_ЖурналыТУ.ДатаПоездки МЕЖДУ &amp;НачалоПрошлогоПериода И &amp;ОкончаниеПрошлогоПериода
+	И ТТС_ЖурналыТУ.ВидЖурнала = ЗНАЧЕНИЕ(Перечисление.ТТС_ВидыЖурналовТУ.Журнал1)
+	И НЕ ТТС_ЖурналыТУ.ВнутреннийДокумент.ПометкаУдаления
+	И НЕ ТТС_ЖурналыТУ.ВнутреннийДокумент.РегистрационныйНомер = ""
+{ГДЕ
+	(ТТС_ЖурналыТУ.Направление = &amp;Направление)}
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ЖурналыТУ.ВнутреннийДокумент
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	&amp;НачалоПрошлогоПериода,
+	ТТС_ДанныеОтчетов.ГрафаОтчета,
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент)
+ИЗ
+	РегистрСведений.ТТС_ДанныеОтчетов КАК ТТС_ДанныеОтчетов
+ГДЕ
+	НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.ПометкаУдаления
+	И ТТС_ДанныеОтчетов.Период МЕЖДУ &amp;НачалоПрошлогоПериода И &amp;ОкончаниеПрошлогоПериода
+	И НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.РегистрационныйНомер = ""
+{ГДЕ
+	(ТТС_ДанныеОтчетов.Направление = &amp;Направление)}
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент,
+	ТТС_ДанныеОтчетов.ГрафаОтчета
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	&amp;НачалоПрошлогоПериода,
+	ЗНАЧЕНИЕ(Справочник.ТТС_ГрафыОтчетов.ОтчетПоНарушениям_НарушенияДопущенныеЛокомотивнымиБригадами),
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент)
+ИЗ
+	РегистрСведений.ТТС_ДанныеОтчетов КАК ТТС_ДанныеОтчетов
+ГДЕ
+	НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.ПометкаУдаления
+	И ТТС_ДанныеОтчетов.Период МЕЖДУ &amp;НачалоПрошлогоПериода И &amp;ОкончаниеПрошлогоПериода
+	И НЕ ТТС_ДанныеОтчетов.ВнутреннийДокумент.РегистрационныйНомер = ""
+	И ТТС_ДанныеОтчетов.Отчет = &amp;Отчет
+{ГДЕ
+	(ТТС_ДанныеОтчетов.Направление = &amp;Направление)}
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ДанныеОтчетов.ВнутреннийДокумент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	NULL КАК ОтчетныйПериодТекущий,
+	NULL КАК ОтчетныйПериодПрошлый,
+	NULL КАК ОтчетныйПериодТекущийНар,
+	NULL КАК ОтчетныйПериодПрошлыйНар,
+	ТТС_ГрафыОтчетов.Ссылка КАК НаименованиеНарушения,
+	втТекущийПериод.Документ,
+	втТекущийПериод.Направление,
+	втТекущийПериод.Количество КАК КоличествоПоНаправлению,
+	0 КАК КоличествоИтогТекущий,
+	0 КАК КоличествоИтогПрошлый,
+	0 КАК КоличествоНарИтогТекущий,
+	0 КАК КоличествоНарИтогПрошлый
+ИЗ
+	Справочник.ТТС_ГрафыОтчетов КАК ТТС_ГрафыОтчетов
+		ЛЕВОЕ СОЕДИНЕНИЕ втТекущийПериод КАК втТекущийПериод
+		ПО ТТС_ГрафыОтчетов.Ссылка = втТекущийПериод.НаименованиеНарушения
+ГДЕ
+	ТТС_ГрафыОтчетов.Отчет = &amp;Отчет
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ГрафыОтчетов.Ссылка,
+	втТекущийПериод.Документ,
+	втТекущийПериод.Направление,
+	втТекущийПериод.Количество
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	втИтогТекущий.ОтчетныйПериод,
+	NULL,
+	NULL,
+	NULL,
+	ТТС_ГрафыОтчетов.Ссылка,
+	втИтогТекущий.Документ,
+	NULL,
+	NULL,
+	втИтогТекущий.Количество,
+	0,
+	0,
+	0
+ИЗ
+	Справочник.ТТС_ГрафыОтчетов КАК ТТС_ГрафыОтчетов
+		ЛЕВОЕ СОЕДИНЕНИЕ втИтогТекущий КАК втИтогТекущий
+		ПО ТТС_ГрафыОтчетов.Ссылка = втИтогТекущий.НаименованиеНарушения
+ГДЕ
+	ТТС_ГрафыОтчетов.Отчет = &amp;Отчет
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ГрафыОтчетов.Ссылка,
+	втИтогТекущий.Документ,
+	втИтогТекущий.Количество,
+	втИтогТекущий.ОтчетныйПериод
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	NULL,
+	втИтогПрошлый.ОтчетныйПериод,
+	NULL,
+	NULL,
+	ТТС_ГрафыОтчетов.Ссылка,
+	втИтогПрошлый.Документ,
+	NULL,
+	NULL,
+	0,
+	втИтогПрошлый.Количество,
+	0,
+	0
+ИЗ
+	Справочник.ТТС_ГрафыОтчетов КАК ТТС_ГрафыОтчетов
+		ЛЕВОЕ СОЕДИНЕНИЕ втИтогПрошлый КАК втИтогПрошлый
+		ПО ТТС_ГрафыОтчетов.Ссылка = втИтогПрошлый.НаименованиеНарушения
+ГДЕ
+	ТТС_ГрафыОтчетов.Отчет = &amp;Отчет
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ГрафыОтчетов.Ссылка,
+	втИтогПрошлый.Документ,
+	втИтогПрошлый.Количество,
+	втИтогПрошлый.ОтчетныйПериод
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	NULL,
+	NULL,
+	втНарИтогТекущий.ОтчетныйПериод,
+	NULL,
+	ТТС_ГрафыОтчетов.Ссылка,
+	втНарИтогТекущий.Документ,
+	NULL,
+	NULL,
+	0,
+	0,
+	втНарИтогТекущий.Количество,
+	0
+ИЗ
+	Справочник.ТТС_ГрафыОтчетов КАК ТТС_ГрафыОтчетов
+		ЛЕВОЕ СОЕДИНЕНИЕ втНарИтогТекущий КАК втНарИтогТекущий
+		ПО ТТС_ГрафыОтчетов.Ссылка = втНарИтогТекущий.НаименованиеНарушения
+ГДЕ
+	ТТС_ГрафыОтчетов.Отчет = &amp;Отчет
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ГрафыОтчетов.Ссылка,
+	втНарИтогТекущий.Документ,
+	втНарИтогТекущий.Количество,
+	втНарИтогТекущий.ОтчетныйПериод
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	NULL,
+	NULL,
+	NULL,
+	втНарИтогПрошлый.ОтчетныйПериод,
+	ТТС_ГрафыОтчетов.Ссылка,
+	втНарИтогПрошлый.Документ,
+	NULL,
+	NULL,
+	0,
+	0,
+	0,
+	втНарИтогПрошлый.Количество
+ИЗ
+	Справочник.ТТС_ГрафыОтчетов КАК ТТС_ГрафыОтчетов
+		ЛЕВОЕ СОЕДИНЕНИЕ втНарИтогПрошлый КАК втНарИтогПрошлый
+		ПО ТТС_ГрафыОтчетов.Ссылка = втНарИтогПрошлый.НаименованиеНарушения
+ГДЕ
+	ТТС_ГрафыОтчетов.Отчет = &amp;Отчет
+
+СГРУППИРОВАТЬ ПО
+	ТТС_ГрафыОтчетов.Ссылка,
+	втНарИтогПрошлый.Документ,
+	втНарИтогПрошлый.Количество,
+	втНарИтогПрошлый.ОтчетныйПериод</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ПроцентМесяц</dataPath>
+		<expression>0</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Процент месяц</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+			<order>true</order>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=1; ЧН=-</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПроцентНарастающий</dataPath>
+		<expression>0</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Процент нарастающий</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+			<order>true</order>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=1; ЧН=-</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>КоличествоПоНаправлению</dataPath>
+		<expression>Сумма(КоличествоПоНаправлению)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоИтогТекущий</dataPath>
+		<expression>Сумма(КоличествоИтогТекущий)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоИтогПрошлый</dataPath>
+		<expression>Сумма(КоличествоИтогПрошлый)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентМесяц</dataPath>
+		<expression>ВЫБОР
+КОГДА СУММА(КоличествоИтогПрошлый) = 0 ТОГДА 100
+ИНАЧЕ (СУММА(КоличествоИтогТекущий) - СУММА(КоличествоИтогПрошлый))*100/СУММА(КоличествоИтогПрошлый)
+КОНЕЦ</expression>
+		<group>НаименованиеНарушения</group>
+		<group>НаименованиеНарушения Иерархия</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНарИтогТекущий</dataPath>
+		<expression>Сумма(КоличествоНарИтогТекущий)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНарИтогПрошлый</dataPath>
+		<expression>Сумма(КоличествоНарИтогПрошлый)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентНарастающий</dataPath>
+		<expression>ВЫБОР
+КОГДА СУММА(КоличествоНарИтогПрошлый) = 0 ТОГДА 100
+ИНАЧЕ (СУММА(КоличествоНарИтогТекущий) - СУММА(КоличествоНарИтогПрошлый))*100/СУММА(КоличествоНарИтогПрошлый)
+КОНЕЦ</expression>
+		<group>НаименованиеНарушения</group>
+		<group>НаименованиеНарушения Иерархия</group>
+	</totalField>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Отчет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ТТС_ОтчетыПоЖурналамТУ</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ТТС_ОтчетыПоЖурналамТУ.ОтчетПоНарушениям</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ОкончаниеПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Окончание периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>НачалоГода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало года</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>НАЧАЛОПЕРИОДА(&amp;ПериодОтчета.ДатаНачала, "год")</expression>
+	</parameter>
+	<parameter>
+		<name>НачалоПрошлогоГода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало прошлого года</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ДОБАВИТЬКДАТЕ(НАЧАЛОПЕРИОДА(&amp;ПериодОтчета.ДатаНачала, "год"), "год", -1)</expression>
+	</parameter>
+	<parameter>
+		<name>НачалоПрошлогоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало прошлого периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ДОБАВИТЬКДАТЕ(&amp;ПериодОтчета.ДатаНачала, "год", -1)</expression>
+	</parameter>
+	<parameter>
+		<name>ОкончаниеПрошлогоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Окончание прошлого периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ДОБАВИТЬКДАТЕ(&amp;ПериодОтчета.ДатаОкончания, "год", -1)</expression>
+	</parameter>
+	<parameter>
+		<name>Направление</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Направление</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ТТС_Направления</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Направление</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Направление</dcsat:name>
+			<dcsat:expression>Представление(Направление)</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет3</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>%ОБЪЕД2%</v8:content>
+							</v8:item>
+						</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=MMMM</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Месяц</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=MMMM</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ГодПрошлый</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=yyyy</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ГодПрошлый</dcsat:name>
+			<dcsat:expression>ОтчетныйПериодПрошлый</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Месяц</dcsat:name>
+			<dcsat:expression>ПараметрыДанных.НачалоПериода</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет4</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>%ОБЪЕД2%</v8:content>
+							</v8:item>
+						</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=MMMM</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Месяц</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=MMMM</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ГодТекущий</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=yyyy</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ГодТекущий</dcsat:name>
+			<dcsat:expression>ОтчетныйПериодТекущий</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Месяц</dcsat:name>
+			<dcsat:expression>ПараметрыДанных.НачалоПериода</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет5</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>%ОБЪЕД2%</v8:content>
+							</v8:item>
+						</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=MMMM</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Месяц</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=MMMM</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>%</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Месяц</dcsat:name>
+			<dcsat:expression>ПараметрыДанных.НачалоПериода</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет6</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>%ОБЪЕД1%Нар. итог</v8:content>
+							</v8:item>
+						</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=MMMM</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ГодПрошлый</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=yyyy</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ГодПрошлый</dcsat:name>
+			<dcsat:expression>ОтчетныйПериодПрошлыйНар</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет7</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>%ОБЪЕД1%Нар. итог</v8:content>
+							</v8:item>
+						</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=MMMM</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ГодТекущий</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=yyyy</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ГодТекущий</dcsat:name>
+			<dcsat:expression>ОтчетныйПериодТекущийНар</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет8</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>%ОБЪЕД1%Нар. итог</v8:content>
+							</v8:item>
+						</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=MMMM</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>%</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+	</template>
+	<template>
+		<name>Макет9</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ПроцентМесяц</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧДЦ=1</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ПроцентМесяц</dcsat:name>
+			<dcsat:expression>ПроцентМесяц</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет10</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ПроцентНарастающий</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧДЦ=1</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ПроцентНарастающий</dcsat:name>
+			<dcsat:expression>ПроцентНарастающий</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет11</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">КоличествоИтогПрошлый</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>КоличествоИтогПрошлый</dcsat:name>
+			<dcsat:expression>КоличествоИтогПрошлый</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет12</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">КоличествоИтогТекущий</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>КоличествоИтогТекущий</dcsat:name>
+			<dcsat:expression>КоличествоИтогТекущий</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет13</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">КоличествоНарИтогПрошлый</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>КоличествоНарИтогПрошлый</dcsat:name>
+			<dcsat:expression>КоличествоНарИтогПрошлый</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет14</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">КоличествоНарИтогТекущий</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">12.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>КоличествоНарИтогТекущий</dcsat:name>
+			<dcsat:expression>КоличествоНарИтогТекущий</dcsat:expression>
+		</parameter>
+	</template>
+	<fieldTemplate>
+		<field>ПроцентМесяц</field>
+		<template>Макет9</template>
+	</fieldTemplate>
+	<fieldTemplate>
+		<field>ПроцентНарастающий</field>
+		<template>Макет10</template>
+	</fieldTemplate>
+	<fieldTemplate>
+		<field>КоличествоИтогПрошлый</field>
+		<template>Макет11</template>
+	</fieldTemplate>
+	<fieldTemplate>
+		<field>КоличествоИтогТекущий</field>
+		<template>Макет12</template>
+	</fieldTemplate>
+	<fieldTemplate>
+		<field>КоличествоНарИтогПрошлый</field>
+		<template>Макет13</template>
+	</fieldTemplate>
+	<fieldTemplate>
+		<field>КоличествоНарИтогТекущий</field>
+		<template>Макет14</template>
+	</fieldTemplate>
+	<groupTemplate>
+		<groupName>Направление</groupName>
+		<templateType>Header</templateType>
+		<template>Макет1</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>МесяцПрошлыйПериод</groupName>
+		<templateType>Header</templateType>
+		<template>Макет3</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>МесяцТекущийПериод</groupName>
+		<templateType>Header</templateType>
+		<template>Макет4</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>МесяцПроцент</groupName>
+		<templateType>Header</templateType>
+		<template>Макет5</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>НарИтогПрошлыйПериод</groupName>
+		<templateType>Header</templateType>
+		<template>Макет6</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>НарИтогТекущийПериод</groupName>
+		<templateType>Header</templateType>
+		<template>Макет7</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>НарИтогПроцент</groupName>
+		<templateType>Header</templateType>
+		<template>Макет8</template>
+	</groupTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет о нарушениях</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:userFields>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле1</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Родитель</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>ВычислитьВыражение("НаименованиеНарушения", "", "Иерархия")</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>ВычислитьВыражение("[Наименование нарушения]", "", "Иерархия")</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>ВычислитьВыражение("НаименованиеНарушения", "", "Иерархия")</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>ВычислитьВыражение("[Наименование нарушения]", "", "Иерархия")</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+			</dcsset:userFields>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>403877e4-4290-438c-a606-29348578f75a</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Отчет</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.ТТС_ОтчетыПоЖурналамТУ.ОтчетПоСитуациям</dcscor:value>
+					<dcsset:userSettingID>d586977c-f8d5-48aa-b8a7-fc9fe3bb10bc</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Направление</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>8ef4c598-2510-4141-a4b0-ef1796c19d85</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>НаименованиеНарушения.Код</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:name>Направление</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Направление</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ОтчетныйПериодПрошлый</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ОтчетныйПериодТекущий</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ОтчетныйПериодПрошлыйНар</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ОтчетныйПериодТекущийНар</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Направление</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоПоНаправлению</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>РасположениеОбщихИтогов</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:name>НарИтогПрошлыйПериод</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ОтчетныйПериодПрошлыйНар</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ОтчетныйПериодПрошлыйНар</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОтчетныйПериодПрошлыйНар</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоНарИтогПрошлый</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>РасположениеОбщихИтогов</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:name>НарИтогТекущийПериод</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ОтчетныйПериодТекущийНар</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ОтчетныйПериодТекущийНар</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОтчетныйПериодТекущийНар</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоНарИтогТекущий</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>РасположениеОбщихИтогов</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:name>НарИтогПроцент</dcsset:name>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>OrGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ОтчетныйПериодПрошлыйНар</dcsset:left>
+								<dcsset:comparisonType>Filled</dcsset:comparisonType>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ОтчетныйПериодТекущийНар</dcsset:left>
+								<dcsset:comparisonType>Filled</dcsset:comparisonType>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПроцентНарастающий</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>РасположениеОбщихИтогов</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:name>МесяцПрошлыйПериод</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ОтчетныйПериодПрошлый</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ОтчетныйПериодПрошлый</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОтчетныйПериодПрошлый</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоИтогПрошлый</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>РасположениеОбщихИтогов</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:name>МесяцТекущийПериод</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ОтчетныйПериодТекущий</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ОтчетныйПериодТекущий</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОтчетныйПериодТекущий</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоИтогТекущий</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>РасположениеОбщихИтогов</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:name>МесяцПроцент</dcsset:name>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>OrGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ОтчетныйПериодПрошлый</dcsset:left>
+								<dcsset:comparisonType>Filled</dcsset:comparisonType>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ОтчетныйПериодТекущий</dcsset:left>
+								<dcsset:comparisonType>Filled</dcsset:comparisonType>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПроцентМесяц</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>РасположениеОбщихИтогов</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>НаименованиеНарушения</dcsset:field>
+							<dcsset:groupType>Hierarchy</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>OrGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">НаименованиеНарушения</dcsset:left>
+								<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:Field">ПользовательскиеПоля.Поле1</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">СистемныеПоля.УровеньВГруппировке</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+							</dcsset:item>
+							<dcsset:application>Hierarchy</dcsset:application>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>НаименованиеНарушения.Код</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№п.п</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>НаименованиеНарушения</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>РасположениеПолейГруппировки</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">Separately</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>РасположениеГруппировки</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionGroupPlacement">End</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>РасположениеОбщихИтогов</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ВходящиеДокументы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРегистрации</dataPath>
+			<field>ДатаРегистрации</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заявка</dataPath>
+			<field>Заявка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявка</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>НомерЗаявления</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФИОБК</dataPath>
+			<field>ФИОБК</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО билетного кассира</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заявитель</dataPath>
+			<field>Заявитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявитель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗаявления</dataPath>
+			<field>ДатаЗаявления</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата заявления</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерЗаявления</dataPath>
+			<field>НомерЗаявления</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер заявления</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПретензионнаяКасса</dataPath>
+			<field>ПретензионнаяКасса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗадержкаЛиния</dataPath>
+			<field>ЗадержкаЛиния</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задержка линия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗадержкаКасса</dataPath>
+			<field>ЗадержкаКасса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задержка касса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПолученияСоСтанции</dataPath>
+			<field>ДатаПолученияСоСтанции</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата получения со станции</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БезПередачиСоСтанции</dataPath>
+			<field>БезПередачиСоСтанции</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без передачи со станции</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗадержекВсего</dataPath>
+			<field>ЗадержекВсего</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задержек всего</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗадержекКасса</dataPath>
+			<field>ЗадержекКасса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задержек касса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗадержекЛиния</dataPath>
+			<field>ЗадержекЛиния</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задержек линия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтанцияПринятия</dataPath>
+			<field>СтанцияПринятия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Станция принятия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДокументыПредприятия.Ссылка КАК Заявка,
+	СтанцииИКассы.Пользователь КАК КассаПринятияПользователь
+ПОМЕСТИТЬ втЗаявки
+ИЗ
+	Справочник.ДокументыПредприятия КАК ДокументыПредприятия
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СтанцииИКассы КАК СтанцииИКассы
+		ПО (ДокументыПредприятия.СтанцияПринявшаяЗаявление_ТТС = СтанцииИКассы.Станция)
+ГДЕ
+	ДокументыПредприятия.ВидДокумента.Ссылка = &amp;ВидДокумента
+	И ДокументыПредприятия.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(ДокументыПредприятия.ДатаСоздания МЕЖДУ &amp;ДатаСозданияС И &amp;ДатаСозданияПо)}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втЗаявки.Заявка КАК Заявка,
+	ВЫБОР
+		КОГДА НЕ втЗаявки.КассаПринятияПользователь ЕСТЬ NULL
+			ТОГДА РАЗНОСТЬДАТ(втЗаявки.Заявка.ДатаЗаявления_ТТС, втЗаявки.Заявка.ДатаРегистрации, ДЕНЬ)
+		ИНАЧЕ РАЗНОСТЬДАТ(втЗаявки.Заявка.ДатаПолученияСоСтанции, втЗаявки.Заявка.ДатаРегистрации, ДЕНЬ)
+	КОНЕЦ КАК ДнейОбработкиКасса,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ КалендарныеГрафики.ДатаГрафика) КАК ДнейОбработкиЛиния,
+	втЗаявки.КассаПринятияПользователь КАК КассаПринятияПользователь,
+	ЕСТЬNULL(втЗаявки.Заявка.ПретензионнаяКасса = втЗаявки.КассаПринятияПользователь, ЛОЖЬ) КАК БезПередачиСоСтанции
+ПОМЕСТИТЬ втЗаявкиСоСроками
+ИЗ
+	втЗаявки КАК втЗаявки
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КалендарныеГрафики КАК КалендарныеГрафики
+		ПО (КалендарныеГрафики.ДатаГрафика &gt;= НАЧАЛОПЕРИОДА(втЗаявки.Заявка.ДатаЗаявления_ТТС, ДЕНЬ))
+			И (КалендарныеГрафики.ДатаГрафика &lt;= НАЧАЛОПЕРИОДА(втЗаявки.Заявка.ДатаПолученияСоСтанции, ДЕНЬ))
+			И (КалендарныеГрафики.ДеньВключенВГрафик)
+			И (КалендарныеГрафики.Календарь = &amp;Календарь)
+
+СГРУППИРОВАТЬ ПО
+	втЗаявки.Заявка,
+	ВЫБОР
+		КОГДА НЕ втЗаявки.КассаПринятияПользователь ЕСТЬ NULL
+			ТОГДА РАЗНОСТЬДАТ(втЗаявки.Заявка.ДатаЗаявления_ТТС, втЗаявки.Заявка.ДатаРегистрации, ДЕНЬ)
+		ИНАЧЕ РАЗНОСТЬДАТ(втЗаявки.Заявка.ДатаПолученияСоСтанции, втЗаявки.Заявка.ДатаРегистрации, ДЕНЬ)
+	КОНЕЦ,
+	втЗаявки.КассаПринятияПользователь,
+	ЕСТЬNULL(втЗаявки.Заявка.ПретензионнаяКасса = втЗаявки.КассаПринятияПользователь, ЛОЖЬ)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втЗаявкиСоСроками.Заявка КАК Заявка,
+	втЗаявкиСоСроками.Заявка.РегистрационныйНомер КАК НомерЗаявления,
+	втЗаявкиСоСроками.Заявка.ДатаЗаявления_ТТС КАК ДатаЗаявления,
+	втЗаявкиСоСроками.Заявка.ДатаПолученияСоСтанции КАК ДатаПолученияСоСтанции,
+	втЗаявкиСоСроками.Заявка.ДатаРегистрации КАК ДатаРегистрации,
+	втЗаявкиСоСроками.Заявка.ФИОБК_ТТС КАК ФИОБК,
+	втЗаявкиСоСроками.Заявка.ПретензионнаяКасса КАК ПретензионнаяКасса,
+	втЗаявкиСоСроками.Заявка.ФИОЗаявителя_ТТС КАК Заявитель,
+	ВЫБОР
+		КОГДА втЗаявкиСоСроками.ДнейОбработкиКасса - 1 &lt; 0
+			ТОГДА 0
+		ИНАЧЕ втЗаявкиСоСроками.ДнейОбработкиКасса - 1
+	КОНЕЦ КАК ЗадержкаКасса,
+	ВЫБОР
+		КОГДА втЗаявкиСоСроками.ДнейОбработкиЛиния - 3 &lt; 0
+				ИЛИ втЗаявкиСоСроками.БезПередачиСоСтанции
+			ТОГДА 0
+		ИНАЧЕ втЗаявкиСоСроками.ДнейОбработкиЛиния - 3
+	КОНЕЦ КАК ЗадержкаЛиния,
+	втЗаявкиСоСроками.БезПередачиСоСтанции КАК БезПередачиСоСтанции,
+	втЗаявкиСоСроками.Заявка.СтанцияПринявшаяЗаявление_ТТС КАК ЗаявкаСтанцияПринявшаяЗаявление_ТТС
+ПОМЕСТИТЬ втЗаявкиБезИтогов
+ИЗ
+	втЗаявкиСоСроками КАК втЗаявкиСоСроками
+ГДЕ
+	(втЗаявкиСоСроками.ДнейОбработкиКасса &gt; 1
+			ИЛИ втЗаявкиСоСроками.ДнейОбработкиЛиния &gt; 3
+				И НЕ втЗаявкиСоСроками.БезПередачиСоСтанции)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втЗаявкиБезИтогов.Заявка КАК Заявка,
+	втЗаявкиБезИтогов.НомерЗаявления КАК НомерЗаявления,
+	втЗаявкиБезИтогов.ДатаЗаявления КАК ДатаЗаявления,
+	ВЫБОР
+		КОГДА втЗаявкиБезИтогов.БезПередачиСоСтанции
+			ТОГДА ""
+		ИНАЧЕ втЗаявкиБезИтогов.ДатаПолученияСоСтанции
+	КОНЕЦ КАК ДатаПолученияСоСтанции,
+	втЗаявкиБезИтогов.ДатаРегистрации КАК ДатаРегистрации,
+	втЗаявкиБезИтогов.ФИОБК КАК ФИОБК,
+	втЗаявкиБезИтогов.ЗаявкаСтанцияПринявшаяЗаявление_ТТС КАК СтанцияПринятия,
+	втЗаявкиБезИтогов.ПретензионнаяКасса КАК ПретензионнаяКасса,
+	втЗаявкиБезИтогов.Заявитель КАК Заявитель,
+	втЗаявкиБезИтогов.ЗадержкаКасса КАК ЗадержкаКасса,
+	втЗаявкиБезИтогов.ЗадержкаЛиния КАК ЗадержкаЛиния,
+	втЗаявкиБезИтогов.БезПередачиСоСтанции КАК БезПередачиСоСтанции,
+	ВЫБОР
+		КОГДА втЗаявкиБезИтогов.ЗадержкаКасса &gt; 0
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ЗадержекКасса,
+	ВЫБОР
+		КОГДА втЗаявкиБезИтогов.ЗадержкаЛиния &gt; 0
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ЗадержекЛиния,
+	1 КАК ЗадержекВсего
+ИЗ
+	втЗаявкиБезИтогов КАК втЗаявкиБезИтогов</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ЗадержекВсего</dataPath>
+		<expression>Сумма(ЗадержекВсего)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗадержекКасса</dataPath>
+		<expression>Сумма(ЗадержекКасса)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗадержекЛиния</dataPath>
+		<expression>Сумма(ЗадержекЛиния)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаСозданияПо</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата создания по</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаСозданияС</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата создания С</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ВидДокумента</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид документа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыДокументов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>Календарь</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Календарь</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Календари</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ЗаявленияСНарушениемСрокаРегистрации</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Заявления с нарушением срока регистрации</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заявка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дней задержки</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗадержкаКасса</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Касса</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗадержкаЛиния</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Линия</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Даты заявления</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДатаЗаявления</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подано</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДатаПолученияСоСтанции</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Передано</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДатаРегистрации</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Зарегистрировано</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФИОБК</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИО билетного кассира</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтанцияПринятия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заявитель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Итого</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗадержекКасса</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Касса</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗадержекЛиния</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Линия</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗадержекВсего</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Общий</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>5a9af314-aa97-497e-9028-667aad543abd</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаСозданияПо</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>b1ae74b8-dc66-453e-8cd0-be0120790cba</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаСозданияС</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>9180a4e7-42d3-43d9-af68-ed7b4ad0e530</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПретензионнаяКасса</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДатаЗаявления</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ЗадержкаЛиния</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаПолученияСоСтанции</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СтанцияПринятия</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Заявка</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаЗаявления</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаРегистрации</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ЗадержкаКасса</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ФИОБК</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ЗадержекВсего</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ЗадержекКасса</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ЗадержекЛиния</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Заявитель</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">БезПередачиСоСтанции</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаПрочтенныхПисем</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ПретензионнаяКасса</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ЗадержекВсего</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>ЗадержекКасса</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>ЗадержекЛиния</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter/>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Текст</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string"/>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+							<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+							<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+							<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+							<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+							<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+						</dcsset:item>
+					</dcsset:conditionalAppearance>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

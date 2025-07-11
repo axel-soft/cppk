@@ -1,0 +1,1251 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Связи</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаИнфо" id="173">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа инфо</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа инфо</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИнфоРасширеннаяПодсказка" id="174"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияИнформация" id="175">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация информация</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияИнформацияКонтекстноеМеню" id="176"/>
+					<ExtendedTooltip name="ДекорацияИнформацияРасширеннаяПодсказка" id="177"/>
+				</PictureDecoration>
+				<LabelDecoration name="ДекорацияТолькоВажныеТекст" id="178">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показаны только важные связи. Чтобы увидеть все, нажмите "Показать все связи".</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияТолькоВажныеТекстКонтекстноеМеню" id="179"/>
+					<ExtendedTooltip name="ДекорацияТолькоВажныеТекстРасширеннаяПодсказка" id="180"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ДекорацияСвязиПрочитаныНеПолностью" id="162">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Связи прочитаны не полностью. Используйте отчет «Структура связей».</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияСвязиПрочитаныНеПолностьюКонтекстноеМеню" id="163"/>
+			<ExtendedTooltip name="ДекорацияСвязиПрочитаныНеПолностьюРасширеннаяПодсказка" id="164"/>
+		</LabelDecoration>
+		<CommandBar name="КоманднаяПанельДеревоСвязей" id="185">
+			<ExtendedTooltip name="КоманднаяПанельДеревоСвязейРасширеннаяПодсказка" id="186"/>
+			<ChildItems>
+				<Button name="ДеревоСвязейДобавить" id="118">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ДеревоСвязейДобавитьExtendedTooltip" id="119"/>
+				</Button>
+				<Button name="ДеревоСвязейИзменить" id="120">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ДеревоСвязейИзменитьExtendedTooltip" id="121"/>
+				</Button>
+				<Button name="ДеревоСвязейУдалить" id="122">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ДеревоСвязейУдалитьExtendedTooltip" id="123"/>
+				</Button>
+				<Button name="ДеревоСвязейОткрыть" id="124">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ДеревоСвязейОткрытьExtendedTooltip" id="125"/>
+				</Button>
+				<Button name="ДеревоСвязейПоказатьВсеСвязи" id="169">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ДеревоСвязейПоказатьВсеСвязиРасширеннаяПодсказка" id="170"/>
+				</Button>
+				<Button name="ДеревоСвязейСтруктураСвязей" id="126">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ДеревоСвязейСтруктураСвязейExtendedTooltip" id="127"/>
+				</Button>
+				<Button name="ДеревоСвязейОбновить" id="128">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ДеревоСвязейОбновитьРасширеннаяПодсказка" id="129"/>
+				</Button>
+				<Button name="ДеревоСвязейПредварительныйПросмотр" id="203">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ДеревоСвязейПредварительныйПросмотрРасширеннаяПодсказка" id="204"/>
+				</Button>
+				<ButtonGroup name="ДеревоСвязейГруппаФайлы" id="132">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дерево связей группа файлы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дерево связей группа файлы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДеревоСвязейГруппаФайлыРасширеннаяПодсказка" id="133"/>
+					<ChildItems>
+						<Button name="ДеревоСвязейНапечататьФайлы" id="134">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ДеревоСвязейНапечататьФайлыРасширеннаяПодсказка" id="135"/>
+						</Button>
+						<Button name="ДеревоСвязейСохранитьКак" id="136">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ДеревоСвязейСохранитьКакРасширеннаяПодсказка" id="137"/>
+						</Button>
+					</ChildItems>
+				</ButtonGroup>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="ГруппаДеревоСвязейПредставлениеHTML" id="181">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДеревоСвязейПредставлениеHTMLРасширеннаяПодсказка" id="182"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДеревоСвязей" id="183">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДеревоСвязейРасширеннаяПодсказка" id="184"/>
+					<ChildItems>
+						<Table name="ДеревоСвязей" id="72">
+							<Representation>Tree</Representation>
+							<HorizontalLines>false</HorizontalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="ДеревоСвязейКонтекстноеМеню" id="73">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ДеревоСвязейКонтекстноеМенюКнопкаДобавить" id="96">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаДобавитьExtendedTooltip" id="97"/>
+									</Button>
+									<Button name="ДеревоСвязейКонтекстноеМенюКнопкаСкопировать" id="98">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаСкопироватьExtendedTooltip" id="99"/>
+									</Button>
+									<Button name="ДеревоСвязейКонтекстноеМенюКнопкаИзменить" id="100">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаИзменитьExtendedTooltip" id="101"/>
+									</Button>
+									<Button name="ДеревоСвязейКонтекстноеМенюКнопкаУдалить" id="102">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаУдалитьExtendedTooltip" id="103"/>
+									</Button>
+									<Button name="ДеревоСвязейКонтекстноеМенюКнопкаОткрыть" id="104">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаОткрытьРасширеннаяПодсказка" id="105"/>
+									</Button>
+									<Button name="ДеревоСвязейКонтекстноеМенюДеревоСвязейОбновить" id="106">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюДеревоСвязейОбновитьExtendedTooltip" id="107"/>
+									</Button>
+									<Popup name="ДеревоСвязейКонтекстноеМенюСортироватьПо" id="165">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Сортировать по</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Сортировать по</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюСортироватьПоРасширеннаяПодсказка" id="166"/>
+										<ChildItems>
+											<Button name="ДеревоСвязейКонтекстноеМенюДеревоСвязейКонтекстноеМенюСортироватьПоДате" id="167">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Дате</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюДеревоСвязейКонтекстноеМенюСортироватьПоДатеРасширеннаяПодсказка" id="168"/>
+											</Button>
+											<Button name="ДеревоСвязейКонтекстноеМенюСортироватьПоРегНомеру" id="171">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Рег. номеру</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюСортироватьПоРегНомеруРасширеннаяПодсказка" id="172"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Button name="ДеревоСвязейКонтекстноеМенюКнопкаКопироватьВБуферОбмена" id="108">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаКопироватьВБуферОбменаExtendedTooltip" id="109"/>
+									</Button>
+									<Button name="ДеревоСвязейКонтекстноеМенюКнопкаВыделитьВсе" id="110">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаВыделитьВсеExtendedTooltip" id="111"/>
+									</Button>
+									<ButtonGroup name="ДеревоСвязейКонтекстноеМенюГруппаФайлы" id="112">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дерево связей контекстное меню группа файлы</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дерево связей контекстное меню группа файлы</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюГруппаФайлыРасширеннаяПодсказка" id="113"/>
+										<ChildItems>
+											<Button name="ДеревоСвязейКонтекстноеМенюДеревоСвязейНапечататьФайлы" id="114">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюДеревоСвязейНапечататьФайлыРасширеннаяПодсказка" id="115"/>
+											</Button>
+											<Button name="ДеревоСвязейКонтекстноеМенюДеревоСвязейСохранитьКак" id="116">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюДеревоСвязейСохранитьКакРасширеннаяПодсказка" id="117"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ДеревоСвязейКоманднаяПанель" id="74">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоСвязейРасширеннаяПодсказка" id="75"/>
+							<SearchStringAddition name="ДеревоСвязейСтрокаПоиска" id="76">
+								<AdditionSource>
+									<Item>ДеревоСвязей</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоСвязейСтрокаПоискаКонтекстноеМеню" id="77"/>
+								<ExtendedTooltip name="ДеревоСвязейСтрокаПоискаРасширеннаяПодсказка" id="78"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоСвязейСостояниеПросмотра" id="79">
+								<AdditionSource>
+									<Item>ДеревоСвязей</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоСвязейСостояниеПросмотраКонтекстноеМеню" id="80"/>
+								<ExtendedTooltip name="ДеревоСвязейСостояниеПросмотраРасширеннаяПодсказка" id="81"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоСвязейУправлениеПоиском" id="82">
+								<AdditionSource>
+									<Item>ДеревоСвязей</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоСвязейУправлениеПоискомКонтекстноеМеню" id="83"/>
+								<ExtendedTooltip name="ДеревоСвязейУправлениеПоискомРасширеннаяПодсказка" id="84"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="ДеревоСвязейГруппаКартинкаПредставление" id="85">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево связей группа картинка представление</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево связей группа картинка представление</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ДеревоСвязейГруппаКартинкаПредставлениеРасширеннаяПодсказка" id="86"/>
+									<ChildItems>
+										<PictureField name="ДеревоСвязейИндексКартинки" id="138">
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.КоллекцияПиктограммФайлов</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="ДеревоСвязейИндексКартинкиКонтекстноеМеню" id="139"/>
+											<ExtendedTooltip name="ДеревоСвязейИндексКартинкиРасширеннаяПодсказка" id="140"/>
+										</PictureField>
+										<InputField name="ДеревоСвязейПредставление" id="141">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Документ</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoCellHeight>true</AutoCellHeight>
+											<HeightControlVariant>UseContentHeight</HeightControlVariant>
+											<ContextMenu name="ДеревоСвязейПредставлениеКонтекстноеМеню" id="142"/>
+											<ExtendedTooltip name="ДеревоСвязейПредставлениеРасширеннаяПодсказка" id="143"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ДеревоСвязейДатаДокумента" id="153">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата регистрации или создания документа, если не зарегистрирован</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>9</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>15</MaxWidth>
+									<ContextMenu name="ДеревоСвязейДатаДокументаКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="ДеревоСвязейДатаДокументаРасширеннаяПодсказка" id="155"/>
+								</InputField>
+								<InputField name="ДеревоСвязейНомерДокумента" id="150">
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>15</MaxWidth>
+									<ContextMenu name="ДеревоСвязейНомерДокументаКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="ДеревоСвязейНомерДокументаРасширеннаяПодсказка" id="152"/>
+								</InputField>
+								<InputField name="ДеревоСвязейСумма" id="156">
+									<EditMode>EnterOnInput</EditMode>
+									<AutoCellHeight>true</AutoCellHeight>
+									<Width>10</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>15</MaxWidth>
+									<ContextMenu name="ДеревоСвязейСуммаКонтекстноеМеню" id="157"/>
+									<ExtendedTooltip name="ДеревоСвязейСуммаРасширеннаяПодсказка" id="158"/>
+								</InputField>
+								<LabelField name="ДеревоСвязейКомментарий" id="159">
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>2</Width>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="ДеревоСвязейКомментарийКонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="ДеревоСвязейКомментарийРасширеннаяПодсказка" id="161"/>
+								</LabelField>
+								<PictureField name="ДеревоСвязейЯвляетсяОригиналом" id="144">
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Скан-копия оригинала документа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.Оригинал</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<Width>2</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>2</MaxWidth>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.Оригинал</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</ValuesPicture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДеревоСвязейЯвляетсяОригиналомКонтекстноеМеню" id="145"/>
+									<ExtendedTooltip name="ДеревоСвязейЯвляетсяОригиналомРасширеннаяПодсказка" id="146"/>
+								</PictureField>
+							</ChildItems>
+						</Table>
+						<CheckBoxField name="ПоказыватьТолькоОригиналыВСвязях" id="69">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показывать только оригиналы</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показывать только скан-копии оригиналов связанных документов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПоказыватьТолькоОригиналыВСвязяхКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="ПоказыватьТолькоОригиналыВСвязяхРасширеннаяПодсказка" id="71"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПредставлениеHTML" id="187">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПредставлениеHTMLРасширеннаяПодсказка" id="188"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияВыравнивающийБлок" id="200">
+							<Visible>false</Visible>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<ContextMenu name="ДекорацияВыравнивающийБлокКонтекстноеМеню" id="201"/>
+							<ExtendedTooltip name="ДекорацияВыравнивающийБлокРасширеннаяПодсказка" id="202"/>
+						</LabelDecoration>
+						<Pages name="ГруппаПредпросмотрСтраницы" id="205">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа предпросмотр страницы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа предпросмотр страницы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ГруппаПредпросмотрСтраницыРасширеннаяПодсказка" id="206"/>
+							<ChildItems>
+								<Page name="ГруппаHtml" id="207">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа html</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа html</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаHtmlРасширеннаяПодсказка" id="208"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПредпросмотрУрезан" id="189">
+											<Visible>false</Visible>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа предпросмотр урезан</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:FieldAlternativeBackColor</BackColor>
+											<ExtendedTooltip name="ГруппаПредпросмотрУрезанРасширеннаяПодсказка" id="190"/>
+											<ChildItems>
+												<PictureDecoration name="ДекорацияИконкаУрезан" id="191">
+													<Width>2</Width>
+													<Height>1</Height>
+													<HorizontalStretch>false</HorizontalStretch>
+													<VerticalStretch>false</VerticalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Декорация иконка урезан</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияИконкаУрезанКонтекстноеМеню" id="192"/>
+													<ExtendedTooltip name="ДекорацияИконкаУрезанРасширеннаяПодсказка" id="193"/>
+												</PictureDecoration>
+												<LabelDecoration name="ДекорацияПредпросмотрУрезан" id="194">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<TextColor>style:FormTextColor</TextColor>
+													<Font faceName="" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Файл показан в сокращенном виде, т.к. содержит большой текст. Откройте файл для просмотра, чтобы увидеть полностью.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияПредпросмотрУрезанКонтекстноеМеню" id="195"/>
+													<ExtendedTooltip name="ДекорацияПредпросмотрУрезанРасширеннаяПодсказка" id="196"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<HTMLDocumentField name="ПредставлениеHTML" id="197">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Представление HTML</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Height>13</Height>
+											<BorderColor>style:FormBackColor</BorderColor>
+											<ContextMenu name="ПредставлениеHTMLКонтекстноеМеню" id="198"/>
+											<ExtendedTooltip name="ПредставлениеHTMLРасширеннаяПодсказка" id="199"/>
+										</HTMLDocumentField>
+										<CommandBar name="ПереключениеСтраниц" id="221">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Переключение страниц</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПереключениеСтраницРасширеннаяПодсказка" id="222"/>
+											<ChildItems>
+												<ButtonGroup name="ГруппаСтраницыКнопкиПеремотки" id="223">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа страницы</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа страницы кнопки перемотки</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Representation>Compact</Representation>
+													<ExtendedTooltip name="ГруппаСтраницыКнопкиПеремоткиРасширеннаяПодсказка" id="224"/>
+													<ChildItems>
+														<Button name="Назад" id="225">
+															<Type>CommandBarButton</Type>
+															<CommandName>0</CommandName>
+															<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+															<ExtendedTooltip name="НазадРасширеннаяПодсказка" id="226"/>
+														</Button>
+														<Button name="Вперед" id="227">
+															<Type>CommandBarButton</Type>
+															<CommandName>0</CommandName>
+															<PictureLocation>Right</PictureLocation>
+															<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+															<ExtendedTooltip name="ВпередРасширеннаяПодсказка" id="228"/>
+														</Button>
+													</ChildItems>
+												</ButtonGroup>
+											</ChildItems>
+										</CommandBar>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаPdf" id="209">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа pdf</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа pdf</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаPdfРасширеннаяПодсказка" id="210"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаКомандPdf" id="219">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа команд pdf</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа команд pdf</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКомандPdfРасширеннаяПодсказка" id="220"/>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.18">
+		<Title>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Связи</v8:content>
+			</v8:item>
+		</Title>
+		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+		<AutoTitle>false</AutoTitle>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="ГруппаИнфо" id="173">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа инфо</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа инфо</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>AlwaysHorizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаИнфоРасширеннаяПодсказка" id="174"/>
+				<ChildItems>
+					<PictureDecoration name="ДекорацияИнформация" id="175">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Декорация информация</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ДекорацияИнформацияКонтекстноеМеню" id="176"/>
+						<ExtendedTooltip name="ДекорацияИнформацияРасширеннаяПодсказка" id="177"/>
+					</PictureDecoration>
+					<LabelDecoration name="ДекорацияТолькоВажныеТекст" id="178">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Показаны только важные связи. Чтобы увидеть все, нажмите "Показать все связи".</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ДекорацияТолькоВажныеТекстКонтекстноеМеню" id="179"/>
+						<ExtendedTooltip name="ДекорацияТолькоВажныеТекстРасширеннаяПодсказка" id="180"/>
+					</LabelDecoration>
+				</ChildItems>
+			</UsualGroup>
+			<LabelDecoration name="ДекорацияСвязиПрочитаныНеПолностью" id="162">
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Связи прочитаны не полностью. Используйте отчет «Структура связей».</v8:content>
+					</v8:item>
+				</Title>
+				<ContextMenu name="ДекорацияСвязиПрочитаныНеПолностьюКонтекстноеМеню" id="163"/>
+				<ExtendedTooltip name="ДекорацияСвязиПрочитаныНеПолностьюРасширеннаяПодсказка" id="164"/>
+			</LabelDecoration>
+			<CommandBar name="КоманднаяПанельДеревоСвязей" id="185">
+				<ExtendedTooltip name="КоманднаяПанельДеревоСвязейРасширеннаяПодсказка" id="186"/>
+				<ChildItems>
+					<Button name="ДеревоСвязейДобавить" id="118">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ДеревоСвязейДобавитьExtendedTooltip" id="119"/>
+					</Button>
+					<Button name="ДеревоСвязейИзменить" id="120">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ДеревоСвязейИзменитьExtendedTooltip" id="121"/>
+					</Button>
+					<Button name="ДеревоСвязейУдалить" id="122">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ДеревоСвязейУдалитьExtendedTooltip" id="123"/>
+					</Button>
+					<Button name="ДеревоСвязейОткрыть" id="124">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ДеревоСвязейОткрытьExtendedTooltip" id="125"/>
+					</Button>
+					<Button name="ДеревоСвязейПоказатьВсеСвязи" id="169">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ДеревоСвязейПоказатьВсеСвязиРасширеннаяПодсказка" id="170"/>
+					</Button>
+					<Button name="ДеревоСвязейСтруктураСвязей" id="126">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ДеревоСвязейСтруктураСвязейExtendedTooltip" id="127"/>
+					</Button>
+					<Button name="ДеревоСвязейОбновить" id="128">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ДеревоСвязейОбновитьРасширеннаяПодсказка" id="129"/>
+					</Button>
+					<Button name="ДеревоСвязейПредварительныйПросмотр" id="203">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ДеревоСвязейПредварительныйПросмотрРасширеннаяПодсказка" id="204"/>
+					</Button>
+					<ButtonGroup name="ДеревоСвязейГруппаФайлы" id="132">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дерево связей группа файлы</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дерево связей группа файлы</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ДеревоСвязейГруппаФайлыРасширеннаяПодсказка" id="133"/>
+						<ChildItems>
+							<Button name="ДеревоСвязейНапечататьФайлы" id="134">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ДеревоСвязейНапечататьФайлыРасширеннаяПодсказка" id="135"/>
+							</Button>
+							<Button name="ДеревоСвязейСохранитьКак" id="136">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ДеревоСвязейСохранитьКакРасширеннаяПодсказка" id="137"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</CommandBar>
+			<UsualGroup name="ГруппаДеревоСвязейПредставлениеHTML" id="181">
+				<Group>AlwaysHorizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаДеревоСвязейПредставлениеHTMLРасширеннаяПодсказка" id="182"/>
+				<ChildItems>
+					<UsualGroup name="ГруппаДеревоСвязей" id="183">
+						<Group>Vertical</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаДеревоСвязейРасширеннаяПодсказка" id="184"/>
+						<ChildItems>
+							<Table name="ДеревоСвязей" id="72">
+								<Representation>Tree</Representation>
+								<HorizontalLines>false</HorizontalLines>
+								<AutoInsertNewRow>true</AutoInsertNewRow>
+								<InitialTreeView>ExpandTopLevel</InitialTreeView>
+								<EnableStartDrag>true</EnableStartDrag>
+								<EnableDrag>true</EnableDrag>
+								<FileDragMode>AsFile</FileDragMode>
+								<SearchStringLocation>None</SearchStringLocation>
+								<ViewStatusLocation>None</ViewStatusLocation>
+								<SearchControlLocation>None</SearchControlLocation>
+								<ContextMenu name="ДеревоСвязейКонтекстноеМеню" id="73">
+									<Autofill>false</Autofill>
+									<ChildItems>
+										<Button name="ДеревоСвязейКонтекстноеМенюКнопкаДобавить" id="96">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаДобавитьExtendedTooltip" id="97"/>
+										</Button>
+										<Button name="ДеревоСвязейКонтекстноеМенюКнопкаСкопировать" id="98">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаСкопироватьExtendedTooltip" id="99"/>
+										</Button>
+										<Button name="ДеревоСвязейКонтекстноеМенюКнопкаИзменить" id="100">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаИзменитьExtendedTooltip" id="101"/>
+										</Button>
+										<Button name="ДеревоСвязейКонтекстноеМенюКнопкаУдалить" id="102">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаУдалитьExtendedTooltip" id="103"/>
+										</Button>
+										<Button name="ДеревоСвязейКонтекстноеМенюКнопкаОткрыть" id="104">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаОткрытьРасширеннаяПодсказка" id="105"/>
+										</Button>
+										<Button name="ДеревоСвязейКонтекстноеМенюДеревоСвязейОбновить" id="106">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюДеревоСвязейОбновитьExtendedTooltip" id="107"/>
+										</Button>
+										<Popup name="ДеревоСвязейКонтекстноеМенюСортироватьПо" id="165">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сортировать по</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сортировать по</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюСортироватьПоРасширеннаяПодсказка" id="166"/>
+											<ChildItems>
+												<Button name="ДеревоСвязейКонтекстноеМенюДеревоСвязейКонтекстноеМенюСортироватьПоДате" id="167">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Дате</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюДеревоСвязейКонтекстноеМенюСортироватьПоДатеРасширеннаяПодсказка" id="168"/>
+												</Button>
+												<Button name="ДеревоСвязейКонтекстноеМенюСортироватьПоРегНомеру" id="171">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Рег. номеру</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюСортироватьПоРегНомеруРасширеннаяПодсказка" id="172"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+										<Button name="ДеревоСвязейКонтекстноеМенюКнопкаКопироватьВБуферОбмена" id="108">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаКопироватьВБуферОбменаExtendedTooltip" id="109"/>
+										</Button>
+										<Button name="ДеревоСвязейКонтекстноеМенюКнопкаВыделитьВсе" id="110">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюКнопкаВыделитьВсеExtendedTooltip" id="111"/>
+										</Button>
+										<ButtonGroup name="ДеревоСвязейКонтекстноеМенюГруппаФайлы" id="112">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дерево связей контекстное меню группа файлы</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дерево связей контекстное меню группа файлы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюГруппаФайлыРасширеннаяПодсказка" id="113"/>
+											<ChildItems>
+												<Button name="ДеревоСвязейКонтекстноеМенюДеревоСвязейНапечататьФайлы" id="114">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюДеревоСвязейНапечататьФайлыРасширеннаяПодсказка" id="115"/>
+												</Button>
+												<Button name="ДеревоСвязейКонтекстноеМенюДеревоСвязейСохранитьКак" id="116">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="ДеревоСвязейКонтекстноеМенюДеревоСвязейСохранитьКакРасширеннаяПодсказка" id="117"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+									</ChildItems>
+								</ContextMenu>
+								<AutoCommandBar name="ДеревоСвязейКоманднаяПанель" id="74">
+									<Autofill>false</Autofill>
+								</AutoCommandBar>
+								<ExtendedTooltip name="ДеревоСвязейРасширеннаяПодсказка" id="75"/>
+								<SearchStringAddition name="ДеревоСвязейСтрокаПоиска" id="76">
+									<AdditionSource>
+										<Item>ДеревоСвязей</Item>
+										<Type>SearchStringRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="ДеревоСвязейСтрокаПоискаКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="ДеревоСвязейСтрокаПоискаРасширеннаяПодсказка" id="78"/>
+								</SearchStringAddition>
+								<ViewStatusAddition name="ДеревоСвязейСостояниеПросмотра" id="79">
+									<AdditionSource>
+										<Item>ДеревоСвязей</Item>
+										<Type>ViewStatusRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="ДеревоСвязейСостояниеПросмотраКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="ДеревоСвязейСостояниеПросмотраРасширеннаяПодсказка" id="81"/>
+								</ViewStatusAddition>
+								<SearchControlAddition name="ДеревоСвязейУправлениеПоиском" id="82">
+									<AdditionSource>
+										<Item>ДеревоСвязей</Item>
+										<Type>SearchControl</Type>
+									</AdditionSource>
+									<ContextMenu name="ДеревоСвязейУправлениеПоискомКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="ДеревоСвязейУправлениеПоискомРасширеннаяПодсказка" id="84"/>
+								</SearchControlAddition>
+								<ChildItems>
+									<ColumnGroup name="ДеревоСвязейГруппаКартинкаПредставление" id="85">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дерево связей группа картинка представление</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дерево связей группа картинка представление</v8:content>
+											</v8:item>
+										</ToolTip>
+										<HorizontalStretch>true</HorizontalStretch>
+										<Group>InCell</Group>
+										<ExtendedTooltip name="ДеревоСвязейГруппаКартинкаПредставлениеРасширеннаяПодсказка" id="86"/>
+										<ChildItems>
+											<PictureField name="ДеревоСвязейИндексКартинки" id="138">
+												<TitleLocation>None</TitleLocation>
+												<EditMode>EnterOnInput</EditMode>
+												<HorizontalStretch>false</HorizontalStretch>
+												<ValuesPicture>
+													<xr:Ref>CommonPicture.КоллекцияПиктограммФайлов</xr:Ref>
+													<xr:LoadTransparent>false</xr:LoadTransparent>
+												</ValuesPicture>
+												<ContextMenu name="ДеревоСвязейИндексКартинкиКонтекстноеМеню" id="139"/>
+												<ExtendedTooltip name="ДеревоСвязейИндексКартинкиРасширеннаяПодсказка" id="140"/>
+											</PictureField>
+											<InputField name="ДеревоСвязейПредставление" id="141">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Документ</v8:content>
+													</v8:item>
+												</Title>
+												<EditMode>EnterOnInput</EditMode>
+												<AutoCellHeight>true</AutoCellHeight>
+												<HeightControlVariant>UseContentHeight</HeightControlVariant>
+												<ContextMenu name="ДеревоСвязейПредставлениеКонтекстноеМеню" id="142"/>
+												<ExtendedTooltip name="ДеревоСвязейПредставлениеРасширеннаяПодсказка" id="143"/>
+											</InputField>
+										</ChildItems>
+									</ColumnGroup>
+									<InputField name="ДеревоСвязейДатаДокумента" id="153">
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дата регистрации или создания документа, если не зарегистрирован</v8:content>
+											</v8:item>
+										</ToolTip>
+										<EditMode>EnterOnInput</EditMode>
+										<Width>9</Width>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>15</MaxWidth>
+										<ContextMenu name="ДеревоСвязейДатаДокументаКонтекстноеМеню" id="154"/>
+										<ExtendedTooltip name="ДеревоСвязейДатаДокументаРасширеннаяПодсказка" id="155"/>
+									</InputField>
+									<InputField name="ДеревоСвязейНомерДокумента" id="150">
+										<EditMode>EnterOnInput</EditMode>
+										<Width>10</Width>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>15</MaxWidth>
+										<ContextMenu name="ДеревоСвязейНомерДокументаКонтекстноеМеню" id="151"/>
+										<ExtendedTooltip name="ДеревоСвязейНомерДокументаРасширеннаяПодсказка" id="152"/>
+									</InputField>
+									<InputField name="ДеревоСвязейСумма" id="156">
+										<EditMode>EnterOnInput</EditMode>
+										<AutoCellHeight>true</AutoCellHeight>
+										<Width>10</Width>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>15</MaxWidth>
+										<ContextMenu name="ДеревоСвязейСуммаКонтекстноеМеню" id="157"/>
+										<ExtendedTooltip name="ДеревоСвязейСуммаРасширеннаяПодсказка" id="158"/>
+									</InputField>
+									<LabelField name="ДеревоСвязейКомментарий" id="159">
+										<Visible>false</Visible>
+										<EditMode>EnterOnInput</EditMode>
+										<Width>2</Width>
+										<Hiperlink>true</Hiperlink>
+										<ContextMenu name="ДеревоСвязейКомментарийКонтекстноеМеню" id="160"/>
+										<ExtendedTooltip name="ДеревоСвязейКомментарийРасширеннаяПодсказка" id="161"/>
+									</LabelField>
+									<PictureField name="ДеревоСвязейЯвляетсяОригиналом" id="144">
+										<TitleLocation>None</TitleLocation>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Скан-копия оригинала документа</v8:content>
+											</v8:item>
+										</ToolTip>
+										<EditMode>EnterOnInput</EditMode>
+										<HeaderPicture>
+											<xr:Ref>CommonPicture.Оригинал</xr:Ref>
+											<xr:LoadTransparent>false</xr:LoadTransparent>
+										</HeaderPicture>
+										<Width>2</Width>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>2</MaxWidth>
+										<ValuesPicture>
+											<xr:Ref>CommonPicture.Оригинал</xr:Ref>
+											<xr:LoadTransparent>false</xr:LoadTransparent>
+										</ValuesPicture>
+										<FileDragMode>AsFile</FileDragMode>
+										<ContextMenu name="ДеревоСвязейЯвляетсяОригиналомКонтекстноеМеню" id="145"/>
+										<ExtendedTooltip name="ДеревоСвязейЯвляетсяОригиналомРасширеннаяПодсказка" id="146"/>
+									</PictureField>
+								</ChildItems>
+							</Table>
+							<CheckBoxField name="ПоказыватьТолькоОригиналыВСвязях" id="69">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Показывать только оригиналы</v8:content>
+									</v8:item>
+								</Title>
+								<TitleLocation>Right</TitleLocation>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Показывать только скан-копии оригиналов связанных документов</v8:content>
+									</v8:item>
+								</ToolTip>
+								<CheckBoxType>Auto</CheckBoxType>
+								<ContextMenu name="ПоказыватьТолькоОригиналыВСвязяхКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="ПоказыватьТолькоОригиналыВСвязяхРасширеннаяПодсказка" id="71"/>
+							</CheckBoxField>
+						</ChildItems>
+					</UsualGroup>
+					<UsualGroup name="ГруппаПредставлениеHTML" id="187">
+						<Group>Vertical</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаПредставлениеHTMLРасширеннаяПодсказка" id="188"/>
+						<ChildItems>
+							<LabelDecoration name="ДекорацияВыравнивающийБлок" id="200">
+								<Visible>false</Visible>
+								<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+								<ContextMenu name="ДекорацияВыравнивающийБлокКонтекстноеМеню" id="201"/>
+								<ExtendedTooltip name="ДекорацияВыравнивающийБлокРасширеннаяПодсказка" id="202"/>
+							</LabelDecoration>
+							<Pages name="ГруппаПредпросмотрСтраницы" id="205">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа предпросмотр страницы</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа предпросмотр страницы</v8:content>
+									</v8:item>
+								</ToolTip>
+								<PagesRepresentation>None</PagesRepresentation>
+								<ExtendedTooltip name="ГруппаПредпросмотрСтраницыРасширеннаяПодсказка" id="206"/>
+								<ChildItems>
+									<Page name="ГруппаHtml" id="207">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа html</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа html</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ГруппаHtmlРасширеннаяПодсказка" id="208"/>
+										<ChildItems>
+											<UsualGroup name="ГруппаПредпросмотрУрезан" id="189">
+												<Visible>false</Visible>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа предпросмотр урезан</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Group>AlwaysHorizontal</Group>
+												<Behavior>Usual</Behavior>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<BackColor>style:FieldAlternativeBackColor</BackColor>
+												<ExtendedTooltip name="ГруппаПредпросмотрУрезанРасширеннаяПодсказка" id="190"/>
+												<ChildItems>
+													<PictureDecoration name="ДекорацияИконкаУрезан" id="191">
+														<Width>2</Width>
+														<Height>1</Height>
+														<HorizontalStretch>false</HorizontalStretch>
+														<VerticalStretch>false</VerticalStretch>
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Декорация иконка урезан</v8:content>
+															</v8:item>
+														</Title>
+														<ContextMenu name="ДекорацияИконкаУрезанКонтекстноеМеню" id="192"/>
+														<ExtendedTooltip name="ДекорацияИконкаУрезанРасширеннаяПодсказка" id="193"/>
+													</PictureDecoration>
+													<LabelDecoration name="ДекорацияПредпросмотрУрезан" id="194">
+														<AutoMaxWidth>false</AutoMaxWidth>
+														<TextColor>style:FormTextColor</TextColor>
+														<Font faceName="" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Файл показан в сокращенном виде, т.к. содержит большой текст. Откройте файл для просмотра, чтобы увидеть полностью.</v8:content>
+															</v8:item>
+														</Title>
+														<ContextMenu name="ДекорацияПредпросмотрУрезанКонтекстноеМеню" id="195"/>
+														<ExtendedTooltip name="ДекорацияПредпросмотрУрезанРасширеннаяПодсказка" id="196"/>
+													</LabelDecoration>
+												</ChildItems>
+											</UsualGroup>
+											<HTMLDocumentField name="ПредставлениеHTML" id="197">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Представление HTML</v8:content>
+													</v8:item>
+												</Title>
+												<TitleLocation>None</TitleLocation>
+												<Height>13</Height>
+												<BorderColor>style:FormBackColor</BorderColor>
+												<ContextMenu name="ПредставлениеHTMLКонтекстноеМеню" id="198"/>
+												<ExtendedTooltip name="ПредставлениеHTMLРасширеннаяПодсказка" id="199"/>
+											</HTMLDocumentField>
+											<CommandBar name="ПереключениеСтраниц" id="221">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Переключение страниц</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ПереключениеСтраницРасширеннаяПодсказка" id="222"/>
+												<ChildItems>
+													<ButtonGroup name="ГруппаСтраницыКнопкиПеремотки" id="223">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Группа страницы</v8:content>
+															</v8:item>
+														</Title>
+														<ToolTip>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Группа страницы кнопки перемотки</v8:content>
+															</v8:item>
+														</ToolTip>
+														<Representation>Compact</Representation>
+														<ExtendedTooltip name="ГруппаСтраницыКнопкиПеремоткиРасширеннаяПодсказка" id="224"/>
+														<ChildItems>
+															<Button name="Назад" id="225">
+																<Type>CommandBarButton</Type>
+																<CommandName>0</CommandName>
+																<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+																<ExtendedTooltip name="НазадРасширеннаяПодсказка" id="226"/>
+															</Button>
+															<Button name="Вперед" id="227">
+																<Type>CommandBarButton</Type>
+																<CommandName>0</CommandName>
+																<PictureLocation>Right</PictureLocation>
+																<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+																<ExtendedTooltip name="ВпередРасширеннаяПодсказка" id="228"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+												</ChildItems>
+											</CommandBar>
+										</ChildItems>
+									</Page>
+									<Page name="ГруппаPdf" id="209">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа pdf</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа pdf</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ГруппаPdfРасширеннаяПодсказка" id="210"/>
+										<ChildItems>
+											<UsualGroup name="ГруппаКомандPdf" id="219">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа команд pdf</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа команд pdf</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Group>AlwaysHorizontal</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаКомандPdfРасширеннаяПодсказка" id="220"/>
+											</UsualGroup>
+										</ChildItems>
+									</Page>
+								</ChildItems>
+							</Pages>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>

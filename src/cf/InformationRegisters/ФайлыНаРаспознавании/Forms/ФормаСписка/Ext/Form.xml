@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Create</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Refresh</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПовторитьРаспознавание" id="28">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПовторитьРаспознавание</CommandName>
+				<ExtendedTooltip name="ФормаПовторитьРаспознаваниеРасширеннаяПодсказка" id="29"/>
+			</Button>
+			<Button name="ФормаПрерватьРаспознавание" id="30">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПрерватьРаспознавание</CommandName>
+				<ExtendedTooltip name="ФормаПрерватьРаспознаваниеРасширеннаяПодсказка" id="31"/>
+			</Button>
+			<Button name="ФормаОбновить" id="32">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Обновить</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="33"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialListView>Beginning</InitialListView>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Create</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>Refresh</ExcludedCommand>
+			</CommandSet>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnGetDataAtServer">СписокПриПолученииДанныхНаСервере</Event>
+			</Events>
+			<ChildItems>
+				<ColumnGroup name="ГруппаСсылкаНаФайл" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файл</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ссылка на файл</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаСсылкаНаФайлРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<LabelField name="СсылкаНаФайл1" id="44">
+							<DataPath>Список.СсылкаНаФайл1</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="СсылкаНаФайл1КонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="СсылкаНаФайл1РасширеннаяПодсказка" id="46"/>
+						</LabelField>
+						<LabelField name="СсылкаНаФайл2" id="47">
+							<DataPath>Список.СсылкаНаФайл2</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="СсылкаНаФайл2КонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="СсылкаНаФайл2РасширеннаяПодсказка" id="49"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="Файл" id="16">
+					<DataPath>~Список.Файл</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ФайлКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ФайлРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаДаты" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа даты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа даты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДатыРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<LabelField name="ДатаПередачиНаРаспознавание" id="34">
+							<DataPath>Список.ДатаПередачиНаРаспознавание</DataPath>
+							<ContextMenu name="ДатаПередачиНаРаспознаваниеКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ДатаПередачиНаРаспознаваниеРасширеннаяПодсказка" id="36"/>
+						</LabelField>
+						<LabelField name="ДатаПоследнейПроверкиРезультата" id="37">
+							<DataPath>Список.ДатаПоследнейПроверкиРезультата</DataPath>
+							<ContextMenu name="ДатаПоследнейПроверкиРезультатаКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ДатаПоследнейПроверкиРезультатаРасширеннаяПодсказка" id="39"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="КоличествоПопыток" id="22">
+					<DataPath>Список.КоличествоПопыток</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="КоличествоПопытокКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="КоличествоПопытокРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="ОписаниеОшибки" id="25">
+					<DataPath>Список.ОписаниеОшибки</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ОписаниеОшибкиКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ОписаниеОшибкиРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="ИдентификаторЗадания" id="50">
+					<DataPath>Список.ИдентификаторЗадания</DataPath>
+					<ContextMenu name="ИдентификаторЗаданияКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ИдентификаторЗаданияРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>~Список.Файл</Field>
+				<Field>Список.ДатаПередачиНаРаспознавание</Field>
+				<Field>Список.ДатаПоследнейПроверкиРезультата</Field>
+				<Field>Список.КоличествоПопыток</Field>
+				<Field>Список.ОписаниеОшибки</Field>
+				<Field>Список.ПоФайлуДавноНеПроверялсяРезультат</Field>
+				<Field>Список.СсылкаНаФайл1</Field>
+				<Field>Список.СсылкаНаФайл2</Field>
+				<Field>Список.ФайлДавноПереданНаРаспознавание</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	НЕОПРЕДЕЛЕНО КАК СсылкаНаФайл1,
+	РегистрСведенийФайлыНаРаспознавании.Файл КАК СсылкаНаФайл2,
+	РегистрСведенийФайлыНаРаспознавании.ДатаПередачиНаРаспознавание КАК ДатаПередачиНаРаспознавание,
+	РегистрСведенийФайлыНаРаспознавании.ДатаПередачиНаРаспознавание = ДАТАВРЕМЯ(1, 1, 1)
+		ИЛИ РАЗНОСТЬДАТ(РегистрСведенийФайлыНаРаспознавании.ДатаПередачиНаРаспознавание, &amp;ТекущаяДата, СЕКУНДА) &gt;= 1800 КАК ФайлДавноПереданНаРаспознавание,
+	РегистрСведенийФайлыНаРаспознавании.ДатаПоследнейПроверкиРезультата КАК ДатаПоследнейПроверкиРезультата,
+	РегистрСведенийФайлыНаРаспознавании.ДатаПоследнейПроверкиРезультата = ДАТАВРЕМЯ(1, 1, 1)
+		ИЛИ РАЗНОСТЬДАТ(РегистрСведенийФайлыНаРаспознавании.ДатаПоследнейПроверкиРезультата, &amp;ТекущаяДата, СЕКУНДА) &gt;= 1800 КАК ПоФайлуДавноНеПроверялсяРезультат,
+	РегистрСведенийФайлыНаРаспознавании.ИдентификаторЗадания КАК ИдентификаторЗадания,
+	РегистрСведенийФайлыНаРаспознавании.КоличествоПопыток КАК КоличествоПопыток,
+	РегистрСведенийФайлыНаРаспознавании.ОписаниеОшибки КАК ОписаниеОшибки
+ИЗ
+	РегистрСведений.ФайлыНаРаспознавании КАК РегистрСведенийФайлыНаРаспознавании</QueryText>
+				<MainTable>InformationRegister.ФайлыНаРаспознавании</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаПередачиНаРаспознавание</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ДатаПоследнейПроверкиРезультата</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ПоФайлуДавноНеПроверялсяРезультат</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ПросроченныеДанныеЦвет</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПовторитьРаспознавание" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повторить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повторить распознавание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПовторитьРаспознавание</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПрерватьРаспознавание" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прервать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прервать распознавание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПрерватьРаспознавание</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Обновить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+		</Command>
+	</Commands>
+</Form>

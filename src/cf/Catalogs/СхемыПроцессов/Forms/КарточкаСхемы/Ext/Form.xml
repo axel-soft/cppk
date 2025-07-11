@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ЗаписатьИЗакрыть" id="7">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="Записать" id="121">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.Записать</CommandName>
+				<ExtendedTooltip name="ЗаписатьРасширеннаяПодсказка" id="122"/>
+			</Button>
+			<ButtonGroup name="КомандыСхемы" id="119">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды схемы</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="КомандыСхемыРасширеннаяПодсказка" id="120"/>
+				<ChildItems>
+					<ButtonGroup name="ВставкаЭлементовСхемы" id="11">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вставка элементов схемы</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа элементы схемы</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ВставкаЭлементовСхемыРасширеннаяПодсказка" id="12"/>
+						<ChildItems>
+							<Button name="ВставитьЭлементСтарт" id="13">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<Width>4</Width>
+								<Height>2</Height>
+								<CommandName>Form.Item.Схема.StandardCommand.InsertItemStart</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Старт</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ВставитьЭлементСтартРасширеннаяПодсказка" id="14">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Старт</v8:content>
+										</v8:item>
+									</Title>
+								</ExtendedTooltip>
+							</Button>
+							<Button name="ВставитьЭлементЗавершение" id="15">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<Width>4</Width>
+								<Height>2</Height>
+								<CommandName>Form.Item.Схема.StandardCommand.InsertItemCompletion</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Завершение</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ВставитьЭлементЗавершениеРасширеннаяПодсказка" id="16">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Завершение</v8:content>
+										</v8:item>
+									</Title>
+								</ExtendedTooltip>
+							</Button>
+							<Button name="ВставитьБлокВыполнения" id="17">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<Width>4</Width>
+								<Height>2</Height>
+								<CommandName>Form.Item.Схема.StandardCommand.InsertItemProcessing</CommandName>
+								<Picture>
+									<xr:Ref>CommonPicture.ЭлементОбработкаСхемыПроцесса</xr:Ref>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Блок выполнения</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ВставитьБлокВыполненияРасширеннаяПодсказка" id="18">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Блок выполнения</v8:content>
+										</v8:item>
+									</Title>
+								</ExtendedTooltip>
+							</Button>
+							<Button name="ВставитьЭлементУсловие" id="23">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<Width>4</Width>
+								<Height>2</Height>
+								<CommandName>Form.Item.Схема.StandardCommand.InsertItemCondition</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Условие</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ВставитьЭлементУсловиеРасширеннаяПодсказка" id="24">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Условие</v8:content>
+										</v8:item>
+									</Title>
+								</ExtendedTooltip>
+							</Button>
+							<Button name="ВставитьЭлементРазделение" id="25">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<Width>4</Width>
+								<Height>2</Height>
+								<CommandName>Form.Item.Схема.StandardCommand.InsertItemSplit</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Разделение</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ВставитьЭлементРазделениеРасширеннаяПодсказка" id="26">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Разделение</v8:content>
+										</v8:item>
+									</Title>
+								</ExtendedTooltip>
+							</Button>
+							<Button name="ВставитьЭлементСлияние" id="27">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<Width>4</Width>
+								<Height>2</Height>
+								<CommandName>Form.Item.Схема.StandardCommand.InsertItemJoin</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Слияние</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ВставитьЭлементСлияниеРасширеннаяПодсказка" id="28">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Слияние</v8:content>
+										</v8:item>
+									</Title>
+								</ExtendedTooltip>
+							</Button>
+							<Button name="ВставитьЭлементДекорация" id="29">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<Width>4</Width>
+								<Height>2</Height>
+								<CommandName>Form.Item.Схема.StandardCommand.InsertItemDecoration</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Декорация (текст / картинка)</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ВставитьЭлементДекорацияРасширеннаяПодсказка" id="30">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация (текст / картинка)</v8:content>
+										</v8:item>
+									</Title>
+								</ExtendedTooltip>
+							</Button>
+							<Button name="ВставитьЭлементДекоративнаяЛиния" id="31">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<Width>4</Width>
+								<Height>2</Height>
+								<CommandName>Form.Item.Схема.StandardCommand.InsertItemDecorativeLine</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Декоративная линия</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ВставитьЭлементДекоративнаяЛинияРасширеннаяПодсказка" id="32">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декоративная линия</v8:content>
+										</v8:item>
+									</Title>
+								</ExtendedTooltip>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Popup name="ВыравниваниеИРазмерЭлементовСхемы" id="57">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выравнивание и размер</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Схема группа выравнивание и размер</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ВыравниваниеИРазмерЭлементовСхемыРасширеннаяПодсказка" id="58"/>
+						<ChildItems>
+							<ButtonGroup name="ГоризонтальноеВыравниваниеЭлементовСхемы" id="59">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Горизонтальное выравнивание элементов схемы</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ГоризонтальноеВыравниваниеЭлементовСхемыРасширеннаяПодсказка" id="60"/>
+								<ChildItems>
+									<Button name="СхемаВыровнятьВлево" id="61">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.AlignLeft</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаВыровнятьВлевоРасширеннаяПодсказка" id="62"/>
+									</Button>
+									<Button name="СхемаВыровнятьПоЦентру" id="63">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.AlignCenter</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаВыровнятьПоЦентруРасширеннаяПодсказка" id="64"/>
+									</Button>
+									<Button name="СхемаВыровнятьВправо" id="65">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.AlignRight</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаВыровнятьВправоРасширеннаяПодсказка" id="66"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="РаспределениеЭлементовСхемы" id="67">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Распределение элементов схемы</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="РаспределениеЭлементовСхемыРасширеннаяПодсказка" id="68"/>
+								<ChildItems>
+									<Button name="СхемаРаспределитьПоГоризонтали" id="69">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.DistributeHorizontally</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаРаспределитьПоГоризонталиРасширеннаяПодсказка" id="70"/>
+									</Button>
+									<Button name="СхемаРаспределитьПоВертикали" id="71">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.DistributeVertically</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаРаспределитьПоВертикалиРасширеннаяПодсказка" id="72"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="ВертикальноеВыравниваниеЭлементовСхемы" id="73">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Вертикальное выравнивание элементов схемы</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ВертикальноеВыравниваниеЭлементовСхемыРасширеннаяПодсказка" id="74"/>
+								<ChildItems>
+									<Button name="СхемаВыровнятьВверх" id="75">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.AlignTop</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаВыровнятьВверхРасширеннаяПодсказка" id="76"/>
+									</Button>
+									<Button name="СхемаВыровнятьПоСередине" id="77">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.AlignMiddle</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаВыровнятьПоСерединеРасширеннаяПодсказка" id="78"/>
+									</Button>
+									<Button name="СхемаВыровнятьВниз" id="79">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.AlignBottom</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаВыровнятьВнизРасширеннаяПодсказка" id="80"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="ШиринаЭлементовСхемы" id="81">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ширина элементов схемы</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ШиринаЭлементовСхемыРасширеннаяПодсказка" id="82"/>
+								<ChildItems>
+									<Button name="СхемаОдинаковаяШирина" id="83">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.EqualWidth</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаОдинаковаяШиринаРасширеннаяПодсказка" id="84"/>
+									</Button>
+									<Button name="СхемаОдинаковаяВысота" id="85">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.EqualHeight</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаОдинаковаяВысотаРасширеннаяПодсказка" id="86"/>
+									</Button>
+									<Button name="СхемаОдинаковыйРазмер" id="87">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.EqualSize</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаОдинаковыйРазмерРасширеннаяПодсказка" id="88"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</Popup>
+					<Popup name="ПорядокЭлементовСхемы" id="89">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Порядок</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Схема группа порядок</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ПорядокЭлементовСхемыРасширеннаяПодсказка" id="90"/>
+						<ChildItems>
+							<ButtonGroup name="ПереднийПланЭлементовСхемы" id="91">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Передний план элементов схемы</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Схема группа передний план</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ПереднийПланЭлементовСхемыРасширеннаяПодсказка" id="92"/>
+								<ChildItems>
+									<Button name="СхемаПереместитьНаПереднийПлан" id="93">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.BringToFront</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаПереместитьНаПереднийПланРасширеннаяПодсказка" id="94"/>
+									</Button>
+									<Button name="СхемаПереместитьВперед" id="95">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.SendForward</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаПереместитьВпередРасширеннаяПодсказка" id="96"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="ЗаднийПланЭлементовСхемы" id="97">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Задний план элементов схемы</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Схема группа задний план</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ЗаднийПланЭлементовСхемыРасширеннаяПодсказка" id="98"/>
+								<ChildItems>
+									<Button name="СхемаПереместитьНаЗаднийПлан" id="99">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.BringToBack</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаПереместитьНаЗаднийПланРасширеннаяПодсказка" id="100"/>
+									</Button>
+									<Button name="СхемаПереместитьНазад" id="101">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.SendBackward</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаПереместитьНазадРасширеннаяПодсказка" id="102"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="ГруппировкаЭлементовСхемы" id="103">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группировка элементов схемы</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Схема группа группировка</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ГруппировкаЭлементовСхемыРасширеннаяПодсказка" id="104"/>
+								<ChildItems>
+									<Button name="СхемаГруппировать" id="105">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.Group</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаГруппироватьРасширеннаяПодсказка" id="106"/>
+									</Button>
+									<Button name="СхемаРазгруппировать" id="107">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Схема.StandardCommand.Ungroup</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СхемаРазгруппироватьРасширеннаяПодсказка" id="108"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</Popup>
+					<Button name="СхемаПечать" id="113">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Схема.StandardCommand.Print</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СхемаПечатьРасширеннаяПодсказка" id="114"/>
+					</Button>
+					<Button name="СхемаПредварительныйПросмотр" id="115">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Схема.StandardCommand.Preview</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СхемаПредварительныйПросмотрРасширеннаяПодсказка" id="116"/>
+					</Button>
+					<Button name="СхемаПараметрыСтраницы" id="117">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Схема.StandardCommand.PageSetup</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СхемаПараметрыСтраницыРасширеннаяПодсказка" id="118"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Button name="ПроверитьСхему" id="123">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроверитьСхему</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ПроверитьСхемуРасширеннаяПодсказка" id="124"/>
+			</Button>
+			<ButtonGroup name="СтандартныеКомандыФормы" id="9">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стандартные команды формы</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="СтандартныеКомандыФормыРасширеннаяПодсказка" id="10"/>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="НаименованиеСхемы" id="1">
+			<DataPath>НаименованиеСхемы</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<TitleLocation>None</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование схемы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование схемы</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="НаименованиеСхемыКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеСхемыРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">НаименованиеСхемыПриИзменении</Event>
+			</Events>
+		</InputField>
+		<GraphicalSchemaField name="Схема" id="4">
+			<DataPath>Схема</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="СхемаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="СхемаРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="OnChange">СхемаПриИзменении</Event>
+			</Events>
+		</GraphicalSchemaField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Схема" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Схема</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/graphscheme">d5p1:FlowchartContextType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xmlns:d4p1="http://v8.1c.ru/8.2/data/graphscheme" xsi:type="d4p1:FlowchartContextType">
+				<d4p1:backColor>style:FieldBackColor</d4p1:backColor>
+				<d4p1:enableGrid>true</d4p1:enableGrid>
+				<d4p1:drawGridMode>Lines</d4p1:drawGridMode>
+				<d4p1:gridHorizontalStep>20</d4p1:gridHorizontalStep>
+				<d4p1:gridVerticalStep>20</d4p1:gridVerticalStep>
+				<d4p1:bpUUID>00000000-0000-0000-0000-000000000000</d4p1:bpUUID>
+				<d4p1:useOutput>Auto</d4p1:useOutput>
+				<d4p1:printPropItem>
+					<d4p1:key>6</d4p1:key>
+					<d4p1:val>10</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>7</d4p1:key>
+					<d4p1:val>10</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>8</d4p1:key>
+					<d4p1:val>10</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>9</d4p1:key>
+					<d4p1:val>10</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>13</d4p1:key>
+					<d4p1:val>0</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>16</d4p1:key>
+					<d4p1:val>0</d4p1:val>
+				</d4p1:printPropItem>
+			</Settings>
+		</Attribute>
+		<Attribute name="НаименованиеСхемы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование схемы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеСхемы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные схемы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаписатьИЗакрыть</Action>
+		</Command>
+		<Command name="Записать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Записать</Action>
+		</Command>
+		<Command name="ПроверитьСхему" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить схему</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗеленаяГалочка</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроверитьСхему</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="СхемаПроцесса">
+			<Type>
+				<v8:Type>cfg:CatalogRef.СхемыПроцессов</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

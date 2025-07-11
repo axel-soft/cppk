@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Width>59</Width>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<ChildItems>
+			<Button name="ФормаОК" id="4">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОКExtendedTooltip" id="5"/>
+			</Button>
+			<Button name="ФормаОтмена" id="6">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОтменаExtendedTooltip" id="7"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<Page name="ГруппаНеПодключенаИнтернетПоддержка" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа не подключена интернет поддержка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа не подключена интернет поддержка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<BackColor>#FFEBEB</BackColor>
+					<ExtendedTooltip name="ГруппаНеПодключенаИнтернетПоддержкаРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияБазаПодключенаКИТС" id="62">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сервис распознавания недоступен, т.к. не подключена интернет-поддержка.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияБазаПодключенаКИТСКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ДекорацияБазаПодключенаКИТСРасширеннаяПодсказка" id="64"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаКомандыНеПодключенаИнтернетПоддержка" id="119">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды не подключена интернет поддержка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды не подключена интернет поддержка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыНеПодключенаИнтернетПоддержкаРасширеннаяПодсказка" id="120"/>
+							<ChildItems>
+								<Button name="ПодключитьИнтернетПоддержку" id="65">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПодключитьИнтернетПоддержку</CommandName>
+									<ExtendedTooltip name="ПодключитьИнтернетПоддержкуРасширеннаяПодсказка" id="66"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНеПодключенСервисРаспознавания" id="84">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа не подключен сервис распознавания</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа не подключен сервис распознавания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<BackColor>#FFEBEB</BackColor>
+					<ExtendedTooltip name="ГруппаНеПодключенСервисРаспознаванияРасширеннаяПодсказка" id="85"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияНеПодключенСервисРаспознавания" id="86">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сервис распознавания не подключен к программе.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНеПодключенСервисРаспознаванияКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="ДекорацияНеПодключенСервисРаспознаванияРасширеннаяПодсказка" id="88"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаКомандыНеПодключенСервисРаспознавания" id="121">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды не подключен сервис распознавания</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды не подключена интернет поддержка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыНеПодключенСервисРаспознаванияРасширеннаяПодсказка" id="122"/>
+							<ChildItems>
+								<Button name="ПодключитьСервисРаспознавания" id="89">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПодключитьСервисРаспознавания</CommandName>
+									<ExtendedTooltip name="ПодключитьСервисРаспознаванияРасширеннаяПодсказка" id="90"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСервисРаспознаванияПодключен" id="77">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сервис распознавания подключен</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сервис распознавания подключен</v8:content>
+						</v8:item>
+					</ToolTip>
+					<BackColor>#E6FFE6</BackColor>
+					<ExtendedTooltip name="ГруппаСервисРаспознаванияПодключенРасширеннаяПодсказка" id="78"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияСервисРаспознаванияПодключен" id="79">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ДекорацияСервисРаспознаванияПодключенКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ДекорацияСервисРаспознаванияПодключенРасширеннаяПодсказка" id="81"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаКомандыСервисРаспознаванияПодключен" id="123">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды сервис распознавания подключен</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды не подключена интернет поддержка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыСервисРаспознаванияПодключенРасширеннаяПодсказка" id="124"/>
+							<ChildItems>
+								<Button name="ОтключитьСервисРаспознавания" id="91">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОтключитьСервисРаспознавания</CommandName>
+									<ExtendedTooltip name="ОтключитьСервисРаспознаванияРасширеннаяПодсказка" id="92"/>
+								</Button>
+								<Button name="ПополнитьБаланс" id="111">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПополнитьБаланс</CommandName>
+									<ExtendedTooltip name="ПополнитьБалансРасширеннаяПодсказка" id="112"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Table name="РежимыРаспознавания" id="16">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<Height>7</Height>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>РежимыРаспознавания</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РежимыРаспознаванияКонтекстноеМеню" id="17"/>
+			<AutoCommandBar name="РежимыРаспознаванияКоманднаяПанель" id="18"/>
+			<ExtendedTooltip name="РежимыРаспознаванияРасширеннаяПодсказка" id="19"/>
+			<SearchStringAddition name="РежимыРаспознаванияСтрокаПоиска" id="20">
+				<AdditionSource>
+					<Item>РежимыРаспознавания</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РежимыРаспознаванияСтрокаПоискаКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="РежимыРаспознаванияСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РежимыРаспознаванияСостояниеПросмотра" id="23">
+				<AdditionSource>
+					<Item>РежимыРаспознавания</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РежимыРаспознаванияСостояниеПросмотраКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="РежимыРаспознаванияСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РежимыРаспознаванияУправлениеПоиском" id="26">
+				<AdditionSource>
+					<Item>РежимыРаспознавания</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РежимыРаспознаванияУправлениеПоискомКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="РежимыРаспознаванияУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="РежимыРаспознаванияПредставление" id="35">
+					<DataPath>РежимыРаспознавания.Представление</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РежимыРаспознаванияПредставлениеКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="РежимыРаспознаванияПредставлениеРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="РежимыРаспознаванияРежим" id="32">
+					<DataPath>РежимыРаспознавания.Режим</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Режим распознавания</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="РежимыРаспознаванияРежимКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="РежимыРаспознаванияРежимРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">РежимыРаспознаванияРежимПриИзменении</Event>
+						<Event name="StartChoice">РежимыРаспознаванияРежимНачалоВыбора</Event>
+						<Event name="Clearing">РежимыРаспознаванияРежимОчистка</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="НастройкиАвтораспознавания" id="125">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки автораспознавания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки автораспознавания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="НастройкиАвтораспознаванияРасширеннаяПодсказка" id="126"/>
+			<ChildItems>
+				<InputField name="НачалоАвтоматическогоРаспознаванияФайлов" id="108">
+					<DataPath>НачалоАвтоматическогоРаспознаванияФайлов</DataPath>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="НачалоАвтоматическогоРаспознаванияФайловКонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="НачалоАвтоматическогоРаспознаванияФайловРасширеннаяПодсказка" id="110">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Файлы, созданные после указанной даты, будут распознаваться автоматически.
+Если дата не указана, распознаются все файлы.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ДополнительныеНастройки" id="127">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительные настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительные настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ExtendedTooltip name="ДополнительныеНастройкиРасширеннаяПодсказка" id="128"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСрокХраненияПротоколаРаботыССервисомРаспознавания" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа срок хранения протокола работы с сервисом распознавания</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа срок хранения протокола работы с сервисом распознавания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСрокХраненияПротоколаРаботыССервисомРаспознаванияРасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<InputField name="СрокХраненияПротоколаРаботыССервисомРаспознавания" id="100">
+							<DataPath>СрокХраненияПротоколаРаботыССервисомРаспознавания</DataPath>
+							<Width>3</Width>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="СрокХраненияПротоколаРаботыССервисомРаспознаванияКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="СрокХраненияПротоколаРаботыССервисомРаспознаванияРасширеннаяПодсказка" id="102"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияДней" id="103">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>дней</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияДнейКонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="ДекорацияДнейРасширеннаяПодсказка" id="105"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНастройкиУведомлений" id="129">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки уведомлений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки уведомлений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиУведомленийРасширеннаяПодсказка" id="130"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПорогБалансаСтраниц" id="145">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа порог баланса страниц</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа порог баланса страниц</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПорогБалансаСтраницРасширеннаяПодсказка" id="146"/>
+							<ChildItems>
+								<InputField name="ПорогБалансаСтраницСервисаРаспознавания" id="131">
+									<DataPath>ПорогБалансаСтраницСервисаРаспознавания</DataPath>
+									<SpinButton>true</SpinButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ПорогБалансаСтраницСервисаРаспознаванияКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="ПорогБалансаСтраницСервисаРаспознаванияРасширеннаяПодсказка" id="133"/>
+								</InputField>
+								<LabelDecoration name="ДекорацияШтук" id="142">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>шт.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияШтукКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="ДекорацияШтукРасширеннаяПодсказка" id="144"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПорогСрокДействияТарифа" id="140">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа порог срок действия тарифа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа порог срок действия тарифа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПорогСрокДействияТарифаРасширеннаяПодсказка" id="141"/>
+							<ChildItems>
+								<LabelDecoration name="ДеокрацияНачалоОписанияСрокаДействия" id="147">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Уведомлять за</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДеокрацияНачалоОписанияСрокаДействияКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="ДеокрацияНачалоОписанияСрокаДействияРасширеннаяПодсказка" id="149"/>
+								</LabelDecoration>
+								<InputField name="ПорогСрокаДействияСтраницСервисаРаспознавания" id="134">
+									<DataPath>ПорогСрокаДействияТарифаСервисаРаспознавания</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<SpinButton>true</SpinButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
+									<ContextMenu name="ПорогСрокаДействияСтраницСервисаРаспознаванияКонтекстноеМеню" id="135"/>
+									<ExtendedTooltip name="ПорогСрокаДействияСтраницСервисаРаспознаванияРасширеннаяПодсказка" id="136"/>
+								</InputField>
+								<LabelDecoration name="ДеокрацияКонецОписанияСрокДействия" id="137">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>дней до завершения тарифа.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДеокрацияКонецОписанияСрокДействияКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="ДеокрацияКонецОписанияСрокДействияРасширеннаяПодсказка" id="139"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ЯзыкРаспознавания" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Язык распознавания по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МенятьАвтораНовогоФайлаИлиВерсии" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менять автора нового файла или версии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СотрудникДляЗаданияРаспознавания" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник для задания распознавания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресПараметровРапознавания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес параметров рапознавания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимыРаспознавания" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режимы распознавания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Владелец" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владелец</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Режим" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Режим</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВариантыРежимовРаспознаванияФайлов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Представление" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владельцы файлов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="БазаАвторизированаВСервисе" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>База авторизирована в сервисе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="БазаАвторизизированаПоДругимПользователемИТС" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>База авторизизирована по другим пользователем ИТС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="БазаПодключенаКИТС" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>База подключена К ИТС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СрокХраненияПротоколаРаботыССервисомРаспознавания" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок хранения протокола работы с сервисом</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоАвтоматическогоРаспознаванияФайлов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распознавать автоматически файлы, созданные после</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТестовыйПериодДоступен" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тестовый период доступен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПорогБалансаСтраницСервисаРаспознавания" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уведомлять при достижении остатка страниц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПорогСрокаДействияТарифаСервисаРаспознавания" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порог срока действия тарифа сервиса распознавания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИОМНеподходящихТипов" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИОМНеподходящих типов</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодключитьИнтернетПоддержку" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить интернет поддержку...</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодключитьИнтернетПоддержку</Action>
+		</Command>
+		<Command name="ПодключитьСервисРаспознавания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить сервис распознавания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодключитьСервисРаспознавания</Action>
+		</Command>
+		<Command name="ОтключитьСервисРаспознавания" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить сервис распознавания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтключитьСервисРаспознавания</Action>
+		</Command>
+		<Command name="ПополнитьБаланс" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пополнить баланс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пополнить баланс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ActiveUsers</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПополнитьБаланс</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

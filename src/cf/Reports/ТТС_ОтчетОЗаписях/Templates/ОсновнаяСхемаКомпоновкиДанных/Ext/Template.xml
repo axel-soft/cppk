@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВнутреннийДокумент</dataPath>
+			<field>ВнутреннийДокумент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодНарушения</dataPath>
+			<field>КодНарушения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерПоезда</dataPath>
+			<field>НомерПоезда</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Путь</dataPath>
+			<field>Путь</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Машинист</dataPath>
+			<field>Машинист</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПК</dataPath>
+			<field>ПК</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КМ</dataPath>
+			<field>КМ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПоездки</dataPath>
+			<field>ДатаПоездки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Направление</dataPath>
+			<field>Направление</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодНарушенияНаименование</dataPath>
+			<field>КодНарушенияНаименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание нарушения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерЛокомотива</dataPath>
+			<field>НомерЛокомотива</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МестоСлучая</dataPath>
+			<field>МестоСлучая</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияЛокомотива</dataPath>
+			<field>СерияЛокомотива</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезолюцияСБ</dataPath>
+			<field>РезолюцияСБ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резолюция СБ</v8:content>
+				</v8:item>
+			</title>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameters">
+						<dcscor:item>
+							<dcscor:choiceParameter>Отбор.Ссылка</dcscor:choiceParameter>
+							<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.ТТС_КодыВидовМерЖТУ.СБ_ДействияМашинистаНеправильные</dcscor:value>
+							<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.ТТС_КодыВидовМерЖТУ.СБ_ДействияМашинистаПравильные</dcscor:value>
+							<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВАэроэкспресс</dcscor:value>
+							<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВДепо</dcscor:value>
+							<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВНИИАС</dcscor:value>
+							<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВОтделОбслуживанияПС</dcscor:value>
+							<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВСАУТ</dcscor:value>
+							<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВСлужбуДвижения</dcscor:value>
+							<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВШЧ</dcscor:value>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item>
+					<dcscor:parameter>БыстрыйВыбор</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item>
+					<dcscor:parameter>ВыборГруппИЭлементов</dcscor:parameter>
+					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d6p1:FoldersAndItemsUse">Items</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезолюцияНачальникаДепо</dataPath>
+			<field>РезолюцияНачальникаДепо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резолюция НД</v8:content>
+				</v8:item>
+			</title>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameters">
+						<dcscor:item>
+							<dcscor:choiceParameter>Отбор.Родитель</dcscor:choiceParameter>
+							<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.ТТС_КодыВидовМерЖТУ.НД</dcscor:value>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item>
+					<dcscor:parameter>БыстрыйВыбор</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item>
+					<dcscor:parameter>ВыборГруппИЭлементов</dcscor:parameter>
+					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d6p1:FoldersAndItemsUse">Items</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭДТ</dataPath>
+			<field>ЭДТ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДанныеВЛичномДеле</dataPath>
+			<field>ДанныеВЛичномДеле</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Уточнение</dataPath>
+			<field>Уточнение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Состояние</dataPath>
+			<field>Состояние</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактерПереключенияСветофора</dataPath>
+			<field>ХарактерПереключенияСветофора</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РежимВеденияПоезда</dataPath>
+			<field>РежимВеденияПоезда</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СкоростьПоезда</dataPath>
+			<field>СкоростьПоезда</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛитерГоловнойСекции</dataPath>
+			<field>ЛитерГоловнойСекции</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ТТС_КодыВидовМерЖТУ.Ссылка КАК Резолюция
+ПОМЕСТИТЬ втРезолюцииСБ
+ИЗ
+	Справочник.ТТС_КодыВидовМерЖТУ КАК ТТС_КодыВидовМерЖТУ
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;ВыводитьПравильные
+				ТОГДА ИСТИНА
+			ИНАЧЕ ТТС_КодыВидовМерЖТУ.Ссылка В (ЗНАЧЕНИЕ(Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВАэроэкспресс), ЗНАЧЕНИЕ(Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВДепо), ЗНАЧЕНИЕ(Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВНИИАС), ЗНАЧЕНИЕ(Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВОтделОбслуживанияПС), ЗНАЧЕНИЕ(Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВСАУТ), ЗНАЧЕНИЕ(Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВСлужбуДвижения), ЗНАЧЕНИЕ(Справочник.ТТС_КодыВидовМерЖТУ.ЦР_НаправленоВШЧ), ЗНАЧЕНИЕ(Справочник.ТТС_КодыВидовМерЖТУ.СБ_ДействияМашинистаНеправильные))
+		КОНЕЦ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбработкиОбъектов.Владелец КАК Владелец,
+	МАКСИМУМ(ОбработкиОбъектов.ДатаИзмененияСостояния) КАК ДатаИзмененияСостояния
+ПОМЕСТИТЬ втПоследнееИзменениеОбработки
+ИЗ
+	Справочник.ОбработкиОбъектов КАК ОбработкиОбъектов
+
+СГРУППИРОВАТЬ ПО
+	ОбработкиОбъектов.Владелец
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбработкиОбъектов.Ссылка КАК Ссылка,
+	ОбработкиОбъектов.Владелец КАК Владелец,
+	ОбработкиОбъектов.Состояние КАК Состояние
+ПОМЕСТИТЬ втСостояниеОбработки
+ИЗ
+	Справочник.ОбработкиОбъектов КАК ОбработкиОбъектов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ втПоследнееИзменениеОбработки КАК втПоследнееИзменениеОбработки
+		ПО ОбработкиОбъектов.Владелец = втПоследнееИзменениеОбработки.Владелец
+			И ОбработкиОбъектов.ДатаИзмененияСостояния = втПоследнееИзменениеОбработки.ДатаИзмененияСостояния
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТТС_ЖурналыТУ.ВнутреннийДокумент КАК ВнутреннийДокумент,
+	ТТС_ЖурналыТУ.ДатаПоездки КАК ДатаПоездки,
+	ТТС_ЖурналыТУ.НомерПоезда КАК НомерПоезда,
+	ТТС_ЖурналыТУ.Направление КАК Направление,
+	ТТС_ЖурналыТУ.Машинист КАК Машинист,
+	ТТС_ЖурналыТУ.Путь КАК Путь,
+	ТТС_ЖурналыТУ.КМ КАК КМ,
+	ТТС_ЖурналыТУ.ПК КАК ПК,
+	ТТС_ЖурналыТУ.КодНарушения КАК КодНарушения,
+	ТТС_ЖурналыТУ.КодНарушения.Наименование КАК КодНарушенияНаименование,
+	ТТС_ЖурналыТУ.СерияЛокомотива КАК СерияЛокомотива,
+	ТТС_ЖурналыТУ.НомерЛокомотива КАК НомерЛокомотива,
+	ТТС_ЖурналыТУ.МестоСлучая КАК МестоСлучая,
+	ТТС_ЖурналыТУ.РезолюцияСБ КАК РезолюцияСБ,
+	ТТС_ЖурналыТУ.РезолюцияНачальникаДепо КАК РезолюцияНачальникаДепо,
+	ТТС_ЖурналыТУ.ЭДТ КАК ЭДТ,
+	ТТС_ЖурналыТУ.ДанныеВЛичномДеле КАК ДанныеВЛичномДеле,
+	ТТС_ЖурналыТУ.Уточнение КАК Уточнение,
+	ТТС_ЖурналыТУ.СкоростьПоезда КАК СкоростьПоезда,
+	ТТС_ЖурналыТУ.ХарактерПереключенияСветофора КАК ХарактерПереключенияСветофора,
+	ТТС_ЖурналыТУ.РежимВеденияПоезда КАК РежимВеденияПоезда,
+	ТТС_ЖурналыТУ.ЛитерГоловнойСекции КАК ЛитерГоловнойСекции,
+	ТТС_ЖурналыТУ.ВидЖурнала КАК ВидЖурнала
+ПОМЕСТИТЬ втЖурналыТУ
+ИЗ
+	РегистрСведений.ТТС_ЖурналыТУ КАК ТТС_ЖурналыТУ
+ГДЕ
+	НЕ ТТС_ЖурналыТУ.ВидЖурнала = ЗНАЧЕНИЕ(Перечисление.ТТС_ВидыЖурналовТУ.Журнал1)
+	И ТТС_ЖурналыТУ.ДатаПоездки МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+	И НЕ ТТС_ЖурналыТУ.ВнутреннийДокумент.ПометкаУдаления
+	И НЕ ТТС_ЖурналыТУ.ВнутреннийДокумент.РегистрационныйНомер = ""
+{ГДЕ
+	(ТТС_ЖурналыТУ.ВидЖурнала = &amp;ВидЖурнала)}
+
+ИНДЕКСИРОВАТЬ ПО
+	ВнутреннийДокумент,
+	РезолюцияСБ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	втЖурналыТУ.ВнутреннийДокумент КАК ВнутреннийДокумент,
+	втЖурналыТУ.ДатаПоездки КАК ДатаПоездки,
+	втЖурналыТУ.НомерПоезда КАК НомерПоезда,
+	втЖурналыТУ.Направление КАК Направление,
+	втЖурналыТУ.Машинист КАК Машинист,
+	втЖурналыТУ.Путь КАК Путь,
+	втЖурналыТУ.КМ КАК КМ,
+	втЖурналыТУ.ПК КАК ПК,
+	втЖурналыТУ.КодНарушения КАК КодНарушения,
+	втЖурналыТУ.КодНарушения.Наименование КАК КодНарушенияНаименование,
+	втЖурналыТУ.СерияЛокомотива КАК СерияЛокомотива,
+	втЖурналыТУ.НомерЛокомотива КАК НомерЛокомотива,
+	втЖурналыТУ.МестоСлучая КАК МестоСлучая,
+	втЖурналыТУ.РезолюцияСБ КАК РезолюцияСБ,
+	втЖурналыТУ.РезолюцияНачальникаДепо КАК РезолюцияНачальникаДепо,
+	втЖурналыТУ.ЭДТ КАК ЭДТ,
+	втЖурналыТУ.ДанныеВЛичномДеле КАК ДанныеВЛичномДеле,
+	ВЫРАЗИТЬ(втЖурналыТУ.Уточнение КАК СТРОКА(1024)) КАК Уточнение,
+	втСостояниеОбработки.Состояние КАК Состояние,
+	втЖурналыТУ.СкоростьПоезда КАК СкоростьПоезда,
+	втЖурналыТУ.ХарактерПереключенияСветофора КАК ХарактерПереключенияСветофора,
+	втЖурналыТУ.РежимВеденияПоезда КАК РежимВеденияПоезда,
+	втЖурналыТУ.ЛитерГоловнойСекции КАК ЛитерГоловнойСекции
+ИЗ
+	втЖурналыТУ КАК втЖурналыТУ
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ втРезолюцииСБ КАК втРезолюцииСБ
+		ПО втЖурналыТУ.РезолюцияСБ = втРезолюцииСБ.Резолюция
+		ЛЕВОЕ СОЕДИНЕНИЕ втСостояниеОбработки КАК втСостояниеОбработки
+		ПО втЖурналыТУ.ВнутреннийДокумент = втСостояниеОбработки.Владелец
+ГДЕ
+	втЖурналыТУ.ВидЖурнала = ЗНАЧЕНИЕ(Перечисление.ТТС_ВидыЖурналовТУ.Журнал2)
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	втЖурналыТУ.ВнутреннийДокумент,
+	втЖурналыТУ.ДатаПоездки,
+	втЖурналыТУ.НомерПоезда,
+	втЖурналыТУ.Направление,
+	втЖурналыТУ.Машинист,
+	втЖурналыТУ.Путь,
+	втЖурналыТУ.КМ,
+	втЖурналыТУ.ПК,
+	втЖурналыТУ.КодНарушения,
+	втЖурналыТУ.КодНарушения.Наименование,
+	втЖурналыТУ.СерияЛокомотива,
+	втЖурналыТУ.НомерЛокомотива,
+	втЖурналыТУ.МестоСлучая,
+	втЖурналыТУ.РезолюцияСБ,
+	втЖурналыТУ.РезолюцияНачальникаДепо,
+	втЖурналыТУ.ЭДТ,
+	втЖурналыТУ.ДанныеВЛичномДеле,
+	ВЫРАЗИТЬ(втЖурналыТУ.Уточнение КАК СТРОКА(1024)),
+	ЗНАЧЕНИЕ(Перечисление.СостоянияОбработкиОбъектов.Завершена),
+	втЖурналыТУ.СкоростьПоезда,
+	втЖурналыТУ.ХарактерПереключенияСветофора,
+	втЖурналыТУ.РежимВеденияПоезда,
+	втЖурналыТУ.ЛитерГоловнойСекции
+ИЗ
+	втЖурналыТУ КАК втЖурналыТУ
+ГДЕ
+	втЖурналыТУ.ВидЖурнала = ЗНАЧЕНИЕ(Перечисление.ТТС_ВидыЖурналовТУ.Журнал3)</query>
+	</dataSet>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ВидЖурнала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид журнала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ТТС_ВидыЖурналовТУ</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ТТС_ВидыЖурналовТУ.Журнал2</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.ТТС_ВидыЖурналовТУ.Журнал2</value>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.ТТС_ВидыЖурналовТУ.Журнал3</value>
+		</availableValue>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ВыводитьПравильные</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Включать в отчет журналы с резолюцией "Действия машиниста правильные"</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ОтчетОЗаписях</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет о записях</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВнутреннийДокумент</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Журнал</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПоездки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерПоезда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Направление</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Машинист</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЭПС</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СерияЛокомотива</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Серия</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НомерЛокомотива</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Номер</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МестоСлучая</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Путь</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КМ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПК</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СкоростьПоезда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ХарактерПереключенияСветофора</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РежимВеденияПоезда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЛитерГоловнойСекции</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нарушение</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КодНарушения</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Код</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КодНарушенияНаименование</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Описание</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Уточнение</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Направление</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>77eb03b1-1061-46bf-abc3-85051c6c429a</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Машинист</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>a6e9a26f-3f60-4455-9590-cae6bd7e99fd</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">НомерПоезда</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					<dcsset:userSettingID>adf770f8-b669-43ed-80ce-98a35575d7b6</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">КодНарушения</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>ac534bd8-ec6e-489b-9142-21b7603c653c</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">РезолюцияСБ</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>8377e79e-bf7d-474b-9f8c-8f65705ef731</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">РезолюцияНачальникаДепо</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>0ab62494-9a5d-4b82-a7bc-e721c7a946c1</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">РезолюцияСБ</dcsset:left>
+					<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ТТС_КодыВидовМерЖТУ.СБ_ЗаписьОшибочна</dcsset:right>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Состояние</dcsset:left>
+					<dcsset:comparisonType>NotInList</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияОбработкиОбъектов.Остановлена</dcsset:right>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияОбработкиОбъектов.Прервана</dcsset:right>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>9f5425d3-15e2-4461-b84d-976470f4a3f3</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВидЖурнала</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>6292c81d-d0e6-4e13-a696-bc21cd29feea</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьПравильные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					<dcsset:userSettingID>4ecba6bc-fc07-44a2-9742-e3a92b95eb92</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДатаПоездки</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

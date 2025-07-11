@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Момент" id="4">
+			<DataPath>Запись.Момент</DataPath>
+			<ContextMenu name="МоментКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="МоментРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Сеанс" id="7">
+			<DataPath>Запись.Сеанс</DataPath>
+			<ContextMenu name="СеансКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СеансРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<CheckBoxField name="Ошибка" id="10">
+			<DataPath>Запись.Ошибка</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОшибкаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ОшибкаРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<CheckBoxField name="Принято" id="13">
+			<DataPath>Запись.Принято</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПринятоКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПринятоРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<CheckBoxField name="Последнее" id="16">
+			<DataPath>Запись.Последнее</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПоследнееКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ПоследнееРасширеннаяПодсказка" id="18"/>
+		</CheckBoxField>
+		<CheckBoxField name="Изменения" id="19">
+			<DataPath>Запись.Изменения</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИзмененияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ИзмененияРасширеннаяПодсказка" id="21"/>
+		</CheckBoxField>
+		<InputField name="Событие" id="22">
+			<DataPath>Запись.Событие</DataPath>
+			<ContextMenu name="СобытиеКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="СобытиеРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Описание" id="25">
+			<DataPath>Запись.Описание</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>5</Height>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="Источник" id="28">
+			<DataPath>Запись.Источник</DataPath>
+			<ContextMenu name="ИсточникКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ИсточникРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="НомерСообщения" id="31">
+			<DataPath>Запись.НомерСообщения</DataPath>
+			<ContextMenu name="НомерСообщенияКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="НомерСообщенияРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="Ключ" id="34">
+			<DataPath>Запись.Ключ</DataPath>
+			<ContextMenu name="КлючКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="КлючРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="Последовательность" id="37">
+			<DataPath>Запись.Последовательность</DataPath>
+			<ContextMenu name="ПоследовательностьКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ПоследовательностьРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<InputField name="ГраницаПериода" id="40">
+			<DataPath>Запись.ГраницаПериода</DataPath>
+			<ContextMenu name="ГраницаПериодаКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="ГраницаПериодаРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<InputField name="Количество" id="43">
+			<DataPath>Запись.Количество</DataPath>
+			<ContextMenu name="КоличествоКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<InputField name="Продолжительность" id="46">
+			<DataPath>Запись.Продолжительность</DataPath>
+			<ContextMenu name="ПродолжительностьКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="ПродолжительностьРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="Поток" id="49">
+			<DataPath>Запись.Поток</DataPath>
+			<ContextMenu name="ПотокКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="ПотокРасширеннаяПодсказка" id="51"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.МиграцияДанныхИзВнешнихСистемФоновыеЗадания</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

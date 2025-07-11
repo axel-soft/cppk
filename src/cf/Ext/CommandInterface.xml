@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<SubsystemsVisibility>
+		<Subsystem name="Subsystem.НастройкаИАдминистрирование">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеВариантовОтчетов">true</xr:Value>
+			</Visibility>
+		</Subsystem>
+		<Subsystem name="Subsystem.Настройка">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.АдминистраторСистемы">false</xr:Value>
+				<xr:Value name="Role.Администрирование">false</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+				<xr:Value name="Role.ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок">false</xr:Value>
+			</Visibility>
+		</Subsystem>
+	</SubsystemsVisibility>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.ДокументыИФайлы</Subsystem>
+		<Subsystem>Subsystem.СовместнаяРабота</Subsystem>
+		<Subsystem>Subsystem.УчетВремени</Subsystem>
+		<Subsystem>Subsystem.НСИ</Subsystem>
+		<Subsystem>Subsystem.НСИ.Subsystem.УправлениеБизнесПроцессами</Subsystem>
+		<Subsystem>Subsystem.НастройкаИАдминистрирование</Subsystem>
+		<Subsystem>Subsystem.Настройка</Subsystem>
+		<Subsystem>Subsystem.АдминистрированиеСервиса</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>

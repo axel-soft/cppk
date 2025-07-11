@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="СведенияОбОбновлении" id="67">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>style:ИнформационнаяНадпись</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данная форма позволяет ускорить обновление задач для форм "Задачи мне" и "Задачи от меня".
+Пожалуйста, не закрывайте данную форму до завершения обновления.
+При закрытии формы обновление будет произведено стандартным отложенным обработчиком.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="СведенияОбОбновленииКонтекстноеМеню" id="68"/>
+			<ExtendedTooltip name="СведенияОбОбновленииРасширеннаяПодсказка" id="69"/>
+		</LabelDecoration>
+		<UsualGroup name="ТекущееСостояниеОбновления" id="1">
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее состояние обновления</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ТекущееСостояниеОбновленияРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<InputField name="СостояниеОбновленоВ" id="18">
+					<DataPath>СостояниеОбновленоВ</DataPath>
+					<ContextMenu name="СостояниеОбновленоВКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="СостояниеОбновленоВРасширеннаяПодсказка" id="20"/>
+				</InputField>
+				<UsualGroup name="ГруппаДействияЗадач" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа действия задач</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДействияЗадачРасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<InputField name="ДействийЗадачКОбновлению" id="3">
+							<DataPath>ДействийЗадачКОбновлению</DataPath>
+							<ContextMenu name="ДействийЗадачКОбновлениюКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="ДействийЗадачКОбновлениюРасширеннаяПодсказка" id="5"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="ВсегоДействийЗадач" id="6">
+					<DataPath>ВсегоДействийЗадач</DataPath>
+					<ContextMenu name="ВсегоДействийЗадачКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ВсегоДействийЗадачРасширеннаяПодсказка" id="8"/>
+				</InputField>
+				<UsualGroup name="ГруппаЗадач" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа задач</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗадачРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<InputField name="ЗадачКОбновлению" id="9">
+							<DataPath>ЗадачКОбновлению</DataPath>
+							<ContextMenu name="ЗадачКОбновлениюКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="ЗадачКОбновлениюРасширеннаяПодсказка" id="11"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="ВсегоЗадач" id="12">
+					<DataPath>ВсегоЗадач</DataPath>
+					<ContextMenu name="ВсегоЗадачКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ВсегоЗадачРасширеннаяПодсказка" id="14"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ЗапускПотоковОбновления" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск потоков обновления</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ЗапускПотоковОбновленияРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<InputField name="ПотоковДляЗапуска" id="23">
+					<DataPath>ПотоковДляЗапуска</DataPath>
+					<ClearButton>true</ClearButton>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ПотоковДляЗапускаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПотоковДляЗапускаРасширеннаяПодсказка" id="25"/>
+					<Events>
+						<Event name="OnChange">ПотоковДляЗапускаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПрогноз" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прогноз</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаПрогнозРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСкоростьОбновления" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа скорость обновления</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСкоростьОбновленияРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<InputField name="СкоростьОбновления" id="48">
+							<DataPath>СкоростьОбновления</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="СкоростьОбновленияКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="СкоростьОбновленияРасширеннаяПодсказка" id="50"/>
+						</InputField>
+						<LabelDecoration name="ЕдиницаИзмеренияСкоростьОбновления" id="53">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>объектов в секунду</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЕдиницаИзмеренияСкоростьОбновленияКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ЕдиницаИзмеренияСкоростьОбновленияРасширеннаяПодсказка" id="55"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОсталось" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа1</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОсталосьРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<InputField name="ОсталосьЧасов" id="56">
+							<DataPath>ОсталосьЧасов</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ОсталосьЧасовКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ОсталосьЧасовРасширеннаяПодсказка" id="58"/>
+						</InputField>
+						<InputField name="ОсталосьМинут" id="59">
+							<DataPath>ОсталосьМинут</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>минут</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОсталосьМинутКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ОсталосьМинутРасширеннаяПодсказка" id="61"/>
+						</InputField>
+						<InputField name="ОсталосьСекунд" id="62">
+							<DataPath>ОсталосьСекунд</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>секунд</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОсталосьСекундКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ОсталосьСекундРасширеннаяПодсказка" id="64"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ОбновитьПрогнозЗадач" id="38">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОбновитьПрогноз</CommandName>
+					<ExtendedTooltip name="ОбновитьПрогнозЗадачРасширеннаяПодсказка" id="39"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ОбновлениеЗадачПриПереходеНаНовуюВерсию</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ЗадачКОбновлению" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задач к обновлению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДействийЗадачКОбновлению" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действий задач к обновлению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВсегоЗадач" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего задач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВсегоДействийЗадач" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего действий задач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеОбновленоВ" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние обновлено в</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПотоковДляЗапуска" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительных потоков обновления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>ПотоковДляЗапуска</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="АктивныеЗаданияОбновления" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Активные задания обновления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>v8:UUID</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ГраницаОбновленияДействийЗадач" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Граница обновления действий задач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ГраницаОбновленияЗадач" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Граница обновления задач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектПрогноза" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект прогноза</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоПрогноза" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало прогноза</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоОбъектовПрогноза" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество объектов прогноза</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СкоростьОбновления" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скорость обновления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОсталосьЧасов" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось часов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОсталосьМинут" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось минут</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОсталосьСекунд" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось секунд</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьПрогноз" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить прогноз</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОбновитьПрогноз</Action>
+		</Command>
+	</Commands>
+</Form>

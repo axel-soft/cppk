@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаЗаписатьИЗакрыть" id="31">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаКомандаЗаписатьИЗакрытьРасширеннаяПодсказка" id="32"/>
+			</Button>
+			<Button name="ФормаКомандаЗакрыть" id="33">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаКомандаЗакрытьРасширеннаяПодсказка" id="34"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="АннулированиеОтдельнымДокументом" id="1">
+			<DataPath>АннулированиеОтдельнымДокументом</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="АннулированиеОтдельнымДокументомКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="АннулированиеОтдельнымДокументомРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">АннулированиеОтдельнымДокументомПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаОсновное" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основное</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основное</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновноеРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<InputField name="ВидДокументаАннулирования" id="28">
+					<DataPath>ВидДокументаАннулирования</DataPath>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ВидДокументаАннулированияКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ВидДокументаАннулированияРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<UsualGroup name="ГруппаСтроковыеШаблоны" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблоны наименования и содержания</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа строковые шаблоны</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаСтроковыеШаблоныРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<InputField name="ШаблонНаименования" id="11">
+							<DataPath>ШаблонНаименования</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ChoiceButton>true</ChoiceButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ШаблонНаименованияКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ШаблонНаименованияРасширеннаяПодсказка" id="13"/>
+							<Events>
+								<Event name="StartChoice">ШаблонНаименованияНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ШаблонСодержания" id="14">
+							<DataPath>ШаблонСодержания</DataPath>
+							<MultiLine>true</MultiLine>
+							<ChoiceButton>true</ChoiceButton>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Содержание</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ШаблонСодержанияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ШаблонСодержанияРасширеннаяПодсказка" id="16"/>
+							<Events>
+								<Event name="StartChoice">ШаблонСодержанияНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРеквизитыДокумента" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизиты документа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа реквизиты документа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаРеквизитыДокументаРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<InputField name="Папка" id="19">
+							<DataPath>Папка</DataPath>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Из аннулируемого документа</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ПапкаКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ПапкаРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="ВопросДеятельности" id="22">
+							<DataPath>ВопросДеятельности</DataPath>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Из аннулируемого документа</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ВопросДеятельностиКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ВопросДеятельностиРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<InputField name="Ответственный" id="25">
+							<DataPath>Ответственный</DataPath>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Из аннулируемого документа</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="27"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВидДокумента" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыДокументов</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВопросДеятельности" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вопрос деятельности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВопросыДеятельности</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьВопросыДеятельности</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ИспользоватьВопросыДеятельности" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать вопросы деятельности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Ответственный" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Папка" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПапкиДокументов</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ШаблонНаименования" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон наименования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ШаблонСодержания" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Содержание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АннулированиеОтдельнымДокументом" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аннулирование отдельным документом</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидДокументаАннулирования" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыДокументов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Направление" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Направление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.НаправленияЭДО</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбязателенОтменяющийДокумент" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обязателен отменяющий документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаписатьИЗакрыть</Action>
+		</Command>
+		<Command name="КомандаЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗакрыть</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ВидДокумента">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыДокументов</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Направление">
+			<Type>
+				<v8:Type>cfg:EnumRef.НаправленияЭДО</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ОбязателенОтменяющийДокумент">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

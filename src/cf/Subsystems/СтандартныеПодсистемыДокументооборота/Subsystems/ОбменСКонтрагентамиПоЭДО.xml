@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Subsystem uuid="d29286e7-7c45-4ca0-9215-24d31e99244a">
+		<Properties>
+			<Name>ОбменСКонтрагентамиПоЭДО</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен с контрагентами по ЭДО</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостояниеДокументовПоЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПравилаУчетаВидовЭДДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УдалитьОчередьПриемаСообщенийЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияЭДОДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОСлужебныйКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОчередьСозданияОбъектовЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОшибкиЭДОКИсправлению</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиОтправкиДокументовПоЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиСозданияДокументовАннулирования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ДокументыАннулирования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.НастройкиЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПакетыЭДОДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СоставПакетовЭДОДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОСлужебныйКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ИнтерфейсДокументовЭДОДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ДокументыЭДОКСозданиюВДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОКлиентПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОМиграция</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОМиграцияКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОМиграцияКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОСобытия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОСобытияКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОХолдинг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОХолдингВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОХолдингКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДОХолдингКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МашиночитаемыеДоверенностиДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтерфейсЭДОДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ДокументДОДляЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ДокументДООбъектДляЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ФорматыЭДОДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ФорматыЭДОДокументооборотКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменСКонтрагентамиДО30</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.БазовыеПраваЭДДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеМаршрутовПодписанияДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеМЧДКонтрагентовЭДОДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеМЧДОрганизацийЭДОДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеНастроекОбменаСКонтрагентамиДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеЭлектронныхДокументовДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеМаршрутовПодписанияДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеМЧДЭДОДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеНастроекОбменаСКонтрагентамиДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеЭлектронныхДокументовПоОрганизациямДокументооборот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиАвтоматическогоСозданияОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ШаблоныДляСозданияДокументовПоВходящимЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОтражениеВУчетеДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОтражениеВУчетеДОВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОтражениеВУчетеДОКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьЭДОВДокументообороте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ФайлыУчаствующиеВЭДО</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

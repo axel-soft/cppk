@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<GraphicalSchemaField name="Схема" id="1">
+			<DataPath>Схема</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="СхемаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="СхемаРасширеннаяПодсказка" id="3"/>
+		</GraphicalSchemaField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ДанныеСхемы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные схемы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Схема" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Схема</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/graphscheme">d5p1:FlowchartContextType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xmlns:d4p1="http://v8.1c.ru/8.2/data/graphscheme" xsi:type="d4p1:FlowchartContextType">
+				<d4p1:backColor>style:FieldBackColor</d4p1:backColor>
+				<d4p1:enableGrid>true</d4p1:enableGrid>
+				<d4p1:drawGridMode>Lines</d4p1:drawGridMode>
+				<d4p1:gridHorizontalStep>20</d4p1:gridHorizontalStep>
+				<d4p1:gridVerticalStep>20</d4p1:gridVerticalStep>
+				<d4p1:bpUUID>00000000-0000-0000-0000-000000000000</d4p1:bpUUID>
+				<d4p1:useOutput>Auto</d4p1:useOutput>
+				<d4p1:printPropItem>
+					<d4p1:key>6</d4p1:key>
+					<d4p1:val>10</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>7</d4p1:key>
+					<d4p1:val>10</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>8</d4p1:key>
+					<d4p1:val>10</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>9</d4p1:key>
+					<d4p1:val>10</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>13</d4p1:key>
+					<d4p1:val>0</d4p1:val>
+				</d4p1:printPropItem>
+				<d4p1:printPropItem>
+					<d4p1:key>16</d4p1:key>
+					<d4p1:val>0</d4p1:val>
+				</d4p1:printPropItem>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДанныеПараметровСхемы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные параметров схемы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Объект" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogObject.ШаблоныКомплексныхБизнесПроцессов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ИспользоватьВремяВСрокахЗадач" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать время в сроках задач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаОтсчетаДляРасчетаСроков" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата отсчета для расчета сроков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>FilterCriterion.БизнесПроцессыПоШаблону.Command.БизнесПроцессыПоШаблону</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ПравилаАвтоматическогоЗапускаБизнесПроцессов.Command.ОткрытьФормуДляШаблона</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.НастройкаШаблоновБизнесПроцессов.Command.ОткрытьФормуДляШаблона</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.ПравилаЭскалации.Command.ПравилаЭскалацииЗадачПоШаблонуБизнесПроцесса</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ПротоколРаботы</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.СозданиеСвязанныхОбъектов</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ПечатьКарточкиКомплексногоПроцесса</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ПечатьСхемыКомплексногоПроцесса</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

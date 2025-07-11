@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Create</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаДобавитьМеткиВремени" id="133">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ДобавитьМеткиВремени</CommandName>
+				<ExtendedTooltip name="ФормаДобавитьМеткиВремениРасширеннаяПодсказка" id="134"/>
+			</Button>
+			<Button name="ФормаДобавитьАрхивныеМеткиВремени" id="131">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ДобавитьАрхивныеМеткиВремени</CommandName>
+				<ExtendedTooltip name="ФормаДобавитьАрхивныеМеткиВремениРасширеннаяПодсказка" id="132"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Create</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СписокДобавитьМеткиВремени" id="127">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьМеткиВремени</CommandName>
+						<ExtendedTooltip name="СписокДобавитьМеткиВремениРасширеннаяПодсказка" id="128"/>
+					</Button>
+					<Button name="СписокДобавитьАрхивныеМеткиВремени" id="129">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьАрхивныеМеткиВремени</CommandName>
+						<ExtendedTooltip name="СписокДобавитьАрхивныеМеткиВремениРасширеннаяПодсказка" id="130"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="52">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="54"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="55">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="57"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="58">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="60"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="УникальныйИдентификатор" id="61">
+					<DataPath>Список.УникальныйИдентификатор</DataPath>
+					<ContextMenu name="УникальныйИдентификаторКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="УникальныйИдентификаторРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<InputField name="ДатаПодписи" id="64">
+					<DataPath>Список.ДатаПодписи</DataPath>
+					<ContextMenu name="ДатаПодписиКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ДатаПодписиРасширеннаяПодсказка" id="66"/>
+				</InputField>
+				<InputField name="ПодписанныйОбъект" id="67">
+					<DataPath>Список.ПодписанныйОбъект</DataPath>
+					<ContextMenu name="ПодписанныйОбъектКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ПодписанныйОбъектРасширеннаяПодсказка" id="69"/>
+				</InputField>
+				<InputField name="ПорядковыйНомер" id="124">
+					<DataPath>Список.ПорядковыйНомер</DataPath>
+					<ContextMenu name="ПорядковыйНомерКонтекстноеМеню" id="125"/>
+					<ExtendedTooltip name="ПорядковыйНомерРасширеннаяПодсказка" id="126"/>
+				</InputField>
+				<InputField name="ТипПодписи" id="103">
+					<DataPath>Список.ТипПодписи</DataPath>
+					<ContextMenu name="ТипПодписиКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="ТипПодписиРасширеннаяПодсказка" id="105"/>
+				</InputField>
+				<InputField name="УстановившийПодпись" id="70">
+					<DataPath>Список.УстановившийПодпись</DataPath>
+					<ContextMenu name="УстановившийПодписьКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="УстановившийПодписьРасширеннаяПодсказка" id="72"/>
+				</InputField>
+				<InputField name="Версия" id="73">
+					<DataPath>Список.Версия</DataPath>
+					<ContextMenu name="ВерсияКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="75"/>
+				</InputField>
+				<InputField name="ДатаПроверкиПодписи" id="76">
+					<DataPath>Список.ДатаПроверкиПодписи</DataPath>
+					<ContextMenu name="ДатаПроверкиПодписиКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ДатаПроверкиПодписиРасширеннаяПодсказка" id="78"/>
+				</InputField>
+				<InputField name="СрокДействияПоследнейМеткиВремени" id="106">
+					<DataPath>Список.СрокДействияПоследнейМеткиВремени</DataPath>
+					<ContextMenu name="СрокДействияПоследнейМеткиВремениКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="СрокДействияПоследнейМеткиВремениРасширеннаяПодсказка" id="108"/>
+				</InputField>
+				<InputField name="ИмяФайлаПодписи" id="79">
+					<DataPath>Список.ИмяФайлаПодписи</DataPath>
+					<ContextMenu name="ИмяФайлаПодписиКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ИмяФайлаПодписиРасширеннаяПодсказка" id="81"/>
+				</InputField>
+				<InputField name="Комментарий" id="82">
+					<DataPath>Список.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="84"/>
+				</InputField>
+				<InputField name="КомуВыданСертификат" id="85">
+					<DataPath>Список.КомуВыданСертификат</DataPath>
+					<ContextMenu name="КомуВыданСертификатКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="КомуВыданСертификатРасширеннаяПодсказка" id="87"/>
+				</InputField>
+				<InputField name="Отпечаток" id="88">
+					<DataPath>Список.Отпечаток</DataPath>
+					<ContextMenu name="ОтпечатокКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="ОтпечатокРасширеннаяПодсказка" id="90"/>
+				</InputField>
+				<CheckBoxField name="ПодписьВерна" id="91">
+					<DataPath>Список.ПодписьВерна</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПодписьВернаКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="ПодписьВернаРасширеннаяПодсказка" id="93"/>
+				</CheckBoxField>
+				<CheckBoxField name="СертификатДействителен" id="94">
+					<DataPath>Список.СертификатДействителен</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СертификатДействителенКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="СертификатДействителенРасширеннаяПодсказка" id="96"/>
+				</CheckBoxField>
+				<InputField name="ТекстОшибкиПроверкиПодписи" id="97">
+					<DataPath>Список.ТекстОшибкиПроверкиПодписи</DataPath>
+					<ContextMenu name="ТекстОшибкиПроверкиПодписиКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="ТекстОшибкиПроверкиПодписиРасширеннаяПодсказка" id="99"/>
+				</InputField>
+				<InputField name="ТекстОшибкиПроверкиСертификата" id="100">
+					<DataPath>Список.ТекстОшибкиПроверкиСертификата</DataPath>
+					<ContextMenu name="ТекстОшибкиПроверкиСертификатаКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="ТекстОшибкиПроверкиСертификатаРасширеннаяПодсказка" id="102"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.УникальныйИдентификатор</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЭП.ИдентификаторПодписи КАК УникальныйИдентификатор,
+	ЭП.ДатаПодписи,
+	ВЫБОР
+		КОГДА ЭП.ПодписанныйОбъект ССЫЛКА Справочник.ВерсииФайлов
+			ТОГДА ЭП.ПодписанныйОбъект.Владелец
+		ИНАЧЕ ЭП.ПодписанныйОбъект
+	КОНЕЦ КАК ПодписанныйОбъект,
+	ЭП.УстановившийПодпись,
+	ЭП.Версия,
+	ЭП.ДатаПроверкиПодписи,
+	ЭП.ИмяФайлаПодписи,
+	ЭП.Комментарий,
+	ЭП.КомуВыданСертификат,
+	ЭП.Отпечаток,
+	ЭП.Подпись,
+	ЭП.ПодписьВерна,
+	ЭП.Сертификат,
+	ЭП.СертификатДействителен,
+	ЭП.ТекстОшибкиПроверкиПодписи,
+	ЭП.ТекстОшибкиПроверкиСертификата,
+	ЭП.ТипПодписи,
+	ЭП.СрокДействияПоследнейМеткиВремени
+ИЗ
+	РегистрСведений.ЭлектронныеПодписи КАК ЭП</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПодписи</dcssch:dataPath>
+					<dcssch:field>ДатаПодписи</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УстановившийПодпись</dcssch:dataPath>
+					<dcssch:field>УстановившийПодпись</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Версия</dcssch:dataPath>
+					<dcssch:field>Версия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПроверкиПодписи</dcssch:dataPath>
+					<dcssch:field>ДатаПроверкиПодписи</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяФайлаПодписи</dcssch:dataPath>
+					<dcssch:field>ИмяФайлаПодписи</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КомуВыданСертификат</dcssch:dataPath>
+					<dcssch:field>КомуВыданСертификат</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Отпечаток</dcssch:dataPath>
+					<dcssch:field>Отпечаток</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Подпись</dcssch:dataPath>
+					<dcssch:field>Подпись</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПодписьВерна</dcssch:dataPath>
+					<dcssch:field>ПодписьВерна</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сертификат</dcssch:dataPath>
+					<dcssch:field>Сертификат</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СертификатДействителен</dcssch:dataPath>
+					<dcssch:field>СертификатДействителен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТекстОшибкиПроверкиПодписи</dcssch:dataPath>
+					<dcssch:field>ТекстОшибкиПроверкиПодписи</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТекстОшибкиПроверкиСертификата</dcssch:dataPath>
+					<dcssch:field>ТекстОшибкиПроверкиСертификата</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТипПодписи</dcssch:dataPath>
+					<dcssch:field>ТипПодписи</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СрокДействияПоследнейМеткиВремени</dcssch:dataPath>
+					<dcssch:field>СрокДействияПоследнейМеткиВремени</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПодписанныйОбъект</dcssch:dataPath>
+					<dcssch:field>ПодписанныйОбъект</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписанный объект</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УникальныйИдентификатор</dcssch:dataPath>
+					<dcssch:field>УникальныйИдентификатор</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уникальный идентификатор</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТребуетсяПроверка</dcssch:dataPath>
+					<dcssch:field>ТребуетсяПроверка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОшибкаПриАвтоматическомПродлении</dcssch:dataPath>
+					<dcssch:field>ОшибкаПриАвтоматическомПродлении</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПропуститьПриПродлении</dcssch:dataPath>
+					<dcssch:field>ПропуститьПриПродлении</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УдалитьУникальныйИдентификатор</dcssch:dataPath>
+					<dcssch:field>УдалитьУникальныйИдентификатор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УдалитьДатаПодписи</dcssch:dataPath>
+					<dcssch:field>УдалитьДатаПодписи</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УдалитьОбъект</dcssch:dataPath>
+					<dcssch:field>УдалитьОбъект</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УдалитьУстановившийПодпись</dcssch:dataPath>
+					<dcssch:field>УдалитьУстановившийПодпись</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПодписанныйОбъект1</dcssch:dataPath>
+					<dcssch:field>ПодписанныйОбъект1</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПорядковыйНомер</dcssch:dataPath>
+					<dcssch:field>ПорядковыйНомер</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторОтметкиВремени</dcssch:dataPath>
+					<dcssch:field>ИдентификаторОтметкиВремени</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УдалитьОтметкиВремениИдентификаторНабораЗаписей</dcssch:dataPath>
+					<dcssch:field>УдалитьОтметкиВремениИдентификаторНабораЗаписей</dcssch:field>
+				</Field>
+				<MainTable>InformationRegister.ЭлектронныеПодписи</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ПодписьВерна</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаПроверкиПодписи</dcsset:left>
+									<dcsset:comparisonType>Filled</dcsset:comparisonType>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ОтметкаОтрицательногоВыполненияЗадачи</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ПодписьВерна</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаПроверкиПодписи</dcsset:left>
+									<dcsset:comparisonType>Filled</dcsset:comparisonType>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ОтметкаПоложительногоВыполненияЗадачи</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьМеткиВремени" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить метки времени</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Усовершенствовать выделенные ЭП до формата CAdES-T, фиксируя результат проверки подписей на момент метки времени.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьМеткиВремени</Action>
+		</Command>
+		<Command name="ДобавитьАрхивныеМеткиВремени" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить архивные метки времени</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Усовершенствует выделенные подписи до формата CAdES-A, обогащая подписи всеми данными необходимыми для проверки действия подписей.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьАрхивныеМеткиВремени</Action>
+		</Command>
+	</Commands>
+</Form>

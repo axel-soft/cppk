@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Получатели уведомлений о проблемах</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКомандаСохранитьНастройки" id="42">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаСохранитьНастройки</CommandName>
+				<ExtendedTooltip name="ФормаКомандаСохранитьНастройкиРасширеннаяПодсказка" id="43"/>
+			</Button>
+			<Button name="ФормаКомандаОтмена" id="44">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаОтмена</CommandName>
+				<ExtendedTooltip name="ФормаКомандаОтменаРасширеннаяПодсказка" id="45"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ПолучателиУведомлений" id="1">
+			<Representation>List</Representation>
+			<TitleHeight>2</TitleHeight>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ПолучателиУведомлений</DataPath>
+			<RowPictureDataPath>ПолучателиУведомлений.НомерКартинки</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Ref>CommonPicture.КоллекцияАдреснаяКнига</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</RowsPicture>
+			<CommandSet>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПолучателиУведомленийКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ПолучателиУведомленийКоманднаяПанель" id="3">
+				<ChildItems>
+					<Button name="ПолучателиУведомленийПодобратьПолучателей" id="40">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаПодобратьПолучателей</CommandName>
+						<ExtendedTooltip name="ПолучателиУведомленийПодобратьПолучателейРасширеннаяПодсказка" id="41"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПолучателиУведомленийРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ПолучателиУведомленийСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ПолучателиУведомлений</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолучателиУведомленийСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ПолучателиУведомленийСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПолучателиУведомленийСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>ПолучателиУведомлений</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолучателиУведомленийСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ПолучателиУведомленийСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПолучателиУведомленийУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>ПолучателиУведомлений</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолучателиУведомленийУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ПолучателиУведомленийУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnStartEdit">ПолучателиУведомленийПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ПолучателиУведомленийПолучатель" id="14">
+					<DataPath>ПолучателиУведомлений.Получатель</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПолучателиУведомленийПолучательКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ПолучателиУведомленийПолучательРасширеннаяПодсказка" id="16"/>
+					<Events>
+						<Event name="OnChange">ПолучателиУведомленийПолучательПриИзменении</Event>
+						<Event name="AutoComplete">ПолучателиУведомленийПолучательАвтоПодбор</Event>
+						<Event name="StartChoice">ПолучателиУведомленийПолучательНачалоВыбора</Event>
+						<Event name="TextEditEnd">ПолучателиУведомленийПолучательОкончаниеВводаТекста</Event>
+						<Event name="ChoiceProcessing">ПолучателиУведомленийПолучательОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<ColumnGroup name="ПолучателиУведомленийРазделыУведомлений" id="38">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получатели уведомлений разделы уведомлений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="ПолучателиУведомленийРазделыУведомленийРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<CheckBoxField name="ПолучателиУведомленийУведомлятьОПроблемахПочты" id="17">
+							<DataPath>ПолучателиУведомлений.УведомлятьОПроблемахПочты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Почта</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолучателиУведомленийУведомлятьОПроблемахПочтыКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ПолучателиУведомленийУведомлятьОПроблемахПочтыРасширеннаяПодсказка" id="19"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПолучателиУведомленийУведомлятьОПроблемахОбменаСМобильными" id="20">
+							<DataPath>ПолучателиУведомлений.УведомлятьОПроблемахОбменаСМобильными</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обмен с мобильными</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолучателиУведомленийУведомлятьОПроблемахОбменаСМобильнымиКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ПолучателиУведомленийУведомлятьОПроблемахОбменаСМобильнымиРасширеннаяПодсказка" id="22"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПолучателиУведомленийУведомлятьОПроблемахАдминистрирования" id="23">
+							<DataPath>ПолучателиУведомлений.УведомлятьОПроблемахАдминистрирования</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Администрирование</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолучателиУведомленийУведомлятьОПроблемахАдминистрированияКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ПолучателиУведомленийУведомлятьОПроблемахАдминистрированияРасширеннаяПодсказка" id="25"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПолучателиУведомленийУведомлятьОПроблемахПриемаЭДО" id="26">
+							<DataPath>ПолучателиУведомлений.УведомлятьОПроблемахПриемаЭДО</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прием по ЭДО</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолучателиУведомленийУведомлятьОПроблемахПриемаЭДОКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="ПолучателиУведомленийУведомлятьОПроблемахПриемаЭДОРасширеннаяПодсказка" id="28"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПолучателиУведомленийУведомлятьОПроблемахОтправкиЭДО" id="29">
+							<DataPath>ПолучателиУведомлений.УведомлятьОПроблемахОтправкиЭДО</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отправка по ЭДО</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолучателиУведомленийУведомлятьОПроблемахОтправкиЭДОКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ПолучателиУведомленийУведомлятьОПроблемахОтправкиЭДОРасширеннаяПодсказка" id="31"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПолучателиУведомленийУведомлятьОПроблемахРаспознавания" id="49">
+							<DataPath>ПолучателиУведомлений.УведомлятьОПроблемахРаспознавания</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Распознавание</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолучателиУведомленийУведомлятьОПроблемахРаспознаванияКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ПолучателиУведомленийУведомлятьОПроблемахРаспознаванияРасширеннаяПодсказка" id="51"/>
+						</CheckBoxField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ПолучателиУведомленийПустаяКолонка" id="46">
+					<DataPath>ПолучателиУведомлений.УведомлятьОПроблемахАдминистрирования</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=' '; БИ=' '</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ПолучателиУведомленийПустаяКолонкаКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ПолучателиУведомленийПустаяКолонкаРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПолучателиУведомлений" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получатели уведомлений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Получатель" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получатель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+						<v8:Type>cfg:CatalogRef.ПолныеРоли</v8:Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="УведомлятьОПроблемахПочты" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уведомлять о проблемах почты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="УведомлятьОПроблемахОбменаСМобильными" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уведомлять о проблемах обмена с мобильными</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="УведомлятьОПроблемахАдминистрирования" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уведомлять о проблемах администрирования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="УведомлятьОПроблемахПриемаЭДО" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уведомлять о проблемах приема ЭДО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="УведомлятьОПроблемахОтправкиЭДО" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уведомлять о проблемах отправки ЭДО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерКартинки" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеПолучателя" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление получателя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УведомлятьОПроблемахРаспознавания" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уведомлять о проблемах распознавания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НастраиваемыеРазделы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настраиваемые разделы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:EnumRef.РазделыУведомленийОПроблемах</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаПодобратьПолучателей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать получателей уведомлений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПодобратьПолучателей</Action>
+		</Command>
+		<Command name="КомандаСохранитьНастройки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки получателей уведомлений о проблемах.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСохранитьНастройки</Action>
+		</Command>
+		<Command name="КомандаОтмена" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена изменений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтмена</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="НастраиваемыеРазделы">
+			<Type/>
+		</Parameter>
+		<Parameter name="ЗаголовокФормы">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

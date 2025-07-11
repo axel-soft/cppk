@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Report uuid="883b2968-9760-4b1c-9333-ec312d4cb3e3">
+		<InternalInfo>
+			<xr:GeneratedType name="ReportObject.ИспользованиеСкриптов" category="Object">
+				<xr:TypeId>1621f95d-8c7e-4810-88ce-eee3a9460208</xr:TypeId>
+				<xr:ValueId>8d523f7c-867d-4b35-a536-ebd71d76602d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ReportManager.ИспользованиеСкриптов" category="Manager">
+				<xr:TypeId>5ac645a2-057e-4416-9848-615c5e1d7a93</xr:TypeId>
+				<xr:ValueId>282dc0d1-f5fb-48d4-9671-1c9b1e5bc1ac</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ИспользованиеСкриптов</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование скриптов</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<MainDataCompositionSchema>Report.ИспользованиеСкриптов.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
+			<DefaultSettingsForm/>
+			<AuxiliarySettingsForm/>
+			<DefaultVariantForm/>
+			<VariantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</VariantsStorage>
+			<SettingsStorage/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Template>ОбластиДанныхИспользующиеСкрипты</Template>
+			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
+			<Command uuid="54760438-9897-4d9b-82ef-633247602ea1">
+				<Properties>
+					<Name>ИспользованиеСкрипта</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Места использования</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormCommandBarImportant</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:CatalogRef.Алгоритмы</v8:Type>
+						<v8:Type>cfg:CatalogRef.АвтоподстановкиДляОбъектов</v8:Type>
+						<v8:Type>cfg:CatalogRef.АлгоритмыПроверки</v8:Type>
+						<v8:Type>cfg:CatalogRef.СкриптыСхемДляКомплексныхПроцессов</v8:Type>
+						<v8:Type>cfg:CatalogRef.СкриптыСхемДляОбработокОбъектов</v8:Type>
+						<v8:Type>cfg:CatalogRef.СкриптыУсловийСхемДляКомплексныхПроцессов</v8:Type>
+						<v8:Type>cfg:CatalogRef.АвтоподстановкиДляПроцессов</v8:Type>
+						<v8:Type>cfg:CatalogRef.УсловияЗадач</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
+		</ChildObjects>
+	</Report>
+</MetaDataObject>

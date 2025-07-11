@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Скрипты автозаполнения файлов</v8:content>
+		</v8:item>
+	</Title>
+	<Width>100</Width>
+	<Height>40</Height>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ВидДокумента" id="1">
+			<DataPath>ВидДокумента</DataPath>
+			<ClearButton>true</ClearButton>
+			<EditTextUpdate>DontUse</EditTextUpdate>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+			<ContextMenu name="ВидДокументаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ВидДокументаПриИзменении</Event>
+				<Event name="AutoComplete">ВидДокументаАвтоПодбор</Event>
+				<Event name="StartChoice">ВидДокументаНачалоВыбора</Event>
+				<Event name="TextEditEnd">ВидДокументаОкончаниеВводаТекста</Event>
+			</Events>
+		</InputField>
+		<Table name="Скрипты" id="4">
+			<Representation>Tree</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<SelectionMode>SingleRow</SelectionMode>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<DataPath>Скрипты</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>HierarchicalList</ExcludedCommand>
+				<ExcludedCommand>List</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+				<ExcludedCommand>Tree</ExcludedCommand>
+			</CommandSet>
+			<ContextMenu name="СкриптыКонтекстноеМеню" id="6"/>
+			<AutoCommandBar name="СкриптыКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="УстановитьФлаги" id="34">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Command.УстановитьФлаги</CommandName>
+						<ExtendedTooltip name="УстановитьФлагиРасширеннаяПодсказка" id="35"/>
+					</Button>
+					<Button name="СнятьФлаги" id="36">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Command.СнятьФлаги</CommandName>
+						<ExtendedTooltip name="СнятьФлагиРасширеннаяПодсказка" id="37"/>
+					</Button>
+					<Button name="ПоказыватьУдаленные" id="46">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПоказыватьУдаленные</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ПоказыватьУдаленныеРасширеннаяПодсказка" id="47"/>
+					</Button>
+					<Button name="РазвернутьВсе" id="71">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.РазвернутьВсе</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="РазвернутьВсеРасширеннаяПодсказка" id="72"/>
+					</Button>
+					<Button name="СвернутьВсе" id="73">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СвернутьВсе</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СвернутьВсеРасширеннаяПодсказка" id="74"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СкриптыРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="СкриптыСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>Скрипты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СкриптыСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СкриптыСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СкриптыСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>Скрипты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СкриптыСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="СкриптыСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СкриптыУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Скрипты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СкриптыУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СкриптыУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="СкриптыФлаг" id="26">
+					<DataPath>Скрипты.Флаг</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ThreeState>true</ThreeState>
+					<ContextMenu name="СкриптыФлагКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СкриптыФлагРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="OnChange">СкриптыВыбратьПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<ColumnGroup name="СкриптыГруппаШаблонФайла" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Скрипты группа шаблон файла</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="СкриптыГруппаШаблонФайлаРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<InputField name="СкриптыШаблонФайла" id="20">
+							<DataPath>Скрипты.ШаблонФайла</DataPath>
+							<Visible>false</Visible>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="СкриптыШаблонФайлаКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="СкриптыШаблонФайлаРасширеннаяПодсказка" id="22"/>
+						</InputField>
+						<InputField name="СкриптыВидДокумента" id="17">
+							<DataPath>Скрипты.ВидДокумента</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="СкриптыВидДокументаКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="СкриптыВидДокументаРасширеннаяПодсказка" id="19"/>
+						</InputField>
+						<InputField name="СкриптыШаблонФайлаПредставление" id="66">
+							<DataPath>Скрипты.ШаблонФайлаПредставление</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Шаблон файла</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Width>1</Width>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="СкриптыШаблонФайлаПредставлениеКонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="СкриптыШаблонФайлаПредставлениеРасширеннаяПодсказка" id="68"/>
+						</InputField>
+						<InputField name="СкриптыПолеФайла" id="29">
+							<DataPath>Скрипты.ПолеФайла</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="СкриптыПолеФайлаКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="СкриптыПолеФайлаРасширеннаяПодсказка" id="31"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="СкриптыСкрипт" id="23">
+					<DataPath>Скрипты.Скрипт</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="СкриптыСкриптКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СкриптыСкриптРасширеннаяПодсказка" id="25"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаКомандыПодвала" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды подвала</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыПодвалаРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<Button name="ПеренестиСкрипты" id="38">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.ПеренестиСкрипты</CommandName>
+					<ExtendedTooltip name="ПеренестиСкриптыРасширеннаяПодсказка" id="39"/>
+				</Button>
+				<Button name="Отмена" id="40">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Отмена</CommandName>
+					<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="41"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВидДокумента" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыДокументов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Скрипты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрипты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Флаг" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Флаг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидДокумента" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыДокументов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ШаблонФайла" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон файла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Файлы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Скрипт" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Скрипт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПолеФайла" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле файла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоПолеИсточника" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это поле источника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ШаблонФайлаПредставление" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон файла представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПометкаУдаления" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекущееПравило" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее правило</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПравилаАвтозаполненияФайлов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоляФайла" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поля файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="КопируемыеСкрипты" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копируемые скрипты</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВидыДокументовОтбор" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды документов отбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.ВидыДокументов</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПоказыватьУдаленные" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьФлаги" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаги</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлаги</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Скрипты</AssociatedTableElementId>
+		</Command>
+		<Command name="СнятьФлаги" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флаги</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлаги</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Скрипты</AssociatedTableElementId>
+		</Command>
+		<Command name="ПеренестиСкрипты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести скрипты</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПеренестиСкрипты</Action>
+		</Command>
+		<Command name="Отмена" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Отмена</Action>
+		</Command>
+		<Command name="ПоказыватьУдаленные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоказыватьУдаленные</Action>
+		</Command>
+		<Command name="РазвернутьВсе" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РазвернутьВсе</Action>
+		</Command>
+		<Command name="СвернутьВсе" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СвернутьВсе</Action>
+		</Command>
+	</Commands>
+</Form>

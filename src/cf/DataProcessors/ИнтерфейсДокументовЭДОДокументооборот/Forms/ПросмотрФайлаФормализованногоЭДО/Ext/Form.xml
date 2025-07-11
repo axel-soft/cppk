@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ОтображатьБанковскиеРеквизиты" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтображатьБанковскиеРеквизиты</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ОтображатьБанковскиеРеквизитыРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ОтображатьДополнительнуюИнформацию" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтображатьДополнительнуюИнформацию</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ОтображатьДополнительнуюИнформациюРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ОтображатьОбластьКопияВерна" id="5">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтображатьОбластьКопияВерна</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отображать область "Копия верна"</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ОтображатьОбластьКопияВернаРасширеннаяПодсказка" id="6"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="СтраницыПредставлениеФайла" id="7">
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыПредставлениеФайлаРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<Page name="СтраницаОшибка" id="9">
+					<ExtendedTooltip name="СтраницаОшибкаРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьОшибкаПредставленияФайла" id="11">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Описание ошибки формирования представления документа&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<BackColor>style:ОшибкаПолнотекстовыйПоискФон</BackColor>
+							<ContextMenu name="НадписьОшибкаПредставленияФайлаКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="НадписьОшибкаПредставленияФайлаРасширеннаяПодсказка" id="13"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаТабличныйДокумент" id="14">
+					<ExtendedTooltip name="СтраницаТабличныйДокументРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<SpreadSheetDocumentField name="ТабличныйДокументФормализованногоЭДО" id="16">
+							<DataPath>ТабличныйДокументФормализованногоЭДО</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ТабличныйДокументФормализованногоЭДОКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ТабличныйДокументФормализованногоЭДОРасширеннаяПодсказка" id="18"/>
+						</SpreadSheetDocumentField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОтключитьВыводДопДанных" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить вывод информационного поля</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>ОтключитьВыводДопДанных</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтключитьВыводКопияВерна" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копия верна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>ОтключитьВыводКопияВерна</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТипДокументаЭДО" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип документа ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыДокументовЭДО</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыводитьБанковскиеРеквизиты" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выводить банковские реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВыводитьБанковскиеРеквизиты</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФайлДО" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл ДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Файлы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТабличныйДокументФормализованногоЭДО" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табличный документ формализованного ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОтображатьБанковскиеРеквизиты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать банковские реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать банковские реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтображатьБанковскиеРеквизиты</Action>
+		</Command>
+		<Command name="ОтображатьДополнительнуюИнформацию" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать дополнительную информацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать дополнительную информацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтображатьДополнительнуюИнформацию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтображатьОбластьКопияВерна" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать область "Копия верна"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать дополнительную информацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтображатьОбластьКопияВерна</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ФайлДО">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Файлы</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

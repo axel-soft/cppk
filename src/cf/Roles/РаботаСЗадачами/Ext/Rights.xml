@@ -1,0 +1,1351 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.18">
+	<setForNewObjects>false</setForNewObjects>
+	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
+	<object>
+		<name>Report.СводкаРабот.Command.СводкаРабот</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ВидыУчастниковЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.ДобавитьКартинкуИзБуфераКОтчету</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиОтМеняНеНачатые</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "Задача", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта(
+	"Изменение", 
+	"",
+	"",
+	"")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistorySettings</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеНаСогласование</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеПросроченоБезОзнакомления</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ВсеИсполнителиДействийЗадач.Dimension.Основание</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РеестрыЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РеестрыЗадач.StandardAttribute.PredefinedDataName</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РеестрыЗадач.StandardAttribute.Predefined</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РеестрыЗадач.StandardAttribute.Ref</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РеестрыЗадач.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РеестрыЗадач.StandardAttribute.IsFolder</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РеестрыЗадач.StandardAttribute.Owner</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РеестрыЗадач.StandardAttribute.Parent</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РеестрыЗадач.StandardAttribute.Description</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РеестрыЗадач.StandardAttribute.Code</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ВсеЗадачи</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.СводкаРабот.Command.ЗадачиОтМеня</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.УстановитьОранжевыйФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиОтМеняЧерновики</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.Закрыть</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеИстекаетБезОзнакомления</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.СостоянияУчастниковЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиОтМеняПросроченные</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.Отменить</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ОчиститьФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.СводкаРабот</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеПоступилиОбновления</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ВернутьНаДоработку</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РезультатыДействийЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.СоздатьПодзадачу</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.СоздатьЗадачуКопированием</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.Перенаправить</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ВсеИсполнителиДействийЗадач.Dimension.Исполнитель</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.СохранитьКакШаблон</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеНаИсполнение</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеНеНачатыеБезОзнакомления</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиОтМеня</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.УстановитьКрасныйФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеНаРассмотрение</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.СоздатьЗадачу</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.ДобавитьФайлКОтчету</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.УстановитьЗеленыйФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеНаУтверждение</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиПоПриложению</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.СводкаРабот.Command.СправкаОбИсполнительскойДисциплине</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.ОтменитьВзятиеВРаботу</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.КоличествоЗадачПоАвторам</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РеестрыЗадач.Attribute.КлючРеестра</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.ОзнакомитьсяСОбновлением</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ВзятьОтчетОбИсполненииИПриложения</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ВидыЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.УстановитьЛиловыйФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПоступившиеОбновленияЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ВидыДействийЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиПодчиненныхПросроченные</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.УстановитьЗеленыйФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ИсторияЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "Задача", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.СводкаРабот.Command.ОтмененныеЗадачи</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РеестрЗадачПоИсполнителям</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "Задача", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("Изменение", "ДействиеЗадачи", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеНаОзнакомление</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.УстановитьСинийФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеПросроченные</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.СводкаРабот.Command.ЗапланированныеЗадачи</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ИсполнителиВместоНедействительных</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.ДобавитьУчастников</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеНеНачатые</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.КоличествоЗадачПоИсполнителям</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеДругие</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеВСрокБезОзнакомления</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.ДобавитьПриложениеКОтчету</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ГруппировкиЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РезультатыЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Configuration.ДокументооборотКОРП</name>
+		<right>
+			<name>ThinClient</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>WebClient</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MobileClient</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeNormal</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeEmbeddedWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeFullscreenWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeKiosk</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>AnalyticsSystemClient</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>SaveUserData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Output</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.УстановитьКрасныйФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.НастройкиЗадач</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиПодчиненныхНеНачатые</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.ОчиститьФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиПодчиненных</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.УстановитьОранжевыйФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ВсеИсполнителиДействийЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ВсеИсполнителиДействийЗадач.StandardAttribute.Active</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ВсеИсполнителиДействийЗадач.StandardAttribute.LineNumber</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ВсеИсполнителиДействийЗадач.StandardAttribute.Recorder</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ВсеИсполнителиДействийЗадач.StandardAttribute.Period</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.Перенаправить</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМне</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.УстановитьЖелтыйФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.СводкаРабот.Command.ЗадачиВРаботе</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ДокументооборотИспользоватьОграниченияПравДоступа #Тогда
+
+ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица
+ГДЕ ИСТИНА В
+	(ВЫБРАТЬ ПЕРВЫЕ 1
+		ИСТИНА
+	ИЗ
+		РегистрСведений.ДескрипторыДляОбъектов КАК ДескрипторыДляОбъектов
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПраваПоДескрипторамДоступаОбъектов КАК ПраваПоДескрипторамДоступаОбъектов
+			ПО ДескрипторыДляОбъектов.Дескриптор = ПраваПоДескрипторамДоступаОбъектов.Дескриптор
+	ГДЕ
+		ДескрипторыДляОбъектов.Объект = ТекущаяТаблица.Ссылка
+		И ПраваПоДескрипторамДоступаОбъектов.Сотрудник В (&amp;СотрудникиПользователя)
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ ПЕРВЫЕ 1
+		ИСТИНА
+	ИЗ
+		РегистрСведений.СотрудникиВКонтейнерах КАК СотрудникиВКонтейнерах
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ЗамещающиеИПомощники КАК ЗамещающиеИПомощники
+			ПО СотрудникиВКонтейнерах.Сотрудник = ЗамещающиеИПомощники.Сотрудник
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ЗамещающиеИПомощники.ВопросыЗамещения КАК ВопросыЗамещенияТЧ
+			ПО ЗамещающиеИПомощники.Ссылка = ВопросыЗамещенияТЧ.Ссылка
+	ГДЕ
+		ТекущаяТаблица.Автор = СотрудникиВКонтейнерах.Контейнер
+		И ТекущаяТаблица.Источник = НЕОПРЕДЕЛЕНО
+		И ТекущаяТаблица.ВышестоящаяЗадача = ЗНАЧЕНИЕ(Документ.Задача.ПустаяСсылка)
+		И ЗамещающиеИПомощники.Действует
+		И ВопросыЗамещенияТЧ.Область В (ЗНАЧЕНИЕ(Справочник.ОбластиЗамещения.ЗадачиПостановкаПоручений), ЗНАЧЕНИЕ(Справочник.ОбластиЗамещения.Задачи), ЗНАЧЕНИЕ(Справочник.ОбластиЗамещения.ВсеОбласти))
+		И ЗамещающиеИПомощники.Замещающий В (&amp;СотрудникиПользователя))
+		
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistorySettings</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиМнеНаРегистрацию</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РеестрЗадачПоАвторам</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "Задача", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.УстановитьСинийФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.СобытияЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ШаблоныЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("", "", "", "")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоДескрипторуОбъекта("Изменение",  "",	"",	"")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.СводкаРабот.Command.ВыполненныеЗадачи</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ПриоритетыЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.НаборыСостоянийЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonForm.БыстрыйПоиск</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РеестрыЗадач.Attribute.ТипРеестра</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.УстановитьЖелтыйФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ВсеИсполнителиДействийЗадач.Dimension.ДействиеЗадачи</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.ВзятьВРаботу</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиОтМеняНеВыполненные</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи.Command.УстановитьЛиловыйФлаг</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.СостоянияЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ИсторияЗадач.Command.ИсторияВыполнения</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача.Command.ЗадачиПоПроектам</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<restrictionTemplate>
+		<name>ПоДескрипторуОбъекта</name>
+		<condition>// Параметр(1) - отбор по полям Изменение, Добавление:
+//	по умолчанию нет условий, проверяется право чтения
+//  "Изменение" - условие Изменение = ИСТИНА
+//	"ИзменениеИлиДобавление" - условие (Изменение = ИСТИНА ИЛИ Добавление = ИСТИНА)
+//
+// Параметр(2) - имя поля, указывающее на объект, чьи права будут проанализированы
+//	по умолчанию "Ссылка"
+ // 
+ // Параметр(3) - дополнительные условия:
+//  "БезРуководителейИДелегатов" - не включать руководителей и делегатов в права
+//  "БезРуководителей" - не включать руководителей в права
+//  "БезДелегатов" - не включать делегатов в права
+// 
+// Параметр(4) - оставлять пустым (зарезервирован, не используется)
+// 
+// Примеры использования шаблона:
+//	#ПоДескрипторуОбъекта("", "")
+//	#ПоДескрипторуОбъекта("Изменение", "")
+//	#ПоДескрипторуОбъекта("", "Документ")
+//	#ПоДескрипторуОбъекта("ИзменениеИлиДобавление", "Мероприятие")
+//	#ПоДескрипторуОбъекта("ИзменениеИлиДобавление", "Мероприятие", "БезРуководителейИДелегатов")
+//
+
+#Если &amp;ДокументооборотИспользоватьОграниченияПравДоступа #Тогда
+
+	ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДескрипторыДляОбъектов КАК ДескрипторыДляОбъектов
+	#Если "#Параметр(2)" = "" #Тогда
+		ПО ТекущаяТаблица.Ссылка = ДескрипторыДляОбъектов.Объект
+	#Иначе
+		ПО ТекущаяТаблица.#Параметр(2) = ДескрипторыДляОбъектов.Объект
+	#КонецЕсли
+	ГДЕ ДескрипторыДляОбъектов.Дескриптор  В (
+		ВЫБРАТЬ ПраваПоДескрипторамДоступаОбъектов.Дескриптор
+		ИЗ РегистрСведений.ПраваПоДескрипторамДоступаОбъектов КАК ПраваПоДескрипторамДоступаОбъектов
+		ГДЕ ПраваПоДескрипторамДоступаОбъектов.Сотрудник В(&amp;СотрудникиПользователя)
+			#Если "#Параметр(1)" = "Изменение" #Тогда
+				И ПраваПоДескрипторамДоступаОбъектов.Изменение
+			#ИначеЕсли "#Параметр(1)" = "ИзменениеИлиДобавление" #Тогда
+				И (ПраваПоДескрипторамДоступаОбъектов.Изменение
+				ИЛИ ПраваПоДескрипторамДоступаОбъектов.Добавление)
+			#КонецЕсли
+	)
+	
+
+	
+	//	#Если "#Параметр(3)" = "БезРуководителейИДелегатов" #Тогда
+	//		И ПраваПоДескрипторамДоступаОбъектов.ОбъектОснование = НЕОПРЕДЕЛЕНО
+	//	#ИначеЕсли "#Параметр(3)" = "БезДелегатов" #Тогда
+	//		И НЕ ПраваПоДескрипторамДоступаОбъектов.ОбъектОснование ССЫЛКА Справочник.ЗамещающиеИПомощники
+	//	#КонецЕсли
+	#Если "#Параметр(3)" &lt;&gt; "" #Тогда
+		#Параметр(3)
+	#КонецЕсли
+#КонецЕсли
+
+#Если "#Параметр(4)" = "" #Тогда
+#КонецЕсли </condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>ПоДескрипторуРегистра</name>
+		<condition>// Параметр(1) - отбор по полям Изменение, Добавление:
+//	по умолчанию нет условий, проверяется право чтения
+//  "Изменение" - условие Изменение = ИСТИНА
+//	"ИзменениеИлиДобавление" - условие (Изменение = ИСТИНА ИЛИ Добавление = ИСТИНА)
+//
+// Параметр(2) - имя поля - объекта доступа №1
+// Параметр(3) - имя поля - объекта доступа №2
+// Параметр(4) - имя поля - объекта доступа №3
+//
+// Параметр(5) - дополнительные условия:
+//  "БезРуководителейИДелегатов" - не включать руководителей и делегатов в права
+//  "БезРуководителей" - не включать руководителей в права
+//  "БезДелегатов" - не включать делегатов в права
+// 
+// Параметр(6) - оставлять пустым (зарезервирован, не используется)
+// 
+// Примеры использования шаблона:
+//	#ПоДескрипторуРегистра("Изменение", "Сотрудник", "", "", "")
+//	#ПоДескрипторуРегистра("", "Сотрудник", "Подразделение", "Организация", "")
+//	#ПоДескрипторуРегистра("", "Сотрудник", "Подразделение", "Организация", "БезРуководителейИДелегатов")
+
+#Если &amp;ДокументооборотИспользоватьОграниченияПравДоступа #Тогда
+
+	
+	ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ДескрипторыДоступаРегистров КАК ДескрипторыДоступаРегистров
+	ПО ДескрипторыДоступаРегистров.Регистр = #ИмяТекущейТаблицы
+	И ТекущаяТаблица.#Параметр(2) = ДескрипторыДоступаРегистров.ОбъектДоступа1
+	#Если "#Параметр(3)" &lt;&gt; "" #Тогда
+		И ТекущаяТаблица.#Параметр(3) = ДескрипторыДоступаРегистров.ОбъектДоступа2
+	#КонецЕсли
+	#Если "#Параметр(4)" &lt;&gt; "" #Тогда
+		И ТекущаяТаблица.#Параметр(4) = ДескрипторыДоступаРегистров.ОбъектДоступа3
+	#КонецЕсли
+
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПраваПоДескрипторамДоступаРегистров КАК ПраваПоДескрипторамДоступаРегистров
+	ПО ДескрипторыДоступаРегистров.Ссылка = ПраваПоДескрипторамДоступаРегистров.Дескриптор
+	
+	ГДЕ ПраваПоДескрипторамДоступаРегистров.Сотрудник В (&amp;СотрудникиПользователя)
+	
+	#Если "#Параметр(1)" = "Изменение" #Тогда
+		И ПраваПоДескрипторамДоступаРегистров.Изменение = ИСТИНА
+	#ИначеЕсли "#Параметр(1)" = "ИзменениеИлиДобавление" #Тогда
+		И (ПраваПоДескрипторамДоступаРегистров.Изменение = ИСТИНА ИЛИ ПраваПоДескрипторамДоступаРегистров.Добавление = ИСТИНА)
+	#КонецЕсли
+	
+	#Если "#Параметр(5)" = "БезРуководителейИДелегатов" #Тогда
+		И ПраваПоДескрипторамДоступаРегистров.ОбъектОснование = НЕОПРЕДЕЛЕНО
+	#КонецЕсли
+	
+#КонецЕсли
+
+#Если "#Параметр(6)" = "" #Тогда
+#КонецЕсли
+</condition>
+	</restrictionTemplate>
+</Rights>

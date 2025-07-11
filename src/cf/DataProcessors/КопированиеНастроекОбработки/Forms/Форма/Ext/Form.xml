@@ -1,0 +1,715 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа3" id="161">
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="162"/>
+			<ChildItems>
+				<UsualGroup name="Группа1" id="9">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИсточникОбновить" id="224">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа источник обновить</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИсточникОбновитьРасширеннаяПодсказка" id="225"/>
+							<ChildItems>
+								<InputField name="ВидОбъектаИсточник" id="1">
+									<DataPath>ВидОбъектаИсточник</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Источник</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="ВидОбъектаИсточникКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="ВидОбъектаИсточникРасширеннаяПодсказка" id="3"/>
+									<Events>
+										<Event name="OnChange">ВидОбъектаИсточникПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Button name="ФормаОбновить" id="182">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.Обновить</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обновить настройки обработки</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="183"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ПриемникиТаблица" id="200">
+							<Representation>List</Representation>
+							<HeightInTableRows>3</HeightInTableRows>
+							<AutoMaxRowsCount>false</AutoMaxRowsCount>
+							<MaxRowsCount>5</MaxRowsCount>
+							<DataPath>Приемники</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Приемники</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>CheckAll</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+								<ExcludedCommand>UncheckAll</ExcludedCommand>
+							</CommandSet>
+							<ContextMenu name="ПриемникиТаблицаКонтекстноеМеню" id="202"/>
+							<AutoCommandBar name="ПриемникиТаблицаКоманднаяПанель" id="201">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ПриемникиТаблицаДобавить" id="216">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.ПриемникиТаблица.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="ПриемникиТаблицаДобавитьРасширеннаяПодсказка" id="217"/>
+									</Button>
+									<Button name="ПриемникиТаблицаИзменить" id="218">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.ПриемникиТаблица.StandardCommand.Change</CommandName>
+										<ExtendedTooltip name="ПриемникиТаблицаИзменитьРасширеннаяПодсказка" id="219"/>
+									</Button>
+									<Button name="ПриемникиТаблицаУдалить" id="220">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.ПриемникиТаблица.StandardCommand.Delete</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ПриемникиТаблицаУдалитьРасширеннаяПодсказка" id="221"/>
+									</Button>
+									<Button name="ПриемникиТаблицаПодбор" id="222">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ПриемникиТаблица.StandardCommand.Pickup</CommandName>
+										<ExtendedTooltip name="ПриемникиТаблицаПодборРасширеннаяПодсказка" id="223"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПриемникиТаблицаРасширеннаяПодсказка" id="203"/>
+							<SearchStringAddition name="ПриемникиТаблицаСтрокаПоиска" id="204">
+								<AdditionSource>
+									<Item>ПриемникиТаблица</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриемникиТаблицаСтрокаПоискаКонтекстноеМеню" id="205"/>
+								<ExtendedTooltip name="ПриемникиТаблицаСтрокаПоискаРасширеннаяПодсказка" id="206"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПриемникиТаблицаСостояниеПросмотра" id="210">
+								<AdditionSource>
+									<Item>ПриемникиТаблица</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриемникиТаблицаСостояниеПросмотраКонтекстноеМеню" id="211"/>
+								<ExtendedTooltip name="ПриемникиТаблицаСостояниеПросмотраРасширеннаяПодсказка" id="212"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПриемникиТаблицаУправлениеПоиском" id="207">
+								<AdditionSource>
+									<Item>ПриемникиТаблица</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриемникиТаблицаУправлениеПоискомКонтекстноеМеню" id="208"/>
+								<ExtendedTooltip name="ПриемникиТаблицаУправлениеПоискомРасширеннаяПодсказка" id="209"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ПриемникиЗначение" id="213">
+									<DataPath>Приемники.Value</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Приемники</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПриемникиЗначениеКонтекстноеМеню" id="214"/>
+									<ExtendedTooltip name="ПриемникиЗначениеРасширеннаяПодсказка" id="215"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="11">
+			<VerticalStretch>true</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="12"/>
+			<ChildItems>
+				<Table name="НастройкиОбработкиИсточника" id="15">
+					<Representation>List</Representation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<HorizontalLines>false</HorizontalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<DataPath>НастройкиОбработкиИсточника</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<ContextMenu name="НастройкиОбработкиИсточникаКонтекстноеМеню" id="16"/>
+					<AutoCommandBar name="НастройкиОбработкиИсточникаКоманднаяПанель" id="21">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="ВидыДействийИсточникаУстановитьФлажки" id="174">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.НастройкиОбработкиИсточника.StandardCommand.CheckAll</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="ВидыДействийИсточникаУстановитьФлажкиРасширеннаяПодсказка" id="175"/>
+							</Button>
+							<Button name="ВидыДействийИсточникаСнятьФлажки" id="176">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.НастройкиОбработкиИсточника.StandardCommand.UncheckAll</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="ВидыДействийИсточникаСнятьФлажкиРасширеннаяПодсказка" id="177"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="НастройкиОбработкиИсточникаРасширеннаяПодсказка" id="22"/>
+					<SearchStringAddition name="НастройкиОбработкиИсточникаСтрокаПоиска" id="23">
+						<AdditionSource>
+							<Item>НастройкиОбработкиИсточника</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиОбработкиИсточникаСтрокаПоискаКонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="НастройкиОбработкиИсточникаСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="НастройкиОбработкиИсточникаСостояниеПросмотра" id="26">
+						<AdditionSource>
+							<Item>НастройкиОбработкиИсточника</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиОбработкиИсточникаСостояниеПросмотраКонтекстноеМеню" id="27"/>
+						<ExtendedTooltip name="НастройкиОбработкиИсточникаСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="НастройкиОбработкиИсточникаУправлениеПоиском" id="29">
+						<AdditionSource>
+							<Item>НастройкиОбработкиИсточника</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиОбработкиИсточникаУправлениеПоискомКонтекстноеМеню" id="30"/>
+						<ExtendedTooltip name="НастройкиОбработкиИсточникаУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ВидыДействийИсточникаВыбор</Event>
+					</Events>
+					<ChildItems>
+						<CheckBoxField name="ВидыДействийИсточникаКопировать" id="93">
+							<DataPath>НастройкиОбработкиИсточника.Check</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.ВнешняяКомпонентаДоступна</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</HeaderPicture>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВидыДействийИсточникаКопироватьКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="ВидыДействийИсточникаКопироватьРасширеннаяПодсказка" id="95"/>
+						</CheckBoxField>
+						<InputField name="НастройкиОбработкиИсточникаПредставление" id="226">
+							<DataPath>НастройкиОбработкиИсточника.Presentation</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки обработки</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НастройкиОбработкиИсточникаПредставлениеКонтекстноеМеню" id="227"/>
+							<ExtendedTooltip name="НастройкиОбработкиИсточникаПредставлениеРасширеннаяПодсказка" id="228"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="ПравилаОбработкиИсточника" id="128">
+					<Representation>Tree</Representation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<HorizontalLines>false</HorizontalLines>
+					<InitialTreeView>ExpandAllLevels</InitialTreeView>
+					<DataPath>ПравилаОбработкиИсточника</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+						<ExcludedCommand>HierarchicalList</ExcludedCommand>
+						<ExcludedCommand>List</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+						<ExcludedCommand>Tree</ExcludedCommand>
+					</CommandSet>
+					<ContextMenu name="ПравилаОбработкиИсточникаКонтекстноеМеню" id="130"/>
+					<AutoCommandBar name="ПравилаОбработкиИсточникаКоманднаяПанель" id="129">
+						<ChildItems>
+							<Button name="ПравилаОбработкиИсточникаОтметитьВсеПравила" id="180">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОтметитьВсеПравила</CommandName>
+								<ExtendedTooltip name="ПравилаОбработкиИсточникаОтметитьВсеПравилаРасширеннаяПодсказка" id="181"/>
+							</Button>
+							<Button name="ПравилаОбработкиИсточникаСнятьВсеОтметкиПравил" id="178">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СнятьВсеОтметкиПравил</CommandName>
+								<ExtendedTooltip name="ПравилаОбработкиИсточникаСнятьВсеОтметкиПравилРасширеннаяПодсказка" id="179"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПравилаОбработкиИсточникаРасширеннаяПодсказка" id="131"/>
+					<SearchStringAddition name="ПравилаОбработкиИсточникаСтрокаПоиска" id="132">
+						<AdditionSource>
+							<Item>ПравилаОбработкиИсточника</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПравилаОбработкиИсточникаСтрокаПоискаКонтекстноеМеню" id="133"/>
+						<ExtendedTooltip name="ПравилаОбработкиИсточникаСтрокаПоискаРасширеннаяПодсказка" id="134"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПравилаОбработкиИсточникаСостояниеПросмотра" id="138">
+						<AdditionSource>
+							<Item>ПравилаОбработкиИсточника</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПравилаОбработкиИсточникаСостояниеПросмотраКонтекстноеМеню" id="139"/>
+						<ExtendedTooltip name="ПравилаОбработкиИсточникаСостояниеПросмотраРасширеннаяПодсказка" id="140"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПравилаОбработкиИсточникаУправлениеПоиском" id="135">
+						<AdditionSource>
+							<Item>ПравилаОбработкиИсточника</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПравилаОбработкиИсточникаУправлениеПоискомКонтекстноеМеню" id="136"/>
+						<ExtendedTooltip name="ПравилаОбработкиИсточникаУправлениеПоискомРасширеннаяПодсказка" id="137"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ПравилаОбработкиИсточникаВыбор</Event>
+					</Events>
+					<ChildItems>
+						<CheckBoxField name="ПравилаОбработкиИсточникаКопировать" id="144">
+							<DataPath>ПравилаОбработкиИсточника.Копировать</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.ВнешняяКомпонентаДоступна</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</HeaderPicture>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПравилаОбработкиИсточникаКопироватьКонтекстноеМеню" id="145"/>
+							<ExtendedTooltip name="ПравилаОбработкиИсточникаКопироватьРасширеннаяПодсказка" id="146"/>
+							<Events>
+								<Event name="OnChange">ПравилаОбработкиИсточникаКопироватьПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ПравилаОбработкиИсточникаПравило" id="141">
+							<DataPath>ПравилаОбработкиИсточника.Правило</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правила обработки</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПравилаОбработкиИсточникаПравилоКонтекстноеМеню" id="142"/>
+							<ExtendedTooltip name="ПравилаОбработкиИсточникаПравилоРасширеннаяПодсказка" id="143"/>
+						</InputField>
+						<InputField name="ПравилаОбработкиИсточникаНовоеПравило" id="171">
+							<DataPath>ПравилаОбработкиИсточника.НовоеПравило</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="ПравилаОбработкиИсточникаНовоеПравилоКонтекстноеМеню" id="172"/>
+							<ExtendedTooltip name="ПравилаОбработкиИсточникаНовоеПравилоРасширеннаяПодсказка" id="173"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа4" id="163">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="164"/>
+			<ChildItems>
+				<Button name="ФормаСкопироватьНастройкиОбработки" id="7">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.СкопироватьНастройкиОбработки</CommandName>
+					<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаСкопироватьНастройкиОбработкиРасширеннаяПодсказка" id="8"/>
+				</Button>
+				<CheckBoxField name="ТолькоКопироватьОбъекты" id="168">
+					<DataPath>НеСоздаватьНовыеОбъекты</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Только обновлять уже ранее скопированные настройки, правила и схемы обработки, настройки действий, тематики, и не создавать никаких новых объектов.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>CheckBox</CheckBoxType>
+					<ContextMenu name="ТолькоКопироватьОбъектыКонтекстноеМеню" id="169"/>
+					<ExtendedTooltip name="ТолькоКопироватьОбъектыРасширеннаяПодсказка" id="170"/>
+				</CheckBoxField>
+				<CheckBoxField name="КопироватьТематики" id="158">
+					<DataPath>КопироватьТематики</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Копировать тематики, используемые в разрезах правил обработки, в приемники, если у них нет тематик, совпадающих по наименованию.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КопироватьТематикиКонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="КопироватьТематикиРасширеннаяПодсказка" id="160"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КопированиеНастроекОбработки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ВидОбъектаИсточник" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид объекта источник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ВидОбъектаСОбработкой</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидОбъектаПриемник" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид объекта приемник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ВидОбъектаСОбработкой</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиОбработкиИсточника" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки обработки источника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.НастройкиОбработкиВидовОбъектов</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="КоличествоДействийИсточника" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество действий источника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПравилаОбработкиИсточника" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила обработки источника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Правило" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правило</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПравилаОбработки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Копировать" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Копировать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЭлементГруппировки" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Элемент группировки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+						<v8:Type>cfg:CatalogRef.ВидыДокументов</v8:Type>
+						<v8:Type>cfg:CatalogRef.ТематикиДокументов</v8:Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НовоеПравило" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Скопированное правило обработки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПравилаОбработки</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Приемники" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приемники</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:TypeSet>cfg:DefinedType.ВидОбъектаСОбработкой</v8:TypeSet>
+			</Settings>
+		</Attribute>
+		<Attribute name="НесколькоПриемников" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Несколько приемников</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КопироватьТематики" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать тематики</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НеСоздаватьНовыеОбъекты" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не создавать новых объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсточникИспользуетТематики" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник использует тематики</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоОбработанных" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество обработанных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Представление" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Количество" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Обновлено" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновлено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СкопироватьНастройкиОбработки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СкопироватьНастройкиОбработки</Action>
+		</Command>
+		<Command name="ОтметитьВсеПравила" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтметитьВсеПравила</Action>
+		</Command>
+		<Command name="СнятьВсеОтметкиПравил" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все отметки</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьВсеОтметкиПравил</Action>
+		</Command>
+		<Command name="Обновить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить настройки обработки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заново прочитать настройки обработки источника и перезаполнить их в таблицах настроек и правил обработки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ВидОбъектаИсточник">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыДокументов</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

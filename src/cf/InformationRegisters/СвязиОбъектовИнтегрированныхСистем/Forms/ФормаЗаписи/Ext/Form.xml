@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="УзелИнтегрированнойСистемы" id="1">
+			<DataPath>Запись.УзелИнтегрированнойСистемы</DataPath>
+			<ContextMenu name="УзелИнтегрированнойСистемыКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="УзелИнтегрированнойСистемыРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="СсылкаНаОбъектДО" id="4">
+			<DataPath>Запись.СсылкаНаОбъектДО</DataPath>
+			<ContextMenu name="СсылкаНаОбъектДОКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="СсылкаНаОбъектДОРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ТипВнешнегоОбъекта" id="7">
+			<DataPath>Запись.ТипВнешнегоОбъекта</DataPath>
+			<ContextMenu name="ТипВнешнегоОбъектаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ТипВнешнегоОбъектаРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ИДВнешнегоОбъекта" id="10">
+			<DataPath>Запись.ИДВнешнегоОбъекта</DataPath>
+			<ContextMenu name="ИДВнешнегоОбъектаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ИДВнешнегоОбъектаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<CheckBoxField name="ЕстьОбратнаяСвязьВУзле" id="13">
+			<DataPath>Запись.ЕстьОбратнаяСвязьВУзле</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЕстьОбратнаяСвязьВУзлеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ЕстьОбратнаяСвязьВУзлеРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<LabelField name="ИдентификаторОтметкиВремени" id="16">
+			<DataPath>Запись.ИдентификаторОтметкиВремени</DataPath>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<ContextMenu name="ИдентификаторОтметкиВремениКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ИдентификаторОтметкиВремениРасширеннаяПодсказка" id="18"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.СвязиОбъектовИнтегрированныхСистем</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

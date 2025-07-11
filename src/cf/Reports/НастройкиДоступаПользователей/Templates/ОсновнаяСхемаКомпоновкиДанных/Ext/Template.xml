@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>РазрешенияПоПолномочиям</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредметДоступа</dataPath>
+			<field>ПредметДоступа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предмет доступа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧтениеБезОграничения</dataPath>
+			<field>ЧтениеБезОграничения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Изменение</dataPath>
+			<field>Изменение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИзменениеБезОграничения</dataPath>
+			<field>ИзменениеБезОграничения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Чтение</dataPath>
+			<field>Чтение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чтение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистрация</dataPath>
+			<field>Регистрация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВложенныйЗапрос.ПредметДоступа,
+	МАКСИМУМ(ВложенныйЗапрос.Чтение) КАК Чтение,
+	МАКСИМУМ(ВложенныйЗапрос.ЧтениеБезОграничения) КАК ЧтениеБезОграничения,
+	МАКСИМУМ(ВложенныйЗапрос.Изменение) КАК Изменение,
+	МАКСИМУМ(ВложенныйЗапрос.ИзменениеБезОграничения) КАК ИзменениеБезОграничения,
+	МАКСИМУМ(ВложенныйЗапрос.Регистрация) КАК Регистрация
+ИЗ
+	(ВЫБРАТЬ
+		ИдентификаторыОбъектовМетаданных.Синоним КАК ПредметДоступа,
+		НЕ ПраваРолей.ОбъектМетаданных ЕСТЬ NULL  КАК Чтение,
+		ПраваРолей.ЧтениеБезОграничения КАК ЧтениеБезОграничения,
+		ПраваРолей.Изменение КАК Изменение,
+		ПраваРолей.ЧтениеБезОграничения
+			И ПраваРолей.ИзменениеБезОграничения КАК ИзменениеБезОграничения,
+		ВЫБОР
+			КОГДА ИдентификаторыОбъектовМетаданных.Ссылка = &amp;ДокументыПредприятия
+				ТОГДА ВЫБОР
+						КОГДА ПраваРолей.Роль = &amp;РольРегистрацияВнутренних
+							ТОГДА 2
+						ИНАЧЕ 1
+					КОНЕЦ
+			ИНАЧЕ 0
+		КОНЕЦ КАК Регистрация
+	ИЗ
+		Справочник.ИдентификаторыОбъектовМетаданных КАК ИдентификаторыОбъектовМетаданных
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПраваРолей КАК ПраваРолей
+			ПО (ПраваРолей.ОбъектМетаданных = ИдентификаторыОбъектовМетаданных.Ссылка)
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ПрофилиГруппДоступа.Роли КАК ПрофилиГруппДоступаРоли
+			ПО (ПрофилиГруппДоступаРоли.Роль = ПраваРолей.Роль)
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПолномочияСотрудников КАК ПолномочияСотрудников
+			ПО (ПолномочияСотрудников.Полномочия = ПрофилиГруппДоступаРоли.Ссылка)
+				И (ПолномочияСотрудников.Владелец В (&amp;ВладелецНастроек, &amp;ВладельцыНаследуемыхНастроек))
+	ГДЕ
+		ИдентификаторыОбъектовМетаданных.Ссылка В(&amp;ПредметыДоступа)) КАК ВложенныйЗапрос
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.ПредметДоступа</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Полномочия</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УнаследованоОт</dataPath>
+			<field>УнаследованоОт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Унаследовано от</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Роль</dataPath>
+			<field>Роль</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Полномочия</dataPath>
+			<field>Полномочия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полномочия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВложенныйЗапрос.Полномочия,
+	ВложенныйЗапрос.Роль,
+	ВложенныйЗапрос.УнаследованоОт
+ИЗ
+	(ВЫБРАТЬ
+		ПрофилиГруппДоступаРоли.Ссылка КАК Полномочия,
+		ПрофилиГруппДоступаРоли.Роль КАК Роль,
+		НЕОПРЕДЕЛЕНО КАК УнаследованоОт
+	ИЗ
+		Справочник.ПрофилиГруппДоступа.Роли КАК ПрофилиГруппДоступаРоли
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПолномочияСотрудников КАК ПолномочияСотрудников
+			ПО (ПолномочияСотрудников.Полномочия = ПрофилиГруппДоступаРоли.Ссылка)
+				И (ПолномочияСотрудников.Владелец = &amp;ВладелецНастроек)
+	ГДЕ
+		НЕ ПрофилиГруппДоступаРоли.Роль.ПометкаУдаления
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ПрофилиГруппДоступаРоли.Ссылка,
+		ПрофилиГруппДоступаРоли.Роль,
+		ПолномочияСотрудников.Владелец
+	ИЗ
+		Справочник.ПрофилиГруппДоступа.Роли КАК ПрофилиГруппДоступаРоли
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПолномочияСотрудников КАК ПолномочияСотрудников
+			ПО (ПолномочияСотрудников.Полномочия = ПрофилиГруппДоступаРоли.Ссылка)
+				И (ПолномочияСотрудников.Владелец В (&amp;ВладельцыНаследуемыхНастроек))
+				И (ПолномочияСотрудников.Владелец &lt;&gt; &amp;ВладелецНастроек)
+	ГДЕ
+		НЕ ПрофилиГруппДоступаРоли.Роль.ПометкаУдаления) КАК ВложенныйЗапрос</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ЛокальныеАдминистраторы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоллекцияЗначенийДоступаЛА</dataPath>
+			<field>КоллекцияЗначенийДоступаЛА</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коллекция значений доступа</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредметДоступаЛА</dataPath>
+			<field>ПредметДоступаЛА</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предмет доступа</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеДоступаСсылкаЛА</dataPath>
+			<field>ЗначениеДоступаСсылкаЛА</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение доступа ссылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтГруппыЛА</dataPath>
+			<field>ОтГруппыЛА</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>От группы</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеДоступаЛА</dataPath>
+			<field>ЗначениеДоступаЛА</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение доступа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УровеньДоступаЛА</dataPath>
+			<field>УровеньДоступаЛА</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уровень доступа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	РазрешенияДляЛокальныхАдминистраторов.Предмет КАК ПредметДоступаЛА,
+	РазрешенияДляЛокальныхАдминистраторов.КоллекцияЗначенийДоступа КАК КоллекцияЗначенийДоступаЛА,
+	КоллекцииЗначенийДоступаЗначенияДоступа.Значение КАК ЗначениеДоступаСсылкаЛА,
+	ВЫБОР
+		КОГДА КоллекцииЗначенийДоступаЗначенияДоступа.Значение ССЫЛКА ПланВидовХарактеристик.ВидыДоступа
+			ТОГДА &amp;ВсеЗначенияДоступа
+		ИНАЧЕ КоллекцииЗначенийДоступаЗначенияДоступа.Значение
+	КОНЕЦ КАК ЗначениеДоступаЛА,
+	РазрешенияДляЛокальныхАдминистраторов.УровеньДоступа КАК УровеньДоступаЛА,
+	НЕОПРЕДЕЛЕНО КАК ОтГруппыЛА
+ИЗ
+	РегистрСведений.РазрешенияДляЛокальныхАдминистраторов КАК РазрешенияДляЛокальныхАдминистраторов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.КоллекцииЗначенийДоступа.ЗначенияДоступа КАК КоллекцииЗначенийДоступаЗначенияДоступа
+		ПО РазрешенияДляЛокальныхАдминистраторов.КоллекцияЗначенийДоступа = КоллекцииЗначенийДоступаЗначенияДоступа.Ссылка
+ГДЕ
+	РазрешенияДляЛокальныхАдминистраторов.Пользователь = &amp;ВладелецНастроек
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РазрешенияДляЛокальныхАдминистраторов.Предмет,
+	РазрешенияДляЛокальныхАдминистраторов.КоллекцияЗначенийДоступа,
+	КоллекцииЗначенийДоступаЗначенияДоступа.Значение,
+	ВЫБОР
+		КОГДА КоллекцииЗначенийДоступаЗначенияДоступа.Значение ССЫЛКА ПланВидовХарактеристик.ВидыДоступа
+			ТОГДА &amp;ВсеЗначенияДоступа
+		ИНАЧЕ КоллекцииЗначенийДоступаЗначенияДоступа.Значение
+	КОНЕЦ,
+	РазрешенияДляЛокальныхАдминистраторов.УровеньДоступа,
+	РазрешенияДляЛокальныхАдминистраторов.Пользователь
+ИЗ
+	РегистрСведений.РазрешенияДляЛокальныхАдминистраторов КАК РазрешенияДляЛокальныхАдминистраторов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.КоллекцииЗначенийДоступа.ЗначенияДоступа КАК КоллекцииЗначенийДоступаЗначенияДоступа
+		ПО РазрешенияДляЛокальныхАдминистраторов.КоллекцияЗначенийДоступа = КоллекцииЗначенийДоступаЗначенияДоступа.Ссылка
+ГДЕ
+	РазрешенияДляЛокальныхАдминистраторов.Пользователь В(&amp;ВладельцыНаследуемыхНастроек)</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetObject">
+		<name>ИспользованиеРазрезовДоступа</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазрезДоступаИсп</dataPath>
+			<field>РазрезДоступаИсп</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрез доступа</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:ChartOfCharacteristicTypesRef.ВидыДоступа</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазрезИспользуется</dataPath>
+			<field>РазрезИспользуется</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<objectName>ТаблицаРазрезовДоступа</objectName>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Редактирование</dataPath>
+		<expression>ВЫБОР
+	КОГДА ИзменениеБезОграничения
+		ТОГДА &amp;БезОграничений
+	КОГДА Изменение
+		ТОГДА &amp;Да
+	ИНАЧЕ &amp;Нет
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Редактирование</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Чтение</dataPath>
+		<expression>ВЫБОР
+	КОГДА ЧтениеБезОграничения
+		ТОГДА &amp;БезОграничений
+	КОГДА Чтение
+		ТОГДА &amp;Да
+	ИНАЧЕ &amp;Нет
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Чтение</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>НомерКоллекции</dataPath>
+		<expression>НомерПоПорядкуВГруппировке()</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>№ настройки</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ЗаголовокОтчета</dataPath>
+		<expression>""</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Заголовок отчета</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Регистрация</dataPath>
+		<expression>Выбор Когда Регистрация = 0 Тогда "" Когда Регистрация = 1 Тогда "Нет" Иначе "Да" Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Регистрация</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ВидДоступаЛА</dataPath>
+		<expression>НастройкиДоступа.НаименованиеРазрезаДоступаПоЗначению(ЗначениеДоступаСсылкаЛА)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Разрез доступа</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>ВладелецНастроек</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Владелец настроек</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:TypeId>01867f76-0c4c-4340-89fb-4b28d9a21f24</v8:TypeId>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВсеЗначенияДоступа</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Все значения доступа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>10</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">&lt;Все&gt;</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПредметыДоступа</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Предметы доступа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ВладельцыНаследуемыхНастроек</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Владельцы наследуемых настроек</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>НастройкиДоступа.ВладельцыНаследуемыхРазрешенийДоступа(&amp;ВладелецНастроек)</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Да</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Да</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Да</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Нет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Нет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Нет</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>БезОграничений</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Без ограничений</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Без ограничений</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДокументыПредприятия</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Документы предприятия</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>РольРегистрацияВнутренних</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Роль регистрация внутренних</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>НастройкиДоступаПользователей</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Настройки доступа пользователей</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВладелецНастроек</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>82e4c3b6-8d84-4df9-a743-de45fd64df2c</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВсеЗначенияДоступа</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>ee813bcf-91e7-4045-b50d-098c27b3bf70</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПредметыДоступа</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДокументыПредприятия</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РольРегистрацияВнутренних</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ВидДоступа</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ЗначениеДоступа</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ОтГруппы</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Основной</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ПредметДоступа</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПредметДоступа</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Чтение</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Редактирование</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Регистрация</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:row>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Доступ по полномочиям</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПредметДоступаЛА</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>УровеньДоступаЛА</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>КоллекцияЗначенийДоступаЛА</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ОтГруппыЛА</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ОтГруппыЛА</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:item>
+								<dcsset:groupItems>
+									<dcsset:item xsi:type="dcsset:GroupItemField">
+										<dcsset:field>ВидДоступаЛА</dcsset:field>
+										<dcsset:groupType>Hierarchy</dcsset:groupType>
+										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+										<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+									</dcsset:item>
+								</dcsset:groupItems>
+								<dcsset:order>
+									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+								</dcsset:order>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								</dcsset:selection>
+								<dcsset:item>
+									<dcsset:order>
+										<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+									</dcsset:order>
+									<dcsset:selection>
+										<dcsset:item xsi:type="dcsset:SelectedItemField">
+											<dcsset:field>ЗначениеДоступаЛА</dcsset:field>
+										</dcsset:item>
+									</dcsset:selection>
+								</dcsset:item>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Локальное администрирование</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>РазрезДоступаИсп</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>РазрезИспользуется</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:row>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Использование разрезов доступа</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Полномочия</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>УнаследованоОт</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Полномочия</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>УнаследованоОт</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Роль</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Полномочия</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>УнаследованоОт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Роль</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список полномочий и ролей</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,2560 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.18">
+	<setForNewObjects>false</setForNewObjects>
+	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<independentRightsOfChildObjects>true</independentRightsOfChildObjects>
+	<object>
+		<name>CommonForm.ПрерываниеПроцесса</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДокументыПредприятия</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.Дата</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.ПереносыСроковИсполненияЗадач</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ТекстыВерсийФайлов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Версия.Владелец.ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ Версия.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.TabularSection.РезультатыСогласования.Attribute.ЗадачаИсполнителя</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПереносыСроковВыполненияПроцессовИЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ДокументооборотИспользоватьОграниченияПравДоступа #Тогда
+ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица
+	
+	ГДЕ ТекущаяТаблица.Предмет Ссылка Задача.ЗадачаИсполнителя
+	И ИСТИНА В
+	(
+	ВЫБРАТЬ ПЕРВЫЕ 1 ИСТИНА
+	
+	ИЗ Задача.ЗадачаИсполнителя КАК ЗадачаИсполнителя
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.УчастникиПроцессов КАК УчастникиПроцессов
+	ПО ЗадачаИсполнителя.БизнесПроцесс = УчастникиПроцессов.Процесс
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СоставСубъектовПравДоступа КАК СоставСубъектов
+    ПО УчастникиПроцессов.Участник = СоставСубъектов.Субъект
+    
+    ГДЕ
+    ЗадачаИсполнителя.Ссылка = ТекущаяТаблица.Предмет
+    И СоставСубъектов.Сотрудник В (&amp;СотрудникиПользователя)
+    И СоставСубъектов.ИмяОбластиДелегирования В ("", "Задачи", "ЗадачиПросмотр")
+	)
+	
+	ИЛИ
+	
+	НЕ ТекущаяТаблица.Предмет Ссылка Задача.ЗадачаИсполнителя
+	И ИСТИНА В
+	(
+	ВЫБРАТЬ ПЕРВЫЕ 1 ИСТИНА
+	
+	ИЗ РегистрСведений.УчастникиПроцессов КАК УчастникиПроцессов
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СоставСубъектовПравДоступа КАК СоставСубъектов
+    ПО УчастникиПроцессов.Участник = СоставСубъектов.Субъект
+	
+    ГДЕ
+    УчастникиПроцессов.Процесс = ТекущаяТаблица.Предмет
+    И СоставСубъектов.Сотрудник В (&amp;СотрудникиПользователя)
+    И СоставСубъектов.ИмяОбластиДелегирования В ("", "Задачи", "ЗадачиПросмотр")
+	)
+	
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ДокументооборотИспользоватьОграниченияПравДоступа #Тогда
+ПереносыСроковВыполненияПроцессовИЗадач ИЗ РегистрСведений.ПереносыСроковВыполненияПроцессовИЗадач КАК ПереносыСроковВыполненияПроцессовИЗадач
+	
+    ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДанныеБизнесПроцессов КАК ДанныеБизнесПроцессов_Процесс
+       	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СоставСубъектовПравДоступа КАК СоставСубъектов_Процесс
+		ПО ДанныеБизнесПроцессов_Процесс.Автор = СоставСубъектов_Процесс.Субъект
+	 	И СоставСубъектов_Процесс.Сотрудник В (&amp;СотрудникиПользователя)
+    ПО ПереносыСроковВыполненияПроцессовИЗадач.Предмет = ДанныеБизнесПроцессов_Процесс.БизнесПроцесс
+	
+	ЛЕВОЕ СОЕДИНЕНИЕ Задача.ЗадачаИсполнителя КАК ЗадачаИсполнителя
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДанныеБизнесПроцессов КАК ДанныеБизнесПроцессов_Задача
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СоставСубъектовПравДоступа КАК СоставСубъектов_Задача
+			ПО ДанныеБизнесПроцессов_Задача.Автор = СоставСубъектов_Задача.Субъект
+			И СоставСубъектов_Задача.Сотрудник В (&amp;СотрудникиПользователя)
+		ПО ЗадачаИсполнителя.БизнесПроцесс = ДанныеБизнесПроцессов_Задача.БизнесПроцесс
+	ПО ПереносыСроковВыполненияПроцессовИЗадач.Предмет = ЗадачаИсполнителя.Ссылка
+	
+ГДЕ
+	ЕСТЬNULL(ЗадачаИсполнителя.Ссылка, ЕСТЬNULL(ДанныеБизнесПроцессов_Процесс.БизнесПроцесс, НЕОПРЕДЕЛЕНО)) &lt;&gt; НЕОПРЕДЕЛЕНО
+	
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДействиеЗадачи</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistorySettings</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.Автор</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.Attribute.Наименование</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.Attribute.ДатаЗавершения</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.Attribute.Описание</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ПолныеРоли</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.Важность</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.Attribute.Важность</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Приглашение</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Start</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveStart</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.РолиИсполнителей</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.Проект</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.Attribute.ДатаЗавершения</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДоступностьШаблоновПроцессов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.ГлавнаяЗадача</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.Attribute.Автор</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Регистрация</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Start</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveStart</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Task.ЗадачаИсполнителя</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Execute</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveExecute</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Start</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveStart</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.StandardAttribute.Started</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.StandardAttribute.HeadTask</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.StandardAttribute.Completed</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.Состояние</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.TabularSection.Исполнители</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДокументыПредприятия.Attribute.ДатаРегистрации</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.TabularSection.Исполнители.Attribute.Пройден</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.ПроектнаяЗадача</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.ДатаЗавершения</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Start</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveStart</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.StandardAttribute.Started</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.StandardAttribute.HeadTask</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.StandardAttribute.Completed</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.Attribute.Описание</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.Наименование</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ТекстыФайлов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Файл.ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ Файл.ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ Файл.ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДокументыПредприятия.Attribute.РегистрационныйНомер</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.Attribute.Автор</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.Attribute.Наименование</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.Attribute.Описание</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Start</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveStart</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.StandardAttribute.Started</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.StandardAttribute.HeadTask</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.StandardAttribute.Completed</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ТаймлистФайлыВОбработке</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.Стартован</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.Attribute.ДатаЗавершения</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.TabularSection.РезультатыСогласования.Attribute.РезультатСогласования</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.Attribute.ВариантСогласования</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.Attribute.Наименование</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Dimension.БизнесПроцесс</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.ПометкаУдаления</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.ТрудозатратыПлан</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ТаймлистДанныеРаботыСервиса</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ ВерсияФайла.Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияОзнакомления</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ИсторияЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.Attribute.Наименование</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияИсполнения</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.Attribute.Описание</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.TabularSection.Исполнители.Attribute.Ответственный</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.Attribute.ДатаНачала</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РеестрЗадачПоИсполнителям</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.Attribute.Резолюция</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Подписание</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Start</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveStart</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.StandardAttribute.Active</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.StandardAttribute.LineNumber</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.StandardAttribute.Recorder</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.StandardAttribute.Period</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.СрокИсполнения</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.Attribute.Важность</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.Attribute.Важность</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonForm.ЗапретВыполнения</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.Attribute.ДатаНачала</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.Attribute.Важность</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.НастройкиВариантовОтчетовДокументооборот</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.Attribute.Важность</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Configuration.ДокументооборотКОРП</name>
+		<right>
+			<name>MainWindowModeNormal</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeEmbeddedWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeFullscreenWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeKiosk</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>AnalyticsSystemClient</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.TabularSection.РезультатыСогласования</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.ОбъектДоступа</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Ознакомление.Attribute.Автор</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.Attribute.Описание</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.Attribute.Наименование</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ПараметрыСхемДляКомплексныхПроцессов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияПодписания</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.Attribute.ДатаЗавершения</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.Command.ЛистСогласования</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.Attribute.ДатаНачала</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ОбработкиОбъектов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.Attribute.РезультатУтверждения</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.РешениеВопросовВыполненияЗадач</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Start</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveStart</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КатегорииОтчетов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияУтверждения</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Рассмотрение.Attribute.ДатаНачала</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияСогласования</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Задача</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistorySettings</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.Attribute.ДатаЗавершения</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.ВедущаяЗадача</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДействияРегистрации</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.РеестрЗадачПоАвторам</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.TabularSection.Исполнители.Attribute.Описание</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Start</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveStart</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.StandardAttribute.Started</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.StandardAttribute.HeadTask</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.StandardAttribute.Completed</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.КомплексныйПроцесс</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Start</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveStart</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.TabularSection.Исполнители</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Исполнение.Attribute.Автор</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УдалитьСкриптыСхемКомплексныхПроцессов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Файлы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ДанныеБизнесПроцессов.Resource.Номер</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Утверждение.Attribute.ДатаНачала</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ВерсииФайлов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Владелец.ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ Владелец.ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Владелец.ВладелецФайла ССЫЛКА Документ.ДействиеЗадачи
+ИЛИ Владелец.ВладелецФайла ССЫЛКА Документ.Задача 
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Исполнение
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.КомплексныйПроцесс
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Ознакомление
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Подписание
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Приглашение
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Рассмотрение
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Регистрация
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Согласование
+ИЛИ Владелец.ВладелецФайла ССЫЛКА БизнесПроцесс.Утверждение</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveActivate</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Start</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveStart</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.StandardAttribute.Started</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.StandardAttribute.HeadTask</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.StandardAttribute.Completed</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.Attribute.Автор</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>BusinessProcess.Согласование.TabularSection.Исполнители</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<restrictionTemplate>
+		<name>ПоДескрипторуОбъекта</name>
+		<condition>// Параметр(1) - отбор по полям Изменение, Добавление:
+//	по умолчанию нет условий, проверяется право чтения
+//  "Изменение" - условие Изменение = ИСТИНА
+//	"ИзменениеИлиДобавление" - условие (Изменение = ИСТИНА ИЛИ Добавление = ИСТИНА)
+//
+// Параметр(2) - имя поля, указывающее на объект, чьи права будут проанализированы
+//	по умолчанию "Ссылка"
+// 
+// Параметр(3) - дополнительные условия:
+//  "БезРуководителейИДелегатов" - не включать руководителей и делегатов в права
+//  "БезРуководителей" - не включать руководителей в права
+//  "БезДелегатов" - не включать делегатов в права
+// 
+// Параметр(4) - оставлять пустым (зарезервирован, не используется)
+// 
+// Примеры использования шаблона:
+//	#ПоДескрипторуОбъекта("", "")
+//	#ПоДескрипторуОбъекта("Изменение", "")
+//	#ПоДескрипторуОбъекта("", "Документ")
+//	#ПоДескрипторуОбъекта("ИзменениеИлиДобавление", "Мероприятие")
+//	#ПоДескрипторуОбъекта("ИзменениеИлиДобавление", "Мероприятие", "БезРуководителейИДелегатов")
+
+#Если &amp;ДокументооборотИспользоватьОграниченияПравДоступа #Тогда
+	
+	ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДескрипторыДляОбъектов КАК ДескрипторыДляОбъектов
+	#Если "#Параметр(2)" = "" #Тогда
+		ПО ТекущаяТаблица.Ссылка = ДескрипторыДляОбъектов.Объект
+	#Иначе
+		ПО ТекущаяТаблица.#Параметр(2) = ДескрипторыДляОбъектов.Объект
+	#КонецЕсли
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПраваПоДескрипторамДоступаОбъектов КАК ПраваПоДескрипторамДоступаОбъектов
+	ПО ДескрипторыДляОбъектов.Дескриптор = ПраваПоДескрипторамДоступаОбъектов.Дескриптор
+	
+	ГДЕ ПраваПоДескрипторамДоступаОбъектов.Сотрудник В (&amp;СотрудникиПользователя)
+	
+	#Если "#Параметр(1)" = "Изменение" #Тогда
+		И ПраваПоДескрипторамДоступаОбъектов.Изменение
+	#ИначеЕсли "#Параметр(1)" = "ИзменениеИлиДобавление" #Тогда
+		И (ПраваПоДескрипторамДоступаОбъектов.Изменение
+			ИЛИ ПраваПоДескрипторамДоступаОбъектов.Добавление)
+	#КонецЕсли
+	
+	#Если "#Параметр(3)" = "БезРуководителейИДелегатов" #Тогда
+		И ПраваПоДескрипторамДоступаОбъектов.ОбъектОснование = НЕОПРЕДЕЛЕНО
+	#КонецЕсли
+	
+#КонецЕсли
+
+#Если "#Параметр(4)" = "" #Тогда
+#КонецЕсли
+</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>ПоДескрипторуРегистра</name>
+		<condition>// Параметр(1) - отбор по полям Изменение, Добавление:
+//	по умолчанию нет условий, проверяется право чтения
+//  "Изменение" - условие Изменение = ИСТИНА
+//	"ИзменениеИлиДобавление" - условие (Изменение = ИСТИНА ИЛИ Добавление = ИСТИНА)
+//
+// Параметр(2) - имя поля - объекта доступа №1
+// Параметр(3) - имя поля - объекта доступа №2
+// Параметр(4) - имя поля - объекта доступа №3
+//
+// Параметр(5) - дополнительные условия:
+//  "БезРуководителейИДелегатов" - не включать руководителей и делегатов в права
+//  "БезРуководителей" - не включать руководителей в права
+//  "БезДелегатов" - не включать делегатов в права
+// 
+// Параметр(6) - оставлять пустым (зарезервирован, не используется)
+// 
+// Примеры использования шаблона:
+//	#ПоДескрипторуРегистра("Изменение", "Сотрудник", "", "", "")
+//	#ПоДескрипторуРегистра("", "Сотрудник", "Подразделение", "Организация", "")
+//	#ПоДескрипторуРегистра("", "Сотрудник", "Подразделение", "Организация", "БезРуководителейИДелегатов")
+
+#Если &amp;ДокументооборотИспользоватьОграниченияПравДоступа #Тогда
+
+	
+	ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ДескрипторыДоступаРегистров КАК ДескрипторыДоступаРегистров
+	ПО ДескрипторыДоступаРегистров.Регистр = #ИмяТекущейТаблицы
+	И ТекущаяТаблица.#Параметр(2) = ДескрипторыДоступаРегистров.ОбъектДоступа1
+	#Если "#Параметр(3)" &lt;&gt; "" #Тогда
+		И ТекущаяТаблица.#Параметр(3) = ДескрипторыДоступаРегистров.ОбъектДоступа2
+	#КонецЕсли
+	#Если "#Параметр(4)" &lt;&gt; "" #Тогда
+		И ТекущаяТаблица.#Параметр(4) = ДескрипторыДоступаРегистров.ОбъектДоступа3
+	#КонецЕсли
+
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПраваПоДескрипторамДоступаРегистров КАК ПраваПоДескрипторамДоступаРегистров
+	ПО ДескрипторыДоступаРегистров.Ссылка = ПраваПоДескрипторамДоступаРегистров.Дескриптор
+	
+	ГДЕ ПраваПоДескрипторамДоступаРегистров.Сотрудник В (&amp;СотрудникиПользователя)
+	
+	#Если "#Параметр(1)" = "Изменение" #Тогда
+		И ПраваПоДескрипторамДоступаРегистров.Изменение = ИСТИНА
+	#ИначеЕсли "#Параметр(1)" = "ИзменениеИлиДобавление" #Тогда
+		И (ПраваПоДескрипторамДоступаРегистров.Изменение = ИСТИНА ИЛИ ПраваПоДескрипторамДоступаРегистров.Добавление = ИСТИНА)
+	#КонецЕсли
+	
+	#Если "#Параметр(5)" = "БезРуководителейИДелегатов" #Тогда
+		И ПраваПоДескрипторамДоступаРегистров.ОбъектОснование = НЕОПРЕДЕЛЕНО
+	#КонецЕсли
+	
+#КонецЕсли
+
+#Если "#Параметр(6)" = "" #Тогда
+#КонецЕсли
+</condition>
+	</restrictionTemplate>
+</Rights>

@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаГотово" id="3">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<Width>12</Width>
+				<CommandName>Form.Command.Готово</CommandName>
+				<TextColor>style:ОтметкаПоложительногоВыполненияЗадачи</TextColor>
+				<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+				<ExtendedTooltip name="ФормаГотовоРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ФормаОтмена" id="5">
+				<Type>CommandBarButton</Type>
+				<Width>12</Width>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<TextColor>style:ОтметкаОтрицательногоВыполненияЗадачи</TextColor>
+				<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отмена</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="6"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСрокПоУмолчанию" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа срок по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа срок по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСрокПоУмолчаниюРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<InputField name="СрокПоУмолчанию" id="7">
+					<DataPath>СрокПоУмолчанию</DataPath>
+					<ClearButton>true</ClearButton>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="СрокПоУмолчаниюКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="СрокПоУмолчаниюРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<LabelDecoration name="ЕдиницаИзмеренияСрокПоУмолчанию" id="12">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>дней</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЕдиницаИзмеренияСрокПоУмолчаниюКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ЕдиницаИзмеренияСрокПоУмолчаниюРасширеннаяПодсказка" id="14"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ФлагПоУмолчанию" id="21">
+			<DataPath>ФлагПоУмолчанию</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<ContextMenu name="ФлагПоУмолчаниюКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ФлагПоУмолчаниюРасширеннаяПодсказка" id="23"/>
+		</InputField>
+		<InputField name="ОтображениеКарточкиЗадачи" id="33">
+			<DataPath>ОтображениеКарточкиЗадачи</DataPath>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Справа</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ВариантыОтображенияОбластиЧтения.EnumValue.Справа</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Не отображать</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ВариантыОтображенияОбластиЧтения.EnumValue.НеОтображать</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ОтображениеКарточкиЗадачиКонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="ОтображениеКарточкиЗадачиРасширеннаяПодсказка" id="35"/>
+		</InputField>
+		<CheckBoxField name="ДобавлятьРаботуВЕжедневныйОтчетПриВыполненииЗадачи" id="24">
+			<DataPath>ДобавлятьРаботуВЕжедневныйОтчетПриВыполненииЗадачи</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ДобавлятьРаботуВЕжедневныйОтчетПриВыполненииЗадачиКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="ДобавлятьРаботуВЕжедневныйОтчетПриВыполненииЗадачиРасширеннаяПодсказка" id="26"/>
+		</CheckBoxField>
+		<UsualGroup name="МК_НижнийБлок" id="39">
+			<Visible>false</Visible>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:МК_ЦветФонаГруппы</BackColor>
+			<ExtendedTooltip name="МК_НижнийБлокРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<PictureDecoration name="МК_ДекорацияОтступ" id="41">
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<BorderColor>style:МК_ЦветФонаГруппы</BorderColor>
+					<ContextMenu name="МК_ДекорацияОтступКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="МК_ДекорацияОтступРасширеннаяПодсказка" id="43"/>
+				</PictureDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СрокПоУмолчанию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФлагПоУмолчанию" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Флаг по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ФлагиОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДобавлятьРаботуВЕжедневныйОтчетПриВыполненииЗадачи" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавлять работу в ежедневный отчет при выполнении задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтображениеКарточкиЗадачи" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображение карточки задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВариантыОтображенияОбластиЧтения</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИспользоватьНовыйИнтерфейсТрекераЗадач" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать новый интерфейс трекера задач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоМобильныйКлиент" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это мобильный клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Готово" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Готово</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
