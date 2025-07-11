@@ -238,6 +238,11 @@
 							</Title>
 							<ExtendedTooltip name="ПечатьИтоговойЗаписиРасширеннаяПодсказка" id="140"/>
 						</Button>
+						<Button name="ПечатьСводнаяНоменклатураДел" id="141">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ПечатьСводнаяНоменклатураДел</CommandName>
+							<ExtendedTooltip name="ПечатьСводнаяНоменклатураДелРасширеннаяПодсказка" id="142"/>
+						</Button>
 					</ChildItems>
 				</Popup>
 				<Button name="ЗаполнитьРазделы" id="53">
@@ -521,6 +526,23 @@
 		</UsualGroup>
 	</ChildItems>
 	<Attributes/>
+	<Commands>
+		<Command name="ПечатьСводнаяНоменклатураДел" id="1000000">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сводная номенклатура дел</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать сводная номенклатура дел</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ЦППК_ПечатьСводнаяНоменклатураДелПосле</Action>
+		</Command>
+	</Commands>
 	<BaseForm version="2.18">
 		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">

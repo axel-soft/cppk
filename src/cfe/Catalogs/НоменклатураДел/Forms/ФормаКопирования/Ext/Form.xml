@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Width>70</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаПараметры" id="39">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПараметрыExtendedTooltip" id="40"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаГод" id="14">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа год</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаГодExtendedTooltip" id="41"/>
+					<ChildItems>
+						<InputField name="КопироватьИзГод" id="26">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Копировать из</v8:content>
+								</v8:item>
+							</Title>
+							<SpinButton>true</SpinButton>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧГ=</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="КопироватьИзГодКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="КопироватьИзГодExtendedTooltip" id="42"/>
+						</InputField>
+						<InputField name="КопироватьВГод" id="12">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>в</v8:content>
+								</v8:item>
+							</Title>
+							<SpinButton>true</SpinButton>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧГ=</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="КопироватьВГодКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="КопироватьВГодExtendedTooltip" id="43"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияВГод" id="30">
+							<SkipOnInput>false</SkipOnInput>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>(год)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияВГодКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ДекорацияВГодExtendedTooltip" id="44"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОрганизация" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа организация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа организация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОрганизацияExtendedTooltip" id="45"/>
+					<ChildItems>
+						<InputField name="ИзОрганизации" id="34">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>из организации</v8:content>
+								</v8:item>
+							</Title>
+							<Width>30</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ИзОрганизацииКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ИзОрганизацииExtendedTooltip" id="46"/>
+						</InputField>
+						<InputField name="ВОрганизацию" id="37">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>в организацию</v8:content>
+								</v8:item>
+							</Title>
+							<Width>30</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ВОрганизациюКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ВОрганизациюExtendedTooltip" id="47"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКоманды" id="70">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="71"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация" id="17">
+					<Width>50</Width>
+					<SkipOnInput>false</SkipOnInput>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отметьте позиции номенклатуры дел, которые должны быть скопированы:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ДекорацияExtendedTooltip" id="48"/>
+				</LabelDecoration>
+				<CommandBar name="ДеревоГруппаКнопок" id="68">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дерево группа кнопок</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дерево группа кнопок</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ДеревоГруппаКнопокРасширеннаяПодсказка" id="69"/>
+					<ChildItems>
+						<Button name="Отметить" id="23">
+							<Type>CommandBarButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ОтметитьExtendedTooltip" id="49"/>
+						</Button>
+						<Button name="СнятьОтметку" id="24">
+							<Type>CommandBarButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="СнятьОтметкуExtendedTooltip" id="50"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Дерево" id="1">
+			<Representation>Tree</Representation>
+			<SkipOnInput>false</SkipOnInput>
+			<DefaultItem>true</DefaultItem>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="ДеревоКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ДеревоКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ДеревоExtendedTooltip" id="51"/>
+			<SearchStringAddition name="ДеревоСтрокаПоиска" id="59">
+				<AdditionSource>
+					<Item>Дерево</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоСтрокаПоискаКонтекстноеМеню" id="60"/>
+				<ExtendedTooltip name="ДеревоСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоСостояниеПросмотра" id="62">
+				<AdditionSource>
+					<Item>Дерево</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоСостояниеПросмотраКонтекстноеМеню" id="63"/>
+				<ExtendedTooltip name="ДеревоСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоУправлениеПоиском" id="65">
+				<AdditionSource>
+					<Item>Дерево</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоУправлениеПоискомКонтекстноеМеню" id="66"/>
+				<ExtendedTooltip name="ДеревоУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="Пометка" id="6">
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderPicture>
+						<xr:Ref>StdPicture.CheckAll</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПометкаКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ПометкаExtendedTooltip" id="52"/>
+				</CheckBoxField>
+				<InputField name="Индекс" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс дела</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>10</Width>
+					<ContextMenu name="ИндексКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ИндексExtendedTooltip" id="53"/>
+				</InputField>
+				<InputField name="Наименование" id="10">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заголовок дела</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>30</Width>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="54"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<CommandBar name="ГруппаКоманднаяПанель" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="55"/>
+			<ChildItems>
+				<Button name="Скопировать" id="20">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="СкопироватьExtendedTooltip" id="56"/>
+				</Button>
+				<Button name="Закрыть" id="25">
+					<Type>CommandBarButton</Type>
+					<Representation>Text</Representation>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ЗакрытьExtendedTooltip" id="57"/>
+				</Button>
+				<Button name="Справка" id="22">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="СправкаExtendedTooltip" id="58"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.18">
+		<Width>70</Width>
+		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+		<CommandBarLocation>None</CommandBarLocation>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+		<ChildItems>
+			<UsualGroup name="ГруппаПараметры" id="39">
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа параметры</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>NormalSeparation</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаПараметрыExtendedTooltip" id="40"/>
+				<ChildItems>
+					<UsualGroup name="ГруппаГод" id="14">
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа год</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>Horizontal</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаГодExtendedTooltip" id="41"/>
+						<ChildItems>
+							<InputField name="КопироватьИзГод" id="26">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Копировать из</v8:content>
+									</v8:item>
+								</Title>
+								<SpinButton>true</SpinButton>
+								<EditFormat>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧГ=</v8:content>
+									</v8:item>
+								</EditFormat>
+								<ContextMenu name="КопироватьИзГодКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="КопироватьИзГодExtendedTooltip" id="42"/>
+							</InputField>
+							<InputField name="КопироватьВГод" id="12">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>в</v8:content>
+									</v8:item>
+								</Title>
+								<SpinButton>true</SpinButton>
+								<EditFormat>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧГ=</v8:content>
+									</v8:item>
+								</EditFormat>
+								<ContextMenu name="КопироватьВГодКонтекстноеМеню" id="13"/>
+								<ExtendedTooltip name="КопироватьВГодExtendedTooltip" id="43"/>
+							</InputField>
+							<LabelDecoration name="ДекорацияВГод" id="30">
+								<SkipOnInput>false</SkipOnInput>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>(год)</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="ДекорацияВГодКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="ДекорацияВГодExtendedTooltip" id="44"/>
+							</LabelDecoration>
+						</ChildItems>
+					</UsualGroup>
+					<UsualGroup name="ГруппаОрганизация" id="36">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа организация</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа организация</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>Vertical</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаОрганизацияExtendedTooltip" id="45"/>
+						<ChildItems>
+							<InputField name="ИзОрганизации" id="34">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>из организации</v8:content>
+									</v8:item>
+								</Title>
+								<Width>30</Width>
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<HorizontalStretch>false</HorizontalStretch>
+								<AutoMarkIncomplete>true</AutoMarkIncomplete>
+								<ContextMenu name="ИзОрганизацииКонтекстноеМеню" id="35"/>
+								<ExtendedTooltip name="ИзОрганизацииExtendedTooltip" id="46"/>
+							</InputField>
+							<InputField name="ВОрганизацию" id="37">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>в организацию</v8:content>
+									</v8:item>
+								</Title>
+								<Width>30</Width>
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<HorizontalStretch>false</HorizontalStretch>
+								<AutoMarkIncomplete>true</AutoMarkIncomplete>
+								<ContextMenu name="ВОрганизациюКонтекстноеМеню" id="38"/>
+								<ExtendedTooltip name="ВОрганизациюExtendedTooltip" id="47"/>
+							</InputField>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаКоманды" id="70">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа команды</v8:content>
+					</v8:item>
+				</Title>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="71"/>
+				<ChildItems>
+					<LabelDecoration name="Декорация" id="17">
+						<Width>50</Width>
+						<SkipOnInput>false</SkipOnInput>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отметьте позиции номенклатуры дел, которые должны быть скопированы:</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ДекорацияКонтекстноеМеню" id="18"/>
+						<ExtendedTooltip name="ДекорацияExtendedTooltip" id="48"/>
+					</LabelDecoration>
+					<CommandBar name="ДеревоГруппаКнопок" id="68">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дерево группа кнопок</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дерево группа кнопок</v8:content>
+							</v8:item>
+						</ToolTip>
+						<HorizontalLocation>Right</HorizontalLocation>
+						<ExtendedTooltip name="ДеревоГруппаКнопокРасширеннаяПодсказка" id="69"/>
+						<ChildItems>
+							<Button name="Отметить" id="23">
+								<Type>CommandBarButton</Type>
+								<SkipOnInput>false</SkipOnInput>
+								<CommandName>0</CommandName>
+								<ExtendedTooltip name="ОтметитьExtendedTooltip" id="49"/>
+							</Button>
+							<Button name="СнятьОтметку" id="24">
+								<Type>CommandBarButton</Type>
+								<SkipOnInput>false</SkipOnInput>
+								<CommandName>0</CommandName>
+								<ExtendedTooltip name="СнятьОтметкуExtendedTooltip" id="50"/>
+							</Button>
+						</ChildItems>
+					</CommandBar>
+				</ChildItems>
+			</UsualGroup>
+			<Table name="Дерево" id="1">
+				<Representation>Tree</Representation>
+				<SkipOnInput>false</SkipOnInput>
+				<DefaultItem>true</DefaultItem>
+				<ChangeRowSet>false</ChangeRowSet>
+				<ChangeRowOrder>false</ChangeRowOrder>
+				<AutoInsertNewRow>true</AutoInsertNewRow>
+				<InitialTreeView>ExpandAllLevels</InitialTreeView>
+				<EnableStartDrag>true</EnableStartDrag>
+				<EnableDrag>true</EnableDrag>
+				<FileDragMode>AsFile</FileDragMode>
+				<SearchStringLocation>None</SearchStringLocation>
+				<ViewStatusLocation>None</ViewStatusLocation>
+				<SearchControlLocation>None</SearchControlLocation>
+				<ContextMenu name="ДеревоКонтекстноеМеню" id="2"/>
+				<AutoCommandBar name="ДеревоКоманднаяПанель" id="3"/>
+				<ExtendedTooltip name="ДеревоExtendedTooltip" id="51"/>
+				<SearchStringAddition name="ДеревоСтрокаПоиска" id="59">
+					<AdditionSource>
+						<Item>Дерево</Item>
+						<Type>SearchStringRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="ДеревоСтрокаПоискаКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ДеревоСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+				</SearchStringAddition>
+				<ViewStatusAddition name="ДеревоСостояниеПросмотра" id="62">
+					<AdditionSource>
+						<Item>Дерево</Item>
+						<Type>ViewStatusRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="ДеревоСостояниеПросмотраКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ДеревоСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+				</ViewStatusAddition>
+				<SearchControlAddition name="ДеревоУправлениеПоиском" id="65">
+					<AdditionSource>
+						<Item>Дерево</Item>
+						<Type>SearchControl</Type>
+					</AdditionSource>
+					<ContextMenu name="ДеревоУправлениеПоискомКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ДеревоУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+				</SearchControlAddition>
+				<ChildItems>
+					<CheckBoxField name="Пометка" id="6">
+						<TitleLocation>None</TitleLocation>
+						<EditMode>EnterOnInput</EditMode>
+						<HeaderPicture>
+							<xr:Ref>StdPicture.CheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</HeaderPicture>
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="ПометкаКонтекстноеМеню" id="7"/>
+						<ExtendedTooltip name="ПометкаExtendedTooltip" id="52"/>
+					</CheckBoxField>
+					<InputField name="Индекс" id="32">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Индекс дела</v8:content>
+							</v8:item>
+						</Title>
+						<EditMode>EnterOnInput</EditMode>
+						<Width>10</Width>
+						<ContextMenu name="ИндексКонтекстноеМеню" id="33"/>
+						<ExtendedTooltip name="ИндексExtendedTooltip" id="53"/>
+					</InputField>
+					<InputField name="Наименование" id="10">
+						<ReadOnly>true</ReadOnly>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заголовок дела</v8:content>
+							</v8:item>
+						</Title>
+						<EditMode>EnterOnInput</EditMode>
+						<Width>30</Width>
+						<ContextMenu name="НаименованиеКонтекстноеМеню" id="11"/>
+						<ExtendedTooltip name="НаименованиеExtendedTooltip" id="54"/>
+					</InputField>
+				</ChildItems>
+			</Table>
+			<CommandBar name="ГруппаКоманднаяПанель" id="19">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа командная панель</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа командная панель</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="55"/>
+				<ChildItems>
+					<Button name="Скопировать" id="20">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="СкопироватьExtendedTooltip" id="56"/>
+					</Button>
+					<Button name="Закрыть" id="25">
+						<Type>CommandBarButton</Type>
+						<Representation>Text</Representation>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ЗакрытьExtendedTooltip" id="57"/>
+					</Button>
+					<Button name="Справка" id="22">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="СправкаExtendedTooltip" id="58"/>
+					</Button>
+				</ChildItems>
+			</CommandBar>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>

@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Ввод отменяемых документов</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Готово" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ГотовоРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаДобавить" id="19">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаДобавитьРасширеннаяПодсказка" id="20"/>
+			</Button>
+			<Button name="ФормаУдалить" id="21">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаУдалитьРасширеннаяПодсказка" id="22"/>
+			</Button>
+			<Button name="ФормаПодбор" id="41">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Подбор</CommandName>
+				<ExtendedTooltip name="ФормаПодборРасширеннаяПодсказка" id="42"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="ТаблицаДокументов" id="3">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаДокументовКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="ТаблицаДокументовКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаДокументовРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="ТаблицаДокументовСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>ТаблицаДокументов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДокументовСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="ТаблицаДокументовСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаДокументовСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>ТаблицаДокументов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДокументовСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="ТаблицаДокументовСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаДокументовУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>ТаблицаДокументов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДокументовУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ТаблицаДокументовУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<PictureField name="ТаблицаДокументовУжеУстановлен" id="38">
+					<EditMode>EnterOnInput</EditMode>
+					<ShowInHeader>false</ShowInHeader>
+					<Width>2</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.ДокументыНаОсновании</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</ValuesPicture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ТаблицаДокументовУжеУстановленКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТаблицаДокументовУжеУстановленРасширеннаяПодсказка" id="40"/>
+				</PictureField>
+				<InputField name="ТаблицаДокументовНаименование" id="23">
+					<EditMode>EnterOnInput</EditMode>
+					<AutoCellHeight>true</AutoCellHeight>
+					<ChoiceButton>true</ChoiceButton>
+					<OpenButton>true</OpenButton>
+					<ContextMenu name="ТаблицаДокументовНаименованиеКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ТаблицаДокументовНаименованиеРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ТаблицаДокументовРегистрационныйНомерИДата" id="26">
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoCellHeight>true</AutoCellHeight>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ТаблицаДокументовРегистрационныйНомерИДатаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТаблицаДокументовРегистрационныйНомерИДатаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ТаблицаДокументовВидДокумента" id="29">
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoCellHeight>true</AutoCellHeight>
+					<DropListButton>false</DropListButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ТаблицаДокументовВидДокументаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ТаблицаДокументовВидДокументаРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ТаблицаДокументовПодразделение" id="32">
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoCellHeight>true</AutoCellHeight>
+					<DropListButton>false</DropListButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ТаблицаДокументовПодразделениеКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ТаблицаДокументовПодразделениеРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="ТаблицаДокументовДатаОтмены" id="35">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Если не заполнена дата отмены, она будет установлена в дату регистрации.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаДокументовДатаОтменыКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ТаблицаДокументовДатаОтменыРасширеннаяПодсказка" id="37"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="Подбор" id="1000002">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<BaseForm version="2.18">
+		<Title>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ввод отменяемых документов</v8:content>
+			</v8:item>
+		</Title>
+		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+		<AutoTitle>false</AutoTitle>
+		<CommandSet>
+			<ExcludedCommand>Abort</ExcludedCommand>
+			<ExcludedCommand>Cancel</ExcludedCommand>
+			<ExcludedCommand>Close</ExcludedCommand>
+			<ExcludedCommand>Ignore</ExcludedCommand>
+			<ExcludedCommand>No</ExcludedCommand>
+			<ExcludedCommand>OK</ExcludedCommand>
+			<ExcludedCommand>RestoreValues</ExcludedCommand>
+			<ExcludedCommand>Retry</ExcludedCommand>
+			<ExcludedCommand>SaveValues</ExcludedCommand>
+			<ExcludedCommand>Yes</ExcludedCommand>
+		</CommandSet>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<ChildItems>
+				<Button name="Готово" id="1">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ГотовоРасширеннаяПодсказка" id="2"/>
+				</Button>
+				<Button name="ФормаДобавить" id="19">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаДобавитьРасширеннаяПодсказка" id="20"/>
+				</Button>
+				<Button name="ФормаУдалить" id="21">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаУдалитьРасширеннаяПодсказка" id="22"/>
+				</Button>
+				<Button name="ФормаПодбор" id="41">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.Подбор</CommandName>
+					<ExtendedTooltip name="ФормаПодборРасширеннаяПодсказка" id="42"/>
+				</Button>
+			</ChildItems>
+		</AutoCommandBar>
+		<ChildItems>
+			<Table name="ТаблицаДокументов" id="3">
+				<Representation>List</Representation>
+				<AutoInsertNewRow>true</AutoInsertNewRow>
+				<EnableStartDrag>true</EnableStartDrag>
+				<EnableDrag>true</EnableDrag>
+				<FileDragMode>AsFile</FileDragMode>
+				<RowFilter xsi:nil="true"/>
+				<ContextMenu name="ТаблицаДокументовКонтекстноеМеню" id="4"/>
+				<AutoCommandBar name="ТаблицаДокументовКоманднаяПанель" id="5">
+					<Autofill>false</Autofill>
+				</AutoCommandBar>
+				<ExtendedTooltip name="ТаблицаДокументовРасширеннаяПодсказка" id="6"/>
+				<SearchStringAddition name="ТаблицаДокументовСтрокаПоиска" id="7">
+					<AdditionSource>
+						<Item>ТаблицаДокументов</Item>
+						<Type>SearchStringRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="ТаблицаДокументовСтрокаПоискаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ТаблицаДокументовСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+				</SearchStringAddition>
+				<ViewStatusAddition name="ТаблицаДокументовСостояниеПросмотра" id="10">
+					<AdditionSource>
+						<Item>ТаблицаДокументов</Item>
+						<Type>ViewStatusRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="ТаблицаДокументовСостояниеПросмотраКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ТаблицаДокументовСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+				</ViewStatusAddition>
+				<SearchControlAddition name="ТаблицаДокументовУправлениеПоиском" id="13">
+					<AdditionSource>
+						<Item>ТаблицаДокументов</Item>
+						<Type>SearchControl</Type>
+					</AdditionSource>
+					<ContextMenu name="ТаблицаДокументовУправлениеПоискомКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ТаблицаДокументовУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+				</SearchControlAddition>
+				<ChildItems>
+					<PictureField name="ТаблицаДокументовУжеУстановлен" id="38">
+						<EditMode>EnterOnInput</EditMode>
+						<ShowInHeader>false</ShowInHeader>
+						<Width>2</Width>
+						<HorizontalStretch>false</HorizontalStretch>
+						<VerticalStretch>false</VerticalStretch>
+						<ValuesPicture>
+							<xr:Ref>CommonPicture.ДокументыНаОсновании</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</ValuesPicture>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="ТаблицаДокументовУжеУстановленКонтекстноеМеню" id="39"/>
+						<ExtendedTooltip name="ТаблицаДокументовУжеУстановленРасширеннаяПодсказка" id="40"/>
+					</PictureField>
+					<InputField name="ТаблицаДокументовНаименование" id="23">
+						<EditMode>EnterOnInput</EditMode>
+						<AutoCellHeight>true</AutoCellHeight>
+						<ChoiceButton>true</ChoiceButton>
+						<OpenButton>true</OpenButton>
+						<ContextMenu name="ТаблицаДокументовНаименованиеКонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="ТаблицаДокументовНаименованиеРасширеннаяПодсказка" id="25"/>
+					</InputField>
+					<InputField name="ТаблицаДокументовРегистрационныйНомерИДата" id="26">
+						<ReadOnly>true</ReadOnly>
+						<EditMode>EnterOnInput</EditMode>
+						<AutoCellHeight>true</AutoCellHeight>
+						<TextEdit>false</TextEdit>
+						<ContextMenu name="ТаблицаДокументовРегистрационныйНомерИДатаКонтекстноеМеню" id="27"/>
+						<ExtendedTooltip name="ТаблицаДокументовРегистрационныйНомерИДатаРасширеннаяПодсказка" id="28"/>
+					</InputField>
+					<InputField name="ТаблицаДокументовВидДокумента" id="29">
+						<ReadOnly>true</ReadOnly>
+						<EditMode>EnterOnInput</EditMode>
+						<AutoCellHeight>true</AutoCellHeight>
+						<DropListButton>false</DropListButton>
+						<TextEdit>false</TextEdit>
+						<ContextMenu name="ТаблицаДокументовВидДокументаКонтекстноеМеню" id="30"/>
+						<ExtendedTooltip name="ТаблицаДокументовВидДокументаРасширеннаяПодсказка" id="31"/>
+					</InputField>
+					<InputField name="ТаблицаДокументовПодразделение" id="32">
+						<ReadOnly>true</ReadOnly>
+						<EditMode>EnterOnInput</EditMode>
+						<AutoCellHeight>true</AutoCellHeight>
+						<DropListButton>false</DropListButton>
+						<TextEdit>false</TextEdit>
+						<ContextMenu name="ТаблицаДокументовПодразделениеКонтекстноеМеню" id="33"/>
+						<ExtendedTooltip name="ТаблицаДокументовПодразделениеРасширеннаяПодсказка" id="34"/>
+					</InputField>
+					<InputField name="ТаблицаДокументовДатаОтмены" id="35">
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Если не заполнена дата отмены, она будет установлена в дату регистрации.</v8:content>
+							</v8:item>
+						</ToolTip>
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="ТаблицаДокументовДатаОтменыКонтекстноеМеню" id="36"/>
+						<ExtendedTooltip name="ТаблицаДокументовДатаОтменыРасширеннаяПодсказка" id="37"/>
+					</InputField>
+				</ChildItems>
+			</Table>
+		</ChildItems>
+		<Attributes/>
+		<Commands>
+			<Command name="Подбор" id="1000001">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подбор</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подбор</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Action callType="Before">Подбор</Action>
+				<CurrentRowUse>DontUse</CurrentRowUse>
+			</Command>
+		</Commands>
+	</BaseForm>
+</Form>

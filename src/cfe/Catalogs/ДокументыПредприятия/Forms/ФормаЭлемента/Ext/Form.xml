@@ -13,6 +13,7 @@
 	<Events>
 		<Event name="AfterWrite" callType="Before">ЦППК_ПослеЗаписиПеред</Event>
 		<Event name="NotificationProcessing" callType="After">ЦППК_ОбработкаОповещенияПосле</Event>
+		<Event name="OnCreateAtServer" callType="Before">ЦППК_ПриСозданииНаСервереПеред</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаПереданВАрхивИлиУничтожен" id="3940">
