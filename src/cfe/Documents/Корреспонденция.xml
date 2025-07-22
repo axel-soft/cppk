@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Document uuid="1738790c-44b6-4a98-87a8-5af8c835456d">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.Корреспонденция" category="Object">
+				<xr:TypeId>0cd09e26-3546-450d-89f4-b2cd80c92772</xr:TypeId>
+				<xr:ValueId>0b34dd18-6963-47b6-9a9c-3265c859e2d3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.Корреспонденция" category="Ref">
+				<xr:TypeId>6c05777d-3959-484f-aaf7-0444e91465e9</xr:TypeId>
+				<xr:ValueId>a908bd6f-ca52-46e7-9894-0da95737951a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.Корреспонденция" category="Selection">
+				<xr:TypeId>d685f070-5a9f-4cea-a8d7-c5c48bfe2405</xr:TypeId>
+				<xr:ValueId>d78dbf26-3713-4c47-b6e7-b82208f13cd5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.Корреспонденция" category="List">
+				<xr:TypeId>f1971eb9-2920-49ea-9b54-c3ecdca21693</xr:TypeId>
+				<xr:ValueId>985fd186-1997-4305-b972-5bfb35262eef</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.Корреспонденция" category="Manager">
+				<xr:TypeId>44d0addb-d27e-47f7-a5a5-14ea3540b86f</xr:TypeId>
+				<xr:ValueId>d9c596a3-09d9-40e8-9b25-59324cbbb667</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>Корреспонденция</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>bae8060a-e320-4988-a202-3f2f54df82ec</ExtendedConfigurationObject>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="1a771946-e827-4598-ad0a-6f993f7db02e">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Основание</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>2f72b129-c59a-4f86-bc64-8cc361cf4488</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДокументыПредприятия</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<TabularSection uuid="871ab59a-3779-40fa-82b2-343717e22e18">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.Корреспонденция.Корреспонденты" category="TabularSection">
+						<xr:TypeId>32aa9f90-d233-4b98-a0af-96cd63aeed8b</xr:TypeId>
+						<xr:ValueId>a259c000-8179-4b0c-8da6-189b754dac29</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.Корреспонденция.Корреспонденты" category="TabularSectionRow">
+						<xr:TypeId>e613a17d-b646-4567-b3c0-5b70b0e97c2c</xr:TypeId>
+						<xr:ValueId>c17114a0-0ff1-4572-a67e-f980cb4f7834</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Корреспонденты</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>b364885e-3883-4d41-9912-b6b2297dbf65</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="e00545ed-e1eb-4bc0-9211-3393388cd70f">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>СпособОтправки</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>320a828e-f6bf-42ad-8832-e9a042a82042</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.СпособыДоставки</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>
