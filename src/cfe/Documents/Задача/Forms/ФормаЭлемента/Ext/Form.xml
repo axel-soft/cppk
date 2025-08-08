@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
 	<Group>AlwaysHorizontal</Group>
@@ -1289,7 +1289,7 @@
 																	<xr:CheckState>0</xr:CheckState>
 																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																		<Presentation/>
-																		<Value xsi:type="xr:DesignTimeRef">6ee57da5-8a57-4d11-8c58-bfcaa3e265e9.3632df90-5ecf-4752-a8a3-86b033b874f2</Value>
+																		<Value xsi:type="xr:DesignTimeRef">Catalog.ВидыУчастниковЗадач.Ответственный</Value>
 																	</xr:Value>
 																</xr:Item>
 																<xr:Item>
@@ -1297,7 +1297,7 @@
 																	<xr:CheckState>0</xr:CheckState>
 																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																		<Presentation/>
-																		<Value xsi:type="xr:DesignTimeRef">6ee57da5-8a57-4d11-8c58-bfcaa3e265e9.acc8a952-080a-4a4e-9efe-61d7cc36ca07</Value>
+																		<Value xsi:type="xr:DesignTimeRef">Catalog.ВидыУчастниковЗадач.Исполнитель</Value>
 																	</xr:Value>
 																</xr:Item>
 																<xr:Item>
@@ -1305,7 +1305,7 @@
 																	<xr:CheckState>0</xr:CheckState>
 																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																		<Presentation/>
-																		<Value xsi:type="xr:DesignTimeRef">6ee57da5-8a57-4d11-8c58-bfcaa3e265e9.e1a8ea2f-cb95-4f15-a72e-debb7578029a</Value>
+																		<Value xsi:type="xr:DesignTimeRef">Catalog.ВидыУчастниковЗадач.Проверяющий</Value>
 																	</xr:Value>
 																</xr:Item>
 															</ChoiceList>
@@ -1765,7 +1765,7 @@
 													</CommandSet>
 													<Height>7</Height>
 													<MaxHeight>10</MaxHeight>
-													<Font ref="0:76153409-5ee6-4e3d-a9a4-98b258d87333" kind="StyleItem"/>
+													<Font ref="style:ШрифтОписанияЗадачи" kind="StyleItem"/>
 													<ContextMenu name="ОписаниеФорматированноеКонтекстноеМеню" id="658"/>
 													<ExtendedTooltip name="ОписаниеФорматированноеРасширеннаяПодсказка" id="659"/>
 												</FormattedDocumentField>
@@ -1849,7 +1849,7 @@
 													<xr:CheckState>0</xr:CheckState>
 													<xr:Value xsi:type="FormChoiceListDesTimeValue">
 														<Presentation/>
-														<Value xsi:type="xr:DesignTimeRef">c1f6aba0-2e28-4aec-99ee-99dad110a246.f8921a8e-79b9-4bec-bf89-535ca33334c3</Value>
+														<Value xsi:type="xr:DesignTimeRef">Catalog.ПриоритетыЗадач.Высокий</Value>
 													</xr:Value>
 												</xr:Item>
 												<xr:Item>
@@ -1857,7 +1857,7 @@
 													<xr:CheckState>0</xr:CheckState>
 													<xr:Value xsi:type="FormChoiceListDesTimeValue">
 														<Presentation/>
-														<Value xsi:type="xr:DesignTimeRef">c1f6aba0-2e28-4aec-99ee-99dad110a246.fd66b549-a716-4231-b1d3-e39fd0f5f31c</Value>
+														<Value xsi:type="xr:DesignTimeRef">Catalog.ПриоритетыЗадач.Обычный</Value>
 													</xr:Value>
 												</xr:Item>
 												<xr:Item>
@@ -1865,7 +1865,7 @@
 													<xr:CheckState>0</xr:CheckState>
 													<xr:Value xsi:type="FormChoiceListDesTimeValue">
 														<Presentation/>
-														<Value xsi:type="xr:DesignTimeRef">c1f6aba0-2e28-4aec-99ee-99dad110a246.3cd1855b-e78d-430c-a476-8386d1d5a9c4</Value>
+														<Value xsi:type="xr:DesignTimeRef">Catalog.ПриоритетыЗадач.Низкий</Value>
 													</xr:Value>
 												</xr:Item>
 											</ChoiceList>
@@ -2575,7 +2575,7 @@
 			<Action callType="After">ЦППК_ВставитьИзБуфераПосле</Action>
 		</Command>
 	</Commands>
-	<BaseForm version="2.18">
+	<BaseForm version="2.20">
 		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 		<AutoTitle>false</AutoTitle>
 		<Group>AlwaysHorizontal</Group>
@@ -3862,7 +3862,7 @@
 																		<xr:CheckState>0</xr:CheckState>
 																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																			<Presentation/>
-																			<Value xsi:type="xr:DesignTimeRef">6ee57da5-8a57-4d11-8c58-bfcaa3e265e9.3632df90-5ecf-4752-a8a3-86b033b874f2</Value>
+																			<Value xsi:type="xr:DesignTimeRef">Catalog.ВидыУчастниковЗадач.Ответственный</Value>
 																		</xr:Value>
 																	</xr:Item>
 																	<xr:Item>
@@ -3870,7 +3870,7 @@
 																		<xr:CheckState>0</xr:CheckState>
 																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																			<Presentation/>
-																			<Value xsi:type="xr:DesignTimeRef">6ee57da5-8a57-4d11-8c58-bfcaa3e265e9.acc8a952-080a-4a4e-9efe-61d7cc36ca07</Value>
+																			<Value xsi:type="xr:DesignTimeRef">Catalog.ВидыУчастниковЗадач.Исполнитель</Value>
 																		</xr:Value>
 																	</xr:Item>
 																	<xr:Item>
@@ -3878,7 +3878,7 @@
 																		<xr:CheckState>0</xr:CheckState>
 																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																			<Presentation/>
-																			<Value xsi:type="xr:DesignTimeRef">6ee57da5-8a57-4d11-8c58-bfcaa3e265e9.e1a8ea2f-cb95-4f15-a72e-debb7578029a</Value>
+																			<Value xsi:type="xr:DesignTimeRef">Catalog.ВидыУчастниковЗадач.Проверяющий</Value>
 																		</xr:Value>
 																	</xr:Item>
 																</ChoiceList>
@@ -4333,7 +4333,7 @@
 														</CommandSet>
 														<Height>7</Height>
 														<MaxHeight>10</MaxHeight>
-														<Font ref="0:76153409-5ee6-4e3d-a9a4-98b258d87333" kind="StyleItem"/>
+														<Font ref="style:ШрифтОписанияЗадачи" kind="StyleItem"/>
 														<ContextMenu name="ОписаниеФорматированноеКонтекстноеМеню" id="658"/>
 														<ExtendedTooltip name="ОписаниеФорматированноеРасширеннаяПодсказка" id="659"/>
 													</FormattedDocumentField>
@@ -4417,7 +4417,7 @@
 														<xr:CheckState>0</xr:CheckState>
 														<xr:Value xsi:type="FormChoiceListDesTimeValue">
 															<Presentation/>
-															<Value xsi:type="xr:DesignTimeRef">c1f6aba0-2e28-4aec-99ee-99dad110a246.f8921a8e-79b9-4bec-bf89-535ca33334c3</Value>
+															<Value xsi:type="xr:DesignTimeRef">Catalog.ПриоритетыЗадач.Высокий</Value>
 														</xr:Value>
 													</xr:Item>
 													<xr:Item>
@@ -4425,7 +4425,7 @@
 														<xr:CheckState>0</xr:CheckState>
 														<xr:Value xsi:type="FormChoiceListDesTimeValue">
 															<Presentation/>
-															<Value xsi:type="xr:DesignTimeRef">c1f6aba0-2e28-4aec-99ee-99dad110a246.fd66b549-a716-4231-b1d3-e39fd0f5f31c</Value>
+															<Value xsi:type="xr:DesignTimeRef">Catalog.ПриоритетыЗадач.Обычный</Value>
 														</xr:Value>
 													</xr:Item>
 													<xr:Item>
@@ -4433,7 +4433,7 @@
 														<xr:CheckState>0</xr:CheckState>
 														<xr:Value xsi:type="FormChoiceListDesTimeValue">
 															<Presentation/>
-															<Value xsi:type="xr:DesignTimeRef">c1f6aba0-2e28-4aec-99ee-99dad110a246.3cd1855b-e78d-430c-a476-8386d1d5a9c4</Value>
+															<Value xsi:type="xr:DesignTimeRef">Catalog.ПриоритетыЗадач.Низкий</Value>
 														</xr:Value>
 													</xr:Item>
 												</ChoiceList>
