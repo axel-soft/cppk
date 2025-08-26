@@ -3,15 +3,11 @@
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<CommandBarLocation>None</CommandBarLocation>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
-	<CommandSet>
-		<ExcludedCommand>WriteAndClose</ExcludedCommand>
-	</CommandSet>
-	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
-		<Event name="AfterWrite" callType="Before">ЦППК_ПослеЗаписиПеред</Event>
+		<Event name="047d4d09-961c-4bdc-8519-eef10674c35b" callType="Before">ЦППК_ПослеЗаписиПеред</Event>
 		<Event name="NotificationProcessing" callType="After">ЦППК_ОбработкаОповещенияПосле</Event>
 		<Event name="OnCreateAtServer" callType="Before">ЦППК_ПриСозданииНаСервереПеред</Event>
 	</Events>
@@ -10802,10 +10798,6 @@
 		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 		<CommandBarLocation>None</CommandBarLocation>
 		<VerticalScroll>useIfNecessary</VerticalScroll>
-		<CommandSet>
-			<ExcludedCommand>WriteAndClose</ExcludedCommand>
-		</CommandSet>
-		<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 			<Autofill>false</Autofill>
 		</AutoCommandBar>
